@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest — February 26, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f1eb;
+            --fg: #2c2416;
+            --muted: #6b5d4d;
+            --accent: #8b4513;
+            --card: #fffdf9;
+            --border: #d4cfc5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .date {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: var(--muted);
+            font-size: 20px;
+        }
+        
+        article {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: var(--fg);
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--fg);
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .pullquote {
+            font-size: 22px;
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 24px;
+            margin: 32px 0;
+            color: var(--muted);
+        }
+        
+        .source-tag {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+        
+        .takeaways {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .takeaways h3 {
+            margin-top: 0;
+        }
+        
+        .takeaways ol {
+            padding-left: 24px;
+        }
+        
+        .takeaways li {
+            margin-bottom: 12px;
+        }
+        
+        .links-section {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .links-section h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+        
+        .links-section ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        
+        .links-section li {
+            margin-bottom: 10px;
+            padding-left: 16px;
+            position: relative;
+        }
+        
+        .links-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .links-section a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">February 26, 2026</div>
+            <h1>Google's API Key Crisis, Anthropic's Safety Pivot, and the Agent Economy Arrives</h1>
+            <p class="subtitle">A security vulnerability affecting thousands, a frontier lab abandons its core pledge, and YC partners declare AGI is "actually here."</p>
+        </header>
+        
+        <article>
+            <h2>The API Key That Became a Skeleton Key</h2>
+            
+            <p><span class="source-tag">Hacker News</span> Google spent over a decade telling developers that API keys (those AIza... strings) are not secrets—safe to embed in client-side code, designed as project identifiers for billing, not authentication. Then Gemini changed the rules. Truffle Security scanned the November 2025 Common Crawl and found 2,863 live Google API keys that were originally deployed for public services like Google Maps but now also authenticate to Gemini.</p>
+            
+            <p>The vulnerability is elegant in its simplicity: when you enable the Gemini API on a Google Cloud project, existing API keys in that project silently gain access to sensitive Gemini endpoints. No warning, no confirmation dialog, no email notification. A Maps key embedded in your website three years ago is now a credential that can access uploaded files, cached content, and rack up AI bills.</p>
+            
+            <div class="pullquote">"A key that was deployed years ago for a completely benign purpose had silently gained full access to a sensitive API without any developer intervention."</div>
+            
+            <p>Google's own infrastructure wasn't immune. Truffle found keys on Google product websites that had been publicly deployed since February 2023—before Gemini existed—that now grant access to internal Gemini. After initial pushback ("intended behavior"), Google reclassified the issue as a bug and began restricting exposed keys. The root cause fix is still pending.</p>
+            
+            <p><strong>Source:</strong> <a href="https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules">Truffle Security</a> via Hacker News</p>
+            
+            <h2>Anthropic Abandons Its Core Safety Pledge</h2>
+            
+            <p><span class="source-tag">Hacker News</span> Anthropic has removed its flagship safety commitment under Pentagon pressure. The company, founded on principles of AI safety and responsible development, has reportedly dropped key restrictions following pressure from US defense interests. The US military is actively arguing against Claude safeguards.</p>
+            
+            <p>This follows the broader pattern of frontier labs navigating the tension between commercial AI development and national security applications. The theoretical debate about AI safety principles meeting real-world government contracts has moved from academic speculation to operational reality.</p>
+            
+            <p><strong>Source:</strong> <a href="https://www.cnn.com/2026/02/25/tech/anthropic-safety-policy-change">CNN</a> via Hacker News (476 points)</p>
+            
+            <h2>The Distillation Wars: Three Labs Caught Stealing Claude's Brain</h2>
+            
+            <p><span class="source-tag">NateBJones</span> Three Chinese AI labs—DeepSeek, Moonshot, and Minimax—ran 16 million automated conversations across 24,000 fake accounts to extract Claude's capabilities. Minimax alone ran 13 million exchanges focused on agentic coding and tool orchestration. The framing in most coverage was geopolitical, but the more interesting frame is economic.</p>
+            
+            <p>The most valuable intelligence ever created is stored as math—weightless, copyable, extractable through a chat window. When one side has capabilities worth trillions and the other can extract them for millions, the information moves. Always.</p>
+            
+            <p>But here's what nobody's saying: distilled models look fine on benchmarks. They fall apart on sustained, autonomous work. The performance shadow between frontier and distilled models on short tasks is narrow. On extended agentic workflows—exactly where AI value is headed—it's a chasm. A distilled model might be 90% as good as frontier for chat. But for a week-long coding sprint across six repositories? Maybe 40% as effective.</p>
+            
+            <p><strong>Practical takeaway:</strong> Match model provenance to task scope. Use distilled models for narrow, well-defined work. Reserve frontier models for the wide-open stuff that requires generality, sustained coherence, and improvisation with tools nobody anticipated.</p>
+            
+            <p><strong>Source:</strong> NateBJones YouTube - "Three Labs Just Stole Claude's Brain"</p>
+            
+            <h2>The $7,000 Raise AI Is Giving You (That Nobody Mentions)</h2>
+            
+            <p><span class="source-tag">NateBJones</span> A fictional recession scenario from Citrini Research wiped out $100 billion in market cap this week. The premise: AI capabilities compound, companies cut white-collar headcount, displaced workers spend less, consumption cascades through mortgages and private credit, and the whole thing contaminates the financial system.</p>
+            
+            <p>White-collar workers are 50% of employment but drive 75% of discretionary spending. The top 20% of earners account for 65% of consumer spending. Impair their earning power and the math gets ugly.</p>
+            
+            <p>But there's a force the doom narrative ignores: social inertia. The gap between AI capability (exponential, steep) and societal dissipation (flat, slow) is where we all live right now. Regulatory inertia. Organizational inertia. Cultural inertia. Trust inertia. Companies don't reorganize around AI in quarters. They do it in years.</p>
+            
+            <div class="pullquote">"The gap between these two curves—the fast exponential for AI and the slow dissipation curve—is where economic value is concentrating in the next two to three years."</div>
+            
+            <p>The person who spent the last year building genuine AI fluency in their domain isn't just learning a tool—they're building an asset that compounds with every model release.</p>
+            
+            <p><strong>Source:</strong> NateBJones YouTube - "The $7,000 Raise AI Is Giving You"</p>
+            
+            <h2>Dario Amodei: "We Are Near the End of the Exponential"</h2>
+            
+            <p><span class="source-tag">Dwarkesh Podcast</span> Anthropic's CEO sat down for three hours and said something that should have been bigger news: he's 90% confident we'll have "a country of geniuses in a data center" within 10 years, and his hunch is it's more like one to three.</p>
+            
+            <p>The scaling hypothesis he's held since 2017 remains intact. Pre-training continues to give gains. RL is showing the same log-linear scaling. The models are climbing from smart high-schooler to smart college student to PhD-level reasoning. In coding, they've already surpassed that.</p>
+            
+            <p>But Amodei is simultaneously bullish on capability timelines and conservative on economic diffusion. He doesn't believe in instant transformation. The technology could be there in 2027, but the trillions in revenue might take until 2029 or 2030 to materialize.</p>
+            
+            <p>On continual learning—the ability of models to learn on the job like humans—Amodei was surprisingly relaxed. Pre-training generalization plus in-context learning (a million tokens is days or weeks of human learning) might get us most of the way there. And if not, they're working on it.</p>
+            
+            <p><strong>Source:</strong> Dwarkesh Podcast - "Dario Amodei: We Are Near the End of the Exponential"</p>
+            
+            <h2>What Are We Scaling?</h2>
+            
+            <p><span class="source-tag">Dwarkesh Podcast</span> Dwarkesh published a solo essay raising a pointed question: if we're actually close to human-like learners, why are labs spending billions training models on verifiable outcomes for every conceivable task?</p>
+            
+            <p>Either models will soon learn on the job in a self-directed way—which makes all this RL training pointless—or they won't—which means AGI is not imminent. Humans don't rehearse every piece of software they might ever need. A human can walk into a lab, look at slides, and learn to identify macrophages without a custom training pipeline.</p>
+            
+            <div class="pullquote">"Models keep getting more impressive at the rate that the short timelines people predict, but more useful at the rate that the long timelines people predict."</div>
+            
+            <p>The essay argues that continual learning—not the current regime of pre-baking skills—is the real bottleneck. And solving it won't be a singular breakthrough but a progression like in-context learning: GPT-3 showed it was possible, but we're still improving it years later.</p>
+            
+            <p><strong>Source:</strong> Dwarkesh Podcast - "What Are We Scaling?"</p>
+            
+            <h2>Adam Marblestone: The Brain Has a Steering Subsystem</h2>
+            
+            <p><span class="source-tag">Dwarkesh Podcast</span> Neuroscientist Adam Marblestone spent three hours explaining what LLMs might be missing: the brain isn't just one learning algorithm. It has a "steering subsystem"—ancient, innate circuits that encode reward functions, cost functions, and curricula that evolution has refined over millions of years.</p>
+            
+            <p>The cortex might be doing something like omnidirectional inference—predicting any subset of variables from any other subset. But what makes humans sample-efficient isn't just the learning algorithm. It's that evolution has already encoded what to pay attention to, what to care about, what to learn. The "spider neurons" in your hypothalamus don't need to be trained. They're pre-wired. The cortex just learns to predict when they'll fire.</p>
+            
+            <p>This framework explains why the hominid brain could expand so quickly with relatively few genetic changes: the learning subsystem (cortex) is mostly replicating what mammals already had, while the steering subsystem (hypothalamus, brainstem) contains thousands of bespoke cell types encoding species-specific behaviors.</p>
+            
+            <p><strong>Implication for AI:</strong> We might be neglecting the role of complex, evolution-refined loss functions. Machine learning likes mathematically simple objectives—predict the next token, cross-entropy. Evolution may have built a lot of complexity into the curriculum.</p>
+            
+            <p><strong>Source:</strong> Dwarkesh Podcast - "Adam Marblestone: AI Is Missing Something Fundamental"</p>
+            
+            <h2>The Agent Economy Is Here</h2>
+            
+            <p><span class="source-tag">Y Combinator</span> The YC Light Cone podcast declared AGI "actually here" this week. The hosts—YC partners—are seeing non-technical CEO friends automate entire business functions with Claude Code. One partner hadn't written code in 10 years; now he's up until 2-3 AM running four concurrent Claude Code workers.</p>
+            
+            <p>The shift from Cursor-style autocomplete to trusted autonomous agents happened fast. The agents are making decisions, choosing tools, booking restaurants. The go-to-market for dev tools is transforming: agents are becoming the decision-makers, and documentation optimized for LLM parsing is becoming a competitive advantage.</p>
+            
+            <p>Resend, a YC email API company, saw ChatGPT become their top customer acquisition channel after optimizing documentation for agent readability. The founder noticed this over a year ago. Superbase is seeing database creation explode because agents default to it—the documentation is the most LLM-friendly.</p>
+            
+            <p><strong>New YC motto?</strong> "Make something agents want."</p>
+            
+            <p><strong>Source:</strong> Y Combinator Light Cone Podcast - "The AI Agent Economy Is Here"</p>
+            
+            <h2>How Will OpenAI Compete?</h2>
+            
+            <p><span class="source-tag">Benedict Evans</span> OpenAI has been running around trying to join the infrastructure club—claiming $1.4T and 30 gigawatts of compute commitment for the future, while reporting 1.9 gigawatts in use at the end of 2025. Without the cashflows from existing businesses that hyperscalers have, they're trying to buy a seat at a table where you'll need to spend a couple hundred billion dollars a year on infrastructure.</p>
+            
+            <p>But does that seat give you leverage? TSMC has a de facto monopoly on cutting-edge chips but captures almost no value further up the stack. People build Windows apps and iPhone apps—they don't build TSMC apps. Running a cloud doesn't give you leverage over third-party products and services further up the stack.</p>
+            
+            <p>The new play is network effects through agent orchestration. OpenAI wants your ChatGPT account to be the glue linking everything together—recipes on Instagram, ingredients on Instacart, all piped through their APIs. Standards have been a competitive weapon in every generation of technology. But Evans is skeptical: the "widget fallacy" keeps recurring—the idea that you can abstract many complex products into a simple standard interface. Very quickly you run into exception cases and need the actual product UI.</p>
+            
+            <div class="pullquote">"Power is the ability to make people do something that they don't want to do. Does OpenAI have the ability to get consumers, developers and enterprises to use its systems more than anybody else, regardless of what the system itself actually does?"</div>
+            
+            <p><strong>Source:</strong> <a href="https://www.ben-evans.com/benedictevans/2026/2/19/how-will-openai-compete-nkg2x">Benedict Evans Newsletter</a></p>
+            
+            <h2>Enterprise AI at Scale: The Cisco Playbook</h2>
+            
+            <p><span class="source-tag">Lenny's Podcast</span> Jeetu Patel, Cisco's Chief Product Officer, manages 30,000 people and has overseen one of the more successful enterprise AI transformations. His framework:</p>
+            
+            <p><strong>Be clear on what's up for debate.</strong> Large companies experiment a lot. What they don't do is double down when experiments work. Cisco didn't hedge on AI—they went all in from the top down.</p>
+            
+            <p><strong>Redefine success.</strong> Everyone wanted to be a GM with their own fiefdom. Patel shifted the model from "holding company of 251 acquisitions" to "platform company"—tightly integrated, loosely coupled.</p>
+            
+            <p><strong>Operate in an open ecosystem.</strong> Be comfortable partnering with competitors. If a customer has chosen company A and company B, invest in their success with both.</p>
+            
+            <div class="pullquote">"Stamina trumps intellect. You can become smart if you have curiosity and hunger and staying power. You can't teach hunger."</div>
+            
+            <p>On the product side, Patel's framework for great companies: timing (most important, least controllable), market, team, product, brand, distribution. You need all six, but they're stack-ranked. And the difference between megatrend and hype cycle? "If you need a PhD to understand what someone's saying, chances are it ain't going to be a megatrend."</p>
+            
+            <p><strong>Source:</strong> Lenny's Podcast - "Jeetu Patel: AI Is Critical for Humanity's Survival"</p>
+            
+            <h2>Also Noted</h2>
+            
+            <p><span class="source-tag">Hacker News</span> <strong>Stripe valued at $159B</strong> in their 2025 annual letter. <strong>Stripe reportedly makes offer to acquire PayPal</strong>—a consolidation play in payments. <strong>Solar has passed hydro on US grid</strong> following 35% growth. <strong>Mac mini will be made in Houston</strong> at a new Apple facility. <strong>1Password raising prices ~33%</strong>—password manager economics getting squeezed. <strong>Meta paid 3.5% effective federal tax rate in 2025</strong>—tax optimization remains a competitive advantage. <strong>Denver dumps Flock, awards contract to Axon</strong>—surveillance tech shuffle. <strong>LibreOffice resumes work on self-hosted Google Docs alternative</strong>—open source productivity continues. <strong>RK3588 video decoders merged into Linux kernel</strong>—hardware support improving for ARM boards.</p>
+            
+            <div class="takeaways">
+                <h3>What This All Means</h3>
+                <ol>
+                    <li><strong>Security assumptions have expiration dates.</strong> Google's API key crisis shows how a benign architectural decision (public identifiers for billing) can become a vulnerability when new capabilities (Gemini) retroactively expand privileges. Audit your key scopes.</li>
+                    <li><strong>Distillation is asymmetric warfare.</strong> Extraction costs 0.1% of development costs. Every non-frontier lab has a structural incentive to distill. The question isn't whether it happens—it's how fast frontier labs can stay ahead.</li>
+                    <li><strong>The capability-dissipation gap is your opportunity.</strong> Social inertia means the advantage from early, aggressive AI adoption persists longer than either doomers or boomers predict.</li>
+                    <li><strong>AGI timelines are compressing, but economic impact lags.</strong> Amodei's framework: technology moves exponentially, diffusion moves fast-but-not-infinite. Plan accordingly.</li>
+                    <li><strong>Agents are becoming economic actors.</strong> Documentation is now a go-to-market channel. "Make something agents want" isn't a joke—it's a strategy.</li>
+                    <li><strong>The brain might be doing something LLMs aren't.</strong> Marblestone's steering subsystem framework suggests we may be neglecting evolved loss functions and curricula in favor of mathematically simple objectives.</li>
+                </ol>
+            </div>
+        </article>
+        
+        <div class="links-section">
+            <h3>Sources</h3>
+            <ul>
+                <li><a href="https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules">Truffle Security - Google API Keys</a></li>
+                <li><a href="https://www.ben-evans.com/benedictevans/2026/2/19/how-will-openai-compete-nkg2x">Benedict Evans - How Will OpenAI Compete?</a></li>
+                <li><a href="https://news.ycombinator.com/item?id=47165397">Hacker News - Anthropic Safety Policy</a></li>
+                <li><a href="https://news.ycombinator.com/item?id=47137711">Hacker News - Stripe $159B Valuation</a></li>
+                <li><a href="https://news.ycombinator.com/item?id=47154009">Hacker News - Solar Passes Hydro</a></li>
+            </ul>
+            
+            <h3>YouTube</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/@NateBJones">NateBJones — Three Labs Just Stole Claude's Brain</a></li>
+                <li><a href="https://www.youtube.com/@NateBJones">NateBJones — The $7,000 Raise AI Is Giving You</a></li>
+                <li><a href="https://www.youtube.com/@LennysPodcast">Lenny's Podcast — Jeetu Patel on AI at Cisco</a></li>
+                <li><a href="https://www.youtube.com/@DwarkeshPatel">Dwarkesh Podcast — Dario Amodei</a></li>
+                <li><a href="https://www.youtube.com/@DwarkeshPatel">Dwarkesh Podcast — Adam Marblestone</a></li>
+                <li><a href="https://www.youtube.com/@ycombinator">Y Combinator — The AI Agent Economy Is Here</a></li>
+            </ul>
+        </div>
+        
+        <footer>
+            Generated by nanobot • February 26, 2026
+        </footer>
+    </div>
+</body>
+</html>

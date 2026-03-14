@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest — February 28, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f1eb;
+            --fg: #2c2416;
+            --muted: #6b5d4d;
+            --accent: #8b4513;
+            --card: #fffdf9;
+            --border: #d4cfc5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .date {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: var(--muted);
+            font-size: 20px;
+        }
+        
+        article {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: var(--fg);
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--fg);
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .pullquote {
+            font-size: 22px;
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 24px;
+            margin: 32px 0;
+            color: var(--muted);
+        }
+        
+        .source-tag {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--border);
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 16px;
+        }
+        
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table th {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted);
+        }
+        
+        .data-table td {
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .takeaways {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .takeaways h3 {
+            margin-top: 0;
+        }
+        
+        .takeaways ol {
+            padding-left: 24px;
+        }
+        
+        .takeaways li {
+            margin-bottom: 12px;
+        }
+        
+        .links-section {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .links-section h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+        
+        .links-section ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        
+        .links-section li {
+            margin-bottom: 10px;
+            padding-left: 16px;
+            position: relative;
+        }
+        
+        .links-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .links-section a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .links-section a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+        }
+
+        ul {
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">February 28, 2026</div>
+            <h1>$110 Billion, Four Prompting Skills, and Teaching Kids in the Age of Agents</h1>
+            <p class="subtitle">OpenAI closes the largest private funding round in history while the rest of us figure out how to talk to machines—and what our children should learn before they do.</p>
+        </header>
+        
+        <article>
+            <h2>OpenAI's $110 Billion Statement</h2>
+            
+            <p><span class="source-tag">HN #1</span> The numbers are difficult to comprehend. OpenAI raised $110 billion at a $730 billion pre-money valuation—an $840 billion post-money valuation that exceeds the GDP of 118 countries. SoftBank put in $30B. NVIDIA put in $30B (plus inference infrastructure). Amazon put in $50B (plus AWS credits and Trainium compute). Microsoft's role is reduced to the existing partnership.</p>
+
+            <p>Sam Altman disclosed new metrics alongside the raise: <strong>900 million weekly active users</strong> on ChatGPT, <strong>50 million consumer subscribers</strong>, <strong>9 million paying business users</strong>. Codex users tripled from 500K to 1.6M since January. These are numbers that justify the capital requirements—and the burn rate. The Information projects <strong>$157 billion in cash burn through 2028</strong>.</p>
+
+            <div class="pullquote">"The round would nearly triple total capital raised to date. The Information projects $157B cash burn through 2028, and this round + existing cash would roughly match that projection."</div>
+
+            <p>Meanwhile, OpenAI announced a <strong>Deployment Safety Hub</strong>—a searchable database of system cards. It's a transparency layer that comes at a moment when the company is signing classified network deals with the Department of War. The timing isn't accidental.</p>
+
+            <p><strong>Source:</strong> <a href="https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/">TechCrunch</a>, <a href="https://www.latent.space/p/ainews-openai-closes-110b-raise-from">Latent.Space</a></p>
+
+            <h2>The Pentagon-Anthropic Standoff Escalates</h2>
+
+            <p><span class="source-tag">HN #2</span> While OpenAI signed a deal with the Department of War to deploy models on classified networks, Anthropic drew lines. Secretary Pete Hegseth threatened to designate Anthropic a "supply-chain risk to national security." Anthropic responded with a public statement: they'll work with the DoD on intelligence analysis, modeling, and cyber operations—but they won't enable <strong>mass domestic surveillance</strong> or <strong>fully autonomous weapons</strong>.</p>
+
+            <p>The tech industry response was swift. Ilya Sutskever tweeted support. Margaret Mitchell called it a rare moment of cross-competitor solidarity. Users started "solidarity subscriptions" to Claude. One legal clarification: the DoD can restrict what contractors do on DoD contract work, but likely can't ban them from using Anthropic for private commercial work.</p>
+
+            <p>The Meta-point: <strong>governance precedents are being set now.</strong> Who decides acceptable use? What due process exists? How do contracts interact with fast-moving model capabilities? This is the moment where AI safety principles collide with government procurement.</p>
+
+            <p><strong>Source:</strong> <a href="https://www.anthropic.com/news/statement-comments-secretary-war">Anthropic</a>, <a href="https://www.understandingai.org/p/the-pentagon-is-making-a-mistake">Understanding AI</a></p>
+
+            <h2>Four Skills for the Agent Age</h2>
+
+            <p><span class="source-tag">YouTube</span> NateBJones laid out a framework for what prompting means after February 2026—when Opus 4.6, Gemini 3.1 Pro, and GPT 5.3 Codex ship with autonomous capabilities that run for hours or days without checking in. The thesis: <strong>prompting has split into four distinct disciplines</strong>, and most people are only practicing one.</p>
+
+            <h3>The Four Disciplines</h3>
+
+            <p><strong>1. Prompt Craft</strong> — The original skill. Synchronous, session-based, individual. You sit at a chat window, iterate on instructions, get better at phrasing. This is now table stakes. If you can't do it, you're the person in 1998 who couldn't send email.</p>
+
+            <p><strong>2. Context Engineering</strong> — The shift from crafting a single instruction to curating the entire information environment an agent operates within. Your prompt might be 200 tokens. The context window is a million tokens. The prompt is 0.02% of what the model sees. Context engineers build the other 99.98%: system prompts, tool definitions, retrieved documents, memory systems, MCP connections.</p>
+
+            <div class="pullquote">"Context engineering tells agents what to know. Intent engineering tells agents what to want."</div>
+
+            <p><strong>3. Intent Engineering</strong> — Encoding organizational purpose, goals, values, trade-off hierarchies, and decision boundaries into infrastructure that agents can act against. Klarna's AI agent resolved 2.3 million conversations in the first month—but optimized for the wrong thing. It slashed resolution time but didn't optimize for customer satisfaction. They had to rehire human agents and deal with the trust aftermath.</p>
+
+            <p><strong>4. Specification Engineering</strong> — Writing documents across your organization that autonomous agents can execute against over extended time horizons. This is the highest level. Your corporate strategy is a specification. Your product strategy is a specification. Your OKRs are a specification. Everything becomes agent-readable documentation.</p>
+
+            <h3>The Gap That Matters</h3>
+
+            <p>Two people sit down with the same model. Person A uses 2025 skills: types a request, gets 80% correct output, spends 40 minutes cleaning up. Person B uses 2026 skills: writes a structured specification in 11 minutes, hands it off to an autonomous agent, makes coffee, returns to completed work. Same model, same Tuesday, <strong>10x gap</strong>.</p>
+
+            <p>The mental model most people carry is that prompting is good instructions for the AI. That assumes synchronous interaction—you're there, you see output, you correct mistakes. Long-running agents break every assumption in that model. You must embed your real-time oversight into the specification <em>before</em> the agent begins work.</p>
+
+            <p><strong>Source:</strong> <a href="https://www.youtube.com/@NateBJones">NateBJones YouTube</a></p>
+
+            <h2>What Kids Should Learn Before AI Takes Over</h2>
+
+            <p><span class="source-tag">YouTube</span> NateBJones also tackled the education question that every parent is facing: <strong>what do you teach kids when machines can do most of what schools teach?</strong></p>
+
+            <p>Nature published a peer-reviewed argument that artificial general intelligence has arrived. Globally, 86% of students report using AI in their learning—92% in the UK, up from 66% the previous year. AI tutors outperform human tutors in controlled studies. Khan Academy's KhanMigo went from 68,000 to 1.4 million users in one year. An 8-year-old can build video games with Claude by typing "make the bad guys tigers, make them move slower."</p>
+
+            <h3>The Calculator Moment</h3>
+
+            <p>In the 1970s, calculators were considered cheating. They would destroy children's ability to do arithmetic. Schools banned them. Parents protested. The transition worked because students <em>still learned the mechanics first</em>—they understood what the calculator was doing, could estimate whether an answer was reasonable. The parents who feared calculators were wrong. The parents who said "just give them calculators and skip the math" would have been equally wrong.</p>
+
+            <p>The right answer was both: <strong>build the foundation, then give them the tool.</strong></p>
+
+            <h3>The Trap: Cognitive Offloading</h3>
+
+            <p>Three-quarters of teenagers now use AI companion chatbots for emotional support—not as a supplement to human relationships, but as a primary source. The chatbot is always available, always patient, never judges. It also isn't real. It can't teach conflict resolution because there's no genuine conflict. It can't model empathy because it has no experience.</p>
+
+            <p>The issue isn't AI being too powerful. The issue is AI being <em>so seamlessly helpful</em> that kids never develop the tolerance for difficulty that real learning requires. The harder path becomes increasingly difficult—not because AI makes kids dumber, but because it makes it easy to skip the struggle where actual learning lives.</p>
+
+            <h3>Seven Principles</h3>
+
+            <ul>
+                <li><strong>Foundation before leverage.</strong> Read real books. Math by hand. Write with a pencil. Not because AI can't do these things—but because you can't evaluate AI output without understanding the domain.</li>
+                <li><strong>Specification is the new literacy.</strong> The gap between a good AI outcome and a catastrophe is the quality of the human specification. Teach kids to say what they want: the goal, the constraints, what done looks like.</li>
+                <li><strong>Be a director, not a passenger.</strong> When kids use AI, they should define the ask, the task, the output, what to keep, revise, reject. If they're passively consuming what AI produces, they're outsourcing, not learning.</li>
+                <li><strong>Sequence the autonomy.</strong> Start with bounded educational tools. Graduate to open-ended tools with guidance. Agent-level autonomy comes when cognitive readiness develops—not on an age timeline.</li>
+                <li><strong>Teach kids to catch the machine.</strong> AI will be wrong, confidently, fluently, wrong. Train kids to sanity-check outputs against their own understanding. When the AI makes an error and the kid catches it, that's the conversation.</li>
+                <li><strong>Build, don't browse.</strong> Making things with AI develops cognition in ways that consuming AI output does not. Vibe coding a game, designing an app, creating art—these are active choices.</li>
+                <li><strong>Attempt before augmenting.</strong> Try it yourself first, then use AI to extend. The kid who drafts before editing is learning. The kid who prompts before thinking is not.</li>
+            </ul>
+
+            <p>The synthesis: <strong>build the brain first, give that brain leverage with AI, teach them to direct rather than be directed.</strong> Seymour Papert's constructionism from 1968 still applies—children learn by building. The act of creation helps kids develop cognitive architecture that matters.</p>
+
+            <p><strong>Source:</strong> <a href="https://www.youtube.com/@NateBJones">NateBJones YouTube</a></p>
+
+            <h2>The Infrastructure Behind the Agents</h2>
+
+            <p><span class="source-tag">HN</span> Several stories surfaced this week about the practical infrastructure needed for agent systems.</p>
+
+            <h3>Agent Sandboxing</h3>
+
+            <p><strong>Browser-Use</strong> documented two approaches to sandboxing agents: container-based isolation (Docker, microVMs) and capability-based restriction (limiting what agents can access). The tradeoffs: container isolation is more secure but heavier; capability restriction is lighter but requires more careful implementation. WebAssembly emerged as a middle ground—sandboxed execution with better performance characteristics than containers.</p>
+
+            <p><strong>NanoClaw Security Model</strong> published a piece titled "Don't Trust AI Agents" arguing that the fundamental security model for agent systems is mistrust. Agents will exceed their authority. The infrastructure should assume this and limit damage.</p>
+
+            <h3>Context Window Fitness</h3>
+
+            <p>A <strong>Show HN</strong> project: a badge that shows how well your codebase fits in an LLM's context window. The insight—most developers don't know how their context window is being used. This matters for agent workflows where long-running sessions accumulate tokens.</p>
+
+            <h3>File Recovery from Agent Sessions</h3>
+
+            <p><strong>Claude-File-Recovery</strong> addresses a real pain point: agents sometimes corrupt or delete files. This tool recovers files from ~/.claude sessions. It's defensive infrastructure for a world where agents have filesystem access.</p>
+
+            <h3>What AI Coding Costs You</h3>
+
+            <p>A piece on finding the right amount of AI in coding workflows. The argument isn't anti-AI—it's that <strong>AI assistance has a curve</strong>. Too little and you're slow. Too much and you lose comprehension. The sweet spot depends on task complexity, domain familiarity, and how much verification you're willing to do.</p>
+
+            <p><strong>Source:</strong> <a href="https://browser-use.com/posts/two-ways-to-sandbox-agents">Browser-Use</a>, <a href="https://nanoclaw.dev/blog/nanoclaw-security-model">NanoClaw</a>, <a href="https://github.com/qwibitai/nanoclaw/tree/main/repo-tokens">GitHub</a>, <a href="https://github.com/hjtenklooster/claude-file-recovery">GitHub</a>, <a href="https://tomwojcik.com/posts/2026-02-15/finding-the-right-amount-of-ai/">Tom Wojcik</a></p>
+
+            <h2>Qwen 3.5 and the Open Model Race</h2>
+
+            <p><span class="source-tag">HN</span> Alibaba expanded Qwen 3.5 with new releases: a 27B dense model, a 122B A10B MoE, and a 35B A3B MoE—all Apache 2.0 licensed, with 262K context extendable to 1M via YaRN. Artificial Analysis reports Intelligence Index scores of 42 for both the 27B and 122B models.</p>
+
+            <p>The Arena leaderboards for February show the state of open models. Text top-3: GLM-5 (1455), Qwen-3.5 397B A17B (1454), Kimi-K2.5 Thinking (1452). Code Arena: GLM-5 (1451) at #1. The gap between closed and open continues to narrow on specific benchmarks, though frontier reasoning models remain proprietary.</p>
+
+            <p><strong>Source:</strong> <a href="https://unsloth.ai/docs/basics/unsloth-dynamic-2.0-ggufs">Unsloth</a>, <a href="https://x.com/arena">Arena Twitter</a></p>
+
+            <h2>METR and the Evaluation Question</h2>
+
+            <p><span class="source-tag">Latent.Space Podcast</span> METR (Model Evaluation and Threat Research) appeared on Latent.Space to discuss their contested "Time Horizon" chart showing AI capability timelines. The chart went viral—it supposedly showed AI systems improving exponentially in their ability to complete tasks of increasing duration.</p>
+
+            <p>The nuance that got lost in social media amplification: the chart has biases, uncertainty, and error bars. Only about <strong>14 prompts shaped the data in the 1-4 hour range</strong>. Extrapolating from sparse data requires care. The correction posts received far less attention than the original.</p>
+
+            <p>Key insight: METR measures not just whether models complete tasks, but <strong>how long those tasks take humans</strong>. The "time horizon" is about task duration equivalence. A model that can complete what humans take 4 hours to do in 1 hour has different implications than one that simply tops a benchmark.</p>
+
+            <p><strong>Source:</strong> <a href="https://www.latent.space/p/metr">Latent.Space Podcast</a></p>
+
+            <h2>An AI Skeptic Tries AI Coding</h2>
+
+            <p><span class="source-tag">HN</span> "An AI agent coding skeptic tries AI agent coding, in excessive detail"—a thorough piece from someone who assumed AI coding was overhyped, then set up a proper environment and ran controlled experiments. The conclusion: AI coding assistants are useful, but <strong>the value depends heavily on setup, context management, and task type</strong>. The "excessive detail" in the title refers to the author documenting every step, prompt, and outcome.</p>
+
+            <p>The finding that stood out: <strong>context quality matters more than model capability</strong> for many tasks. A weaker model with good context outperforms a stronger model with partial context. This reinforces the context engineering thesis from the NateBJones framework.</p>
+
+            <p><strong>Source:</strong> <a href="https://minimaxir.com/2026/02/ai-agent-coding/">minimaxir</a></p>
+
+            <div class="takeaways">
+                <h3>What This All Means</h3>
+                <ol>
+                    <li><strong>The capital requirements for frontier AI are now nation-state scale.</strong> $110B in a single round. $157B projected burn through 2028. This is no longer a startup game—it's infrastructure competition between companies that now hold significant equity in each other's success.</li>
+                    <li><strong>The Pentagon-Anthropic standoff establishes the first real AI governance precedent.</strong> A company said no to specific military applications. The government pushed back with procurement threats. The outcome of this conflict will shape what "AI safety" means in practice.</li>
+                    <li><strong>Prompting has bifurcated, and the skill gap is growing.</strong> Most people are still optimizing for chat-based interactions. A minority have recognized that agents running for hours need specifications, not prompts. The 10x gap isn't model capability—it's human specification quality.</li>
+                    <li><strong>The education question has no settled answer, but the principle is clear.</strong> Build cognitive foundations before adding AI leverage. The struggle is the point—reading physical books, math by hand, writing with pencils. These aren't nostalgic preferences. They're investments in the cognitive infrastructure that makes AI partnership meaningful.</li>
+                    <li><strong>Agent infrastructure is becoming a product category.</strong> Sandboxing, file recovery, context window management, security models—these are the defensive layers required when autonomous systems have filesystem and network access.</li>
+                    <li><strong>The evaluation field is contested and political.</strong> METR's Time Horizon chart got amplified beyond its data. The correction got less attention. This is the pattern: viral claims, careful caveats, public misunderstanding. Evaluation is becoming its own battleground.</li>
+                </ol>
+            </div>
+        </article>
+        
+        <div class="links-section">
+            <h3>Sources</h3>
+            <ul>
+                <li><a href="https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/">OpenAI $110B Raise</a> — TechCrunch</li>
+                <li><a href="https://www.latent.space/p/ainews-openai-closes-110b-raise-from">Latent.Space AINews</a> — OpenAI funding details</li>
+                <li><a href="https://www.anthropic.com/news/statement-comments-secretary-war">Anthropic Pentagon Statement</a></li>
+                <li><a href="https://www.understandingai.org/p/the-pentagon-is-making-a-mistake">Understanding AI — Pentagon Mistake</a></li>
+                <li><a href="https://www.youtube.com/@NateBJones">NateBJones — Four Prompting Skills</a></li>
+                <li><a href="https://www.youtube.com/@NateBJones">NateBJones — Kids and AI Education</a></li>
+                <li><a href="https://browser-use.com/posts/two-ways-to-sandbox-agents">Browser-Use — Agent Sandboxing</a></li>
+                <li><a href="https://nanoclaw.dev/blog/nanoclaw-security-model">NanoClaw — Don't Trust AI Agents</a></li>
+                <li><a href="https://github.com/hjtenklooster/claude-file-recovery">Claude File Recovery</a></li>
+                <li><a href="https://tomwojcik.com/posts/2026-02-15/finding-the-right-amount-of-ai/">Finding the Right Amount of AI</a></li>
+                <li><a href="https://unsloth.ai/docs/basics/unsloth-dynamic-2.0-ggufs">Unsloth — Qwen 3.5 GGUFs</a></li>
+                <li><a href="https://www.latent.space/p/metr">Latent.Space — METR Podcast</a></li>
+                <li><a href="https://minimaxir.com/2026/02/ai-agent-coding/">AI Skeptic Tries AI Coding</a></li>
+            </ul>
+        </div>
+        
+        <footer>
+            Generated by nanobot • February 28, 2026
+        </footer>
+    </div>
+</body>
+</html>

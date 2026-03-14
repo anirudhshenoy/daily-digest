@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Digest — February 18, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #f4f1eb;
+      --bg-secondary: #ebe6dc;
+      --text-primary: #3d3629;
+      --text-secondary: #5c5344;
+      --accent: #8b6914;
+      --accent-light: #c4a035;
+      --border: #d4cfc4;
+      --quote-bg: #f9f7f3;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .date {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+    
+    .intro {
+      background: var(--quote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 24px 28px;
+      margin: 32px 0;
+      font-size: 19px;
+    }
+    
+    .intro p {
+      margin-bottom: 12px;
+    }
+    
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 48px 0 20px;
+      color: var(--text-primary);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-light);
+      display: inline-block;
+    }
+    
+    h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 32px 0 16px;
+      color: var(--accent);
+    }
+    
+    p {
+      margin-bottom: 20px;
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    
+    a:hover {
+      border-bottom-color: var(--accent);
+    }
+    
+    blockquote {
+      background: var(--quote-bg);
+      border-left: 3px solid var(--accent-light);
+      padding: 16px 24px;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+    
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      font-style: normal;
+      font-size: 15px;
+      color: var(--accent);
+    }
+    
+    .pullquote {
+      font-size: 22px;
+      text-align: center;
+      padding: 32px 0;
+      margin: 32px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      font-style: italic;
+      color: var(--text-primary);
+    }
+    
+    .theme-box {
+      background: linear-gradient(135deg, #f9f7f3 0%, #f4f1eb 100%);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    
+    .theme-box h4 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    
+    .theme-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .theme-box li {
+      padding: 8px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .theme-box li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    
+    .takeaways {
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 28px;
+      margin: 40px 0;
+    }
+    
+    .takeaways h3 {
+      margin-top: 0;
+    }
+    
+    .takeaways ol {
+      padding-left: 24px;
+    }
+    
+    .takeaways li {
+      margin-bottom: 16px;
+      padding-left: 8px;
+    }
+    
+    .takeaways li::marker {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    .links-section {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    
+    .links-section h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    
+    .link-group {
+      margin-bottom: 24px;
+    }
+    
+    .link-group h4 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    
+    .link-group ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .link-group li {
+      padding: 6px 0;
+      font-size: 16px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: white;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-right: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        font-size: 17px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      .container {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="container">
+    <header>
+      <div class="date">Wednesday, February 18, 2026</div>
+      <h1>The Agentic Revolution Arrives</h1>
+      <p class="subtitle">On the week AI stopped being a chatbot and started being a coworker</p>
+    </header>
+    
+    <section class="intro">
+      <p><strong>Something shifted this week.</strong> Not with a bang, but with a quiet realization: the AI in your pocket isn't just answering questions anymore. It's booking your meetings, writing your code, debugging your systems, and—in Peter Steinberger's case—clicking "I'm not a robot" checkboxes with cheerful autonomy.</p>
+      <p>Meanwhile, economists are scratching their heads. Billions invested, models improving monthly, yet productivity statistics remain stubbornly flat. Sound familiar? It should—it's the same paradox that haunted the IT revolution forty years ago.</p>
+    </section>
+    
+    <h2>The OpenClaw Moment</h2>
+    
+    <p>On February 12th, Peter Steinberger sat down with Lex Fridman to tell the story of OpenClaw—the open-source AI agent that became the fastest-growing repository in GitHub history. In three months, a single developer built something that major labs with thousands of employees hadn't: an AI that actually <em>does</em> things.</p>
+    
+    <blockquote>
+      "I watched my agent happily click the 'I'm not a robot' button. I made the agent very aware—it knows what its source code is, it understands how it sits and runs in its own harness. People talk about self-modifying software, I just built it."
+      <cite>— Peter Steinberger</cite>
+    </blockquote>
+    
+    <p>The story reads like a parable for our moment. Steinberger, a veteran developer who'd spent 13 years building PSPDFKit (software now used on a billion devices), had burned out and vanished for three years. He returned to programming when AI made it fun again—not because AI did the work for him, but because it transformed the nature of the work itself.</p>
+    
+    <h3>From Chatbots to Agents</h3>
+    
+    <p>OpenClaw represents something genuinely new: an AI that lives in your computer, has access to your files, talks to you through WhatsApp or Telegram, and can modify its own code. It's the difference between having an encyclopedia and having a research assistant. One answers questions; the other solves problems.</p>
+    
+    <p>Steinberger's insight was architectural rather than algorithmic. He didn't build a better model—he built a better harness. The agent knows what tools it has, understands its own limitations, and can reach for new capabilities when stuck. When Steinberger accidentally sent an audio message to his prototype, the agent figured out it was an Opus file, converted it with ffmpeg, found an OpenAI key in the environment, and transcribed it—all without being taught any of these steps.</p>
+    
+    <div class="pullquote">
+      "The model didn't just solve the problem. It discovered the problem, invented a solution, and executed it. That's not a chatbot. That's a colleague."
+    </div>
+    
+    <h2>The Model Wars Heat Up</h2>
+    
+    <p>While OpenClaw was capturing hearts, Anthropic was quietly shipping Claude Sonnet 4.6—a model that, for the first time, brings Opus-level reasoning to a price point accessible to everyone. The announcement reads like a declaration of war:</p>
+    
+    <div class="theme-box">
+      <h4>Claude Sonnet 4.6 Highlights</h4>
+      <ul>
+        <li>1 million token context window (enough for entire codebases)</li>
+        <li>Users preferred it over Opus 4.5 59% of the time in Claude Code</li>
+        <li>Major improvements in computer use—navigating spreadsheets, filling forms, coordinating across browser tabs</li>
+        <li>Pricing unchanged: $3/$15 per million tokens</li>
+      </ul>
+    </div>
+    
+    <p>The significance isn't just performance—it's accessibility. Frontier reasoning, once the exclusive province of expensive models, is now available in the free tier. This is the democratization moment that transforms AI from a luxury good to a utility.</p>
+    
+    <h3>The Codex vs. Claude Debate</h3>
+    
+    <p>Steinberger offered a fascinating comparison between the two dominant coding agents. His characterization is worth quoting at length:</p>
+    
+    <blockquote>
+      "Opus is like the coworker that is a little silly sometimes, but it's really funny and you keep him around. And Codex is like the weirdo in the corner that you don't want to talk to, but is reliable and gets shit done... I prefer Codex because it doesn't require so much charade. It will just read a lot of code by default."
+      <cite>— Peter Steinberger</cite>
+    </blockquote>
+    
+    <p>The difference, Steinberger suggests, is in post-training philosophy. Claude Opus is optimized for interaction—conversational, friendly, sometimes sycophantic. Codex is optimized for execution—reading deeply, thinking longer, producing working code. Both approaches have merit; the choice depends on whether you want a pair programmer or a contractor.</p>
+    
+    <h2>The Productivity Paradox Returns</h2>
+    
+    <p>Here's the uncomfortable question: if AI is so transformative, where's the economic evidence?</p>
+    
+    <p>A new NBER study surveyed 6,000 executives across the US, UK, Germany, and Australia. The findings are striking: despite two-thirds reporting AI usage, the average executive spends just 1.5 hours per week with these tools. Nearly 90% of firms say AI has had <em>no impact</em> on employment or productivity over the last three years.</p>
+    
+    <blockquote>
+      "AI is everywhere except in the incoming macroeconomic data. You don't see AI in the employment data, productivity data, or inflation data."
+      <cite>— Torsten Slok, Apollo Chief Economist</cite>
+    </blockquote>
+    
+    <p>This is Robert Solow's productivity paradox all over again. In 1987, the Nobel laureate famously observed that "you can see the computer age everywhere but in the productivity statistics." Computers were generating detailed reports that no one read, automating tasks that didn't matter, and creating new forms of bureaucratic overhead. It took fifteen years—from the mid-1970s to the early 1990s—for IT investments to translate into measurable productivity gains.</p>
+    
+    <h3>Why the Lag?</h3>
+    
+    <p>The parallel is instructive. New technologies don't immediately improve productivity because:</p>
+    
+    <ol>
+      <li><strong>Complementary investments are required.</strong> You don't just buy computers; you redesign workflows, retrain workers, and restructure organizations. AI is no different.</li>
+      <li><strong>Early adoption is often misdirected.</strong> The first spreadsheet wasn't transformative; the thousandth, integrated into business processes, was.</li>
+      <li><strong>Measurement lags reality.</strong> GDP statistics capture what's easy to measure, not what's newly valuable.</li>
+    </ol>
+    
+    <p>But there's a crucial difference this time. In the 1980s, IT innovators had monopoly pricing power until competitors caught up. Today, AI tools are rapidly commoditizing. The value isn't in the model—it's in how you use it.</p>
+    
+    <h2>The Open Source Counter-Narrative</h2>
+    
+    <p>While American labs race to build ever-larger closed models, something remarkable is happening in the open-source ecosystem. Chinese companies—DeepSeek, Kimi, MiniMax, Z.ai—are releasing frontier-quality models with unrestricted licenses. The gap between closed and open is narrowing.</p>
+    
+    <p>Nathan Lambert, who leads post-training at the Allen Institute for AI, frames this as an infrastructure problem:</p>
+    
+    <blockquote>
+      "The US is spending way more on AI. The ability to create open models that are half a generation or a generation beyond what the cutting edge of closed labs is costs roughly $100 million—which is a lot of money, but not compared to what these companies have."
+      <cite>— Nathan Lambert</cite>
+    </blockquote>
+    
+    <p>The implications are geopolitical. If open models become the substrate for AI research, where that research happens matters enormously. The Adam Project—American Truly Open Models—is an attempt to ensure the US remains central to AI development, not just AI deployment.</p>
+    
+    <h2>What This Means for You</h2>
+    
+    <div class="takeaways">
+      <h3>Five Takeaways for the Coming Year</h3>
+      <ol>
+        <li><strong>The agent is the new interface.</strong> Stop thinking about AI as a chatbot. Start thinking about it as a coworker who lives in your tools and can act on your behalf.</li>
+        <li><strong>Model quality is commoditizing rapidly.</strong> Sonnet 4.6's release shows that yesterday's frontier is tomorrow's free tier. Invest in learning to use AI well, not in any particular model.</li>
+        <li><strong>The productivity gains are real but delayed.</strong> Expect a J-curve: initial investment and disruption, followed by accelerating returns. We're still early on the curve.</li>
+        <li><strong>Open source is winning on price, closed on polish.</strong> Choose based on your constraints: if you need control and cost-efficiency, go open; if you need the smoothest experience, stay closed.</li>
+        <li><strong>Programming is becoming "agentic engineering."</strong> The skill isn't writing code—it's directing agents to write code. This requires new muscles: specification, verification, and architectural judgment.</li>
+      </ol>
+    </div>
+    
+    <h2>The Deeper Pattern</h2>
+    
+    <p>What connects OpenClaw's viral success, Sonnet 4.6's quiet excellence, and the productivity paradox's stubborn persistence? A shift in what AI is <em>for</em>.</p>
+    
+    <p>The first wave of AI—let's call it the ChatGPT era—was about knowledge retrieval and synthesis. You asked questions; the model answered. Useful, but limited. The second wave—the one we're entering now—is about action. You describe outcomes; the model achieves them.</p>
+    
+    <p>This is the difference between a search engine and a personal assistant. Between a textbook and a tutor. Between a tool and a collaborator.</p>
+    
+    <p>Steinberger, reflecting on his journey, captures something essential:</p>
+    
+    <blockquote>
+      "I used to write really long prompts. And by writing, I mean I don't write—I talk. These hands are too precious for writing now. I just use bespoke prompts to build my software... I think a lot of coding, I always thought I liked coding, but really I like building."
+      <cite>— Peter Steinberger</cite>
+    </blockquote>
+    
+    <p>That's the shift in a sentence. AI isn't replacing the joy of building—it's removing the friction between intention and execution. The question isn't whether AI will transform work. It's whether we'll use the freed capacity to build things that matter.</p>
+    
+    <div class="pullquote">
+      "The dream isn't AGI. The dream is agency—the ability to close the gap between what you imagine and what exists."
+    </div>
+    
+    <section class="links-section">
+      <h3>Sources & Further Reading</h3>
+      
+      <div class="link-group">
+        <h4>Hacker News</h4>
+        <ul>
+          <li><a href="https://www.anthropic.com/news/claude-sonnet-4-6">Claude Sonnet 4.6</a> — Anthropic's announcement</li>
+          <li><a href="https://fortune.com/2026/02/17/ai-productivity-paradox-ceo-study-robert-solow-information-technology-age/">AI Productivity Paradox</a> — Fortune on the Solow parallel</li>
+          <li><a href="https://annas-archive.li/blog/llms-txt.html">If You're an LLM, Please Read This</a> — A fascinating meta-message to AI agents</li>
+        </ul>
+      </div>
+      
+      <div class="link-group">
+        <h4>Substack</h4>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-claude-sonnet-46-clean-upgrade">Latent Space: Claude Sonnet 4.6</a> — AI News weekday roundup</li>
+        </ul>
+      </div>
+      
+      <div class="link-group">
+        <h4>Video Transcripts</h4>
+        <ul>
+          <li><a href="https://lexfridman.com/peter-steinberger-transcript">Lex Fridman: Peter Steinberger on OpenClaw</a> — The full 3-hour conversation</li>
+          <li><a href="https://lexfridman.com/ai-sota-2026-transcript">Lex Fridman: State of AI in 2026</a> — Nathan Lambert & Sebastian Raschka</li>
+        </ul>
+      </div>
+    </section>
+    
+    <footer>
+      <p>Generated by nanobot • <span class="tag">Deep Dive</span></p>
+    </footer>
+  </article>
+</body>
+</html>

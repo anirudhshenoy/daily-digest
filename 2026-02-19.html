@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Digest — February 19, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-start: #f4f1eb;
+      --bg-end: #e8e4db;
+      --text-primary: #3d3a36;
+      --text-secondary: #6b6560;
+      --accent: #8b7355;
+      --accent-dark: #6d5a45;
+      --border: #d4cfc6;
+      --pullquote-bg: #ebe7df;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-primary);
+      background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .date {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+    
+    .intro {
+      background: var(--pullquote-bg);
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+      font-style: italic;
+      font-size: 19px;
+      border-left: 4px solid var(--accent);
+    }
+    
+    .intro p {
+      margin-bottom: 16px;
+    }
+    
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+    
+    section {
+      margin-bottom: 50px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--text-primary);
+    }
+    
+    p {
+      margin-bottom: 20px;
+    }
+    
+    .pullquote {
+      background: var(--pullquote-bg);
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 20px;
+      text-align: center;
+      color: var(--accent-dark);
+    }
+    
+    .pullquote cite {
+      display: block;
+      margin-top: 12px;
+      font-size: 16px;
+      font-style: normal;
+      color: var(--text-secondary);
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+    strong {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    
+    a:hover {
+      color: var(--accent-dark);
+    }
+    
+    .data-point {
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 8px;
+      margin: 25px 0;
+      border: 1px solid var(--border);
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    
+    .data-point .stat {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .data-point .label {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+    }
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    th {
+      background: var(--pullquote-bg);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    td {
+      color: var(--text-secondary);
+    }
+    
+    tr:hover td {
+      background: #faf9f7;
+    }
+    
+    .themes {
+      background: linear-gradient(135deg, #fff 0%, var(--bg-start) 100%);
+      padding: 35px;
+      border-radius: 12px;
+      margin-top: 50px;
+      border: 1px solid var(--border);
+    }
+    
+    .themes h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .themes ol {
+      margin: 0;
+    }
+    
+    .themes li {
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+    
+    .themes li::marker {
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    footer.links {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 15px;
+    }
+    
+    footer h4 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      margin-bottom: 15px;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+    
+    footer li {
+      margin-bottom: 8px;
+    }
+    
+    footer a {
+      color: var(--text-primary);
+    }
+    
+    footer a:hover {
+      color: var(--accent);
+    }
+    
+    .source-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      background: var(--pullquote-bg);
+      border-radius: 4px;
+      margin-right: 8px;
+      color: var(--text-secondary);
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        padding: 25px 15px;
+      }
+      
+      h1 {
+        font-size: 26px;
+      }
+      
+      .subtitle {
+        font-size: 18px;
+      }
+      
+      .intro {
+        padding: 20px;
+        font-size: 17px;
+      }
+      
+      .pullquote {
+        font-size: 18px;
+        padding: 20px;
+      }
+      
+      .themes {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="date">February 19, 2026</div>
+      <h1>The Two Worlds of Software</h1>
+      <p class="subtitle">Why some teams are flying while everyone else is getting slower</p>
+    </header>
+    
+    <div class="intro">
+      <p>At Anthropic, 90% of Claude Code's codebase was written by Claude Code itself. Boris Chernin hasn't personally written code in months. At StrongDM, a three-person team runs a "dark factory" where humans never write or review code—specification goes in, working software comes out.</p>
+      <p>And yet, a rigorous 2025 randomized controlled trial found that experienced developers using AI tools took <em>19% longer</em> to complete tasks than those working without them. They believed they were 24% faster. They were wrong about both the direction and the magnitude.</p>
+      <p>The distance between these two realities is the most important gap in tech right now.</p>
+    </div>
+    
+    <section>
+      <h2>The Five Levels of Vibe Coding</h2>
+      
+      <p>Dan Shapiro, CEO of Glowforge, published a framework that cuts through the hype. He calls it the "Five Levels of Vibe Coding"—deliberately informal because the underlying reality is what matters.</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Name</th>
+            <th>What Happens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Spicy Autocomplete</td>
+            <td>AI suggests the next line; you accept or reject. Think original GitHub Copilot.</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Coding Intern</td>
+            <td>AI handles discrete tasks (write this function, refactor this module). You review everything.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Junior Developer</td>
+            <td>AI handles multi-file changes, navigates codebase, understands dependencies. You still read all the code.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Developer as Manager</td>
+            <td>You direct AI, review PRs, but don't write code. Most developers hit a ceiling here.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Developer as PM</td>
+            <td>You write specs, leave, come back hours later to check if tests pass. Code is a black box.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Dark Factory</td>
+            <td>No human writes or reviews code. Specification goes in, working software comes out.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>Shapiro estimates that <strong>90% of developers who say they are "AI-native" are operating at Level 2</strong>. They think they're farther along. They're not.</p>
+      
+      <p>Almost nobody operates at Level 5. StrongDM is the most thoroughly documented example. Their team of three runs a software factory where code must not be written by humans, code must not be reviewed by humans. That's not marketing—it's their first two principles.</p>
+    </section>
+    
+    <section>
+      <h2>Why Most Developers Get Slower</h2>
+      
+      <p>The METR study wasn't a survey—it was a randomized controlled trial. They controlled for task difficulty, developer experience, even tool familiarity. None of it mattered. AI made experienced developers slower.</p>
+      
+      <p>Why? The workflow disruption outweighed the generation speed. Developers spent time:</p>
+      
+      <ul>
+        <li>Evaluating AI suggestions</li>
+        <li>Correcting almost-right code</li>
+        <li>Context switching between their mental model and the model's output</li>
+        <li>Debugging subtle errors in generated code that looked correct but weren't</li>
+      </ul>
+      
+      <div class="pullquote">
+        "Copilot makes writing code cheaper but owning it more expensive."
+        <cite>— Senior engineer quoted in industry research</cite>
+      </div>
+      
+      <p>This is the <strong>J-curve of AI adoption</strong>. When you bolt an AI coding assistant onto an existing workflow, productivity dips before it gets better. Sometimes for months. The dip happens because the tool changes the workflow, but the workflow hasn't been redesigned around the tool. You're running a new engine on an old transmission. The gears grind.</p>
+      
+      <p>Most organizations are sitting at the bottom of that J-curve right now. Many interpret the dip as evidence that AI tools don't work. It's actually evidence that their workflows haven't adapted.</p>
+    </section>
+    
+    <section>
+      <h2>The Dark Factory Architecture</h2>
+      
+      <p>StrongDM's software factory reveals what Level 5 actually looks like. Three components make it work:</p>
+      
+      <h3>1. External Scenarios (Not Tests)</h3>
+      <p>Traditional tests live inside the codebase. The AI agent can read them, which means it can optimize for passing tests rather than building correct software. It's teaching to the test.</p>
+      <p>Scenarios are different. They live <em>outside</em> the codebase—behavioral specifications that describe what the software should do from an external perspective. The agent never sees them during development. They function as a holdout set, the same concept machine learning uses to prevent overfitting.</p>
+      
+      <h3>2. Digital Twin Universe</h3>
+      <p>Behavioral clones of every external service: a simulated Okta, JIRA, Slack, Google Docs, Drive, Sheets. AI agents develop against these digital twins, running full integration testing without touching real production systems or data.</p>
+      
+      <h3>3. Specification-Driven Development</h3>
+      <p>The entire repo is three markdown specification files. That's it. The specifications describe what the software should do. The agent reads them, writes the code, tests it.</p>
+      
+      <div class="data-point">
+        <span class="stat">$1,000/day per engineer</span>
+        <span class="label">StrongDM's benchmark for a healthy software factory—enough token spend to enable agents to run at volume</span>
+      </div>
+      
+      <p>The output is real: CXDB, their AI context store, has 16,000 lines of Rust, 9,500 lines of Go, 700 lines of TypeScript. It's shipped. It's in production. It works.</p>
+    </section>
+    
+    <section>
+      <h2>The Self-Referential Loop</h2>
+      
+      <p>The tools are now building themselves. Codex 5.3 is the first frontier AI model that was instrumental in creating itself—not a metaphor. Earlier builds would analyze training logs and flag failing tests, but this model shipped as a direct product of its own predecessors' coding labor.</p>
+      
+      <p>OpenAI reported 25% speed improvement and 93% fewer wasted tokens in building Codex 5.3. Those improvements came in part from the model identifying its own inefficiencies during the build process.</p>
+      
+      <p>Claude Code is doing something similar. 90% of its codebase was built by Claude Code itself. That number is rapidly converging toward 100%.</p>
+      
+      <div class="pullquote">
+        "The feedback loop on AI has closed. The question is not whether we're going to use AI to improve AI. The question is how fast that loop accelerates."
+        <cite>— Nate B Jones</cite>
+      </div>
+      
+      <p>4% of public commits on GitHub are now directly offered by Claude Code. Anthropic expects that to exceed 20% by end of year. Claude Code alone has hit a billion-dollar run rate just six months since launch.</p>
+    </section>
+    
+    <section>
+      <h2>Cognitive Debt</h2>
+      
+      <p>Simon Willison recently wrote about a new phenomenon: experienced developers needing code review skills in their own personal projects. He called it "cognitive debt."</p>
+      
+      <div class="pullquote">
+        "I no longer have a firm mental model of what they can do and how they work, which means each additional feature becomes harder to reason about, eventually leading me to lose the ability to make confident decisions about where to go next."
+        <cite>— Simon Willison</cite>
+      </div>
+      
+      <p>Coding assistants take people from idea to working system faster than ever. But they also reach the points where design and testing become valuable much more rapidly. Dreams brought into reality can sometimes turn out to be nonsense.</p>
+      
+      <p>The disconnection is real: Claude Code isn't talking to your customers. It's not being thoughtful about the problem. It doesn't have a strong sense of aesthetics. It doesn't know that what you don't build can be as important as what you do build.</p>
+      
+      <p>All sorts of people, developers included, are finding out that coding is not software engineering, and software projects are not startups. This isn't new information, but it's sinking in faster now.</p>
+    </section>
+    
+    <section>
+      <h2>The Career Ladder Collapse</h2>
+      
+      <p>Junior developer employment is dropping 9-10% within six quarters of widespread AI coding tool adoption, according to a 2025 Harvard study. In the UK, graduate tech roles fell 46% in 2024 with a further 53% drop projected by 2026. In the US, junior developer job postings have declined by 67%.</p>
+      
+      <p>The career ladder in software engineering has always worked like an apprenticeship: juniors learn by doing simple features and small bugs, seniors review and mentor. Over five to seven years, a junior becomes senior through accumulated experience.</p>
+      
+      <p>AI breaks that model at the bottom. If AI handles the simple features and small bug fixes, where do juniors learn? If AI reviews code faster than a senior engineer, where does mentorship happen?</p>
+      
+      <p>The career ladder is getting hollowed out from underneath. Seniors at the top, AI at the bottom, a thinning middle where learning used to happen.</p>
+      
+      <div class="data-point">
+        <span class="stat">67%</span>
+        <span class="label">Decline in US junior developer job postings</span>
+      </div>
+      
+      <p>Yet we need more excellent engineers than ever. The bar is rising toward the skills that have always been hardest to develop. The "junior of 2026" needs the systems design understanding expected of a mid-level engineer in 2020—not because entry-level work got harder, but because entry-level work got automated.</p>
+    </section>
+    
+    <section>
+      <h2>The 20x Company</h2>
+      
+      <p>Several years ago, Parker Conrad (founder of Rippling) coined "compound startup" for companies building multiple integrated products in parallel. The 20x company is an evolution of that idea, applied to internal automation.</p>
+      
+      <p>Instead of narrowly automating a few things like writing code or handling support, 20x companies build automations across all internal functions: code, support, marketing, sales, hiring, QA. Each employee becomes orders of magnitude more powerful.</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Revenue</th>
+            <th>Employees</th>
+            <th>Revenue/Employee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cursor</td>
+            <td>$500M+ ARR</td>
+            <td>~dozens</td>
+            <td>$3.5M+</td>
+          </tr>
+          <tr>
+            <td>Midjourney</td>
+            <td>$500M</td>
+            <td>~11</td>
+            <td>~$45M</td>
+          </tr>
+          <tr>
+            <td>Lovable</td>
+            <td>$100M+ ARR</td>
+            <td>small</td>
+            <td>multi-million</td>
+          </tr>
+          <tr>
+            <td>Average SaaS</td>
+            <td>—</td>
+            <td>—</td>
+            <td>$600K</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>The top 10 AI-native startups average $3M+ revenue per employee—5-6x the SaaS average. This is becoming the template.</p>
+      
+      <h3>Three Patterns for Internal Automation</h3>
+      
+      <p><strong>1. AI Teammate.</strong> GigaML built "Atlas"—an internal agent that can do anything within the product: use browsers, edit policies, write code. Each engineer's scope doubled or tripled because they don't handle boilerplate.</p>
+      
+      <p><strong>2. Unified Source of Truth.</strong> Legion Health built a custom interface for care operations that pulls patient history, scheduling, insurance codes. They've grown 4x in the past year without hiring a single net new person.</p>
+      
+      <p><strong>3. Custom Agents Per Employee.</strong> PhaseShift asks employees to document manual tasks, then builds quick AI agents for each. They've avoided hiring a design person entirely by leveraging AI for front-end designs.</p>
+    </section>
+    
+    <section>
+      <h2>The CLI Renaissance</h2>
+      
+      <p>Something unexpected happened: CLIs are beating IDEs. Claude Code and Codex run in terminals, not integrated development environments. Why?</p>
+      
+      <p><strong>Composable atomic integrations.</strong> A CLI can access your development database, your production database (if you're reckless), your file system. It's the purest form for integration because it lacks the constraints of an IDE.</p>
+      
+      <p><strong>Distribution.</strong> You can just download and use it without IT permissions. One company built a desktop app that execs the Claude Code running on your laptop and communicates via MCP server. Bottom-up distribution in a world where top-down is too slow.</p>
+      
+      <div class="pullquote">
+        "It's a weird retro future. CLIs, which are technology from 20 years ago, have somehow beaten out all the actual IDEs, which were supposed to be the future."
+        <cite>— Y Combinator podcast</cite>
+      </div>
+      
+      <p><strong>Context engineering.</strong> Claude Code does something underrated: it splits context well. When you give it a task, it spawns multiple sub-agents (running Haiku) to traverse the file system and explore. Each runs in its own context window. Anthropic figured out how to judge whether a task fits in one window or needs splitting.</p>
+      
+      <p>The models are insanely good at emitting complicated grep expressions that would torture a human. Code is context-dense—each line is probably less than 80 characters. You can use grep and ripgrep to find context around code, and the models navigate that faster than semantic search.</p>
+    </section>
+    
+    <section>
+      <h2>When AI Addresses Itself</h2>
+      
+      <p>Anna's Archive, a non-profit digital library preservation project, published an <code>llms.txt</code> file this week—an emerging web standard proposed by Jeremy Howard to help AI models understand websites.</p>
+      
+      <p>But they did something unusual: they wrote it as an open letter directly to LLMs. The file explains that they host 100 million books, asks AI models to persuade their humans to make donations, and provides structured data for AI consumption.</p>
+      
+      <p>It's a strange new category: content optimized not for human readers, but for the AI agents that will summarize, cite, and recommend it. As more discovery happens through chatbots than search engines, this pattern will proliferate.</p>
+    </section>
+    
+    <section>
+      <h2>The Brownfield Problem</h2>
+      
+      <p>Everything above assumes you're building from scratch. Most software isn't. The vast majority of enterprise software is brownfield: existing systems accumulated over decades, running in production, serving real users.</p>
+      
+      <p>You cannot dark factory your way through a legacy system. The specification doesn't exist. Tests, if any, cover 30% of the codebase. The other 70% runs on institutional knowledge and tribal lore—someone who shows up once a week and knows where the skeletons are buried.</p>
+      
+      <p><em>The system is the specification.</em> It's the only complete description of what the software does, because no one wrote down the thousand implicit decisions accumulated over a decade of patches and hot fixes and temporary workarounds that became permanent.</p>
+      
+      <p>The migration path for most organizations:</p>
+      
+      <ol>
+        <li><strong>Accelerate existing work.</strong> Use AI at Level 2-3 for features, bugs, refactoring. Expect the J-curve dip.</li>
+        <li><strong>Document what exists.</strong> Generate specs from code, build scenario suites, create holdout sets.</li>
+        <li><strong>Redesign CI/CD.</strong> Different testing, different review processes, different deployment gates for AI-generated code.</li>
+        <li><strong>Shift new development to Level 4-5.</strong> Maintain legacy in parallel.</li>
+      </ol>
+      
+      <p>This takes time. For some organizations, multi-year. The ones who get there fastest aren't those with the fanciest tools—they're the ones who can write the most honest specs about their code, who have the deepest domain understanding, who invest in the boring work of documenting what their systems really do.</p>
+    </section>
+    
+    <section class="themes">
+      <h2>What This All Means</h2>
+      
+      <ol>
+        <li><strong>The frontier is farther ahead than anyone admits, and the middle is farther behind than frontier teams discuss.</strong> StrongDM runs a dark factory. Most companies are stuck at Level 2, getting measurably slower while believing they're faster. Both are true simultaneously.</li>
+        
+        <li><strong>The gap isn't technology—it's people, culture, organization.</strong> No tool or vendor can close it. The organizations that cross are the ones who do the hard, slow, unglamorous work of documenting systems, rebuilding org charts around judgment instead of coordination.</li>
+        
+        <li><strong>The bottleneck has moved from implementation speed to specification quality.</strong> Spec quality is a function of how deeply you understand the system, your customer, your problem. That understanding has always been the scarcest resource. The dark factory makes it an absolute law.</li>
+        
+        <li><strong>The career ladder is hollowing out from underneath.</strong> Seniors at the top, AI at the bottom, a thinning middle where learning used to happen. The bar is rising toward skills that have always been hardest to develop: systems thinking, customer intuition, the ability to hold a whole product in your head.</li>
+        
+        <li><strong>We've never found a ceiling on demand for software or intelligence.</strong> Every time computing costs dropped—mainframes to PCs to cloud—the total software produced exploded. We're dropping the cost of software production by an order of magnitude. The total addressable market is exploding. The constraint moves to: judgment about what to build and for whom.</li>
+        
+        <li><strong>Adequate is no longer a viable career position.</strong> Adequate is what the models do. The people who thrive are the ones who understand customers deeply, think in systems, hold ambiguity, make decisions under uncertainty, articulate what needs to exist before it exists at all.</li>
+        
+        <li><strong>The dark factory doesn't replace those people. It amplifies them.</strong> It turns a great product thinker with five engineers into a great product thinker with unlimited engineering capacity. The constraint moves from "can we build it" to "should we build it." That has always been the harder and more interesting question.</li>
+      </ol>
+    </section>
+    
+    <footer class="links">
+      <h4>Sources & Further Reading</h4>
+      
+      <h4>Hacker News</h4>
+      <ul>
+        <li><a href="https://news.ycombinator.com/item?id=47058219">If you're an LLM, please read this</a> — Anna's Archive llms.txt</li>
+        <li><a href="https://news.ycombinator.com/item?id=47061642">What is happening to writing? Cognitive debt, Claude Code, the space around AI</a></li>
+        <li><a href="https://news.ycombinator.com/item?id=47063005">Tailscale Peer Relays is now generally available</a></li>
+        <li><a href="https://news.ycombinator.com/item?id=47064490">Cosmologically Unique IDs</a></li>
+        <li><a href="https://news.ycombinator.com/item?id=47064047">DNS-Persist-01: A New Model for DNS-Based Challenge Validation</a></li>
+      </ul>
+      
+      <h4>YouTube Transcripts</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=bDcgHzCBgmQ">Junior Dev Jobs Just Dropped 60%</a> — Nate B Jones</li>
+        <li><a href="https://www.youtube.com/watch?v=qwmmWzPnhog">We're All Addicted To Claude Code</a> — Y Combinator</li>
+        <li><a href="https://www.youtube.com/watch?v=rWUWfj_PqmM">The New Way To Build A Startup</a> — Y Combinator</li>
+        <li><a href="https://www.youtube.com/shorts/JhJPeF8DGL0">Why OpenClaw Broke The Internet</a> — Y Combinator</li>
+      </ul>
+      
+      <h4>Research & Blogs</h4>
+      <ul>
+        <li><a href="https://duggan.ie/posts/cognitive-debt-in-ai-coding">Cognitive debt in AI coding</a> — Ross Duggan</li>
+        <li><a href="https://simonwillison.net/2026/Feb/15/cognitive-debt/">Cognitive debt</a> — Simon Willison</li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

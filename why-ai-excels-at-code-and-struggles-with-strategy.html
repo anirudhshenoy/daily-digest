@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why AI Excels at Code and Struggles with Judgment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f1eb;
+            --fg: #2c2416;
+            --muted: #6b5d4d;
+            --accent: #8b4513;
+            --card: #fffdf9;
+            --border: #d4cfc5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .date {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: var(--muted);
+            font-size: 20px;
+        }
+        
+        article {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: var(--fg);
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--fg);
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .pullquote {
+            font-size: 22px;
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 24px;
+            margin: 32px 0;
+            color: var(--muted);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 16px;
+        }
+        
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table th {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted);
+        }
+        
+        .data-table td {
+            font-family: 'Source Sans 3', sans-serif;
+        }
+        
+        .takeaways {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .takeaways h3 {
+            margin-top: 0;
+        }
+        
+        .takeaways ol {
+            padding-left: 24px;
+        }
+        
+        .takeaways li {
+            margin-bottom: 12px;
+        }
+        
+        ul {
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 14px;
+        }
+        
+        .numbered-section {
+            margin-top: 24px;
+        }
+        
+        .numbered-section h3 {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">February 28, 2026</div>
+            <h1>Why AI Excels at Code and Struggles with Judgment</h1>
+            <p class="subtitle">The verifiability problem, imposed taste, and why context is fractal.</p>
+        </header>
+        
+        <article>
+            <h2>The Verifiability Problem</h2>
+            
+            <p>There's a pattern anyone who works with LLMs has noticed. Ask an AI to write code, and it often produces something useful. Ask it to help with a decision that requires judgment—hiring, strategy, creative direction, negotiation—and you get fluent, confident, completely generic advice. The structure is there. The thinking isn't.</p>
+            
+            <p>This isn't about intelligence. The same model that can debug a complex algorithm produces bland advice on questions that matter. What's going on?</p>
+            
+            <p>The answer isn't that judgment requires "creativity" or "intuition" that AI lacks. It's simpler: <strong>most knowledge work is non-verifiable, and that breaks the training loop.</strong></p>
+            
+            <h2>What Makes Code Different</h2>
+            
+            <p>Code has a property that most knowledge work lacks: <strong>fast, objective feedback.</strong></p>
+            
+            <p>You write a function. You run tests. They pass or fail. The compiler accepts your code or rejects it. There's no ambiguity. This isn't just convenient for programmers—it's essential for how AI learns.</p>
+            
+            <p>Reinforcement learning requires a feedback signal. The agent takes an action, the environment responds, and the agent learns from that response. In code, the environment is the test suite. The response is binary: correct or incorrect. This enables what researchers call RLVR—Reinforcement Learning from Verifiable Rewards.</p>
+            
+            <p>DeepSeek-R1-Zero demonstrated something striking: when you train a model with pure RL on verifiable rewards (unit tests), it develops emergent behaviors. The model learns to self-verify, to backtrack when it hits dead ends, to have what researchers call "aha moments." No supervised fine-tuning required. The feedback loop teaches it to reason.</p>
+            
+            <p>This works because code is:</p>
+            
+            <ul>
+                <li><strong>Verifiable:</strong> Tests pass or fail</li>
+                <li><strong>Fast:</strong> Feedback in seconds</li>
+                <li><strong>Objective:</strong> Same answer for everyone</li>
+            </ul>
+            
+            <p>Most knowledge work has none of these properties.</p>
+            
+            <h2>The Non-Verifiability Spectrum</h2>
+            
+            <p>Knowledge work exists on a spectrum:</p>
+            
+            <table class="data-table">
+                <tr><th>Work</th><th>Verifiable?</th><th>Feedback Speed</th><th>RL-able?</th></tr>
+                <tr><td>Code</td><td>Yes</td><td>Seconds</td><td>Yes</td></tr>
+                <tr><td>Math proofs</td><td>Yes</td><td>Seconds-minutes</td><td>Yes</td></tr>
+                <tr><td>Legal contracts</td><td>Yes</td><td>Months-Years</td><td>Hard</td></tr>
+                <tr><td>Hiring decisions</td><td>Partially</td><td>Months</td><td>Very Hard</td></tr>
+                <tr><td>Creative direction</td><td>No</td><td>Never</td><td>No</td></tr>
+                <tr><td>Strategic judgment</td><td>Partially</td><td>Quarters</td><td>Very Hard</td></tr>
+                <tr><td>Aesthetic judgment</td><td>No</td><td>Never</td><td>No</td></tr>
+            </table>
+            
+            <p>The key insight: <strong>verifiability alone isn't enough.</strong> You need fast feedback loops. A legal contract is verifiable—did it get challenged? did we win?—but the feedback takes years. By the time you learn, the training opportunity is gone.</p>
+            
+            <p>Judgment-heavy work sits in the worst position. It's often non-verifiable (was that the right hire? did the creative direction work?). When it is verifiable, the feedback takes months. You can't run a thousand hiring experiments per second like you can with code.</p>
+            
+            <p>This isn't a gap that more data fixes. It's structural.</p>
+            
+            <h2>When You Can't Verify, You Impose Taste</h2>
+            
+            <p>Here's what happens when you train an AI on non-verifiable tasks.</p>
+            
+            <p>You can't use RLVR because there's no verifiable reward. So you use RLHF—Reinforcement Learning from Human Feedback. You show humans two outputs, ask which is better, train a reward model on those preferences, optimize the AI to maximize that reward.</p>
+            
+            <p>But whose preferences?</p>
+            
+            <p>The annotators hired by the lab. People selected for agreeing with the lab's values. People who may or may not share your context, your industry, your aesthetic sense.</p>
+            
+            <div class="pullquote">RLHF produces a specific taste: the taste of the lab's annotators. This isn't absence. It's misalignment.</div>
+            
+            <p>When you ask an AI for judgment, you're not getting "no taste." You're getting OpenAI's taste, or Anthropic's taste, or DeepSeek's taste. These are reasonable defaults—they're not random. But they're not <em>yours</em>.</p>
+            
+            <p>The problem isn't that AI can't have taste. The problem is that when verifiability fails, the lab's taste is what you get.</p>
+            
+            <h2>Reasoning Amplifies, Doesn't Substitute</h2>
+            
+            <p>The latest models—o1, o3, Claude's extended thinking—do something new. They "reason" for longer, spending more compute at inference time, working through problems step by step.</p>
+            
+            <p>This is genuinely powerful. On verifiable tasks (math, code, logic puzzles), extended reasoning dramatically improves performance. The model can catch its own errors, backtrack, verify intermediate steps.</p>
+            
+            <p>But here's the catch: <strong>reasoning operates on premises.</strong> If you give the model wrong premises, extended reasoning produces confident wrong answers.</p>
+            
+            <p>This is why context isn't a nice-to-have. It's the foundation that reasoning builds on.</p>
+            
+            <p>A model with superhuman reasoning but generic context will produce superhuman reasoning about the wrong problem. It will optimize for objectives you don't have, consider constraints you don't face, ignore constraints you do face. The reasoning is sound. The premises are wrong.</p>
+            
+            <h2>Context is Fractal</h2>
+            
+            <p>This is where most "just add context" advice fails.</p>
+            
+            <p>The problem isn't context window size. Modern models have 1-2 million token contexts. You can dump your entire document library into them.</p>
+            
+            <p>The problem is that <strong>context is fractal</strong>—infinitely detailed, and you don't know what's relevant until you need it.</p>
+            
+            <p>Consider a hiring decision. What context matters?</p>
+            
+            <ul>
+                <li>The role requirements (written down)</li>
+                <li>The team dynamics (partially written)</li>
+                <li>The candidate's background (written down)</li>
+                <li>Your past hiring mistakes (maybe written down)</li>
+                <li>The unspoken cultural fit criteria (not written down)</li>
+                <li>The political dynamics of who wants this hire (not written down)</li>
+                <li>The budget constraints no one mentions explicitly (not written down)</li>
+                <li>The last person in this role who failed and why (partially written)</li>
+                <li>The competitor who's also recruiting this candidate (not written down)</li>
+                <li>Your intuition about this person from the interview (not written down)</li>
+            </ul>
+            
+            <p>You can't pre-index all of this because you don't know what matters. The relevance is discovered in the moment, during the specific decision. And the next decision will need different context.</p>
+            
+            <p>This is why labs can't solve this at scale. Every user's fractal is different. Every decision needs different slices of the fractal. The problem isn't engineering—it's that relevance is emergent, not pre-determinable.</p>
+            
+            <h2>Why Context Accumulation is Hard</h2>
+            
+            <p>The fractal nature of context creates several specific problems that current approaches don't solve:</p>
+            
+            <div class="numbered-section">
+                <h3>1. Discovery, Not Retrieval</h3>
+                <p>RAG systems assume you know what you're looking for. You query for "hiring criteria" and get documents about hiring criteria. But the relevant context might be "the last person we hired from this company quit after 3 months"—something you wouldn't think to query for.</p>
+                <p>The problem isn't finding known things. It's surfacing unknown-unknowns: context you didn't know was relevant until it became relevant.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>2. Implicit Knowledge</h3>
+                <p>Most of what matters in judgment isn't written down. It's in your head: patterns you've noticed, intuitions you've developed, lessons from failures you didn't document.</p>
+                <p>Current AI systems can only work with what's explicit. They can't extract the tacit knowledge that drives your judgment.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>3. Cross-Referential Dependencies</h3>
+                <p>Context A matters because of Context B, but you don't know B until you know A. The relevance is relational, not atomic.</p>
+                <p>Example: "We should hire this candidate" depends on "they have the right skills" (explicit) which depends on "the skills we actually need are different from what's in the job description" (implicit) which depends on "the project direction changed last month" (semi-explicit).</p>
+                <p>You can't pre-index these dependencies because they're situation-specific.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>4. Temporal Decay and Drift</h3>
+                <p>Context that was relevant 6 months ago may not be relevant now. But sometimes it is. The model can't know which past context is still alive without understanding how situations evolve.</p>
+                <p>This isn't just about recency—it's about relevance decay patterns that are domain and situation specific.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>5. User-Specific Relevance</h3>
+                <p>Every person's fractal is different. Two people facing the same decision might need completely different context based on their:</p>
+                <ul>
+                    <li>Past experiences (what patterns they've already internalized)</li>
+                    <li>Blind spots (what they tend to miss)</li>
+                    <li>Preferences (how they like to think about problems)</li>
+                    <li>Constraints (what they can and can't do)</li>
+                </ul>
+                <p>A universal context system can't exist because relevance is personal.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>6. Dynamic Emergence</h3>
+                <p>The fractal changes as the situation changes. What's relevant shifts during a conversation, during a decision process, during a project. Static context injection assumes relevance is fixed. It isn't.</p>
+            </div>
+            
+            <h2>Directions for Solutions</h2>
+            
+            <p>If context accumulation is the bottleneck, what would actual solutions look like?</p>
+            
+            <div class="numbered-section">
+                <h3>1. Active Context Gathering</h3>
+                <p>Instead of waiting for you to provide context, AI actively discovers it:</p>
+                <ul>
+                    <li><strong>Interview-style onboarding:</strong> The AI asks you questions about your situation, probing for relevant context you didn't think to mention</li>
+                    <li><strong>Contrast elicitation:</strong> "You said X, but I notice you didn't mention Y. Is Y relevant here?"</li>
+                    <li><strong>Assumption surfacing:</strong> "It sounds like you're assuming X. Is that right? What if X isn't true?"</li>
+                </ul>
+                <p>This moves from passive retrieval to active discovery.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>2. Decision Logging, Not Document Storage</h3>
+                <p>Current systems store documents. What matters is decisions: what you chose, when, why, and what happened.</p>
+                <p>A decision log captures:</p>
+                <ul>
+                    <li>The decision you faced</li>
+                    <li>The options you considered</li>
+                    <li>What you chose and why</li>
+                    <li>What happened as a result</li>
+                    <li>What you learned</li>
+                </ul>
+                <p>This creates a training signal for your personal taste. The AI learns your judgment patterns, not just your documents.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>3. Implicit Knowledge Extraction</h3>
+                <p>Tools that surface patterns from your behavior:</p>
+                <ul>
+                    <li><strong>Email/calendar analysis:</strong> What meetings do you accept vs decline? What do you spend time on?</li>
+                    <li><strong>Document patterns:</strong> What do you write about? What do you read?</li>
+                    <li><strong>Decision archaeology:</strong> Interview you about past decisions to extract tacit knowledge</li>
+                </ul>
+                <p>The goal: make implicit knowledge explicit without requiring you to document everything.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>4. Multi-Agent Context Discovery</h3>
+                <p>One agent gathers context, another reasons on it:</p>
+                <ul>
+                    <li><strong>Gatherer agent:</strong> Explores your documents, asks you questions, surfaces potentially relevant context</li>
+                    <li><strong>Reasoner agent:</strong> Works with the gathered context to produce the output</li>
+                    <li><strong>Critic agent:</strong> Identifies gaps in the context, asks follow-up questions</li>
+                </ul>
+                <p>This separates discovery from reasoning, allowing each to be optimized independently.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>5. Personal Fine-Tuning on Judgment</h3>
+                <p>Instead of RAG (retrieving context at inference time), fine-tune on your judgment patterns:</p>
+                <ul>
+                    <li>Train on your past decisions and outcomes</li>
+                    <li>Encode your taste into the model weights</li>
+                    <li>Update continuously as you make new decisions</li>
+                </ul>
+                <p>This is more expensive but potentially more powerful—the model internalizes your patterns rather than retrieving your documents.</p>
+            </div>
+            
+            <div class="numbered-section">
+                <h3>6. Context Surfacing Tools for Humans</h3>
+                <p>Sometimes the AI can't know what's relevant. But it can help <em>you</em> discover it:</p>
+                <ul>
+                    <li>"Here are 5 things that might be relevant to this decision. Which ones matter?"</li>
+                    <li>"You've made similar decisions before. Here's what you chose and why. Is this analogous?"</li>
+                    <li>"Before you decide, consider: [surface blind spots based on your past patterns]"</li>
+                </ul>
+                <p>The AI becomes a thinking partner, not an oracle.</p>
+            </div>
+            
+            <h2>What This Means for You</h2>
+            
+            <p>If you're using AI for judgment-heavy work:</p>
+            
+            <ol>
+                <li><strong>Recognize the verifiability gradient.</strong> Code, math, logic—these work well because they're verifiable. Judgment, aesthetics, strategy—these work poorly because they're not. Don't expect the same quality.</li>
+                <li><strong>Know whose taste you're getting.</strong> When you ask for non-verifiable work, you're getting the lab's taste. This might be fine. But know it's not neutral.</li>
+                <li><strong>Context is your job, not the model's.</strong> The model can't know what context is relevant. You have to surface it. The more specific your context, the more useful the reasoning.</li>
+                <li><strong>Start logging decisions.</strong> The most valuable context isn't your documents—it's your decisions. What you chose, why, what happened. This is the training signal for personal AI.</li>
+                <li><strong>The opportunity is in context infrastructure.</strong> If you're building products, don't compete on reasoning. Compete on context—personalization, discovery, relevance.</li>
+            </ol>
+            
+            <div class="takeaways">
+                <h3>The Core Insight</h3>
+                <p>AI excels at code not because code is simple, but because code is <strong>verifiable</strong>. It struggles with judgment not because judgment is creative, but because judgment is <strong>non-verifiable</strong>.</p>
+                <p>When you can verify, RL works. When you can't, the lab's taste is imposed.</p>
+                <p>Reasoning is powerful, but reasoning on wrong premises produces confident wrong answers.</p>
+                <p>Context isn't a context window problem—it's a <strong>fractal discovery problem</strong>. You don't know what matters until you're in the moment.</p>
+                <p>The models will keep getting better at reasoning. But the companies that win will be the ones that solve context—that help users navigate their own infinite detail, that encode individual judgment, that surface relevance when it matters.</p>
+                <p><strong>Reasoning is the engine. Context is the fuel. Right now, we have increasingly powerful engines running on generic fuel.</strong></p>
+                <p><strong>The opportunity is in the fuel.</strong></p>
+            </div>
+        </article>
+        
+        <footer>
+            Generated by nanobot • February 28, 2026
+        </footer>
+    </div>
+</body>
+</html>

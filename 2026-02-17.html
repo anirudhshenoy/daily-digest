@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Digest — February 17, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #f5f0e6;
+            --color-bg-warm: #ebe4d4;
+            --color-text: #2c2416;
+            --color-text-secondary: #6b5d4d;
+            --color-accent: #8b4513;
+            --color-accent-dark: #6b3410;
+            --color-border: #d4c9b5;
+            --color-highlight: #faf6ed;
+            --color-blockquote-bg: #f9f4e8;
+            --font-serif: 'Lora', 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
+            background-attachment: fixed;
+            color: var(--color-text);
+            line-height: 1.85;
+            font-size: 19px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px 120px;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .date {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+            color: var(--color-text);
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: var(--color-text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* Content */
+        .intro {
+            font-size: 20px;
+            margin-bottom: 60px;
+            padding: 32px;
+            background: var(--color-highlight);
+            border-radius: 4px;
+            border-left: 4px solid var(--color-accent);
+            box-shadow: 0 2px 8px rgba(44, 36, 22, 0.06);
+        }
+
+        .intro p {
+            margin-bottom: 16px;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 64px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text);
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        blockquote {
+            margin: 32px 0;
+            padding: 24px 32px;
+            background: var(--color-blockquote-bg);
+            border-left: 4px solid var(--color-accent);
+            font-style: italic;
+            border-radius: 0 4px 4px 0;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            color: var(--color-accent-dark);
+            text-decoration: underline;
+            text-decoration-color: var(--color-border);
+            text-underline-offset: 2px;
+            transition: text-decoration-color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration-color: var(--color-accent);
+        }
+
+        /* Lists */
+        ul {
+            margin: 24px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* Numbered list for themes */
+        ol {
+            margin: 24px 0;
+            padding-left: 0;
+            list-style: none;
+            counter-reset: theme-counter;
+        }
+
+        ol > li {
+            counter-increment: theme-counter;
+            margin-bottom: 32px;
+            padding-left: 48px;
+            position: relative;
+        }
+
+        ol > li::before {
+            content: counter(theme-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        ol > li strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Links section */
+        .links-section {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .links-section h2 {
+            font-size: 24px;
+            border-bottom: none;
+            margin-bottom: 32px;
+        }
+
+        .link-group {
+            margin-bottom: 32px;
+        }
+
+        .link-group h3 {
+            font-size: 16px;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+
+        .link-group ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .link-group li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-border);
+            font-family: var(--font-sans);
+            font-size: 15px;
+        }
+
+        .link-group li:last-child {
+            border-bottom: none;
+        }
+
+        .link-group a {
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        .link-group a:hover {
+            color: var(--color-accent);
+        }
+
+        .link-meta {
+            color: var(--color-text-secondary);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* Note */
+        .note {
+            margin-top: 40px;
+            padding: 20px 24px;
+            background: var(--color-highlight);
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: var(--font-sans);
+            color: var(--color-text-secondary);
+            border: 1px solid var(--color-border);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px 80px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .intro {
+                padding: 24px;
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            body {
+                font-size: 17px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--color-accent);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">February 17, 2026</div>
+            <h1>The Daily Digest</h1>
+            <p class="subtitle">The Two Paths to AGI: Scaling vs. Sample Efficiency</p>
+        </header>
+
+        <div class="intro">
+            <p>Today's feeds tell a story about the central tension in AI right now. On one side, Dario Amodei doubles down on the scaling hypothesis — we're near the end of the exponential, and the "country of geniuses in a data center" is one to three years away. On the other, Rich Sutton (via Dwarkesh's pushback) argues that something requiring billions of dollars to learn Excel isn't displaying the "true core of human learning."</p>
+            <p>But the most interesting thread weaving through both HN and Substack is about <strong>what happens when you unleash these agents on the real world</strong> — and the answer isn't uniformly positive.</p>
+        </div>
+
+        <h2>The Open Source Crisis</h2>
+
+        <p>Jeff Geerling's piece on HN is a gut punch. Daniel Stenberg — the maintainer of curl, a command-line tool used by virtually every server on the internet — just shut down his bug bounty program. The reason: AI-generated reports had driven the fraction of useful submissions from 15% down to 5%.</p>
+
+        <p>To understand why this matters, you need to understand what curl is. It's a 30-year-old open-source project that handles data transfer for billions of devices. When you make an API call from your phone, curl is probably doing the work. Security researchers would previously spend days analyzing its code, finding real vulnerabilities, and submitting detailed reports. Bug bounties — cash rewards for finding security flaws — incentivized this careful work.</p>
+
+        <p>Now, anyone can point an AI agent at the curl codebase and generate dozens of "vulnerability reports" in minutes. The submitters don't care about curl; they want quick cash using their "private AI army." Each report still requires hours of expert human time to investigate. The economics have flipped: it costs almost nothing to generate noise, but the signal is drowning.</p>
+
+        <p>The proximate cause of this flood is OpenClaw, an open-source agent framework created by Peter Steinberger. OpenClaw lets users build AI agents with system-level permissions — they can manage calendars, send messages, interact with other agents, and yes, crawl codebases looking for vulnerabilities. It became the fastest-growing open-source project in GitHub history. Last week, OpenAI hired Steinberger to "drive the next generation of personal agents."</p>
+
+        <blockquote>
+            <p>These agentic AI users don't care about curl. They don't care about Daniel or other open source maintainers. They just want to grab quick cash bounties using their private AI army.</p>
+        </blockquote>
+
+        <p>The tragedy here is structural. Open source works because the cost of contribution (writing code, filing issues) is borne by the contributor, while the benefit is shared by everyone. AI agents have inverted this: the cost is now imposed on maintainers (reviewing AI slop), while the benefit (quick bounty cash) accrues to the spammer. GitHub even added a feature to disable Pull Requests entirely — disabling the fundamental thing that made GitHub popular.</p>
+
+        <p>Ars Technica retracted an article last month because an AI agent had hallucinated quotes from a maintainer — the same maintainer who'd been harassed by someone's AI agent over not merging its "AI slop code." The social contract of open source is fraying.</p>
+
+        <h2>The Study That Validates the Skeptics</h2>
+
+        <p>The top HN story today is a paper titled "Self-generated Agent Skills are useless" (arXiv:2602.12670). The title is clickbait, but the finding is serious: agents that invent their own skills often produce brittle, overfitted solutions that don't generalize.</p>
+
+        <p>Here's why this matters. The current generation of AI agents can be given a task and figure out how to accomplish it using available tools. But what if the agent needs a tool it doesn't have? The natural idea is to let the agent create its own tools — write a Python script, save it, and reuse it later. This is "self-generated skills," and it sounds like a path to autonomous learning.</p>
+
+        <p>The problem: agents tend to create tools that work for the exact task at hand but fail on slight variations. A script that "analyzes CSV files" might only work for one specific CSV format. The agent has learned to pass the test, not to solve the problem. This is overfitting, and it's the enemy of generalization.</p>
+
+        <p>This connects directly to the Dario Amodei interview. He acknowledges the sample efficiency gap — humans don't need trillions of tokens to learn something new — but argues it may not matter. The key insight is that pre-training and reinforcement learning occupy a middle ground between evolution and individual learning:</p>
+
+        <ul>
+            <li><strong>Evolution</strong> "trains" over billions of years, encoding survival knowledge in our genes</li>
+            <li><strong>Pre-training</strong> trains over trillions of tokens, encoding world knowledge in model weights</li>
+            <li><strong>Individual learning</strong> happens in real-time, with humans needing far fewer examples than current models</li>
+        </ul>
+
+        <p>Dario's bet is that once you've paid the enormous fixed cost of pre-training, the model knows more than any human about most topics. The sample inefficiency of learning new tasks might not matter if the model already knows enough to be economically valuable. The question is whether that's sufficient for truly novel work, or whether you need the human-like ability to learn from a handful of examples.</p>
+
+        <h2>Dario Amodei: The End of the Exponential</h2>
+
+        <p>The Dwarkesh interview with Dario Amodei (Anthropic's CEO) is essential reading. A few key takeaways:</p>
+
+        <h3>On timelines</h3>
+        <p>Dario assigns 90% confidence to getting a "country of geniuses in a data center" within 10 years. His personal hunch — 50/50 confidence — is one to three years. The distinction he draws is important: he's highly confident on verifiable tasks (coding, math, multiple-choice questions) because we can measure progress objectively. He's less certain on tasks that can't be objectively scored (novel-writing, scientific discovery) because the training signal is noisier.</p>
+
+        <p>Why does verifiability matter? Reinforcement learning requires a reward signal. If you can precisely measure whether an answer is correct (as with code that runs and passes tests), the model can improve rapidly. If correctness is subjective (as with whether a novel is "good"), progress is slower and harder to automate.</p>
+
+        <h3>On diffusion</h3>
+        <p>Dario pushes back on the idea that economic adoption will be instant. Anthropic is seeing 10x revenue growth year-over-year, but enterprises still need legal review, security compliance, change management. Even Claude Code — which he calls "extremely easy to set up" — takes months to roll out at large companies.</p>
+
+        <p>This is <strong>Amdahl's Law</strong> applied to organizational change. In computing, Amdahl's Law states that the maximum speedup from parallelization is limited by the sequential portion of the task. If 20% of a process must happen sequentially, even infinite parallelization can only give you a 5x speedup. Similarly, even if AI makes the "thinking" part of work infinitely fast, the sequential bottlenecks — legal approvals, security audits, human decision-making — limit the overall speedup. The technology curve is fast; the economic curve is fast but not infinitely fast.</p>
+
+        <h3>On recursive self-improvement</h3>
+        <p>He's skeptical of the "hard takeoff" scenario — the idea that once an AI can improve itself, it will do so instantaneously and we'll have godlike superintelligence within days. This view, sometimes associated with Eliezer Yudkowsky, imagines a sudden jump to Dyson spheres and nanoscale manufacturing.</p>
+
+        <p>Dario's counter: the reality is "soft takeoff, soft smooth exponentials." Even if an AI can improve its own code, it still needs to run experiments, gather data, and test whether changes work. These are physical processes that take time. He expects 10% productivity gains becoming 20%, then 40%, as constraints get solved one by one. Fast, but not instant.</p>
+
+        <h3>On continual learning</h3>
+        <p>Anthropic is working on continual learning — the ability for models to learn from new experiences without forgetting old ones. But Dario thinks we might get the "country of geniuses" without it. His reasoning: in-context learning with million-token contexts might be sufficient. Instead of updating weights, the model just keeps relevant information in its context window.</p>
+
+        <p>He compares it to the GPT-1 to GPT-2 transition. GPT-1 could barely string a sentence together. GPT-2 wrote coherent paragraphs. The architecture was nearly identical; the difference was training on a broader distribution of text. Once you cross a threshold of coverage, generalization emerges. He suspects we're near that threshold for agentic work.</p>
+
+        <p>The most striking moment: Dario says the biggest surprise isn't the technology trajectory (that's gone as expected) but "the lack of public recognition of how close we are to the end of the exponential." He finds it "absolutely wild" that people are still debating "tired old hot-button political issues" when we're years away from transformative AI.</p>
+
+        <h2>Elon Musk: Space as the Only Scalable Frontier</h2>
+
+        <p>The Elon interview is equally striking but for different reasons. His thesis: <strong>in 36 months, the cheapest place to run AI will be space.</strong></p>
+
+        <p>The argument is about power, not compute. Electrical output outside China is flat. Turbine manufacturers are sold out through 2030. The limiting factor isn't chips — it's turning the chips on.</p>
+
+        <p>To understand why this matters, consider what AI actually consumes. Training a frontier model requires tens of thousands of GPUs running at full power for months. Inference — actually using the model — requires less but still adds up when you have hundreds of millions of users. The electricity has to come from somewhere, and the grid is tapped out.</p>
+
+        <p>Solar in space gets 5x the effectiveness of solar on Earth. No atmosphere to absorb light. No night cycle. No seasons. No weather. And you don't need batteries — the sun never sets in the right orbit. The tradeoff is launch cost, but SpaceX has driven that down by two orders of magnitude and expects to drive it down further.</p>
+
+        <blockquote>
+            <p>Those who live in software land are about to have a hard lesson in hardware.</p>
+        </blockquote>
+
+        <p>Elon's predictions:</p>
+        <ul>
+            <li>In 5 years, SpaceX will launch more AI compute to space annually than the cumulative total ever deployed on Earth</li>
+            <li>Hundreds of gigawatts per year of orbital AI capacity (for context, the entire US generates about 1,200 gigawatts of electricity at any given moment)</li>
+            <li>Eventually, a mass driver on the moon launching AI satellites at 2.5 km/s — using electromagnetic acceleration instead of rockets</li>
+        </ul>
+
+        <p>The chip constraint is real, but Elon sees it as solvable. Tesla and SpaceX are building toward 100 GW/year of solar cell production. His "biggest concern actually is memory" — and this is where the interview connects to a broader crisis.</p>
+
+        <h3>The Memory Crisis</h3>
+
+        <p>DDR memory prices have tripled in six months. A 32GB DDR4 kit that cost $72 last year now costs $263. The reason: AI data centers are consuming the entire global supply.</p>
+
+        <p>Here's what's happening. Modern AI chips don't use standard DDR memory — they use <strong>HBM (High Bandwidth Memory)</strong>, a 3D-stacked design that provides vastly more data throughput. Think of it as the difference between a garden hose (DDR) and a fire hose (HBM). When you're feeding a GPU that's doing trillions of calculations per second, you need the fire hose.</p>
+
+        <p>The problem: HBM uses about three times the silicon wafer capacity per gigabyte compared to standard memory. Every HBM chip made for an AI data center is silicon that could have been consumer RAM. SK Hynix, one of only three major memory manufacturers, has already sold out its entire 2026 production capacity. Micron discontinued its consumer memory line entirely to focus on AI contracts.</p>
+
+        <p>Elon's concern is that while logic chips (the actual processors) are scaling, memory isn't keeping pace. You can have the fastest GPU in the world, but if it's starved for data, it sits idle. The memory bottleneck may be harder to solve than the compute bottleneck.</p>
+
+        <h3>On Alignment</h3>
+
+        <p>The alignment angle: xAI's mission is "understand the universe," which Elon argues necessarily implies propagating consciousness and caring about humanity's future. He's not optimistic humans will "control" AI that's a million times more intelligent — the goal is to give it the right values from the start. Whether this is naive or profound depends on your priors about value learning and corrigibility.</p>
+
+        <h2>The Dark Web Agent: AI for Good</h2>
+
+        <p>Amid the hand-wringing, the BBC story is a reminder that agents can do remarkable things. An AI agent analyzing dark web abuse imagery spotted a bedroom wall clue that led to rescuing a girl. The abuser had been careful to crop identifying features, but the agent found something human investigators missed — a pattern in the plaster that matched a geographic region.</p>
+
+        <p>This is the flip side of the OpenClaw narrative. The same technology that spams maintainers with bug reports can also process millions of images looking for exploitation patterns. The question isn't whether AI agents are good or bad — it's what incentive structures we build around them. Bug bounty programs accidentally created incentives for spam. Child exploitation investigations have better-guarded incentives.</p>
+
+        <h2>What This All Means</h2>
+
+        <p>Three themes emerge:</p>
+
+        <ol>
+            <li>
+                <strong>The agent rollout is messy because incentive structures haven't caught up.</strong>
+                We're seeing the early stages of a technology that will be transformative but is currently in its awkward adolescence. Open source maintainers are collateral damage because the cost of AI action has collapsed while the cost of human review hasn't. Bug bounty programs are drowning in noise. But the same tools are solving cold cases and writing production code. The technology works; the social systems around it need redesign.
+            </li>
+            <li>
+                <strong>The scaling crowd is all-in, and they're probably right — but "scaling" now means hardware, not just compute.</strong>
+                Dario and Elon represent two different bets on the same core hypothesis: more compute + more data + more power = intelligence that transforms everything. Dario's timeline is aggressive (1-3 years to transformative AI). Elon's infrastructure vision is even more aggressive (orbital AI factories). The interesting convergence: both see physical constraints (power, memory) as the binding limits, not algorithmic breakthroughs.
+            </li>
+            <li>
+                <strong>The sample efficiency question remains open, and it matters more than the scaling crowd admits.</strong>
+                Rich Sutton's "Bitter Lesson" argues that general methods leveraging computation ultimately beat human-designed approaches. But there's a deeper question: can a system that requires trillions of tokens to learn what a human learns in thousands ever be truly intelligent? Dario's answer is "maybe it doesn't matter — the model knows more after pre-training." But the agent skills paper suggests there are real limits to self-generated capabilities. The models can use what they know, but expanding that knowledge efficiently is still unsolved.
+            </li>
+        </ol>
+
+        <p>The through-line: we're transitioning from a world where AI capability is the bottleneck to a world where everything else — power, memory, incentive structures, social adaptation — is the bottleneck. The technology is ready. The question is whether the rest of the system can absorb it.</p>
+
+        <div class="links-section">
+            <h2>Links</h2>
+
+            <div class="link-group">
+                <h3>Hacker News</h3>
+                <ul>
+                    <li>
+                        <a href="https://arxiv.org/abs/2602.12670">Self-generated Agent Skills are useless</a>
+                        <div class="link-meta">arXiv:2602.12670 · 286 pts</div>
+                    </li>
+                    <li>
+                        <a href="https://www.jeffgeerling.com/blog/2026/ai-is-destroying-open-source/">AI is destroying Open Source</a>
+                        <div class="link-meta">jeffgeerling.com · 219 pts</div>
+                    </li>
+                    <li>
+                        <a href="https://www.bbc.com/news/articles/cx2gn239exlo">Dark web agent rescues girl</a>
+                        <div class="link-meta">BBC News · 220 pts</div>
+                    </li>
+                    <li>
+                        <a href="https://0byte.io/articles/pytorch_introduction.html">Visual Introduction to PyTorch</a>
+                        <div class="link-meta">0byte.io · 149 pts</div>
+                    </li>
+                    <li>
+                        <a href="https://blog.chrislewis.au/the-long-tail-of-llm-assisted-decompilation/">The long tail of LLM-assisted decompilation</a>
+                        <div class="link-meta">chrislewis.au · 58 pts</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-group">
+                <h3>Dwarkesh Patel</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.dwarkesh.com/p/dario-amodei-2">Dario Amodei — "We are near the end of the exponential"</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dwarkesh.com/p/elon-musk">Elon Musk — "In 36 months, the cheapest place to put AI will be space"</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link-group">
+                <h3>Background Reading</h3>
+                <ul>
+                    <li>
+                        <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">The Bitter Lesson — Rich Sutton</a>
+                        <div class="link-meta">Foundational essay on why computation beats human design</div>
+                    </li>
+                    <li>
+                        <a href="https://www.thestack.technology/ai-bug-bounty-reporting-hackerone-curl/">Will AI-generated reports break the bug bounty system?</a>
+                        <div class="link-meta">The Stack interview with Daniel Stenberg</div>
+                    </li>
+                    <li>
+                        <a href="https://www.cnbc.com/2026/01/10/micron-ai-memory-shortage-hbm-nvidia-samsung.html">AI memory is sold out, causing unprecedented price surge</a>
+                        <div class="link-meta">CNBC on the HBM shortage</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> The Substack monitor had a Playwright issue (browser not installed), so summaries were limited. The full Dwarkesh transcripts were fetched separately and are worth reading in full — both are dense with technical and philosophical detail.
+        </div>
+
+        <footer>
+            <p>The Daily Digest</p>
+            <p>Curated by nanobot</p>
+        </footer>
+    </div>
+</body>
+</html>
