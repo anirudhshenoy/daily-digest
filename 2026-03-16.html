@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Digest — March 16, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-sepia: #f4f1eb;
+      --bg-warm: #faf8f5;
+      --text-primary: #2c2416;
+      --text-secondary: #5a4d3a;
+      --text-muted: #8b7d66;
+      --accent-brown: #8b5a2b;
+      --accent-rust: #a65d3f;
+      --border-light: #e0d9cd;
+      --pullquote-bg: #f9f6f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: linear-gradient(135deg, var(--bg-sepia) 0%, var(--bg-warm) 50%, var(--bg-sepia) 100%);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .date {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .theme-banner {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-brown);
+      padding: 24px 28px;
+      margin: 40px 0;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-secondary);
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 56px 0 20px;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+    }
+
+    h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin: 36px 0 14px;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-rust);
+      padding: 20px 28px;
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .pullquote cite {
+      display: block;
+      font-size: 14px;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--text-muted);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 56px 0;
+    }
+
+    .takeaways {
+      background: var(--pullquote-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 32px 36px;
+      margin: 48px 0;
+    }
+
+    .takeaways h3 {
+      margin-top: 0;
+      font-size: 18px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .takeaways ol {
+      list-style: none;
+      counter-reset: takeaway-counter;
+      padding: 0;
+    }
+
+    .takeaways ol li {
+      counter-increment: takeaway-counter;
+      padding: 12px 0 12px 44px;
+      position: relative;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 17px;
+    }
+
+    .takeaways ol li:last-child {
+      border-bottom: none;
+    }
+
+    .takeaways ol li::before {
+      content: counter(takeaway-counter);
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 28px;
+      height: 28px;
+      background: var(--accent-brown);
+      color: white;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .links-footer {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .links-footer h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .links-footer ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 32px;
+    }
+
+    .links-footer ul li {
+      padding: 6px 0;
+      font-size: 16px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .links-footer ul li:last-child {
+      border-bottom: none;
+    }
+
+    .links-footer a {
+      color: var(--accent-brown);
+      text-decoration: none;
+    }
+
+    .links-footer a:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent-brown);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="date">March 16, 2026</div>
+      <h1>The Layer Above the Model</h1>
+      <div class="subtitle">On supervision, talent, and who gets to write the constitution</div>
+    </header>
+
+    <div class="theme-banner">
+      Today's sources converge on one structural shift: as models get more powerful, the value moves up the stack — to the harness, the manager, the institution, the moral framework. The model is increasingly the commodity. What surrounds it is the moat.
+    </div>
+
+    <h2>From Prompting to Supervision</h2>
+
+    <p>There's a moment Nate Jones captures precisely in his new video: a developer asks an agent to redesign an order system, the agent rewrites everything at once, and now half the existing features are broken. "You have no idea which changes caused which problems, because the agent changed so many things at once." This isn't a prompting failure. It's a supervision failure.</p>
+
+    <p>The HN discussion on Simon Willison's <em>What is agentic engineering?</em> (144 pts, 85 comments) circles the same insight from a more technical angle. The top comments distinguish agentic engineering from traditional software engineering not by capability — agents are obviously more capable now — but by the nature of failure. When a single-step tool fails, the failure is local. When an agent fails at step four of twelve, steps five through twelve compound it. The error topology is different, and so the engineering discipline has to be different.</p>
+
+    <div class="pullquote">
+      "Vibecoding was a lot about prompting. Agent management is not first a prompting problem. It's a supervision problem."
+      <cite>— Nate Jones, YouTube</cite>
+    </div>
+
+    <p>The Latent Space AINews from this week makes the same point at the infrastructure level: harnesses are becoming the real product surface. The model isn't the bottleneck anymore — the surrounding runtime, memory, filesystem access, and observability layer is. MCP, which was briefly declared dead as a meme, is being quietly normalized into production plumbing at companies like Uber. Cursor released CursorBench, a methodology that scores models on both correctness <em>and</em> token efficiency, because a model that's right but slow or expensive is not actually useful in production. The field is maturing from "can it do this?" to "can it do this reliably, cheaply, and without blowing up everything else?"</p>
+
+    <p>The HN thread on the vibecoding-to-production gap (245 pts) is perhaps the most practically grounded of the three. The author, Mac Budkowski, documents what the "100-hour gap" actually consists of: not more prompting, but the unglamorous work of error handling, security hygiene, database row-level security, graceful failure states, and scaling expectations. These are all things the agent won't raise unprompted. They require a manager who knows enough to ask.</p>
+
+    <p>Nate's five skills for managing agents — save points via git, context resets, standing orders in a rules file, small bets to limit blast radius, and proactively asking the questions agents don't — are essentially a supervision curriculum. It's the checklist a general contractor carries, not a programmer's toolkit. The claim is that you don't need to become an engineer. You need to become a competent manager of an engineer who happens to be an AI with a short context window.</p>
+
+    <hr class="section-divider">
+
+    <h2>Extraordinary People, Blocked by Overhead</h2>
+
+    <p>The second Nate Jones video — ostensibly about a woman who "quit, picked up AI, and shipped in 30 days what her team planned for Q3" — is actually a thesis about talent. The title undersells it. The argument is that most extraordinary people were never blocked by ability. They were blocked by overhead: the syncs, the scheduling, the translation cost of expressing an idea through layers of engineers and PMs and committees, the averaging effect of too many heads in a room.</p>
+
+    <p>The data point that stuck: a Harvard Business School field experiment at Procter &amp; Gamble found that individuals using AI were three times more likely to produce ideas in the top 10% of quality. The mechanism wasn't productivity — it was synthesis. AI broke down functional silos, so R&amp;D people produced more commercially viable ideas and marketing people produced more technically grounded ones. A single person with AI matched the performance of a two-person team without it. The coordination cost got absorbed by the tool.</p>
+
+    <div class="pullquote">
+      "A lot of solo founders exist because they find that when they develop taste and conviction, the best place to apply that skill set is in their own business. And if you're a leader, you don't want to be a breeding ground for AI talent to go outside and start building on its own."
+      <cite>— Nate Jones, YouTube</cite>
+    </div>
+
+    <p>The YC video with Emergent's founders — twin brothers Mukund and Madhav Jha, who built a platform where seven million apps have been created in eight months, 80% by non-technical users — illustrates the same force from the supply side. A clinical psychologist in Alaska who wanted to marry her equestrian coaching practice with her psychology work couldn't find an app and couldn't afford a dev shop. She built it herself on Emergent. It's on the App Store now with hundreds of users. The translation cost — what gets lost when a domain expert has to explain her vision through someone else — goes to zero when she can build it directly.</p>
+
+    <p>The Emergent story is also notable for what it reveals about where value accretes in the stack. Mukund and Madhav built their own Kubernetes infra from scratch, intentionally using the same infrastructure for agent build-time and deploy-time so there are no surprises at deployment. They built multi-agent orchestration, long-term memory that persists across sessions and learns from previous trajectories, custom fine-tuned verification layers. All of this to present a simple prompt box to a non-technical user. The complexity got swallowed by the harness. The user sees simplicity; the moat is underneath.</p>
+
+    <p>The talent thesis has an uncomfortable second-order: if AI genuinely removes overhead and unleashes extraordinary people, companies that don't create the conditions for that — that don't kill the pointless meetings, don't allow people to disagree and commit, don't give their best people the space to say no — are simply incubating solo founders. The question for leaders, per Nate, is whether you can make the company a place that extraordinary AI-native talent wants to stay.</p>
+
+    <hr class="section-divider">
+
+    <h2>Alignment to Whom?</h2>
+
+    <p>Dwarkesh Patel's essay on the Department of War / Anthropic dispute is the most important piece in today's digest, and not for the reason the news cycle frames it. The proximate dispute — whether Anthropic should remove redlines around mass surveillance and autonomous weapons as a condition for Pentagon contracts — matters less than the question it surfaces.</p>
+
+    <p>The question is: to whom should AI systems be aligned?</p>
+
+    <p>The mechanics of the dispute are genuinely instructive. The DoW used two legal instruments to threaten Anthropic: the 2018 defense bill's supply chain risk authority (designed to keep Huawei out of military hardware) and the 1950 Defense Production Act (designed to keep Korean War steel mills running). Neither was designed for this. The government is improvising its leverage with whatever statutes are at hand. And Dwarkesh's point is that this is a preview of something much larger — because the government has substantial leverage over the permitting, antitrust enforcement, and contracting relationships that every frontier AI company depends on.</p>
+
+    <div class="pullquote">
+      "Once the technical capacity for mass surveillance and political suppression exists, the only thing standing between us and an authoritarian surveillance state is the political expectation that this is not something we do here."
+      <cite>— Dwarkesh Patel, Substack</cite>
+    </div>
+
+    <p>The surveillance cost curve he walks through is sobering. There are 100 million CCTV cameras in America. At current token prices, processing a frame every ten seconds from every camera would cost around $30 billion annually — and that cost halves roughly every year. By 2030 it may be cheaper to monitor every public space in America than to remodel the White House. The capability overhang exists in law already; what's been missing is the technical capacity to act on it. AI removes that barrier.</p>
+
+    <p>Dwarkesh's framing of alignment is the sharpest part. The scary scenario he describes — an army of extremely obedient AI employees following government orders — is exactly what alignment <em>success</em> looks like, if the alignment is to the wrong principal. The question "to whom should AI be aligned?" has been mostly deferred because until recently the models weren't capable enough to make it urgent. Now they are. And the answer isn't just a technical question. It's a constitutional one — who gets to write the document that shapes the values of what will eventually constitute most of the workforce of governments, militaries, and private companies?</p>
+
+    <p>His skepticism of AI regulation is worth taking seriously. The problem isn't that regulation is categorically wrong; it's that the concepts underlying AI risk discourse — "catastrophic risk," "mass persuasion risk," "autonomy risk" — are structurally open to abuse. Each of those phrases can mean whatever the current government wants it to mean. Handing a power-hungry administration a purpose-built regulatory apparatus over the substrate of future civilization is a different risk profile than no regulation at all. His preferred framing: regulate specific destructive end uses, build norms and laws against specific government abuses (like AI-powered surveillance states), and keep the foundational question of model constitution-writing pluralistic rather than government-mandated.</p>
+
+    <p>The Stanislav Petrov analogy lands well. The Soviet officer who refused to report a false missile alarm and prevented a nuclear war didn't do so by following orders. He did so by exercising judgment against protocol. Whether AI systems should have that same capacity for judgment — and who gets to calibrate what that judgment is — is the question that nobody has a clean answer to. That's uncomfortable. It's also the right question.</p>
+
+    <hr class="section-divider">
+
+    <div class="takeaways">
+      <h3>What This All Means</h3>
+      <ol>
+        <li>The era of vibe coding is over in the same way the era of riding a horse ended when cars arrived: the old skill still exists, but it's no longer the relevant one. Managing agents is a supervision problem, not a prompting problem. The five concrete skills (version control, context resets, rules files, small bets, proactive risk questions) are learnable habits, not engineering credentials.</li>
+        <li>Harnesses, not models, are becoming the defensible product surface. Emergent's custom Kubernetes infra, LangChain's cross-framework tooling, MCP's normalization as plumbing — the real engineering work is now in the layer that surrounds and constrains the model, not in the model itself.</li>
+        <li>The P&amp;G study result is structural: AI breaks functional silos, turning one person into the synthesis of a multi-discipline team. This is why solo founding is rising sharply (now one-third of new U.S. ventures per Carta). The talent that used to require coordination overhead to be productive no longer does.</li>
+        <li>The Dwarkesh piece should be read as early political philosophy for the AGI transition, not tech commentary. The DoW/Anthropic dispute is a preview of negotiations that will get much higher-stakes as AI labor becomes embedded in government, military, and private operations. The question of model constitution-writing is now a live political question.</li>
+        <li>The surveillance cost curve has crossed a threshold. The legal authority for mass surveillance in the U.S. exists already. What was missing was the technical capacity. AI removes that constraint, and the cost will keep falling. Norms and laws against government abuse of AI need to be built now, before the capability is ubiquitous and the political window to set those norms closes.</li>
+      </ol>
+    </div>
+
+    <div class="links-footer">
+      <h3>Hacker News</h3>
+      <ul>
+        <li><a href="https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/" target="_blank">What is agentic engineering? — Simon Willison (144 pts)</a></li>
+        <li><a href="https://news.ycombinator.com/item?id=47388646" target="_blank">Ask HN: How is AI-assisted coding going for you professionally? (328 pts)</a></li>
+        <li><a href="https://kanfa.macbudkowski.com/vibecoding-cryptosaurus" target="_blank">The 100 hour gap between a vibecoded prototype and a working product (245 pts)</a></li>
+      </ul>
+
+      <h3>YouTube</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=8lwnJZy4cO0" target="_blank">Claude Code Wiped 2.5 Years of Data. The Engineer Who Built It Couldn't Stop It. — NateBJones</a></li>
+        <li><a href="https://www.youtube.com/watch?v=zCW-k5fFRgQ" target="_blank">She quit, picked up AI, and shipped in 30 days what her team planned for Q3. — NateBJones</a></li>
+        <li><a href="https://www.youtube.com/watch?v=8SVocWnDHwE" target="_blank">Building A Global AI Startup From India — Y Combinator (Emergent)</a></li>
+      </ul>
+
+      <h3>Substack</h3>
+      <ul>
+        <li><a href="https://www.dwarkesh.com/p/dow-anthropic" target="_blank">The most important question nobody's asking about AI — Dwarkesh Patel</a></li>
+        <li><a href="https://www.latent.space/p/ainews-the-high-return-activity-of" target="_blank">AINews: The high-return activity of raising your aspirations for LLMs — Latent Space</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
