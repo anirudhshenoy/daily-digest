@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Digest — March 17, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-sepia: #f4f1eb;
+      --bg-warm: #faf8f5;
+      --text-primary: #2c2416;
+      --text-secondary: #5a4d3a;
+      --text-muted: #8b7d66;
+      --accent-brown: #8b5a2b;
+      --accent-rust: #a65d3f;
+      --border-light: #e0d9cd;
+      --pullquote-bg: #f9f6f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: linear-gradient(135deg, var(--bg-sepia) 0%, var(--bg-warm) 50%, var(--bg-sepia) 100%);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .date {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .theme-banner {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-brown);
+      padding: 24px 28px;
+      margin: 40px 0;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-secondary);
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 56px 0 20px;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+    }
+
+    h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin: 36px 0 14px;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-rust);
+      padding: 20px 28px;
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .pullquote cite {
+      display: block;
+      font-size: 14px;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--text-muted);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 56px 0;
+    }
+
+    .takeaways {
+      background: var(--pullquote-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 32px 36px;
+      margin: 48px 0;
+    }
+
+    .takeaways h3 {
+      margin-top: 0;
+      font-size: 18px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .takeaways ol {
+      list-style: none;
+      counter-reset: takeaway-counter;
+      padding: 0;
+    }
+
+    .takeaways ol li {
+      counter-increment: takeaway-counter;
+      padding: 12px 0 12px 44px;
+      position: relative;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 17px;
+    }
+
+    .takeaways ol li:last-child {
+      border-bottom: none;
+    }
+
+    .takeaways ol li::before {
+      content: counter(takeaway-counter);
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 28px;
+      height: 28px;
+      background: var(--accent-brown);
+      color: white;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .links-footer {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .links-footer h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      margin-top: 28px;
+    }
+
+    .links-footer h3:first-child {
+      margin-top: 0;
+    }
+
+    .links-footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links-footer ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 15px;
+    }
+
+    .links-footer ul li:last-child {
+      border-bottom: none;
+    }
+
+    .links-footer a {
+      color: var(--accent-brown);
+      text-decoration: none;
+    }
+
+    .links-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .source-tag {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="date">Monday, March 17, 2026</div>
+      <h1>The Agent Engineering Era</h1>
+      <div class="subtitle">From "does this work" to "how do we make this reliable"</div>
+    </header>
+
+    <div class="theme-banner">
+      2025 was about agents being possible. 2026 is about agents being engineered. Today's signals — from NVIDIA's GTC, from an empirical study on Cursor-assisted code, from a video about browser automation, and from a formal proof engineering agent — converge on a single question: what is the right interface between humans and the work we want done?
+    </div>
+
+    <h2>The Context Window Is a Budget, Not a Buffer</h2>
+
+    <p>The sharpest technical story today comes from a place you wouldn't expect: an API integration startup. Apideck published a breakdown of their MCP server's context consumption versus a CLI alternative. The MCP server consumed 55,000+ tokens just to expose their API to an agent — schemas, descriptions, examples, the full declaration. Their CLI does the same job in roughly 80 tokens. A 690x difference.</p>
+
+    <p>This isn't a minor optimization detail. It's an architectural critique of how the MCP ecosystem has evolved. When you're running a multi-step agent that calls tools repeatedly, the cost of your tool interface compounds with every invocation. Fat schemas that seemed reasonable in single-agent demos become a material drag on complex workflows. The HN comments (113 of them, which is a lot for a tooling post) were split between practitioners who've hit this wall directly and MCP defenders who argued that verbosity is a feature — the rich schema is what lets less capable models use the tool reliably.</p>
+
+    <p>Both sides are right, which is why the resolution isn't "MCP is bad" but rather "progressive disclosure." Give the agent what it needs for this specific call. Not the entire API encyclopedia upfront. Andrew Ng's Context Hub project, highlighted in the Latent Space GTC roundup, pushes this same direction: agents sharing current, compressed API documentation rather than pulling fat schemas from training memory. The pattern is converging: agent tooling needs to be designed for token budgets, not human readability.</p>
+
+    <div class="pullquote">
+      "If you can describe something you do repeatedly, you can give it to Claude on the internet and make Claude go do it."
+      <cite>— Nate Jones, NateBJones YouTube</cite>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>The Browser Is the New Terminal</h2>
+
+    <p>Nate Jones' video on the Claude Chrome extension is the most practically useful thing in today's digest, and it makes an argument that should be stated plainly: the browser extension isn't a chatbot. It's a browser agent. The distinction is what you optimize for — with a chatbot, you optimize your questions; with a browser agent, you optimize your workflows.</p>
+
+    <p>The feature that's genuinely underreported is the recording mechanic. You demonstrate a task once — say, pulling analytics from a dashboard, or scraping competitor pricing across three tabs — and Claude learns to run it on a schedule. This is effectively consumer RPA. Robotic Process Automation was the enterprise software category that Automation Anywhere and UiPath built into multi-billion-dollar companies over the last decade. The value proposition was always clear: repetitive web work is expensive human time. The problem was that classical RPA required brittle scripts, IT involvement, and constant maintenance as UIs changed. An LLM-backed agent that understands the semantics of a page, not just its DOM structure, is a qualitatively different thing.</p>
+
+    <p>Jones is careful about the current limitations. On data-heavy multi-page tasks, context management gets spotty — a single workflow that needs to synthesize LinkedIn updates from dozens of profiles will miss things and lose salience. His practical advice: break large workflows into clean subtasks. And avoid automated email replies to important stakeholders until you're confident the agent won't send a draft instead of saving it. These are the right caveats. But they're implementation-stage cautions, not architectural objections.</p>
+
+    <p>The Latent Space GTC roundup adds important context here: Perplexity's Computer is now on Android, with local browser control and no connectors required — the agent uses the actual browser with your session cookies intact. This is the same thesis from a different direction. The browser is becoming the universal execution environment for agents, and multiple labs are betting on it simultaneously.</p>
+
+    <hr class="section-divider">
+
+    <h2>Fast Code Is Often the Wrong Code</h2>
+
+    <p>An empirical study on Cursor AI in open-source projects landed on HN today with 133 points and the kind of finding that's uncomfortable to sit with: AI-assisted code shows "transient velocity, persistent complexity." You ship faster. Your codebase gets harder to maintain.</p>
+
+    <p>The researchers analyzed pull requests submitted with and without Cursor AI assistance across real open-source projects, measuring cyclomatic complexity — a proxy for branching paths and cognitive load in the code. AI-assisted PRs were measurably more complex. Not wildly so, but consistently so. The most plausible mechanism: LLMs optimize for making tests pass and getting the PR merged, not for the long-term structural health of the codebase. They generate the code that satisfies the immediate constraint, and that code tends to be more branchy and less elegant than what an experienced developer would write with time to think.</p>
+
+    <p>Set against this is Leanstral (669 points on HN, the highest-scored story today), Mistral's open-source agent for formal proof engineering in Lean 4. The philosophical contrast is almost perfect: instead of generating code fast and checking it afterward, you generate code that a theorem prover must verify before it's accepted. Every function has a formal specification. Every edge case is a proof obligation, not a test case that might not get written.</p>
+
+    <div class="pullquote">
+      The interesting HN discussion around Leanstral wasn't "is formal verification practical?" — it was "where in a hybrid workflow does it earn its cost?" Practitioners are starting to answer that: invariants, security-critical paths, financial logic. Not everything. But not nothing, either.
+    </div>
+
+    <p>These two stories aren't in opposition; they're pointing at the same problem from opposite ends. The real question is where in your stack you need Leanstral's guarantees and where you're okay with Cursor's tradeoffs. The answer will be different for a weekend project than for healthcare software. But the Cursor complexity finding makes it harder to pretend the tradeoff doesn't exist.</p>
+
+    <hr class="section-divider">
+
+    <h2>Jensen's Inference Inflection</h2>
+
+    <p>NVIDIA GTC 2026 had a clear central message: training was the gold rush; inference is the economy that follows. Jensen Huang's keynote introduced Vera, NVIDIA's own ARM-based CPU — significant because it reduces datacenter dependence on Intel and AMD, completing NVIDIA's ambition to own the full server stack — and announced a $1 trillion sales backlog projected for 2027.</p>
+
+    <p>The final section of the keynote focused on OpenClaw, which Jensen praised extensively before flagging its security surface area and pitching NemoClaw as NVIDIA's secured variant. This is a move worth watching: NVIDIA is positioning itself not just as the hardware provider but as the security layer for open agentic systems. Enterprise buyers are nervous about open agent frameworks for exactly the reasons Jensen named — prompt injection, unauthorized actions, unauditable tool calls. NemoClaw is a pitch to be the answer to that nervousness.</p>
+
+    <p>The inference inflection framing deserves unpacking. Training is a one-time cost per model. Inference is the recurring cost that scales with deployment. As models move into agentic workflows — running continuously, calling tools, generating outputs consumed by other agents — the inference demand curve becomes effectively unbounded. A $1T backlog suggests Jensen believes this demand is arriving faster than supply can respond, which is the same thesis as the last two years, but now with shipping receipts.</p>
+
+    <p>Two technical highlights from the GTC roundup worth noting: P-EAGLE, which removes the sequential bottleneck in speculative decoding by generating K draft tokens in one pass (up to 1.69x speedup over EAGLE-3 on B200, shipping in vLLM v0.16.0), and DLSS 5, which Jensen positioned as the biggest graphics advance since real-time ray tracing. DLSS 5 is ML replacing classical rendering algorithms inside the pipeline — invisible to the end user, transformative to the hardware economics. It's the clearest production example of what "neuralized runtime systems" actually look like deployed at scale.</p>
+
+    <hr class="section-divider">
+
+    <h2>The Codex Scale Signal and the Harness Layer</h2>
+
+    <p>Buried in the Latent Space GTC roundup: GPT-5.4 hit $1B annualized revenue within a week of launch. Codex is at 2 million weekly active users, up 4x year-to-date. Codex added subagents this week. These numbers don't come as a surprise given the broader trajectory, but they're the first time demand-side scale has been this explicitly quantified in a single week's news cycle.</p>
+
+    <p>The more interesting story is the harness layer forming underneath all of this. AssemblyAI shipped a maintained skills file for Claude Code, Codex, Cursor, and compatible agents — a structured way to give agents current API documentation rather than letting them hallucinate from training priors. A paper highlighted in the roundup describes automated extraction of agent skills from GitHub repositories into standardized SKILL.md files, claiming 40% knowledge-transfer gains. LangGraph shipped a CLI for terminal-based deploy and dev flows, and open-sourced Deep Agents as a reference harness covering planning, filesystem ops, shell access, sub-agents, and context management.</p>
+
+    <p>The parallel to the paper on LLM teams as distributed systems (97 points on HN) is direct: teams of agents need coordination protocols, fault tolerance, and consistency models — the same primitives that distributed computing worked out over decades. The implementation details are still being settled. But the direction is clear: we are building the infrastructure layer for agent systems the same way we built the infrastructure layer for web services in the 2000s. Slowly, then all at once.</p>
+
+    <div class="takeaways">
+      <h3>What This All Means</h3>
+      <ol>
+        <li>The context window is a budget. Tools that consume it carelessly — fat MCP schemas, verbose system prompts — will lose to tools with progressive disclosure. Apideck's 690x gap is an early signal of an architectural selection pressure that will reshape the agent tooling landscape.</li>
+        <li>The browser is the most important agent runtime for non-developers, and Anthropic is betting on it seriously. The recording-and-scheduling feature in the Chrome extension is consumer RPA. Perplexity is building the same thing. This market is real and arriving fast.</li>
+        <li>"Ship faster with AI" and "ship more maintainable code" are in genuine tension — now empirically documented. The Cursor complexity finding won't stop adoption, but it will accelerate demand for verification layers downstream. Leanstral is early; the hybrid workflow is where this lands.</li>
+        <li>Jensen's inference inflection thesis now has backlog numbers behind it. $1T in 2027 is a supply claim as much as a demand claim. NVIDIA is positioning to own hardware, CPU, security layer, and inference optimization for the agentic era simultaneously.</li>
+        <li>The agent harness layer — SKILL.md files, reference harnesses, up-to-date doc feeds, subagent coordination — is becoming a real engineering discipline. The teams building these primitives now will define what "production-grade agentic systems" means in 12 months.</li>
+      </ol>
+    </div>
+
+    <div class="links-footer">
+      <h3>Hacker News</h3>
+      <ul>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47400261">Apideck CLI – An AI-agent interface with much lower context consumption than MCP</a> — 132 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47401734">Speed at the cost of quality: Study of use of Cursor AI in open source projects (2025)</a> — 133 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47404796">Leanstral: Open-source agent for trustworthy coding and formal proof engineering</a> — 669 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47400868">Show HN: Claude Code skills that build complete Godot games</a> — 273 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47401901">Language model teams as distributed systems</a> — 97 pts</li>
+      </ul>
+
+      <h3>Substack</h3>
+      <ul>
+        <li><span class="source-tag">Latent Space</span><a href="https://www.latent.space/p/ainews-nvidia-gtc-jensen-goes-hard">AINews: NVIDIA GTC — Jensen goes hard on OpenClaw, Vera CPU, and $1T backlog</a></li>
+      </ul>
+
+      <h3>YouTube</h3>
+      <ul>
+        <li><span class="source-tag">NateBJones</span><a href="https://www.youtube.com/watch?v=anthropic-browser">Anthropic Didn't Build a New Browser. They Did Something Smarter.</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
