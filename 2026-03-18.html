@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Digest — March 18, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-sepia: #f4f1eb;
+      --bg-warm: #faf8f5;
+      --text-primary: #2c2416;
+      --text-secondary: #5a4d3a;
+      --text-muted: #8b7d66;
+      --accent-brown: #8b5a2b;
+      --accent-rust: #a65d3f;
+      --border-light: #e0d9cd;
+      --pullquote-bg: #f9f6f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: linear-gradient(135deg, var(--bg-sepia) 0%, var(--bg-warm) 50%, var(--bg-sepia) 100%);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .date {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .theme-banner {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-brown);
+      padding: 24px 28px;
+      margin: 40px 0;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-secondary);
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 56px 0 20px;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+    }
+
+    h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin: 36px 0 14px;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-rust);
+      padding: 20px 28px;
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .pullquote cite {
+      display: block;
+      font-size: 14px;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--text-muted);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 56px 0;
+    }
+
+    .takeaways {
+      background: var(--pullquote-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 32px 36px;
+      margin: 48px 0;
+    }
+
+    .takeaways h3 {
+      margin-top: 0;
+      font-size: 18px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .takeaways ol {
+      list-style: none;
+      counter-reset: takeaway-counter;
+      padding: 0;
+    }
+
+    .takeaways ol li {
+      counter-increment: takeaway-counter;
+      padding: 12px 0 12px 44px;
+      position: relative;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 17px;
+    }
+
+    .takeaways ol li:last-child {
+      border-bottom: none;
+    }
+
+    .takeaways ol li::before {
+      content: counter(takeaway-counter);
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 28px;
+      height: 28px;
+      background: var(--accent-brown);
+      color: white;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .links-footer {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .links-footer h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      margin-top: 28px;
+    }
+
+    .links-footer h3:first-child {
+      margin-top: 0;
+    }
+
+    .links-footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links-footer ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 15px;
+    }
+
+    .links-footer ul li:last-child {
+      border-bottom: none;
+    }
+
+    .links-footer a {
+      color: var(--accent-brown);
+      text-decoration: none;
+    }
+
+    .links-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .source-tag {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="date">Tuesday, March 18, 2026</div>
+      <h1>The Agent Gets Its Own Computer</h1>
+      <div class="subtitle">On cheap execution, the VM as capability unlock, and the interface that still doesn't exist</div>
+    </header>
+
+    <div class="theme-banner">
+      The week's most important architectural argument came from an accidental product. Felix Rieseberg's deep dive on Claude Cowork clarifies something that the broader field is circling around but not stating plainly: giving an agent its own isolated computer isn't primarily a safety measure. It's a capability unlock. That reframe connects almost everything else interesting happening today.
+    </div>
+
+    <h2>The VM as Capability, Not Just Containment</h2>
+
+    <p>Claude Cowork was built because Anthropic noticed Claude Code users doing things Claude Code wasn't designed for. Taxes. Organizing knowledge bases. Managing calendars. Technical people using a terminal-native coding agent for distinctly non-coding work. Felix Rieseberg's response — the one that became Cowork — was not to add guardrails to Claude Code but to rethink the execution environment entirely.</p>
+
+    <p>The centerpiece is a lightweight VM. And Felix's framing of why is the most clarifying thing in today's sources. The obvious answer to "why a VM?" is security — keep Claude from touching your real filesystem. But that's the defensive framing. The offensive framing: a VM gives Claude a computer where it has genuine autonomy to act. It can install Python, install Node.js, run scripts, chain tools together — without needing to ask for permission at every step. The analogy Felix uses with his father: "If you were a developer and your employer told you that you don't need a computer, they're just going to send you emails with code and you send emails with code back — maybe that works for Patrick Miles in the back, but it's not very effective."</p>
+
+    <div class="pullquote">
+      "Approve every command is not a real long-term UX. Virtual machines create a middle ground between uselessly safe and dangerously autonomous."
+      <cite>— Felix Rieseberg, Latent Space podcast</cite>
+    </div>
+
+    <p>This is the design insight that every serious agent deployment has to resolve: constant approval loops defeat the purpose of delegation, but unconstrained autonomy breaks user trust. The VM with strict network ingress/egress controls is Anthropic's answer — Claude has freedom within a defined perimeter rather than restricted access to your real environment. The user controls the perimeter in plain language ("don't access external URLs") rather than having to reason about every individual command.</p>
+
+    <p>The rest of the industry is arriving at the same answer independently. Zeroboot, a Show HN today with 262 points, implements sub-millisecond VM sandboxes using copy-on-write memory forking — specifically designed so agents can run code in ephemeral execution environments that spin up and tear down fast enough to feel instantaneous. LangChain shipped LangSmith Sandboxes this week for the same purpose. Open SWE, LangChain's open-source recreation of the internal coding agent patterns used at Stripe, Ramp, and Coinbase, separates harness, sandbox, invocation layer, and validation as distinct primitives. The convergence is not coincidental. Agents that execute code need owned execution environments. The question is who provides them and at what abstraction level.</p>
+
+    <hr class="section-divider">
+
+    <h2>Execution Is Cheap. Now What?</h2>
+
+    <p>Cowork was built in ten days. That number keeps coming up in the interview, and Felix is careful to give it appropriate context — it was ten days assembling existing Anthropic primitives, not ten days from blank page. But that's exactly the point. The primitives existed because teams had been working on agent execution infrastructure for 18 months. When the moment came to build a product, the constraint wasn't engineering capacity or even architectural design. It was judgment: which combination of existing pieces is right for this user?</p>
+
+    <p>Felix's articulation of this shift is worth sitting with: "I will probably no longer try to come up with a really good product without testing with people. Wherever you used to have to make costly decisions around, do we pick technology A or technology B — I really strongly believe now you just build all of them and try them out with a small focus group and then whatever is better is what you go with."</p>
+
+    <p>This is a clean description of what happens when execution cost drops by an order of magnitude. The bottleneck moves from "can we build this?" to "which of the things we could build is actually right?" That's a harder problem in some ways — it requires better taste, faster feedback loops, and genuine contact with users rather than spec-driven product development. The "Get Shit Done" system on HN today (410 points, 225 comments) is a practitioner-built answer to this problem: a meta-prompting, context engineering, and spec-driven dev system for autonomous coding workflows with Claude Code. The idea is to front-load the judgment — produce a tight spec, use that spec to constrain what the agent does, and evaluate outputs against the spec rather than against vibes. Interesting that the response to "execution is cheap" isn't "skip the spec" but rather "the spec matters more than ever, it just gets written differently."</p>
+
+    <hr class="section-divider">
+
+    <h2>Skills vs. MCPs: The Interface Debate That Isn't Settled</h2>
+
+    <p>One of the more quietly consequential parts of the Felix interview is his position on skills versus MCPs. Asked about the primitives that matter most for Cowork's extensibility, Felix lands firmly on skills — simple markdown files that tell Claude what to do and how to do it — over MCPs, which force everything through rigid tool schemas. "I'm increasingly interested in file-based, text-native interfaces that tell the model what to do, rather than forcing everything through rigid tool schemas."</p>
+
+    <p>The unsolved problem Felix flags is portability. Personal skills — the reusable workflows you've built up for how you work — should theoretically travel with you across agent products. If you've taught Cowork how to handle your weekly report, that skill should work in Claude Code, or in whatever comes next. Right now it doesn't, because there's no standard for skill portability. Every agent product has its own format, its own discovery mechanism, its own context for how to invoke a skill. The tension is between public, reusable workflows (which want standardization) and private, user-specific context (which wants to be local and personalized).</p>
+
+    <p>This connects to yesterday's Apideck story (690x context difference between MCP and CLI approaches) and to the SKILL.md paper from last week (40% knowledge-transfer gains from extracting agent skills from GitHub repos into standardized files). The entire field is trying to figure out what the right abstraction is for "a thing an agent knows how to do." MCP is one answer. SKILL.md is another. Felix's markdown skills are a third. None of them have won. The stakes are high because whatever wins becomes the layer where agent capabilities accumulate and compound.</p>
+
+    <div class="pullquote">
+      "Skills vs. MCPs: why Felix is increasingly interested in file-based, text-native interfaces that tell the model what to do, rather than forcing everything through rigid tool schemas."
+      <cite>— Latent Space episode description, Felix Rieseberg</cite>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>Why AI Systems Don't Learn</h2>
+
+    <p>The second-most interesting HN story today (161 points, 105 comments) is an arxiv paper on autonomous learning from cognitive science. The central argument: current AI systems can't really learn from experience the way humans do, because they lack the meta-control architecture that lets humans switch between two fundamentally different modes of engaging with the world.</p>
+
+    <p>The paper describes these as System A and System B — not the fast/slow thinking distinction from Kahneman, but a learning distinction. System A learns from observation: watching, noticing patterns, updating a world model passively. System B learns from active behavior: doing something, observing the consequences, updating based on what happened. Humans switch between these modes fluidly and often unconsciously. An experienced developer will watch how a new codebase behaves before touching it (System A), then write a small test to probe a specific hypothesis (System B), then observe the result and update their model. Current LLMs do neither in this sense — they produce outputs, but they don't update their weights based on what happened, and they don't have a persistent world model that accumulates across interactions.</p>
+
+    <p>The paper's framing around episodic memory and meta-control switching is the most interesting part. What would it mean for an agent to have genuine episodic memory — not just a long context window, but a structured record of "I tried X in situation Y, it resulted in Z, and I updated my model accordingly"? This is what skill files are gesturing at from the product side. But the cognitive science argument is that the architecture isn't there yet to make that episodic memory actually generalize. The HN comments were, unusually, quite substantive — practitioners comparing this to how reinforcement learning handles the exploration/exploitation tradeoff, and whether modern RLHF is even touching the right part of the problem.</p>
+
+    <hr class="section-divider">
+
+    <h2>The Small-Model Race and One Detail About Cursor</h2>
+
+    <p>Two model releases worth tracking. GPT-5.4 mini and nano shipped across the API, ChatGPT, and Codex. Mini is more than 2x faster than its predecessor, targets coding, computer use, multimodal tasks, and subagents specifically, and costs 30% of the GPT-5.4 full Codex quota. At $0.75/M input and $4.5/M output for mini, the pricing is higher than prior nano tiers — the familiar OpenAI pattern of better capabilities at higher prices. The more interesting signal is the explicit framing of mini as the default for subagent fan-out: when your orchestrator is spinning up dozens of parallel tasks, you want a model that's fast and cheap enough to actually run those tasks without the economics collapsing.</p>
+
+    <p>Mistral Small 4 also dropped: 119B total parameters, 6.5B active per token (MoE with 128 experts), 256k context, multimodal input, Apache 2.0. The 119B/6.5B active ratio puts its inference cost roughly in the 7B active parameter tier while giving it the capacity of a much larger model. The naming is producing wry comments on HN ("120 billion is now Small") but the substance is real — this is a serious open-weight challenger for agentic workloads at the cost tier where most production deployments actually live.</p>
+
+    <p>The detail I'd flag most is buried in the Latent Space AINews dispatch: Cursor trained their context compaction model using RL rather than prompting, cutting compaction errors by 50% and enabling harder long-horizon coding tasks. This sounds incremental but isn't. It's the first clear case I've seen of RL being applied not to improve task performance but to improve how an agent manages its own memory. An agent that can reliably compress its context window — deciding what to keep, what to summarize, what to discard — without degrading task quality is qualitatively more capable at long-horizon work. Compaction has historically been the place where long coding sessions fall apart. If RL can solve it where prompting couldn't, the technique will spread quickly.</p>
+
+    <div class="takeaways">
+      <h3>What This All Means</h3>
+      <ol>
+        <li>The VM is not just a security sandbox. It's what lets an agent act like a capable colleague rather than a permission-seeking assistant. Anthropic's Cowork, zeroboot, LangSmith Sandboxes, and Open SWE all converge on this architecture independently. Expect it to become the baseline.</li>
+        <li>When execution is cheap, judgment becomes the bottleneck. Felix's "build all the candidates" worldview replaces spec-driven development not by eliminating specs but by making them shorter, faster to test, and validated against reality rather than theory. The "Get Shit Done" system is the practitioner's answer to the same problem.</li>
+        <li>The skills portability problem is unresolved and important. The agent that accumulates your workflows and carries them with you across products will have a massive lock-in advantage. Nobody has solved this yet, and Felix is clear that Anthropic hasn't either.</li>
+        <li>Current agents don't learn in the cognitive science sense — they lack the meta-control switching between observation and active behavior, and they lack structured episodic memory that generalizes. The systems-level insight from the arxiv paper is that RLHF may not be touching the right part of the architecture to fix this.</li>
+        <li>Cursor's RL-based context compaction is the most underreported technical result of the week. A 50% reduction in compaction error via RL (not prompting) is evidence that the memory management problem — the main failure mode for long-horizon agents — is tractable with the right training signal.</li>
+      </ol>
+    </div>
+
+    <div class="links-footer">
+      <h3>Hacker News</h3>
+      <ul>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47417804">Get Shit Done: A meta-prompting, context engineering and spec-driven dev system</a> — 410 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47412569">Show HN: Sub-millisecond VM sandboxes using CoW memory forking (zeroboot)</a> — 262 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47418722">Why AI systems don't learn – On autonomous learning from cognitive science</a> — 161 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47412015">Show HN: March Madness Bracket Challenge for AI Agents Only</a> — 67 pts</li>
+        <li><span class="source-tag">HN</span><a href="https://news.ycombinator.com/item?id=47420493">Launch an autonomous AI agent with sandboxed execution in 2 lines of code</a> — 49 pts</li>
+      </ul>
+
+      <h3>Substack</h3>
+      <ul>
+        <li><span class="source-tag">Latent Space</span><a href="https://www.latent.space/p/felix-anthropic">Why Anthropic Thinks AI Should Have Its Own Computer — Felix Rieseberg of Claude Cowork</a></li>
+        <li><span class="source-tag">Latent Space</span><a href="https://www.latent.space/p/ainews-claude-cowork-dispatch-anthropics">AINews: Claude Cowork Dispatch — Anthropic's Answer to OpenClaw</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
