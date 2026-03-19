@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest — March 19, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f1eb;
+            --fg: #2c2416;
+            --muted: #6b5d4d;
+            --accent: #8b4513;
+            --card: #fffdf9;
+            --border: #d4cfc5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.75;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 52px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .date {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: var(--muted);
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+            font-weight: 600;
+            margin-top: 52px;
+            margin-bottom: 20px;
+            color: var(--fg);
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .pullquote {
+            border-left: 3px solid var(--accent);
+            padding: 4px 0 4px 24px;
+            margin: 32px 0;
+            color: var(--muted);
+            font-style: italic;
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        .takeaways {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 28px 32px;
+            margin-top: 52px;
+        }
+
+        .takeaways h2 {
+            margin-top: 0;
+        }
+
+        .takeaways ol {
+            padding-left: 22px;
+        }
+
+        .takeaways li {
+            margin-bottom: 14px;
+            line-height: 1.65;
+        }
+
+        .links-footer {
+            margin-top: 52px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 15px;
+        }
+
+        .links-footer h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--muted);
+            margin-bottom: 12px;
+            margin-top: 28px;
+        }
+
+        .links-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links-footer li {
+            margin-bottom: 8px;
+        }
+
+        .links-footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .links-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .source-tag {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 12px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 6px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="date">March 19, 2026</div>
+        <h1>The Compiler Is the Moat</h1>
+        <div class="subtitle">On specs, stacks, and why good execution on the wrong layer won't save you</div>
+    </header>
+
+    <article>
+
+        <h2>The Perplexity Problem</h2>
+
+        <p>Nate Jones opens his latest video with a crisp diagnosis: Perplexity Computer is one of the best agentic products shipped this year, and it might not matter. The system routes work across 19 frontier models — Claude Opus 4.6 for reasoning, Gemini for deep research, Grok for speed, GPT-5.2 for long-context recall — persisting for months, delivering finished artifacts while you sleep. At $200/month it's compelling for heavy research workflows. And yet every model provider it depends on is simultaneously building the exact product it competes with.</p>
+
+        <p>The specific asymmetry Nate identifies: the same week Perplexity launched Computer, Anthropic shipped the enterprise expansion of Claude Cowork — deep connectors, private plugin marketplaces, seamless cross-tool context passing. Cowork doesn't need 19 models. It has one, and it owns it. This is not a story about product quality. It's a story about what layer you're building on, and whether that layer has any reason to keep you alive.</p>
+
+        <div class="pullquote">
+            "Good execution on the wrong layer of the stack will not save you."
+            <br><br>— Nate Jones
+        </div>
+
+        <p>This dynamic got sharper this week when the GPT-5.4 launch landed. OpenAI shipped its first unified model — coding and general reasoning merged into one — and Cursor immediately announced GPT-5.4 as leading their internal benchmarks. Perplexity added it the same day. Both companies are now explicitly dependent on a competitor's flagship model for their flagship products. The irony is structural: the better the foundation models get, the more obvious it becomes that the inference layer is where value accumulates.</p>
+
+
+        <h2>Specs Are the New Source Code</h2>
+
+        <p>The most-upvoted HN post today (511 points) makes a deceptively simple claim: "A sufficiently detailed spec is code." The essay, from Gabriel Gonzalez (author of the Haskell dhall configuration language), argues that the line between specification and implementation has collapsed under agentic coding. If you can write a spec precise enough that a model can execute it deterministically, you have written a program — the model is just the compiler.</p>
+
+        <p>The HN comments spend 273 replies probing the implications. The pushback invokes Brooks' No Silver Bullet: the hard part of software was always the intellectual work of deciding what to build, not the mechanical work of writing it. If that's true, then specs don't change the hard part — they just automate the easy part. The counterargument is that the boundary between "deciding" and "writing" was never clean, and that models are already doing meaningful deciding when they fill in underspecified behavior.</p>
+
+        <p>What's clear is that this has operational consequences right now. Cook, a new CLI for orchestrating Claude Code (262 points, 80 comments), builds directly on the spec-as-code premise: you write a "recipe" — a structured specification of a task — and Cook handles the model invocation, file permissions, and iteration. The HN thread validates it for CI/CD pipelines and skill installation. The framing has quietly shifted from "AI writes code" to "AI executes specs," and tooling is following.</p>
+
+
+        <h2>Agents at the Kernel Level</h2>
+
+        <p>Google engineers shipped Sashiko this week — an agentic AI system for code review of the Linux kernel. This deserves a moment. The Linux kernel is one of the most complex, most reviewed codebases in existence, with decades of accumulated contributor norms, architecture decisions, and implicit context. Putting an agentic reviewer on it is a meaningful stress test.</p>
+
+        <p>The Phoronix writeup is light on implementation details, but the HN thread (98 points, 47 comments) surfaces the key tensions: kernel maintainers are notoriously exacting about review quality, and hallucinated review comments would be worse than no comments — they'd poison contributor time. The relevance score of 85 the HN filter assigned reflects genuine interest in whether agentic code review can operate in adversarial, high-stakes environments rather than greenfield codebases.</p>
+
+        <p>This sits alongside the Autoresearch for SAT Solvers paper (153 points), which describes an agent that iteratively improves its own approach to Boolean satisfiability — a combinatorially hard problem used heavily in chip design and formal verification. The agent learns to improve SAT solver performance through automated research loops. Neither of these is "AI writes your CRUD app." These are agents operating in domains where human experts have been the irreplaceable ceiling.</p>
+
+        <div class="pullquote">
+            "The context window is a mansion. The free tier gets a studio apartment."
+            <br><br>— Latent Space / Doug O'Laughlin
+        </div>
+
+
+        <h2>The Context Ceiling</h2>
+
+        <p>Latent Space made a bold prediction this week: context windows will not meaningfully exceed 1 million tokens in the next two years. The reasoning is physical, not theoretical. HBM (high-bandwidth memory) — the memory that sits nearest the GPU and enables long-context inference — is in structural shortage. There is simply not enough of it to push context windows to 10M or 100M at inference scale. The 1M context window has been "theoretically possible" since March 2024, and it's been two years of near-stasis despite massive progress on every other dimension of model capability.</p>
+
+        <p>Anthropic finally GA'd 1M context for Opus 4.6 this week, matching OpenAI who had done it the week prior. The MRCR v2 score (78.3% at 1M tokens) is the best long-context fidelity number posted yet — fighting what researchers call "context rot," the degradation in recall quality as context lengthens. But Latent Space's framing is right to note: this is GA of a capability that's been available since 2024. The ceiling isn't rising. The industry is catching up to it.</p>
+
+        <p>The AINews Context Drought issue crystallizes the implication: context rationing is coming. Not as a policy decision but as an economic inevitability — the mansion metaphor applies. Free tiers will get small windows. The context window becomes a pricing axis, not just a capability axis. For agent workflows that depend on long-context recall (exactly the workflows Perplexity Computer targets), this is a meaningful constraint that doesn't go away.</p>
+
+
+        <h2>The Infrastructure Question Under All of This</h2>
+
+        <p>What connects Perplexity's structural problem, the spec-as-code debate, Sashiko, and the context ceiling is a single question: who controls the compiler?</p>
+
+        <p>If a precise spec is a program, then the model that executes it is the compiler. The compiler vendors — Anthropic, OpenAI, Google — have every incentive to own the full stack from spec input to artifact output. Every orchestration layer built on top of them (Perplexity, Cursor, Cook) is building on infrastructure that has no incentive to keep it alive. The tmux-IDE (82 points today), designed explicitly for multi-agent workflows, is trying to create a new surface area below the model — at the terminal level — where orchestration can live independently of any model provider.</p>
+
+        <p>This is the bet: if you can't own the model, own the environment the model runs in. It's a reasonable bet. It's also exactly what Docker tried with containers, and what happened to Docker is instructive — the environment layer got commoditized by Kubernetes, then by cloud-native services, then by the providers themselves. The pattern tends to repeat.</p>
+
+        <p>The one place where this dynamic might not hold: domains where the spec itself requires deep expertise to write. Sashiko for the Linux kernel. Autoresearch for SAT solvers. The compiler analogy breaks down when the spec-writer is the scarce resource, not the compiler. In those domains, the orchestration layer that best serves domain experts — not the one closest to the inference API — may hold the value.</p>
+
+    </article>
+
+    <div class="takeaways">
+        <h2>What This All Means</h2>
+        <ol>
+            <li><strong>Building on frontier models is a distribution strategy, not a defensibility strategy.</strong> Perplexity's problem is not unique to Perplexity. Any product whose core value prop depends on a model provider that is also a direct competitor is running a clock.</li>
+            <li><strong>The spec-as-code transition is real and accelerating.</strong> Cook CLI, tmux-IDE, and the HN commentary around "A sufficiently detailed spec is code" all point to tooling converging around specification workflows rather than code completion. The developer role is shifting.</li>
+            <li><strong>Context windows are a pricing axis now, not a capability frontier.</strong> Latent Space's 2-year prediction is credible given the HBM shortage. Plan agent architectures around 1M context as a ceiling, not a floor.</li>
+            <li><strong>Agentic code review at kernel scale (Sashiko) is a meaningful signal.</strong> The question is no longer whether agents can do code review — it's whether they can do it in adversarial, high-stakes environments without poisoning the well. Watch the kernel maintainer response carefully.</li>
+            <li><strong>GPT-5.4's unified coding + reasoning model is the most important launch detail.</strong> Not the benchmark numbers — those are always contested. The architectural consolidation (one model for Codex and ChatGPT) simplifies the OpenAI stack and removes friction for enterprise customers who were managing multiple model versions.</li>
+        </ol>
+    </div>
+
+    <div class="links-footer">
+        <h3>Hacker News</h3>
+        <ul>
+            <li><a href="https://rjcorwin.github.io/cook/" target="_blank">Cook: A simple CLI for orchestrating Claude Code</a> — 262 pts · <a href="https://news.ycombinator.com/item?id=47434024" target="_blank">discussion</a></li>
+            <li><a href="https://www.phoronix.com/news/Sashiko-Linux-AI-Code-Review" target="_blank">Google Engineers Launch "Sashiko" for Agentic AI Code Review of the Linux Kernel</a> — 98 pts · <a href="https://news.ycombinator.com/item?id=47427647" target="_blank">discussion</a></li>
+            <li><a href="https://haskellforall.com/2026/03/a-sufficiently-detailed-spec-is-code" target="_blank">A sufficiently detailed spec is code</a> — 511 pts · <a href="https://news.ycombinator.com/item?id=47434047" target="_blank">discussion</a></li>
+            <li><a href="https://tmux.thijsverreck.com" target="_blank">Show HN: Tmux-IDE, OSS agent-first terminal IDE</a> — 82 pts · <a href="https://news.ycombinator.com/item?id=47428868" target="_blank">discussion</a></li>
+            <li><a href="https://github.com/iliazintchenko/agent-sat" target="_blank">Autoresearch for SAT Solvers</a> — 153 pts · <a href="https://news.ycombinator.com/item?id=47433265" target="_blank">discussion</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+            <li>NateBJones — <a href="https://www.youtube.com/watch?v=NA_perplexity-computer" target="_blank">Perplexity Computer Is Incredible. It Won't Matter. Here's Why.</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+            <li>Latent Space — <a href="https://www.latent.space/p/ainews-gpt-54-sota-knowledge-work" target="_blank">[AINews] GPT 5.4: SOTA Knowledge Work + Coding + CUA Model</a></li>
+            <li>Latent Space — <a href="https://www.latent.space/p/ainews-context-drought" target="_blank">[AINews] Context Drought</a></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
