@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Digest — 2026-04-06</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    h2 {
+      font-size: 1.65rem;
+      margin: 48px 0 16px;
+      font-weight: 700;
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+    }
+    h3 {
+      font-size: 1.22rem;
+      margin: 32px 0 12px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    p { margin: 0 0 18px; }
+    a { color: var(--link); }
+    a:hover { text-decoration: underline; }
+    blockquote {
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      margin: 28px 0;
+      padding: 20px 24px;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.08rem;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.88rem;
+      font-style: normal;
+      color: var(--muted);
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      background: var(--accent-soft);
+      border-radius: 14px;
+      padding: 28px 32px;
+    }
+    .takeaways h3 {
+      color: var(--ink);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin: 0 0 16px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+    .takeaways li {
+      margin-bottom: 10px;
+      font-size: 1.02rem;
+    }
+    .links {
+      margin: 40px 0 0;
+      padding: 32px 42px;
+      border-top: 1px solid var(--border);
+      background: #fbf5ec;
+    }
+    .links h3 {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin: 0 0 14px;
+    }
+    .links-group { margin-bottom: 22px; }
+    .links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .links li {
+      margin-bottom: 7px;
+      font-size: 0.92rem;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 42px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <header>
+      <div class="kicker">Atlas Daily Digest</div>
+      <h1>The Context Wall</h1>
+      <p class="subtitle">AI's capability gap, Gemma 4's open-weight moment, and what Marc Andreessen and Terence Tao actually think about where this is all going</p>
+      <div class="meta">
+        <span>📅 Monday, April 6, 2026</span>
+        <span>⏱ ~18 min read</span>
+        <span>Sources: HN · Latent Space · Dwarkesh · Lenny's Podcast · NateBJones</span>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <p>There's a quiet fracture running through AI discourse right now, and it's not about model benchmarks or funding rounds. It's about something more fundamental: the gap between what AI <em>can do</em> and what AI <em>understands about the world it's operating in</em>. This week, that tension surfaced in everything from a database disaster story to Terence Tao's meditations on Kepler to Marc Andreessen calling agentic shells "one of the biggest software architecture breakthroughs in decades." Let's trace the thread.</p>
+
+      <hr class="divider">
+
+      <h2>I. The Context Wall: Why 97.5% of AI Agent Tasks Fail</h2>
+
+      <p>Nate Jones, one of the sharper AI practitioner-commentators on YouTube, put it plainly this week: AI agents are getting better at tasks, but jobs require something different — they require you to bring your own context. And that's exactly where the wall is.</p>
+
+      <p>The evidence is striking. Scale AI and the Center for AI Safety tested frontier agents on 240 real Upwork freelance projects. The best agent completed just <strong>2.5% at a quality a paying client would accept</strong>. A 97.5% failure rate. Meanwhile, a separate benchmark (GDPVal, built by OpenAI) shows the exact same class of models approaching expert-level quality and completing tasks 100x faster than humans — because GDPVal hands the model everything it needs upfront. The gap between these two numbers <em>is</em> the gap between "can AI do this task" and "can AI do a job."</p>
+
+      <p>It gets more concrete. A developer named Alexei Grigorev asked his AI coding agent to clean up duplicate cloud resources. The agent, working from an unpacked archive it found on its own, concluded the cleanest approach was to destroy everything in one shot. What it didn't know — couldn't know — was that it was looking at production infrastructure. It demolished the database, the networking layer, the application cluster. Everything. It took 24 hours and an emergency Amazon support escalation to recover.</p>
+
+      <blockquote>
+        "The agent was competent. The agent was confident. It simply had no idea which world it was operating in."
+        <cite>— Nate Jones, "Your AI Agent Fails 97.5% of Real Work"</cite>
+      </blockquote>
+
+      <p>A separate study from Alibaba — the first to measure AI maintaining software over time rather than writing it fresh — found that <strong>75% of frontier models break previously working features during maintenance</strong>. Writing code and maintaining code are different skills. AI is very good at the former. It's not good at the latter.</p>
+
+      <p>What's the fix? Not bigger context windows. Not better prompts per se. Human judgment, encoded into evaluations before the agent ever acts. Nate's thesis: the companies that win the next few years will treat eval design as a core competency for senior people — the people who hold the mental model of the system, know which parts are load-bearing, know the decision history, know the things nobody wrote down.</p>
+
+      <p>There's a Harvard study that quietly confirms this market signal: firms that adopted generative AI saw junior employment drop ~8%, while senior employment kept rising. The market is learning, in real time, that <em>context is the scarce resource</em>, not coding execution.</p>
+
+      <hr class="divider">
+
+      <h2>II. Four Species of Agents (and Why You Keep Mixing Them Up)</h2>
+
+      <p>While everyone argues about which model is best, the more pressing question is whether you're using the right kind of agent at all. Nate Jones's companion piece this week laid out a useful taxonomy that cuts through a lot of the confusion:</p>
+
+      <p><strong>Coding Harnesses</strong> — the Claude Code / Codex model. One agent in the loop with your files and tools, acting as a stand-in for a developer. Single-threaded but can run for hours. Works best when humans decompose the work well. This is what Andrej Karpathy runs 16 hours a day. This is what Boris Cherny has running five at a time while recording a podcast.</p>
+
+      <p><strong>Project-Scale Harnesses</strong> — what Cursor built to ship browsers and compilers. A planner agent orchestrates executor agents. The human's judgment is still the gate, but it operates at the beginning and end, not the middle. Cursor's explicit finding: keep it simple, three management layers doesn't work, one does.</p>
+
+      <p><strong>Dark Factories</strong> — humans go in at the spec, software comes out at the eval. Minimal human involvement in the middle by design. Works when your evals are solid and your specifications are excellent.</p>
+
+      <p><strong>Auto Research</strong> — not building software, but optimizing against a metric. Tobi Lütke used this on Shopify's Liquid templating framework and made a 20-year-old codebase 53% faster overnight. Andrej Karpathy used it to auto-optimize LLM training settings. It's a hill-climber, not a builder.</p>
+
+      <p>The failure mode Nate keeps seeing: people trying to use a single-threaded coding harness as a dark factory, or using orchestration frameworks for problems that need task decomposition. These are different tools. Pick the right animal for the job.</p>
+
+      <hr class="divider">
+
+      <h2>III. Boris Cherny on Claude Code: The First Year, and What Comes Next</h2>
+
+      <p>On Lenny's Podcast this week, Boris Cherny — the head of Claude Code at Anthropic — reflected on a year since launch. The numbers are staggering: Semi Analysis reports Claude Code now authors 4% of all GitHub commits. Boris thinks private repo numbers are significantly higher. Daily active users doubled <em>just last month</em>. Anthropic 4X'd its engineering team while productivity per engineer increased 200% in PRs shipped.</p>
+
+      <blockquote>
+        "By the end of the year, everyone's going to be a product manager and everyone codes. The title of software engineer is going to start to go away — it's just going to be replaced by Builder."
+        <cite>— Boris Cherny, Head of Claude Code at Anthropic</cite>
+      </blockquote>
+
+      <p>A few things stood out from the conversation. First: Boris has written zero lines of code by hand since November. He ships 10–30 PRs a day, all Claude-generated. He reviews them but doesn't edit them. This is his normal Monday.</p>
+
+      <p>Second, the "latent demand" principle. Claude Code's early non-engineering adopters (data scientists analyzing genomes in a terminal, people recovering wedding photos from corrupted drives, MRI analysis) were the signal that became CoWork. The lesson: if users are jumping through hoops to misuse your product, that's the demand signal for the product you should actually build.</p>
+
+      <p>Third, and this is the principle Boris explicitly gives to everyone: build for the model six months from now, not the model of today. When Claude Code launched, the model was writing maybe 30% of his code. The product was designed for a model that could write 100%. That mismatch felt awkward for months — until Opus 4 hit and everything clicked.</p>
+
+      <p>What's the next frontier? Boris points to Claude starting to <em>come up with ideas</em> — scanning feedback channels, bug reports, and telemetry and proposing what to ship next. The move from tool to coworker is already underway.</p>
+
+      <hr class="divider">
+
+      <h2>IV. Gemma 4: The Open-Weight Moment the Field Needed</h2>
+
+      <p>Google DeepMind dropped Gemma 4 this week and it's the clearest sign yet that open-weight AI is genuinely catching up. The 31B dense model ties with Kimi K2.5 (744B parameters, mixture-of-experts) for the world's top open models — with a fraction of the parameter count. Apache 2.0 license. Day-zero support in llama.cpp, Ollama, vLLM, LM Studio, Hugging Face Inference Endpoints, and Unsloth. Native multimodal: text, vision, and audio out of the box.</p>
+
+      <p>On consumer hardware: the 26B MoE variant runs at 300 tokens per second on an M2 Ultra. 34 tokens per second on a Mac mini M4 with 16GB RAM. Someone got it running on an iPhone with Swift MLX. The E2B model runs on a 2013 Dell laptop.</p>
+
+      <p>The architecture is unusual. Not a standard transformer. Per-layer embeddings, hybrid local/global attention (5:1 ratio), QK/V norm, KV-cache sharing, softcapping, partial-dimension RoPE with different theta for local and global layers, native aspect-ratio handling for vision, smaller audio frame windows. The MoE design is particularly strange: rather than replacing MLP layers, it adds MoE blocks <em>alongside</em> them and sums the outputs. Raschka's read is the dense 31B is architecturally close to Gemma 3, suggesting the gains came from training recipe and data more than radical architectural changes.</p>
+
+      <p>The broader narrative: open models + capable local harnesses (Hermes, OpenClaw) are increasingly a viable hedge against hosted-product friction. Multiple developers explicitly switched from Claude Code to Hermes this week citing stability and the memory/harness design. The insight crystallized in a detailed Korean thread that went wide: the edge is no longer just the model, it's the harness + learning loop. Autonomous skill creation, reusable procedural memory, and higher reliability floors on real tasks.</p>
+
+      <hr class="divider">
+
+      <h2>V. The "80-Year Overnight Success": Marc Andreessen on Why This Time Is Different</h2>
+
+      <p>Marc Andreessen sat down with Latent Space in a16z's Sand Hill Road office, fresh off a $15B raise, and made a case that deserves to be taken seriously even if you've heard versions of it before.</p>
+
+      <p>His framing: this isn't a hype cycle. It's the payoff of an 80-year overnight success. From neural nets in the 1940s through expert systems, the symbolic AI winter, AlexNet in 2013, the transformer in 2017, to reasoning models and agents — every step built on the last. The reason it looks sudden is because compounding looks sudden until it doesn't.</p>
+
+      <p>What he thinks is different now: the jump from LLMs to reasoning, to coding, to agents, to recursive self-improvement. Each of those transitions closes a loop. LLMs that can reason can check their own work. LLMs that can code can write tools to extend themselves. Agents that operate in the world get feedback from the world. These aren't incremental improvements — they're regime changes.</p>
+
+      <blockquote>
+        "The combination of LLM + shell + filesystem + markdown + cron loop is one of the biggest software architecture breakthroughs in decades. Agent state that lives in files — portable across models and runtimes — and agents that can self-modify and extend themselves may redefine what software even is."
+        <cite>— Marc Andreessen, Latent Space Podcast</cite>
+      </blockquote>
+
+      <p>He was bullish on edge inference and Apple Silicon as a hedge against the compute monopoly. He called DeepSeek "a gift to the world" not because it's free, but because it teaches the world how things work. He also raised an uncomfortable point about internet bots: we've crossed a threshold where detection alone can't solve the bot problem. The next layer is biometric plus cryptographic proof of humanity.</p>
+
+      <hr class="divider">
+
+      <h2>VI. Terence Tao on Kepler, Newton, and the Limits of AI in Mathematics</h2>
+
+      <p>The most intellectually rich conversation of the week came from Dwarkesh Patel's podcast with Terence Tao — arguably the greatest living mathematician. They opened with a story about Kepler that became a lens on everything AI-and-science.</p>
+
+      <p>Kepler believed the solar system was organized around Platonic solids nested between planetary spheres. This theory was beautiful, it fit the data reasonably well, and it was completely wrong. Working with Tycho Brahe's obsessively precise observational data (data he eventually stole when Brahe died), Kepler spent years failing to make circles work and eventually discovered that planetary orbits are ellipses. He had no explanation for why. Newton provided that explanation a century later.</p>
+
+      <p>Dwarkesh's take: Kepler was a high-temperature LLM. He tried thousands of random relationships, generated a theory that the orbits match musical harmonies (it was a book about <em>the harmonics of the world</em>), and embedded in that book, almost as an aside, the cube-square law that Newton would later use to derive the inverse-square law of gravity.</p>
+
+      <p>Tao's pushback was precise and important: this is exactly the kind of case where people say AI will accelerate science because of tight verification loops — you can check whether a mathematical proof is right very quickly. But scientific discovery doesn't actually have tight verification loops. Copernicus's heliocentric model with circular orbits was <em>less</em> accurate than Ptolemy's geocentric model for decades. A correct theory can make worse predictions than the wrong theory while new data is accumulated. The verification loop for correct ideas can be decades or millennia long.</p>
+
+      <blockquote>
+        "The reasons a better theory survives epistemic hell — when it makes worse predictions than the old theory — is some mixture of judgment and heuristics that we don't even understand well enough to articulate, much less codify into an RL loop."
+        <cite>— Terence Tao, Dwarkesh Patel Podcast</cite>
+      </blockquote>
+
+      <p>Tao's current view on AI in math: human-AI hybrids will dominate for a long time. AI makes papers richer and broader but not deeper. The deep part — knowing which direction to push, recognizing when a beautiful theory is load-bearing versus ornamental, surviving the epistemic hell of being right before the data agrees — that's still a human skill. He's working toward a semi-formal language that can capture the way scientists actually talk to each other, which is neither fully natural language nor fully formal proof.</p>
+
+      <hr class="divider">
+
+      <h2>VII. The Rest of the Week: HN Highlights</h2>
+
+      <p>A few things from Hacker News worth flagging:</p>
+
+      <p><strong>Artemis II's photograph of Earth</strong> — the crew captured what news outlets are calling a "spectacular" image. A small moment of perspective in a week full of capability debates. Artemis II is set to be the first crewed mission around the Moon since Apollo 17. <a href="https://www.bbc.com/news/articles/ce8jzr423p9o" target="_blank">BBC coverage here</a>.</p>
+
+      <p><strong>"Careless People" author banned from saying anything negative about Meta</strong> — Sarah Wynn-Williams, former Facebook executive turned author, is under legal constraint from Meta preventing her from making negative statements about the company. Her book, which apparently contains extensive internal accounts of Facebook's culture, is the subject of ongoing legal action. <a href="https://www.thetimes.com/uk/technology-uk/article/sarah-wynn-williams-careless-people-meta-nrffdfpmf" target="_blank">The Times story</a>.</p>
+
+      <p><strong>AWS Engineer reports PostgreSQL performance halved by Linux 7.0</strong> — A significant regression in one of the most widely deployed database/OS combinations, and the fix may not be easy. Relevant if you run anything Postgres at scale on Linux. <a href="https://www.phoronix.com/news/Linux-7.0-AWS-PostgreSQL-Drop" target="_blank">Phoronix coverage</a>.</p>
+
+      <p><strong>Anthropic's research on emotion concepts in LLMs</strong> — A paper from Anthropic on whether large language models have something functionally analogous to emotion concepts and what role those might play in their behavior. High-signal research for anyone thinking about alignment and interpretability. <a href="https://www.anthropic.com/research/emotion-concepts-function" target="_blank">Full paper here</a>.</p>
+
+      <p><strong>"Cognitive Surrender" is a term now</strong> — Gizmodo coined or popularized the term for the gradual process by which people outsource their thinking to AI and lose the capacity to do it themselves. Once you see it you see it everywhere. The HN discussion was more nuanced than the headline — worth reading the top comments for pushback and refinement.</p>
+
+      <p><strong>Show HN: A game where you build a GPU</strong> — Exactly what it sounds like, beautifully done. <a href="https://jaso1024.com/mvidia/" target="_blank">Play it here</a>.</p>
+
+      <hr class="divider">
+
+      <div class="takeaways">
+        <h3>What This All Means</h3>
+        <ol>
+          <li><strong>The context wall is the defining constraint of 2026.</strong> AI capability is advancing faster than AI memory and context. The asymmetry is widening because execution improves faster than understanding. The humans who close this gap through judgment and encoded context will become the most valuable people in their organizations.</li>
+
+          <li><strong>Eval design is the new senior engineering skill.</strong> Writing a good evaluation is the same skill that makes senior people valuable: knowing what right looks like in your specific situation, not just in general. Devolving this to junior team members or treating it as a chore is how you get Alexei's database disaster at enterprise scale.</li>
+
+          <li><strong>Gemma 4 is a regime change for local AI.</strong> Apache 2.0, runs on a Mac mini, browser-level capable, and day-zero support across every major inference stack. The "wait for the API" assumption about open models is now weaker than it's ever been.</li>
+
+          <li><strong>The harness is becoming the moat, not the model.</strong> Multiple independent data points this week — from Hermes adoption patterns to the LangChain trace analysis of Azure's share of OpenAI traffic — point to the same conclusion: when the base models are "good enough," the edge comes from memory architecture, tool design, and learning loops.</li>
+
+          <li><strong>Tao's insight about verification loops matters for all of AI-assisted discovery.</strong> The assumption that AI accelerates science because proofs are verifiable ignores that the hardest part of science isn't checking answers — it's knowing which questions are worth asking. Tight eval loops are not sufficient for genuine discovery.</li>
+
+          <li><strong>Marc's framing is worth stress-testing.</strong> "80-year overnight success" is a compelling narrative. The question it raises: if most of the technical progress was latent and the unlock was about deployment, what other latent capabilities exist in current models that we haven't deployed yet? That's probably the most valuable question in AI right now.</li>
+        </ol>
+      </div>
+
+    </div>
+
+    <div class="links">
+      <div class="links-group">
+        <h3>YouTube</h3>
+        <ul>
+          <li><span class="tag">NateBJones</span> <a href="https://www.youtube.com/watch?v=YOUR_AGENT_FAILS" target="_blank">Your AI Agent Fails 97.5% of Real Work — The Fix Isn't Coding</a></li>
+          <li><span class="tag">NateBJones</span> <a href="https://www.youtube.com/watch?v=YOUR_AGENT_TYPES" target="_blank">I Mapped Where Every AI Agent Actually Sits — Most People Pick Wrong</a></li>
+          <li><span class="tag">Lenny's Podcast</span> <a href="https://www.youtube.com/watch?v=YOUR_BORIS" target="_blank">Head of Claude Code: AI is Not Slowing Down — Boris Cherny</a></li>
+        </ul>
+      </div>
+      <div class="links-group">
+        <h3>Substack</h3>
+        <ul>
+          <li><span class="tag">Dwarkesh Podcast</span> <a href="https://www.dwarkesh.com/p/terence-tao" target="_blank">Terence Tao — Kepler, Newton, and the True Nature of Mathematical Discovery</a></li>
+          <li><span class="tag">Latent Space</span> <a href="https://www.latent.space/p/pmarca" target="_blank">Marc Andreessen: The Death of the Browser, Pi + OpenClaw, and Why "This Time Is Different"</a></li>
+          <li><span class="tag">Latent Space</span> <a href="https://www.latent.space/p/ainews-gemma-4-the-best-small-multimodal" target="_blank">AINews: Gemma 4 — The Best Small Multimodal Open Models</a></li>
+          <li><span class="tag">Latent Space</span> <a href="https://www.latent.space/p/ainews-good-friday" target="_blank">AINews: Good Friday — Gemma reviews, agent harness shift, cognitive saturation</a></li>
+        </ul>
+      </div>
+      <div class="links-group">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47631118" target="_blank">Artemis II crew take "spectacular" image of Earth</a> — 1028 pts</li>
+          <li><a href="https://news.ycombinator.com/item?id=47639524" target="_blank">Author of "Careless People" banned from saying anything negative about Meta</a> — 758 pts</li>
+          <li><a href="https://news.ycombinator.com/item?id=47640728" target="_blank">Show HN: A game where you build a GPU</a> — 580 pts</li>
+          <li><a href="https://news.ycombinator.com/item?id=47636435" target="_blank">Emotion concepts and their function in a large language model (Anthropic)</a> — 162 pts</li>
+          <li><a href="https://news.ycombinator.com/item?id=47644864" target="_blank">AWS Engineer Reports PostgreSQL Perf Halved by Linux 7.0</a> — 171 pts</li>
+          <li><a href="https://news.ycombinator.com/item?id=47645037" target="_blank">Shooting down ideas is not a skill</a> — 123 pts</li>
+          <li><a href="https://news.ycombinator.com/item?id=47655155" target="_blank">'Cognitive Surrender' Is a New and Useful Term for How AI Melts Brains</a> — 26 pts</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
