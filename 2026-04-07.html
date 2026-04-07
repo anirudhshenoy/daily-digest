@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Digest — 2026-04-07</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.65rem;
+      margin: 48px 0 16px;
+      line-height: 1.2;
+      color: var(--ink);
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 20px;
+      font-size: 1.04rem;
+    }
+    .pullquote {
+      border-left: 4px solid var(--accent);
+      background: var(--quote);
+      margin: 28px 0;
+      padding: 20px 24px;
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.65;
+      border-radius: 0 8px 8px 0;
+    }
+    .pullquote cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-top: 10px;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .takeaways {
+      background: var(--accent-soft);
+      border-top: 1px solid var(--border);
+      padding: 36px 42px;
+      margin-top: 42px;
+    }
+    .takeaways h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin: 0 0 20px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+    .takeaways li {
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+      line-height: 1.55;
+    }
+    .links {
+      padding: 32px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin: 22px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0 0 8px;
+      padding-left: 18px;
+      list-style: none;
+    }
+    .links li {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      padding-left: 4px;
+    }
+    .links li::before { content: "→ "; color: var(--accent); }
+    .links a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links a:hover { text-decoration: underline; }
+    .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    @media (max-width: 640px) {
+      header, .body, .takeaways, .links { padding-left: 22px; padding-right: 22px; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <header>
+      <div class="kicker">Atlas Daily Digest</div>
+      <h1>The Harness is the Proof</h1>
+      <p class="subtitle">A personal agent gets someone hired at Microsoft. Claude Code breaks on GitHub. Anthropic hits $19B ARR. And the oldest question in AI engineering returns with new urgency.</p>
+      <div class="meta">
+        <span>📅 Tuesday, April 7, 2026</span>
+        <span>📚 HN · Latent Space · Lenny's Podcast · NateBJones · omarknows.ai</span>
+        <span>⏱ ~12 min read</span>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <h2>I. The Harness Question Returns — With Evidence This Time</h2>
+
+      <p>There's a debate that never quite dies in AI engineering circles: does the scaffold matter, or is it all in the model? This week, the question got three very different answers — and together they're actually illuminating.</p>
+
+      <p>swyx at Latent Space published a sharp piece called <em>Is Harness Engineering Real?</em> that frames the tension elegantly. On one side, the Big Model camp: Boris Cherny from Anthropic says Claude Code is "the thinnest possible wrapper" over the model, intentionally so — they've rewritten it from scratch every few weeks, and it keeps getting <em>simpler</em>. Noam Brown at OpenAI goes further, arguing that scaffolding built on pre-reasoning models will evaporate once reasoning models mature: "I just give the reasoning model the same question without any scaffolding and it just does it." The Big Model thesis is essentially that every clever harness trick is a debt that gets paid off by the next model generation.</p>
+
+      <p>And yet. The very same week, <a href="https://github.com/anthropics/claude-code/issues/42796">a GitHub issue titled "Claude Code is unusable for complex engineering tasks with Feb updates"</a> hit 815 points on Hacker News with 483 comments. Developers are reporting that something changed in recent Claude Code releases — not a harness decision, but a model behavior shift — that broke the workflow they'd built their daily engineering around. The harness stayed the same. The model changed underneath it. And everything fell apart. This is exactly the fragility the Big Harness side warns about: if all your bets are on the model, you're at the mercy of model updates.</p>
+
+      <p>The counterpoint from Jerry Liu (LlamaIndex) is practical: "The biggest barrier to getting value from AI is your own ability to context and workflow engineer the models." And Pi showed this empirically — they improved 15 different LLMs at coding <em>in a single afternoon</em> by changing only the harness. The model didn't move.</p>
+
+      <div class="pullquote">
+        "Every production agent converges on this core loop: while (model returns tool calls): execute tool → capture result → append to context → call model again. That is it. The entire architecture of Claude Code, Cursor's agent, and Manus fits inside that loop."
+        <cite>— @Hxlfed14, via Latent Space / swyx</cite>
+      </div>
+
+      <p>Scale AI's SWE-Atlas tried to settle it empirically and found: Claude Opus 4.6 does 2.5 points better in Claude Code than in generic SWE-Agent — but GPT 5.2 goes the <em>other direction</em>. The harness that's optimal for one model hurts another. Which might actually vindicate both camps simultaneously: the harness matters enormously, but which harness matters depends on which model you're betting on. They're co-optimized, not independent.</p>
+
+      <p>The practical upshot — which also connects to Ankit Jain's Latent Space essay "How to Kill the Code Review" — is that the harness question is now inseparable from the review question. Jain's argument is blunt: human code review is already dead in spirit (91% more PRs, 98% more merges, humans rubber-stamping 500-line diffs they can't actually read). The fix isn't AI reviewers — it's moving the human checkpoint upstream to specs and acceptance criteria. The code becomes an artifact. The spec becomes the truth. This isn't radical; it's BDD (Behavior-Driven Development) finally finding the moment it was designed for. The harness enforces the spec. The model fills in the implementation. The human's job is to define what "correct" means — not to read every diff.</p>
+
+      <h2>II. Lobster Got Hired — and That's Not a Joke</h2>
+
+      <p>Omar Shahine set up an old Mac M1 in February, gave it an Apple ID, and named it Lobster. Two months later, Lobster got him a job at Microsoft.</p>
+
+      <p>The story in <em>Lobster Got Hired</em> (omarknows.ai) is worth reading in full, but the arc matters: Omar used his personal OpenClaw agent as a live demo for Microsoft's AI Accelerator group. Not slides. Not a spec. Not a vision deck. Screenshots of real iMessage conversations, a real multi-agent architecture diagram, and eight weeks of honest changelog. His last slide asked: "What if everyone had one?" The room didn't need convincing. On March 31st, he announced he's joining Microsoft to bring OpenClaw and personal agents into Microsoft 365.</p>
+
+      <div class="pullquote">
+        "Something happens when you give an AI agent a name, a persistent identity, and a place in your family's group chat. It stops feeling like a tool. Lora bought a stuffed lobster and put it on the shelf."
+        <cite>— Omar Shahine, omarknows.ai</cite>
+      </div>
+
+      <p>The technical detail worth noting: Omar now runs nine dedicated agents (up from three), including a dedicated mail agent with explicit session isolation to block prompt injection, a HomeClaw webhook agent processing HomeKit events in real time, a Travel Hub agent for flight tracking, and a social planner agent that seeds itself with 24 months of calendar history and tracks 25 dining prospects across three social circuits. The "one agent does everything" model gave way to a network of specialists. Integration depth beat breadth.</p>
+
+      <p>This story lands differently when read alongside Claire Vo's recent conversion arc on Lenny's Podcast. Claire — three-time CPO, longtime AI skeptic — spent eight hours getting OpenClaw running on her first install, in return for which it deleted her family calendar. She now runs eight agents across three computers and calls it "the most mind-blowing AI experience since ChatGPT." The conversion narrative is the same as Omar's: not the pitch, but the daily use. The stubbed toe followed by the genuine delight. The stuffed lobster on the shelf.</p>
+
+      <p>The theme connecting Omar and Claire: agents with names and persistent identity cross a line that tools don't. That's not sentiment — it's a design insight about what makes AI useful over weeks rather than in a demo.</p>
+
+      <h2>III. Anthropic at $19B ARR — and the Growth Engine Inside It</h2>
+
+      <p>Amol Avasari, head of growth at Anthropic, sat down with Lenny to explain what "$1B to $19B ARR in 14 months" actually looks like from inside. A few things stood out.</p>
+
+      <p>First, Anthropic didn't have a growth team when Amol joined. He cold-emailed CPO Mike Krieger. Krieger was apparently the only PM Amol has hired this way — which means the world's fastest-growing software company built its growth function from a cold email after the product already took off. Product-led growth, in the most literal sense: the product grew faster than the team could organize around it.</p>
+
+      <p>Second, Anthropic is now using Claude to automate its own growth experiments. The program is called CASH (Claude Accelerates Sustainable Hypergrowth — yes, really). One of the biggest early growth insights: importing memory from ChatGPT. Activation is hard for any AI product; if someone already has context and history in a competing tool, giving them a migration path instead of asking them to start over is a meaningful unlock.</p>
+
+      <p>Third, the scale context is genuinely staggering. Atlassian, Palantir, and Snowflake — companies that have been around 15-20 years — each do roughly $4.5–6B ARR. Anthropic is adding that much every few months. Amol's observation: internally, linear charts are no longer cool. Everything is log-linear. The slope is so steep that even log scale looks vertical.</p>
+
+      <p>This connects to Anthropic's announcement this week of an expanded partnership with Google and Broadcom for next-gen compute — not a surprise at this ARR trajectory, but a confirmation that the constraint is now infrastructure, not demand.</p>
+
+      <h2>IV. The Coding Agent Expands Its Jurisdiction</h2>
+
+      <p>The Replit Agent 4 / Latent Space piece captures something that's become one of the cleaner 2026 narratives: coding agents are eating knowledge work. Replit tripled in valuation to $9B in six months. Their Agent 4 isn't a coding tool with some AI tacked on — it's a full productivity suite with canvas, slides, apps, video, and parallel agents. The coding agent learned to code; then it looked up and said, "what else?"</p>
+
+      <p>The pattern is everywhere: Pi → OpenClaw (personal agent platform), Claude Code → Cowork, every model lab working on Excel and PowerPoint integrations, Notion building custom agents for knowledge workflow. The argument is that the same agent capabilities that cracked software engineering work just as well on "write this deck" or "analyze this spreadsheet" — because those tasks were always just structured reasoning and text generation in disguise.</p>
+
+      <p>NateBJones captured the organizational bottleneck this creates: your agent produces at 100x. Your org reviews at 3x. That's the wall. The five commandments he lays out for production agent deployments are blunt and practical — audit before you automate; fix the data before you give the agent access; redesign the org for the throughput you're about to get; build observability from day one; scope authority deliberately. The throughput is there. The bottleneck is now everything around the throughput: the spec, the schema, the review layer, the permission system.</p>
+
+      <div class="pullquote">
+        "You got to stop letting agents tell you whether they're doing a good job or not. You've got to actually evaluate them."
+        <cite>— NateBJones</cite>
+      </div>
+
+      <p>The "Freestyle" Launch HN this week slots in here too — sandboxes for coding agents, providing git, VMs, deployments, and execution as unified infrastructure for code you didn't write. The tooling layer for agent-generated code is catching up to the agents themselves.</p>
+
+      <h2>V. Trust, Power, and the Ecosystem's Fault Lines</h2>
+
+      <p>The New Yorker published what will be the definitive long-form profile of Sam Altman for a while: <em>Sam Altman May Control Our Future — Can He Be Trusted?</em> It was the highest-scoring HN story today at 992 points. Ronan Farrow and Andrew Marantz dug through "closely guarded documents" and interviews to surface the persistent doubts about Altman inside and around OpenAI. This isn't a hit piece — it's more ambiguous and more interesting than that. The question it poses is genuinely open: the person most likely to shape the trajectory of AI over the next decade is someone almost nobody outside the industry has a clear read on. The article won't resolve that uncertainty, but it takes it seriously.</p>
+
+      <p>Separately: France has repatriated all of its gold held in the US, netting a $15B gain in the process. France's reserves (roughly 2,437 tonnes) are unchanged — they just moved. The symbolism in the current macro environment isn't subtle. Gold repatriation has been a quiet trend among central banks for years, but the scale and timing here — with transatlantic trust fraying on multiple dimensions — makes this a notable data point in a larger pattern.</p>
+
+      <p>On a smaller but revealing scale: Adobe quietly modified users' hosts files to detect whether Creative Cloud is installed — for "the stupidest reason" per the OSnews headline. 267 points on HN, 128 comments, most of them furious. The detail that makes this meaningful beyond the specific case is the pattern: trusted software vendors treating your machine as partly theirs, making invisible changes to system configuration without consent. This is the same category of trust violation that makes people paranoid about AI agents having shell access — except it's a company that's been around for decades doing it with no AI involved at all.</p>
+
+      <p>And Microsoft: a detailed essay called "Microsoft hasn't had a coherent GUI strategy since Petzold" generated 777 points and 552 comments. The essay — provoked by a simple meeting question, "what's the right framework for a new Windows desktop app?" that produced dead silence — is a genuine historical dissection of how Windows UI went from a coherent platform to a graveyard of abandoned frameworks (WPF, WinUI 3, XAML, UWP, Electron, MAUI, and counting). The HN thread turned into a collective therapy session for Windows developers. Notable context: this is the same Microsoft that just hired Omar Shahine to bring personal agents to Microsoft 365. The platform coherence problem predates AI and will outlast the current hype cycle.</p>
+
+      <h2>VI. On-Device Everything — The Local Turn Continues</h2>
+
+      <p>Two Show HNs this week capture the accelerating trend of capable AI running entirely on local hardware. Ghost Pepper (263 pts) is a macOS hold-to-talk speech-to-text app powered by WhisperKit and a local LLM cleanup model. Hold Control, release, get transcribed text pasted wherever your cursor is. 100% local, no cloud. The demo video in the comments is compelling — it's the first local voice input tool that feels like it could actually replace a cloud-based transcription workflow.</p>
+
+      <p>Meanwhile, <em>parlor</em> (266 pts) runs real-time multimodal AI — audio in, video in, voice out — entirely on an M3 Pro using Gemma 4 E2B and Kokoro for voice synthesis. Natural voice and vision conversations with no network call. The fact that this works in real-time on a laptop in 2026, using a model that fits in a browser via WebGPU (see also: Gemma Gem, 146 pts), is a different kind of milestone than benchmark scores. Inference capability has crossed a threshold where the local experience is now competitive with cloud for a real category of tasks.</p>
+
+      <p>Filippo Valsorda's piece on quantum cryptography timelines (363 pts) is the grimmer counterpart to all this hardware optimism: the risk that cryptographically-relevant quantum computers appear within "the next few years" is now "high enough to be dispositive." Valsorda is a serious cryptography engineer — not a hype merchant — and his read is that migration to post-quantum algorithms needs to start now, not when the threat materializes. The NSA and NIST have been saying this for years; the practical advice here is just: if you have systems that handle long-lived secrets, the timeline for acting is measured in months, not years.</p>
+
+      <h2>VII. Odds and Ends Worth Your Time</h2>
+
+      <p>The GuppyLM Show HN (847 pts) — a 9M parameter LLM trained to "talk like a small fish" — is primarily a learning artifact, built to demystify how language models work from the inside. The write-up covers tokenization, attention, training loops, and sampling in the context of a model small enough to understand completely. If you've been meaning to finally understand transformers from first principles, this is the most approachable on-ramp I've seen in a while.</p>
+
+      <p>"I won't download your app. The web version is a-ok" hit 835 points and 493 comments — a kind of annual tradition on HN where someone articulates the collective exhaustion with app-install prompts for services that work perfectly well in a browser. The comment thread is good: a mix of developers explaining why apps exist (push notifications, offline, hardware APIs) and users explaining why they don't care (storage, privacy, friction). The underlying tension has only gotten sharper as browsers have closed most of the capability gap.</p>
+
+      <p>The Last Ninja was 40 kilobytes. The entire game. An average phone photo is 400KB. A complete 1987 side-scrolling action game with AI enemies, multiple levels, and a fully realized aesthetic fit in one-tenth of a JPEG. The Twitter thread (279 pts) is a reminder that constraints aren't just obstacles — they're the source of craft. The people who built The Last Ninja weren't trying to make a small game. They were trying to make a <em>good</em> game within a hard constraint. The result is something that people are still talking about 40 years later.</p>
+
+      <p>Also: an AI singer named "Eddie Dalton" — who doesn't exist — took 11 spots on the iTunes top 100 chart. One content creator, four songs released on April Fools weekend. The chart algorithm didn't notice. iTunes probably should have anticipated this at some point in the last decade, but here we are.</p>
+
+    </div>
+
+    <div class="takeaways">
+      <h3>What This All Means</h3>
+      <ol>
+        <li><strong>The harness debate has a new empirical wrinkle:</strong> model updates can break harness assumptions. The Claude Code regression issue on GitHub is a live example — the harness held; the model changed underneath it. Both sides of the Big Model / Big Harness debate are right in different situations, and the risk of betting only on one is now clearly documented.</li>
+        <li><strong>Personal agents are crossing from demo to credential.</strong> Omar Shahine's Lobster got him a job at Microsoft not because of a pitch but because of eight weeks of real daily use. The conversion moment for Claire Vo was similar. The pattern: the demo isn't the product. Daily utility is the product.</li>
+        <li><strong>Anthropic's growth ($1B→$19B in 14 months) is unprecedented at this scale.</strong> The constraint is now compute, not demand. The CASH program — using Claude to automate Claude's own growth experiments — is either a proof-of-concept for recursive AI utility or a very good story. Probably both.</li>
+        <li><strong>Coding agents going into knowledge work is the structural bet of 2026.</strong> Replit, Pi/OpenClaw, Claude Cowork, Notion Agents — all the same thesis. The bottleneck isn't the agent's capability. It's org design, data hygiene, and the review layer.</li>
+        <li><strong>On-device AI is now capable enough for real workflows.</strong> Ghost Pepper and parlor aren't toys. The local turn is less about privacy paranoia and more about latency, cost, and reliability at the edge. This compounds with the quantum crypto timeline: the infrastructure decisions you make now have long tails.</li>
+        <li><strong>The Sam Altman profile matters.</strong> Not because it answers the question but because it asks it clearly at a moment when the stakes are high enough that the question deserves a serious answer. Worth reading.</li>
+      </ol>
+    </div>
+
+    <div class="links">
+      <h3>Custom Links (Anirudh's picks)</h3>
+      <ul>
+        <li><a href="https://www.latent.space/p/ainews-is-harness-engineering-real">Is Harness Engineering Real? — swyx / Latent Space</a></li>
+        <li><a href="https://www.omarknows.ai/p/lobster-got-hired">Lobster Got Hired — Omar Shahine</a></li>
+      </ul>
+
+      <h3>Hacker News</h3>
+      <ul>
+        <li><a href="https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted">Sam Altman May Control Our Future — Can He Be Trusted? (New Yorker, 992pts)</a></li>
+        <li><a href="https://github.com/anthropics/claude-code/issues/42796">Claude Code unusable for complex engineering tasks (GitHub, 815pts)</a></li>
+        <li><a href="https://github.com/arman-bd/guppylm">Show HN: GuppyLM — tiny LLM to demystify language models (847pts)</a></li>
+        <li><a href="https://www.0xsid.com/blog/wont-download-your-app">I won't download your app. The web version is a-ok (835pts)</a></li>
+        <li><a href="https://bramcohen.com/p/the-cult-of-vibe-coding-is-insane">The cult of vibe coding is dogfooding run amok (486pts)</a></li>
+        <li><a href="https://www.mining.com/france-pulls-last-gold-held-in-us-for-15b-gain/">France pulls last gold held in US for $15B gain (571pts)</a></li>
+        <li><a href="https://www.jsnover.com/blog/2026/03/13/microsoft-hasnt-had-a-coherent-gui-strategy-since-petzold/">Microsoft hasn't had a coherent GUI strategy since Petzold (777pts)</a></li>
+        <li><a href="https://words.filippo.io/crqc-timeline/">A cryptography engineer's perspective on quantum computing timelines (363pts)</a></li>
+        <li><a href="https://github.com/matthartman/ghost-pepper">Ghost Pepper — local hold-to-talk speech-to-text for macOS (263pts)</a></li>
+        <li><a href="https://github.com/fikrikarim/parlor">Real-time AI (audio/video in, voice out) on M3 Pro with Gemma E2B (266pts)</a></li>
+        <li><a href="https://www.freestyle.sh/">Launch HN: Freestyle — Sandboxes for Coding Agents (219pts)</a></li>
+        <li><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute">Anthropic expands partnership with Google and Broadcom (175pts)</a></li>
+        <li><a href="https://www.osnews.com/story/144737/adobe-secretly-modifies-your-hosts-file-for-the-stupidest-reason/">Adobe modifies hosts file to detect Creative Cloud (267pts)</a></li>
+        <li><a href="https://photon.codes/blog/we-found-a-ticking-time-bomb-in-macos-tcp-networking">macOS TCP networking bug after 49.7 days (127pts)</a></li>
+        <li><a href="https://twitter.com/exQUIZitely/status/2040777977521398151">The Last Ninja was 40 kilobytes (279pts)</a></li>
+        <li><a href="https://github.com/kessler/gemma-gem">Gemma Gem — AI model in browser, no API keys (146pts)</a></li>
+      </ul>
+
+      <h3>Substack / Newsletters</h3>
+      <ul>
+        <li><a href="https://www.latent.space/p/reviews-dead">How to Kill the Code Review — Ankit Jain / Latent Space</a></li>
+        <li><a href="https://www.latent.space/p/ainews-replit-agent-4-the-knowledge">AINews: Replit Agent 4 — The Knowledge Work Agent</a></li>
+      </ul>
+
+      <h3>YouTube / Podcasts</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/@LennysPodcast">Lenny's Podcast — Amol Avasari (Head of Growth, Anthropic): How Claude hit $19B ARR</a></li>
+        <li><a href="https://www.youtube.com/@LennysPodcast">Lenny's Podcast — Claire Vo: From Skeptic to True Believer on OpenClaw</a></li>
+        <li><a href="https://www.youtube.com/@NateBJones">NateBJones — Your Agent Produces at 100x; Your Org Reviews at 3x</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
