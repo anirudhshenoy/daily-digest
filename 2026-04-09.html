@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Digest — 2026-04-09</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, April 9, 2026</div>
+        <h1>The Arbitrage Economy — and Who Owns the Tools</h1>
+        <p class="subtitle">AI is compressing every inefficiency in the economy on the timescale of model releases. Meanwhile the platforms that hold your tools are quietly deciding who gets to use them.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Polymarket Bot Is Every Industry</h2>
+
+        <p>
+          A Polymarket bot turned $313 into $414,000 in 30 days last year with a 98% win rate across 6,600 trades. It didn't predict anything. It just noticed that Polymarket's short-duration contracts updated prices slower than spot exchanges — and bought the obviously mispriced side while humans slept. A developer claimed to have replicated the entire strategy in Rust using Claude in 40 minutes.
+        </p>
+
+        <p>
+          Nate Jones, in what is one of the more economically coherent takes I've seen on AI, frames this as the universal story of our moment: <em>AI is closing arbitrage gaps on the timescale of model releases</em>. Not slowly, the way railroads reduced transport times over decades. In weeks. And every gap that closes opens three new ones elsewhere. The average arbitrage window on Polymarket shrank from 12.3 seconds in 2024 to 2.7 seconds in early 2026. You can literally watch inefficiency disappear in real time.
+        </p>
+
+        <blockquote>
+          "The world has been built on slowly exploited inefficiencies for thousands of years. The slowly part is over. What replaces it isn't efficiency — it's a faster cycle of inefficiency creation and destruction."
+          <cite>— NateBJones, via YouTube transcript</cite>
+        </blockquote>
+
+        <p>
+          Jones identifies five categories of arbitrage gap that AI is systematically closing: speed gaps (your competitor reprices in real-time while you reprice weekly), reasoning gaps (someone interprets the same Fed statement 20 minutes faster than everyone else), fragmentation gaps (the consultant whose value was "I see across the silos"), discipline gaps (the sales team that knows the playbook but doesn't follow it), and knowledge asymmetry gaps (offshore labor arbitrage being replaced by intelligence arbitrage). Each of these maps cleanly onto entire career paths and industries that are about to be very surprised.
+        </p>
+
+        <p>
+          The structural insight: some gaps are AI-resistant. Regulatory moats. Relationship-dependent trust. Physical world logistics. Genuine creative taste. Domain judgment built over decades. The gaps that compress fastest are informational and cognitive — and they're collapsing on a timescale of quarters, not years. If you're a law firm billing for research, you're in a different boat than a surgeon. If your value is "I aggregate information others can't," your boat is leaking.
+        </p>
+
+        <p>
+          The harder question Jones raises: availability of AI tools does not equal a spread-out advantage. 94-95% of Polymarket wallets lose money. They feed the few who actually restructured their process <em>around</em> what AI makes possible, rather than bolting AI onto existing workflows. "The executive who deploys a chatbot and calls it transformation is like the polymarket guy copy-pasting the same prompt."
+        </p>
+
+        <hr class="divider" />
+
+        <h2>Andrej Karpathy: Everything Is Skill Issue</h2>
+
+        <p>
+          The No Priors podcast dropped an extended conversation with Andrej Karpathy that's worth reading in full — not for the individual quotes, but for what it reveals about where the frontier practitioner headspace actually is right now.
+        </p>
+
+        <p>
+          Karpathy says he hasn't typed a line of code himself since approximately December 2025. His workflow is now 80-20 (maybe more) in favor of delegating to agents. He describes a persistent state of "AI psychosis" — not anxiety, but an almost compulsive need to push agents further and figure out what's actually possible. His bottleneck is no longer compute; it's his own ability to express intent clearly enough for agents to act on. "I feel nervous when I have subscription left over. That just means I haven't maximized my token throughput."
+        </p>
+
+        <blockquote>
+          "Code's not even the right verb anymore. I have to express my will to my agents for 16 hours a day. Manifest."
+          <cite>— Andrej Karpathy, No Priors Podcast</cite>
+        </blockquote>
+
+        <p>
+          His home automation story is a small masterpiece. He asked an agent to find his Sonos system on the local network. Three prompts later, it had reverse-engineered the API, discovered the endpoints, built a dashboard, and was playing music in his study. He calls the resulting setup "Dobby the Elf Claw" — it controls lights, HVAC, shades, pool, spa, security cameras, and texts him on WhatsApp when a FedEx truck arrives. He replaced six apps with one conversational agent. The apps, he argues, shouldn't have existed to begin with — they're just GUIs built for humans because there was no other interface. Agents are the glue now.
+        </p>
+
+        <p>
+          On the deeper question of AI research automation, Karpathy describes his "auto research" project: a loop that runs hyperparameter experiments on NanoChat without human involvement. He was surprised to find it discovered tuning improvements he'd missed after years of hand-tuning. His conclusion is that researchers are the bottleneck in their own labs. The future is: write the objective function, set the boundaries, hit go, and let it run overnight. "I shouldn't be running these hyperparameters. There's an objective criteria. You just have to arrange it so that it can just go forever."
+        </p>
+
+        <p>
+          The jaggedness observation is important: models are simultaneously a 10-year systems programmer and a 10-year-old. They're excellent in reinforcement-learning-verifiable domains and weirdly frozen elsewhere. ChatGPT still tells the same joke it told in 2021 ("atoms make everything up") even as it moves mountains on agentic coding tasks. The improvement isn't general intelligence becoming uniformly better — it's specific capabilities on rails pulling everything forward in those tracks while other tracks remain oddly untouched.
+        </p>
+
+        <hr class="divider" />
+
+        <h2>Jensen Huang on Jobs, Open Source, and What "God AI" Gets Wrong</h2>
+
+        <p>
+          Jensen Huang's end-of-year reflection (via No Priors) is a useful counterweight to the doom framing. He grounds the jobs conversation in the task-vs-purpose distinction: a radiologist's task is to study scans, but their purpose is to diagnose disease. Since AI took over 100% of radiology applications, the number of radiologists has increased — because they're ordering more scans, catching more edge cases, doing more research. Same structure applies everywhere.
+        </p>
+
+        <p>
+          On infrastructure: three new types of physical plants are being built in the US at scale — chip fabs, supercomputer plants, and AI factories. The number of electricians, plumbers, and construction workers required is enormous. Electrician paychecks are doubling. This is the economy-wide sucking sound that job-loss narratives miss.
+        </p>
+
+        <p>
+          His clearest polemic is against "God AI" framing — the narrative that there will be one monolithic model that knows everything and therefore all policy should be oriented around either enabling or fearing it. Jensen calls this "unhelpful" with visible frustration. Biology molecules don't understand English. Proteins don't understand English. God AI that's uniformly superintelligent across all modalities of knowledge doesn't exist and isn't coming on any useful planning horizon. Meanwhile, every company on earth needs AI tools now, and regulatory capture designed to prevent competition on that basis actively damages innovation.
+        </p>
+
+        <blockquote>
+          "If you want to take it to that level, then we ought to just all stop everything. What's the point of having even governments? God AI is going to be smart enough to work around any policy."
+          <cite>— Jensen Huang, No Priors Podcast</cite>
+        </blockquote>
+
+        <p>
+          He's particularly emphatic on open source: without it, a hundred-year-old manufacturing company can't adapt AI to its domain. Without it, higher education can't do research. Without it, startups can't compete. "Whatever you decide, whatever you do, don't forget open source." His read on DeepSeek is gracious and interesting: probably the single most important paper Silicon Valley researchers read in the last two years, and it came from China. The narrative that American AI can't benefit from non-American research is not only factually wrong, it's bad for the industry.
+        </p>
+
+        <hr class="divider" />
+
+        <h2>The Platform That Holds Your Encryption</h2>
+
+        <p>
+          The VeraCrypt situation is a quiet crisis. VeraCrypt is one of the most widely-used open-source encryption tools in the world — full-disk encryption that millions of people rely on for private files and sensitive documents. This week, Microsoft terminated an account associated with the project without explanation, throwing future Windows updates into doubt. VeraCrypt's developer told 404 Media that the move highlights the delicate supply chain involved in publishing open-source software that depends even tangentially on major platform companies.
+        </p>
+
+        <p>
+          This landed on Hacker News with 1,162 points and 428 comments — one of the top stories of the week. The HN thread is worth reading for the specific concern: code signing on Windows is gated on a Microsoft-controlled certificate infrastructure. If you lose access, you lose the ability to deliver signed updates. Users who install unsigned software get scary OS-level warnings. For a tool explicitly designed to protect people from surveillance and coercion, the ability to distribute updates matters a lot.
+        </p>
+
+        <p>
+          This connects to a broader pattern in today's news: the infrastructure of trust is owned by parties whose incentives are not always aligned with the users they serve. Git history on every repo. DNS. Code signing certificates. App store distribution. The surveillance camera networks in your city. Each of these is a choke point. And each choke point is occasionally exercised by the party that controls it.
+        </p>
+
+        <p>
+          On the surveillance side: US cities are quietly pulling contracts with Flock Safety, the license plate reader company that has built one of the most comprehensive vehicle-tracking networks in the country. The HN story (649 points, 385 comments) reflects growing municipal discomfort with what was sold as crime-fighting infrastructure but is functionally a mass surveillance system covering millions of daily vehicle movements.
+        </p>
+
+        <hr class="divider" />
+
+        <h2>Meta's Muse Spark: Back in the Race?</h2>
+
+        <p>
+          Meta unveiled Muse Spark this week — the first model produced by Meta Superintelligence Labs, the new research unit Zuckerberg spent billions building after Llama 4 landed poorly last year. The benchmarks are being scrutinized by independent researchers, but the early read is that this puts Meta back in contention after months on the sidelines. Muse Spark is described as competitive with Gemini Deep Think and GPT Pro in extreme reasoning modes, with strong multimodal perception. It now powers the Meta AI app and will ship to Instagram, Facebook, Messenger, WhatsApp, and Meta's AI glasses in coming weeks.
+        </p>
+
+        <p>
+          The strategic importance here goes beyond benchmark performance. Meta has a distribution advantage no other AI lab has: billions of active users across platforms where people already spend hours a day. Muse Spark doesn't need to win on the API or developer side to matter. It just needs to be good enough on the platforms where people already are. And "good enough with massive distribution" is a profoundly different competitive position than "state-of-the-art in a vacuum."
+        </p>
+
+        <hr class="divider" />
+
+        <h2>The Strange Epistemology of Scientific Progress</h2>
+
+        <p>
+          Dwarkesh Patel's conversation with Michael Nielsen — quantum computing pioneer, open science advocate, and one of the people whose writing got Greg Brockman and Chris Olah into deep learning — is nominally about the history of physics. But it's really about how knowledge actually advances versus how we tell stories about it afterward.
+        </p>
+
+        <p>
+          The core example: Michelson-Morley (1887) is commonly taught as the experiment that disproved the ether, triggering a crisis that Einstein resolved with special relativity. The actual history is different. Michelson continued to believe in the ether until his death in 1929, conducting experiments into the 1920s. Lorentz derived the correct mathematics decades before Einstein, but with entirely the wrong interpretation — he thought length contraction was a dynamical effect of pressure from ether wind, not a kinematic consequence of the nature of spacetime. The scientific community broadly adopted special relativity before the muon experiments in 1940 that would have been genuinely decisive against the Lorentz interpretation. How? Some combination of aesthetic preference for parsimony, the persuasive unification Newton achieved (terrestrial motion, planetary motion, and tides from one theory), and what Nielsen calls scientific taste.
+        </p>
+
+        <blockquote>
+          "If you're attempting to reduce science to a process, you're attempting to reduce it to something where there is just a method which you can apply and you turn the crank and out pops insight. Sure. But you're going to get bottlenecked at the places where your existing method doesn't apply."
+          <cite>— Michael Nielsen, Dwarkesh Podcast</cite>
+        </blockquote>
+
+        <p>
+          Why does this matter for AI? Because the main thesis of using AI to accelerate science is about closing verification loops — if you can check whether a result is correct automatically, you can run more experiments faster. Nielsen's point is that the hardest moments in science are exactly the ones where the verification loop is wrong, incomplete, or pointing at the wrong question. AlphaFold worked because it had the Protein Data Bank — billions of dollars of hard experimental data defining ground truth. What's the equivalent for the next major scientific revolution? Nobody knows. And that's precisely the kind of question that can't be automated away.
+        </p>
+
+        <hr class="divider" />
+
+        <h2>Repair, Rights, and the Right-to-Modify</h2>
+
+        <p>
+          John Deere agreed to pay $99 million to settle a class-action lawsuit over right-to-repair violations — a landmark in a years-long battle where farmers were locked out of their own equipment's diagnostic and repair software. The settlement covers repairs from January 2018 and, crucially, requires Deere to provide digital tools for maintenance, diagnosis, and repair of large machinery for the next 10 years. Plaintiffs will recover between 26% and 53% of overcharge damages — far above the typical 5-15% in class actions of this type.
+        </p>
+
+        <p>
+          Farmers previously resorted to installing cracked Ukrainian firmware just to fix their own tractors. A machine that might cost $500,000 could be bricked by a software flag that only a John Deere dealer could reset. The settlement is a meaningful legal precedent, and it echoes across adjacent domains: your ability to modify, repair, and maintain tools you own (including software tools) is increasingly a contested political question, not just an engineering one.
+        </p>
+
+        <hr class="divider" />
+
+        <h2>Portability of Everything</h2>
+
+        <p>
+          LittleSnitch for Linux launched this week — a port of the classic macOS outbound network monitoring tool that lets you see and control every connection your applications make. 248 points on HN. The enthusiasm is real: Linux users have wanted this for years. Knowing what your software is phoning home is a basic form of digital hygiene that most people don't practice because the tooling has been poor.
+        </p>
+
+        <p>
+          The Mac OS X port to Nintendo Wii is a delightful piece of systems archaeology. Bryan Keller spent months in a dark basement making Apple's PowerPC OS run on Nintendo's Hollywood GPU. Why? "Because it was there." The engineering involved is a serious primer on boot sequences, memory mapping, and the heroic amounts of tolerance modern operating systems have for hardware they were never designed for. It's also a reminder that the skill of reading and understanding other people's code deeply — not just LLM-assisted surface comprehension — remains irreplaceable for certain classes of work.
+        </p>
+
+        <p>
+          The "Git commands I run before reading any code" post (1,854 points — the day's top HN story) captures something real: there's a specific toolkit of git archaeology that experienced engineers develop over years. <code>git log --oneline -20</code>, <code>git log --all --oneline --graph</code>, finding the last time a file was significantly modified, grepping commit messages for the context that explains a confusing design decision. These habits are invisible to junior engineers and to AI tools that don't maintain long context across a codebase's history.
+        </p>
+
+        <hr class="divider" />
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Arbitrage is the master narrative.</strong> Every profession, product, and business model rests on some inefficiency. AI is closing those inefficiencies on the timescale of model releases. The question for any role is: what kind of gap am I sitting on? Structural (relationships, judgment, taste, physical presence) or informational/cognitive? If the latter, planning on a shorter timeline is warranted.</li>
+            <li><strong>The agent era is not theoretical.</strong> Karpathy hasn't typed a line of code since December. Jensen says NVIDIA's engineers would ideally code nothing at all. The people talking about "AI psychosis" aren't early adopters anymore — they're the new baseline.</li>
+            <li><strong>Platform dependency is a real risk.</strong> VeraCrypt's distribution problem is a preview. Any tool that depends on a single company's infrastructure (signing certs, app stores, cloud accounts) has a latent vulnerability. The open-source commitment to portability and decentralization matters now more than ever.</li>
+            <li><strong>Meta is back in the model race.</strong> Muse Spark from Meta Superintelligence Labs is their first serious contender since Llama 4 disappointed. They have unmatched distribution. Watch this space.</li>
+            <li><strong>Auto-research is the next unlock.</strong> Karpathy's overnight auto-research loop found improvements he'd missed in his own code after years of manual tuning. The same principle that applies to coding — remove humans from the loop on verifiable tasks — applies to scientific discovery wherever ground truth exists.</li>
+            <li><strong>Scientific progress has always required taste.</strong> The history of physics suggests that verification loops can't substitute for aesthetic judgment about which theory is worth pursuing. This is important context for AI-accelerated science claims.</li>
+            <li><strong>John Deere's settlement is a precedent.</strong> The right to repair your own tools — tractors, software, devices — is a political battleground. $99M and a 10-year commitment to tool access is a meaningful win, but the structural tension hasn't resolved.</li>
+          </ol>
+        </div>
+
+      </div>
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://piechowski.io/post/git-commands-before-reading-code/" target="_blank">Git commands I run before reading any code</a> — 1,854 pts</li>
+          <li><a href="https://sourceforge.net/p/veracrypt/discussion/general/thread/9620d7a4b3/" target="_blank">VeraCrypt project update (Microsoft terminates account)</a> — 1,162 pts</li>
+          <li><a href="https://aphyr.com/posts/411-the-future-of-everything-is-lies-i-guess" target="_blank">ML Promises to Be Profoundly Weird — aphyr</a> — 410 pts</li>
+          <li><a href="https://www.skoda-storyboard.com/en/skoda-world/skoda-duobell-a-bicycle-bell-that-penetrates-noise-cancelling-headphones/" target="_blank">Škoda DuoBell: A bicycle bell that penetrates noise-cancelling headphones</a> — 544 pts</li>
+          <li><a href="https://www.cnet.com/home/security/" target="_blank">US cities axing Flock Safety surveillance technology</a> — 649 pts</li>
+          <li><a href="https://ai.meta.com/blog/introducing-muse-spark-msl/" target="_blank">Muse Spark: Scaling towards personal superintelligence (Meta)</a> — 288 pts</li>
+          <li><a href="https://www.thedrive.com/news/john-deere-to-pay-99-million-in-monumental-right-to-repair-settlement" target="_blank">John Deere to pay $99M in right-to-repair settlement</a> — 207 pts</li>
+          <li><a href="https://obdev.at/products/littlesnitch-linux/index.html" target="_blank">LittleSnitch for Linux</a> — 248 pts</li>
+          <li><a href="https://bryankeller.github.io/2026/04/08/porting-mac-os-x-nintendo-wii.html" target="_blank">I ported Mac OS X to the Nintendo Wii</a> — 1,325 pts</li>
+          <li><a href="https://www.microsoft.com/en-us/windows/union-types-csharp-15/" target="_blank">Union types in C# 15</a> — 176 pts</li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@NateBJones" target="_blank">NateBJones — A Polymarket Bot Made $438,000: AI Arbitrage & The New Economy</a></li>
+          <li><a href="https://www.youtube.com/@NoP riorsPodcast" target="_blank">No Priors — Andrej Karpathy: Skill Issue, Code Agents, and Auto-Research</a></li>
+          <li><a href="https://www.youtube.com/@NoP riorsPodcast" target="_blank">No Priors — Jensen Huang on Reasoning Models, Robotics, and Jobs</a></li>
+          <li><a href="https://www.youtube.com/@DwarkeshPodcast" target="_blank">Dwarkesh — Michael Nielsen: Why Aliens Will Have a Different Tech Stack</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/turbopuffer" target="_blank">Latent Space — Retrieval After RAG: Turbopuffer &amp; Hybrid Search for Agents</a></li>
+          <li><a href="https://www.dwarkesh.com" target="_blank">Dwarkesh Podcast — Hiring scouts to help me find guests</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
