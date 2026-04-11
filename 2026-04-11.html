@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Digest — 2026-04-11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin: 2.4em 0 0.7em;
+      padding-top: 1.2em;
+      border-top: 2px solid var(--accent-soft);
+      line-height: 1.25;
+    }
+    h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    h2 .emoji { margin-right: 0.35em; }
+    p { margin: 0 0 1.1em; }
+    a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    blockquote {
+      margin: 1.6em 0;
+      padding: 18px 24px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--muted);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 0.6em;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .takeaways {
+      margin: 2.4em 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways li {
+      margin-bottom: 0.75em;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+    .takeaways li:last-child { margin-bottom: 0; }
+    .links {
+      margin: 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+    }
+    .link-item {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+    .link-item .src {
+      flex-shrink: 0;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.78rem;
+      padding: 1px 6px;
+      background: var(--accent-soft);
+      border-radius: 4px;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+    .section-divider {
+      display: block;
+      height: 1px;
+      background: var(--border);
+      margin: 0 42px;
+    }
+    @media (max-width: 600px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+      .section-divider { margin: 0 22px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+
+  <header>
+    <p class="kicker">Saturday · April 11, 2026</p>
+    <h1>The Grid and the Missile</h1>
+    <p class="subtitle">How geopolitics, helium, and a Molotov cocktail are rewriting the rules of AI infrastructure — and what Artemis coming home has to do with any of it</p>
+    <div class="meta">
+      <span>🗞 HN · 9 stories</span>
+      <span>📰 Latent Space · Dwarkesh</span>
+      <span>🎥 NateBJones · 3 videos</span>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <h2><span class="emoji">⚔️</span>The War Economy of AI</h2>
+
+    <p>Late last week, a Molotov cocktail was thrown at Sam Altman's home in San Francisco. Nobody was hurt, but the symbolism couldn't have been more vivid: the most powerful person in artificial intelligence now has a <a href="https://news.ycombinator.com/item?id=47724921">physical security detail</a> and the angriest corners of the internet turning his personal life into a protest canvas. In his response, Altman shared a photo of his family. "Images have power," he wrote. The contrast with OpenAI's week is dizzying — because while a bottle flew toward his door, $110 billion flew into his company's coffers.</p>
+
+    <p>The full story of how we got here, laid out brilliantly by NateBJones, is a geopolitical chess match that most commentary missed. The precipitating event was the war with Iran. The United States and Israel struck Iran's government compound in Tehran — and in doing so, relied heavily on AI. Specifically, they relied on Claude. According to reporting NateBJones cites, US Central Command was using Anthropic's model for intelligence assessments, target identification, and combat simulations <em>hours after a presidential order told federal agencies to stop using Anthropic technology.</em> The model was too embedded in operational workflows to extract in real time. AI had become load-bearing in active warfighting — and the kill switch, when someone finally reached for it, didn't work.</p>
+
+    <p>How did Anthropic end up designated a "supply chain risk to national security" — a designation never before applied to an American company? The answer is part principle, part politics, and part fatal miscalculation. Defense Secretary Hegseth demanded that Anthropic allow unrestricted use of Claude for any lawful military purpose. Dario Amodei refused, published his reasoning publicly, and in doing so embarrassed his counterparty. The defense establishment rewards deference and punishes public defiance. Sam Altman, negotiating privately, got nearly identical red lines written into his contract and walked away with a Pentagon partnership, the largest private funding round in history, and the structural position to become the gravitational center of American AI infrastructure.</p>
+
+    <blockquote>
+      "Even fully autonomous weapons may prove critical for our national defense."
+      <cite>— Dario Amodei, in the statement that his critics claim proves his objections are technical, not moral</cite>
+    </blockquote>
+
+    <p>The $110B round is its own spectacle. Amazon committed $50B (with $35B contingent on an IPO or undisclosed AGI milestone), becoming OpenAI's exclusive third-party cloud distributor and co-developing a stateful runtime for persistent agent memory — essentially coming for both Azure and Google Cloud simultaneously. NVIDIA put in $30B to lock in Vera Rubin architecture deployment. SoftBank brought $30B more, cementing Masayoshi Son's integrated stack from chip IP to data centers to frontier models. Microsoft, which holds a 27% stake, participated in none of it — having already traded exclusivity for a long-term 20% revenue share through 2032.</p>
+
+    <p>The circular logic is obvious: NVIDIA invests in OpenAI, which buys NVIDIA chips, which NVIDIA books as revenue. Bloomberg mapped it. The question isn't whether it's circular — it is. The question is whether demand materializes at scale. And NateBJones makes a counterintuitive argument: the real risk may not be that revenue disappoints, but that the company is <em>underbuilding</em> because enterprise demand for agentic tokens is so much larger than anyone models. Every agent deployed 100x-1000x what a human can type. OpenAI is now positioned to capture that entire expansion — and Anthropic, despite stronger enterprise adoption and a 10x YoY revenue trajectory, faces a government procurement unwind that will send procurement flows toward whoever the Pentagon considers cooperative.</p>
+
+    <h2><span class="emoji">⚗️</span>48 Days: When a Missile Hit a Helium Plant</h2>
+
+    <p>While the AI industry has spent years debating whether compute is abundant enough, this week surfaced a vulnerability nobody had adequately priced: the entire Western semiconductor supply chain runs through a single helium plant in Qatar that has now been hit by missiles.</p>
+
+    <p>NateBJones spent nearly an hour unpacking the implications, and they are severe. The Ras Laffan industrial complex — which produces approximately 33% of the world's helium — has been offline for weeks. Qatar Energy has admitted that 14% of its helium capacity is <em>permanently damaged</em>, with reconstruction timelines measured in half-decades. The planned Helium 4 facility, which would have been the largest ever built, is status unknown. Spot prices for helium have doubled. Contract surcharges are up 30%.</p>
+
+    <p>The connection to AI is direct and irreplaceable. Helium — 99.9999% pure, or "6N purity" — is used at every critical step of advanced semiconductor manufacturing. During plasma etching, it's blown across the back of the wafer to maintain temperature uniformity. It's the only gas whose atomic diameter is small enough to detect leaks in vacuum chambers. There is no substitute. And the most advanced fabs — the ones producing HBM memory for NVIDIA GPUs, AMD accelerators, and Google TPUs — are also the heaviest consumers of helium, with a single 300mm EUV fab consuming between 5,000 and 20,000 cubic meters per month.</p>
+
+    <p>South Korea imported two-thirds of its helium from Qatar in 2025. SK Hynix and Samsung — the world's two largest memory chip manufacturers, the only companies producing HBM at scale — now have no reliable supply. TSMC, which imports 97% of its energy as LNG (also now disrupted from the Gulf), says it "doesn't currently anticipate notable impact." NateBJones translates: they have to say that. The actual question isn't whether fabs shut down completely — they won't. It's whether they run at lower capacity, whether chip timelines slip, whether costs ratchet in ways that compound through the entire inference cost envelope.</p>
+
+    <p>Hacker News landed on the same story independently this morning, with a <a href="https://news.ycombinator.com/item?id=47719274">construction physics deep-dive</a> on helium's irreplaceability reaching the front page. The comments are full of people realizing for the first time that the trillion-dollar AI buildout is physically tethered to a noble gas produced as a byproduct of LNG refining in a conflict zone.</p>
+
+    <blockquote>
+      "The AI industry has spent three years talking about whether we're in a bubble. All of that is now facing a persistent break. We are running into a situation where the longer this supply chain constraint exists, the more we have, at best, significant structural changes to the cost envelope for AI."
+      <cite>— NateBJones, "48 Days: How Long Before the Helium Runs Out for AI Chips"</cite>
+    </blockquote>
+
+    <p>The geopolitical subplot is worth flagging: China's domestic helium production is growing precisely because of this crisis. Its Guangdong plant has secured 6N certification and is already winning orders. Russia's Power of Siberia 2 pipeline — stalled for years over price disputes — suddenly gives China enormous leverage to lock in cheap LNG and cheap helium simultaneously, building out a native chip fabrication stack with controlled input costs that the Western supply chain cannot match. The cold war logic plays out at the molecular level: whoever controls the helium controls the memory, and whoever controls the memory controls the inference.</p>
+
+    <p>This connects directly to Dwarkesh Patel's deep-dive on space GPUs, which he wrote as prep for his Elon interview. Elon's argument for orbital data centers rests on the premise that Earth simply cannot scale power generation to the terawatt-scale that AI will eventually demand. Dwarkesh does the math skeptically — a 100 GW orbital deployment would require roughly 10,000 Starship launches in a year — but notes that regardless of whether space GPUs make economic sense in 2030, the long-run trajectory of the singularity is clearly toward space. Earth intercepts one two-billionth of the sun's output. That's the ceiling. The Ras Laffan crisis is what happens when you try to scale civilization-level compute on a planet with finite, geographically concentrated inputs.</p>
+
+    <h2><span class="emoji">🚀</span>Artemis Comes Home</h2>
+
+    <p>This morning, Artemis II splashed down safely in the Pacific, returning four astronauts from humanity's first crewed circumlunar flight in over fifty years. The <a href="https://news.ycombinator.com/item?id=47725583">HN thread</a> is joyful in a way that tech forums rarely are. It's one of those moments where the accumulated weight of human engineering — decades of work, thousands of people — compresses into a single parachute-slowed fall into open ocean.</p>
+
+    <p>The timing is poignant. CACM published a detailed account this week of <a href="https://news.ycombinator.com/item?id=47704804">how NASA built Artemis II's fault-tolerant computer</a>, and it reads like a masterclass in reliability under adversarial conditions. Triple-redundant voting logic, radiation-hardened components, extensive formal verification — the kind of rigor that no startup would tolerate but that any system operating where the nearest technician is 400,000 kilometers away demands. This is 605 points and 218 comments on Hacker News this morning, which suggests the HN crowd understands instinctively that this flavor of engineering is the complement, not the opposite, of the move-fast culture dominating AI.</p>
+
+    <p>In quantum physics, ETH Zurich published a result on a <a href="https://news.ycombinator.com/item?id=47713495">high-quality quantum swap gate using a geometric phase</a> — a technique that makes qubit operations dramatically more robust against experimental noise because they're governed by topology rather than precise timing. The implications are still years from practical deployment, but geometric phase is exactly the kind of foundational trick that makes future systems possible. The universe keeps rewarding people who think about structure rather than just optimization.</p>
+
+    <h2><span class="emoji">🎨</span>Design Goes to the Command Line</h2>
+
+    <p>While geopolitics consumed the headlines, a quieter but more immediate revolution landed for builders: design is now a command-line discipline.</p>
+
+    <p>NateBJones covered three releases that, taken together, represent a structural shift in how creative work gets done. Google's updated <strong>Stitch</strong> generates high-fidelity multi-screen UI designs from natural language — not wireframes, but finished-looking interfaces with real typography and color systems. It exports a <code>design.markdown</code> file that coding agents can read directly, eliminating the Figma handoff entirely. It's free for 350 generations a month. The reason Figma stock moved when this launched (rather than when the original Stitch debuted at Google I/O last year) is that the market finally grokked that the value proposition had shifted from "designer tool" to "design-to-code pipeline that routes around Figma."</p>
+
+    <p><strong>ReMotion</strong>, a React framework that treats video as code, has 150,000 installs as a Claude Code skill. You describe a 30-second product demo in natural language and the agent writes the React components that render it as an MP4. This is programmable video, not generative video — every element is version-controllable and parameterizable. <strong>Blender MCP</strong> opens the most complex creative software in existence — a tool whose learning curve is measured in years and whose interface has 1,500 operators — to anyone who can describe a 3D scene in English.</p>
+
+    <p>The through-line is the Model Context Protocol, which is becoming what NateBJones calls "the USB plug for AI." Every tool that exposes itself via MCP becomes a command-line primitive. Aaron Levie, CEO of Box, made this point from the enterprise angle in a Latent Space conversation: every agent needs a box. Not metaphorically — literally a sandboxed environment with access to enterprise files, permissions, and identity. Box processes content for 70% of the Fortune 500; what OpenClaw demonstrated is that agents now need their own computing environments with their own file systems, not just access to human file systems. Levie is building for that exact world.</p>
+
+    <blockquote>
+      "We didn't write code, we talked to an agent and it went and did it for us. What's happening is we are changing our work to make the agents effective. The agent didn't really adapt to how we work. We basically adapted to how the agent works. All of the economy has to go through that exact same evolution."
+      <cite>— Aaron Levie, Box CEO, on Latent Space</cite>
+    </blockquote>
+
+    <p>Latent Space's editorial on "AI Engineer will be the LAST job" makes a related argument from the labor market side. While overall job postings are declining, software engineering job postings are <em>rebounding higher</em> as models get better at software. The counterintuitive dynamic: AI automating parts of software engineering creates more demand for people who can orchestrate that automation. And the deeper claim is that all agents are, at root, coding agents with extra SKILL.md files — which means the AI engineer is the last professional standing when every other white-collar function has been subsumed into prompt-and-deploy workflows.</p>
+
+    <p>A tangible milestone: Claude Opus 4.6 found 22 vulnerabilities in Mozilla's Firefox codebase in two weeks — 14 high-severity, representing approximately 20% of Mozilla's high-severity fixes for all of 2025. The first bug appeared 20 minutes into the run. Exploit attempts cost roughly $4,000 in credits; finding the bugs cost a tenth of that. Anthropic calls it a "rubicon moment." The security world is now on notice that AI is better at finding vulnerabilities than exploiting them — for now — and the gap is narrowing.</p>
+
+    <h2><span class="emoji">🔒</span>When the Tools Betray You</h2>
+
+    <p>Three security stories landed this week that belong together, because they share a common structure: trusted infrastructure quietly compromised.</p>
+
+    <p>The <a href="https://news.ycombinator.com/item?id=47721946">JSON Formatter Chrome extension</a> — a developer staple used by hundreds of thousands — was shut down by its maintainer and then acquired by someone who immediately started injecting adware. The extension retained all its original permissions and user trust, then weaponized them. <a href="https://news.ycombinator.com/item?id=47717847">CPU-Z and HWMonitor</a>, the hardware monitoring utilities that have been in developers' toolboxes for a decade, had their download links compromised for six hours, serving credential stealers. And Hacker News surfaced that <a href="https://news.ycombinator.com/item?id=47719602">macOS Privacy and Security settings cannot be trusted</a> — there's a bug that allows access to privacy-protected folders even when System Preferences explicitly shows access denied.</p>
+
+    <p>The FBI's retrieval of deleted Signal messages from an iPhone <a href="https://news.ycombinator.com/item?id=47716490">via notification database extraction</a> deserves separate attention. The method exploits the fact that iOS stores incoming notification payloads — including message content — in a notification database that persists even after the user deletes the original messages in Signal. The implication: end-to-end encryption protects the transmission, but the receiving device's operating system stores a decrypted copy of what arrived. Signal can't fix this unilaterally. The threat model of "encrypted messaging is safe" has always had an asterisk; now that asterisk is being enforced.</p>
+
+    <p>Quanta Magazine ran a piece asking why we tell ourselves scary stories about AI — the Terminator, Skynet, the rogue superintelligence. Their argument: the stories we tell reveal our psychology more than they predict AI behavior. But after a week in which AI models ran inside combat operations during an active war, were used to hunt down Nicolas Maduro, and could not be switched off even by presidential order, the scary stories feel less like projection and more like journalism arriving slightly late.</p>
+
+    <h2><span class="emoji">📜</span>History Rhymes: Gutenberg's Lesson</h2>
+
+    <p>Dwarkesh Patel published a summary of his conversation with Ada Palmer, a Renaissance historian at the University of Chicago and author of <em>Inventing the Renaissance</em>. The parallels to today are striking enough that it's worth pausing on.</p>
+
+    <p>Gutenberg went bankrupt after inventing the printing press. So did the bank that foreclosed on him. So did his apprentices. The technology worked — it was the distribution that didn't. Paper was expensive, he was in a small landlocked German town where only priests were allowed to read the Bible, and he sold seven copies. The printing press only began to transform the world when it reached Venice, where ten copies could go with each of thirty ship captains bound for thirty different cities. The network mattered as much as the technology.</p>
+
+    <p>The real revolution wasn't books — it was pamphlets. Faster, cheaper, harder to censor. Luther's 95 Theses traveled from Wittenberg to London in 17 days via pamphlet runners. The Inquisition, meanwhile, obsessively raided bookshops hunting for Lutherans and Calvinists, and ignored the Rousseau and Voltaire sitting on the same shelves — censors are always worried about the exact wrong thing in hindsight. And Petrarch, who survived the Black Death and tried to reform European leadership by educating princes in Roman classical virtue, ended up instead creating the conditions for the scientific revolution — not through the philosopher-kings he intended to produce, but through the libraries he inspired, which 200 years later gave medical students access to Lucretius, which led to germ theory, vaccines, and a cure for the plague that destroyed his generation.</p>
+
+    <p>This week, GitButler announced a <a href="https://news.ycombinator.com/item?id=47712656">$17M Series A</a> to build "what comes after Git." The comments have 682 entries, which for a version control announcement is extraordinary — it means developers have feelings about this. Git turned 21 years old this year. The infrastructure layer always looks eternal until it doesn't. The argument GitButler is making is that Git was designed for a world where humans write code sequentially; in a world where AI agents generate multiple parallel branches simultaneously, the version control model needs to change. Whether or not GitButler specifically is the answer, the question they're asking is right: the scaffolding of software development was built for a different era.</p>
+
+    <p>The Linux kernel community published official <a href="https://news.ycombinator.com/item?id=47721953">guidance on AI assistance for contributors</a> this week — a milestone that's easy to underestimate. The kernel is the most carefully reviewed large codebase in existence, maintained by some of the most skeptical engineers alive. That they're now writing formal guidance for AI-assisted contributions (rather than blanket bans) suggests the community has concluded that the question is not <em>whether</em> AI helps write kernel code, but <em>how to accept that gracefully</em>.</p>
+
+    <div class="takeaways">
+      <h3>What This All Means</h3>
+      <ol>
+        <li><strong>AI is now load-bearing in warfighting.</strong> The Iran strike demonstrated that you cannot phase out a model from active combat operations even with a presidential order. That's not a policy failure — it's a capability maturity statement. The tools are now embedded too deeply and too quickly for governance to keep pace.</li>
+        <li><strong>The helium crisis is an AI crisis.</strong> 33% of global helium supply is offline, with 14% permanently damaged and reconstruction in half-decade timescales. Memory chip production at SK Hynix and Samsung — the only companies producing HBM at scale for NVIDIA and others — is now supply-constrained. If you're in IT procurement, buy compute now. The cost envelope is ratcheting.</li>
+        <li><strong>OpenAI has been crowned, but it's not over.</strong> The circular $110B financing structure is designed to make OpenAI the gravitational center of American AI infrastructure. Anthropic is not dead — its financials are strong and its model is superior in many enterprise contexts — but its government procurement pipeline is being unwound and flowing to whoever the Pentagon considers cooperative.</li>
+        <li><strong>Design is joining development at the command line.</strong> Google Stitch, ReMotion, and Blender MCP together collapse the product-design-engineering triangle into a single prompt-and-iterate loop. MCP is becoming the USB plug for creative tooling. If your product isn't an MCP server, ask why.</li>
+        <li><strong>Every trusted tool is now a threat surface.</strong> The JSON Formatter, CPU-Z, and macOS Privacy settings all failed users this week through different mechanisms. The FBI/Signal story is the most important: end-to-end encryption doesn't protect the notification database. The threat model most people are operating on is wrong.</li>
+        <li><strong>The infrastructure change is never what it looks like.</strong> Petrarch tried to produce philosopher-kings and accidentally created the scientific revolution. Gutenberg went bankrupt while building civilization-altering technology. GitButler is asking a version-control question that is really a question about the structure of collaborative intelligence. The next layer of the stack is always being built by someone who thinks they're building something else.</li>
+        <li><strong>Artemis II came home.</strong> Four humans went around the Moon and came back alive. The fault-tolerant computer that made it possible was built with a rigor that the AI industry would recognize as alien. Both matter. We need both.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <span class="section-divider"></span>
+
+  <div class="links">
+    <h3>Sources</h3>
+    <div class="links-grid">
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47725583">Artemis II safely splashes down — NASA</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47704804">How NASA built Artemis II's fault-tolerant computer</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47724921">Sam Altman's response to Molotov cocktail incident</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47722096">Molotov cocktail is hurled at home of Sam Altman</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47719274">Helium is hard to replace — Construction Physics</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47716490">FBI used iPhone notification data to retrieve deleted Signal messages</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47712656">GitButler raises $17M to build what comes after Git</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47721953">AI assistance when contributing to the Linux kernel</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47719602">You can't trust macOS Privacy and Security settings</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47721946">JSON Formatter Chrome plugin closed and injecting adware</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47717847">CPU-Z and HWMonitor compromised</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47713495">ETH Zurich: high quality quantum swap gate using geometric phase</a></div>
+      <div class="link-item"><span class="src">HN</span><a href="https://news.ycombinator.com/item?id=47718812">Why do we tell ourselves scary stories about AI?</a></div>
+      <div class="link-item"><span class="src">YouTube</span><a href="https://www.youtube.com/@NateBJones">NateBJones — 48 Days: How Long Before the Helium Runs Out for AI Chips</a></div>
+      <div class="link-item"><span class="src">YouTube</span><a href="https://www.youtube.com/@NateBJones">NateBJones — Dario Made One Mistake, Sam Got $110 Billion</a></div>
+      <div class="link-item"><span class="src">YouTube</span><a href="https://www.youtube.com/@NateBJones">NateBJones — A Markdown File Replaced Your Most Expensive Design Meeting</a></div>
+      <div class="link-item"><span class="src">Latent Space</span><a href="https://www.latent.space/p/box">Every Agent Needs a Box — Aaron Levie</a></div>
+      <div class="link-item"><span class="src">Latent Space</span><a href="https://www.latent.space/p/ainews-ai-engineer-will-be-the-last">AI Engineer will be the LAST job</a></div>
+      <div class="link-item"><span class="src">Latent Space</span><a href="https://www.latent.space/p/ainews-truth-in-the-time-of-artifice">Truth in the Time of Artifice</a></div>
+      <div class="link-item"><span class="src">Dwarkesh</span><a href="https://www.dwarkesh.com/p/notes-on-space-gpus">Notes on Space GPUs</a></div>
+      <div class="link-item"><span class="src">Dwarkesh</span><a href="https://www.dwarkesh.com/p/ada-palmer">Ada Palmer — How Cosplaying Ancient Rome Led to the Renaissance</a></div>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
