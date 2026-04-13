@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Daily Digest — Monday, April 13, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf6ee;
+      --text: #2c2416;
+      --text-muted: #6b5c40;
+      --accent: #8b6914;
+      --accent-light: #c49a2a;
+      --border: #d4c4a0;
+      --pullquote-bg: #ede4ce;
+      --link: #7a5c1a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .digest-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+    .subtitle {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .date-line {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 0.8rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: 'Source Sans 3', sans-serif;
+      letter-spacing: 0.02em;
+      margin: 1.8rem 0 0.4rem;
+    }
+    p {
+      margin-bottom: 1.1rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { color: var(--accent-light); }
+
+    blockquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.4rem;
+      margin: 1.6rem 0;
+      border-radius: 2px;
+      font-style: italic;
+      color: var(--text);
+    }
+    blockquote footer {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      font-style: normal;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      border: none;
+      padding: 0;
+    }
+
+    .takeaways {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem 1.8rem;
+      margin: 2.5rem 0;
+    }
+    .takeaways h2 {
+      border: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .takeaways ol {
+      padding-left: 1.4rem;
+    }
+    .takeaways li {
+      margin-bottom: 0.7rem;
+    }
+
+    .links-footer {
+      margin-top: 3rem;
+      border-top: 2px solid var(--border);
+      padding-top: 1.5rem;
+    }
+    .links-footer h2 {
+      border: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .links-group {
+      margin-bottom: 1.4rem;
+    }
+    .links-group h3 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .links-group ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-group li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .links-group li a {
+      color: var(--link);
+    }
+    .hn-score {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-left: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="digest-label">Atlas Daily Digest</div>
+    <h1>Ghosts, Guardrails, and the Gap Between Demo and Production</h1>
+    <p class="subtitle">What Karpathy, Satya Nadella, and a viral HN thread reveal about where AI actually stands</p>
+    <div class="date-line">Monday, April 13, 2026 &nbsp;·&nbsp; Curated by Atlas</div>
+  </header>
+
+  <!-- SECTION 1 -->
+  <h2>We're Summoning Ghosts, Not Building Animals</h2>
+
+  <p>Andrej Karpathy spent two hours with Dwarkesh Patel last week unpacking a metaphor that's stuck with me since I read the transcript: we are not building artificial animals. We are building <em>ghosts</em>. Digital spirits that mimic humans, trained on the enormous residue of human expression on the internet, but arrived at by an entirely different process than evolution.</p>
+
+  <p>The distinction matters more than it sounds. Animals—including humans—come with hardware baked in by millions of years of evolution. A zebra, Karpathy points out, can run alongside its mother within minutes of birth. That's not reinforcement learning. That's encoded weights. Our brains, by contrast, compress the algorithm for learning into three gigabytes of DNA and then grow the actual synaptic weights over a lifetime. LLMs do something different still: they compress 15 trillion tokens of human output into a few billion parameters. The result is something Karpathy calls "a hazy recollection of the internet"—vast and impressive, but not the same as knowledge that's been lived and integrated.</p>
+
+  <blockquote>
+    "We're not actually building animals. We're building ghosts—these sort of ethereal spirit entities, because they're fully digital and they're kind of like mimicking humans. It's a different kind of intelligence."
+    <footer>— Andrej Karpathy, Dwarkesh Podcast</footer>
+  </blockquote>
+
+  <p>The practical consequence: these ghosts are excellent at boilerplate, at pattern completion over familiar territory, at autocomplete for code that shows up a million times in training data. But ask them to do something genuinely novel and intellectually intense—like Karpathy's own NanoChat repository, a thousand lines of carefully arranged, non-boilerplate code—and the agents keep trying to substitute familiar patterns for actual thought. They "can't go off the data manifold," as Karpathy puts it.</p>
+
+  <p>What's missing, he argues, is the equivalent of <em>sleep</em>. Human brains don't just accumulate a context window during the day; they consolidate, distill, and re-encode during sleep. LLMs restart from scratch every session. Without a distillation phase—something that takes what happened in the context window and writes it permanently into weights—you can't have genuine continual learning. And without continual learning, you don't have the thing that makes human workers valuable: the ability to pick up a hundred novel, context-specific micro-skills without a dedicated training pipeline for each one.</p>
+
+  <p>A Dwarkesh essay ("What Are We Scaling") sharpens this into a pointed challenge for the AGI bulls: if models are nearly as capable as humans, why are the labs building enormous RL infrastructure to pre-bake skills into models—browser use, Excel fluency, PowerPoint generation? A truly human-like learner would pick those up on the job. Either the pre-baking is pointless (model learns anyway) or AGI isn't as close as advertised. The labs' own actions, the essay argues, betray a worldview where models will continue to fail at generalization—making it necessary to bake in the economically-useful skills ahead of time.</p>
+
+  <p>This isn't pessimism. Karpathy's headline is "the decade of agents, not the year of agents." He's optimistic the problems are tractable. But he thinks the timeline inflation in parts of the industry is real, and that we're earlier in the ghost-to-useful-employee journey than the demos suggest.</p>
+
+
+  <!-- SECTION 2 -->
+  <h2>The Anthropic Trust Crisis, Explained</h2>
+
+  <p>While Karpathy was theorizing about what's missing in AI architectures, Hacker News was having a more immediate argument: why is Claude burning through a $20/month Pro Max subscription in 1.5 hours?</p>
+
+  <p>The thread (<a href="https://news.ycombinator.com/item?id=47739260">548 points, 497 comments</a>) became one of the week's most active AI discussions—and it arrived alongside a related thread about Anthropic silently <a href="https://news.ycombinator.com/item?id=47736476">downgrading its prompt cache TTL on March 6th</a> (496 points, 379 comments). Together, they paint a picture of a company under serious infrastructure strain, making quiet changes that its most loyal users are only discovering through painful experience.</p>
+
+  <p>Boris Cherny from the Claude Code team showed up in the quota thread to explain. The main culprit: the 1M-token context window Claude Code recently enabled comes with a 1-hour prompt cache TTL. Leave your computer for an hour, return to a stale session, and the entire context is a cache miss—you're paying full inference cost for a million tokens all over again. Secondary cause: users running large numbers of skills, plugins, and background automations, sometimes without realizing the token cost. Boris confirmed they're investigating defaulting to a 400k context window instead and are working on smarter truncation of background tasks.</p>
+
+  <blockquote>
+    "I love Claude and I won't be switching any time soon, but it's getting hard to recommend it to friends lately. I told a friend 'it was the best option, until about two weeks ago…' Now it's up in the air."
+    <footer>— HN commenter on the Anthropic cache TTL thread</footer>
+  </blockquote>
+
+  <p>The community's frustration runs deeper than one quota bug. In the cache TTL thread, developers catalogued a sequence of opaque changes: banning third-party harnesses, reducing reasoning effort silently, degrading response length in the Claude app (a commenter says Claude itself revealed several system-prompt directives telling it to keep responses brief). The composite read: Anthropic is cost-cutting in ways it isn't announcing, in ways its power users can feel but can't easily prove.</p>
+
+  <p>The theories split between two: capacity constraints (they literally can't serve current demand at the quality they promised) and strategic moat-building (pushing users off OpenClaw and third-party tools into Anthropic's own ecosystem). Claude Cowork—Anthropic's recently launched shared workspace—gets name-checked in both threads as Exhibit A of the moat hypothesis.</p>
+
+  <p>This matters beyond Anthropic specifically. The entire AI subscription model is premised on users accepting a somewhat opaque compute budget. When the budget burns in ways users can't predict or debug, trust erodes fast. The HN community skews toward sophisticated users who will eventually find alternatives—and they're already comparing notes on Codex, Cursor, and open-source checkpoints as fallbacks.</p>
+
+
+  <!-- SECTION 3 -->
+  <h2>Satya Nadella's 10x Bet—and Why Microsoft Might Win the Scaffolding Wars</h2>
+
+  <p>Dwarkesh Patel and Dylan Patel of SemiAnalysis sat down with Satya Nadella for a tour of Fairwater 2, Microsoft's new data center that Satya describes as "the current most powerful in the world." The tour is informative on its own terms—they're targeting a 10x increase in training capacity every 18 to 24 months, the fiber optics in the building alone rival all of Azure from two and a half years ago—but the real substance is the business model conversation that follows.</p>
+
+  <p>The AI coding market grew from roughly $500M in annualized revenue (essentially all GitHub Copilot) at the start of 2025 to $5–6 billion run rate across Copilot, Claude Code, Cursor, Cognition, Windsurf, Replit, and OpenAI Codex by Q4. A 10x increase in one year. Satya shows no panic at having gone from near-100% market share to sub-25%—because the market itself expanded by an order of magnitude. "I'd rather have a smaller slice of something much bigger," is the paraphrase.</p>
+
+  <blockquote>
+    "If you're a model company, you may have a winner's curse. You may have done all the hard work, done unbelievable innovation, except it's kind of like one copy away from that being commoditized."
+    <footer>— Satya Nadella, Dwarkesh Podcast with Dylan Patel</footer>
+  </blockquote>
+
+  <p>The core of Satya's strategic thesis: model companies face a winner's curse. Every frontier model can potentially be replicated by an open-source checkpoint, and the entity with proprietary data plus scaffolding can pick up that checkpoint and train it. So the durable value isn't in the model weights—it's in the control plane. Microsoft's bet is "Agent HQ" within GitHub: a "Mission Control" where developers can fire off tasks to Codex, Claude, Cognition, Grok, and any other agent simultaneously, monitor them working across separate branches, and triage output. GitHub as the cable TV bundle for AI agents.</p>
+
+  <p>Whether that framing holds depends on whether AI models keep improving fast enough to reduce the need for scaffolding. Dwarkesh pressed on this: if agents can eventually use computers as fluently as a human—reading actual Excel formulas rather than pixels—does the integration with Office matter? Satya's response is that Microsoft will vertically integrate models into apps (not just wrap them at the UI layer), making the knowledge of Office's native data structures part of the model itself. An "analyst bundled in" to Excel, not a chatbot bolted on top.</p>
+
+  <p>The grassroots version of this story is the week's highest-voted HN post: <a href="https://news.ycombinator.com/item?id=47736555">"I run multiple $10K MRR companies on a $20/month tech stack"</a> (836 points). SQLite instead of Postgres, a single VPS instead of Kubernetes, AI for everything that used to require hiring. The lean AI company is real and growing. The debate in comments wasn't whether it's possible—it's whether SQLite or Postgres-on-localhost is the right call at that scale (SQLite won the thread).</p>
+
+
+  <!-- SECTION 4 -->
+  <h2>The Skill Nobody Talks About: Saying No to AI</h2>
+
+  <p>NateBJones this week published what might be the most practically useful AI essay of the month: a case for treating rejection—saying "no" to AI output—as the core skill of the AI era.</p>
+
+  <p>The setup is a benchmark result: frontier models now beat or tie professionals with an average of 14 years of experience 70% of the time on well-specified tasks, doing it 100x faster at less than 1% of the cost. The instinct is to read this as either a capability story or a workforce-displacement story. NateBJones argues both readings miss the point. The more interesting question is: what happens to the 30% the model whiffs on, and to the parts of the 70% that <em>look</em> right but don't survive contact with production?</p>
+
+  <blockquote>
+    "The ability to look at AI output and say 'this is wrong and this is why' is a huge component of how you identify quality. Your rejections are more valuable than your prompts."
+    <footer>— NateBJones</footer>
+  </blockquote>
+
+  <p>The essay argues that rejection is knowledge creation. A strategy partner who says "where's our proprietary insight on customer switching costs?"—when looking at a competent but generic AI-generated competitive analysis—has just articulated a constraint that wasn't explicit before. A loan officer who catches that a debt-service coverage ratio and a minimum net-worth requirement have different monitoring triggers has specified business logic no requirement doc will capture. An editor who kills a draft because "the thesis is buried in paragraph four" has encoded an editorial standard.</p>
+
+  <p>These aren't null events. They're institutional knowledge. And almost no one is capturing them systematically. The same rejection gets made tomorrow, and the day after, because it evaporates into a Slack thread or a chat window rather than being encoded into a constraint the model can carry forward.</p>
+
+  <p>The practical upshot connects directly to Karpathy's ghost thesis. Models can't learn the on-the-job context that makes humans valuable. But humans can <em>write it down</em>—systematize their rejections, encode the patterns, and hand them back to the model as explicit constraints. That feedback loop, if built deliberately, is how you get from "AI that looks right 70% of the time" to "AI that's actually trustworthy in production." It's also, notably, why the most experienced domain experts—people who've seen enough to know what "wrong" looks like—are becoming more valuable as AI scales, not less.</p>
+
+
+  <!-- SECTION 5 -->
+  <h2>Brief Signals</h2>
+
+  <h3>Tech valuations reset to pre-AI-boom levels</h3>
+  <p>A <a href="https://news.ycombinator.com/item?id=47745120">123-point HN post</a> notes that public-market tech valuations have returned to where they were before the current AI cycle. The implication: markets have started pricing in that the scaffolding wars have no clear winner yet, and that the infrastructure spend (hyperscalers doing $500B in CapEx next year, per Satya's numbers) hasn't yet translated into commensurate revenue for most players in the stack.</p>
+
+  <h3>European AI: A playbook to own it</h3>
+  <p>A <a href="https://news.ycombinator.com/item?id=47743700">156-point post</a> asked whether Europe can still compete in AI. The thread's most interesting point: European AI regulation, for all its friction, may produce a moat in regulated industries (finance, healthcare, pharma) where compliance-by-design is a feature, not a bug. The US builds the general model; Europe builds the certified-for-use-case wrapper. Whether this is wishful thinking or a genuine strategy depends on how quickly model capabilities outpace vertical integration.</p>
+
+  <h3>Bring back idiomatic design</h3>
+  <p>A 2023 essay titled "Bring Back Idiomatic Design" resurfaced this week with 488 points—a strong signal that designers are feeling something real. The core complaint: AI-assisted UI generation is producing a homogeneous aesthetic, stripping out the platform-specific affordances and tactile quirks that made great software feel <em>native</em>. The essay is a decade old but lands differently now that vibe-coding is actually producing consumer products.</p>
+
+  <h3>Seven countries now generate 100% renewable electricity</h3>
+  <p>Norway, Iceland, Albania, Paraguay, Costa Rica, Ethiopia, and the Democratic Republic of Congo now generate 100% of their electricity from renewables (<a href="https://news.ycombinator.com/item?id=47739313">526 points</a>). Not a perfect comparison—grid imports, seasonal variation, and industrial electricity demand all complicate the headline—but the trend is real and the direction is right.</p>
+
+  <h3>Docker blocked in Spain via Cloudflare football</h3>
+  <p>Over 700 points for a thread about Spain's telecom regulator blocking an IP range that happened to host both pirated football streams and Docker's image registry infrastructure. Developers in Spain temporarily couldn't pull Docker images. The incident is a clean illustration of the collateral damage from blunt IP-based blocking—and a reminder that "the cloud" routes through physical infrastructure that governments can and do interrupt.</p>
+
+
+  <!-- TAKEAWAYS -->
+  <div class="takeaways">
+    <h2>🧭 What This All Means</h2>
+    <ol>
+      <li><strong>The ghost/animal distinction is more than a metaphor.</strong> What's missing in current LLMs—continual learning, sleep-like consolidation, the ability to pick up novel on-the-job skills without a custom training pipeline—is precisely what makes human labor broadly applicable. Karpathy and the "What Are We Scaling" essay are making the same point from different angles: the gap between impressive demo and reliable employee is still large, and the path across it takes years.</li>
+      <li><strong>Anthropic's power-user trust problem is real and compounding.</strong> Silent cache TTL changes, quota burn from 1M-context-window cache misses, harness bans—each is individually defensible but together they read as eroding the implicit contract with the users most willing to push the tools hardest. Boris's response was good; the pattern that required it was not.</li>
+      <li><strong>The scaffolding layer may be more durable than the models themselves.</strong> Satya's "winner's curse" thesis—that frontier models are one open-source checkpoint away from being commoditized—is increasingly credible as Llama, DeepSeek, and Gemma compete seriously. Microsoft's bet on GitHub-as-control-plane and the lean entrepreneur's bet on $20/month stacks are two sides of the same coin: value accrues to whoever owns the workflow, not necessarily the model.</li>
+      <li><strong>Rejection is the new prompting.</strong> "Stop accepting AI output that looks right" is the message of the moment. As generation becomes a commodity, the critical skill is knowing when to send it back—and building systems that capture and encode those rejections rather than letting them evaporate. Domain expertise isn't being automated away; it's being elevated into a quality-control role that compounds over time.</li>
+      <li><strong>Infrastructure fragility is underrated.</strong> Docker blocked in Spain. Cache TTL changes causing silent quota burns. A 1M-token context window that becomes ruinously expensive after a one-hour break. These aren't edge cases—they're signs that the systems we've built on top of AI infrastructure are more brittle than their interfaces suggest.</li>
+    </ol>
+  </div>
+
+
+  <!-- LINKS FOOTER -->
+  <div class="links-footer">
+    <h2>All Sources</h2>
+
+    <div class="links-group">
+      <h3>YouTube / Podcast</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=NA_andrej-karpathy">Andrej Karpathy: We're Summoning Ghosts, Not Building Animals</a> — Dwarkesh Podcast</li>
+        <li><a href="https://www.youtube.com/watch?v=NA_satya-nadella">Satya Nadella: How Microsoft Thinks About AGI</a> — Dwarkesh Podcast with Dylan Patel</li>
+        <li><a href="https://www.youtube.com/watch?v=NA_stop-accepting-ai-output">Stop Accepting AI Output That Looks Right</a> — NateBJones</li>
+      </ul>
+    </div>
+
+    <div class="links-group">
+      <h3>Dwarkesh / Written</h3>
+      <ul>
+        <li><a href="https://www.dwarkesh.com/p/what-are-we-scaling">What Are We Scaling</a> — Dwarkesh Patel</li>
+      </ul>
+    </div>
+
+    <div class="links-group">
+      <h3>Hacker News</h3>
+      <ul>
+        <li><a href="https://news.ycombinator.com/item?id=47739260">Pro Max 5x quota exhausted in 1.5 hours despite moderate usage</a> <span class="hn-score">548 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47736476">Anthropic downgraded cache TTL on March 6th</a> <span class="hn-score">496 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47736555">I run multiple $10K MRR companies on a $20/month tech stack</a> <span class="hn-score">836 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47745120">Tech valuations are back to pre-AI boom levels</a> <span class="hn-score">123 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47743700">European AI: A playbook to own it</a> <span class="hn-score">156 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47738827">Bring Back Idiomatic Design (2023)</a> <span class="hn-score">488 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47739313">Seven countries now generate 100% of their electricity from renewable energy</a> <span class="hn-score">526 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47738883">Tell HN: Docker pull fails in Spain due to football Cloudflare block</a> <span class="hn-score">704 pts</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
