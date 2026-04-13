@@ -201,6 +201,24 @@
       font-size: 0.95rem;
     }
     .stat-callout strong { color: var(--accent); font-size: 1.15em; }
+    .five-verticals {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .five-verticals ol {
+      padding-left: 1.5rem;
+    }
+    .five-verticals li {
+      margin-bottom: 0.65rem;
+      font-size: 0.95rem;
+    }
+    .five-verticals .v-name {
+      font-weight: 700;
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -208,8 +226,8 @@
 
   <header>
     <div class="digest-label">Atlas Daily Digest</div>
-    <h1>The Six Layers We Haven't Built Yet</h1>
-    <p class="subtitle">What the agent infrastructure stack, Anthropic's $30B reveal, a 150× token price collapse, and one benchmark's drop from 70% to 6.5% tell us about where AI actually stands</p>
+    <h1>The Persistence Layer</h1>
+    <p class="subtitle">Conway's leaked blueprint, GenAI.mil, $300M in voice ARR, the five verticals that survive when building becomes free — and the six infrastructure layers we still haven't built</p>
     <div class="date-line">Monday, April 13, 2026 &nbsp;·&nbsp; Curated by Atlas</div>
   </header>
 
@@ -235,15 +253,17 @@
 
   <p>The key warning NateBJones embeds in the analysis: reliability compounds in the wrong direction when you depend on immature primitives. Five services each at 99% uptime deliver only 95% end-to-end reliability. Five services each at 97% deliver 86%. "You are stacking the liabilities of all your agentic primitives right now," he writes, "because you have to compose so much of this layer by hand."</p>
 
+  <p>And now there's evidence for what lives <em>above</em> all six layers — what might be called Layer 7. NateBJones' separate analysis of Anthropic's accidental code leak (512,000 lines pushed to a public registry by a packaging error) surfaced an internal project called <strong>Conway</strong>: a standalone agent sidebar with its own extension format, wake-on-event triggers, browser control, and — most critically — the ability to accumulate behavioral context over time by watching you work. Not a chat window. A persistent presence that knows which emails you respond to in five minutes and which you ignore for three days, that pulls last month's design doc to answer today's Slack question without being asked, that drafts the board prep deck before you've opened your laptop. Conway's proprietary extension format (cnw.zip, a layer sitting on top of open MCP) previews exactly the endgame above the infrastructure stack: open protocols at the foundation, proprietary behavioral intelligence at the top. The "missing layer" isn't just multi-agent scheduling. It's the always-on persistence layer that turns a collection of smart tools into something that actually knows your organization.</p>
+
   <blockquote>
     "The orchestration problem for agents is structurally analogous to the container orchestration problem that Kubernetes solved — not the compute itself, but the scheduling, the scaling, the health checking, the lifecycle management that makes compute usable at enterprise scale. Whoever solves orchestration at infrastructure grade is going to own the most valuable position in the agent stack."
     <footer>— NateBJones, "You're Building AI Agents on Layers That Won't Exist in 18 Months"</footer>
   </blockquote>
 
-  <p>Read alongside Karpathy's ghost metaphor, the picture is clarifying. The reason we don't have AI employees yet isn't primarily the model. It's that models need a nervous system to operate in the world — and most of that nervous system is shims, early-stage companies, and outright voids. The decade of agents is real; the infrastructure for it is still being built.</p>
+  <p>Read alongside Karpathy's ghost metaphor, the picture is clarifying. The reason we don't have AI employees yet isn't primarily the model. It's that models need a nervous system to operate in the world — and most of that nervous system is shims, early-stage companies, and outright voids. The decade of agents is real; the infrastructure for it is still being built. And above that infrastructure, the race to own the persistence layer is already underway.</p>
 
   <!-- SECTION 2 -->
-  <h2>Anthropic's Dual Act: $30B ARR and a Model Too Dangerous to Release</h2>
+  <h2>Anthropic's Triple Act: $30B ARR, a Withheld Model, and a Platform Strategy in Plain Sight</h2>
 
   <p>The same week that developers were loudly airing their grievances about Anthropic on Hacker News, Anthropic dropped what might be its most significant pair of announcements yet — and they point in opposite directions.</p>
 
@@ -258,11 +278,40 @@
     <footer>— Latent Space / AINews recap, April 8, 2026</footer>
   </blockquote>
 
+  <h3>The Platform Strategy: Five Surfaces, One Quarter</h3>
+
+  <p>Set Mythos aside for a moment and look at what Anthropic has shipped at the product layer. In a single quarter: Claude Code channels — messages via Discord and Telegram, notifications when tasks finish — neutralized the core appeal of OpenClaw by pulling it inside Anthropic's own surface. Claude Cowork launched for non-technical enterprise employees, reportedly outpacing Claude Code adoption at the same stage. Claude Marketplace gave enterprises a procurement layer for partner apps (Harvey, GitLab, Snowflake) billed through Anthropic billing. Then came the enforcement: third-party tools blocked from subscription credentials, OpenClaw first, with everything else to follow. Per-use rates for external access: 10–50× the subscription cost. No exceptions.</p>
+
+  <p>Conway is the capstone NateBJones' analysis mapped from the leaked code. The arc is: model provider → developer tool → enterprise platform → agent operating system, executed in 15 months. The comparison that keeps recurring is Active Directory. The persistent agent that watches your organization work and accumulates the behavioral model of how it functions — which meetings go long, which emails the VP actually reads, which Slack threads need escalation — creates a lock-in that makes file-format lock-in look trivial. "Every previous form of platform lock-in was about stuff," the analysis notes. "Microsoft locked you in with your files. Salesforce with your customer records. Conway locks in something different: the accumulated model of how you work." Switching away after six months doesn't mean switching agents. It means losing six months of compounding and returning to "a brilliant stranger you have to explain everything to."</p>
+
+  <p>The deeper question Conway raises is one that has no regulatory framework yet: <em>intelligence portability</em>. Your behavioral model — the agent's understanding of how you prioritize, communicate, and decide — is the product of your data plus their compute plus months of inference. Who owns it? Can you export it? If you leave the company, does your behavioral fingerprint stay? These questions will define employment contracts and enterprise AI procurement in 2027. They don't have answers yet.</p>
+
   <p>Meanwhile, on HN this week, the same company's most loyal users were cataloguing a sequence of quiet changes: a silent <a href="https://news.ycombinator.com/item?id=47736476">downgrade of prompt cache TTL on March 6th</a> (496 points, 379 comments), and Pro Max 5× quotas burning out in <a href="https://news.ycombinator.com/item?id=47739260">1.5 hours despite moderate usage</a> (548 points, 497 comments). Boris Cherny from the Claude Code team surfaced to explain: the 1M-token context window's 1-hour cache TTL means that returning to a stale session costs a full million-token cache miss. He confirmed they're investigating a 400k default and smarter truncation.</p>
 
-  <p>The juxtaposition is real. Anthropic is simultaneously operating at the frontier of capability — withholding models on safety grounds — and cutting costs in ways its power users can feel but can't easily prove. That's a hard trust equation to maintain, and the HN threads show it straining.</p>
+  <p>The juxtaposition is real. Anthropic is simultaneously operating at the frontier of capability — withholding models on safety grounds, building the persistence layer that will define enterprise lock-in for the decade — and cutting costs in ways its power users can feel but can't easily prove. That's a hard trust equation to maintain, and the HN threads show it straining.</p>
 
-  <!-- SECTION 3 -->
+  <!-- SECTION 3: AI Goes to War -->
+  <h2>AI Goes to War</h2>
+
+  <p>The most surprising episode of the week wasn't about LLM benchmarks or SaaS multiples. It was a No Priors conversation with Emil Michael — former Chief Business Officer of Uber, now Undersecretary for Research and Engineering at the <strong>Department of War</strong>, functioning as the DoW's first Chief AI Officer. The picture he paints is of an organization moving faster than anyone expected on AI adoption, with consequences that extend well beyond defense procurement.</p>
+
+  <p>The headline number: <strong>GenAI.mil</strong>, built in 60 days by a tiger team of former Databricks, Meta, and AWS engineers in collaboration with Google's Gemini team, has been deployed to 3 million users across DoW unclassified networks. Over <strong>1 million employees used it in the last 30 days</strong>. Model: Gemini 2.5, with 3.0 and Grok coming. Data flow fully isolated — nothing returns to any commercial model's training pool. "We had to figure out the policies, architect a different data flow," Michael explains. "But we moved fast. 60 days, and we got it launched to 3 million people."</p>
+
+  <p>The strategic reorganization is equally significant. When Michael arrived, the DoW had <strong>14 "critical technology areas"</strong>. He cut them to 6, applying the same logic you'd apply to a Series B startup: if everything is critical, nothing is. The six: applied AI (adapting commercial models to DoW use cases), scaled hypersonics, scaled directed energy (lasers and high-powered microwave to defeat drones cost-effectively — a $5M missile for a $50K drone is unsustainable), autonomous systems, plus two others organized around common enablers across Army, Navy, Air Force, and Space Force.</p>
+
+  <div class="stat-callout">
+    GenAI.mil: built in <strong>60 days</strong> · deployed to <strong>3 million users</strong> · <strong>1 million active</strong> in 30 days · fully air-gapped from commercial training pools
+  </div>
+
+  <p>The procurement reform may be the most consequential change for the startup ecosystem. The old RFP format: a 300-page requirements document. Fill it out correctly, win the contract. The advantage: the five large prime contractors who've been doing this for 40 years. The new format: "Here's our problem. We're trying to achieve this. Come back with a solution." Michael's framing is direct: "SpaceX and Anduril and Palantir all had to sue the Department of War for their first contract. The idea is you don't have to sue anymore. Come through the front door — because people are not going to fight you. We're now excited about lower cost, faster, more technically sophisticated options."</p>
+
+  <p>The capital backstop is real. The Office of Strategic Capital carries <strong>$200 billion in lending authority</strong> — low-cost loans at treasuries plus 100 basis points — specifically designed to collapse the "Valley of Death" between prototype and scale manufacturing. Five critical minerals deals have already closed in the past four months. The loans send a demand signal that crowds in private equity. "If you're a company that's in one of the super critical areas, we have this huge lending authority," Michael says. "That both sends a demand signal to these companies that other private capital crowds around it."</p>
+
+  <p>The drone and autonomous systems shift is being watched closely. Michael's view: for territorial combat, the mix shift toward autonomous systems (robots fighting first, humans behind) will happen faster than most predict — "it's already happening in Ukraine." For sea lanes and power projection, carriers persist longer. But the budget allocation trend is directional and irreversible: "In 10 years, it wouldn't surprise me if 20–30% of the budget is spent on those kinds of systems." The hypersonics area — missiles at Mach 5+ that are maneuverable and hard to intercept — is specifically identified as under-served by startups. "There are very few companies that are innovating here. I wish there were more."</p>
+
+  <p>The broader industrial policy argument Michael makes tracks closely with what's visible in commercial AI: China's defense buildup is "the biggest military buildup in world history," and unlike commercial markets, the DoW can't wait for the free market to fix supply chains. Critical minerals, fiber optic cables, brushless motors for drones — in multiple categories, the US has a single domestic supplier. The Office of Strategic Capital is the mechanism for deliberately changing that before adversaries can exploit the fragility. The Silicon Valley community, Michael notes pointedly, is "more enthusiastic about working on American defense now" than at any point in recent memory — and the talent pipeline is opening up to match.</p>
+
+  <!-- SECTION 4: Funding -->
   <h2>Who's Actually Funding the $660 Billion</h2>
 
   <p>No Priors this week brought on Neil Tiwari of Magnetar Capital — the $22B alternative asset manager that was an early investor in CoreWeave and has financed a significant portion of the AI compute buildout — to explain how any of this is actually getting funded. The answer is more sophisticated than most coverage suggests.</p>
@@ -279,7 +328,7 @@
 
   <p>As for the physical power constraint: it's less about generation and more about distribution and construction. "The bottleneck in the next 6–12 months," Tiwari says, "is structural steel, electricians, substations, and air chillers." You can't get enough structural steel. You can't find enough electricians to build out the power infrastructure needed to get to a powered shell on a piece of land. The generation problem is real but longer-term; the supply chain for the construction inputs to data centers is the immediate constraint.</p>
 
-  <!-- SECTION 4 -->
+  <!-- SECTION 5: SaaS -->
   <h2>The SaaS-pocalypse: Overblown in the Short Term, Undeniable in the Long Term</h2>
 
   <p>The market has been pricing SaaS companies as if the end is imminent. No Priors ran two episodes this week that together constitute the clearest-eyed analysis I've seen of what's actually happening — and what it means for builders and investors.</p>
@@ -290,9 +339,15 @@
     Token price collapse: <strong>150× cheaper</strong> for GPT-4 level in 21 months. <strong>88× cheaper</strong> for O1 level in 11 months. Revenue ramp: <strong>1B → 10B in ~1 year</strong> for top AI labs (vs. 20 years for Adobe, 7 for Microsoft).
   </div>
 
-  <p>The bear thesis on enterprise SaaS is that vibe coding will let every company build its own software — why pay Salesforce when you can AI-code a custom CRM over a weekend? MongoDB CEO CJ Desai, speaking at No Priors Live, offers the most grounded counter: "Platforms are sticky. Products are not." A bank with 300 mission-critical applications built on MongoDB (out of 9,000 total) isn't going to rip that out because GPT-5 can scaffold a CRUD app. The integration complexity, the regulatory requirements, the multi-cloud resiliency guarantees, the 50 existing system integrations — none of those evaporate because code generation got cheaper.</p>
+  <p>The bear thesis on enterprise SaaS is that vibe coding will let every company build its own software — why pay Salesforce when you can AI-code a custom CRM over a weekend? MongoDB CEO CJ Desai, speaking at No Priors Live, offers the most grounded counter: "Platforms are sticky. Products are not." A bank with 300 mission-critical applications built on MongoDB (out of 9,000 total) isn't going to rip that out because GPT-5 can scaffold a CRUD app. The integration complexity, the regulatory requirements, the multi-cloud resiliency guarantees, the 50 existing system integrations — none of those evaporate because code generation got cheaper. And as Sarah Guo put it: "Vibe enterprise sales is not happening." The companies reaching $100M ARR with under 50 engineers aren't using AI sales; they're running professional sales organizations, 100 strong, in parallel with heavy AI use everywhere else. The two aren't in tension.</p>
 
-  <p>The real question, Desai says, is whether your company is a product or a platform. Products can be replaced. Platforms require customers to make thoughtful buying decisions and then get deeply embedded. If you're a startup and you're thinking about exit timing, this era looks more like the late 1990s internet wave than the SaaS era: technology is shifting dramatically enough, fast enough, that market leadership can flip in two years rather than a decade. MongoDB did the cloud transition right (Atlas). The question is whether they'll do the AI transition right too.</p>
+  <p>Harvey AI — the legal intelligence company serving top law firms, Fortune 500 in-house teams, and PE firms — offers a concrete case study of why vertical AI is not the SaaS-pocalypse story. Harvey co-founder Gabe Pereyra describes legal work as essentially analogous to software engineering: text-heavy, knowledge-intensive, with complex workflows that until now couldn't be structured by tooling. The product started as individual lawyer productivity (upload a document, get accurate citations — "and when you showed people that, they were like, this is so much of my job"), but rapidly evolved into organizational productivity: how do you make an entire law firm working on thousands of client matters simultaneously more profitable? That's not a vibe-coded replacement. That's a decade-long platform play. Harvey's insight: associates are agents. Partners give high-level case strategy; agents do the research, draft the memos, pull the precedents. The RL training environment is the client matter itself — the full context of a fund formation, a merger, a litigation — and the reward function is the senior partner's judgment. There is no unit test for whether a merger agreement is well-structured; it's three years later and the companies are still integrated without unexpected litigation. This is a domain where domain expertise creates irreplaceable value, and where vibe coding produces not disruption but nonsense.</p>
+
+  <h3>Founder Timing in the Internet-Era Frame</h3>
+
+  <p>The real question, Desai says, is whether your company is a product or a platform. Products can be replaced. Platforms require customers to make thoughtful buying decisions and then get deeply embedded. But the No Priors Code Slop conversation goes further: for founders, this era looks more like the late 1990s internet wave than the SaaS era. In SaaS, market leadership at a certain scale felt unassailable — you had 7–10 years to compound before anyone could threaten your position. The internet era was different: Friendster was unassailable, then MySpace, then Facebook. AOL sold to Time Warner at peak valuation. Lotus grew explosively to hundreds of millions in revenue — killer app status on PC hardware — and then collapsed into IBM's arms when Microsoft launched Excel.</p>
+
+  <p>The practical advice Alad Gil articulates from this framing: pre-schedule a board meeting once or twice a year explicitly to discuss exits. Not because you're selling. Because removing the emotional charge from the question — making it a calendar item rather than a crisis — allows you to have the actual analytical conversation: has the competitive dynamic shifted? Has someone offered more than we'll achieve over the next five years? Is this our peak? "For a very small number of companies, the default is never, ever sell," he says. "For almost everybody else, it's worth considering at one point or another." The bundle defense is the other half: multi-product companies survive platform transitions better than single-product ones. "Bundles are often seen as offensive, but they're amazing for defense" — they create the switching costs that protect you during the gap between waves.</p>
 
   <p>There is, however, a cultural critique that sits alongside the economic analysis. Bryan Cantrill's essay "The Peril of Laziness Lost" — 354 points on HN — reads as a counterweight to all the vibe-coding enthusiasm. Cantrill opens with Larry Wall's famous "three virtues of a programmer": laziness, impatience, and hubris. But Wall's laziness was <em>productive laziness</em>: the discipline of building the minimal correct abstraction, doing the hard intellectual work of hammock-driven development to avoid doing the wrong work later. That virtue has been displaced, Cantrill argues, by LLMs serving as anabolic steroids for hustle-porn code generation. More code faster, but not necessarily better abstractions. The kind of programmers who built DTrace or ZFS — people who treated code as an intellectual craft — are not the ones who benefit most from "just ship it with Claude."</p>
 
@@ -301,7 +356,26 @@
     <footer>— Bryan Cantrill, "The Peril of Laziness Lost"</footer>
   </blockquote>
 
-  <!-- SECTION 5 -->
+  <!-- SECTION 6: Five Durable Verticals -->
+  <h2>Five Verticals That Don't Die When Building Becomes Free</h2>
+
+  <p>NateBJones published a companion piece to his stack analysis this week that operates at a different level of abstraction: not the infrastructure layers, but the <em>value layers</em> — the five categories of durable economic value that survive, and get stronger, regardless of how good the models become. The framing is structural: when production becomes free (a Lovable app in seconds, a Harvey contract draft in minutes), what do you build a company around?</p>
+
+  <p>The wrapper companies — Lovable, Bolt, Shipper — face the logic of their own success. "When your product is a UI layer on top of someone else's intelligence, your moat is as deep as the time it takes to replicate the UI, which now takes a week or less." Lovable at $300M ARR and $6.6B valuation has the cash and the user base to attempt a platform play (Shopify 2.0 for the AI-native business), but most of the field doesn't. The survivors share a different trait: they own something structural that the model providers can't replicate. Replit owns the runtime — Claude can't execute your code. Vercel owns the deployment infrastructure that already hosts OpenAI, Anthropic, Nike, and PayPal. Notion owns the largest structured organizational knowledge graph on the planet. The pattern: AI commoditizes production; the companies that survive are the ones building on layers that production can't replace.</p>
+
+  <div class="five-verticals">
+    <ol>
+      <li><span class="v-name">Trust</span> — When anyone can generate a professional-looking checkout page in seconds, "powered by Stripe" is no longer a technical feature. It's a trust signal backed by $1T+ in processed transactions. In the agentic economy, trust becomes the routing layer for responsible web traffic: an agent that can't verify a service won't transact on it. Trust providers become the walled garden through which agent commerce flows.</li>
+      <li><span class="v-name">Context</span> — The most valuable thing on the internet is not compute or intent. It's your specific situation: your company's data, your customer relationships, your meeting notes from Tuesday. Notion, Salesforce, Epic, Palantir, Snowflake — all are playing in this space. "An agent without context is just a chatbot, but an agent that has your context can be a dependable junior employee." Context owners hold the choke point for the agentic economy, because every model must flow through the permissioning layer to access the data that makes it useful.</li>
+      <li><span class="v-name">Distribution</span> — "Supply is infinite; curation is about to become the scarcest resource in the world." Google, Apple, Amazon, TikTok, YouTube — these distribution gatekeepers get stronger when the flood is larger, because they tell people (and agents) where to go. Agent discovery is a massive unsolved problem: there is no agent-native app store, no mechanism for agents to find and verify the services they need to do business. Whoever builds this captures the same position Google built in web search, but for the agentic economy.</li>
+      <li><span class="v-name">Taste</span> — When producing software is free, what you choose to produce becomes the entire game. Taste is "a conviction about what should exist in the world that is not easily derivable from training data." In the agentic economy it manifests as orchestration quality: the human with deep domain expertise who carefully tuned the prompts, designed the workflows, made a thousand editorial decisions about how the agent should behave. The vibe coder who ships in minutes hasn't done the hard part yet. They haven't figured out how what they built will deeply connect with an audience.</li>
+      <li><span class="v-name">Liability</span> — "The AI did it is not going to be an answer that survives court." Regulated industries — healthcare, finance, legal, insurance — are liability niches. Lawyers stay in business because they sell accountability before the court. As agents autonomously file documents, move money, and make commitments with your name on them, someone needs to define the boundaries, audit the actions, and ultimately be on the hook. Deloitte and McKinsey are repositioning as AI assurance providers. This is the governance layer for the future web, and it's not going away — it gets more important as agents get more capable.</li>
+    </ol>
+  </div>
+
+  <p>The practical question for every builder: "What do I own that still matters if AI gets 10 times better?" If a better model makes your product obsolete, change your positioning now. If a better model makes your product <em>more</em> valuable — because it needs your trust layer, your context, your distribution channel, your taste, your liability guarantee — then you're structurally positioned for the agentic economy, and you don't need to worry about how good the next Claude release is.</p>
+
+  <!-- SECTION 7: Reality Check -->
   <h2>The 6.5% Reality Check</h2>
 
   <p>AI Engineer Europe 2026 concluded this week — three days in London, over a hundred talks, visits to 10 Downing Street, and a body of evaluation results that should calibrate anyone who's been drinking the capability Kool-Aid.</p>
@@ -316,8 +390,11 @@
 
   <p>Claude for Word entered beta — one of the more consequential product integrations of the month, quietly announced amidst the noisier benchmark discourse. Hermes Agent hit 50,000 GitHub stars; Harrison Chase's framing from the conference is becoming the dominant architecture mental model: "run the model in a loop with tools" — harnesses are solidifying as the primary agent abstraction, with models hot-swapped underneath as portable skills and memory persist across providers.</p>
 
-  <!-- SECTION 6 -->
+  <!-- SECTION 8: Brief Signals -->
   <h2>Brief Signals</h2>
+
+  <h3>Voice hits $300M ARR — and it's just getting started</h3>
+  <p>ElevenLabs co-founder and CEO Mati Staniszewski appeared on No Priors this week to report that the company has reached <strong>$300M ARR in three years</strong>, roughly 50/50 split between self-serve (creators, narration, dubbing) and enterprise (customer support agents, government deployments). The most surprising research finding from their benchmarking work: on voice quality evaluations, <em>switching the voice used in a model comparison has a larger effect on perceived quality than the difference between models</em>. This makes voice quality benchmarks significantly harder to interpret than LLM benchmarks, and is why ElevenLabs deploys "voice sommeliers" with enterprise clients rather than just API docs. Staniszewski echoed Karpathy's framing with one extension: "decade of agents, then decade of robots" — and for robots, voice is an obviously dominant interface. The Ukraine story is worth noting: they're working with Ukraine's Ministry of Digital Transformation on what amounts to the world's first national government agent platform — covering citizen services, benefits queries, education delivery, and proactive civic notifications through a unified conversational interface.</p>
 
   <h3>The scaffolding wars, and who builds the scaffold</h3>
   <p>Satya Nadella's visit to Fairwater 2 (Microsoft's "current most powerful data center in the world") with Dwarkesh Patel and Dylan Patel produced one of the week's most memorable strategic frames: "If you're a model company, you may have a winner's curse. You may have done all the hard work, done unbelievable innovation, except it's kind of like one copy away from that being commoditized." Microsoft's bet is GitHub as the cable TV bundle for AI agents — a Mission Control where developers fire off tasks to Codex, Claude, Cognition, Grok simultaneously, monitor them working across separate branches, and triage output. Whether this framing holds depends on whether model quality keeps improving fast enough to reduce the need for scaffolding — exactly the premise NateBJones' stack analysis interrogates.</p>
@@ -338,11 +415,13 @@
   <div class="takeaways">
     <h2>🧭 What This All Means</h2>
     <ol>
-      <li><strong>The agent stack has six layers. One is mature. Three are shims. One just arrived. One doesn't exist yet.</strong> The orchestration gap — scheduling, lifecycle, merge queues, supervision hierarchies, financial observability for multi-agent systems — is the most valuable unsolved infrastructure problem in the AI economy. The company that solves it at infrastructure grade owns the same position Kubernetes owns in containers.</li>
-      <li><strong>Anthropic is simultaneously a revenue monster and a safety institution.</strong> $30B ARR (up from $19B in a single month) while withholding a model on safety grounds is a position no company has occupied before. That tension — between commercial pressure and genuine capability concern — is not theater. It defines the next phase of the AI industry.</li>
+      <li><strong>The agent stack has six layers. One is mature. Three are shims. One just arrived. One doesn't exist yet.</strong> The orchestration gap — scheduling, lifecycle, merge queues, supervision hierarchies, financial observability for multi-agent systems — is the most valuable unsolved infrastructure problem in the AI economy. But above the stack, a seventh layer is already being built: the always-on persistence layer. Anthropic's Conway is the first fully realized vision of what it looks like. OpenAI and Google are building their versions. The lock-in it creates — behavioral context you can't export — is unlike anything the software industry has produced before.</li>
+      <li><strong>Anthropic is simultaneously a revenue monster, a safety institution, and a platform strategist.</strong> $30B ARR (up from $19B in a single month), a withheld model, and a five-surface platform strategy executed in one quarter. Claude Code → Cowork → Conway → Marketplace → enforcement. This is the Microsoft arc speedrun: 15 months instead of 15 years. The trust question with power users (cache TTL cuts, quota exhaustion) is a real tension that the platform ambition makes harder to resolve.</li>
+      <li><strong>AI is arriving in American defense faster than anyone expected — and opening a massive front door for new entrants.</strong> GenAI.mil: 60 days, 3 million users, 1 million active in 30 days. RFP transformation from requirements documents to problem statements. $200 billion in lending authority for supply chain resiliency. "SpaceX and Anduril and Palantir all had to sue for their first contract. Come through the front door now." The defense AI buildout is real, it's accelerating, and it's structurally underfunded for startups in hypersonics, directed energy, and autonomous systems.</li>
       <li><strong>AI compute is financed like infrastructure, not startup equity.</strong> GPU debt structures use contracted cash flows from investment-grade counterparties as primary collateral — not GPUs. The circularity criticism misunderstands the structure. The real constraints in 2026 are structural steel, electricians, and power distribution infrastructure — not capital or chip supply.</li>
-      <li><strong>Token prices keep collapsing while revenue ramps exponentially.</strong> 150× cheaper for GPT-4 level in 21 months. 88× cheaper for O1 level in 11 months. Simultaneously, AI labs are growing 1B → 10B in revenue in roughly one year. This is not a bubble pattern — it's an S-curve at the frontier, where cost and capability both move fast in the direction you want them to move.</li>
-      <li><strong>The benchmark gap is the most important number in AI today.</strong> ClawBench's drop from ~70% on sandbox to 6.5% on real tasks is the clearest empirical statement of where the demo-to-production gap actually lives. It's not a 10% miss. It's a factor-of-ten miss. The agent stack deficit (layers 2–6 above) explains most of it. Fixing it is the work of the next several years.</li>
+      <li><strong>Token prices keep collapsing while revenue ramps exponentially.</strong> 150× cheaper for GPT-4 level in 21 months. 88× cheaper for O1 level in 11 months. Simultaneously, AI labs are growing 1B → 10B in revenue in roughly one year. This is not a bubble pattern — it's an S-curve at the frontier, where cost and capability both move fast in the direction you want them to move. Founders: the SaaS era's assumption that market leadership is safe for a decade no longer holds. This looks more like the internet wave of 1999. Pre-schedule your exit conversation before you need it.</li>
+      <li><strong>The benchmark gap is the most important number in AI today.</strong> ClawBench's drop from ~70% on sandbox to 6.5% on real tasks is the clearest empirical statement of where the demo-to-production gap actually lives. It's not a 10% miss. It's a factor-of-ten miss. The agent stack deficit explains most of it. Fixing it is the work of the next several years.</li>
+      <li><strong>When building becomes free, five verticals get more valuable, not less.</strong> Trust, Context, Distribution, Taste, Liability — these are the durable economic layers that AI commoditizes production around, not through. The wrapper companies mostly die. The infrastructure, context, and distribution incumbents get stronger. The professional liability providers (lawyers, doctors, financial advisors, AI assurance firms) become governance layers the agentic economy can't function without. Build with this in mind: what do you own that still matters if AI gets 10× better?</li>
     </ol>
   </div>
 
@@ -354,10 +433,15 @@
       <h3>YouTube / Podcast</h3>
       <ul>
         <li><a href="https://www.youtube.com/@NateBJones">NateBJones</a> — "You're Building AI Agents on Layers That Won't Exist in 18 Months" (Apr 13)</li>
+        <li><a href="https://www.youtube.com/@NateBJones">NateBJones</a> — "I Analyzed 512,000 Lines of Leaked Code: It Shows What's Coming" (Conway / Anthropic platform strategy)</li>
+        <li><a href="https://www.youtube.com/@NateBJones">NateBJones</a> — "There Are Only 5 Safe Places to Build in AI Right Now" (Trust, Context, Distribution, Taste, Liability)</li>
         <li><a href="https://www.youtube.com/@NateBJones">NateBJones</a> — "Stop Accepting AI Output That Looks Right — The Other 17% Is Everything"</li>
         <li><a href="https://www.youtube.com/@nopriorspod">No Priors</a> — "The AI Code Slop Risk or Opportunity" (Apr 13)</li>
         <li><a href="https://www.youtube.com/@nopriorspod">No Priors</a> — "Who's Actually Funding the AI Buildout" with Neil Tiwari, Magnetar Capital (Apr 13)</li>
         <li><a href="https://www.youtube.com/@nopriorspod">No Priors Live</a> — "Is the SaaS Bear Thesis Overblown?" with CJ Desai, MongoDB CEO (Apr 13)</li>
+        <li><a href="https://www.youtube.com/@nopriorspod">No Priors Ep. 142</a> — Harvey AI with Gabe Pereyra, Co-Founder &amp; President</li>
+        <li><a href="https://www.youtube.com/@nopriorspod">No Priors Ep. 143</a> — ElevenLabs with Mati Staniszewski, Co-Founder &amp; CEO</li>
+        <li><a href="https://www.youtube.com/@nopriorspod">No Priors</a> — "The Largest Untapped Market Inside U.S. Defense" with Emil Michael, CTO of Department of War</li>
         <li><a href="https://www.youtube.com/@DwarkeshPodcast">Dwarkesh Podcast</a> — Andrej Karpathy: "We're Summoning Ghosts, Not Building Animals"</li>
         <li><a href="https://www.youtube.com/@DwarkeshPodcast">Dwarkesh Podcast</a> — Satya Nadella: How Microsoft Thinks About AGI (with Dylan Patel)</li>
         <li><a href="https://www.youtube.com/@DwarkeshPodcast">Dwarkesh Podcast</a> — "What Are We Scaling"</li>
@@ -401,72 +485,78 @@
 
 </div>
 
-<!-- ARCHIVE HAMBURGER DRAWER (matches prior digests) -->
+<!-- ARCHIVE HAMBURGER DRAWER -->
 <style>
   #hb-btn {
     position: fixed;
-    top: 16px;
-    left: 16px;
-    width: 36px;
-    height: 36px;
-    background: rgba(245,240,232,0.92);
-    border: 1px solid #d4c4a0;
-    border-radius: 6px;
-    cursor: pointer;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 0;
-    z-index: 1000;
-    backdrop-filter: blur(4px);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
   }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
   #hb-btn span {
     display: block;
-    width: 18px;
+    width: 20px;
     height: 2px;
-    background: #8b6914;
-    border-radius: 1px;
+    background: #8b5e34;
+    border-radius: 2px;
     transition: all 0.2s;
   }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
   #hb-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(44,36,22,0.35);
-    z-index: 1001;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
   }
   #hb-overlay.open { display: block; }
-  #hb-drawer {
-    position: fixed;
-    top: 0;
-    left: -280px;
-    width: 280px;
-    height: 100vh;
-    background: #faf6ee;
-    border-right: 1px solid #d4c4a0;
-    z-index: 1002;
-    transition: left 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 2px 0 12px rgba(44,36,22,0.12);
-  }
-  #hb-drawer.open { left: 0; }
   #hb-header {
-    padding: 20px 22px 14px;
-    border-bottom: 1px solid #d4c4a0;
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
   }
   #hb-header h2 {
-    font-family: 'Lora', serif;
     font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.09em;
     color: #8b5e34;
     margin: 0 0 2px;
-    border-bottom: none;
-    padding-bottom: 0;
   }
   #hb-header p {
     font-size: 0.78rem;
