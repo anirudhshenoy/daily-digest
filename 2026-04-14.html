@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Daily Digest — Tuesday, April 14, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf6ee;
+      --text: #2c2416;
+      --text-muted: #6b5c40;
+      --accent: #8b6914;
+      --accent-light: #c49a2a;
+      --border: #d4c4a0;
+      --pullquote-bg: #ede4ce;
+      --link: #7a5c1a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .digest-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .date-line {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1.75rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1.1rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent); }
+    blockquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent-light);
+      margin: 1.75rem 0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    blockquote cite {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      font-style: normal;
+      color: var(--text-muted);
+    }
+    .takeaways {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.75rem 2rem;
+      margin: 2.5rem 0;
+    }
+    .takeaways h2 {
+      border-bottom: none;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .takeaways ol {
+      padding-left: 1.5rem;
+    }
+    .takeaways li {
+      margin-bottom: 0.85rem;
+      font-size: 0.97rem;
+      line-height: 1.65;
+    }
+    .links-footer {
+      margin-top: 3rem;
+      border-top: 2px solid var(--border);
+      padding-top: 2rem;
+    }
+    .links-footer h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .links-section {
+      margin-bottom: 1.5rem;
+    }
+    .links-section h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 0.5rem;
+    }
+    .links-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-section li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .links-section li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+    }
+    .tag {
+      display: inline-block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #faf6ee;
+      padding: 0.1em 0.5em;
+      border-radius: 3px;
+      margin-right: 0.4em;
+      vertical-align: middle;
+    }
+    .hn-shorts {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.4rem 1.75rem;
+      margin: 2rem 0;
+    }
+    .hn-shorts h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 0.75rem;
+    }
+    .hn-shorts ul {
+      list-style: none;
+      padding: 0;
+    }
+    .hn-shorts li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.92rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .hn-shorts li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+    }
+    .score {
+      color: var(--text-muted);
+      font-size: 0.82em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="digest-label">Atlas Daily Digest</div>
+      <h1>The Machine Economy's Growing Pains</h1>
+      <p class="subtitle">Three trillion dollars in IPOs, a software fix for the memory wall, and the slow unbundling of the human manager — AI's infrastructure moment is here, and it's messier than advertised.</p>
+      <p class="date-line">Tuesday, April 14, 2026 &nbsp;·&nbsp; Curated by Atlas</p>
+    </header>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2>The Three Trillion Dollar Time Bomb</h2>
+
+    <p>Somewhere in the back of your 401(k), a fuse is being lit. SpaceX, OpenAI, and Anthropic — collectively valued at roughly $3 trillion — are all eyeing public markets in the next twelve months. SpaceX as early as June. Anthropic by October. OpenAI at the turn of 2027. And the math, if you pause long enough to run it, does not math.</p>
+
+    <p>Here's the problem: every IPO in the United States last year combined raised $47 billion. That was the <em>best year in a long time</em>. These three companies are looking to pull $170–195 billion from public investors in rapid succession. Where do those dollars come from? The answer, it turns out, is already in your retirement account — and you may not have a say in the matter.</p>
+
+    <p>The mechanics are worth understanding closely. SpaceX isn't floating the whole company. It's listing approximately 3.3% of its shares to raise $50–75 billion while Elon Musk and early investors retain the rest. This creates a classic scarcity play: constrained supply meets overwhelming demand, and the price reflects scarcity, not fundamentals. A $1.75 trillion valuation being marked by a 3.3% float is like setting the price of a restaurant by how much one table sells for on opening night when 10,000 people are waiting outside.</p>
+
+    <blockquote>
+      <p>"When you have 10 seats at the restaurant and 10,000 people want to get in, you can be the absolute best restaurant in the world and still have issues with the price valuation mechanism. It's just supply and demand. It has nothing to do with the quality of the company."</p>
+      <cite>— Nate Jones, on the structural distortion of tiny-float IPOs</cite>
+    </blockquote>
+
+    <p>But the truly interesting part is what happens three weeks after listing. On May 1st, NASDAQ's new index rules take effect: a company as large as SpaceX can be added to the NASDAQ 100 after just 15 trading days, weighted by <em>total market capitalization</em> — meaning all $1.75T, not just the 3.3% that's actually tradeable. Every fund tracking that index is then legally required to buy immediately, creating a forced wave of purchasing into an artificially thin float. Bloomberg Intelligence estimates that if all three companies sell 5% of shares and fast-track into major indexes, funds would need to acquire roughly $39 billion worth of stock — with total buying potentially swallowing more than half of all available shares in a few trading days.</p>
+
+    <p>There's a secondary wrinkle specific to OpenAI: the company is projected to lose $14 billion in 2026, with cash burn accelerating to $57 billion in 2027. It has 18–24 months of operating runway post its $110B raise. In January 2025, it announced Stargate — a half-trillion-dollar AI infrastructure project — then quietly walked away from a planned Texas expansion when lenders declined to underwrite the buildout. Debt markets said no. Now it's knocking on the equity door. The public market is, as one analysis put it, becoming the lender of last resort for AI.</p>
+
+    <p>Anthropic carries its own accounting complexity: it reportedly recognizes cloud computing credits from Amazon and Google as revenue — potentially $6.4 billion worth in 2026 alone. If regulators push back on that treatment during the S-1 process, the revenue story shrinks substantially. None of this means these are bad businesses. It means the structure of the offering is being designed to optimize for capital efficiency, and the risk lands on index-fund investors who have no mechanism to opt out.</p>
+
+    <p>Three scenarios emerge: (1) tiny floats persist with unusually long lock-up periods, sustaining prices artificially; (2) stocks pop at debut and drift lower as lock-up expiry floods supply into the market — the most likely outcome; (3) AI demand is so inexorable that the feedback loop holds indefinitely. The third is possible; it's just not the base case when OpenAI can't get a bank to finance its own data centers.</p>
+
+    <p>Meanwhile, on Hacker News this week, a <a href="https://github.com/sterlingcrispin/nothing-ever-happens">Polymarket bot called "Nothing Ever Happens"</a> surfaced with a deceptively simple strategy: always bet "No" on non-sports markets, because in prediction markets, hysteria consistently overprices tail events. It made money. The irony isn't subtle — the same dynamic applies to AI IPOs, where fear of missing out will likely overprice access to scarcity.</p>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2>Software Eats the Memory Wall</h2>
+
+    <p>While the financial world grapples with how to price artificial intelligence, a quieter breakthrough arrived from Google's research labs this week with implications that could reshape the economics of inference itself. The paper is called TurboQuant, and it attacks one of the industry's most stubborn structural problems: memory.</p>
+
+    <p>To understand why this matters, consider the shape of the crisis. High-bandwidth memory (HBM) — the kind that sits close to GPUs and allows models to process context at speed — is getting harder and more expensive to manufacture. The Iran conflict has disrupted helium supply (helium is critical to chip fab cleanrooms), and power prices are elevated. Supply is structurally constrained. Meanwhile, demand is exploding: the shift to agentic workflows means that instead of a single prompt-and-response, AI systems are burning hundreds of millions of tokens in extended autonomous runs. Token consumption per enterprise AI worker is already hitting 25 billion tokens annually. The squeeze is not temporary.</p>
+
+    <p>What TurboQuant does is compress the KV cache — the "working memory" of a language model — by up to 6x in memory and 8x in speed, without losing a single bit of data. That last part is the headline. Previous compression approaches introduced lossy trade-offs; TurboQuant achieves lossless compression through a combination of two techniques. First, <em>PolarQuant</em> rotates data into a standard coordinate system, making it representable in fewer bits without needing normalization overhead per block. Second, <em>QJL</em> (Quantized Johnson-Lindenstrauss — a real name) corrects the residual rounding errors using a single mathematical bit-level checker. Together, they bring a 32-bit key-value pair down to roughly 3 bits, tested across question-answering, code generation, summarization, and needle-in-haystack retrieval at 100,000 tokens.</p>
+
+    <blockquote>
+      <p>"If you were to invent an algorithm that effectively compresses and makes the hard drive you already have potentially six, seven, eight times more efficient — that's a really, really big deal."</p>
+      <cite>— Nate Jones, on TurboQuant's practical significance</cite>
+    </blockquote>
+
+    <p>The production path isn't instant — chip concurrency limits were designed before TurboQuant existed, so the full-stack implications need engineering out. But the crucial point is that this is a <em>software solution</em>. Chip fabrication timelines run five-plus years; TurboQuant can move at software speed. And it's not alone. At least five distinct research vectors are simultaneously attacking the memory problem: quantization (TurboQuant, Kiwi, Zipcash), eviction/sparsity strategies (H2O, SnapKV, Streaming LLM), architectural redesign (DeepSeek V2's multi-head latent attention, IBM Granite 4.0's hybrid attention), offloading and tiering (ShadowKV, FlexGen), and attention optimization (FlashAttention, Percepta).</p>
+
+    <p>A companion paper from Percepta takes the idea further: they've compiled a WebAssembly interpreter directly into the weight matrix of a standard PyTorch transformer — not as an external tool call, but embedded in the model's forward pass. The model can now execute C programs step by step, emitting a stack trace as tokens, and solved a Sudoku puzzle with 100% accuracy across a million-plus steps at 33,000 tokens per second. If that sounds baroque, consider what it implies: a future where the model doesn't need to reach for external compute to run deterministic logic. The memory and the processor, both improving by software, start to look like something qualitatively different from what we call an LLM today.</p>
+
+    <p>The strategic angle matters here. Google wrote TurboQuant and runs Gemini on infrastructure where KV cache is a documented bottleneck. If TurboQuant ships in production Gemini before competitors adopt it, Google accrues a compounding cost advantage on top of its existing TPU stack, while simultaneously reducing its dependency on HBM that it's had difficulty securing. Jensen Huang has been selling Vera Rubin's 500x memory increase as the solution to this problem. TurboQuant's implicit message: why buy 6x more chips when you can compress 6x and get there with software?</p>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2>Who Runs the Machine?</h2>
+
+    <p>Nearly half of U.S. companies have removed management layers in the past year. The pitch sounds clean: AI handles the information routing, so we don't need middle managers to cascade memos and synthesize updates. Flatter, faster, leaner. Zuckerberg is doing it. Dorsey just fired half of Block. Kimi — the Chinese AI lab behind K2, worth $16B with just 300 employees — has basically no management structure at all. The results are complicated.</p>
+
+    <p>The mistake, as a deep look at these three experiments reveals, is conflating three very different things that managers actually do. <strong>Routing</strong> — synthesizing information up and distributing it down — is genuinely automatable. AI is good at it. This is the Romans-to-railways function of management, and it accounts for the bulk of most managers' time. Fair enough to automate it. But two other functions are not so simple.</p>
+
+    <p><strong>Sensemaking</strong> is the invisible work of knowing which signals matter and which don't — the manager who says "I can read the update, but I want to understand why we've had three delays from this one team over six months." It's an amalgam of information processing and deep domain context that takes years to accumulate for a specific company, product, and team. AI can assist here, but it cannot yet replicate the long-running contextual judgment of someone who has been owning a problem for two years. Kimi knows this: its five co-founders collectively serve as the sensemaking layer for 300 people, each with ~50 direct reports. The journalist embedded at Kimi described it as producing extraordinary speed and "real casualties" — multiple senior hires crying in meetings, others leaving the industry. The word used for the personal experience was "weightlessness," which turns out to feel like anxiety when you live it daily.</p>
+
+    <p><strong>Accountability and feedback</strong> — the function of giving someone genuine ownership of a goal over a sustained period and caring about their growth — is the third leg. Jack Dorsey's Block experiment is the most structurally interesting response here: instead of abolishing this function, he's disaggregating it. "DRIs" (Directly Responsible Individuals) own cross-cutting problems for 90-day windows with explicit expiration dates, preventing them from becoming permanent middle managers while forcing deep ownership. "Player-coaches" — practitioners who still write code or design interfaces — handle craft mentorship and human development. The routing function goes to an AI-powered "world model" of the company's state. Whether this holds at scale remains to be seen; Block is currently in the middle of the cultural reset that comes with losing half your workforce at once.</p>
+
+    <p>Meta's approach is more blunt: compress the management function rather than decompose it, give the remaining managers dramatically wider spans, and intensify accountability sharply. Cut the bottom 5% of performers. Mark directly oversees 25–30 senior leaders and three executives run 15 product divisions. Stock performance has been excellent. Internally, the picture is more ambivalent — people describe enormous pressure and unclear paths to staying long-term.</p>
+
+    <blockquote>
+      <p>"The single largest predictor of whether someone thrives at work is whether they are in a good relationship with their manager. This stuff really matters."</p>
+      <cite>— Nate Jones, on why the management question is not purely theoretical</cite>
+    </blockquote>
+
+    <p>From Lenny's Podcast this week, Keith Rabois offered a complementary take from the investor angle: the team is literally the company. His frame, inherited from Vinod Khosla at Square, is that if you get the people right, everything else becomes tractable; if you get them wrong, nothing else saves you. The interesting tension: Rabois argues talent density remains the fundamental input even as AI collapses the number of people needed for a given output. The companies figuring out how to use AI to dramatically amplify a small number of exceptional humans — rather than using AI as a reason to accept mediocre humans — will win.</p>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2>Money Rails for Agents</h2>
+
+    <p>Jeremy Allaire, CEO of Circle (the company behind USDC), appeared on No Priors this week with a thesis that cuts to the heart of one of agentic AI's underappreciated infrastructure problems: agents need to transact, but the existing financial system wasn't designed for autonomous software.</p>
+
+    <p>Think through the requirements. Agents need to pay for services from other agents — sometimes for fractions of a cent. They need to transact 24/7, across any jurisdiction, without waiting for banking hours or correspondent bank chains. They need programmable money — the ability to encode conditions directly into a payment without a human intermediary. The traditional financial system, built for humans transacting with humans through regulated intermediaries, fails on most of these dimensions. ACH cutoffs at 5pm ET don't mean much to a software process that never sleeps.</p>
+
+    <p>USDC — a dollar-backed stablecoin fully reserved in short-duration US Treasuries and overnight repos — already handles a wider transaction range than most people realize: from sub-cent micropayments in digital games to multi-hundred-million-dollar capital markets settlements. Transaction volumes have grown faster than the monetary base because the cost per transaction has dropped to fractions of a cent on modern blockchains. Stripe and Shopify use it. Visa uses it internally to move money on its own network instead of touching legacy correspondent banking. Ramp launched USDC as core treasury infrastructure this week.</p>
+
+    <p>Circle is now building ARK — a new blockchain designed specifically for the agentic economy. Unlike earlier L1s conceived as censorship-resistant alternatives to the existing financial system, ARK is built <em>toward</em> the existing financial system: known validator sets run by major financial infrastructure companies, deterministic settlement finality in hundreds of milliseconds, built-in privacy primitives for corporate compliance, and USDC as the native gas token (real dollars, not a volatile speculation). The goal is a compute environment where AI agents can dynamically spin up financial endpoints, handle micro-transactions, and operate within legally-compliant smart contracts — an operating system for the machine economy.</p>
+
+    <p>The broader thesis is that we're approaching the moment blockchain infrastructure has been building toward for a decade — not because of NFTs or DeFi speculation, but because AI agents are creating genuine, high-frequency demand for programmable, frictionless, global money rails. The "broadband moment" Allaire describes is the arrival of real economic use cases that couldn't exist before the combination of third-generation blockchains and agentic AI. Tokenized stocks are already live (USDC powers Polymarket; Circle itself is one of the most actively traded tokenized equities); tokenized Treasuries are growing; real-world asset tokenization is being pursued by every major financial institution simultaneously. The infrastructure is being laid while the agents who will use it are being born.</p>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2>Mathematics Falls to the Machine</h2>
+
+    <p>Quanta Magazine ran a piece this week with a title that would have seemed hyperbolic eighteen months ago: "The AI Revolution in Math Has Arrived." It is not hyperbole. The tipping point, per the article, came in the summer of 2025, when several AI models solved five of six problems at the International Mathematical Olympiad. Mathematicians who had dismissed these systems as too error-prone for research began playing with them. What they found surprised them: the models weren't just solving pre-set puzzles. They were helping discover and prove genuinely new results, compressing weeks of work into days.</p>
+
+    <blockquote>
+      <p>"This guy's got a shovel. This guy's got a pickax. Together we can bore a tunnel... With these tools you can solve thousands of problems."</p>
+      <cite>— Terence Tao, UCLA, on AI as mathematical collaborator</cite>
+    </blockquote>
+
+    <p>Some results are on par with discoveries publishable in professional journals. In some cases, algorithms are formulating conjectures, proving them, and verifying proofs with minimal human involvement. Daniel Litt of the University of Toronto puts it plainly: "It is changing how mathematics is done." Tao goes further — soon mathematics will "look and feel altogether different from the way it was traditionally done."</p>
+
+    <p>This connects to something the TurboQuant section gestures at: we may be approaching a regime where AI systems don't just assist human cognition but accelerate the rate of improvement of AI systems themselves. Mathematics is the language of formal verification; formal verification is the only way to rigorously check AI-generated proofs; AI-generated proofs may eventually check the logic of AI training procedures. The loop is not fully closed yet, but it is being drawn. The week's Hacker News thread on "<a href="https://kirancodes.me/posts/log-who-watches-the-watchers.html">Lean proved this program correct; then I found a bug</a>" is a useful counterweight — formal verification catches many things and misses others, and the meta-problem of who verifies the verifier does not have a clean solution.</p>
+
+    <!-- ==================== HN SHORTS ==================== -->
+    <h2>From Hacker News</h2>
+
+    <div class="hn-shorts">
+      <h3>Worth Your Attention This Week</h3>
+      <ul>
+        <li><strong><a href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/">Someone bought 30 WordPress plugins and planted a backdoor in all of them</a></strong> <span class="score">(746 pts)</span> — A quiet, methodical supply-chain attack: acquire legitimate plugins with existing user bases, push a backdoor in an "update," collect sessions. The attack surface for plugin-dependent software has always been its acquisition economics; this is that in practice. <em>If you run WordPress: audit your plugin roster by ownership, not just reputation.</em></li>
+        <li><strong><a href="https://github.github.com/gh-stack/">GitHub Stacked PRs</a></strong> <span class="score">(489 pts)</span> — GitHub is natively supporting stacked pull requests (long a Graphite/Phabricator feature). Stacking lets you build a chain of small, focused PRs rather than a monolithic diff — the kind of tight code review loop that becomes critical when AI is generating large volumes of code that needs careful human oversight.</li>
+        <li><strong><a href="https://servo.org/blog/2026/04/13/servo-0.1.0-release/">Servo 0.1.0 is now on crates.io</a></strong> <span class="score">(431 pts)</span> — The Rust-based web engine, originally born at Mozilla, has its first crates.io release. Servo's importance isn't as a browser but as an embeddable rendering engine — the kind that could eventually power AI-driven browser automation pipelines without the overhead of Chromium.</li>
+        <li><strong><a href="https://blog.danielvaughan.com/i-ran-gemma-4-as-a-local-model-in-codex-cli-7fda754dc0d4">I ran Gemma 4 as a local model in Codex CLI</a></strong> <span class="score">(247 pts)</span> — Practical report on running Google's Gemma 4 locally via Codex CLI. Connects to the TurboQuant thread: if KV cache compression ships in production form, the economics of on-device model inference change substantially. Local capable models that were previously impractical due to memory constraints become feasible.</li>
+        <li><strong><a href="https://www.blackmagicdesign.com/products/davinciresolve/photo">DaVinci Resolve releases Photo Editor</a></strong> <span class="score">(32 pts)</span> — Blackmagic Design's DaVinci Resolve, the dominant professional video editing suite, has added a full photo editor. This is a meaningful shot across Adobe's bow: professional creative software with a generous free tier, now covering another vertical. AI-accelerated media production is exerting competitive pressure at the application layer.</li>
+      </ul>
+    </div>
+
+    <!-- ==================== TAKEAWAYS ==================== -->
+    <div class="takeaways">
+      <h2>🧭 What This All Means</h2>
+      <ol>
+        <li><strong>The AI IPO wave is a liquidity event for insiders, funded by index investors who have no opt-out.</strong> The NASDAQ rule change making fast-track index inclusion possible after 15 trading days is not a coincidence — it was reportedly a condition SpaceX imposed for choosing NASDAQ over NYSE. Understand what your index funds will be required to buy, and when, before making assumptions about "passive" investing.</li>
+        <li><strong>Memory is the bottleneck, and software is the fastest fix.</strong> TurboQuant represents a real vector of attack on the HBM shortage that doesn't require a new fab cycle. Watch for production deployments in H2 2026; the first model to ship TurboQuant or equivalent in its inference stack gains a meaningful cost-per-token advantage.</li>
+        <li><strong>Routing is automatable. Sensemaking and accountability are not (yet).</strong> The Kimi, Block, and Meta experiments are running in real time. The early evidence: removing accountability without replacing it produces weightlessness and cultural drift. Jack Dorsey's DRI model with explicit expiration dates is the most structurally thoughtful response so far — but it hasn't been tested at scale.</li>
+        <li><strong>Stablecoins are becoming the API layer for the agentic economy.</strong> This is not crypto speculation — it's infrastructure. AI agents need to transact globally, sub-cent, 24/7, programmably. No existing payment rail handles all four. ARK and USDC are building toward this. Expect agentic payment infrastructure to be a key differentiator in AI product platforms by 2027.</li>
+        <li><strong>AI's proof of general capability is arriving in mathematics.</strong> When Terence Tao — who has spent his career at the frontier of what human cognition can achieve — says AI is changing how mathematics is done, and that it will "look and feel altogether different," take that seriously. The implications for scientific research, drug discovery, and eventually AI's own development are compounding.</li>
+        <li><strong>Supply-chain attacks are getting quieter and more effective.</strong> The WordPress plugin acquisition story is a template: buy legitimacy, inject malice in an update, harvest credentials passively. As AI tooling accelerates software development, the attack surface for third-party dependencies grows proportionally. The security model of "trusted plugins" needs rethinking.</li>
+      </ol>
+    </div>
+
+    <!-- ==================== LINKS FOOTER ==================== -->
+    <div class="links-footer">
+      <h2>All Sources</h2>
+
+      <div class="links-section">
+        <h3>YouTube — NateBJones</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@NateBJones">The $3 Trillion IPO Trap Nobody's Talking About</a></li>
+          <li><a href="https://www.youtube.com/@NateBJones">This New Method Just Killed RAM Limitations (TurboQuant)</a></li>
+          <li><a href="https://www.youtube.com/@NateBJones">I Watched 3 Companies Lay Off Their Managers — All 3 Hit the Same Wall</a></li>
+        </ul>
+      </div>
+
+      <div class="links-section">
+        <h3>YouTube — No Priors Podcast</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@NoPriorsPod">How AI Agents Will Transform the Financial System — Jeremy Allaire (Circle)</a></li>
+          <li><a href="https://www.youtube.com/@NoPriorsPod">No Priors Year-End 2025 Predictions — Sarah Guo &amp; Elad Gil</a></li>
+        </ul>
+      </div>
+
+      <div class="links-section">
+        <h3>YouTube — Lenny's Podcast</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@lennyspodcast">Hard Truths About Building in the AI Era — Keith Rabois (Khosla Ventures)</a></li>
+        </ul>
+      </div>
+
+      <div class="links-section">
+        <h3>Web</h3>
+        <ul>
+          <li><a href="https://www.quantamagazine.org/the-ai-revolution-in-math-has-arrived-20260413/">The AI Revolution in Math Has Arrived — Quanta Magazine</a></li>
+          <li><a href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/">Someone Bought 30 WordPress Plugins and Planted a Backdoor — Anchor Host</a></li>
+        </ul>
+      </div>
+
+      <div class="links-section">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47757495">GitHub Stacked PRs (489 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47753472">Nothing Ever Happens — Polymarket No Bot (369 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47750872">Servo 0.1.0 on crates.io (431 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47744255">I Ran Gemma 4 as a Local Model in Codex CLI (247 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47759709">Lean Proved This Program Correct; Then I Found a Bug (128 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47755629">Someone Bought 30 WordPress Plugins and Planted a Backdoor (746 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47759292">The AI Revolution in Math Has Arrived (78 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47760529">DaVinci Resolve Releases Photo Editor (32 pts)</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
