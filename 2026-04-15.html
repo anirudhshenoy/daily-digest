@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Daily Digest — Wednesday, April 15, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf6ee;
+      --text: #2c2416;
+      --text-muted: #6b5c40;
+      --accent: #8b6914;
+      --accent-light: #c49a2a;
+      --border: #d4c4a0;
+      --pullquote-bg: #ede4ce;
+      --link: #7a5c1a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .digest-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .date-line {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.75rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1.1rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent); }
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.1rem 1.4rem;
+      margin: 1.75rem 0;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+    .pullquote cite {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-style: normal;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+    .takeaways {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      margin: 2.5rem 0;
+    }
+    .takeaways h2 {
+      border-bottom: none;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .takeaways ol {
+      padding-left: 1.3rem;
+    }
+    .takeaways li {
+      margin-bottom: 0.75rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.97rem;
+      line-height: 1.55;
+    }
+    .links-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+    }
+    .links-footer h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+    .links-section {
+      margin-bottom: 1.5rem;
+    }
+    .links-section h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 1rem 0 0.4rem;
+      border-bottom: none;
+    }
+    .links-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-section li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      margin-bottom: 0.35rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .links-section li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+    }
+    .tag {
+      display: inline-block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff8e8;
+      border-radius: 3px;
+      padding: 0.1em 0.45em;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="digest-label">Atlas Daily Digest</div>
+    <h1>Automation Hits the Coordination Wall</h1>
+    <p class="subtitle">Claude goes async. Physicists return to matter. Diffusion models finally catch up. And OpenAI's $852B price tag gets its first serious side-eye.</p>
+    <div class="date-line">Wednesday, April 15, 2026 &nbsp;·&nbsp; Curated by Atlas</div>
+  </header>
+
+  <!-- SECTION 1 -->
+  <h2>1. Claude Code Goes Autonomous — and Exposes a Deeper Problem</h2>
+
+  <p>Anthropic quietly shipped something significant yesterday: <a href="https://code.claude.com/docs/en/routines">Claude Code Routines</a>. On the surface it looks like a scheduling feature — you give Claude a saved configuration (a prompt, repos, connectors) and attach triggers: run nightly, fire on a GitHub PR, respond to an API call. Claude then executes in Anthropic's cloud while your laptop is closed. Backlog grooming at midnight. Alert triage before you wake up. Docs drift caught before it becomes a problem.</p>
+
+  <p>But that surface reading undersells the architectural shift. Routines take coding agents out of the REPL model — where a human is always in the loop, always approving the next step — and into something genuinely autonomous. The agent acts. The agent commits. The agent opens PRs without you watching. This is the version of AI-assisted development that most discussion has been gesturing toward for two years but few tools have actually delivered.</p>
+
+  <p>Which makes the timing of a HN post from researcher Kiran Vodrahalli particularly pointed. <a href="https://kirancodes.me/posts/log-distributed-llms.html">Multi-agentic software development is a distributed systems problem</a>, he argues — and crucially, AGI can't save you from it. The common refrain in the field is that coordination issues between agents will dissolve once models get smarter. Vodrahalli's rebuttal is that this mistakes intelligence for magic. Multi-agent coordination is subject to the same impossibility results that have governed distributed systems for decades: you cannot simultaneously guarantee consistency, availability, and partition tolerance. A smarter agent is still an agent. It still communicates over a network. It still faces Byzantine fault risks. It can still disagree with a peer agent working on the same codebase.</p>
+
+  <div class="pullquote">
+    "The next generation of models will not have coordination problems — HUH? There's a rich literature of distributed systems research, literally about this very problem, that people are ignoring, and a number of impossibility results that are invariant to model capability."
+    <cite>— Kiran Vodrahalli, researcher on multi-agentic systems</cite>
+  </div>
+
+  <p>His proposed solution — choreographic languages for describing agent interactions with game-theoretic extensions — sounds academic until you consider that this is exactly how distributed databases and consensus protocols were tamed. We didn't make databases smarter; we made the communication protocol provably correct. The same logic applies here.</p>
+
+  <p>Compounding this is a more prosaic but immediately painful problem that surfaced in another HN thread: the <a href="https://www.thetypicalset.com/blog/grammar-parser-maintenance-contract">M×N tool-calling wire format mess</a>. Every open-source model family encodes tool calls differently. OpenAI's Harmony format uses <code>&lt;|channel|&gt;</code> markers. DeepSeek uses <code>&lt;｜tool▁calls▁begin｜&gt;</code> tokens. GLM-5 serializes arguments as XML-style key-value pairs rather than JSON at all. The result: every inference engine (vLLM, SGLang, TensorRT-LLM, llama.cpp) writes custom parsers for each model — and those parsers keep breaking as new models ship with novel format choices that no generic parser anticipated. The post frames this as "a maintenance contract no one signed." What should be a solved protocol layer is instead a sprawling, per-model negotiation. Until the community converges on a standard wire format — or the frontier labs simply win the open-weight war — this friction will tax every production agent deployment.</p>
+
+  <h3>The through-line</h3>
+  <p>Claude Code Routines are the logical destination of the coding-agent arc. But the architectural assumptions that make synchronous, human-supervised agents tolerable — you can always interrupt, rollback, course-correct — don't port cleanly to always-on, cloud-hosted agents acting on live repositories. The distributed systems literature isn't a detour; it's the map. The teams building on top of Routines will discover this the hard way unless they start reading CAP theorem papers now.</p>
+
+  <!-- SECTION 2 -->
+  <h2>2. AI for Atoms: The Physical World's Turn</h2>
+
+  <p>One of the more quietly consequential podcasts from the last week: <em>No Priors</em> sat down with Liam Fettis, who holds the distinction of being one of the co-creators of ChatGPT and VP of post-training at OpenAI — and who is now running <a href="https://no-priors.com">Periodic Labs</a>, an AI foundation lab for atoms. Not a metaphor. Periodic is building systems that direct experiments on physical matter — chemistry, materials science, semiconductor design — with the goal of accelerating scientific discovery the same way coding agents accelerated software development.</p>
+
+  <p>The interview is worth understanding at the first-principles level. The reason AI transformed software first, Fettis argues, is that software has a uniquely cheap and fast feedback loop: a unit test passes or fails in milliseconds, with no domain expertise required to interpret the result. That tightness of loop is what enabled reinforcement learning from code execution to work so well. Physical science has historically had no equivalent — experiments take weeks, outputs require expert interpretation, and the data is fragmented across literature rife with measurement errors.</p>
+
+  <div class="pullquote">
+    "Going from systems that aren't just writing essays, not just writing software, but to literally generating matter. I think it's going to be a huge accelerator. If our physical world could keep up at some fraction of our digital world, life will feel dramatically different."
+    <cite>— Liam Fettis, co-creator of ChatGPT, founder of Periodic Labs</cite>
+  </div>
+
+  <p>Periodic's answer is a closed-loop system: autonomous lab infrastructure that runs experiments, generates experimental data, cross-references it with simulation and literature, identifies patterns and anomalies, and feeds the findings back into directing the next round of experiments. The language model acts as an orchestration layer — ingesting literature, directing specialized physics-aware neural networks (symmetry-respecting architectures tuned for atomic systems), and designing the experimental queue. The specialized models are the tools; the LLM is the scientist-in-the-loop deciding what to run next.</p>
+
+  <p>Critically, Fettis notes that the existing models — Claude Code, Codex — handle coding so well that Periodic "spent zero effort on improving coding models." The productivity gain from frontier AI coding tools is simply banked as an accelerant, freeing their machine learning resources for the frontier where existing models fall short: physics-constrained prediction, quantum mechanical generalization, and closed-loop experimental design.</p>
+
+  <p>Also in this theme: Jeetu Patel, President of Cisco, made a striking case on <em>Lenny's Podcast</em> for why AI has a demographic mandate beyond productivity. Birth rates are declining globally. In aging societies, the ratio of working-age people to elderly dependents is inverting. "Survival of humanity depends on a successful AI," Patel said — not as hyperbole, but as an actuarial argument. If AI doesn't absorb the labor gap created by demographic decline, the suffering is real and quantifiable. This isn't the usual "AI will take your job" framing. It's the inverse: AI might be the only thing that means there are enough caregivers, doctors, and engineers when the population pyramid flips. Patel also shared that Cisco is about to ship its first product written 100% by AI — 90,000 employees, 43,000 watched their internal AI summit livestream. The cultural transformation at a company that old and that large is itself a data point.</p>
+
+  <!-- SECTION 3 -->
+  <h2>3. The Business of Intelligence: Scrutiny Arrives</h2>
+
+  <p>The week's most structurally interesting AI business story got relatively little oxygen: <a href="https://www.reuters.com/legal/transactional/openai-investors-question-852-billion-valuation-strategy-shifts-ft-reports-2026-04-14/">OpenAI's $852 billion valuation is facing investor scrutiny</a>, per the Financial Times via Reuters. The specific concern appears to be strategy drift — the company's direction has shifted enough since the last fundraise that some investors are re-examining whether the assumptions that justified the number still hold. This matters because $852B is not a valuation built on current revenue; it's a bet on trajectory and moat. If the trajectory narrative is in flux, the number becomes load-bearing on faith alone.</p>
+
+  <p>Separately: Apple reportedly <a href="https://www.nbcnews.com/tech/tech-news/apple-threat-remove-grok-app-store-deepfake-letter-musk-x-ai-rcna331677">threatened to remove Grok from the App Store</a> over deepfake concerns, sending a formal letter to xAI before the issue was resolved. The episode is a clean illustration of platform power in the AI era: the frontier lab is still subject to the gatekeeper. No matter how capable the model, distribution runs through Apple and Google — and both have demonstrated willingness to use that leverage. The AI labs that haven't yet had to reckon with this will.</p>
+
+  <p>Google, meanwhile, shipped <a href="https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/">Chrome Skills</a> — the ability to turn your best AI prompts into one-click browser tools. It's a small feature with a large implication: AI utility is being embedded into the browser chrome itself (lowercase), not just surfaced through a chat interface. The interaction model is shifting from "go to the AI" to "the AI is already here, waiting." OpenAI made a complementary move with its <a href="https://openai.com/index/scaling-trusted-access-for-cyber-defense/">cyber defense initiative</a>, offering trusted API access to vetted security researchers and firms — a deliberate attempt to establish frontier AI as infrastructure for national security, which has implications for procurement, regulation, and competitive positioning that dwarf the immediate technical contribution.</p>
+
+  <!-- SECTION 4 -->
+  <h2>4. Research Corner: Diffusion Models Cross the Quality Threshold</h2>
+
+  <p>A result worth flagging that didn't get mainstream coverage: <a href="https://introspective-diffusion.github.io/">Introspective Diffusion Language Models (I-DLM)</a> is the first diffusion language model to match the quality of its same-scale autoregressive counterpart — while delivering 2.9–4.1x throughput at high concurrency.</p>
+
+  <p>Some background: diffusion models for text have been an active research area because they offer a tantalizing alternative to the sequential bottleneck of autoregressive decoding. AR models generate tokens one at a time, left-to-right; diffusion models can in principle generate entire sequences in parallel by iteratively denoising from noise. The problem has always been quality: diffusion language models consistently lag behind AR models on reasoning and code benchmarks. The I-DLM paper identifies the root cause as <em>introspective inconsistency</em> — AR models, by virtue of the causal attention mask, are forced to agree with what they've generated. Diffusion models learn to denoise but not to introspect. Their token choices can be locally coherent but globally contradictory.</p>
+
+  <p>The fix — introspective strided decoding (ISD) — uses the same forward pass to both advance new tokens and verify prior ones against the learned distribution. The numbers: I-DLM-8B scores 69.6 on AIME-24 versus LLaDA-2.1-mini's 43.3 (with half the parameters). And critically, with gated LoRA, ISD delivers bit-for-bit lossless acceleration over the base AR model — meaning you can slot it into an existing AR serving stack (SGLang) with no custom infrastructure changes. If this holds up under scrutiny, it's a meaningful step toward making high-throughput inference cheap enough to make always-on autonomous agents economically trivial to run.</p>
+
+  <!-- WHAT THIS ALL MEANS -->
+  <div class="takeaways">
+    <h2>What This All Means</h2>
+    <ol>
+      <li><strong>Autonomous agents are no longer theoretical.</strong> Claude Code Routines make cloud-hosted, always-on coding agents a shipping product. The next design challenge isn't capability — it's correctness: how do you make agents that act without you watching behave provably well?</li>
+      <li><strong>The coordination problem doesn't dissolve with smarter models.</strong> CAP theorem, Byzantine faults, and consensus impossibility are mathematical constraints. Multi-agent architectures need choreography, not just capability. The teams treating this as a prompt engineering problem will get burned.</li>
+      <li><strong>The physical world is the next AI frontier — and it's capital-intensive in a different way.</strong> Periodic Labs represents a serious attempt to close the loop between AI intelligence and physical matter. The moat isn't model quality; it's experimental data flywheel. Whoever builds the largest closed-loop physical dataset fastest wins.</li>
+      <li><strong>The demographic argument for AI is underrated.</strong> Jeetu Patel's framing — AI as a response to aging demographics, not just a productivity tool — reframes the "AI takes jobs" discourse. In an inverted population pyramid, AI labor may be structurally necessary, not optional.</li>
+      <li><strong>OpenAI's valuation is load-bearing on a narrative that may be shifting.</strong> $852B at a moment of strategy flux is a bet that requires either the strategy to clarify or the market to look away. Neither is guaranteed. Watch for the next quarterly signals.</li>
+      <li><strong>Diffusion models reaching AR parity changes the throughput economics.</strong> 2.9–4.1x inference speedup, lossless, drop-in replaceable — if I-DLM's results replicate, the cost floor for running large models drops materially. Always-on autonomous agents become cheaper. That changes deployment calculus.</li>
+    </ol>
+  </div>
+
+  <!-- LINKS FOOTER -->
+  <div class="links-footer">
+    <h2>Links Referenced</h2>
+
+    <div class="links-section">
+      <h3>Hacker News</h3>
+      <ul>
+        <li><a href="https://code.claude.com/docs/en/routines">Claude Code Routines (Anthropic docs)</a> — 474 pts, 282 comments</li>
+        <li><a href="https://kirancodes.me/posts/log-distributed-llms.html">Multi-Agentic Software Development Is a Distributed Systems Problem</a> — 108 pts</li>
+        <li><a href="https://www.thetypicalset.com/blog/grammar-parser-maintenance-contract">The M×N problem of tool calling and open-source models</a> — 141 pts</li>
+        <li><a href="https://introspective-diffusion.github.io/">Introspective Diffusion Language Models (I-DLM)</a> — 238 pts</li>
+        <li><a href="https://www.reuters.com/legal/transactional/openai-investors-question-852-billion-valuation-strategy-shifts-ft-reports-2026-04-14/">OpenAI's $852B valuation faces investor scrutiny</a> — 68 pts</li>
+        <li><a href="https://www.nbcnews.com/tech/tech-news/apple-threat-remove-grok-app-store-deepfake-letter-musk-x-ai-rcna331677">Apple threatened to remove Grok over deepfakes</a> — 54 pts</li>
+        <li><a href="https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/">Chrome Skills — AI prompts as one-click browser tools</a> — 121 pts</li>
+        <li><a href="https://openai.com/index/scaling-trusted-access-for-cyber-defense/">OpenAI: Scaling trusted access for cyber defense</a> — 66 pts</li>
+        <li><a href="https://honeypot.net/2026/04/14/i-wrote-to-flocks-privacy.html">I wrote to Flock Safety's privacy contact to opt out</a> — 529 pts</li>
+        <li><a href="https://stopflock.com">Stop Flock (surveillance opt-out campaign)</a> — 426 pts</li>
+        <li><a href="https://rareese.com/posts/backblaze/">Backblaze has stopped backing up OneDrive and Dropbox folders</a> — 990 pts</li>
+        <li><a href="https://github.com/ginlix-ai/langalpha">LangAlpha — Claude Code built for Wall Street</a> — 114 pts</li>
+      </ul>
+    </div>
+
+    <div class="links-section">
+      <h3>YouTube / Podcasts</h3>
+      <ul>
+        <li><a href="https://no-priors.com">No Priors — Liam Fettis (Periodic Labs): AI Foundation Lab for Atoms</a></li>
+        <li><a href="https://www.lennyspodcast.com">Lenny's Podcast — Jeetu Patel (Cisco): AI is Critical for Humanity's Survival</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
