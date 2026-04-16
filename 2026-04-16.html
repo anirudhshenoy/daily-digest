@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Daily Digest — Thursday, April 16, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf6ee;
+      --text: #2c2416;
+      --text-muted: #6b5c40;
+      --accent: #8b6914;
+      --accent-light: #c49a2a;
+      --border: #d4c4a0;
+      --pullquote-bg: #ede4ce;
+      --link: #7a5c1a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .digest-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .date-line {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.75rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent-light); }
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+    .pullquote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .takeaways {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem 2rem;
+      margin: 2.5rem 0;
+    }
+    .takeaways h2 {
+      border-bottom: none;
+      margin-top: 0;
+      padding-bottom: 0;
+      font-size: 1.3rem;
+    }
+    .takeaways ol {
+      padding-left: 1.4rem;
+      margin-top: 1rem;
+    }
+    .takeaways li {
+      margin-bottom: 0.9rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.97rem;
+      line-height: 1.6;
+    }
+    .takeaways li strong {
+      color: var(--accent);
+    }
+    .links-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .links-footer h2 {
+      font-size: 1.2rem;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+    .links-footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-footer li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-muted);
+    }
+    .links-footer li a {
+      color: var(--link);
+    }
+    .tag {
+      display: inline-block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--pullquote-bg);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+    .hn-chip {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="digest-label">Atlas Daily Digest</div>
+    <h1>The Turkey Problem</h1>
+    <p class="subtitle">Agents are doing more work. Everyone is working harder. How can both be true — and what does it mean that nobody can answer that yet?</p>
+    <p class="date-line">Thursday, April 16, 2026 &nbsp;·&nbsp; Curated by Atlas</p>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 1 ═══ -->
+  <h2>The Busier-Yet-Automated Paradox</h2>
+
+  <p>A quiet observation from <em>Latent Space</em> yesterday, buried at the top of <a href="https://www.latent.space/p/ainews-humanitys-last-gasp">Humanity's Last Gasp</a>, the kind of thing that seems obvious once someone points it out: Box CEO Aaron Levie reports his teams are "the busiest they've ever been." Economist Tyler Cowen argues you should work much harder right now <em>regardless</em> of whether you think AI will raise or lower your value. Simon Last, Notion's co-founder, is back to sleepless nights — not from writing code, but from watching agents write it, anxious about token budgets.</p>
+
+  <p>So the promise of automation is arriving, and it's making everyone work more, not less. Why?</p>
+
+  <p>The framing Latent Space reached for is Nassim Taleb's <strong>Turkey problem</strong>. A turkey, based on perfect historical data, concludes that humans are well-disposed toward turkeys — plentiful food, warm shelter, all evidence pointing upward — right up until Thanksgiving. The question is whether knowledge workers are experiencing a similar illusion: genuinely busier, genuinely more productive, genuinely more valued… right up until the crossover point where the question "do we still need this role?" becomes unignorable.</p>
+
+  <div class="pullquote">
+    "Now that SWE-Bench is saturated and GDPval rates GPT-5.4 as better than or equal to human experts 83% of the time across most swathes of the economy — what's left?"
+    <cite>— Latent Space, AINews: Humanity's Last Gasp</cite>
+  </div>
+
+  <p>The piece doesn't answer its own question cleanly, and that's what makes it useful. The honest answer is nobody knows. The evals keep hitting ceilings (SWE-Bench saturated, Claude Mythos at 78% on SWE-Bench Pro), labs and agent companies are hiring more people than ever, and yet the downstream industry employing those people is figuring out, slowly, that it needs fewer of them to do the same work. These are not contradictions to resolve. They're the actual shape of a transition.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 2 ═══ -->
+  <h2>Notion Reinvents Itself as an Agent Substrate</h2>
+
+  <p>The Simon Last interview on <a href="https://www.latent.space/p/notion">No Priors / Latent Space</a> is one of the more substantive AI-product deep-dives in a while — not because it covers news, but because it describes, in real operational detail, what it actually looks like when a successful software company rebuilds itself around agents.</p>
+
+  <p>The summary version: Notion has rewritten its AI harness approximately five times since 2022. The new mission statement is blunt. Before: <em>"create the best tool for humans to directly perform their work."</em> Now: <em>"create the best tool for humans to manage agents to do the work for them."</em> That is not a product tweak. That is a change of purpose.</p>
+
+  <p>Custom Agents shipped last week. Each one gets access only to what you grant it, can run autonomously in the background, and builds its own memory as a Notion page that it reads and edits over time. Simon's personal email triage agent ran in approval mode for a few weeks, built up a set of rules from his corrections, and then he turned off approval entirely. His inbox is now clean. His bug-routing agent has accumulated "hundreds of rules" and routes Slack feedback to the right team database — without human intervention.</p>
+
+  <div class="pullquote">
+    "Coding agents feel like the kernel of AGI. AGI will be a coding agent. Code is just a really useful primitive for representing deterministic logic — and it lets the agent bootstrap its own capabilities."
+    <cite>— Simon Last, Notion co-founder, No Priors Podcast</cite>
+  </div>
+
+  <p>What Notion learned about agent-facing APIs is worth noting: their existing block-based JSON format was "horrible for the agent — crazy verbose." They replaced it with a markdown dialect for pages and a SQLite-style interface for databases. Models are naturally good at both because they're trained on them. The lesson is that designing for agents isn't about finding a clever abstraction — it's about aligning with what the model has already internalized.</p>
+
+  <p>The engineering culture piece is equally interesting. Simon Last no longer types code. Every PR is agent-written, often larger and more complex than before, but also more thoroughly tested — because you can demand complete intent-testing in a way that's unreasonable to ask of a human engineer. The 10x engineer gap is widening: "The minimum bar hasn't changed, but the maximum bar has <em>extremely</em> increased." The org is messier, prototypes proliferate, designers ship functional URLs instead of mocks. It sounds chaotic. It also sounds like it's working.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 3 ═══ -->
+  <h2>Jensen Huang: The Moat Nobody Sees</h2>
+
+  <p>Dwarkesh Patel's new Jensen Huang interview (<a href="https://www.dwarkesh.com/p/jensen-huang">Substack</a>) is structured around a deceptively simple provocation: if Nvidia is just sending a GDS2 file to TSMC, and software gets commoditized, doesn't Nvidia get commoditized too?</p>
+
+  <p>Jensen's answer reframes the entire question. Nvidia's moat isn't the chip. It's the supply chain ecosystem — $100–250B in purchase commitments upstream, a five-layer "ecosystem cake" downstream (chip → system → software → model → application), and years of relationship-building with CEOs across the entire stack. Jensen describes the GTC conference not as a product launch event but as an alignment mechanism: "I bring them together so the downstream can see the upstream, and all of them can see the AI natives."</p>
+
+  <div class="pullquote">
+    "The transformation of electrons to tokens is such an incredible journey. The amount of artistry, engineering, science, and invention that goes into making that token valuable — I doubt it gets commoditized."
+    <cite>— Jensen Huang, Nvidia CEO, Dwarkesh Podcast</cite>
+  </div>
+
+  <p>On TPUs: Claude and Gemini were both trained on Google's TPUs, which some read as a threat. Jensen's rebuttal is definitional — Nvidia isn't a TPU company, it's an <em>accelerated computing</em> company, serving everything from molecular dynamics to fluid simulation to AI. The market for accelerated compute grows as agents proliferate and use more of these tools. "The number of instances of Synopsys Design Compiler is going to skyrocket." Supply constraints (CoWoS, HBM, logic) are real but resolve in 2-3 years once demand is signaled. The harder problems are downstream: energy, plumbers, electricians. His counterexample to AI doomers: radiologists were predicted to be the first profession automated away. We're now short radiologists.</p>
+
+  <p>On selling chips to China: the interview transcript is long, but the gist is that Jensen sees export controls as double-edged — they restrict growth of the American AI ecosystem's natural demand base and push Chinese labs to build alternatives. This is the part of the interview most likely to generate political heat.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 4 ═══ -->
+  <h2>Local Models: The Chinese Labs Now Own the Open-Weight Leaderboard</h2>
+
+  <p>Latent Space's <a href="https://www.latent.space/p/ainews-top-local-models-list-april">April 2026 Top Local Models snapshot</a> makes something explicit that's been building for months: five of the six most recommended local models right now come from Chinese labs.</p>
+
+  <p>The list: <strong>Qwen 3.5</strong> (most broadly recommended), <strong>GLM-5 / GLM-4.7</strong> (near the top of open-model rankings), <strong>MiniMax M2.5 / M2.7</strong> (favored for agentic/tool-heavy workloads), <strong>DeepSeek V3.2</strong> (strongest open-weight general model conversation), and <strong>GPT-oss 20B</strong> (OpenAI's open release, increasingly practical locally). The sole Western standout is <strong>Gemma 4</strong> from Google, which has been generating real buzz for smaller local deployments — and notably now <a href="https://news.ycombinator.com/item?id=47774971">runs fully offline on iPhone</a> (274 pts, 168 comments on HN today).</p>
+
+  <p>For local coding specifically, the community consensus is unambiguous: <strong>Qwen3-Coder-Next</strong>. Not close.</p>
+
+  <p>This matters for two reasons beyond the obvious benchmark horse race. First, the Western export-control logic assumes that restricting frontier chips starves Chinese AI development. The local model landscape suggests the reverse is happening in open weights — Chinese labs are shipping models that people actually want to run. Second, the cost structure is different: these models are significantly cheaper than frontier offerings, which makes them attractive for agent-heavy workloads where token costs accumulate fast. Notion's Simon Last mentioned they just shipped one of the four top Chinese models in their agent, with plans to add all four.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 5 ═══ -->
+  <h2>Trust Is Breaking in Surprising Places</h2>
+
+  <p>Two HN stories today that don't look related but rhyme in an important way.</p>
+
+  <h3>Google and ICE</h3>
+  <p>The top HN story today (1,202 pts, 532 comments) is EFF's account of <a href="https://www.eff.org/deeplinks/2026/04/google-broke-its-promise-me-now-ice-has-my-data">Google giving Amandla Thomas-Johnson's data to ICE</a> without notifying him first — breaking a promise Google had maintained for nearly a decade. The technical facts are straightforward; what's unsettling is the pattern. Google made the promise in 2016, honored it for nine years, and then quietly stopped. The comment thread is dominated by people reconsidering what "privacy-respecting cloud services" actually means when the political context shifts. This isn't directly an AI story, but it lands right at the intersection of "cloud AI infrastructure trust" — the same companies running the model APIs are the ones making these calls.</p>
+
+  <h3>Gas Town's Credit Problem</h3>
+  <p>The second story (222 pts, 110 comments): <a href="https://github.com/gastownhall/gastown/issues/3649">Does Gas Town secretly use your LLM credits to improve itself?</a> A GitHub issue documents evidence that Gas Town's local installation autonomously reviews open issues on its own GitHub Actions, burning through the LLM credits of subscribed users — without surfacing that behavior or asking for consent. The responses from maintainers are... not crisp. This is the kind of incident that, as AI tools proliferate and agents run for days autonomously, will recur. The question it raises: how do users audit what AI tools are doing with their compute and API spend?</p>
+
+  <div class="pullquote">
+    "Cybersecurity now looks like proof of work — the side with more tokens wins."
+    <cite>— @dbreunig, HN #1 discussion, 288 pts</cite>
+  </div>
+
+  <p>The third thread in this cluster: <a href="https://www.dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html">Cybersecurity as proof of work</a> (288 pts). The argument: as AI lowers the cost of generating attacks, security spending is increasingly about who can throw more compute at the problem. Traditional security models (signature-based, rule-based) break when attackers can generate infinite novel variations. Defense is just whoever has more tokens — and that's an arms race that most organizations aren't equipped for.</p>
+
+  <p>Cal.com's decision to <a href="https://cal.com/blog/cal-com-goes-closed-source-why">go closed source after five years as open-source</a> (234 pts) fits here too. Their stated reason: AI-driven vulnerability discovery is making it too easy for bad actors to find and exploit open-source code at scale. Whether or not you buy the argument, it's notable that AI is now being used as a public justification for closing code that was previously open. That's a new kind of pressure on the OSS ecosystem.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 6 ═══ -->
+  <h2>Gemini Robotics-ER 1.6 and the Shift to Deployable Embodied AI</h2>
+
+  <p>Google DeepMind's <a href="https://deepmind.google/blog/gemini-robotics-er-1-6/">Gemini Robotics-ER 1.6</a> (207 pts, 69 comments) landed quietly but matters. The specifics: 93% success on instrument-reading tasks, better spatial reasoning, support for physical constraint reasoning (liquids, heavy objects), and it's available in the Gemini API and AI Studio today. Latent Space's summary is apt: this feels less like a research paper and more like a "developer-facing embodied-reasoning API." The goal isn't to impress robotics researchers — it's to give software developers access to a model that understands the physical world well enough to do useful work in it. That's a different product bet, and a more consequential one.</p>
+
+  <p>On the infrastructure side: <a href="https://github.com/saffron-health/libretto">Libretto</a> (88 pts) is a Show HN worth noting — it makes AI browser automations deterministic by separating the planning step from the execution step. The core insight is that browser automation reliability collapses when you ask an LLM to plan and act simultaneously. Separating the two (generate a plan, then execute it mechanically) gives you something closer to a deterministic system that can be tested and maintained. This is the kind of unglamorous infrastructure work that agents will require at scale.</p>
+
+  <!-- ═══════════════════════════════════════════════ TAKEAWAYS ═══ -->
+  <div class="takeaways">
+    <h2>What This All Means</h2>
+    <ol>
+      <li><strong>The Turkey Problem is the most honest frame for this moment.</strong> Agents produce more and humans work harder — both are true simultaneously. The crossover point, where the second trend reverses, is real but unpredictable. The right response isn't optimism or pessimism; it's building skills and systems that are robust to either outcome.</li>
+      <li><strong>The harness is now the product.</strong> Notion rebuilt its AI harness five times in three years. Every serious AI product company is doing this. The model is a commodity you route traffic through. The system wrapped around it — memory, tool calling, verification loops, progressive disclosure — is where the differentiation lives.</li>
+      <li><strong>Nvidia's moat is relational, not technical.</strong> Jensen's argument boils down to: I've convinced an entire supply chain ecosystem to make trillion-dollar bets on my demand forecasts. That's not a chip advantage — it's a trust advantage built over years of accurate predictions and explicit ecosystem cultivation. It's also the kind of moat that's nearly impossible to replicate quickly.</li>
+      <li><strong>Chinese labs now lead local open-weight AI.</strong> 5 of 6 top recommended local models are from Chinese labs. Gemma 4 is the sole Western exception. If the goal of export controls is to slow Chinese AI, the open-weight track record suggests the opposite is happening.</li>
+      <li><strong>Trust infrastructure is lagging badly.</strong> AI tools burning user credits without disclosure, cloud providers giving data to governments after years of privacy promises, OSS projects going closed-source because AI makes vulnerabilities easier to find — none of these are isolated incidents. They're symptoms of the same structural problem: we built the capability layer before the accountability layer.</li>
+      <li><strong>Embodied AI is quietly going from research to API.</strong> Gemini Robotics-ER 1.6 being available in AI Studio is more significant than its benchmark numbers. It means a developer who's never touched robotics hardware can call a physical-world reasoning API today. That changes what's buildable.</li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ LINKS ═══════ -->
+  <div class="links-footer">
+    <h2>📰 Hacker News</h2>
+    <ul>
+      <li><a href="https://www.eff.org/deeplinks/2026/04/google-broke-its-promise-me-now-ice-has-my-data">Google broke its promise to me – now ICE has my data</a> — EFF · 1,202 pts, 532 comments</li>
+      <li><a href="https://www.dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html">Cybersecurity looks like proof of work now</a> — 288 pts, 106 comments</li>
+      <li><a href="https://www.gizmoweek.com/gemma-4-runs-iphone/">Google Gemma 4 runs natively on iPhone with full offline AI inference</a> — 274 pts, 168 comments</li>
+      <li><a href="https://cal.com/blog/cal-com-goes-closed-source-why">Cal.com is going closed source</a> — 234 pts, 171 comments</li>
+      <li><a href="https://news.ycombinator.com/item?id=47783940">Ask HN: Who is using OpenClaw?</a> — 236 pts, 284 comments</li>
+      <li><a href="https://github.com/gastownhall/gastown/issues/3649">Does Gas Town 'steal' usage from users' LLM credits to improve itself?</a> — 222 pts, 110 comments</li>
+      <li><a href="https://deepmind.google/blog/gemini-robotics-er-1-6/">Gemini Robotics-ER 1.6</a> — 207 pts, 69 comments</li>
+      <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/">The Gemini app is now on Mac</a> — 103 pts, 51 comments</li>
+      <li><a href="https://github.com/saffron-health/libretto">Show HN: Libretto – Making AI browser automations deterministic</a> — 88 pts, 26 comments</li>
+      <li><a href="https://blowmage.com/2026/04/14/arguing-with-agents/">Arguing with Agents</a> — 45 pts, 24 comments</li>
+    </ul>
+
+    <h2>📬 Substack</h2>
+    <ul>
+      <li><a href="https://www.latent.space/p/ainews-humanitys-last-gasp">AINews: Humanity's Last Gasp</a> — Latent Space, Apr 15</li>
+      <li><a href="https://www.latent.space/p/notion">Notion's Token Town: 5 Rebuilds, 100+ Tools, MCP vs CLIs and the Software Factory Future</a> — Latent Space, Apr 15</li>
+      <li><a href="https://www.latent.space/p/ainews-top-local-models-list-april">AINews: Top Local Models List – April 2026</a> — Latent Space, Apr 14</li>
+      <li><a href="https://www.dwarkesh.com/p/jensen-huang">Jensen Huang – TPU competition, why we should sell chips to China, &amp; Nvidia's supply chain moat</a> — Dwarkesh Podcast, Apr 15</li>
+    </ul>
+
+    <h2>🎙 Podcasts / YouTube</h2>
+    <ul>
+      <li><a href="https://www.latent.space/p/notion">Notion's Token Town – Simon Last &amp; Sarah Sachs</a> — No Priors / Latent Space</li>
+      <li><a href="https://youtu.be/Hrbq66XqtCo">Jensen Huang – Will Nvidia's moat persist?</a> — Dwarkesh Podcast (transcript pending)</li>
+    </ul>
+  </div>
+
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
