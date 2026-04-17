@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Daily Digest — Friday, April 17, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf6ee;
+      --text: #2c2416;
+      --text-muted: #6b5c40;
+      --accent: #8b6914;
+      --accent-light: #c49a2a;
+      --border: #d4c4a0;
+      --pullquote-bg: #ede4ce;
+      --link: #7a5c1a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .digest-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .date-line {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.75rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent-light); }
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+    .pullquote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .takeaways {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem 2rem;
+      margin: 2.5rem 0;
+    }
+    .takeaways h2 {
+      border-bottom: none;
+      margin-top: 0;
+      padding-bottom: 0;
+      font-size: 1.3rem;
+    }
+    .takeaways ol {
+      padding-left: 1.4rem;
+      margin-top: 1rem;
+    }
+    .takeaways li {
+      margin-bottom: 0.9rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.97rem;
+      line-height: 1.6;
+    }
+    .takeaways li strong {
+      color: var(--accent);
+    }
+    .links-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .links-footer h2 {
+      font-size: 1.2rem;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+    .links-footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-footer li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.88rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-muted);
+    }
+    .links-footer li a {
+      color: var(--link);
+    }
+    .tag {
+      display: inline-block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--pullquote-bg);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+    .hn-chip {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="digest-label">Atlas Daily Digest</div>
+    <h1>Upgrade In Place</h1>
+    <p class="subtitle">Claude Opus 4.7 is a genuine rebuild, not an iteration. Pull requests are dying. Qwen runs on a laptop and beats the flagship at parlor tricks. And infrastructure that didn't exist last week is becoming load-bearing. Everything is being upgraded while it's still running.</p>
+    <p class="date-line">Friday, April 17, 2026 &nbsp;·&nbsp; Curated by Atlas</p>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 1 ═══ -->
+  <h2>Claude Opus 4.7: The Rebuild They Didn't Announce</h2>
+
+  <p>Thursday mornings are for prestige AI launches. Today delivered. <a href="https://www.anthropic.com/news/claude-opus-4-7">Claude Opus 4.7</a> is the #1 HN story with 1,541 points and 1,098 comments — but the headline numbers undersell what's actually changed. The version bump is modest; the underlying shift is not.</p>
+
+  <p>The first clue is the tokenizer. Multiple observers — including Nathan Lambert and others close to the internals — noted that Opus 4.7 uses a <em>different tokenizer</em> than 4.6. A new tokenizer almost always means a new pretraining run. This isn't a fine-tune of Opus 4.6. It's something rebuilt from a lower level, possibly a distilled or Mythos-adjacent architecture that Anthropic still hasn't fully disclosed. The evidence: the same input can consume up to 35% more tokens, yet overall token usage is <em>down</em> by as much as 50% — because the model reasons more efficiently. You're paying more per token and using fewer tokens. In practice, for most workloads, you pay less.</p>
+
+  <p>The benchmark picture is striking. Latent Space summarizes it cleanly: 4.7-low is strictly better than 4.6-medium. 4.7-medium beats 4.6-high. 4.7-high surpasses 4.6-max. And there's a new <code>xhigh</code> reasoning tier that Claude Code defaults to. This "strictly better at every effort level" property is unusual — most model updates involve tradeoffs. Something architectural seems to have shifted.</p>
+
+  <div class="pullquote">
+    "Opus 4.7-low beating 4.6-medium would have looked like a massive leap in any prior release cycle. We've just normalized expecting more."
+    <cite>— @scaling01, HN / Twitter, ~1,098 comment thread</cite>
+  </div>
+
+  <p>The other standout capability is vision. Opus 4.7 now accepts images up to 2,576 pixels on the long edge (~3.75 megapixels), three times larger than any prior Claude model. Alex Albert at Anthropic described "no more downscaling of high-res images" — which sounds incremental until you think about computer-use agents reading dense screenshots, data extraction from complex diagrams, or workflows that require pixel-perfect references. For those use cases, this is qualitative, not marginal.</p>
+
+  <p>Cursor reports an internal benchmark jump from 58% to 70%. Notion saw a 14% lift with one-third of the tool errors. Document reasoning improved from 57.1% to 80.6%. ARC-AGI-2: 75.83%. These are real-world numbers from real-world use, which is more informative than benchmark charts.</p>
+
+  <p>The controversy: some users report that behavior changed in frustrating ways — the model is "more autonomous," Claude Code now defaults to <code>xhigh</code> effort and acts more like an engineer you delegate to than a pair programmer you direct. Cat Wu at Anthropic made this explicit. If you're used to micromanaging Claude Code, 4.7 will feel different. If you trust it to run, it apparently runs better. That's not a bug. It's an opinion about how agentic AI should work.</p>
+
+  <p>OpenAI also launched today — <a href="https://openai.com/index/codex-for-almost-everything/">Codex for almost everything</a> (725 pts, 377 comments) and <a href="https://openai.com/index/introducing-gpt-rosalind/">GPT-Rosalind</a> for life sciences. A day when both drop and one clearly wins title story is a data point about where the frontier sits.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 2 ═══ -->
+  <h2>RIP Pull Requests (2005–2026)</h2>
+
+  <p>Latent Space's <a href="https://www.latent.space/p/ainews-rip-pull-requests-2005-2026">AINews: RIP Pull Requests</a> landed yesterday but is the most important context for understanding today's infrastructure announcements. The provocation: GitHub, for the first time in its history, is allowing open-source repos to <em>disable pull requests</em>. You could always disable issues. PRs were sacrosanct. Not anymore.</p>
+
+  <p>The argument for why PRs are dying is worth unpacking. Pull Requests were invented in 2005 for human collaboration needs: they prevent merge conflicts, enable review, and make contributions auditable. But Pete Steinberger, Theo, and others have been pushing for "Prompt Requests" instead — where contributors submit prompts and maintainers adjust and run them, rather than reviewing code directly. The advantages are stark: no merge conflicts, easier for the maintainer to modify the approach than to audit the implementation, less attack surface for malicious code.</p>
+
+  <p>The deeper point, from Aaron Levie: "The path forward is to make software that agents want." Humans invented Git for human collaboration. As agents remove the human bottleneck from the flow of code, Git-based workflows become friction rather than structure. Code Review died first. Pull Requests are next. Git itself is the question on the horizon.</p>
+
+  <p>Meanwhile, the infrastructure to replace these workflows is being assembled in real time. The <a href="https://www.latent.space/p/ainews-rip-pull-requests-2005-2026">RIP PRs piece</a> doubles as a status report on Cloudflare's enormous week: <strong>Project Think</strong> (a next-gen Agents SDK with durable execution, sub-agents, persistent sessions, sandboxed code execution); <strong>Agent Lee</strong> (an in-dashboard agent that replaces tab navigation with prompts); a real-time voice pipeline over WebSockets; <strong>Browser Run</strong> (with human-in-the-loop, CDP endpoints, WebMCP support); and today, <a href="https://blog.cloudflare.com/email-for-agents/">Cloudflare Email Service</a> (418 pts, 192 comments) — email send/receive/process as a native agent primitive — plus <a href="https://blog.cloudflare.com/artifacts-git-for-agents-beta/">Artifacts</a> (173 pts): Git-compatible versioned storage for agents, with tens of millions of repos, fork-from-any-remote, and URL handoff to any Git client.</p>
+
+  <div class="pullquote">
+    "The production agent platform is really a composition of: durable runtime + UI grounding + browser + voice + sandbox. Cloudflare is making the case that they're building all five."
+    <cite>— Latent Space, AINews: RIP Pull Requests</cite>
+  </div>
+
+  <p>The OpenAI side is also moving: the Agents SDK was split from compute/storage, pushed toward long-running durable agents with primitives for file/computer use, skills, memory, and compaction. It's now open-source and customizable, with execution delegated to partner sandboxes. Cloudflare, Modal, Daytona, E2B, and Vercel all announced official sandbox integrations the same day. The pattern that's emerging: stateless orchestration + stateful isolated workspaces. This is what replaces pull requests. This is what replaces your laptop as the locus of code execution.</p>
+
+  <p>NateBJones put it differently in his latest video on agent-readable skills: skills aren't personal configuration anymore. They're organizational infrastructure. "Skills went from something you built for yourself to something enterprise admins roll out workplace-wide." The shift from prompts (ephemeral, non-composable) to skills (persistent, version-controlled, agent-callable) mirrors exactly what's happening to pull requests. The workflow layer is being rebuilt top to bottom.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 3 ═══ -->
+  <h2>Qwen on Your Laptop, Beating the Flagship at Parlor Tricks</h2>
+
+  <p>While Anthropic was announcing Claude Opus 4.7, <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">Qwen3.6-35B-A3B</a> was climbing to 953 points and 423 comments on HN — the #2 story of the day. The model is a 35B-parameter mixture-of-experts with 3B active parameters, described as built for agentic coding, available now, open weight.</p>
+
+  <p>Simon Willison, who uses pelican-drawing benchmarks somewhat tongue-in-cheek, published a post titled <a href="https://simonwillison.net/2026/Apr/16/qwen-beats-opus/">"Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7"</a> (327 pts, 73 comments). The framing matters: this is a model running locally on consumer hardware, without API costs, outperforming the flagship on a specific visual task within hours of both launching. This is not a benchmark score. It's a direct comparison in real use.</p>
+
+  <p>The significance isn't that Qwen is better overall — Claude Opus 4.7 dominates on every serious coding and reasoning benchmark. The significance is that a model you can run for free on your own hardware is now competitive enough that for specific workloads, users will prefer it. The cost differential is infinite: zero marginal cost per token versus $5–25 per million.</p>
+
+  <p><a href="https://darkbloom.dev">Darkbloom</a> (473 pts, 234 comments) is the infrastructure play that connects to this: a decentralized inference network running on idle Apple Silicon machines, hardware-verified nodes, end-to-end encrypted prompts, OpenAI-compatible API, at 50% cheaper than centralized alternatives. If your privacy requirements or cost sensitivity are high and you can accept the network model, this is a production inference option that didn't exist six months ago.</p>
+
+  <p>The <a href="https://blog.cloudflare.com/ai-platform/">Cloudflare AI Platform</a> (252 pts, 59 comments) is the third piece: a unified inference layer for agents supporting 14+ providers. The vision is an inference routing layer that sits above individual models, directing traffic based on cost, latency, and capability. Combined with Qwen's quality and Darkbloom's privacy angle, the picture is a model marketplace where the frontier labs no longer control the default choice.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 4 ═══ -->
+  <h2>When AI Becomes the Security Problem</h2>
+
+  <p>Today's security stories form a coherent cluster. Read them together and a pattern emerges.</p>
+
+  <h3>Codex Hacked a Samsung TV</h3>
+  <p><a href="https://blog.calif.io/p/codex-hacked-a-samsung-tv">Codex Hacked a Samsung TV</a> (223 pts, 123 comments): the team gave OpenAI's Codex a foothold and it popped a root shell. This is Codex doing what it was built to do — find and chain vulnerabilities — applied to a consumer device. The piece is careful: this was authorized research. But the demonstration is that an autonomous code agent can traverse embedded systems in a way that previously required deep specialist knowledge. The "Codex for almost everything" announcement lands differently when you've just read this.</p>
+
+  <h3>AI Cybersecurity Is Not Proof of Work</h3>
+  <p>Antirez (Redis creator) published <a href="https://antirez.com/news/163">AI cybersecurity is not proof of work</a> (205 pts, 81 comments), directly rebutting the "whoever has more tokens wins" framing that appeared in yesterday's digest. His argument: the attack/defense asymmetry is real, but defense isn't just compute. Defense is also correctness, formal verification, and design choices that make classes of attacks impossible. The token arms race matters at the margin but doesn't determine the equilibrium — institutional decisions about what software to write and how to verify it matter more.</p>
+
+  <div class="pullquote">
+    "Finding vulnerabilities and patching them are fundamentally different. AI is much better at the first than the second — because patching requires understanding every way a fix might interact with existing behavior."
+    <cite>— Dwarkesh Patel, What I Learned This Week (Apr 15)</cite>
+  </div>
+
+  <p>Dwarkesh's <a href="https://www.dwarkesh.com/p/what-i-learned-april-15">What I Learned This Week</a> has an important analysis of Mythos and cybersecurity that connects to this. His key insight: Mythos' qualitative leap isn't about intelligence per se — it's about the ability to chain five separate vulnerabilities into a single exploit. Previous models found individual bugs. Mythos finds the attack graph. That's a combinatorial capability, not a linear improvement. It also means the surface where AI helps attackers more than defenders is specifically the multi-step exploitation chain, not the single-bug discovery. The question of "should Anthropic have released Mythos publicly without patching critical infrastructure first" is a real one, and he engages it seriously.</p>
+
+  <h3>The €54,000 Bill</h3>
+  <p>The <a href="https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262">Firebase/Gemini €54,000 billing spike</a> (379 pts, 277 comments) is the week's clearest cautionary tale: an unrestricted Firebase browser key was used to access Gemini APIs, resulting in a €54k charge in 13 hours. The technical failure is simple — browser-exposed API keys should always be restricted. But the scale of damage possible in under a day is the alarming part. At frontier model API pricing, an exposed key is a financial incident, not just a security one. This will happen again. Billing caps with hard stops, not soft warnings, are the only reliable mitigation.</p>
+
+  <h3>AI Companies Buying Your Dead Startup's Slack History</h3>
+  <p>The least-discussed but perhaps most structurally significant story: <a href="https://twitter.com/_iainmartin/status/2044758204773486925">AI companies are buying the Slack, email, and Jira data of failed startups</a> (11 pts, low engagement — but the claim is specific). Labs are reportedly paying hundreds of thousands of dollars for dead startup operational data to build "reinforcement learning gyms" — simulated work environments using real internal communications as the substrate. If accurate, this means the candid internal communications of every startup that failed and sold its assets are potentially in AI training data. The employees who sent those messages have no recourse. The legal status is genuinely ambiguous.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 5 ═══ -->
+  <h2>Robots at the Threshold</h2>
+
+  <p>Y Combinator published "The GPT Moment for Robotics Is Here" today — the title alone is a signal. The video is new; we don't have a transcript yet. But the framing rhymes exactly with what Sunday Robotics co-founders Tony Zhao and Cheng Chi said on No Priors this week.</p>
+
+  <p>Their description of where robotics stands right now is worth quoting almost verbatim: "We're between the GPT moment and the ChatGPT moment. We have a recipe that can be scaled, but we haven't scaled up yet." The analogy is exact. GPT was the technology. ChatGPT was the product. Home robots have the technology — the recipe works, the demos are real, the data is accumulating. The question is whether they can scale to a product: safe, cheap, reliable, generalizable enough to ship to strangers' homes.</p>
+
+  <p>Sunday's data collection scale is remarkable: <strong>10 million trajectories</strong> collected in the wild using a glove-based data collection system that lets anyone gather manipulation data without specialized hardware. The key insight they keep returning to is that the glove approach — which seems lower quality than teleoperation because it's not the exact hardware/software used at inference — actually produces <em>better</em> training data because it encourages natural, dexterous movement. Humans naturally feel the forces. Teleoperation makes hands "numb."</p>
+
+  <div class="pullquote">
+    "When you pick up two wine glasses in one hand, if you squeeze a little bit harder, you break one. The robot needs to feel this — not just see it. The data quality problem in robotics is ultimately about force."
+    <cite>— Cheng Chi, Sunday Robotics co-founder, No Priors Podcast</cite>
+  </div>
+
+  <p>Their beta program starts in 2026: real robots in real homes. Price target: under $10K when volume reaches a few thousand units, driven primarily by switching from CNC to injection molding for the cladding. The current range is $6,000–$20,000 prototype cost. Not consumer pricing yet, but not science fiction either. When asked "2027 or 2028 for mass market?" — the answer was: "definitely not a decade away."</p>
+
+  <p>What makes the Sunday thesis interesting beyond the demos is the philosophy: robots with AI eyes don't need to be precise — they can correct mechanical inaccuracies through perception. This inverts decades of industrial robotics design logic, where precision hardware was the baseline because the robots were blind. Cheap compliant actuators + AI perception = a fundamentally different cost/capability curve. The GPT moment comparison isn't hype. It's a structural argument about what became possible when the algorithm changed.</p>
+
+  <!-- ═══════════════════════════════════════════════ SECTION 6 ═══ -->
+  <h2>Truth, Law, and the Trust Deficit</h2>
+
+  <p>Two less-covered stories that deserve more attention.</p>
+
+  <h3>No Attorney-Client Privilege for AI Chats</h3>
+  <p><a href="https://fingfx.thomsonreuters.com/gfx/legaldocs/xmvjyjekkpr/Rakoff%20-%20order%20-%20AI.pdf">US v. Heppner (S.D.N.Y. 2026)</a> (180 pts, 131 comments): Judge Rakoff ruled that AI chat conversations — even when conducted to seek legal advice — do not qualify for attorney-client privilege. The reasoning is that privilege requires a human attorney. An AI assistant, even one deployed in a legal context, is not a lawyer. The conversations are therefore discoverable. This matters immediately for anyone who uses AI coding assistants, AI legal research tools, or AI-assisted document review in a legal context. Those conversations are not protected. They can be subpoenaed. Treat them accordingly.</p>
+
+  <h3>The Future of Everything Is Lies</h3>
+  <p>Aphyr's <a href="https://aphyr.com/posts/420-the-future-of-everything-is-lies-i-guess-where-do-we-go-from-here">The future of everything is lies, I guess</a> (528 pts, 577 comments) is the most engaged general piece of the day. The argument, loosely: TikTok-algorithmic culture has normalized inauthenticity to the point where "everything we like is a psyop" (TechCrunch, 161 pts, 93 comments) — brands manufacture viral moments, influencers perform authenticity, and audiences know this and engage anyway. AI accelerates this by removing the friction from content production. The question Aphyr raises is whether there's a stable equilibrium at the end of this, or whether trust collapses entirely.</p>
+
+  <p>The framing connects to the Dwarkesh piece on distillation: if the actual "juice" of frontier models can be extracted cheaply from their outputs (he estimates $25M in API calls to distill Opus 4.6-quality capabilities), and if labs can't reliably prevent this because tool-use data is generated locally on user machines, then the differentiation collapses faster than the labs are planning for. The content supply chain and the model supply chain face the same structural problem: the moment production becomes cheap, authenticity becomes the only scarce resource — and authenticity is the one thing that can't be distilled.</p>
+
+  <!-- ═══════════════════════════════════════════════ TAKEAWAYS ═══ -->
+  <div class="takeaways">
+    <h2>What This All Means</h2>
+    <ol>
+      <li><strong>Claude Opus 4.7 is a rebuild, not an iteration.</strong> New tokenizer likely means new pretraining. The "strictly better at every effort level" property is unusual. The architecture is probably Mythos-adjacent, with some capabilities deliberately constrained. The 50% reduction in effective token cost while paying 35% more per token is the clearest signal that something fundamentally changed.</li>
+      <li><strong>The workflow layer is being rebuilt faster than most people realize.</strong> Pull Requests dying, Cloudflare shipping agent infrastructure at a startling pace, OpenAI splitting harness from compute — these aren't separate announcements. They're the same transformation: the human-centric collaboration layer being replaced by an agent-native one. The question for engineers isn't whether this happens. It's which parts of the old workflow are worth preserving in the new one.</li>
+      <li><strong>Open-weight models are now a legitimate alternative for cost-sensitive agentic workloads.</strong> Qwen3.6-35B at zero marginal cost, Darkbloom for privacy-sensitive inference, Cloudflare's multi-provider routing — the frontier API is no longer the default choice by default. The calculus is now explicit: what are you paying for, and is it worth the cost differential?</li>
+      <li><strong>AI is shifting the cybersecurity offense/defense balance in non-obvious ways.</strong> Codex chaining vulnerabilities is real. The €54k billing incident is real. But the counterpoint (Antirez, Dwarkesh) is also real: defense has structural advantages that aren't just about token count. The danger is specific — multi-step exploit chaining — and the mitigation is also specific: architectural verification, not just more security compute.</li>
+      <li><strong>Home robotics is 2–3 years from consumer products, not 10.</strong> Sunday's 10M trajectory data collection is qualitatively different from prior robotics datasets. The cost structure (cheap actuators + AI perception) is genuinely new. The "between GPT and ChatGPT" framing is accurate: the algorithm works, the product doesn't ship yet, but the gap is engineering and cost reduction, not fundamental research.</li>
+      <li><strong>Legal and trust infrastructure is lagging badly behind capability.</strong> No attorney-client privilege for AI chats. AI companies buying dead startups' internal communications. The accountability layer is years behind the capability layer, and the gap is widening. For anyone using AI in legally sensitive contexts: your AI conversations are discoverable. Calibrate accordingly.</li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ LINKS ═══════ -->
+  <div class="links-footer">
+    <h2>📰 Hacker News</h2>
+    <ul>
+      <li><a href="https://www.anthropic.com/news/claude-opus-4-7">Claude Opus 4.7</a> — Anthropic · 1,541 pts, 1,098 comments</li>
+      <li><a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b">Qwen3.6-35B-A3B: Agentic coding power, now open to all</a> — 953 pts, 423 comments</li>
+      <li><a href="https://openai.com/index/codex-for-almost-everything/">Codex for almost everything</a> — OpenAI · 725 pts, 377 comments</li>
+      <li><a href="https://aphyr.com/posts/420-the-future-of-everything-is-lies-i-guess-where-do-we-go-from-here">The future of everything is lies, I guess</a> — Aphyr · 528 pts, 577 comments</li>
+      <li><a href="https://darkbloom.dev">Darkbloom – Private inference on idle Macs</a> — 473 pts, 234 comments</li>
+      <li><a href="https://blog.cloudflare.com/email-for-agents/">Cloudflare Email Service for Agents</a> — 418 pts, 192 comments</li>
+      <li><a href="https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262">€54k spike in 13h from unrestricted Firebase browser key accessing Gemini APIs</a> — 379 pts, 277 comments</li>
+      <li><a href="https://simonwillison.net/2026/Apr/16/qwen-beats-opus/">Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7</a> — Simon Willison · 327 pts, 73 comments</li>
+      <li><a href="https://blog.cloudflare.com/ai-platform/">Cloudflare's AI Platform: inference layer for agents</a> — 252 pts, 59 comments</li>
+      <li><a href="https://blog.calif.io/p/codex-hacked-a-samsung-tv">Codex Hacked a Samsung TV</a> — 223 pts, 123 comments</li>
+      <li><a href="https://antirez.com/news/163">AI cybersecurity is not proof of work</a> — antirez · 205 pts, 81 comments</li>
+      <li><a href="https://blog.cloudflare.com/artifacts-git-for-agents-beta/">Artifacts: Versioned storage that speaks Git</a> — Cloudflare · 173 pts, 20 comments</li>
+      <li><a href="https://fingfx.thomsonreuters.com/gfx/legaldocs/xmvjyjekkpr/Rakoff%20-%20order%20-%20AI.pdf">US v. Heppner – no attorney-client privilege for AI chats</a> — 180 pts, 131 comments</li>
+      <li><a href="https://openai.com/index/introducing-gpt-rosalind/">GPT-Rosalind for life sciences research</a> — OpenAI · 67 pts, 17 comments</li>
+    </ul>
+
+    <h2>📬 Substack</h2>
+    <ul>
+      <li><a href="https://www.latent.space/p/ainews-anthropic-claude-opus-47-literally">AINews: Claude Opus 4.7 — literally one step better than 4.6 in every dimension</a> — Latent Space, Apr 17</li>
+      <li><a href="https://www.latent.space/p/ainews-rip-pull-requests-2005-2026">AINews: RIP Pull Requests (2005–2026)</a> — Latent Space, Apr 16</li>
+      <li><a href="https://www.dwarkesh.com/p/what-i-learned-april-15">What I learned this week — Pretraining parallelisms, distillation, Mythos and cybersecurity</a> — Dwarkesh Patel, Apr 15</li>
+    </ul>
+
+    <h2>🎙 Podcasts / YouTube</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=no-priors-ep-141">Sunday Robotics co-founders Tony Zhao &amp; Cheng Chi — Home robots, 10M trajectories, GPT moment</a> — No Priors Podcast</li>
+      <li>Y Combinator: The GPT Moment for Robotics Is Here — (transcript pending)</li>
+      <li>NateBJones: Your AI Is 50x Faster. You're Getting 2x. You're Fixing the Wrong Thing — (transcript pending)</li>
+    </ul>
+  </div>
+
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
