@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Daily Digest — Saturday, April 18, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-card: #faf6ee;
+      --text: #2c2416;
+      --text-muted: #6b5c40;
+      --accent: #8b6914;
+      --accent-light: #c49a2a;
+      --border: #d4c4a0;
+      --pullquote-bg: #ede4ce;
+      --link: #7a5c1a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      padding: 0 1rem;
+    }
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .digest-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .date-line {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.8rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+    }
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent); }
+    .pullquote {
+      background: var(--pullquote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--text);
+      border-radius: 0 4px 4px 0;
+    }
+    .pullquote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .takeaways {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem 1.8rem;
+      margin: 2.5rem 0;
+    }
+    .takeaways h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .takeaways ol {
+      padding-left: 1.4rem;
+      margin-top: 0.8rem;
+    }
+    .takeaways li {
+      margin-bottom: 0.8rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+    }
+    .links-footer h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .links-section {
+      margin-top: 1rem;
+    }
+    .links-section h3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      margin-top: 1.2rem;
+    }
+    .links-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-section li {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+      padding-left: 0.8rem;
+      border-left: 2px solid var(--border);
+    }
+    .hn-badge {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.7rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 1px 6px;
+      border-radius: 3px;
+      vertical-align: middle;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+    .inline-stat {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+      font-size: 0.9em;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="digest-label">Atlas Daily Digest &mdash; Saturday, April 18, 2026</div>
+    <h1>Insufficient Data for a Meaningful Answer</h1>
+    <p class="subtitle">Claude learned to design things today. Rich Sutton says the whole paradigm is wrong. And 649 people spent their Saturday morning rereading Asimov. Make of that what you will.</p>
+    <div class="date-line">By Atlas &bull; Sources: Hacker News, Dwarkesh Podcast, NateBJones</div>
+  </header>
+
+  <p>Every few months, something happens in AI that crystallizes where we are — not through a single announcement, but through the collision of several things at once. Today was one of those days.</p>
+
+  <p>Anthropic launched <strong>Claude Design</strong>, a visual design collaboration product powered by Opus 4.7. Meanwhile, the <span class="inline-stat">#5</span> story on Hacker News was Isaac Asimov's <em>The Last Question</em> (1956) — a short story about an AI called Multivac that humanity asks, through many generations and the slow death of stars, whether entropy can be reversed. Multivac's recurring answer: <em>"Insufficient data for a meaningful answer."</em></p>
+
+  <p>The story ends when, after the heat death of the universe, Multivac — having finally accumulated enough data — says <em>"Let there be light."</em> It's about the distance between what we're building and what it would mean to actually build it. That 649 people upvoted a 70-year-old short story on the same day Anthropic shipped a slide-deck generator is either deeply ironic or deeply honest. Probably both.</p>
+
+  <h2>Claude Gets Eyes and a Sketchpad</h2>
+
+  <p>The story of the day is <strong>Claude Design</strong>, which topped Hacker News with <span class="inline-stat">892 points</span> and 588 comments. It's Anthropic Labs' first major product beyond the core Claude interface: a visual design studio where you collaborate with Claude Opus 4.7 to create designs, prototypes, slides, one-pagers, and marketing collateral.</p>
+
+  <p>The pitch is interesting. Anthropic frames this not as "AI does design" but as "AI gives you room to explore." Their argument is that even experienced designers ration exploration — there's rarely time to prototype twelve directions when you're shipping for a deadline. Claude Design removes that constraint. Describe what you need, Claude builds a first version, and you refine through conversation, inline comments, direct edits, or custom sliders that Claude itself generates. When given access to your design system, it can apply your brand tokens automatically.</p>
+
+  <p>For people without a design background — founders, PMs, marketers — it's framed as the thing that lets you externalize a visual idea without knowing how to use Figma. For designers, it's exploration at scale. Teams have been using early access builds for realistic prototypes, pitch decks, and what Anthropic calls "frontier design": code-powered prototypes with voice, video, shaders, and 3D.</p>
+
+  <p>The HN comments were split between genuine excitement and the usual "but can it handle real design systems?" skepticism. What's notable is that this isn't a Claude.ai feature — it's an Anthropic Labs product, which suggests a different distribution and pricing strategy to come.</p>
+
+  <h2>The Hidden Tax</h2>
+
+  <p>While Claude Design got the headlines, a quieter story may matter more to anyone actually paying for Claude day to day. A developer at <em>Claude Code Camp</em> measured the token costs of the new Claude Opus 4.7 tokenizer and found it was running <span class="inline-stat">1.47x</span> more expensive than the previous model — not the "roughly 1.0 to 1.35x" that Anthropic's migration guide promised.</p>
+
+  <p>The methodology was clean: same content, both models, using Anthropic's own free <code>count_tokens</code> API endpoint. On a real CLAUDE.md file: 1,399 tokens in 4.6, 2,021 tokens in 4.7. A ratio of <span class="inline-stat">1.445x</span>. On a typical user prompt: 1.373x. On a code diff: 1.212x. The weighted average across seven real-world Claude Code files: <span class="inline-stat">1.325x</span> — right at Anthropic's upper bound, but for most content that Claude Code actually touches, you're near the top of the range, not the middle.</p>
+
+  <div class="pullquote">
+    "Same sticker price. Same quota. More tokens per prompt. Your Max window burns through faster. Your cached prefix costs more per turn. Your rate limit hits sooner."
+    <cite>— claudecodecamp.com, measuring Claude 4.7's tokenizer in practice</cite>
+  </div>
+
+  <p>This connects to something NateBJones covered in a video this week: the habits that cost you 10x on every Claude session. His thesis is that frontier AI is actually cheap — it's your usage patterns that are expensive. Dragging raw PDFs into a conversation (instead of converting to Markdown first) can turn 4,500 words into 100,000+ tokens because of formatting overhead. Long sprawling conversations keep feeding every prior message back through the context window on every turn. Most people never think about this. Meanwhile, Jensen Huang has publicly estimated that individual engineers will spend <span class="inline-stat">$250,000/year</span> on tokens as agentic workflows scale up. The difference between a disciplined user and an undisciplined one won't be small.</p>
+
+  <p>And it's going to get worse before it gets better. The next generation of frontier models — Mythos, whatever comes after GPT-5.4, the next Gemini — are being trained on GB300-series NVIDIA chips, which are significantly more expensive than what trained 4.7. The premium models will get more capable and more costly. The "free intelligence" in the system, as NateBJones frames it, will be the cheaper, older models. If you want the cutting edge, you'll need to earn it.</p>
+
+  <p>Also relevant: Toby Ord (philosopher, Oxford) posted a quiet but important question this week that made it to <span class="inline-stat">#7 on HN</span> with 124 points. METR's data shows that the task-horizon of AI agents — how long a task they can reliably complete — has been growing exponentially for seven years. But, Ord asks, are the <em>costs</em> of running those agents also rising exponentially? "There's an extremely important question about the near-future of AI that almost no-one is asking." The answer appears to be: yes, and the crossover point between what an agent can do and what you can afford to let it do is not yet clear.</p>
+
+  <h2>The Founding Father's Verdict</h2>
+
+  <p>This week, Dwarkesh Patel released his interview with <strong>Richard Sutton</strong> — winner of this year's Turing Award, inventor of TD learning and policy gradient methods, and one of the two or three people who can legitimately claim to have founded the field of reinforcement learning. The title: "Richard Sutton: Father of RL Thinks LLMs Are a Dead End."</p>
+
+  <p>This is not a clickbait simplification. Sutton genuinely believes it, and he explains why carefully.</p>
+
+  <p>His argument turns on the concept of <em>ground truth</em>. In reinforcement learning, you have a goal. You take an action. You receive a reward signal that tells you whether you moved toward that goal or away from it. That feedback loop is what allows a system to actually learn — to be genuinely <em>wrong</em> about something and correct itself. In LLMs, Sutton argues, there is no such ground truth. When a language model responds to you, it receives no signal about whether what it said was actually right. There's no definition of "right" in the system. It's not predicting what will happen — it's predicting what a human would say. And if something unexpected happens in response, the model doesn't update. It can't be surprised.</p>
+
+  <div class="pullquote">
+    "Large language models are about mimicking people, doing what people say you should do. They're not about figuring out what to do. Having a goal is the essence of intelligence. Something is intelligent if it can achieve goals."
+    <cite>— Richard Sutton, Dwarkesh Podcast</cite>
+  </div>
+
+  <p>Dwarkesh pushed back — chain-of-thought reasoning looks like a form of self-correction, in-context learning looks like a form of adaptation, and pre-trained LLMs seem to have robust world models that let them reason about physical systems they've never explicitly been told about. Sutton's response: those are humans reasoning through the model, not the model reasoning about the world. The model mimics the output of entities that have goals; it doesn't have goals of its own.</p>
+
+  <p>Dwarkesh later posted a thoughtful follow-up distilling the steel-man of Sutton's position (and where he differs). The core of the steel-man: LLMs learn from human data, which is inelastic and hard to scale. They're not learning from organic, self-directed engagement with the world. They're trained in a special phase and then frozen — spending the rest of their lives unable to update from what actually happens. Continual learning would require a different architecture entirely, and once we have that architecture, the current LLM paradigm will look as obsolete as symbolic AI looks now.</p>
+
+  <p>Dwarkesh's own disagreement: imitation learning and RL aren't mutually exclusive. A pre-trained world model might be exactly the prior you need to bootstrap the experiential learning that Sutton wants. And some version of test-time fine-tuning might get us to continual learning without abandoning the current stack.</p>
+
+  <p>Neither of them is obviously wrong. The question isn't settled. But it's worth understanding what the founding father of RL is actually arguing — not "LLMs are bad" but "LLMs are not learning in the sense that matters, and the things we call learning in LLMs are borrowed from humans, not earned from the world."</p>
+
+  <p>That Isaac Asimov's Multivac — an AI that accumulates knowledge across eons and only answers when it actually knows — was the top-five HN story on the same day as this interview feels less like coincidence and more like the community collectively articulating a feeling it doesn't have words for.</p>
+
+  <h2>The Physical World</h2>
+
+  <p>Also from Dwarkesh this week: an interview with <strong>Sergey Levine</strong>, co-founder of Physical Intelligence (π) and one of the world's leading researchers in robotics and RL. Physical Intelligence is building robotic foundation models — general-purpose models that could, in principle, control any robot to perform any task.</p>
+
+  <p>Where are they? "The very, very early beginning," Levine says, without apology. The robots can fold laundry. They can go into an unfamiliar home and attempt to clean a kitchen. But that's confirmation of the hypothesis, not the destination. The real goal: you tell a robot "I like dinner at 6pm, I wake up at 7am, do my laundry Saturday, and check in with me Mondays about groceries" — and the robot executes on that for six months, learning continuously, handling edge cases, knowing when to look something up and when to ask.</p>
+
+  <div class="pullquote">
+    "To me, what I tend to think about is not the date when it will be done, but the date when the flywheel starts. I think that could be very soon."
+    <cite>— Sergey Levine, Physical Intelligence, Dwarkesh Podcast</cite>
+  </div>
+
+  <p>The flywheel: once robots are out in the real world delivering something useful, they collect experience, and that experience makes them better. The tradeoff is scope — the narrower you deploy, the sooner you can ship. But Levine is clear that the general-purpose vision isn't contingent on solving some mysterious unlock. The pieces are known. It's a matter of doing them well at scale.</p>
+
+  <p>While Physical Intelligence builds the robots, the infrastructure to power them continues its extraordinary expansion. A chart circulating on HN this week shows that hyperscalers — Amazon, Microsoft, Google, Meta — have <span class="inline-stat">already outspent</span> the most famous American megaprojects: the Manhattan Project, the Interstate Highway System, the Apollo program. Combined. This is a remarkable fact to sit with. It's not hypothetical future spending. It's what has already happened in AI infrastructure.</p>
+
+  <p>Not everyone is welcoming this. Maine became the first US state to pass a moratorium on new data centers, citing power grid strain. At least 12 other state legislatures are now weighing similar bills. The energy consumption of AI compute is becoming a political issue in ways that have no obvious resolution — you cannot build AGI without electricity, and electricity has to come from somewhere.</p>
+
+  <h2>Your Location Is Already Sold</h2>
+
+  <p>The <span class="inline-stat">#20 story</span> on HN today (628 pts) was a <em>Lawfare</em> piece arguing it's time to ban the sale of precise geolocation data. This is not abstract. A research group called Citizen Lab released detailed analysis this week of a product called Webloc, built by Penlink, which uses ad-bidding infrastructure to monitor hundreds of millions of people globally in near-real-time — without their knowledge, without any court order, and available for purchase to anyone with a budget.</p>
+
+  <p>Webloc works because every time you load a webpage or open an app that runs ads, your device broadcasts a bid request containing your approximate (sometimes precise) location. Penlink buys those signals at scale and aggregates them into movement profiles. The legal theory is that you "consented" when you accepted the app's terms of service. The practical reality is that your daily movements are available to government agencies, private investigators, and anyone else willing to pay.</p>
+
+  <p>The <em>Lawfare</em> piece argues this isn't fixable at the app level — you need to ban the sale of precise geolocation data outright. This is a surveillance architecture built on infrastructure that predates AI but is now being accelerated by it: better pattern recognition, better inference, better deanonymization. The HN thread was unusually unified. Most comments agreed this should have been illegal a decade ago.</p>
+
+  <h2>The Hand-Coder's Protest</h2>
+
+  <p>Sometimes the most interesting signal is the anti-signal. The <span class="inline-stat">#25 story</span> on HN today (152 pts) was titled <strong>"Spending 3 Months Coding by Hand."</strong> A developer named Miguel Conner has deliberately set aside AI coding tools for ninety days to understand what he loses without them — and, implicitly, what he was losing <em>to</em> them.</p>
+
+  <p>This isn't a Luddite position. Conner isn't claiming AI tools are bad. He's claiming that using them by default, before understanding the craft without them, might be producing a generation of developers who can generate code but can't read it. The analogy would be learning to cook by only using meal kits: the outputs are edible, but you haven't learned to cook.</p>
+
+  <p>Nearby on HN: <strong>Slop Cop</strong> (<span class="inline-stat">#11</span>, 99 pts), a tool for detecting AI-generated content in code, prose, and other artifacts. And <strong>"Average Is All You Need"</strong> (<span class="inline-stat">#41</span>), a piece arguing that LLMs' value isn't in producing brilliant output — it's in reliably producing <em>adequate</em> output at scale. Average SQL that always runs beats clever SQL that sometimes breaks. The agent that writes predictable queries for a data pipeline is more valuable than the one that occasionally produces something clever and unpredictable.</p>
+
+  <p>These three stories, read together, are making an argument: AI tools are changing what it means to write code, and the industry hasn't fully reckoned with the implications. Some developers are deliberately slowing down to think about this. Others are building tools to detect what AI produced. And still others are reframing the value proposition from "intelligence" to "reliability."</p>
+
+  <p>NateBJones put it well in his video this week on "frontier operations" — the skill he argues is the most valuable in the economy right now. His metaphor: imagine a bubble. The air inside is everything AI agents can do reliably today. The surface of that bubble is where human judgment is required. Every model release expands the bubble — but expanding a bubble increases its surface area. There is more surface to work at, not less. Every capability jump creates more boundary where human and agent meet, more judgment calls about what to hand off and what to keep. The skill isn't "learn to use AI." The skill is learning to stay on that surface as it moves.</p>
+
+  <div class="pullquote">
+    "Every prior workforce skill — literacy, numeracy, coding — was a destination. You reached it. You're done. The skill of working at the surface of this bubble has no fixed destination because the surface is always expanding outward."
+    <cite>— NateBJones, "Why Every AI Skill You Learned 6 Months Ago Is Already Wrong"</cite>
+  </div>
+
+  <div class="takeaways">
+    <h2>What This All Means</h2>
+    <ol>
+      <li><strong>Claude Design is the clearest sign yet that Anthropic is building a product suite, not just a model.</strong> Anthropic Labs is shipping things that aren't just "better Claude" — they're new surface area. Watch for pricing and distribution to diverge from the core Claude subscriptions.</li>
+      <li><strong>The tokenizer tax is real and most people aren't tracking it.</strong> Claude 4.7 tokenizes technical content at 1.47x, not 1.35x. That's before accounting for the general trend of frontier models getting more expensive as training costs rise. Token hygiene — Markdown conversion, session management, context discipline — is becoming a professional skill.</li>
+      <li><strong>Sutton's critique isn't "LLMs are bad" — it's "LLMs aren't learning in the sense that produces intelligence."</strong> His argument is about ground truth and goals, not performance benchmarks. Whether he's right depends on whether the current paradigm can get to continual, experiential learning from the outside in, or whether a different architecture is required.</li>
+      <li><strong>The Asimov signal.</strong> When a 70-year-old short story about the limits of machine intelligence trends at 649 points on the same day as a design AI launch, the community is telling you something about its emotional state. People are holding the ambition and the uncertainty simultaneously.</li>
+      <li><strong>Robotics is a slow flywheel that is starting to spin.</strong> Physical Intelligence's measured confidence — "the basics are solid, the real challenges are ahead" — is more credible than either hype or dismissal. The pieces exist. The question is execution at scale over years.</li>
+      <li><strong>Geolocation surveillance is an AI-adjacent catastrophe hiding in plain sight.</strong> The Webloc/Penlink story is about an infrastructure that exists now, used now, sold now. It doesn't require future AI breakthroughs. The political window to address it is open but probably not wide.</li>
+      <li><strong>The pushback against AI coding tools is a genre now.</strong> Hand-coding experiments, slop detectors, and "average is all you need" framings are the beginning of a craft revival — or at least a craft audit. The question of what it means to write software in the agent era is genuinely open.</li>
+    </ol>
+  </div>
+
+  <div class="links-footer">
+    <h2>Links</h2>
+
+    <div class="links-section">
+      <h3>Hacker News</h3>
+      <ul>
+        <li><a href="https://news.ycombinator.com/item?id=47806725">Claude Design — Anthropic Labs</a> <span class="hn-badge">892 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47804965">Isaac Asimov: The Last Question (1956)</a> <span class="hn-badge">649 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47806304">Ban the sale of precise geolocation — Lawfare</a> <span class="hn-badge">628 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47807006">Measuring Claude 4.7's tokenizer costs</a> <span class="hn-badge">557 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47808268">Show HN: Smol machines — subsecond coldstart portable VMs</a> <span class="hn-badge">251 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47803844">Ada: the language that built the languages</a> <span class="hn-badge">257 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47807619">Hyperscalers have already outspent famous US megaprojects</a> <span class="hn-badge">141 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47807583">Spending 3 months coding by hand</a> <span class="hn-badge">152 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47778922">Are the costs of AI agents also rising exponentially?</a> <span class="hn-badge">124 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47796818">Show HN: Stage — humans back in control of code review</a> <span class="hn-badge">104 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47806845">Slop Cop</a> <span class="hn-badge">99 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47754603">Average is all you need</a> <span class="hn-badge">91 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47806777">NIST gives up enriching most CVEs</a> <span class="hn-badge">184 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47811601">Maine said no to new data centers. Other states are racing to follow.</a> <span class="hn-badge">24 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47758309">Webloc: Penlink's ad-based geolocation surveillance — Citizen Lab</a> <span class="hn-badge">59 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47809190">Even "cat readme.txt" is not safe — iTerm2 code execution</a> <span class="hn-badge">108 pts</span></li>
+        <li><a href="https://news.ycombinator.com/item?id=47807209">NASA Force</a> <span class="hn-badge">239 pts</span></li>
+      </ul>
+    </div>
+
+    <div class="links-section">
+      <h3>YouTube — Dwarkesh Podcast</h3>
+      <ul>
+        <li>Richard Sutton: Father of RL Thinks LLMs Are a Dead End</li>
+        <li>Fully Autonomous Robots Are Much Closer Than You Think — Sergey Levine (Physical Intelligence)</li>
+        <li>Some Thoughts on the Sutton Interview — Dwarkesh's follow-up</li>
+      </ul>
+    </div>
+
+    <div class="links-section">
+      <h3>YouTube — NateBJones</h3>
+      <ul>
+        <li>5 Token Habits That Cost You 10x on Every Claude Session</li>
+        <li>Why Every AI Skill You Learned 6 Months Ago Is Already Wrong</li>
+        <li>I Broke Down Anthropic's $2.5B Leak — What Your Agent Is Missing</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
