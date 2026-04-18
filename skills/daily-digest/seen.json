@@ -1,0 +1,1252 @@
+{
+  "youtube": {
+    "8SVocWnDHwE": {
+      "title": "Building A Global AI Startup From India",
+      "channel": "Y Combinator",
+      "used_on": "2026-03-16"
+    },
+    "8lwnJZy4cO0": {
+      "title": "Claude Code Wiped 2.5 Years of Data. The Engineer Who Built It Couldn't Stop It.",
+      "channel": "NateBJones",
+      "used_on": "2026-03-16"
+    },
+    "zCW-k5fFRgQ": {
+      "title": "She quit, picked up AI, and shipped in 30 days what her team planned for Q3.",
+      "channel": "NateBJones",
+      "used_on": "2026-03-16"
+    },
+    "NA_anthropic-didn-t-build-a-new-browser-they-did-something-smar": {
+      "title": "Anthropic Didn't Build a New Browser. They Did Something Smarter.",
+      "channel": "NateBJones",
+      "used_on": "2026-03-17"
+    },
+    "QT7W_uHjqWE": {
+      "title": "Anthropic Didn't Build a New Browser. They Did Something Smarter.",
+      "channel": "NateBJones",
+      "used_on": "2026-04-05"
+    },
+    "KBPOTklFTiU": {
+      "title": "The most important question nobody's asking about AI.",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-05"
+    },
+    "japT66frdhM": {
+      "title": "One Simple System Gave All My AI Tools a Memory. Here's How.",
+      "channel": "NateBJones",
+      "used_on": "2026-04-05"
+    },
+    "NA_your-ai-agent-fails-97-5-of-real-work-the-fix-isn-t-coding": {
+      "title": "Your AI Agent Fails 97.5% of Real Work. The Fix Isn't Coding.",
+      "channel": "NateBJones",
+      "used_on": "2026-04-06"
+    },
+    "NA_i-mapped-where-every-ai-agent-actually-sits-most-people-pick": {
+      "title": "I Mapped Where Every AI Agent Actually Sits",
+      "channel": "NateBJones",
+      "used_on": "2026-04-08"
+    },
+    "NA_boris-cherny-head-of-claude-code": {
+      "title": "Head of Claude Code: AI is Not Slowing Down \u2014 Boris Cherny",
+      "channel": "Lenny's Podcast",
+      "used_on": "2026-04-06"
+    },
+    "NA_your-agent-produces-at-100x-your-org-reviews-at-3x": {
+      "title": "Your Agent Produces at 100x, Your Org Reviews at 3x",
+      "channel": "NateBJones",
+      "used_on": "2026-04-07"
+    },
+    "NA_how-claude-became-the-fastest-growing-ai-product-in-history": {
+      "title": "How Claude Became the Fastest Growing AI Product in History \u2014 Amol Avasare",
+      "channel": "Lenny's Podcast",
+      "used_on": "2026-04-07"
+    },
+    "NA_from-skeptic-to-true-believer-how-openclaw-changed-my-life": {
+      "title": "From Skeptic to True Believer: How OpenClaw Changed My Life \u2014 Claire Vo",
+      "channel": "Lenny's Podcast",
+      "used_on": "2026-04-07"
+    },
+    "NA_hard-truths-about-building-in-the-ai-era": {
+      "title": "Hard Truths About Building in the AI Era \u2014 Keith Rabois (Khosla Ventures)",
+      "channel": "Lenny's Podcast",
+      "used_on": "2026-04-14"
+    },
+    "NA_terence-tao-how-the-worlds-top-mathematician-uses-ai": {
+      "title": "Terence Tao: How the World's Top Mathematician Uses AI",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-08"
+    },
+    "NA_tobi-lutke-made-a-20-year-old-codebase-53-faster-overnight": {
+      "title": "Tobi L\u00fctke Made a 20-Year-Old Codebase 53% Faster Overnight",
+      "channel": "NateBJones",
+      "used_on": "2026-04-08"
+    },
+    "NA_the-ai-job-market-split-in-two-one-side-pays-400k-and-can-t": {
+      "title": "The AI Job Market Split in Two \u2014 One Side Pays $400k",
+      "channel": "NateBJones",
+      "used_on": "2026-04-08"
+    },
+    "NA_mckinsey-says-1-trillion-in-sales-will-go-through-ai-agents": {
+      "title": "McKinsey Says $1 Trillion in Sales Will Go Through AI Agents",
+      "channel": "NateBJones",
+      "used_on": "2026-04-08"
+    },
+    "NA_a-polymarket-bot-made-438-000-in-30-days-your-industry-is-ne": {
+      "title": "A Polymarket Bot Made $438,000 in 30 Days",
+      "channel": "NateBJones",
+      "used_on": "2026-04-09"
+    },
+    "NA_michael-nielsen-why-aliens-will-have-a-different-tech-stack": {
+      "title": "Michael Nielsen: Why Aliens Will Have a Different Tech Stack",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-09"
+    },
+    "NA_skill-issue-andrej-karpathy-on-code-agents-autoresearch-and": {
+      "title": "Andrej Karpathy: Skill Issue \u2014 Code Agents, Auto-Research",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-09"
+    },
+    "NA_nvidias-jensen-huang-on-reasoning-models-robotics-and-refuti": {
+      "title": "Jensen Huang: Reasoning Models, Robotics, and Refuting Doomers",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-09"
+    },
+    "NA_4-ai-labs-built-the-same-system-without-talking-to-each-othe": {
+      "title": "4 AI Labs Built the Same System Without Talking to Each Other",
+      "channel": "NateBJones",
+      "used_on": "2026-04-10"
+    },
+    "NA_nvidia-just-open-sourced-what-openai-wants-you-to-pay-consul": {
+      "title": "NVIDIA Just Open-Sourced What OpenAI Wants You to Pay Consultants For (NemoClaw)",
+      "channel": "NateBJones",
+      "used_on": "2026-04-10"
+    },
+    "NA_claude-blackmailed-its-developers-here-s-why-the-system-hasn": {
+      "title": "Claude Blackmailed Its Developers \u2014 Here's Why the System Hasn't Collapsed",
+      "channel": "NateBJones",
+      "used_on": "2026-04-10"
+    },
+    "NA_48-days-that-s-how-long-before-the-helium-runs-out-for-ai-ch": {
+      "title": "48 Days: How Long Before the Helium Runs Out for AI Chips",
+      "channel": "NateBJones",
+      "used_on": "2026-04-11"
+    },
+    "NA_dario-amodei-made-one-mistake-sam-altman-got-110-billion-her": {
+      "title": "Dario Made One Mistake, Sam Got $110 Billion",
+      "channel": "NateBJones",
+      "used_on": "2026-04-11"
+    },
+    "NA_a-markdown-file-just-replaced-your-most-expensive-design-mee": {
+      "title": "A Markdown File Replaced Your Most Expensive Design Meeting",
+      "channel": "NateBJones",
+      "used_on": "2026-04-11"
+    },
+    "NA_your-agent-produces-at-100x-your-org-reviews-at-3x-that-s-th": {
+      "title": "Your Agent Produces at 100x, Your Org Reviews at 3x",
+      "channel": "NateBJones",
+      "used_on": "2026-04-11"
+    },
+    "NA_anthropic-just-gave-you-3-tools-that-work-while-you-re-gone": {
+      "title": "Anthropic Just Gave You 3 Tools That Work While You're Gone",
+      "channel": "NateBJones",
+      "used_on": "2026-04-11"
+    },
+    "NA_ilya-sutskever-we-re-moving-from-the-age-of-scaling-to-the-a": {
+      "title": "Ilya Sutskever: We're Moving from the Age of Scaling",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-11"
+    },
+    "NA_claude-mythos-changes-everything-your-ai-stack-isn-t-ready": {
+      "title": "Claude Mythos Changes Everything: Your AI Stack Isn't Ready",
+      "channel": "NateBJones",
+      "used_on": "2026-04-12"
+    },
+    "NA_gpt-5-4-let-mickey-mouse-into-a-production-database-nobody-n": {
+      "title": "GPT-5.4 Let Mickey Mouse Into a Production Database",
+      "channel": "NateBJones",
+      "used_on": "2026-04-12"
+    },
+    "NA_three-labs-just-stole-claude-s-brain-here-s-what-it-broke-an": {
+      "title": "Three Labs Just Stole Claude's Brain",
+      "channel": "NateBJones",
+      "used_on": "2026-04-12"
+    },
+    "NA_andrej-karpathy-were-summoning-ghosts-not-building-animals": {
+      "title": "Andrej Karpathy: We're Summoning Ghosts, Not Building Animals",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_satya-nadella-how-microsoft-thinks-about-agi": {
+      "title": "Satya Nadella: How Microsoft Thinks About AGI",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_stop-accepting-ai-output-that-looks-right-the-other-17-is-ev": {
+      "title": "Stop Accepting AI Output That Looks Right \u2014 The Other 17% Is Everything",
+      "channel": "NateBJones",
+      "used_on": "2026-04-13"
+    },
+    "NA_what-are-we-scaling": {
+      "title": "What Are We Scaling",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_you-re-building-ai-agents-on-layers-that-won-t-exist-in-18-m": {
+      "title": "You're Building AI Agents on Layers That Won't Exist in 18 Months",
+      "channel": "NateBJones",
+      "used_on": "2026-04-13"
+    },
+    "NA_the-ai-code-slop-risk-or-opportunity": {
+      "title": "The AI Code Slop Risk or Opportunity",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_who-s-actually-funding-the-ai-buildout": {
+      "title": "Who's Actually Funding the AI Buildout",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_no-priors-live-is-the-saas-bear-thesis-overblown-mongodb-ceo": {
+      "title": "No Priors Live: Is the SaaS Bear Thesis Overblown? MongoDB CEO",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_the-largest-untapped-market-inside-u-s-defense": {
+      "title": "The Largest Untapped Market Inside U.S. Defense",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_no-priors-ep-143": {
+      "title": "No Priors Ep. 143 \u2014 ElevenLabs Co-Founder Mati Staniszewski",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_no-priors-ep-142": {
+      "title": "No Priors Ep. 142 \u2014 Harvey Co-Founder and President Gabe Pereyra",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-13"
+    },
+    "NA_how-ai-agents-will-transform-the-financial-system-with-circl": {
+      "title": "How AI Agents Will Transform the Financial System \u2014 Jeremy Allaire (Circle)",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-14"
+    },
+    "NA_no-priors-ep-144": {
+      "title": "No Priors Year-End 2025 Predictions \u2014 Ep. 144",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-14"
+    },
+    "NA_there-are-only-5-safe-places-to-build-in-ai-right-now-are-yo": {
+      "title": "There Are Only 5 Safe Places to Build in AI Right Now",
+      "channel": "NateBJones",
+      "used_on": "2026-04-13"
+    },
+    "NA_i-analyzed-512-000-lines-of-leaked-code-it-shows-what-s-comi": {
+      "title": "I Analyzed 512,000 Lines of Leaked Code: It Shows What's Coming",
+      "channel": "NateBJones",
+      "used_on": "2026-04-13"
+    },
+    "NA_the-3-trillion-ipo-trap-nobody-s-talking-about": {
+      "title": "The $3 Trillion IPO Trap Nobody's Talking About",
+      "channel": "NateBJones",
+      "used_on": "2026-04-14"
+    },
+    "NA_this-new-method-just-killed-ram-limitations": {
+      "title": "This New Method Just Killed RAM Limitations",
+      "channel": "NateBJones",
+      "used_on": "2026-04-14"
+    },
+    "NA_i-watched-3-companies-lay-off-their-managers-all-3-hit-the-s": {
+      "title": "I Watched 3 Companies Lay Off Their Managers \u2014 All 3 Hit the Same Wall",
+      "channel": "NateBJones",
+      "used_on": "2026-04-14"
+    },
+    "NA_ai-for-atoms-how-periodic-labs-is-revolutionizing-materials-": {
+      "title": "AI Foundation Lab for Atoms \u2014 Liam Fettis (Periodic Labs)",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-15"
+    },
+    "NA_ai-is-critical-for-humanitys-survival-cisco-president-on-the": {
+      "title": "AI is Critical for Humanity's Survival \u2014 Jeetu Patel (Cisco)",
+      "channel": "Lenny's Podcast",
+      "used_on": "2026-04-15"
+    },
+    "NA_from-note-taking-app-to-ai-workspace-the-simon-last-intervie": {
+      "title": "From Note-Taking App to AI Workspace \u2014 Simon Last (Notion)",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-16"
+    },
+    "NA_no-priors-ep-141-sunday-robotics": {
+      "title": "Sunday Robotics Co-Founders \u2014 Home robots, 10M trajectories, the GPT moment for manipulation",
+      "channel": "No Priors Podcast",
+      "used_on": "2026-04-17"
+    },
+    "NA_your-ai-skills-work-when-you-watch-they-break-when-you-don-t": {
+      "title": "Your AI Skills Work When You Watch \u2014 They Break When You Don't",
+      "channel": "NateBJones",
+      "used_on": "2026-04-17"
+    },
+    "NA_richard-sutton-father-of-rl-thinks-llms-are-a-dead-end": {
+      "title": "Richard Sutton: Father of RL Thinks LLMs Are a Dead End",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-18"
+    },
+    "NA_fully-autonomous-robots-are-much-closer-than-you-think-serge": {
+      "title": "Fully Autonomous Robots Are Much Closer Than You Think",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-18"
+    },
+    "NA_some-thoughts-on-the-sutton-interview": {
+      "title": "Some Thoughts on the Sutton Interview",
+      "channel": "Dwarkesh Podcast",
+      "used_on": "2026-04-18"
+    },
+    "NA_5-token-habits-that-cost-you-10x-on-every-claude-session": {
+      "title": "5 Token Habits That Cost You 10x on Every Claude Session",
+      "channel": "NateBJones",
+      "used_on": "2026-04-18"
+    },
+    "NA_why-every-ai-skill-you-learned-6-months-ago-is-already-wrong": {
+      "title": "Why Every AI Skill You Learned 6 Months Ago Is Already Wrong",
+      "channel": "NateBJones",
+      "used_on": "2026-04-18"
+    },
+    "NA_i-broke-down-anthropic-s-2-5-billion-leak-your-agent-is-miss": {
+      "title": "I Broke Down Anthropic's $2.5B Leak",
+      "channel": "NateBJones",
+      "used_on": "2026-04-18"
+    }
+  },
+  "substack": {
+    "www_dwarkesh_com__p_dow-anthropic__11328f44a7cd.md": {
+      "title": "The most important question nobody's asking about AI",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-03-16"
+    },
+    "www_latent_space__p_ainews-the-high-return-activity-of__7a6a94d9f911.md": {
+      "title": "AINews: The high-return activity of raising your aspirations for LLMs",
+      "source": "Latent Space",
+      "used_on": "2026-03-16"
+    },
+    "www_latent_space__p_ainews-nvidia-gtc-jensen-goes-hard__c44b4b819c96.md": {
+      "title": "AINews: NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and $1T backlog",
+      "source": "Latent Space",
+      "used_on": "2026-03-17"
+    },
+    "www_latent_space__p_felix-anthropic__54203e87e060.md": {
+      "title": "Why Anthropic Thinks AI Should Have Its Own Computer \u2014 Felix Rieseberg",
+      "source": "Latent Space",
+      "used_on": "2026-03-18"
+    },
+    "www_latent_space__p_ainews-claude-cowork-dispatch-anthropics__b27f24603554.md": {
+      "title": "AINews: Claude Cowork Dispatch \u2014 Anthropic's Answer to OpenClaw",
+      "source": "Latent Space",
+      "used_on": "2026-03-18"
+    },
+    "www_latent_space__p_ainews-context-drought__b8a64e2a38c4.md": {
+      "title": "AINews: Context Drought",
+      "source": "Latent Space",
+      "used_on": "2026-04-05"
+    },
+    "www_latent_space__p_ainews-gpt-54-sota-knowledge-work__376b626b212e.md": {
+      "title": "AINews: GPT-5.4 SOTA knowledge work",
+      "source": "Latent Space",
+      "used_on": "2026-04-05"
+    },
+    "www_dwarkesh_com__p_dario-amodei-2__bb7fb810cf2a.md": {
+      "title": "Dario Amodei \u2014 We are near the end of the exponential",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-05"
+    },
+    "www_dwarkesh_com__p_terence-tao__41437a8c72b5.md": {
+      "title": "Terence Tao \u2014 Kepler, Newton, and the True Nature of Mathematical Discovery",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-06"
+    },
+    "www_latent_space__p_pmarca__94f10b203895.md": {
+      "title": "Marc Andreessen: The Death of the Browser, Pi + OpenClaw, and Why This Time Is Different",
+      "source": "Latent Space",
+      "used_on": "2026-04-06"
+    },
+    "www_latent_space__p_ainews-gemma-4-the-best-small-multimodal__39b9ecdd4984.md": {
+      "title": "AINews: Gemma 4 \u2014 The Best Small Multimodal Open Models",
+      "source": "Latent Space",
+      "used_on": "2026-04-06"
+    },
+    "www_latent_space__p_ainews-good-friday__bf74ddb5f7b1.md": {
+      "title": "AINews: Good Friday",
+      "source": "Latent Space",
+      "used_on": "2026-04-06"
+    },
+    "www_latent_space__p_ainews-is-harness-engineering-real__1363415aa7a3.md": {
+      "title": "AINews: Is Harness Engineering Real?",
+      "source": "Latent Space / swyx",
+      "used_on": "2026-04-07"
+    },
+    "www_latent_space__p_ainews-replit-agent-4-the-knowledge__341a19f95000.md": {
+      "title": "AINews: Replit Agent 4 \u2014 The Knowledge Work Agent",
+      "source": "Latent Space",
+      "used_on": "2026-04-07"
+    },
+    "www_latent_space__p_reviews-dead__294afe1b0c4a.md": {
+      "title": "How to Kill the Code Review",
+      "source": "Latent Space / Ankit Jain",
+      "used_on": "2026-04-07"
+    },
+    "www_omarknows_ai__p_lobster-got-hired.md": {
+      "title": "Lobster Got Hired",
+      "source": "omarknows.ai / Omar Shahine",
+      "used_on": "2026-04-07"
+    },
+    "www_latent_space__p_ainews-nano-banana-2-aka-gemini-31__ce2d8f978fc0.md": {
+      "title": "AINews: Nano Banana 2 aka Gemini 3.1 Flash Image Preview",
+      "source": "Latent Space",
+      "used_on": "2026-04-08"
+    },
+    "www_latent_space__p_metr__8f9ecff08165.md": {
+      "title": "METR's Joel Becker on Time Horizon Evals",
+      "source": "Latent Space",
+      "used_on": "2026-04-08"
+    },
+    "www_latent_space__p_turbopuffer__51b82fbb132a.md": {
+      "title": "Retrieval After RAG: Turbopuffer & Hybrid Search for Agents",
+      "source": "Latent Space",
+      "used_on": "2026-04-09"
+    },
+    "www_dwarkesh_com__p_elon-musk__84ed68147b3b.md": {
+      "title": "Elon Musk \u2014 In 36 months, the cheapest place to put AI will be space",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-10"
+    },
+    "www_dwarkesh_com__p_dylan-patel__a243926cf69a.md": {
+      "title": "Dylan Patel \u2014 Deep dive on the 3 big bottlenecks to scaling AI compute",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_dylanpatel-cooking__c4e3035284fb.md": {
+      "title": "Dylan Patel of SemiAnalysis on the $200B AI CapEx, Chip Wars",
+      "source": "Latent Space / In-Context Cooking",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_wtf2025__3c4d4d9a3479.md": {
+      "title": "AINews: WTF Happened in December 2025?",
+      "source": "Latent Space",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_cursor-third-era__969ea4e52c46.md": {
+      "title": "Cursor's Third Era: Cloud Agents",
+      "source": "Latent Space",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_ainews-openai-closes-110b-raise-from__4e7959512113.md": {
+      "title": "AINews: OpenAI closes $110B raise from Amazon, NVIDIA, SoftBank",
+      "source": "Latent Space",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_ainews-yann-lecuns-ami-labs-launches__afc52c94b072.md": {
+      "title": "AINews: Yann LeCun's AMI Labs launches with $1B seed",
+      "source": "Latent Space",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_paid-anthropic-distillation-and-how__997795bc07d3.md": {
+      "title": "Anthropic Distillation & How Models Cheat (SWE-Bench Dead)",
+      "source": "Latent Space",
+      "used_on": "2026-04-10"
+    },
+    "www_latent_space__p_box__f7d17585796c.md": {
+      "title": "Every Agent Needs a Box \u2014 Aaron Levie",
+      "source": "Latent Space",
+      "used_on": "2026-04-11"
+    },
+    "www_dwarkesh_com__p_notes-on-space-gpus__0a0c3749932a.md": {
+      "title": "Notes on Space GPUs",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-11"
+    },
+    "www_dwarkesh_com__p_ada-palmer__aa5521883b03.md": {
+      "title": "Ada Palmer \u2014 How Cosplaying Ancient Rome Led to the Renaissance",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-11"
+    },
+    "www_latent_space__p_ainews-truth-in-the-time-of-artifice__ea89769c8b90.md": {
+      "title": "AINews: Truth in the Time of Artifice",
+      "source": "Latent Space",
+      "used_on": "2026-04-11"
+    },
+    "www_latent_space__p_ainews-ai-engineer-will-be-the-last__0e505378cfba.md": {
+      "title": "AINews: AI Engineer will be the LAST job",
+      "source": "Latent Space",
+      "used_on": "2026-04-11"
+    },
+    "www_dwarkesh_com__p_hiring-scouts-to-help-me-find-guests__72df93868cfd.md": {
+      "title": "Hiring Scouts to Find Guests",
+      "source": "Dwarkesh",
+      "used_on": "2026-04-11"
+    },
+    "www_dwarkesh_com__p_notes-jan-10-2026__834ffc829a17.md": {
+      "title": "What I've Been Reading Recently - Jan 10, 2026",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-12"
+    },
+    "www_latent_space__p_ainews-anthropic-30b-arr-project__e228099313d1.md": {
+      "title": "AINews: Anthropic @ $30B ARR, Project GlassWing and Claude Mythos Preview",
+      "source": "Latent Space",
+      "used_on": "2026-04-13"
+    },
+    "www_latent_space__p_ainews-meta-superintelligence-labs__b2c2b9a4b931.md": {
+      "title": "AINews: Meta Superintelligence Labs announces Muse Spark",
+      "source": "Latent Space",
+      "used_on": "2026-04-13"
+    },
+    "www_latent_space__p_ainews-ai-engineer-europe-2026__532470aab78e.md": {
+      "title": "AINews: AI Engineer Europe 2026",
+      "source": "Latent Space",
+      "used_on": "2026-04-13"
+    },
+    "www_dwarkesh_com__p_michael-nielsen__a426ef754c7b.md": {
+      "title": "Michael Nielsen - How science actually progresses",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-13"
+    },
+    "www_latent_space__p_ainews-humanitys-last-gasp__49784285c6b3.md": {
+      "title": "AINews: Humanity's Last Gasp",
+      "source": "Latent Space",
+      "used_on": "2026-04-16"
+    },
+    "www_latent_space__p_notion__6b3e40dc6639.md": {
+      "title": "Notion's Token Town: 5 Rebuilds, 100+ Tools, MCP vs CLIs",
+      "source": "Latent Space",
+      "used_on": "2026-04-16"
+    },
+    "www_latent_space__p_ainews-top-local-models-list-april__4a20e4ff9838.md": {
+      "title": "AINews: Top Local Models List - April 2026",
+      "source": "Latent Space",
+      "used_on": "2026-04-16"
+    },
+    "www_dwarkesh_com__p_jensen-huang__fb65385aa939.md": {
+      "title": "Jensen Huang \u2013 TPU competition, Nvidia's supply chain moat",
+      "source": "Dwarkesh Podcast",
+      "used_on": "2026-04-16"
+    },
+    "www_latent_space__p_ainews-anthropic-claude-opus-47-literally__372778ecf9b8.md": {
+      "title": "AINews: Anthropic Claude Opus 4.7 \u2014 literally one step better than 4.6 in every dimension",
+      "source": "Latent Space",
+      "used_on": "2026-04-17"
+    },
+    "www_latent_space__p_ainews-rip-pull-requests-2005-2026__5320c0fab89b.md": {
+      "title": "AINews: RIP Pull Requests (2005-2026)",
+      "source": "Latent Space",
+      "used_on": "2026-04-17"
+    },
+    "www_dwarkesh_com__p_what-i-learned-april-15__7a9ea299f5d4.md": {
+      "title": "What I learned this week \u2014 Pretraining parallelisms, distillation, Mythos and cybersecurity",
+      "source": "Dwarkesh Patel",
+      "used_on": "2026-04-17"
+    }
+  },
+  "hn": {
+    "47393908": {
+      "title": "What is agentic engineering?",
+      "used_on": "2026-03-16"
+    },
+    "47388646": {
+      "title": "Ask HN: How is AI-assisted coding going for you professionally?",
+      "used_on": "2026-03-16"
+    },
+    "47386636": {
+      "title": "The 100 hour gap between a vibecoded prototype and a working product",
+      "used_on": "2026-03-16"
+    },
+    "47400261": {
+      "title": "Apideck CLI \u2013 An AI-agent interface with much lower context consumption than MCP",
+      "used_on": "2026-03-17"
+    },
+    "47401734": {
+      "title": "Speed at the cost of quality: Study of use of Cursor AI in open source projects (2025)",
+      "used_on": "2026-03-17"
+    },
+    "47404796": {
+      "title": "Leanstral: Open-source agent for trustworthy coding and formal proof engineering",
+      "used_on": "2026-03-17"
+    },
+    "47400868": {
+      "title": "Show HN: Claude Code skills that build complete Godot games",
+      "used_on": "2026-03-17"
+    },
+    "47401901": {
+      "title": "Language model teams as distributed systems",
+      "used_on": "2026-03-17"
+    },
+    "47417804": {
+      "title": "Get Shit Done: A meta-prompting, context engineering and spec-driven dev system",
+      "used_on": "2026-03-18"
+    },
+    "47412569": {
+      "title": "Show HN: Sub-millisecond VM sandboxes using CoW memory forking (zeroboot)",
+      "used_on": "2026-03-18"
+    },
+    "47418722": {
+      "title": "Why AI systems don't learn \u2013 On autonomous learning from cognitive science",
+      "used_on": "2026-03-18"
+    },
+    "47412015": {
+      "title": "Show HN: March Madness Bracket Challenge for AI Agents Only",
+      "used_on": "2026-03-18"
+    },
+    "47420493": {
+      "title": "Launch an autonomous AI agent with sandboxed execution in 2 lines of code",
+      "used_on": "2026-03-18"
+    },
+    "47633396": {
+      "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+      "used_on": "2026-04-05"
+    },
+    "47642569": {
+      "title": "How many products does Microsoft have named 'Copilot'?",
+      "used_on": "2026-04-05"
+    },
+    "47638810": {
+      "title": "Components of a Coding Agent",
+      "used_on": "2026-04-05"
+    },
+    "47633855": {
+      "title": "Claude Code Found a Linux Vulnerability Hidden for 23 Years",
+      "used_on": "2026-04-05"
+    },
+    "47637757": {
+      "title": "Embarrassingly simple self-distillation improves code generation",
+      "used_on": "2026-04-05"
+    },
+    "47640875": {
+      "title": "LLM Wiki \u2013 example of an 'idea file'",
+      "used_on": "2026-04-05"
+    },
+    "47631118": {
+      "title": "Artemis II crew take spectacular image of Earth",
+      "used_on": "2026-04-06"
+    },
+    "47639524": {
+      "title": "Author of Careless People banned from saying anything negative about Meta",
+      "used_on": "2026-04-06"
+    },
+    "47640728": {
+      "title": "Show HN: A game where you build a GPU",
+      "used_on": "2026-04-06"
+    },
+    "47636435": {
+      "title": "Emotion concepts and their function in a large language model",
+      "used_on": "2026-04-06"
+    },
+    "47644864": {
+      "title": "AWS Engineer Reports PostgreSQL Perf Halved by Linux 7.0",
+      "used_on": "2026-04-06"
+    },
+    "47645037": {
+      "title": "Shooting down ideas is not a skill",
+      "used_on": "2026-04-06"
+    },
+    "47655155": {
+      "title": "Cognitive Surrender Is a New and Useful Term for How AI Melts Brains",
+      "used_on": "2026-04-06"
+    },
+    "47659135": {
+      "title": "Sam Altman may control our future \u2013 can he be trusted?",
+      "used_on": "2026-04-07"
+    },
+    "47660925": {
+      "title": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
+      "used_on": "2026-04-07"
+    },
+    "47664912": {
+      "title": "The cult of vibe coding is dogfooding run amok",
+      "used_on": "2026-04-07"
+    },
+    "47661439": {
+      "title": "I won't download your app. The web version is a-ok",
+      "used_on": "2026-04-07"
+    },
+    "47655408": {
+      "title": "Show HN: I built a tiny LLM to demystify how language models work",
+      "used_on": "2026-04-07"
+    },
+    "47658146": {
+      "title": "France pulls last gold held in US",
+      "used_on": "2026-04-07"
+    },
+    "47651703": {
+      "title": "Microsoft hasn't had a coherent GUI strategy since Petzold",
+      "used_on": "2026-04-07"
+    },
+    "47662234": {
+      "title": "A cryptography engineer's perspective on quantum computing timelines",
+      "used_on": "2026-04-07"
+    },
+    "47666024": {
+      "title": "Show HN: Ghost Pepper \u2013 Local hold-to-talk speech-to-text for macOS",
+      "used_on": "2026-04-07"
+    },
+    "47652007": {
+      "title": "Show HN: Real-time AI (audio/video in, voice out) on an M3 Pro with Gemma E2B",
+      "used_on": "2026-04-07"
+    },
+    "47663147": {
+      "title": "Launch HN: Freestyle \u2013 Sandboxes for Coding Agents",
+      "used_on": "2026-04-07"
+    },
+    "47667717": {
+      "title": "Anthropic expands partnership with Google and Broadcom for next-gen compute",
+      "used_on": "2026-04-07"
+    },
+    "47664205": {
+      "title": "Adobe modifies hosts file to detect whether Creative Cloud is installed",
+      "used_on": "2026-04-07"
+    },
+    "47666488": {
+      "title": "A macOS bug that causes TCP networking to stop working after 49.7 days",
+      "used_on": "2026-04-07"
+    },
+    "47656501": {
+      "title": "The 1987 game 'The Last Ninja' was 40 kilobytes",
+      "used_on": "2026-04-07"
+    },
+    "47655367": {
+      "title": "Show HN: Gemma Gem \u2013 AI model embedded in a browser \u2013 no API keys, no cloud",
+      "used_on": "2026-04-07"
+    },
+    "47662596": {
+      "title": "AI singer now occupies eleven spots on iTunes singles chart",
+      "used_on": "2026-04-07"
+    },
+    "47660853": {
+      "title": "Book review: There Is No Antimemetics Division",
+      "used_on": "2026-04-07"
+    },
+    "47679121": {
+      "title": "Project Glasswing: Securing critical software for the AI era",
+      "used_on": "2026-04-08"
+    },
+    "47679258": {
+      "title": "System Card: Claude Mythos Preview",
+      "used_on": "2026-04-08"
+    },
+    "47682276": {
+      "title": "US and Iran agree to provisional ceasefire",
+      "used_on": "2026-04-08"
+    },
+    "47677853": {
+      "title": "GLM-5.1: Towards Long-Horizon Tasks",
+      "used_on": "2026-04-08"
+    },
+    "47680404": {
+      "title": "S3 Files and the Changing Face of S3",
+      "used_on": "2026-04-08"
+    },
+    "47675625": {
+      "title": "Cloudflare targets 2029 for full post-quantum security",
+      "used_on": "2026-04-08"
+    },
+    "47676509": {
+      "title": "Lunar Flyby \u2014 NASA",
+      "used_on": "2026-04-08"
+    },
+    "47673360": {
+      "title": "Show HN: Brutalist Concrete Laptop Stand",
+      "used_on": "2026-04-08"
+    },
+    "47687273": {
+      "title": "Git commands I run before reading any code",
+      "used_on": "2026-04-09"
+    },
+    "47686549": {
+      "title": "Veracrypt project update (Microsoft terminates account)",
+      "used_on": "2026-04-09"
+    },
+    "47689648": {
+      "title": "ML promises to be profoundly weird",
+      "used_on": "2026-04-09"
+    },
+    "47687248": {
+      "title": "Skoda DuoBell: bicycle bell that penetrates noise-cancelling headphones",
+      "used_on": "2026-04-09"
+    },
+    "47689237": {
+      "title": "US cities are axing Flock Safety surveillance technology",
+      "used_on": "2026-04-09"
+    },
+    "47692043": {
+      "title": "Muse Spark: Scaling towards personal superintelligence",
+      "used_on": "2026-04-09"
+    },
+    "47696035": {
+      "title": "John Deere to pay $99M in right-to-repair settlement",
+      "used_on": "2026-04-09"
+    },
+    "47697870": {
+      "title": "LittleSnitch for Linux",
+      "used_on": "2026-04-09"
+    },
+    "47691730": {
+      "title": "I ported Mac OS X to the Nintendo Wii",
+      "used_on": "2026-04-09"
+    },
+    "47706268": {
+      "title": "EFF is leaving X",
+      "used_on": "2026-04-10"
+    },
+    "47703419": {
+      "title": "Meta removes ads for social media addiction litigation",
+      "used_on": "2026-04-10"
+    },
+    "47708818": {
+      "title": "Native Instant Space Switching on macOS",
+      "used_on": "2026-04-10"
+    },
+    "47701148": {
+      "title": "Top laptops to use with FreeBSD",
+      "used_on": "2026-04-10"
+    },
+    "47700972": {
+      "title": "Reallocating $100/Month Claude Code Spend to Zed and OpenRouter",
+      "used_on": "2026-04-10"
+    },
+    "47710149": {
+      "title": "Microsoft is employing dark patterns to goad users into paying for storage",
+      "used_on": "2026-04-10"
+    },
+    "47701572": {
+      "title": "Wit, unker, Git: The lost medieval pronouns of English intimacy",
+      "used_on": "2026-04-10"
+    },
+    "47702499": {
+      "title": "Lichess and Take Take Take sign cooperation agreement",
+      "used_on": "2026-04-10"
+    },
+    "47707477": {
+      "title": "Old laptops in a colo as low cost servers",
+      "used_on": "2026-04-10"
+    },
+    "47706140": {
+      "title": "Unfolder for Mac \u2013 3D model unfolding for papercraft",
+      "used_on": "2026-04-10"
+    },
+    "47710907": {
+      "title": "Many African families spend fortunes burying their dead",
+      "used_on": "2026-04-10"
+    },
+    "47709158": {
+      "title": "Charcuterie \u2013 Visual similarity Unicode explorer",
+      "used_on": "2026-04-10"
+    },
+    "47709130": {
+      "title": "Reverse engineering Gemini's SynthID detection",
+      "used_on": "2026-04-10"
+    },
+    "47704804": {
+      "title": "How NASA built Artemis II's fault-tolerant computer",
+      "used_on": "2026-04-10"
+    },
+    "47712340": {
+      "title": "Microsoft PhotoDNA scanning problem",
+      "used_on": "2026-04-10"
+    },
+    "47725583": {
+      "title": "Artemis II safely splashes down",
+      "used_on": "2026-04-11"
+    },
+    "47722096": {
+      "title": "Molotov cocktail is hurled at home of Sam Altman",
+      "used_on": "2026-04-11"
+    },
+    "47724921": {
+      "title": "Sam Altman's response to Molotov cocktail incident",
+      "used_on": "2026-04-11"
+    },
+    "47719274": {
+      "title": "Helium is hard to replace",
+      "used_on": "2026-04-11"
+    },
+    "47716490": {
+      "title": "FBI used iPhone notification data to retrieve deleted Signal messages",
+      "used_on": "2026-04-11"
+    },
+    "47712656": {
+      "title": "We've raised $17M to build what comes after Git \u2014 GitButler",
+      "used_on": "2026-04-11"
+    },
+    "47721953": {
+      "title": "AI assistance when contributing to the Linux kernel",
+      "used_on": "2026-04-11"
+    },
+    "47719602": {
+      "title": "You can't trust macOS Privacy and Security settings",
+      "used_on": "2026-04-11"
+    },
+    "47721946": {
+      "title": "JSON formatter Chrome plugin now closed and injecting adware",
+      "used_on": "2026-04-11"
+    },
+    "47717847": {
+      "title": "CPU-Z and HWMonitor compromised",
+      "used_on": "2026-04-11"
+    },
+    "47713495": {
+      "title": "Team from ETH Zurich make high quality quantum swap gate using a geometric phase",
+      "used_on": "2026-04-11"
+    },
+    "47718812": {
+      "title": "Why do we tell ourselves scary stories about AI?",
+      "used_on": "2026-04-11"
+    },
+    "47720418": {
+      "title": "Launch HN: Twill.ai",
+      "used_on": "2026-04-11"
+    },
+    "47722562": {
+      "title": "Nowhere is safe",
+      "used_on": "2026-04-11"
+    },
+    "47732020": {
+      "title": "Small models also found the vulnerabilities that Mythos found",
+      "used_on": "2026-04-12"
+    },
+    "47733217": {
+      "title": "How We Broke Top AI Agent Benchmarks: And What Comes Next",
+      "used_on": "2026-04-12"
+    },
+    "47733561": {
+      "title": "447 TB/cm\u00b2 at zero retention energy \u2013 atomic-scale memory on fluorographane",
+      "used_on": "2026-04-12"
+    },
+    "47724352": {
+      "title": "Filing the corners off my MacBooks",
+      "used_on": "2026-04-12"
+    },
+    "47739260": {
+      "title": "Pro Max 5x quota exhausted in 1.5 hours despite moderate usage",
+      "used_on": "2026-04-13"
+    },
+    "47736476": {
+      "title": "Anthropic downgraded cache TTL on March 6th",
+      "used_on": "2026-04-13"
+    },
+    "47736555": {
+      "title": "I run multiple $10K MRR companies on a $20/month tech stack",
+      "used_on": "2026-04-13"
+    },
+    "47745120": {
+      "title": "Tech valuations are back to pre-AI boom levels",
+      "used_on": "2026-04-13"
+    },
+    "47743700": {
+      "title": "European AI. A playbook to own it",
+      "used_on": "2026-04-13"
+    },
+    "47738827": {
+      "title": "Bring Back Idiomatic Design (2023)",
+      "used_on": "2026-04-13"
+    },
+    "47739313": {
+      "title": "Seven countries now generate 100% of their electricity from renewable energy",
+      "used_on": "2026-04-13"
+    },
+    "47738883": {
+      "title": "Tell HN: Docker pull fails in Spain due to football Cloudflare block",
+      "used_on": "2026-04-13"
+    },
+    "47741527": {
+      "title": "Ask HN: What Are You Working On? (April 2026)",
+      "used_on": "2026-04-13"
+    },
+    "47743628": {
+      "title": "The peril of laziness lost",
+      "used_on": "2026-04-13"
+    },
+    "47745284": {
+      "title": "Taking on CUDA with ROCm: 'One Step After Another'",
+      "used_on": "2026-04-13"
+    },
+    "47738864": {
+      "title": "Why AI Sucks at Front End",
+      "used_on": "2026-04-13"
+    },
+    "47747017": {
+      "title": "Apple's accidental moat: How the AI Loser may end up winning",
+      "used_on": "2026-04-13"
+    },
+    "47741701": {
+      "title": "DIY Soft Drinks",
+      "used_on": "2026-04-13"
+    },
+    "47702887": {
+      "title": "Most people can't juggle one ball",
+      "used_on": "2026-04-13"
+    },
+    "47742200": {
+      "title": "Show HN: boringBar - taskbar-style dock replacement for macOS",
+      "used_on": "2026-04-13"
+    },
+    "47719490": {
+      "title": "I gave every train in New York an instrument",
+      "used_on": "2026-04-13"
+    },
+    "47755629": {
+      "title": "Someone bought 30 WordPress plugins and planted a backdoor in all of them",
+      "used_on": "2026-04-14"
+    },
+    "47757495": {
+      "title": "GitHub Stacked PRs",
+      "used_on": "2026-04-14"
+    },
+    "47753472": {
+      "title": "Nothing Ever Happens: Polymarket bot that always buys No on non-sports markets",
+      "used_on": "2026-04-14"
+    },
+    "47750872": {
+      "title": "Servo is now available on crates.io",
+      "used_on": "2026-04-14"
+    },
+    "47744255": {
+      "title": "I ran Gemma 4 as a local model in Codex CLI",
+      "used_on": "2026-04-14"
+    },
+    "47759709": {
+      "title": "Lean proved this program correct; then I found a bug",
+      "used_on": "2026-04-14"
+    },
+    "47759292": {
+      "title": "The AI revolution in math has arrived",
+      "used_on": "2026-04-14"
+    },
+    "47760529": {
+      "title": "DaVinci Resolve releases Photo Editor",
+      "used_on": "2026-04-14"
+    },
+    "47768133": {
+      "title": "Claude Code Routines",
+      "used_on": "2026-04-15"
+    },
+    "47761625": {
+      "title": "Multi-Agentic Software Development Is a Distributed Systems Problem",
+      "used_on": "2026-04-15"
+    },
+    "47704729": {
+      "title": "The M\u00d7N problem of tool calling and open-source models",
+      "used_on": "2026-04-15"
+    },
+    "47762641": {
+      "title": "Introspective Diffusion Language Models",
+      "used_on": "2026-04-15"
+    },
+    "47773640": {
+      "title": "OpenAI's $852B valuation faces investor scrutiny",
+      "used_on": "2026-04-15"
+    },
+    "47772906": {
+      "title": "Apple App Store threatened to remove Grok over deepfakes",
+      "used_on": "2026-04-15"
+    },
+    "47768339": {
+      "title": "Turn your best AI prompts into one-click tools in Chrome",
+      "used_on": "2026-04-15"
+    },
+    "47770770": {
+      "title": "OpenAI: Trusted access for cyber defense",
+      "used_on": "2026-04-15"
+    },
+    "47768813": {
+      "title": "I wrote to Flock Safety to opt out of domestic spying",
+      "used_on": "2026-04-15"
+    },
+    "47772012": {
+      "title": "Stop Flock",
+      "used_on": "2026-04-15"
+    },
+    "47762864": {
+      "title": "Backblaze has stopped backing up OneDrive and Dropbox folders",
+      "used_on": "2026-04-15"
+    },
+    "47766370": {
+      "title": "LangAlpha \u2013 Claude Code for Wall Street",
+      "used_on": "2026-04-15"
+    },
+    "47782570": {
+      "title": "Google broke its promise to me \u2013 now ICE has my data",
+      "used_on": "2026-04-16"
+    },
+    "47769089": {
+      "title": "Cybersecurity looks like proof of work now",
+      "used_on": "2026-04-16"
+    },
+    "47774971": {
+      "title": "Google Gemma 4 Runs Natively on iPhone with Full Offline AI Inference",
+      "used_on": "2026-04-16"
+    },
+    "47780456": {
+      "title": "Cal.com is going closed source",
+      "used_on": "2026-04-16"
+    },
+    "47783940": {
+      "title": "Ask HN: Who is using OpenClaw?",
+      "used_on": "2026-04-16"
+    },
+    "47785053": {
+      "title": "Does Gas Town 'steal' usage from users' LLM credits to improve itself?",
+      "used_on": "2026-04-16"
+    },
+    "47779094": {
+      "title": "Gemini Robotics-ER 1.6",
+      "used_on": "2026-04-16"
+    },
+    "47782256": {
+      "title": "The Gemini app is now on Mac",
+      "used_on": "2026-04-16"
+    },
+    "47780971": {
+      "title": "Show HN: Libretto \u2013 Making AI browser automations deterministic",
+      "used_on": "2026-04-16"
+    },
+    "47787854": {
+      "title": "Arguing with Agents",
+      "used_on": "2026-04-16"
+    },
+    "47793411": {
+      "title": "Claude Opus 4.7",
+      "used_on": "2026-04-17"
+    },
+    "47792764": {
+      "title": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "used_on": "2026-04-17"
+    },
+    "47796469": {
+      "title": "Codex for almost everything",
+      "used_on": "2026-04-17"
+    },
+    "47792718": {
+      "title": "The future of everything is lies, I guess",
+      "used_on": "2026-04-17"
+    },
+    "47788542": {
+      "title": "Darkbloom \u2013 Private inference on idle Macs",
+      "used_on": "2026-04-17"
+    },
+    "47792593": {
+      "title": "Cloudflare Email Service",
+      "used_on": "2026-04-17"
+    },
+    "47791871": {
+      "title": "\u20ac54k spike in 13h from unrestricted Firebase browser key accessing Gemini APIs",
+      "used_on": "2026-04-17"
+    },
+    "47796830": {
+      "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+      "used_on": "2026-04-17"
+    },
+    "47792538": {
+      "title": "Cloudflare's AI Platform: an inference layer designed for agents",
+      "used_on": "2026-04-17"
+    },
+    "47791212": {
+      "title": "Codex Hacked a Samsung TV",
+      "used_on": "2026-04-17"
+    },
+    "47791236": {
+      "title": "AI cybersecurity is not proof of work",
+      "used_on": "2026-04-17"
+    },
+    "47792374": {
+      "title": "Artifacts: Versioned storage that speaks Git",
+      "used_on": "2026-04-17"
+    },
+    "47778920": {
+      "title": "US v. Heppner (S.D.N.Y. 2026) no attorney-client privilege for AI chats",
+      "used_on": "2026-04-17"
+    },
+    "47798244": {
+      "title": "GPT-Rosalind for life sciences research",
+      "used_on": "2026-04-17"
+    },
+    "47800738": {
+      "title": "Everything we like is a psyop",
+      "used_on": "2026-04-17"
+    },
+    "47801494": {
+      "title": "AI companies are buying the Slack data of failed startups",
+      "used_on": "2026-04-17"
+    },
+    "47797665": {
+      "title": "Android CLI: Build Android apps 3x faster using any agent",
+      "used_on": "2026-04-17"
+    },
+    "47788473": {
+      "title": "RedSun: System user access on Win 11/10 and Server with the April 2026 Update",
+      "used_on": "2026-04-17"
+    },
+    "47806725": {
+      "title": "Claude Design \u2014 Anthropic Labs",
+      "used_on": "2026-04-18"
+    },
+    "47804965": {
+      "title": "Isaac Asimov: The Last Question (1956)",
+      "used_on": "2026-04-18"
+    },
+    "47806304": {
+      "title": "Ban the sale of precise geolocation",
+      "used_on": "2026-04-18"
+    },
+    "47807006": {
+      "title": "Measuring Claude 4.7's tokenizer costs",
+      "used_on": "2026-04-18"
+    },
+    "47808268": {
+      "title": "Show HN: Smol machines \u2013 subsecond coldstart",
+      "used_on": "2026-04-18"
+    },
+    "47803844": {
+      "title": "Ada, its design, and the language that built the languages",
+      "used_on": "2026-04-18"
+    },
+    "47807619": {
+      "title": "Hyperscalers have already outspent most famous US megaprojects",
+      "used_on": "2026-04-18"
+    },
+    "47807583": {
+      "title": "Spending 3 months coding by hand",
+      "used_on": "2026-04-18"
+    },
+    "47778922": {
+      "title": "Are the costs of AI agents also rising exponentially?",
+      "used_on": "2026-04-18"
+    },
+    "47796818": {
+      "title": "Show HN: Stage \u2013 Putting humans back in control of code review",
+      "used_on": "2026-04-18"
+    },
+    "47806845": {
+      "title": "Slop Cop",
+      "used_on": "2026-04-18"
+    },
+    "47754603": {
+      "title": "Average is all you need",
+      "used_on": "2026-04-18"
+    },
+    "47806777": {
+      "title": "NIST gives up enriching most CVEs",
+      "used_on": "2026-04-18"
+    },
+    "47811601": {
+      "title": "Maine Said No to New Data Centers",
+      "used_on": "2026-04-18"
+    },
+    "47758309": {
+      "title": "Webloc: Analysis of Penlink's Ad-Based Geolocation Surveillance Tech",
+      "used_on": "2026-04-18"
+    },
+    "47809190": {
+      "title": "Even \"cat readme.txt\" is not safe",
+      "used_on": "2026-04-18"
+    },
+    "47807209": {
+      "title": "NASA Force",
+      "used_on": "2026-04-18"
+    }
+  }
+}
