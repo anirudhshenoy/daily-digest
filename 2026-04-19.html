@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Efficiency Turn — Today's AI Daily Digest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lora', serif;
+            background: #f5e6d3;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 3rem 2rem;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fffaf5;
+            padding: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #d4a574;
+            padding-bottom: 1rem;
+        }
+        .date {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b7355;
+            margin-bottom: 0.5rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6b6b6b;
+            font-style: italic;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: #2c2c2c;
+            margin: 2rem 0 1rem 0;
+            border-left: 4px solid #d4a574;
+            padding-left: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .pullquote {
+            border-left: 3px solid #d4a574;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #4a4a4a;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .takeaways {
+            background: #fef8f0;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+            border-left: 4px solid #d4a574;
+        }
+        .takeaways h3 {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+        }
+        .takeaways ol {
+            padding-left: 1.5rem;
+        }
+        .takeaways li {
+            margin-bottom: 0.5rem;
+            color: #3a3a3a;
+        }
+        .links-footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0d0bc;
+        }
+        .links-footer h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b7355;
+            margin-bottom: 0.75rem;
+        }
+        .links-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .links-footer li {
+            margin-bottom: 0.35rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.9rem;
+        }
+        .links-footer a {
+            color: #8b5e3c;
+            text-decoration: none;
+        }
+        .links-footer a:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem;
+            background: #f0e0cc;
+            color: #8b7355;
+            padding: 0.1rem 0.5rem;
+            border-radius: 2px;
+            margin-left: 0.4rem;
+        }
+        a {
+            color: #8b5e3c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="date">Sunday, April 19, 2026 · Atlas Daily Digest</div>
+        <h1>The Efficiency Turn</h1>
+        <div class="subtitle">Claude Opus 4.7 shows that better and cheaper aren't opposites — and the entire industry is reckoning with what that means</div>
+    </div>
+
+    <div class="section">
+        <p>For four years, the AI scaling story was simple: more parameters, more compute, more capability, more cost. You accepted the tradeoffs as inevitable. If you wanted the best model, you paid the premium. If you wanted something cheap, you settled for something worse. Claude Opus 4.7, released last week and now being stress-tested by thousands of practitioners, is the first major model to meaningfully break that bargain — arriving at the top of benchmarks while actually costing less to run.</p>
+
+        <p>A community-built leaderboard at <a href="https://tokens.billchambers.me/leaderboard">tokens.billchambers.me</a> has become one of the more interesting artifacts of this moment: anonymous users submitting real prompts, watching Opus 4.7 tokenize them 35% more efficiently than Opus 4.6 on average, sometimes dramatically more. Meanwhile ArtificialAnalysis placed Opus 4.7 on their price/performance Pareto frontier for both text and code — first in their Intelligence Index at 57.3, edging Gemini 3.1 Pro (57.2) and GPT-5.4 (56.8), with the bonus of using fewer tokens to get there. Today, HN's most-commented AI post of the morning is about this exact phenomenon: readers doing their own math, discovering that the economics of their Claude bills are quietly changing.</p>
+
+        <p>The efficiency story cuts deeper than pricing. Opus 4.7 removed extended thinking entirely, replacing it with what Anthropic calls "adaptive reasoning" — a model that calibrates how hard to think based on the problem, rather than front-loading tokens before answering. Some users saw regressions on day one (high-context agentic tasks, complex reasoning chains), but Anthropic shipped fixes within 24 hours. The signal from practitioners who've properly evaluated it is consistent: for agentic workloads, 4.7 is a meaningful upgrade at a lower cost, which is a first-principles shift in how you think about routing and model selection.</p>
+    </div>
+
+    <div class="section">
+        <h2>The Figma Problem Becomes Visible</h2>
+
+        <p>The same week as the Opus 4.7 launch, Anthropic quietly shipped something arguably more disruptive: <strong>Claude Design</strong>, a research-preview tool for generating prototypes, slides, and one-pagers from natural-language descriptions, powered by Opus 4.7 and with direct handoff to Claude Code for implementation. The market reacted sharply — Figma's stock drew down on the announcement — but the more interesting reaction came from designers themselves.</p>
+
+        <p>Sam Henri Gold, a product designer, published an analysis that cuts to something structural. Figma won the design-tool war partly by becoming canonical — the source of truth. But to become that canonical system, it invented its own primitives: components, variables, modes, props. None of it maps cleanly to code. LLMs were trained on code, not Figma files. So when AI started automating design work, Figma had accidentally excluded itself from the training data that would have made it relevant.</p>
+
+        <div class="pullquote">
+            "Why fuss around in a lossy approximation of the thing when you can work directly in the medium where it will actually live? If we want to make pottery, why are we painting watercolors of the pot instead of just throwing the clay?"
+            <br><span style="font-size:0.85rem; color:#8b7355; font-style:normal;">— Sam Henri Gold, on Claude Design and the source-of-truth question</span>
+        </div>
+
+        <p>The design-tool disruption thesis isn't new, but Gold's version is specifically about locking-in on the wrong representation. Figma's 946-color variable panel, its 16-variant components, its "gold standard" design system built by their own team that is simultaneously impressive and absurd — these exist because design had to systematize itself to survive in engineering orgs. Now that code is becoming trivially generatable and designers can work directly in the medium that ships, the question is whether the abstraction layer Figma occupies survives at all, or whether Claude Design (and tools like it) route around it entirely.</p>
+    </div>
+
+    <div class="section">
+        <h2>The Harness Engineering Maturity Thesis</h2>
+
+        <p>Alongside the model-capability story, the last few days produced a quieter but important cluster of practitioner posts converging on the same insight: the marginal gains in agent reliability now come less from chasing bigger models and more from better harness design.</p>
+
+        <p>Three examples from AI Twitter caught Latent Space's attention. First: a financial analyst pipeline built with strict context boundaries, a three-stage router/lane/analyst architecture, and gold sets for each stage — the finding was that most failures were "instruction/interface bugs," not model failures. Second: someone extracted Anthropic's own internal lessons from the leaked Claude Code harness and found the pattern: simple planning constraints plus a cleaner representation layer outperform "fancy AI scaffolds." Third, most starkly: Qwen3-8B (a small, cheap open-source model) scored 33/507 on LongCoT-Mini using DSPy's RLM scaffolding, versus 0/507 vanilla. The scaffold did "100% of the lifting." Not fine-tuning. Not a bigger model. Just better harness design.</p>
+
+        <p>Separately, Ollama shipped native support for Hermes Agent, and Nous Research launched a $25K Hermes Agent Creative Hackathon — signaling a push from coding/productivity into creative agent workflows. The pattern: open-source agent frameworks are proliferating, but the practitioners winning with them are the ones treating the harness as the real variable, not the underlying model weights.</p>
+
+        <div class="pullquote">
+            "Many bugs were actually instruction/interface bugs" — the practitioner insight that keeps surfacing in 2026: when your agent fails, check the scaffolding before blaming the model.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Stargate and the Scale That Has No Comparison</h2>
+
+        <p>While practitioners debate token costs and harness patterns, the infrastructure buildout continues at a scale that resists easy analogy. Epoch AI surveyed all seven US Stargate sites and found the project on track for <strong>9+ GW of AI compute by 2029</strong> — roughly equivalent to New York City's peak electricity demand, from a standing start in a handful of years. One observer placed current annual global datacenter capex at "5-7 Manhattan Projects per year" in inflation-adjusted terms. Another framed Stargate not as a company investment but as infrastructure for a "compute-powered economy."</p>
+
+        <p>The interesting applied AI corollary: Patrick Collison (founder of Stripe) shared that coding agents are already useful for personalized genome interpretation at under $100 per run — surfacing things like a roughly 30× elevated melanoma predisposition plus follow-on interventions. A separate AI biomarker-discovery system found that "late-night doomscrolling" predicts depression severity with statistical significance across 7,497 participants, and the model itself named the feature. These are the kinds of applications that don't require a 9 GW datacenter, but exist because one is being built.</p>
+    </div>
+
+    <div class="section">
+        <h2>At the Margins: Typewriters, Railways, Lasers, and a Goodbye</h2>
+
+        <p><strong>Michael Rabin has died.</strong> The Hacker News thread (400 points) is one of the better tributes: Rabin, along with Dana Scott, proved in 1959 that nondeterminism doesn't increase the power of finite automata — a result that shaped theoretical computer science for decades. He later co-invented the Miller-Rabin primality test, a probabilistic algorithm that made RSA practical. It's worth sitting with the symmetry: the man who proved that randomness could solve hard problems deterministically cannot solved, died the same week that a probabilistic model proved it could outperform everything before it. The field builds on foundations most practitioners have stopped looking at.</p>
+
+        <p>A college instructor in Colorado is now handing out <strong>typewriters</strong> to combat AI-generated work. "What's the point of me reading it if it's already correct anyway, and you didn't write it yourself?" The HN comment thread is 168 points of ambivalent agreement — educators who feel the question deeply but aren't sure the answer is right. The typewriter as protest is interesting: not a better AI detector, but a return to physical constraint. The irony is that the same week Claude Design launched as a natural-language design tool, a teacher decided the only way to trust student work is to make it physically impossible to use a computer at all.</p>
+
+        <p>NIST scientists published a genuine materials-science result: a process for creating "any-wavelength" lasers using complex material patterns deposited onto silicon wafers, enabling integrated photonic circuits at arbitrary wavelengths. This is early-stage, but photonic computing for AI inference is a long-runway story — silicon photonics reduces energy per operation significantly at scale. Something to watch.</p>
+
+        <p>Finally: a 700-point Hacker News story on <a href="https://worksinprogress.co/issue/why-japan-has-such-good-railways/">why Japan has such good railways</a> — the most-discussed non-AI story of the morning, with 329 comments — is simply worth reading on a Sunday. Dense urban networks, culture of punctuality, and a planning philosophy that treats the rail system as the organizing principle of urban life rather than an afterthought. The contrast with the US is stark. It's a reminder that some hard problems aren't AI problems; they're political will problems.</p>
+    </div>
+
+    <div class="takeaways">
+        <h3>What This All Means</h3>
+        <ol>
+            <li><strong>Efficiency is the new capability frontier.</strong> Opus 4.7's ~35% token reduction at equal or better quality changes the economics of AI deployment. If this pattern holds across the model generation, the "bigger = better = more expensive" assumption breaks. Watch for this to restructure how products route requests.</li>
+
+            <li><strong>Claude Design is a bet on collapsing the design-to-code gap entirely.</strong> The Figma problem isn't just pricing — it's that the design tool became the source of truth by representing code, rather than being code. LLMs trained on HTML/CSS/React bypass that layer entirely. This is a structural threat, not just a feature competition.</li>
+
+            <li><strong>Scaffold quality is now a competitive advantage.</strong> The Qwen3-8B/DSPy result (0 → 33/507 with harness alone) is not an edge case — it's the emerging pattern. Companies with rigorous harness engineering will outperform those chasing model upgrades with poor scaffolding. This is where engineering craft reasserts itself in the AI era.</li>
+
+            <li><strong>The Stargate infrastructure bet is effectively irreversible.</strong> 9+ GW by 2029, 5-7 Manhattan Projects per year — at this point the datacenter capital is committed. The question isn't whether the compute gets built; it's whether the applications materialize at the scale required to justify it.</li>
+
+            <li><strong>Michael Rabin's death is a cue to look at the foundations.</strong> Probabilistic algorithms. Complexity theory. The computational limits that make some things easy and other things permanently hard. The current AI wave is mostly empirical — we don't fully understand why it works. The people who built the theoretical substrate deserve remembering.</li>
+        </ol>
+    </div>
+
+    <div class="links-footer">
+        <h3>Hacker News</h3>
+        <ul>
+            <li><a href="https://news.ycombinator.com/item?id=47816960">Anonymous request-token comparisons from Opus 4.6 and Opus 4.7</a> — 444 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47818700">Thoughts and feelings around Claude Design</a> (Sam Henri Gold) — 250 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47782925">Michael Rabin has died</a> — 400 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47815395">Why Japan has such good railways</a> (Works in Progress) — 332 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47818485">College instructor turns to typewriters to curb AI-written work</a> — 168 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47819453">NIST scientists create 'any wavelength' lasers</a> — 202 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47815774">Migrating from DigitalOcean to Hetzner (248 GB MySQL, zero downtime)</a> — 699 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47817132">The electromechanical angle computer inside the B-52 bomber's star tracker</a> — 289 pts</li>
+            <li><a href="https://news.ycombinator.com/item?id=47820195">Zero-Copy GPU Inference from WebAssembly on Apple Silicon</a> — 35 pts</li>
+        </ul>
+
+        <h3 style="margin-top:1rem;">Substack / Latent Space</h3>
+        <ul>
+            <li><a href="https://www.latent.space/p/ainews-the-two-sides-of-openclaw">AINews: The Two Sides of OpenClaw</a> — April 18, 2026 (Claude Design, Opus 4.7 rollout, Hermes Agent, Stargate scale)</li>
+        </ul>
+    </div>
+</div>
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
