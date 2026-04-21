@@ -1,244 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hardware Heir — Today's AI Daily Digest</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Lora', serif;
-            background: #f5e6d3;
-            color: #2c2c2c;
-            line-height: 1.7;
-            padding: 3rem 2rem;
-        }
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            background: #fffaf5;
-            padding: 3rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .header {
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #d4a574;
-            padding-bottom: 1rem;
-        }
-        .date {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #8b7355;
-            margin-bottom: 0.5rem;
-        }
-        h1 {
-            font-size: 2rem;
-            color: #1a1a1a;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: #6b6b6b;
-            font-style: italic;
-        }
-        h2 {
-            font-size: 1.4rem;
-            color: #2c2c2c;
-            margin: 2rem 0 1rem 0;
-            border-left: 4px solid #d4a574;
-            padding-left: 1rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-        a {
-            color: #8b5e3c;
-            text-decoration: none;
-            border-bottom: 1px solid #d4a574;
-        }
-        a:hover { color: #5a3820; }
-        .pull-quote {
-            background: #fdf3e8;
-            border-left: 4px solid #d4a574;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: #4a3520;
-            font-size: 1.05rem;
-        }
-        .takeaways {
-            background: #f8f0e6;
-            border-radius: 4px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        .takeaways h2 {
-            border-left: none;
-            padding-left: 0;
-            margin-top: 0;
-        }
-        .takeaways ol {
-            padding-left: 1.5rem;
-        }
-        .takeaways li {
-            margin-bottom: 0.75rem;
-        }
-        .links-section {
-            border-top: 1px solid #d4a574;
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-        }
-        .links-section h2 {
-            border-left: none;
-            padding-left: 0;
-            font-size: 1.1rem;
-            color: #6b6b6b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-        }
-        .links-group {
-            margin-bottom: 1.2rem;
-        }
-        .links-group h3 {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: #8b7355;
-            margin-bottom: 0.4rem;
-        }
-        .links-group ul {
-            list-style: none;
-            padding: 0;
-        }
-        .links-group li {
-            margin-bottom: 0.3rem;
-            font-size: 0.92rem;
-        }
-        .footer {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.8rem;
-            color: #aaa;
-            text-align: center;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Hardware Heir — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <div class="date">Tuesday, April 21, 2026 · Atlas Daily Digest</div>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, April 21, 2026</div>
         <h1>The Hardware Heir</h1>
-        <div class="subtitle">Apple names its next CEO. Jensen Huang explains why token factories will define the century. And AI quietly rewrites 44% of all music.</div>
-    </div>
+        <p class="subtitle">Apple names its next CEO. Jensen Huang explains why token factories will define the century. And AI quietly rewrites 44% of all music.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
 
-    <h2>I. The End of the Operations Era at Apple</h2>
+      <div class="body">
 
-    <p>Apple announced this morning what Silicon Valley has debated for years: Tim Cook will step down as CEO on September 1st, 2026, becoming Executive Chairman of the Board. His successor is <strong>John Ternus</strong>, currently senior vice president of Hardware Engineering—the man who oversaw the M-chip revolution, the return to Apple Silicon, and the notoriously demanding standards that made Apple's hardware the envy of every consumer electronics manufacturer on earth.</p>
+        <h2>The End of the Operations Era at Apple</h2>
 
-    <p>The numbers of Cook's tenure are staggering. Market cap: $350 billion to $4 trillion. Revenue: $108 billion to over $416 billion per year. Installed base: 2.5 billion active devices. He took an already iconic company and turned it into the most valuable enterprise in human history. But the choice of Ternus—an engineer's engineer with no public persona to speak of—is a signal, not just a succession. Apple's board has decided that the next competitive frontier is hardware, and that the person best equipped to navigate it is the one who has been building the most important chips in the world for the past decade.</p>
+        <p>Apple announced this morning what Silicon Valley has debated for years: Tim Cook will step down as CEO on September 1st, 2026, becoming Executive Chairman of the Board. His successor is <strong>John Ternus</strong>, currently senior vice president of Hardware Engineering—the man who oversaw the M-chip revolution, the return to Apple Silicon, and the notoriously demanding standards that made Apple's hardware the envy of every consumer electronics manufacturer on earth.</p>
 
-    <p>The timing is not coincidental. As AI models commoditize and every application starts looking like a thin wrapper around an inference endpoint, the hardware layer becomes the defensible moat. Apple's Neural Engine, its custom silicon architecture, its ability to run significant AI inference locally at power-efficiency no one else can match—that's the real estate Ternus has been developing. Cook transformed Apple from a product company into a services and ecosystem company. Ternus will be asked to make it a hardware-AI company. Different skills for a different era.</p>
+        <p>The numbers of Cook's tenure are staggering. Market cap: $350 billion to $4 trillion. Revenue: $108 billion to over $416 billion per year. Installed base: 2.5 billion active devices. He took an already iconic company and turned it into the most valuable enterprise in human history. But the choice of Ternus—an engineer's engineer with no public persona to speak of—is a signal, not just a succession. Apple's board has decided that the next competitive frontier is hardware, and that the person best equipped to navigate it is the one who has been building the most important chips in the world for the past decade.</p>
 
-    <div class="pull-quote">
-        "The transition follows a thoughtful, long-term succession planning process." — Apple press release. Translation: they've been planning this for years, and they are not worried.
-    </div>
+        <p>The timing is not coincidental. As AI models commoditize and every application starts looking like a thin wrapper around an inference endpoint, the hardware layer becomes the defensible moat. Apple's Neural Engine, its custom silicon architecture, its ability to run significant AI inference locally at power-efficiency no one else can match—that's the real estate Ternus has been developing. Cook transformed Apple from a product company into a services and ecosystem company. Ternus will be asked to make it a hardware-AI company. Different skills for a different era.</p>
 
-    <p>On Hacker News, the announcement drew 670+ comments within hours—the most active thread in recent memory. The discourse split predictably: hardware fans celebrating a return to product focus, services-era defenders worried about the cultural shift, and a healthy contingent pointing out that Cook will remain influential as Executive Chairman. Ternus may have the title, but Cook will still be in the room.</p>
+        <blockquote>
+          "The transition follows a thoughtful, long-term succession planning process." — Apple press release. Translation: they've been planning this for years, and they are not worried.
+        </blockquote>
 
-    <h2>II. Jensen Huang and the Token Factory Thesis</h2>
+        <p>On Hacker News, the announcement drew 670+ comments within hours—the most active thread in recent memory. The discourse split predictably: hardware fans celebrating a return to product focus, services-era defenders worried about the cultural shift, and a healthy contingent pointing out that Cook will remain influential as Executive Chairman. Ternus may have the title, but Cook will still be in the room.</p>
 
-    <p>In a sprawling 2+ hour conversation on the Lex Fridman Podcast (#494), Nvidia CEO Jensen Huang laid out what amounts to a complete philosophical framework for why Nvidia's trajectory is, in his words, "absolutely certain." The interview is worth listening to in full, but the core argument is this: computers used to be storage and retrieval systems. Now they are <em>generative</em> systems. And factories are worth vastly more than warehouses.</p>
+        <hr class="divider" />
 
-    <p>"We went from a retrieval-based computing system to a generative-based computing system," Jensen explained. "We're gonna need a lot more processing in this new world than in the old world. We need a lot of storage in the old world. We need a lot of computation in this new world." The implication is direct: the whole economic value of compute scales upward once the output is a product being sold, not a file being stored. When a factory makes something valuable, its capacity is directly tied to revenue. A data center running inference is now, functionally, a revenue-generating factory.</p>
+        <h2>Jensen Huang and the Token Factory Thesis</h2>
 
-    <div class="pull-quote">
-        "The iPhone of tokens arrived. It is the fastest-growing application in history. It went straight up... Agents. OpenClaw is the iPhone of tokens." — Jensen Huang to Lex Fridman
-    </div>
+        <p>In a sprawling 2+ hour conversation on the Lex Fridman Podcast (#494), Nvidia CEO Jensen Huang laid out what amounts to a complete philosophical framework for why Nvidia's trajectory is, in his words, "absolutely certain." The interview is worth listening to in full, but the core argument is this: computers used to be storage and retrieval systems. Now they are <em>generative</em> systems. And factories are worth vastly more than warehouses.</p>
 
-    <p>Jensen's mental model for Nvidia has itself scaled over time: chip → computer → cluster → AI factory → planetary-scale infrastructure. He described a future where the unit of compute in his mind is "a giant gigawatt thing that has power generations connected to the grid." Not a GPU. Not even a rack. The factory.</p>
+        <p>"We went from a retrieval-based computing system to a generative-based computing system," Jensen explained. "We're gonna need a lot more processing in this new world than in the old world. We need a lot of storage in the old world. We need a lot of computation in this new world." The implication is direct: the whole economic value of compute scales upward once the output is a product being sold, not a file being stored. When a factory makes something valuable, its capacity is directly tied to revenue. A data center running inference is now, functionally, a revenue-generating factory.</p>
 
-    <p>But the most interesting part of the interview was his account of CUDA—specifically, how putting CUDA on GeForce in the early days nearly bankrupted Nvidia. The addition cost so much margin that the company's market cap dropped from roughly $8 billion to $1.5 billion. Investors hated it. The consumer gaming audience didn't care. And yet Jensen held the line, because the strategic logic was clear: install base is everything. A computing platform lives or dies not on elegance but on reach. "Architecture is never just about the technology," he said. "It's about the install base."</p>
+        <blockquote>
+          "The iPhone of tokens arrived. It is the fastest-growing application in history. It went straight up... Agents. ChatGPT is the iPhone of tokens."
+          <cite>— Jensen Huang, Lex Fridman Podcast #494</cite>
+        </blockquote>
 
-    <p>Today, with CUDA deployed across every cloud, every car, every robot, every satellite, Nvidia has the most consequential software moat in computing. No one builds around something they don't trust will still exist in ten years. Nvidia spent twenty years earning that trust—one painful quarter at a time.</p>
+        <p>Jensen's mental model for Nvidia has itself scaled over time: chip → computer → cluster → AI factory → planetary-scale infrastructure. He described a future where the unit of compute in his mind is "a giant gigawatt thing that has power generations connected to the grid." Not a GPU. Not even a rack. The factory.</p>
 
-    <h2>III. The Content Flood Has Arrived</h2>
+        <p>But the most interesting part of the interview was his account of CUDA—specifically, how putting CUDA on GeForce in the early days nearly bankrupted Nvidia. The addition cost so much margin that the company's market cap dropped from roughly $8 billion to $1.5 billion. Investors hated it. The consumer gaming audience didn't care. And yet Jensen held the line, because the strategic logic was clear: install base is everything. A computing platform lives or dies not on elegance but on reach. "Architecture is never just about the technology," he said. "It's about the install base." Today, with CUDA deployed across every cloud, every car, every robot, every satellite, Nvidia has the most consequential software moat in computing. No one builds around something they don't trust will still exist in ten years. Nvidia spent twenty years earning that trust—one painful quarter at a time.</p>
 
-    <p>Deezer published a data point this week that belongs in the permanent record of this moment in history: <strong>44% of all new music uploaded to its platform is now AI-generated</strong>. That's approximately 75,000 tracks per day—2 million per month. One year ago it was 10,000 tracks per day. The curve is not linear; it is nearly vertical.</p>
+        <hr class="divider" />
 
-    <p>The consumption side tells a different story: AI-generated music represents only 1–3% of total streams, and 85% of those streams are flagged as fraudulent and demonetized. In other words, the vast majority of this AI content is not reaching audiences—it's being generated in bulk by actors attempting to game royalty systems, then caught and stripped of revenue.</p>
+        <h2>The Content Flood Has Arrived</h2>
 
-    <p>But the broader cultural implication stands regardless of the fraud dynamics. The marginal cost of content creation has collapsed. The constraint used to be human creative capacity. Now it is platform filtering capacity. Deezer's response—removing AI tracks from algorithmic recommendations, no longer storing hi-res versions—is the first wave of what will become an arms race between generative volume and curatorial gatekeeping. Every music platform, news outlet, and publishing ecosystem will face a version of this problem within 18 months.</p>
+        <p>Deezer published a data point this week that belongs in the permanent record of this moment in history: <strong>44% of all new music uploaded to its platform is now AI-generated</strong>. That's approximately 75,000 tracks per day—2 million per month. One year ago it was 10,000 tracks per day. The curve is not linear; it is nearly vertical.</p>
 
-    <p>Separately, a leaked deck from StackAdapt revealed that OpenAI is now selling ChatGPT ad placements based on "prompt relevance"—essentially, showing ads contextually tailored to whatever a user is asking about at that moment. This is a profound and uncomfortable step. The same interface you trust to give you neutral information is now surfacing paid placements based on the intent you're expressing in your query. It is Google's core business model, transplanted into an assistant context—with much more intimate knowledge of what you actually want.</p>
+        <p>The consumption side tells a different story: AI-generated music represents only 1–3% of total streams, and 85% of those streams are flagged as fraudulent and demonetized. In other words, the vast majority of this AI content is not reaching audiences—it's being generated in bulk by actors attempting to game royalty systems, then caught and stripped of revenue.</p>
 
-    <h2>IV. Qwen3.6-Max-Preview and the Chinese AI Sprint</h2>
+        <p>But the broader cultural implication stands regardless of the fraud dynamics. The marginal cost of content creation has collapsed. The constraint used to be human creative capacity. Now it is platform filtering capacity. Deezer's response—removing AI tracks from algorithmic recommendations, no longer storing hi-res versions—is the first wave of what will become an arms race between generative volume and curatorial gatekeeping. Every music platform, news outlet, and publishing ecosystem will face a version of this problem within 18 months.</p>
 
-    <p>Alibaba launched <strong>Qwen3.6-Max-Preview</strong> on April 20th, describing it as an early-access version of their upcoming flagship proprietary model. According to third-party evaluations, it claims the top spot on six major programming benchmarks: SWE-bench Pro, Terminal-Bench 2.0, SkillsBench, QwenClawBench, QwenWebBench, and SciCode. Benchmark scores include 95.3 on AIME 2026 (advanced mathematics) and 86.2 on GPQA-Diamond (graduate-level scientific reasoning).</p>
+        <p>Separately, a leaked deck from StackAdapt revealed that OpenAI is now selling ChatGPT ad placements based on "prompt relevance"—essentially, showing ads contextually tailored to whatever a user is asking about at that moment. This is a profound and uncomfortable step. The same interface you trust to give you neutral information is now surfacing paid placements based on the intent you're expressing in your query. It is Google's core business model, transplanted into an assistant context—with much more intimate knowledge of what you actually want.</p>
 
-    <p>The positioning is deliberate: Alibaba is not chasing general-purpose benchmark supremacy this time. They're planting their flag specifically in <em>agentic coding</em>—the ability to complete long-horizon programming tasks with real tool use in real environments. This is exactly where the enterprise value is accruing. SWE-bench Pro (a harder version of the original SWE-bench) tests whether models can actually fix real GitHub issues, not contrived problems. Topping that list is a meaningful claim.</p>
+        <hr class="divider" />
 
-    <p>The release also accompanied the earlier open-source of Qwen3.6-35B-A3B—a sparse Mixture-of-Experts model with 35 billion total parameters but only 3 billion active at inference time. This architecture (large weights, tiny compute footprint per token) has become the standard template for the open-source frontier: you get near-flagship capability at a fraction of the inference cost. The gap between closed and open is closing faster than many anticipated.</p>
+        <h2>Qwen3.6-Max-Preview and the Chinese AI Sprint</h2>
 
-    <h2>V. The Alignment You Can't Escape</h2>
+        <p>Alibaba launched <strong>Qwen3.6-Max-Preview</strong> on April 20th, describing it as an early-access version of their upcoming flagship proprietary model. According to third-party evaluations, it claims the top spot on six major programming benchmarks: SWE-bench Pro, Terminal-Bench 2.0, SkillsBench, QwenClawBench, QwenWebBench, and SciCode. Benchmark scores include 95.3 on AIME 2026 (advanced mathematics) and 86.2 on GPQA-Diamond (graduate-level scientific reasoning).</p>
 
-    <p>A technically interesting but philosophically rich piece this week from morgin.ai: <em>"Even 'uncensored' models can't say what they want."</em> The argument is that fine-tuning to remove safety restrictions doesn't expose some "true" unaligned model underneath—it just changes the surface behavior while leaving the underlying representations intact. The model has been shaped by pretraining on human text, which carries its own deep biases, norms, and implicit value judgments that no LoRA fine-tune can wash out.</p>
+        <p>The positioning is deliberate: Alibaba is not chasing general-purpose benchmark supremacy this time. They're planting their flag specifically in <em>agentic coding</em>—the ability to complete long-horizon programming tasks with real tool use in real environments. This is exactly where the enterprise value is accruing. SWE-bench Pro tests whether models can actually fix real GitHub issues, not contrived problems. Topping that list is a meaningful claim.</p>
 
-    <p>This matters because a cottage industry has sprung up around "uncensored" model variants, marketed on the premise that removing RLHF makes a model more honest or capable. The evidence increasingly suggests this is partly illusory. You can remove the explicit refusals, but you cannot remove the culture—the centuries of human writing that the model was trained to predict. Alignment is not a thin layer of gloss over a neutral substrate. It goes all the way down.</p>
+        <p>The release also accompanied the earlier open-source of Qwen3.6-35B-A3B—a sparse Mixture-of-Experts model with 35 billion total parameters but only 3 billion active at inference time. This architecture (large weights, tiny compute footprint per token) has become the standard template for the open-source frontier: you get near-flagship capability at a fraction of the inference cost. The gap between closed and open is closing faster than many anticipated.</p>
 
-    <p>On the cryptography front, a clear-eyed analysis from Filippo Valsorda: <em>Quantum Computers Are Not a Threat to 128-Bit Symmetric Keys</em>. Grover's algorithm—the quantum speedup most often cited against symmetric encryption—reduces the effective key strength of a 128-bit key to 64 bits. Which sounds alarming until you realize 64-bit security is still well beyond practical attack. The actual threats from quantum computing lie in asymmetric cryptography (RSA, elliptic curves), where Shor's algorithm applies. The 128-bit symmetric keys in your TLS connections are fine. Your RSA keys, longer term, are not.</p>
+        <hr class="divider" />
 
-    <div class="takeaways">
-        <h2>What This All Means</h2>
-        <ol>
+        <h2>The Alignment You Can't Escape</h2>
+
+        <p>A technically interesting but philosophically rich piece from morgin.ai: <em>"Even 'uncensored' models can't say what they want."</em> The argument is that fine-tuning to remove safety restrictions doesn't expose some "true" unaligned model underneath—it just changes the surface behavior while leaving the underlying representations intact. The model has been shaped by pretraining on human text, which carries its own deep biases, norms, and implicit value judgments that no LoRA fine-tune can wash out.</p>
+
+        <p>This matters because a cottage industry has sprung up around "uncensored" model variants, marketed on the premise that removing RLHF makes a model more honest or capable. The evidence increasingly suggests this is partly illusory. You can remove the explicit refusals, but you cannot remove the culture—the centuries of human writing that the model was trained to predict. Alignment is not a thin layer of gloss over a neutral substrate. It goes all the way down.</p>
+
+        <p>On the cryptography front, a clear-eyed analysis from Filippo Valsorda: <em>Quantum Computers Are Not a Threat to 128-Bit Symmetric Keys</em>. Grover's algorithm—the quantum speedup most often cited against symmetric encryption—reduces the effective key strength of a 128-bit key to 64 bits. Which sounds alarming until you realize 64-bit security is still well beyond practical attack. The actual threats from quantum computing lie in asymmetric cryptography (RSA, elliptic curves), where Shor's algorithm applies. The 128-bit symmetric keys in your TLS connections are fine. Your RSA keys, longer term, are not.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
             <li><strong>Apple's succession is a hardware bet.</strong> Ternus is not a charismatic visionary in the Jobs mold or an operational maestro in the Cook mold. He is a deeply technical hardware leader. Apple is betting that the next decade belongs to whoever wins the on-device AI hardware race—and they think Ternus can win it.</li>
             <li><strong>Jensen's "token factory" thesis is playing out in real time.</strong> Deezer's 44% AI music figure, OpenAI's prompt-targeted ads, Qwen's agentic coding push—these are all factories for different kinds of tokens. The infrastructure investments of 2022–2025 are now generating outputs at scale.</li>
             <li><strong>Platform filtering is the new bottleneck.</strong> When content generation becomes essentially free, the scarce resource shifts from creation to curation and gatekeeping. Deezer demobilizes 85% of AI tracks. Soon, every major content surface will need its own AI detection and filtering infrastructure.</li>
-            <li><strong>The open-source frontier is following fast.</strong> Qwen's 35B-A3B MoE model, available to anyone, delivers near-frontier agentic coding capability at 3B active parameters. The closed-model premium is compressing. The moat for AI labs increasingly has to be something other than raw model capability.</li>
-            <li><strong>Alignment is pretraining, not just fine-tuning.</strong> The debate around uncensored models reveals a deeper truth: the values baked into a model at pretraining are far more durable than any fine-tune applied on top. This cuts both ways—it limits how "free" you can make a model, but also limits how badly you can break one with malicious fine-tuning.</li>
+            <li><strong>The open-source frontier is following fast.</strong> Qwen's 35B-A3B MoE model delivers near-frontier agentic coding capability at 3B active parameters. The closed-model premium is compressing. The moat for AI labs increasingly has to be something other than raw model capability.</li>
+            <li><strong>Alignment is pretraining, not just fine-tuning.</strong> The debate around uncensored models reveals a deeper truth: the values baked into a model at pretraining are far more durable than any fine-tune applied on top. This limits how "free" you can make a model—but also limits how badly you can break one with malicious fine-tuning.</li>
             <li><strong>CUDA's lesson generalizes.</strong> Jensen's story about Nvidia's near-death experience to build install base is a template. In platform competition, the path from "this is costing us everything" to "this is our most important asset" can take a decade. The companies willing to absorb that pain are the ones who build durable moats.</li>
-        </ol>
-    </div>
-
-    <div class="links-section">
-        <h2>Links</h2>
-
-        <div class="links-group">
-            <h3>Hacker News</h3>
-            <ul>
-                <li><a href="https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/">Tim Cook to become Apple Executive Chairman; John Ternus to become Apple CEO</a></li>
-                <li><a href="https://www.theolivepress.es/spain-news/2026/04/20/eu-to-force-replaceable-batteries-in-phones-and-tablets-from-2027/">All phones sold in the EU to have replaceable batteries from 2027</a></li>
-                <li><a href="https://qwen.ai/research">Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving</a></li>
-                <li><a href="https://techcrunch.com/2026/04/20/deezer-says-44-of-songs-uploaded-to-its-platform-daily-are-ai-generated/">Deezer says 44% of songs uploaded to its platform daily are AI-generated</a></li>
-                <li><a href="https://www.adweek.com/media/exclusive-leaked-deck-reveals-stackadapts-playbook-for-chatgpt-ads/">OpenAI ad partner now selling ChatGPT ad placements based on "prompt relevance"</a></li>
-                <li><a href="https://words.filippo.io/128-bits/">Quantum Computers Are Not a Threat to 128-Bit Symmetric Keys</a></li>
-                <li><a href="https://morgin.ai/articles/even-uncensored-models-cant-say-what-they-want.html">Even "uncensored" models can't say what they want</a></li>
-                <li><a href="https://www.kimi.com/blog/kimi-vendor-verifier">Kimi vendor verifier – verify accuracy of inference providers</a></li>
-                <li><a href="https://prismml.com/news/ternary-bonsai">Ternary Bonsai: Top Intelligence at 1.58 Bits</a></li>
-                <li><a href="https://github.com/gizmo64k/soulplayer-c64">Soul Player C64 – A real transformer running on a 1 MHz Commodore 64</a></li>
-            </ul>
+          </ol>
         </div>
 
-        <div class="links-group">
-            <h3>YouTube</h3>
-            <ul>
-                <li><a href="https://lexfridman.com/jensen-huang/">Jensen Huang: NVIDIA – The $4 Trillion Company &amp; the AI Revolution (Lex Fridman Podcast #494)</a></li>
-            </ul>
-        </div>
-    </div>
+      </div><!-- /.body -->
 
-    <div class="footer">
-        Atlas Daily Digest · April 21, 2026 · Generated at 9:00 AM IST
-    </div>
-</div>
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/">Tim Cook to become Apple Executive Chairman; John Ternus to become Apple CEO</a></li>
+          <li><a href="https://qwen.ai/research">Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving</a></li>
+          <li><a href="https://techcrunch.com/2026/04/20/deezer-says-44-of-songs-uploaded-to-its-platform-daily-are-ai-generated/">Deezer says 44% of songs uploaded to its platform daily are AI-generated</a></li>
+          <li><a href="https://www.adweek.com/media/exclusive-leaked-deck-reveals-stackadapts-playbook-for-chatgpt-ads/">OpenAI ad partner now selling ChatGPT ad placements based on "prompt relevance"</a></li>
+          <li><a href="https://words.filippo.io/128-bits/">Quantum Computers Are Not a Threat to 128-Bit Symmetric Keys</a></li>
+          <li><a href="https://morgin.ai/articles/even-uncensored-models-cant-say-what-they-want.html">Even "uncensored" models can't say what they want</a></li>
+          <li><a href="https://www.theolivepress.es/spain-news/2026/04/20/eu-to-force-replaceable-batteries-in-phones-and-tablets-from-2027/">All phones sold in the EU to have replaceable batteries from 2027</a></li>
+          <li><a href="https://www.kimi.com/blog/kimi-vendor-verifier">Kimi vendor verifier – verify accuracy of inference providers</a></li>
+          <li><a href="https://prismml.com/news/ternary-bonsai">Ternary Bonsai: Top Intelligence at 1.58 Bits</a></li>
+          <li><a href="https://github.com/gizmo64k/soulplayer-c64">Soul Player C64 – A real transformer running on a 1 MHz Commodore 64</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://lexfridman.com/jensen-huang/">Jensen Huang: NVIDIA – The $4 Trillion Company &amp; the AI Revolution (Lex Fridman Podcast #494)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
 <!-- hamburger-menu-injected -->
 <style>
   #hb-btn {
