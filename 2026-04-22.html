@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The $60 Billion Gambit — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, April 22, 2026</div>
+        <h1>The $60 Billion Gambit</h1>
+        <p class="subtitle">SpaceX bets on Cursor, OpenAI rewrites image generation from scratch, and the first human workers replaced by AI agents begin reporting from the field.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>SpaceX Bets $60 Billion on a Code Editor</h2>
+
+        <p>The strangest deal in AI so far is not a lab acquiring another lab. It is a rocket company acquiring an option to buy a code editor. Yesterday, SpaceX announced it has secured the right to acquire <a href="https://cursor.com">Cursor</a> — the AI-first IDE built by Anysphere — for $60 billion before the end of 2026, or to pay $10 billion to enter a joint development agreement if it chooses not to close the full deal. The announcement landed on Hacker News with 470 comments, where the reaction ranged from disbelief to grudging recognition that this might actually make sense.</p>
+
+        <p>The logic, when you unpack it: Elon Musk's xAI already operates the Colossus supercomputer — roughly one million H100-equivalent GPUs in Memphis — which is among the most powerful AI training clusters on the planet. Colossus was built to train Grok, but a training cluster of that scale runs idle between training runs, and idle compute is money bleeding out. Cursor, meanwhile, has become the dominant tool for professional software engineers doing AI-assisted development, with millions of daily users and deep integration into serious codebases. Pairing world-class inference hardware with the tool that serious engineers actually use every day is a different kind of vertical integration than what the Anthropic or OpenAI playbooks describe.</p>
+
+        <blockquote>
+          "SpaceXAI and @cursor_ai are now working closely together to create the world's best coding and knowledge work AI."
+          <cite>— SpaceX official announcement, April 21</cite>
+        </blockquote>
+
+        <p>The deeper implication is structural. Cursor is not just an editor — it has become a coordination layer for how engineers think about AI-assisted work. If SpaceX closes the acquisition, it would give Musk's empire a credible presence in the AI developer tools market separate from xAI's consumer Grok products. It also means the coding-agent wars are no longer a three-way fight between Anthropic's Claude Code, GitHub Copilot, and Google's Gemini integrations. There is now a fourth serious player with serious compute behind it.</p>
+
+        <p>A note on the financial structure: the $10 billion "pay for joint development" option is an unusual instrument — it gives SpaceX the ability to deeply integrate Cursor without full ownership if the acquisition proves regulatorily complex or strategically premature. At $60 billion, the full deal would value Cursor at roughly twice what OpenAI was valued at when it raised its first $1 billion round. That number is either a sign of how much the market has repriced AI developer tools, or of how urgently SpaceX needs a flagship AI product that does not have Grok's brand baggage.</p>
+
+        <hr class="divider" />
+
+        <h2>OpenAI Rewrites Image Generation With a Thinking Model</h2>
+
+        <p>On the same day the SpaceX news broke, OpenAI quietly shipped the biggest image generation upgrade in years: <strong>GPT-Image-2</strong>, now available in ChatGPT, Codex, and via the API. The Latent Space team broke down why this one is different from previous iterations — and the core difference is architectural rather than cosmetic.</p>
+
+        <p>Previous image models, including the original DALL-E series and Stable Diffusion variants, used diffusion as their generation mechanism: start with noise, iteratively denoise into a coherent image. GPT-Image-2 uses an <strong>autoregressive approach</strong> — the same predict-the-next-token logic that underpins text LLMs — combined with explicit "thinking" capabilities. This means the model can search the web, plan multiple iterations of an image from a single prompt, and self-check its output before returning a result. In benchmarks, it achieved the number one ranking on the Image Arena leaderboard with a commanding <strong>+242 Elo lead</strong> over its nearest competitor.</p>
+
+        <p>What this looks like in practice: ask it to generate a Mexican restaurant menu, and you get something immediately usable in an actual restaurant. Text rendering — historically the most embarrassing failure mode of AI image generation, producing garbled pseudo-words — is now largely solved. The model can produce marketing assets in multiple standard sizes from a single prompt, multi-panel comic strips with consistent character design across panels, infographics with real data laid out correctly, and QR codes that actually scan.</p>
+
+        <blockquote>
+          "The introduction of 'thinking' variants for image generation represents a new paradigm where models can reason about visual tasks the same way reasoning models reason about text."
+          <cite>— Latent Space AINews, April 22</cite>
+        </blockquote>
+
+        <p>The strategic dimension here: OpenAI shut down Sora (its video model) in March, reportedly to free compute and refocus on winning over enterprise developers. GPT-Image-2 is what that freed compute produced. The pattern — abandon the impressive-but-difficult product, concentrate resources, ship a breakthrough in a simpler but more commercially useful domain — is worth watching. It suggests OpenAI has gotten considerably more disciplined about what "winning" means in 2026.</p>
+
+        <hr class="divider" />
+
+        <h2>China's Open Model Race: Kimi K2.6 Ships</h2>
+
+        <p>Moonshot AI, the Beijing lab that built the Kimi series, released <strong>Kimi K2.6</strong> yesterday — a 1-trillion-parameter Mixture-of-Experts model with 32 billion active parameters, 256K context window, and INT4 quantization that makes it runnable on consumer hardware. The headline benchmark numbers: 58.6% on SWE-Bench Pro (the hard agentic coding benchmark) and 83.2% on BrowseComp (complex multi-step web research). Both are open-source state-of-the-art as of this writing.</p>
+
+        <p>Kimi K2.6 is a refresh, not a full new architecture — the K2.5 foundation is the same. What Moonshot changed is primarily tuning: improved instruction following, better agentic multi-step reasoning, and targeted work on frontend design tasks to compete directly with Gemini 3.1. In head-to-head frontend design evaluations, Kimi K2.6 achieves a 68.6% win-plus-tie rate against Gemini 3.1, which was itself widely regarded as the best open model for UI work. This is a deliberate strategic signal: Moonshot is no longer just chasing raw benchmark scores, it is targeting specific use-case dominance.</p>
+
+        <p>What makes this significant is the cadence. K2.5 shipped roughly three months ago. A meaningful open-source model refresh in three months is a pace that Western labs, focused on longer training cycles, have not matched. DeepSeek V4 is reportedly in the pipeline. If both Kimi and DeepSeek ship major updates this quarter, the open-model landscape in mid-2026 will look substantially different from what existed at the start of the year — and the proprietary models will need stronger justifications for their pricing.</p>
+
+        <hr class="divider" />
+
+        <h2>The Sales Team of the Future: One Human, Twenty Agents</h2>
+
+        <p>There is a lot of abstract talk about AI replacing jobs. Jason Lemkin — founder of SaaStr, the world's largest B2B founder community — is not talking abstractly. He spent two years building, then dismantling, a ten-person sales organization, replacing it with a single full-time account executive, a part-time "chief of AI" named Amelia, and twenty AI agents. The revenue the old team produced is the same. The cost structure is not.</p>
+
+        <blockquote>
+          "We used to have about 10 people full time. Now you have 1.2 humans, 20 agents. Agents work all night and they work weekends and they work on Christmas. We're done with hiring humans in sales. We're done."
+          <cite>— Jason Lemkin, SaaStr, on Lenny's Podcast</cite>
+        </blockquote>
+
+        <p>Each of Lemkin's AI agents has a name and a desk: Repli for Replit integration work, Quali for qualified lead management, Arty for Artisan platform tasks. The agents handle inbound lead qualification, email sequences, CRM updates, and follow-ups. What human AEs still do: the deals where trust, context, and judgment matter — closing enterprise contracts, handling difficult objections, navigating relationship complexity. Lemkin is not sentimental about the transition: in his view, the SDR role — the entry-level sales job where a fresh college graduate sends outbound emails and qualifies contacts — is effectively extinct.</p>
+
+        <p>This connects directly to what Jenny Wen, head of design for Claude Cowork at Anthropic, described in a recent Lenny's Podcast appearance. Wen, who previously led design at Figma, says the traditional design process — discovery research, diverge-converge-diverge, beautiful mock-ups, design handoff — is "basically dead." Engineers now ship seven agents at once; the design cycle has collapsed from two-year visions to three-to-six-month directional prototypes. The two jobs most affected by the current wave are not, as commonly assumed, the highest-skill creative roles. They are the <em>coordination and execution</em> jobs in the middle: the SDR, the junior designer who makes the mock-ups, the account manager who sends the follow-ups. The roles that exist, in Wen's framing, are the ones that require judgment about what should actually get built — and accountability for the decision.</p>
+
+        <p>The HN thread "I don't want your PRs anymore" (204 points) captures the same dynamic in software engineering: experienced engineers are increasingly finding that the friction of reviewing AI-generated pull requests from less experienced colleagues — which may be partially or fully written by Claude Code or Codex — is worse than just doing the work themselves with an agent. The coordination overhead of human-AI collaborative teams is itself becoming a new design problem.</p>
+
+        <hr class="divider" />
+
+        <h2>The Platform Pricing Reckoning</h2>
+
+        <p>Three platform pricing stories landed this week in ways that rhyme. First: Anthropic has removed <strong>Claude Code from its $20/month Pro plan</strong> for new subscribers. Existing Pro users still have access via the Claude web app, but Claude Code — the agentic coding assistant — is being shifted to a separate pricing tier. The HN thread on this had 408 comments and 388 points, making it the second most-discussed AI story today. The reaction was largely frustrated but unsurprised: a $200/month Claude Max subscription was reportedly being used to run $1,000–$5,000 worth of agent compute tasks. The unit economics, in Anthropic's framing, were never sustainable at flat subscription rates for agentic workloads.</p>
+
+        <p>Second: <strong>GitHub Copilot</strong> is changing its individual plans. The details are still settling (353 points, 123 HN comments), but the pattern is the same: AI-assisted coding tools that launched on flat subscription economics are migrating toward usage-based pricing as the actual cost of serving agentic workloads becomes clear. The $20/month all-you-can-eat AI coding subscription appears to have been a customer-acquisition mechanism, not a sustainable business model.</p>
+
+        <p>Third — and perhaps most unsettling: <strong>Meta is capturing employee mouse movements and keystrokes</strong> to generate training data for its AI systems. The Reuters report (372 points, 316 comments on HN) describes the program as voluntary, but the framing — "to help Meta's AI better understand how people actually work" — lands differently when the company also has 372 HN users discussing whether their own jobs are being studied for eventual replacement. This is data collection for AI training, gathered from the humans whose work patterns the AI will eventually need to replicate.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The tool wars are consolidating around compute-plus-distribution.</strong> SpaceX's Cursor move is not a product bet — it is an infrastructure bet. The labs that win the next phase of AI may be the ones that control both the chips <em>and</em> the developer-facing surface. Cursor gives SpaceX/xAI a distribution channel that Grok never had among serious engineers.</li>
+            <li><strong>GPT-Image-2 is a sign that OpenAI found its focus again.</strong> Shutting down Sora looked like a retreat. In retrospect it looks like prioritization. "Thinking" image generation that tops every leaderboard is a better outcome than two medium-quality products competing for the same compute. The lesson applies broadly: in the current environment, depth beats breadth.</li>
+            <li><strong>Chinese open models are operating on a quarterly release cycle.</strong> Three months from K2.5 to a state-of-the-art K2.6 is not a fluke — it is a cadence. If DeepSeek V4 lands this quarter, the open-model gap with proprietary systems will have largely closed for agentic coding tasks. The moat for closed models is narrowing faster than most Western lab road maps assumed.</li>
+            <li><strong>The AI labor displacement is arriving first in coordination roles, not creative ones.</strong> Jason Lemkin's 20 agents replaced 10 SDRs, not 10 senior salespeople. Jenny Wen says designers who make mock-ups are more exposed than designers who exercise taste and judgment. The jobs at risk in the immediate term are the ones that are measurable, repeatable, and schedulable — exactly the jobs that look "safe" to many people because they require human social skills rather than deep technical knowledge.</li>
+            <li><strong>Flat-rate AI subscriptions were always temporary.</strong> Claude Code off Pro, Copilot plan changes — the market is repricing agentic workloads away from subscription economics and toward usage-based billing. If you are building products or workflows on top of AI subscriptions, budget for the shift. The free-lunch period for heavy agentic usage is ending.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47855293">SpaceX says it has agreement to acquire Cursor for $60B (350 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47852835">ChatGPT Images 2.0 (533 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47854477">Claude Code to be removed from Anthropic's Pro plan? (388 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47851948">Meta to start capturing employee mouse movements, keystrokes for AI training (372 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47838508">Changes to GitHub Copilot individual plans (353 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47854051">I don't want your PRs anymore (204 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47847324">Tim Cook's Impeccable Timing (312 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47845429">Less human AI agents, please (137 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47849097">Show HN: GoModel – open-source AI gateway in Go (168 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47847179">Laws of Software Engineering (861 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-openai-launches-gpt-image">[AINews] OpenAI launches GPT-Image-2 (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds">[AINews] Moonshot Kimi K2.6: the world's leading Open Model (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=z7T1pCxgvlA">We Replaced Our Sales Team With 20 AI Agents — Jason Lemkin (Lenny's Podcast)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=87Pm0SGTtN8">Design Lead for Claude on How AI Is Rewriting the Designer's Role — Jenny Wen (Lenny's Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
