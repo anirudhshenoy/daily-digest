@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>27 Billion Reasons to Rethink Your AI Stack — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, April 23, 2026</div>
+        <h1>27 Billion Reasons to Rethink Your AI Stack</h1>
+        <p class="subtitle">Open-weights closes the gap on frontier, agents colonize your IDE and inbox, AI trains on human tumors — and the market's #1 story today is a tractor with no software.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube / Podcast</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The 27B Moment: Dense Models Eat MoEs for Lunch</h2>
+
+        <p>On April 22nd, Alibaba's Qwen team dropped <a href="https://news.ycombinator.com/item?id=47863217">Qwen3.6-27B</a> — a 27-billion-parameter dense open-weight model that claims, and largely delivers, flagship-level agentic coding performance. The HN thread lit up with 738 points and hundreds of comments, and for good reason: Qwen3.6-27B outperforms the previous-generation open-source champion, Qwen3.5-397B-A17B — a 397-billion-parameter Mixture-of-Experts giant — across all major coding benchmarks. SWE-bench Verified: 77.2 vs. 76.2. Terminal-Bench: 59.3 vs. 52.5. SkillsBench: 48.2 vs. 30.0.</p>
+
+        <p>This is not incremental. A dense 27B model that fits in ~17GB of quantized VRAM, runnable on a laptop with <code>llama-server</code>, now beats a model that requires orders of magnitude more compute to serve. The practical implication is stark: for agentic coding tasks specifically, the quality threshold that used to require renting GPU clusters is now clearing on local hardware. The model ships under Apache 2.0, supports thinking and non-thinking modes, and handles both text and multimodal inputs.</p>
+
+        <blockquote>
+          "An open-weight 27B dense model that reportedly outperforms a 397B MoE on coding tasks is a major development for practitioners."
+          <cite>— letsdatascience.com analysis of the release</cite>
+        </blockquote>
+
+        <p>Why does dense vs. MoE matter? Mixture-of-Experts architectures (like the 3.5-series) route each token through only a subset of "expert" sub-networks, keeping active parameter counts low while total model size balloons. They're training-efficient but add routing complexity that makes deployment trickier — especially in agent toolchains where you need low latency and predictable memory usage. A single dense 27B model sidesteps all that. You know exactly what you're loading; the inference path is clean. This is why Qwen3.6-27B is practically significant even beyond the raw benchmark numbers.</p>
+
+        <p>This release doesn't exist in a vacuum. On the same day, Google published a <a href="https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive">deep technical dive</a> into its eighth-generation TPUs (TPU 8t and TPU 8i), revealing a deliberate bifurcation of AI hardware for the first time. TPU 8t is the pre-training powerhouse; TPU 8i is optimized for inference and serving. The key insight from Google's post: "The rise of agentic AI requires infrastructure that can handle long context windows and complex sequential logic." They're building TPUs that train and serve "world models" — AI that simulates future scenarios rather than just predicting the next token. The 8T/8I system was described as a 415-point story on HN, with practitioners noting that Google is now shipping AI infrastructure that's explicitly designed around agents, not just LLM serving. The hardware is reorganizing around a new computational primitive.</p>
+
+        <hr class="divider" />
+
+        <h2>The Agent Layer Cements Itself — in IDEs, Inboxes, and Operating Rooms</h2>
+
+        <p>Two product launches this week signal that the agent paradigm is no longer a research curiosity — it's now an organizational UI. <a href="https://zed.dev/blog/parallel-agents">Zed introduced Parallel Agents</a>, giving developers a Threads Sidebar that lets them run multiple AI agents simultaneously, each in its own worktree, each potentially pointed at a different model. You can have one agent refactoring the auth module while another writes tests for the payment system while a third is reading docs. All at 120fps, all open-source. This is the IDE reorganizing itself around agents as first-class citizens, not afterthoughts bolted onto a text editor.</p>
+
+        <p>The same day, OpenAI announced <a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">Workspace Agents in ChatGPT</a> — agents that live inside enterprise workspace contexts, with access to company documents, calendars, and communication tools. The product framing has quietly shifted from "chat assistant" to "employee." The interface for both Zed and ChatGPT Workspace converged on the same metaphor: a sidebar of running threads. That's not a coincidence. It's the emergence of a new mental model for human-AI interaction — not conversation, but parallel delegation.</p>
+
+        <p>Meanwhile, a quietly fascinating HN thread analyzed <a href="https://www.adriankrebs.ch/blog/design-slop/">AI design patterns in Show HN submissions</a>, scoring how well builders are actually applying agentic design principles in practice. The finding: most "AI products" are still glorified chatbots with a thin wrapper. The gap between what agents can do and what people are actually building with them remains enormous. That gap is the opportunity.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Trains on Tumors: The Clinical Trial Problem Gets a Transformer</h2>
+
+        <p>Ninety-five percent of cancer treatments fail to pass clinical trials. That statistic, the central claim of a <a href="https://www.latent.space/p/noetik">Latent Space deep-dive</a> published this week, sounds like catastrophe. But Ron Alfa and Daniel Bear of <a href="https://www.noetik.ai/">Noetik</a> argue it may mostly be a <em>matching problem</em> — not that the treatments don't work, but that we're giving them to the wrong patients with the wrong tumors.</p>
+
+        <p>Their solution is TARIO-2, an autoregressive transformer trained on one of the world's largest datasets of tumor spatial transcriptomics — a technique that maps which genes are active, and where, within actual tumor tissue. Spatial transcriptomics is extraordinarily information-rich: Noetik's dataset features over 1,000 channels of data per sample. The crucial trick is that TARIO-2 can <em>predict</em> an approximately 19,000-gene spatial map from an H&E assay, the standard pathology stain that every cancer patient already gets. You don't need the expensive spatial sequencing; the model infers it from the cheap slide.</p>
+
+        <blockquote>
+          "If only we had a way to really understand the unique types of cancer biologies and which patients will respond to which treatments, we might be able to show a much higher success rate. Millions of lives — and billions of dollars — may ride on this."
+          <cite>— Latent Space, on Noetik's thesis</cite>
+        </blockquote>
+
+        <p>GSK signed a $50M deal for Noetik's technology, plus undisclosed long-term licensing for TARIO-2. What makes this structurally interesting is that it's a <em>software licensing deal</em>, not an in-licensing of a drug candidate. Most big AI bets in biotech end with the tools company becoming a drug company. Noetik is betting on staying a platform — selling inference over tumor biology the way Stripe sells inference over payment transactions. If they're right about the matching problem, the leverage is enormous: every failed drug candidate that actually works in the right patient subpopulation is a potential revival, without developing a new molecule.</p>
+
+        <p>This connects to the week's robotics note: a <a href="https://www.reuters.com/sports/ping-pong-robot-ace-makes-history-by-beating-top-level-human-players-2026-04-22/">ping-pong robot made history</a> by beating top-level human players. The robot isn't remarkable because it plays ping-pong — it's remarkable because the physical world, long the domain where AI lagged furthest behind, is now falling. From tumor biology to table tennis, the atoms layer is closing.</p>
+
+        <hr class="divider" />
+
+        <h2>The Privacy Ratchet: Two Bugs, One Pattern</h2>
+
+        <p>Two privacy stories dominated the security corners of HN this week, both worth understanding at a structural level. Apple <a href="https://techcrunch.com/2026/04/22/apple-fixes-bug-that-cops-used-to-extract-deleted-chat-messages-from-iphones/">quietly patched a bug</a> (423 points, 103 comments) that law enforcement had been using to extract deleted chat messages from iPhones — specifically messages users believed were gone, from apps like Signal. The FBI had reportedly used iPhone notification data as the vector. Apple fixed it, but the lesson isn't about this particular vulnerability: it's that every layer of the software stack has implicit data retention that users don't know about and can't control. "Deleted" is a social fiction.</p>
+
+        <p>Separately, the fingerprinting firm Fingerprint published a <a href="https://fingerprint.com/blog/firefox-tor-indexeddb-privacy-vulnerability/">remarkable finding</a> (490 points) about Firefox's IndexedDB implementation: data written to IndexedDB in one Firefox profile persists in a way that can be read across Tor Browser instances. If you're using Tor for anonymity, an attacker can potentially link your "anonymous" browsing sessions to your regular Firefox identity via a stable storage artifact. The bug is in Firefox's storage layer, not Tor's network layer — a reminder that privacy is a system property, not a feature you can add to one component.</p>
+
+        <p>Both stories share a common structure: a layer of the stack that was assumed to be inert (notification infrastructure, browser storage) turns out to carry user-identifying signal. As AI agents gain access to more of the stack — reading files, browsing the web, interacting with apps — the attack surface for this kind of implicit data leakage expands dramatically. An agent that runs in your browser is a new vector for every browser-level privacy bug, not just the AI-specific ones.</p>
+
+        <hr class="divider" />
+
+        <h2>The Tractor Paradox: What 1,428 Points Actually Mean</h2>
+
+        <p>The single highest-scoring story on Hacker News today — 1,428 points, 491 comments — is about an Alberta startup selling <a href="https://wheelfront.com/this-alberta-startup-sells-no-tech-tractors-for-half-price/">tractors with no software</a> for half the price of John Deere. No GPS. No telematics. No software licensing fees. No vendor lock-in on parts. Just a tractor that a farmer can fix themselves.</p>
+
+        <p>The HN comments are illuminating. Farmers, mechanics, and engineers pile in to explain why this is rational: modern agricultural equipment has become so software-dependent that a sensor failure can strand a $500,000 machine during a three-week harvest window, requiring a dealer to remotely unlock it. The right-to-repair movement has been fighting this for years. The Alberta startup isn't anti-technology in any deep sense — it's anti-<em>complexity</em>, specifically the complexity that gets imposed on users who didn't ask for it and can't maintain it.</p>
+
+        <p>Martin Fowler published a piece this week that gives the technical vocabulary for this phenomenon: <a href="https://martinfowler.com/fragments/2026-04-02.html">"intent debt."</a> Alongside technical debt (the cost of past shortcuts) and cognitive debt (the mental load of a complex system), intent debt is when you've built something that drifted from what users actually wanted. You shipped the feature they asked for but missed the job they were trying to do. The tractor is intent debt made physical: a $250,000 machine where the software added to "help" the farmer became the primary source of farmer suffering.</p>
+
+        <blockquote>
+          "Technical debt is the cost of past shortcuts. Cognitive debt is the mental load of complexity. Intent debt is when you've drifted from what people actually wanted."
+          <cite>— Martin Fowler, martinfowler.com</cite>
+        </blockquote>
+
+        <p>This is the tension that will define the next phase of AI product development. Every week brings new agent launches, new model releases, new integrations. The question is whether these additions solve the job the user was actually trying to do, or whether they add a new layer of impressive-sounding capability that makes the underlying thing harder to own, maintain, and trust. The tractor story got 1,428 points because every engineer reading it knows a product they built that turned into something like that.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The cost of intelligence just dropped again.</strong> Qwen3.6-27B running locally at flagship coding quality means the economic model for AI services built on proprietary API access needs to be reassessed. If a 17GB quantized model can do what a 397B model did six months ago, the floor is still moving.</li>
+            <li><strong>Agents are becoming a UI paradigm, not just a capability.</strong> Both Zed and OpenAI reorganized their products around "threads" this week — the metaphor of parallel delegation is replacing the metaphor of conversation. The IDE and the inbox are both becoming agent management consoles.</li>
+            <li><strong>AI for life sciences is crossing from research to commercial licensing.</strong> Noetik's $50M GSK deal as a <em>software platform</em> (not a drug candidate) is a structural signal. The transformer architecture is finding its AlphaFold moment in oncology — not by discovering new drugs, but by better matching existing ones to patients.</li>
+            <li><strong>Privacy is a system property that agents make harder, not easier.</strong> Two major browser/OS privacy bugs this week both involved "inert" storage layers carrying identifying signal. As agents run more of our stack, the implicit data surface expands proportionally.</li>
+            <li><strong>Intent debt will be the defining failure mode of the AI era.</strong> The tractor story is a preview. The most viral tech story today has nothing to do with AI — it's about the relief of removing technology. As we add AI to everything, the discipline of asking "what job is the user actually hiring this for?" becomes more important, not less.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47865868">Alberta startup sells no-tech tractors for half price (1,428 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47863217">Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model (738 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47861270">Windows 9x Subsystem for Linux (905 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47866697">We found a stable Firefox identifier linking all your private Tor identities (490 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47868867">Apple fixes bug that cops used to extract deleted chat messages from iPhones (423 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47862497">Google TPU 8t and TPU 8i: Technical Deep Dive (415 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47864393">Scoring Show HN submissions for AI design patterns (282 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47865661">Technical, cognitive, and intent debt — Martin Fowler (218 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47866750">Parallel agents in Zed (185 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47866860">Workspace Agents in ChatGPT (113 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47864785">Ping-pong robot beats top-level human players (83 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/noetik">Training Transformers to solve 95% failure rate of Cancer Trials — Ron Alfa &amp; Daniel Bear, Noetik (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube / Podcast</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/noetik">Noetik: TARIO-2 and the Spatial Transcriptomics Platform (Latent Space AI Engineer Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
