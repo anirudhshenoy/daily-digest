@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faster Than You Can Check — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, April 24, 2026</div>
+        <h1>Faster Than You Can Check</h1>
+        <p class="subtitle">Model speed now outpaces human review—and the industry is learning the hard way what happens when it doesn't.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Model Race Hits Escape Velocity</h2>
+
+        <p>OpenAI released <strong>GPT-5.5</strong> today, and it's a quiet masterclass in what frontier means now. Not just smarter—faster. The model matches GPT-5.4's per-token latency while operating at a significantly higher intelligence level, and it uses materially fewer tokens to complete the same tasks. That's the efficiency inflection point the field has been chasing: capability gains that don't require serving infrastructure to grow proportionally.</p>
+
+        <p>The benchmark gains are strong across the board. Terminal-Bench 2.0 puts GPT-5.5 at 82.7% (vs GPT-5.4's 75.1%), with Claude Opus 4.7 at 69.4% and Gemini 3.1 Pro at 68.5%. On coding evals, GPT-5.5 reaches 73.1% on Expert-SWE, a jump from GPT-5.4's 68.5%. The real win is in agentic reasoning and computer use—domains where multi-turn reasoning compounds across tools and contexts. OpenAI is rolling it out to ChatGPT Plus/Pro/Business/Enterprise today, with API access coming "very soon" pending safety review.</p>
+
+        <blockquote>
+          "GPT-5.5 understands what you're trying to do faster and can carry more of the work itself."
+          <cite>— OpenAI</cite>
+        </blockquote>
+
+        <p>This is the model that makes "I just ask the AI to finish my shift" feel plausible in a way GPT-5.4 never quite did. And yes, that should worry you as much as it excites you.</p>
+
+        <hr class="divider" />
+
+        <h2>When Shipping Velocity Breaks Quality</h2>
+
+        <p>On the same day, Anthropic published a detailed postmortem on <strong>Claude Code quality degradation</strong>. What looked like a broad collapse across the board was actually three separate changes shipped on different timelines, each compounding the others into what users experienced as a reliability crisis.</p>
+
+        <p>The first problem: on March 4, Anthropic switched Claude Code's default reasoning effort from high to medium, specifically to address latency issues that were making the UI feel frozen. The tradeoff was brutal—medium reasoning produced worse code. Users pushed back hard. On April 7, after weeks of using a degraded model, the setting reverted back to high.</p>
+
+        <p>The second issue: on March 26, a feature shipped to clear older context from idle sessions (over one hour). A bug caused this to fire every turn instead of just once. Claude became forgetful and repetitive. That bug sat undetected until April 10, compounding user frustration.</p>
+
+        <p>The third: on April 16, a verbosity reduction instruction landed with the goal of speeding up responses. In combination with other prompt engineering changes, it tanked coding quality. That was live for exactly four days before reverting on April 20.</p>
+
+        <blockquote>
+          "While we began investigating reports in early March, they were challenging to distinguish from normal variation in user feedback at first."
+          <cite>— Anthropic Engineering</cite>
+        </blockquote>
+
+        <p>The postmortem is remarkably honest: neither internal usage metrics nor evals initially caught these problems. Anthropic reset usage limits for all Claude Code subscribers as of April 23. The API itself was never affected. But the incident exposes the real cost of shipping at the speed modern foundation model deployment demands—quality regressions can hide in the seams between different changes, each individually reasonable, collectively catastrophic.</p>
+
+        <hr class="divider" />
+
+        <h2>The Review Bottleneck Is Now the Constraint</h2>
+
+        <p>Shopify's CTO <strong>Mikhail Parakhin</strong> joined Latent Space to discuss what he's learned running AI adoption across a $200B company. His core insight reframes the entire conversation: <strong>the bottleneck is no longer code generation. It's review, testing, and deployment stability.</strong></p>
+
+        <p>Jensen Huang has been evangelizing token budgets—more tokens, more output, more productivity. Parakhin agrees the direction is right, but argues the execution should prioritize <em>depth over breadth</em>. Serial critique loops (AI iterating with itself, human review at checkpoints) outperform parallel runs (kick off 50 LLM attempts, pick the best). The Z/L spectrum—Zechner's "use AI everywhere" vs. Lopopolo's "maintain architectural quality"—is a false binary when the real constraint is human review cycles and CI/CD reliability.</p>
+
+        <p>Shopify's answer is three internal systems: <strong>Tangle</strong> for reproducible ML workflows with content-addressed caching (creating network effects across teams), <strong>Tangent</strong> for automated research and optimization loops, and <strong>SimGym</strong> for customer behavior simulation. Each compounds the others. The company is betting on <strong>Liquid AI</strong>, a non-transformer architecture, for low-latency query understanding and catalog search—the first genuinely competitive non-transformer Parakhin has seen in production.</p>
+
+        <p>What emerges from this is a radically different operating model: not "how many tokens can we generate," but "how fast can we review, test, and deploy what we generate?" The teams winning in 2026 aren't maximizing raw throughput. They're optimizing the critique loop.</p>
+
+        <hr class="divider" />
+
+        <h2>The Agent Infrastructure Layer Is Solidifying</h2>
+
+        <p>While models race forward, the scaffolding around them is hardening fast. <strong>Google Cloud Next</strong> announced <strong>Gemini Enterprise Agent Platform</strong>—a complete vertical integration of models, tooling, governance, and shared team context. Agent Studio, Model Garden with 200+ models, and Workspace Intelligence (semantic layer over docs/sheets/mail) are all part of the single offering. The infrastructure statement is clear: agents are going from research to enterprise production workload.</p>
+
+        <p>OpenAI is shipping <strong>workspace agents in ChatGPT</strong> for teams—shared, Codex-powered agents that operate across docs, email, code, and external systems with approval workflows and background execution. Cursor is adding Slack invocation for agent tasks.</p>
+
+        <p>On the open source side, <strong>Qwen3.6-27B</strong> landed as a 27B dense model (Apache 2.0) that beats much larger competitors: SWE-bench Verified 77.2% (vs Qwen3.5-397B at 76.2%), SWE-bench Pro 53.5% vs 50.9%. vLLM, Unsloth, llama.cpp, and Ollama all added support within 24 hours. The ecosystem is moving as one.</p>
+
+        <p>What's emerging is an agent layer that's model-agnostic, team-scoped, and deeply integrated into the working environment. The companies that own this layer (and the trace/eval/self-improvement loops built on it) will define the next frontier.</p>
+
+        <hr class="divider" />
+
+        <h2>Security Becomes a Blocking Constraint</h2>
+
+        <p>As the attack surface explodes, so does the attack reality. <strong>Bitwarden's CLI was compromised</strong> through an abused GitHub Action in their CI/CD pipeline—the Checkmarx supply chain campaign struck again. The supply chain isn't abstract. It's your automated build system, your secrets rotation, your agent orchestration layer. A single GitHub Action misconfiguration can become the pivot point for a breach.</p>
+
+        <p>A French government agency disclosed a breach of citizen data. Meta announced 10% workforce cuts to offset AI spending. These aren't isolated incidents. They're symptoms of an infrastructure undergoing rapid, high-stakes transformation. Security hygiene in AI tooling pipelines isn't an optional hardening exercise anymore—it's a business continuity requirement.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Speed still wins, but velocity has a cost.</strong> GPT-5.5 is faster and cheaper per token—a genuine efficiency inflection. But Anthropic's postmortem shows how fast shipping can hide quality regressions in the seams between changes. The industry's learn-by-shipping cycle is hitting its limits.</li>
+            <li><strong>Code generation is solved. Code review is the new frontier.</strong> Shopify's insight is the day's most important: when models can ship faster than humans can audit, the constraint flips from "how much can we generate" to "how do we review safely." This reframes every downstream decision about agent architecture and team workflows.</li>
+            <li><strong>Agent infrastructure is the battleground for 2026-2027.</strong> Enterprise models (workspace agents, Gemini platform, OpenAI's shared agents) are moving from concept to production. The companies that own the trace/eval/critique loops will compound advantages faster than model labs can ship new versions.</li>
+            <li><strong>Supply chain attack surface is now material risk.</strong> Bitwarden's CI/CD compromise isn't a novel attack. It's the template. As agents gain more access to build systems, deployment pipelines, and credential stores, security in the automation layer becomes a non-negotiable business continuity requirement.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47879092">GPT-5.5 (1160 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47878905">An update on recent Claude Code quality reports (593 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47876043">Bitwarden CLI compromised in Checkmarx supply chain campaign (672 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47872324">I am building a cloud (1023 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47879986">Meta tells staff it will cut 10% of jobs (441 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47877366">French government agency confirms breach (364 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47881786">TorchTPU: Running PyTorch Natively on TPUs at Google Scale (79 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47878117">MeshCore development team splits over trademark and AI-generated code (169 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/shopify">Shopify's AI Phase Transition: 2026 Usage Explosion — Mikhail Parakhin, CTO (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-tasteful-tokenmaxxing">AINews: Tasteful Tokenmaxxing (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/unsupervised-learning-2026">AIE Europe Debrief + Agent Labs Thesis — Unsupervised Learning × Latent Space Crossover (Latent Space)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
