@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Proof of Work Problem — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Sunday, April 26, 2026</div>
+        <h1>The Proof of Work Problem</h1>
+        <p class="subtitle">An amateur cracks a 60-year-old Erdős puzzle with ChatGPT, Lovable prints $200M ARR, and AI breaks the last proxy measure we had for quality knowledge work.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>When an Amateur Beats the Math Olympiad</h2>
+
+        <p>Something quietly remarkable <a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/">happened this week</a>: an amateur mathematician, armed with ChatGPT and a stubborn streak, solved an open problem that had sat on Paul Erdős's list for roughly sixty years. The HN thread lit up not with skepticism, but with a kind of reverent disbelief — the community that reflexively dismisses "vibe coding" spent the day re-reading an Erdős problem page and concluding the math actually checked out.</p>
+
+        <p>Paul Erdős was the most prolific mathematician of the twentieth century, a stateless wanderer who lived out of a suitcase and paid cash prizes for unsolved problems because he believed mathematics belonged to whoever could think most clearly about it. His problems — hundreds of them, scattered across combinatorics, number theory, and graph theory — became a standing challenge to the global mathematical community. Many of the simplest-looking ones have resisted professionals for decades. The idea that an amateur could crack one with an AI assistant is, by any historical standard, extraordinary.</p>
+
+        <blockquote>
+          "The additive effect of being good at two things is more than double. The additive effect of being good at three things is more than triple. You become a super relevant specialist in the combination of the domains."
+          <cite>— Marc Andreessen, Lenny's Podcast</cite>
+        </blockquote>
+
+        <p>Andreessen's framing of "domain combination" is exactly what seems to have happened here. The amateur presumably knew something about the problem — had a mathematical intuition, or at least a genuine interest — and used ChatGPT as an interlocutor capable of running through cases, suggesting approaches, and catching logical errors. Neither the human nor the model could have done this alone. Together they cleared something that stumped specialists.</p>
+
+        <p>This is a different category of result from "AI writes code faster" or "AI drafts emails." This is AI operating at the frontier of human understanding, in a domain where there is no ambiguity about correctness. A proof is either right or it isn't. There is no hallucination that passes peer review. If it holds up, it holds up. And it appears to hold up.</p>
+
+        <hr class="divider" />
+
+        <h2>The Simulacrum Problem: Quality Proxies Are Dead</h2>
+
+        <p>One of the most interesting pieces to surface on HN this week comes from a blog called One Happy Fellow: <a href="https://blog.happyfellow.dev/simulacrum-of-knowledge-work/">"Simulacrum of Knowledge Work."</a> It's a short essay that makes a devastating point about what LLMs have actually broken — and it isn't jobs. It's the verification system.</p>
+
+        <p>The argument goes like this: knowledge work has always been hard to evaluate directly. You can't easily tell if a market analysis is correct without essentially re-doing the market analysis yourself. So organizations have always relied on <em>proxy measures</em> — is the writing clear? Are there typos? Does the report look like something a serious person wrote? These proxies correlated well enough with underlying quality for long enough that we built entire institutions around them.</p>
+
+        <blockquote>
+          "Large language models are great at simulating a style of writing without necessarily reproducing the quality of the work. A software engineer can write thousands of lines of code which looks like high-quality code, at least if you have just a couple of seconds to skim through it."
+          <cite>— One Happy Fellow, "Simulacrum of Knowledge Work"</cite>
+        </blockquote>
+
+        <p>This is the crux: LLMs produce excellent-looking output at near-zero marginal cost. All those surface quality signals — polish, coherence, correct grammar, professional tone — that we used as cheap proxies for real quality now cost nothing to fake. The ritual of working can be upheld with none of the underlying substance. We have built, as the author puts it, "a working simulacrum of knowledge work."</p>
+
+        <p>This connects to something <a href="https://github.com/AndrewVos/endless-toil">another HN post captured perfectly</a> this week: a project called "Hear your agent suffer through your code," which plays ambient audio of an AI model complaining while it reads your codebase. It went viral partly as a joke, but underneath the humor is a real anxiety: even when the process <em>feels</em> rough and authentic, the output quality is still opaque. The agent's suffering is performative. The code could be slop or genius; you can't tell from the soundtrack.</p>
+
+        <p>The Erdős result and the simulacrum essay sit at opposite ends of the same spectrum. A verified mathematical proof is perhaps the one remaining domain where proxy measures still work perfectly — because there are no proxy measures. The proof is the thing. Every other domain of knowledge work is somewhere on a continuum of how expensive it is to verify quality independently of how quality looks.</p>
+
+        <hr class="divider" />
+
+        <h2>The AI Economy Has Barely Begun</h2>
+
+        <p>Marc Andreessen appeared on Lenny Rachitsky's podcast this week for what became one of the more quotable AI conversations in recent months. His thesis is blunter than most: the AI boom people are currently experiencing — the one that's already produced $100B+ fundraises and trillion-dollar valuations — is not the main event. It's the prelude.</p>
+
+        <blockquote>
+          "AI is the philosopher's stone. We have a technology that transfers the most common thing in the world, which is sand, converted into the most rare thing in the world, which is thought."
+          <cite>— Marc Andreessen, Lenny's Podcast</cite>
+        </blockquote>
+
+        <p>Andreessen's philosophical anchor for the moment is genuinely interesting: the philosopher's stone was the medieval alchemist's dream of transmuting base metals into gold. He's arguing AI does something structurally similar but real — it converts silicon (abundant, cheap) into cognition (historically scarce, expensive). The economic implications of making thought cheap are, in his framing, at least as large as the industrial revolution making physical labor cheap.</p>
+
+        <p>The timing argument he makes deserves attention. For fifty years, rich economies have been running the demographic math of aging populations and declining workforce growth. The usual answer to this problem — "we need more workers" — has no good solution, because you can't quickly manufacture more people. AI and robotics arriving precisely as that demographic squeeze tightens is, he argues, not a coincidence of luck but a fortunate convergence of human ingenuity and necessity. "The remaining human workers are going to be at a premium, not at a discount."</p>
+
+        <p>The most concrete evidence for the "barely begun" thesis is <a href="https://www.youtube.com/watch?v=6qAB6aUMIeA">Lovable's growth trajectory</a>, laid out in detail by their head of growth Elena Verna this week. Lovable — the AI-powered app builder — hit $100M ARR in roughly eight months from launch. Then it hit $200M ARR four months after that. Over eight million users have touched the product. The company has about 100 people. These numbers don't fit any pre-existing growth model: Verna noted that only 30–40% of her fifteen years of growth experience transferred to this context.</p>
+
+        <blockquote>
+          "I just feel like I usually spend maybe 5% innovating on growth in my previous roles. Right now I'm spending 95% innovating on growth and only 5% on optimization."
+          <cite>— Elena Verna, Head of Growth at Lovable</cite>
+        </blockquote>
+
+        <p>The growth loop that works at Lovable is stripped-down: give the product away aggressively to communities, build in public, lean on founder and employee social presence, and reinvest in whatever causes word-of-mouth rather than optimizing what already works. The traditional SaaS growth playbook — funnel optimization, A/B testing, paid acquisition — is largely irrelevant when a product is spreading because people can't believe it exists. At $200M ARR with 100 people, Lovable is running at roughly $2M ARR per employee. That ratio is not sustainable forever, but it's a preview of what AI-native businesses can look like at scale.</p>
+
+        <hr class="divider" />
+
+        <h2>OpenAI Builds the Infrastructure of Trust</h2>
+
+        <p>Two moves from OpenAI this week are worth reading together. First: they open-sourced <a href="https://openai.com/index/introducing-openai-privacy-filter/">Privacy Filter</a>, a small model purpose-built for detecting and redacting personally identifiable information in text. It runs locally, processes long inputs in a single pass, achieves state-of-the-art performance on the PII-Masking-300k benchmark, and is available for anyone to fine-tune. OpenAI uses a fine-tuned version internally in their own privacy-preserving workflows.</p>
+
+        <p>Second: they launched a <a href="https://openai.com/index/gpt-5-5-bio-bug-bounty/">Bio Bug Bounty for GPT-5.5</a>, offering $25,000 to the first researcher who can find a universal jailbreaking prompt that successfully answers all five bio safety challenge questions from a clean session. Applications run through June, with testing through July. The model in scope is GPT-5.5 in Codex Desktop only. The program is invite-only with NDA requirements, deliberately narrow in scope.</p>
+
+        <p>These two moves are related in spirit if not in domain. Privacy Filter is about giving developers practical infrastructure for building privacy-respecting AI pipelines — shifting the cost of doing the right thing from "expensive, custom-built" to "download and fine-tune." The Bio Bug Bounty is about stress-testing the safety properties of a frontier model under adversarial conditions, in the highest-stakes domain (biology), before wider deployment.</p>
+
+        <p>Both are examples of what serious AI safety work looks like in practice: not policy documents and red lines, but open-weight models anyone can deploy and competitive adversarial programs that put real money on the line for finding real flaws. The Erdős story this morning and the bug bounty this week share a structure: external challenge, verifiable outcome, no way to fake success. That's the kind of epistemology the field needs more of.</p>
+
+        <hr class="divider" />
+
+        <h2>The Graveyard of Abandoned Projects, Revisited</h2>
+
+        <p>One more thread worth pulling: a <a href="https://blog.matthewbrunelle.com/its-ok-to-use-coding-assistance-tools-to-revive-the-projects-you-never-were-going-to-finish/">personal essay</a> made the HN front page this week with a simple argument — it's okay to use AI coding tools to finish the projects that have been sitting in your graveyard for years. The author revived a YouTube Music / OpenSubsonic shim using Claude Code that he'd abandoned because life got in the way.</p>
+
+        <p>There's a Japanese word, <em>tsundoku</em>, for the pile of books you intend to read someday but never do. Software developers have had a tsundoku drawer of half-finished side projects for as long as there have been side projects. AI coding tools, the author argues, are a legitimate way to clear that drawer — not by faking completion, but by providing the sustained attention and iteration capacity that life rarely offers.</p>
+
+        <p>This is a quieter version of the same story Lovable tells at $200M ARR: AI removes the activation energy from creation. The projects sitting in that drawer weren't abandoned because the ideas were bad. They were abandoned because finishing is expensive, and life is short. Andreessen would probably say that's the philosopher's stone working exactly as designed — transmuting latent intention into completed work. The Simulacrum essay would ask: but how do you know it's actually good? That tension, between democratized creation and the verification problem, is the central puzzle of this moment.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>AI has entered the domain of mathematical proof.</strong> The Erdős result isn't just a curiosity — it's evidence that AI-augmented humans can now operate at the research frontier in domains where correctness is binary and unambiguous. That's a different category of capability than anything we've seen before.</li>
+            <li><strong>The quality verification problem is real and unsolved.</strong> LLMs have broken every cheap proxy measure we had for knowledge work quality. The only reliable answer is to verify the thing directly — which is expensive. Organizations that figure out new verification mechanisms will have a structural advantage over those that don't.</li>
+            <li><strong>The AI economy is in the early chapters.</strong> Lovable's $200M ARR with 100 people is a preview, not the main event. Andreessen's timing argument — AI arriving precisely when demographic curves demand it — suggests the economic disruption is just getting started.</li>
+            <li><strong>The most credible safety work is adversarial and verifiable.</strong> Open-weight privacy tools and bug bounties that put real money on real outcomes are more trustworthy signals than policy commitments. Watch for more of this pattern as labs compete on safety credibility.</li>
+            <li><strong>The gap between creation and verification is widening.</strong> AI makes creating easier; it makes verifying harder. The Sunday projects, the market analyses, the code reviews — AI enables the first and undermines the second. The businesses, institutions, and careers that thrive will be the ones that figure out new verification primitives before the gap becomes too wide to bridge.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/">Amateur armed with ChatGPT solves an Erdős problem (104 pts)</a></li>
+          <li><a href="https://blog.happyfellow.dev/simulacrum-of-knowledge-work/">Simulacrum of Knowledge Work (108 pts)</a></li>
+          <li><a href="https://blog.matthewbrunelle.com/its-ok-to-use-coding-assistance-tools-to-revive-the-projects-you-never-were-going-to-finish/">Using coding assistance tools to revive projects you never were going to finish (206 pts)</a></li>
+          <li><a href="https://github.com/AndrewVos/endless-toil">Hear your agent suffer through your code (210 pts)</a></li>
+          <li><a href="https://openai.com/index/introducing-openai-privacy-filter/">OpenAI Privacy Filter (132 pts)</a></li>
+          <li><a href="https://openai.com/index/gpt-5-5-bio-bug-bounty/">GPT-5.5 Bio Bug Bounty (136 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=6qAB6aUMIeA">The new AI growth playbook for 2026 — Elena Verna on Lovable's $200M ARR (Lenny's Podcast)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=marc-andreessen-lenny">Marc Andreessen: The Real AI Boom Hasn't Even Started Yet (Lenny's Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
