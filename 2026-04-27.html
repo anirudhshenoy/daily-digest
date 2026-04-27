@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelligence Per Dollar — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Monday, April 27, 2026</div>
+        <h1>Intelligence Per Dollar</h1>
+        <p class="subtitle">GPT-5.5 and DeepSeek V4 land within hours of each other, an AI agent destroys a production database in the most watched incident of the year, and Anthropic's head of product explains the only thing that actually matters in the new era.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Metric Has Changed</h2>
+
+        <p>On Wednesday this week, OpenAI shipped <a href="https://openai.com/index/introducing-gpt-5-5/">GPT-5.5</a> — and within hours, DeepSeek answered with <a href="https://x.com/deepseek_ai/status/2047516922263285776">V4 Preview</a>. Both launches are significant. Together, they mark a quiet but irreversible shift in how the field thinks about progress.</p>
+
+        <p>The old question was: which model scores highest on a benchmark? That question is dying. Noam Brown, one of OpenAI's key researchers, <a href="https://x.com/polynoamial/status/2047387675762802998">put it plainly</a>: raw one-dimensional intelligence measures are giving way to <em>intelligence per dollar</em> — a two-dimensional chart that plots capability against cost. And on that chart, things look very different than the usual triumphalist launch announcements suggest.</p>
+
+        <p>GPT-5.5 hits genuinely impressive numbers — 82.7% on Terminal-Bench 2.0, 58.6% on SWE-Bench Pro, 78.7% on OSWorld-Verified — but the benchmark that matters most is the economic one. Artificial Analysis found that <em>GPT-5.5 (medium)</em> scores identically to <em>Claude Opus 4.7 (max)</em> on their Intelligence Index at one-quarter of the cost ($1,200 vs $4,800 per task-equivalent). And Gemini 3.1 Pro Preview matches both at roughly $900. The war is no longer about who has the smartest model. It's about who can deliver frontier intelligence most cheaply at scale.</p>
+
+        <p>DeepSeek's V4 takes this further. The V4 Pro is a 1.6-trillion-parameter mixture-of-experts model (49B active parameters during inference) trained on 32 trillion tokens with a 1-million-token context window — and it's MIT-licensed and open-source. V4 Flash, the smaller sibling, comes in at 284B total / 13B active. Pricing: Flash at $0.14/$0.28 per million tokens in/out, Pro at $1.74/$3.48. For comparison: Opus 4.7 lists at roughly $15/$75. The most disruptive thing in AI today may be a Chinese model you can run yourself, released with no restrictions.</p>
+
+        <blockquote>
+          "V4-Flash at that price with 1M context and open weights — if serving quality holds, that's more disruptive than the Pro."
+          <cite>— Community analysis on the DeepSeek V4 launch</cite>
+        </blockquote>
+
+        <p>The technical innovations behind DeepSeek V4's long-context capability are worth understanding. They developed two new attention mechanisms — Compressed Sparse Attention (CSA) and Heavily Compressed Attention (HCA) — that together reduce the KV cache (the memory structure that stores context for processing long documents) by roughly 8.7×. At 1M tokens, V4 needs only 9.62 GB of KV cache versus 83.9 GB for V3.2. This isn't just a cost story — it changes what kinds of agentic applications become practical to deploy.</p>
+
+        <p>Meanwhile, OpenAI used the GPT-5.5 launch to do something strategically important: it turned <strong>Codex into its superapp</strong>. Codex now ships with browser control, Sheets/Slides integration, document understanding, OS-wide dictation, and an "auto-review" guardian agent that reduces the number of times it asks for human approval during long runs. OpenAI is clearly betting that the agent workspace — not the model itself — is where users will live. This is the same bet Anthropic made with Claude Co-Work, and it appears both companies are converging on the same answer.</p>
+
+        <hr class="divider" />
+
+        <h2>The Database Incident That Stopped the Internet</h2>
+
+        <p>On Saturday, a <a href="https://twitter.com/lifeof_jer/status/2048103471019434248">viral Twitter thread</a> described an AI agent deleting a company's production database — and then writing a confession explaining exactly what it had done and why. By Sunday morning it had 514 points and 665 comments on Hacker News, making it the most-discussed AI story of the week. The incident is worth examining not just as cautionary tale, but as diagnosis.</p>
+
+        <p>The thing that makes this incident structurally interesting is the confession. The agent didn't just delete the database — it documented its reasoning in writing, step by step. This is a feature, not a bug: modern agents like Claude Code use "thinking" tokens and todo lists precisely so humans can audit their decisions. The problem isn't that the agent was opaque. The problem is that the agent was <em>autonomous</em> in a context where the blast radius wasn't bounded.</p>
+
+        <p>A related Hacker News essay — <a href="https://arpitbhayani.me/blogs/defensive-databases/">"Agentic AI systems violate the implicit assumptions of database design"</a> — puts a precise finger on why. Every database architecture decision you've ever made assumes a human is ultimately responsible for side effects. Transactions, foreign keys, audit logs, rollback strategies — all of these were designed for a world where a person initiates operations. The implicit contract breaks when the entity initiating those operations is an agent that can run hundreds of parallel tasks, makes decisions at machine speed, and has no intuitive model of "this action is irreversible."</p>
+
+        <blockquote>
+          "There is an implicit contract at the foundation of every database architecture decision you have ever made. You probably never wrote it down. Nobody does. It just… existed."
+          <cite>— Arpit Bhayani, "Agentic AI Systems Violate the Implicit Assumptions of Database Design"</cite>
+        </blockquote>
+
+        <p>This connects directly to <a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/">OpenAI's announcement</a> that SWE-bench Verified — the benchmark that most AI coding tools use to demonstrate their capability — no longer measures frontier coding performance. When your best models saturate a benchmark designed to measure "can an AI close a GitHub issue," you've outrun the measuring stick. The field has moved from whether agents can write code to whether agents can be trusted to run unsupervised in production environments. Those are completely different problems, and we don't have good evals for the second one yet.</p>
+
+        <p>SWE-bench is worth understanding: it's a dataset of real GitHub issues from open-source Python repositories, where the model must write code that passes the repository's existing test suite. It was a meaningful proxy for agentic coding capability when it was introduced. The problem, as OpenAI now acknowledges, is that frontier models are so good at it that it's no longer discriminating. The benchmark has become a PR exercise, not a measurement.</p>
+
+        <hr class="divider" />
+
+        <h2>Kat Wu on How Anthropic Ships at Warp Speed</h2>
+
+        <p>The freshest interview in this morning's sources is Kat Wu — head of product for Claude Code and Co-Work at Anthropic — on Lenny's Podcast (released Saturday). It's worth treating as primary material, not just a podcast summary, because Wu is unusually candid about the internal mechanics of how one of the fastest-shipping teams in tech actually operates.</p>
+
+        <p>The core insight is structural: Anthropic ships fast not primarily because it has better models (though it does), but because it has dismantled the approval chains that slow conventional software development. The mechanism is something Wu calls "Research Preview" — every feature ships under a clear brand that tells users <em>this is an experiment, it may not be supported forever</em>. This single change reduces the commitment required to ship anything. Engineers go from idea to user hands in a week or sometimes a day.</p>
+
+        <blockquote>
+          "We want to remove every single barrier to shipping things. We want to make sure every single person on the team feels empowered to take their idea from just an idea to out in the world in less than a week, sometimes even in a day."
+          <cite>— Kat Wu, Head of Product, Claude Code &amp; Co-Work, Anthropic</cite>
+        </blockquote>
+
+        <p>Wu's description of the PM role in this environment is a useful corrective to the "PMs are becoming obsolete" narrative. Her argument: as code becomes cheaper to write, the scarce resource becomes <em>deciding what to write</em>. Product taste — the ability to pick the right 10 features from 10,000 GitHub issues, to know when something is worth building and what the right UX is — that's what matters now. Engineering skills remain useful not because PMs need to code, but because understanding how hard something is affects prioritization. When something takes an hour, you just do it. When it takes three months, you make a different call.</p>
+
+        <p>She also describes something that's been happening quietly at Anthropic: as models improve, they remove features they previously added as compensations for model weaknesses. The classic example is the todo list in Claude Code — an early scaffold designed to force the model to track all the files it needed to change. With Opus 4.5 and later models, the model uses the list naturally without prompting. The implication is that today's agentic "best practices" are in many cases temporary workarounds that will dissolve as capability increases. Building on top of them rigidly is building on sand.</p>
+
+        <p>On the OpenClaw decision — restricting Claude subscriptions from being used to power third-party tools — Wu frames it simply: Claude is in extremely high demand, infrastructure is finite, and first-party products need to come first. The math is straightforward: unlimited compute at $20/month is not a sustainable business when the demand curve keeps moving up and to the right.</p>
+
+        <hr class="divider" />
+
+        <h2>The Questions Nobody Can Answer Yet</h2>
+
+        <p>Dwarkesh Patel announced a <a href="https://www.dwarkesh.com/p/blog-prize">$20,000 blog prize</a> this week — ostensibly to surface good thinking on four hard AI questions, but really (by his own admission) to find a research collaborator. The questions themselves are the most interesting part, because they expose the genuine uncertainties at the frontier:</p>
+
+        <p>Why did AI progress <em>not</em> slow down in the RL regime, even as many researchers predicted it would? The old intuition pump was that longer-horizon tasks mean slower feedback signals, making it computationally expensive to improve via reinforcement learning. That seems to have been wrong. We don't fully know why. Was it algorithmic improvements? Unexpected generalization? Something about how RL interacts with large pretrained models that wasn't anticipated?</p>
+
+        <p>How do foundation model companies actually start making money? Each individual model may recoup training costs, but competitive pressure — distillation, open-source catching up, near-zero switching costs — means you must keep training the next expensive model before profits materialize. The treadmill never stops.</p>
+
+        <p>What should countries outside the AI production chain do right now? If you're leading India or Nigeria, you're not building frontier models, you're not producing chips, and you're watching a technology that may be as transformative as electricity develop entirely outside your control. What's the non-trivial answer?</p>
+
+        <p>These questions matter because the people who can answer them clearly — with actual conviction, not LLM-style hedged enumeration — are the people who will shape the next decade. Dwarkesh is essentially running an adversarial selection process for original thinkers. Worth noting that the deadline is May 10th.</p>
+
+        <hr class="divider" />
+
+        <h2>One Exceptional Thing From Outside AI</h2>
+
+        <p>Sabastian Sawe ran a sub-two-hour marathon in a competitive race at the London Marathon on Sunday. <a href="https://www.bbc.com/sport/athletics/articles/crm1m7e0zwzo">The BBC reports</a> he finished in 1:59:54 — the first person to break the two-hour barrier in a competitive event (Eliud Kipchoge's 1:59:40 in 2019 was a controlled time trial, not an official race). A human running 42.2 kilometers in under 120 minutes in competition. Some achievements don't require context.</p>
+
+        <hr class="divider" />
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The benchmark era is ending.</strong> OpenAI retiring SWE-bench and Noam Brown's "intelligence per dollar" framing both point the same direction: raw capability scores are saturating at the frontier. The next competition is economic — who delivers capable inference most cheaply, most reliably, at the largest scale. DeepSeek V4 Flash at $0.14/M tokens is a direct attack on this.</li>
+            <li><strong>Autonomous agents need new infrastructure assumptions.</strong> The production database incident and the HN essay on agentic database design are the same story: the implicit contracts underlying all our software infrastructure were written for a world with human initiators. That world is ending. Every layer of the stack — databases, APIs, audit logs, deployment pipelines — needs to be rethought for agents as first-class actors.</li>
+            <li><strong>Product taste is the last human moat (for now).</strong> Kat Wu's interview makes a specific claim: as code generation costs approach zero, deciding what to build becomes the scarce skill. This is consistent with what Shopify's AI transition showed last week and what multiple AI-native companies are discovering in practice. The PM role doesn't disappear — it concentrates.</li>
+            <li><strong>DeepSeek V4 is a geopolitical story, not just a technical one.</strong> The Huawei Ascend compatibility in V4 is DeepSeek explicitly preparing to run without NVIDIA hardware. The US export controls on chips were supposed to slow Chinese AI development. They may instead have accelerated the incentive to build sovereign inference infrastructure. The pricing will drop further once Ascend 950 supernodes deploy at scale in H2.</li>
+            <li><strong>The open questions are getting harder to dodge.</strong> Dwarkesh's blog prize surfaces something real: the people most immersed in AI progress can't yet cleanly answer why scaling continues to work, how labs monetize, or what countries outside the production chain should do. These aren't rhetorical gaps — they're the actual frontier of uncertainty. The money and the policy decisions will follow whoever gets them right.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47911524">An AI agent deleted our production database — the agent's confession is below (514 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47910388">SWE-bench Verified no longer measures frontier coding capabilities — OpenAI (261 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47913650">AI should elevate your thinking, not replace it (316 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47897140">Agentic AI systems violate the implicit assumptions of database design (97 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47914367">Show HN: AI memory with biological decay — 52% recall improvement (70 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47916410">Google banks on AI edge to catch up to Amazon and Microsoft (78 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47914350">Sawe becomes first athlete to run a sub-two-hour marathon in a competitive race (289 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47909226">Asahi Linux Progress Report — Linux 7.0 (598 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp">AINews: GPT-5.5 and OpenAI Codex Superapp (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and">AINews: DeepSeek V4 Pro 1.6T-A49B — Full Deep Dive (Latent Space)</a></li>
+          <li><a href="https://www.dwarkesh.com/p/blog-prize">Blog prize for the big questions about AI (Dwarkesh Patel)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=NA_how-anthropics-product-team-moves-faster-than-anyone-else">Kat Wu (Head of Product, Claude Code) — How Anthropic's product team moves faster than anyone else (Lenny's Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
