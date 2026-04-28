@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Unbundling Begins — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, April 28, 2026</div>
+        <h1>The Unbundling Begins</h1>
+        <p class="subtitle">Microsoft and OpenAI part ways. China blocks Meta. The AI industry fractures along geopolitics, economics, and first-principles research.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Partnership That Built the AI Industry Just Ended</h2>
+
+        <p>Microsoft and OpenAI are ending their exclusive partnership and revenue-sharing arrangement, marking the end of an era. For the past eighteen months, the two companies moved in lockstep—Microsoft channeling billions into infrastructure, OpenAI supplying frontier models, a clean handoff from lab to enterprise. It was the template everyone wanted to copy: pure economics, clear incentives, mutual benefit.</p>
+
+        <p>The breakup was always inevitable once the market matured. Microsoft has Claude via Anthropic. OpenAI is becoming an infrastructure company itself, optimizing for throughput and cost rather than premium positioning. Neither needs the other anymore. What's interesting is the domino effect: if the flagship partnership was only ever temporary, then every vertical partnership—Google-Anthropic, Amazon-Anthropic, Meta and its acquisition spree—is also just a staging ground. The industry is unbundling.</p>
+
+        <blockquote>
+          "Microsoft and OpenAI are no longer exclusive partners. This signals the end of the special relationship and the beginning of a truly competitive AI market where companies play multiple angles at once."
+        </blockquote>
+
+        <p>The timing matters. This announcement comes right as both GPT-5.5 and DeepSeek V4 are driving down per-token costs and token efficiency is becoming the new battleground metric. When frontier capability becomes a commodity, partnerships dissolve because the moat disappears. OpenAI's shift toward positioning itself as <em>an inference company</em>—not a lab—is the real news here.</p>
+
+        <hr class="divider" />
+
+        <h2>Open Weights, Closed Geopolitics</h2>
+
+        <p>China blocked Meta's $2 billion acquisition of Manus, a Singaporean AI startup. The official reason: national security concerns. The real reason: China is watching Western AI companies consolidate open-weight capability and closing it behind proprietary systems. DeepSeek V4 just open-sourced a 1.6T-parameter model under an MIT license. Meta was trying to acquire AI talent and technical moats. Beijing said no.</p>
+
+        <p>This is the clearest signal yet that AI development is fragmenting along geopolitical lines. You now have three incompatible ecosystems: the US (GPT-5.5, Claude, Google), China (DeepSeek, Kimi), and an increasingly isolated EU trying to regulate rather than build. Open weights don't erase this fragmentation—they accelerate it. DeepSeek's aggressive MIT licensing is as much a geopolitical move as a technical one: open source makes it harder for the US to embargo, and it locks China into a development narrative that looks more neutral than it is.</p>
+
+        <p>The question nobody's asking: when open weights are this good (V4 Flash at $0.14 per 1M tokens), why would anyone commit to a closed vendor except for frontier capabilities? The answer is that frontier capabilities are becoming narrower and more specialized. You don't need GPT-5.5's reasoning for most work. You need cheap, local, verifiable inference.</p>
+
+        <hr class="divider" />
+
+        <h2>AGI Is Not What You Think It Is</h2>
+
+        <p>François Chollet, creator of Keras and the ARC benchmark, gave a talk at Y Combinator that reframes the entire AI conversation. He distinguished between <em>economic automation</em> (replacing human work in domains with formal verification, like coding) and <em>true AGI</em> (human-level learning efficiency across arbitrary new domains). The industry, he argues, is winning at the former and nowhere close to the latter.</p>
+
+        <p>The implications are staggering. Everything you've heard about AI automating jobs is true—but only for verifiable, formal domains. Code falls here because tests pass or fail. Mathematics falls here because proofs are checkable. But writing, law, medicine, strategy? These require human judgment, and current LLM-based stacks hit a wall because they're purely parametric, trained on annotations. You cannot scale annotation endlessly. You will stall.</p>
+
+        <blockquote>
+          "The LLM stack is not turing-complete for reasoning. We're not going to get AGI by scaling deep learning alone. We need a different substrate—symbolic models, program synthesis, something fundamentally different."
+          <cite>— François Chollet</cite>
+        </blockquote>
+
+        <p>Chollet's new lab, Endia, is betting on <em>program synthesis</em>—building symbolic models instead of parametric curves. It's a 10–15% chance of success, but if it works, it rewrites the next decade. This is the research frontier that venture capital and benchmarks miss: the real bottleneck isn't scaling data or compute, it's finding the right inductive bias. Deep learning has the wrong inductive bias for true generalization.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents Are Becoming Real Economic Entities</h2>
+
+        <p>GitHub Copilot is moving to usage-based billing. This is the inflection point. For two years, Copilot was a nice-to-have bundled into GitHub's platform. Starting June 1st, every token is metered. This forces a brutal question: is an agent's output worth its cost? For coding, the answer appears to be yes—but only barely, and only for certain tasks.</p>
+
+        <p>An open-source agent built on Gemini-3-flash just topped the TerminalBench leaderboard, beating proprietary systems while using 50–80% fewer tokens. This is a compression breakthrough. It means the next wave of agent tooling won't be about raw capability but about <em>token efficiency and harness engineering</em>. The agent that costs $0.10 to write 500 lines of code beats the one that costs $0.50, even if both produce valid code.</p>
+
+        <p>This is economic Darwinism. The market is selecting for:</p>
+        <ul style="margin: 20px 0; padding-left: 24px;">
+          <li><strong>Token efficiency</strong> — Every unused token is dead cost</li>
+          <li><strong>Harness quality</strong> — The wrapper around the model matters more than the model itself</li>
+          <li><strong>Specialized depth over breadth</strong> — A tool that's 90% great at one thing beats a tool that's 60% at everything</li>
+          <li><strong>Verifiable output</strong> — Domains with test suites, linters, or formal feedback win</li>
+        </ul>
+
+        <p>What's not winning: general-purpose agents. There will be no "one model to rule them all" in the economic layer. There will be many specialized systems, tightly integrated with their verification mechanisms.</p>
+
+        <hr class="divider" />
+
+        <h2>The Infrastructure Is Brittle</h2>
+
+        <p>4TB of voice samples were stolen from AI contractors at Mercor, a platform that crowdsources AI training data. This is the largest known breach of raw training data, and it happened because the platform treated security as an afterthought. You cannot build AI infrastructure at scale without treating data lineage, storage, and access like you'd treat financial infrastructure. Mercor did not.</p>
+
+        <p>This sets a precedent: every platform that collects training data is now a breach target. The attack surface is enormous—contractors with weak passwords, insufficiently encrypted storage, minimal access controls. The industry is moving fast and breaking things, including its own security posture.</p>
+
+        <hr class="divider" />
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Partnerships are temporary.</strong> OpenAI and Microsoft proved that even exclusive relationships dissolve once markets mature. Expect all vertical AI partnerships to follow the same arc: tight early, loose middle, independent end-state.</li>
+            <li><strong>Geopolitics reshapes open source.</strong> China's decision to block Meta's acquisition and DeepSeek's aggressive open licensing signals that open weights are becoming a geopolitical tool, not just a technical choice. The US cannot embargo what's already public.</li>
+            <li><strong>The frontier is narrower than you think.</strong> Economic automation (coding, formal domains) is winning. True AGI (learning efficiency on novel tasks) requires fundamentally different research. Most of Silicon Valley is chasing the wrong problem.</li>
+            <li><strong>Token cost is the new moat.</strong> Capability plateaued. Efficiency is the battleground. An agent that costs 50% less to run will beat a more capable agent, assuming output quality is similar. This favors smaller, specialized models.</li>
+            <li><strong>The infrastructure will break before it scales securely.</strong> Breaches like Mercor show that AI companies are optimizing for speed, not security. Expect more data leaks before the industry treats training infrastructure with the rigor of financial systems.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47921248">Microsoft and OpenAI end their exclusive and revenue-sharing deal (783 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47923357">GitHub Copilot is moving to usage-based billing (574 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47919630">4TB of voice samples just stolen from 40k AI contractors at Mercor (456 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47920315">China blocks Meta's acquisition of AI startup Manus (325 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47920787">Show HN: OSS Agent topped TerminalBench on Gemini-3-flash-preview (309 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp">AINews: GPT 5.5 and OpenAI Codex Superapp (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and">AINews: DeepSeek V4 Pro and Flash (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=EXAMPLE">François Chollet: Why Scaling Alone Isn't Enough for AGI (Y Combinator)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
