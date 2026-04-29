@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When the Scaffold Cracks — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, April 29, 2026</div>
+        <h1>When the Scaffold Cracks</h1>
+        <p class="subtitle">GitHub's infrastructure collapses as AI reshapes tech's foundational assumptions about ownership, control, and scale.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The GitHub Exodus Begins</h2>
+
+        <p>Ghostty, a terminal emulator that's become a beloved tool in the developer community, is leaving GitHub. Mitchell Hashimoto—GitHub user #1299, who has logged in virtually every day for 18 years—has had enough. He's not angry in an abstract way. He's personally devastated by what GitHub has become: a platform that actively blocks productive work through constant outages.</p>
+
+        <blockquote>
+          "This is no longer a place for serious work if it just blocks you out for hours per day, every day. I want to ship software and it doesn't want me to ship software."
+          <cite>— Mitchell Hashimoto, on Ghostty's departure from GitHub</cite>
+        </blockquote>
+
+        <p>The timing is explosive. In the same week, a critical <a href="https://www.wiz.io/blog/github-rce-vulnerability-cve-2026-3854">RCE vulnerability (CVE-2026-3854)</a> made headlines, GitHub Actions remains under fire as a security weak point, and Copilot's code review feature is now consuming your Actions minutes quota. GitHub's availability has become so unreliable that it's pushing serious projects toward alternatives. This isn't a complaint from an edge case—it's a signal that the platform built to be the center of the developer universe may no longer be fit for that role when AI-scale demands hit.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Breaks Its Chains—Again</h2>
+
+        <p>Two seismic shifts happened this week in AI's relationship with cloud vendors. First: <a href="https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/">OpenAI's models are now available on Amazon Bedrock</a>, ending the de facto exclusivity arrangement with Microsoft. This is a bigger deal than the headline suggests. It means enterprise customers can now choose where to run frontier AI models, fragmenting what looked like a locked-in cloud relationship. Sam Altman and Matt Garman's joint announcement signals that the AI infrastructure wars just entered a new phase.</p>
+
+        <p>Second: <a href="https://www.theverge.com/ai-artificial-intelligence/919494/google-pentagon-classified-ai-deal">Google has signed a classified agreement with the Pentagon</a> allowing the US Department of Defense to use Google's AI models for "any lawful government purpose." This isn't a research partnership. This is a military technology transfer deal, and the fact that it's classified means we don't yet know the full scope. The strategic implications are staggering: AI capability is now explicitly a national security asset.</p>
+
+        <p>Together, these moves tell a story. The AI layer is decoupling from specific vendors and cloud providers. It's becoming infrastructure—more like compute itself, less like a proprietary product. This is good for competition and bad for margin-heavy SaaS businesses that thought they'd own the AI layer forever.</p>
+
+        <hr class="divider" />
+
+        <h2>Who Actually Owns AI-Generated Code?</h2>
+
+        <p>A lawsuit waiting to happen just crystallized on HN this week. <a href="https://legallayer.substack.com/p/who-owns-the-claude-code-wrote">Legal Layer's explainer on AI-generated code ownership</a> walks through the uncomfortable truth: copyright law says only humans can hold copyright. So if Claude Code generates 90% of your codebase, your employer might own it. Or you might. Or nobody might. It depends on documentation you probably didn't create.</p>
+
+        <p>This became concrete when Claude Code's source code itself leaked in March. Someone used an AI tool to rewrite the entire thing in Python, and "claw-code" hit 100,000 GitHub stars in a single day. Anthropic issued DMCA takedowns—but the question nobody could cleanly answer: <em>Can you copyright-strike code that copyright law may not protect in the first place?</em></p>
+
+        <p>This matters because it signals a legal framework built for the 20th century crashing against 21st-century technical reality. We're building production systems where the code provenance is ambiguous, ownership is contested, and the legal scaffold is still deciding whether AI-generated work even counts as creative.</p>
+
+        <hr class="divider" />
+
+        <h2>The Plateau Is Closer Than You Think</h2>
+
+        <p>Dario Amodei (Anthropic CEO) said something in a recent Dwarkesh interview that deserves more attention than it got: the exponential scaling of AI capability is roughly tracking his expectations, but what's surprised him most is that <em>almost no one in the public is recognizing how close we are to the end of that exponential.</em></p>
+
+        <p>He's not claiming we've hit diminishing returns. He's saying the scaling laws that got us from GPT-2 to GPT-5 will get us maybe three more generations, and then the architecture hits a ceiling. Pre-training scaling works. RL scaling (on math contests, code generation) also works. But both follow log-linear curves. The "magic" hasn't been the techniques—it's been the sheer quantity of compute, data quality, and training time. Those have asymptotes.</p>
+
+        <p>Meanwhile, Adam Marblestone (researcher studying brain-inspired AI) pushed back with a different concern: we might be scaling <em>the wrong thing</em>. The human brain learns with vastly less data and compute, and it does something we haven't figured out yet—something about loss functions, initialization, or learning algorithms that's fundamentally different. We're throwing billions at frontier models to do tasks a child does in minutes. That gap suggests we're missing something real about how learning actually works.</p>
+
+        <hr class="divider" />
+
+        <h2>Open Source Fights Back</h2>
+
+        <p>Interestingly, while the commercial AI stack crumbles under its own weight, open-source projects are gaining momentum. <a href="https://github.com/microsoft/VibeVoice">VibeVoice (Microsoft's open-source voice AI)</a> hit the front page. <a href="https://www.warp.dev/blog/warp-is-now-open-source">Warp went open-source</a>, giving developers a modern terminal without closed-source dependencies. <a href="https://github.com/localsend/localsend">Localsend</a> (open AirDrop alternative) continues gaining traction. And there's <a href="https://talkie-lm.com/introducing-talkie">Talkie</a>—a wild research project training language models on pre-1931 text to see what an AI trained on 95-year-old knowledge would say. It's not immediately useful, but it's the kind of playful, open-ended research that closed systems don't fund.</p>
+
+        <p>The pattern: as commercial AI becomes more centralized (Pentagon deals, exclusive agreements, corporate control), the open-source layer is decentralizing. This tension will define the next phase.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Platforms built for humans don't scale to AI.</strong> GitHub's outages aren't random failures—they're symptomatic of infrastructure designed when developers were humans, not when AI agents would flood it with requests at machine speed.</li>
+            <li><strong>Ownership frameworks are buckling.</strong> Copyright law, employment contracts, and IP doctrines were built for a world where creation required human labor. AI-generated code reveals we have no consensus on who owns what, and that ambiguity will create legal chaos.</li>
+            <li><strong>The exponential age is ending, quietly.</strong> Dario's right—most people don't realize we're in the final innings of scaling-based AI improvements. The next breakthroughs will require architectural insight, not just bigger numbers.</li>
+            <li><strong>Centralization creates backlash.</strong> Military AI deals and exclusive cloud arrangements are driving open-source alternatives. The next wave of AI innovation will likely come from the edges, not the centers.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47939579">Ghostty is leaving GitHub (1882 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47935853">Your phone is about to stop being yours (1061 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47933208">Localsend: Open-source AirDrop alternative (758 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47927903">Talkie: 13B language model trained on 1930 data (649 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47932937">Who owns the code Claude Code wrote? (282 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47936479">GitHub RCE Vulnerability CVE-2026-3854 (267 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47933236">VibeVoice: Open-source frontier voice AI (334 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47932422">An update on GitHub availability (329 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://legallayer.substack.com/p/who-owns-the-claude-code-wrote">Who Owns the Code Claude Wrote? (Legal Layer)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=NA_dario-amodei-we-are-near-the-end-of-the-exponential">Dario Amodei: We're Near the End of the Exponential (Dwarkesh Podcast)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=NA_adam-marblestone-ai-is-missing-something-fundamental">Adam Marblestone: AI Missing Something Fundamental About Learning (Dwarkesh Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
