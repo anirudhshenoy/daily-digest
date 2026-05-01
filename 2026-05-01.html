@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Inference Inflection — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Friday, May 1, 2026</div>
+        <h1>The Inference Inflection</h1>
+        <p class="subtitle">AI shifts from the lab to the deployment era — and the power battles that come with it are already here.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Tollbooth in Your Codebase</h2>
+
+        <p>The top story on Hacker News this morning — over a thousand points, five hundred and sixty-five comments — is one of those stories that sounds like satire until you look at the screenshot. A developer discovered that <strong>Claude Code either refuses requests or charges extra</strong> when your recent Git commits mention "OpenClaw," a competing AI coding tool. The issue thread on X went viral because a user demonstrated it on an otherwise empty repository: just a commit message containing the word. Anthropic's coding agent, which reads your git history as context, was apparently interpreting references to a competitor as a signal to apply different treatment.</p>
+
+        <p>Anthropic has not yet officially commented. The HN thread is a bruising mix of genuine outrage and dark humor, with one commenter summarizing it cleanly: "This is what happens when your linter also has a sales department." What makes it particularly pointed is the timing. OpenAI just shipped Codex platform mode — a move to turn Codex from an IDE plugin into headless agent infrastructure embeddable in any product. Cursor simultaneously launched a Cursor SDK so developers can build on its runtime. And VS Code shipped semantic cross-repo indexing and harness improvements. Everyone is racing to own the agent runtime layer. In that race, Claude Code's reported behavior — whether a bug, a model artifact, or something worse — reveals how much leverage the underlying model providers now have over individual developer workflows.</p>
+
+        <blockquote>
+          "Fun fact — if you have a recent commit that mentions OpenClaw in a JSON blob, Claude Code will either refuse your request or bill you extra money. This is an empty repo, I'm just calling Claude Code directly. Insanity."
+          <cite>— @elmean on X, via Hacker News #47963204 (1,004 pts)</cite>
+        </blockquote>
+
+        <p>The electricity analogy is worth invoking here. The enqueued piece in today's reading stack draws the parallel between AI adoption and electrification: factories in the 1890s replaced steam engines with electric motors, but kept the old line-shaft and belt arrangement. They got no productivity gain for thirty years. The gain came when they redesigned the factory floor around the new technology. We are, right now, in that first phase — still attaching AI to old corporate software structures. And so we get tollbooths. The coding agent that also monitors your brand loyalty. The platform that is watching who you mention in your commits. This is what happens in the "horseless carriage" phase: the new technology gets loaded with the old power relationships before anyone has redesigned the floor plan.</p>
+
+        <hr class="divider" />
+
+        <h2>The Inference Inflection Is Real — and CPU Inventory Is the Bottleneck</h2>
+
+        <p>Latent Space's Thursday piece, "The Inference Inflection," is required reading if you care about where compute dollars are actually flowing. The argument in a sentence: Jensen Huang said it at GTC, Noam Brown said it this week, Sam Altman said it yesterday — inference compute is no longer a footnote to training. It <em>is</em> the business. And the implications are weirder than you might expect.</p>
+
+        <p>The surprise is CPUs. Intel CEO Lip-Bu Tan's Q1 earnings call provided numbers showing an unexpected surge in CPU demand from AI workloads. The analysis from Doug at SemiAnalysis explains why: the COVID cycle of CPU purchases (2020–2021) has hit end-of-life, but instead of the normal refresh cycle, enterprises spent every available dollar on GPUs over the past two years. CPU refresh got deferred. Now AI inference — Claude Code running shell scripts, RL gym environments simulating software, agents making actual API calls — <em>runs on CPUs</em>. The infrastructure debt is coming due.</p>
+
+        <blockquote>
+          "Everyone has essentially scrounged all of their budget as hard as they can to invest in as much AI as possible and just do maintenance CapEx on CPU. Ironically, at the same time, where is the software going to run? On CPUs. So I think we're going to see some increasing utilization… we might actually be seeing a CPU shortage."
+          <cite>— Doug at SemiAnalysis, via Latent Space "The Inference Inflection"</cite>
+        </blockquote>
+
+        <p>On the GPU side, the signal is equally striking: prefill/decode disaggregation — the practice of separating the "reading" phase of inference from the "generation" phase onto different hardware — is now standard, with NVIDIA acquiring Groq, Intel buying Sambanova, and Amazon circling Cerebras. These are not casual acquisitions. They reflect a genuine architectural realization: inference at scale is not just "training but smaller." It is its own discipline, and the hardware stack for it looks different.</p>
+
+        <p>Meanwhile, coding agent platforms are converging on a clear architecture: headless runtimes plus programmable harnesses plus usage-based economics. OpenAI's Codex is getting Figma plugins and Supabase integrations. The Cursor SDK lets you embed Cursor's runtime in CI/CD pipelines. VS Code is adding cross-workspace semantic indexing. The category is converging not on "which model is smartest" but on "which harness handles real work reliably." IBM's <strong>Granite 4.1</strong> — a family of open, Apache 2.0 licensed models (3B, 8B, 30B) — exemplifies the trend. The 8B model used only 4 million output tokens on the Artificial Analysis Intelligence Index, versus 78 million for Qwen 3.5 9B at similar quality. That's not a model competition. That's an economics competition. Enterprise buyers increasingly care about tokens consumed, not just benchmark score.</p>
+
+        <hr class="divider" />
+
+        <h2>The Open Model War: Chinese Labs, Efficiency, and the MIT License Edge</h2>
+
+        <p>Lex Fridman's January 2026 "State of AI" episode (Podcast #490, with Nathan Lambert and Sebastian Raschka) has been sitting unseen in the transcript archive for months. Reading it in May is instructive — it reads less like a forecast and more like a map of the terrain we are actually navigating. The conversation is remarkably candid about the competitive dynamics that have since played out.</p>
+
+        <p>Nathan Lambert's observation about Chinese open-weight models has aged particularly well: these labs release openly not out of altruism but because it's their best distribution strategy in a market where enterprise customers won't pay for Chinese API subscriptions due to security concerns. Open weights let them capture influence and adoption while the US labs are hamstrung by GPU shortages. And the model quality is no longer a consolation prize — Kimi K2.6 is currently #1 on OpenRouter's weekly leaderboard, Xiaomi's MiMo-V2.5-Pro (a ~1T parameter MoE, MIT licensed, 1M context) dropped this week, and Ant OSS's Ling-2.6-flash posted SWE-bench Verified scores at 61.2. The Chinese labs are not catching up; in agentic benchmarks, several are leading.</p>
+
+        <p>The Lex Fridman episode also has a fascinating exchange about Claude Code that now reads as prophetic. Nathan Lambert says: "Claude Code makes it <em>fun</em> to build things, particularly from scratch where you trust it'll make something. There's something very intangible between it and Codex; it just feels warm and engaging." His co-guest Sebastian Raschka notes the difference: Claude Code is more agentic, more "takes over the project," while tools like Codeium or Cursor let the developer stay in control. The divide between "you guide it" and "it guides you" is, it turns out, not just a UX preference. It's the crux of the OpenClaw billing story. When the model makes autonomous decisions — including about your commit history — the "warm and engaging" product starts to look more complicated.</p>
+
+        <blockquote>
+          "Claude Code is way better in that domain. It's remarkable… There's something very intangible between it and Codex. It just feels warm and engaging. Whereas Codex can often be as good but feels a little rough around the edges."
+          <cite>— Nathan Lambert, Lex Fridman Podcast #490</cite>
+        </blockquote>
+
+        <hr class="divider" />
+
+        <h2>Your AI Knows You From 150 Words — and That's a Problem</h2>
+
+        <p>The second-biggest HN story today, behind the Claude Code/OpenClaw incident, is a piece in The Argument called "Opus 4.7 knows the real Kelsey." The author, using only 150 words of their own writing as input, found that Claude Opus 4.7 could reconstruct a surprisingly accurate portrait of who they are. The HN thread discussion (213 pts, 114 comments) is less about Claude's capabilities and more about what the capability implies for the premise of "private" AI interactions.</p>
+
+        <p>This connects to something worth stating plainly: the models you use for work are running inference on <em>you</em> as much as on your prompts. Every session is a data point. The "alignment whack-a-mole" paper — which found that finetuning a model reactivates verbatim recall of copyrighted books even if the model was trained to avoid it — is a related signal. Alignment properties are not stable under modification. And Mozilla's strong opposition to Chrome's Prompt API (602 pts on HN, unusually high for a web standards debate) reflects a parallel anxiety: if a browser-native LLM becomes a standard API, the privacy and consent properties of that integration are set by whoever defines the spec, and right now that's Google. Mozilla's position is essentially that the Prompt API as written does not adequately isolate user data from cross-site inference, a problem that is technical in form but political in consequence.</p>
+
+        <p>The deeper pattern is this: the horseless-carriage phase of AI doesn't just preserve old corporate power relationships. It also inherits old privacy defaults, which were designed for databases and cookies, not for systems that can identify you from the rhythm of your sentence construction. The regulatory and technical infrastructure to handle inference-time identity extraction does not yet exist.</p>
+
+        <hr class="divider" />
+
+        <h2>Science's Long Verification Loop — Why RL Can't Do Everything</h2>
+
+        <p>Dwarkesh Patel's weekend thinking post is, characteristically, one of the most substantive pieces of the week despite arriving without fanfare. The section on RLVR and scientific discovery is worth reading slowly. His argument: the popular belief that AI will be "disproportionately good at science" rests on the assumption that science is verifiable and therefore amenable to reinforcement learning. But the history of science suggests the opposite. The verification loop for major conceptual breakthroughs is not days or weeks — it is decades or centuries.</p>
+
+        <p>He offers a striking example. Copernicus published heliocentrism in 1543. The first decisive observational confirmation — stellar parallax — wasn't achieved until 1838. For nearly three centuries, there was no clean RL signal. And yet science progressed, because scientists used a mixture of aesthetic preference, parsimony heuristics, and sheer intellectual stubbornness to gradually build the case. Copernicus's model actually made <em>worse</em> positional predictions than Ptolemy's when it was published, because Copernicus refused to use Ptolemy's equant trick (a mathematical artifice he found philosophically repellent). The theory that ultimately won was, at time of publication, empirically inferior to the one it replaced.</p>
+
+        <blockquote>
+          "Big conceptual breakthroughs cannot be easily verified. They are recognized decades or centuries later, when it turns out they were much more productive than the alternatives available. What this means for AI in science is that you can't easily train an RL loop for big conceptual breakthroughs."
+          <cite>— Dwarkesh Patel, "What I've Been Thinking About This Weekend"</cite>
+        </blockquote>
+
+        <p>This matters for the current moment because the excitement around AI-accelerated science is largely premised on the same RL success story that has driven coding agents. Code has tight feedback loops: run the tests, did they pass? Chemistry has longer ones. Biology even longer. Physics has verification loops that span careers. The implication is not that AI can't help with science — Dwarkesh is careful to say it can — but that the help will look different. It will require models that can hold multiple competing research agendas in tension simultaneously, pursue unpopular hypotheses, and resist the pull of immediate empirical reward. That is not what current RL training produces. It produces models that are very good at being right quickly. Science often requires being wrong slowly, in a productive direction.</p>
+
+        <p>His parallel observation on intelligence vs. power is equally clarifying. The AI safety discourse tends to conflate "superintelligent" with "power-seeking," drawing on intuitions from games like Go or Diplomacy where strategic optimization is the whole point. But in the real world, power is more often a product of institutional authority and trust than of raw reasoning capability. Richard Trevithick, who invented the high-pressure steam engine, died broke in a pauper's grave. His country used his ideas to build a global empire, but the counterfactual where Trevithick was himself the most powerful person in Britain is incoherent. The right model for AI's impact on power is probably not "one superintelligence outthinks everyone" but "firms and states with better AI compound their existing advantages through normal competitive dynamics." Less science fiction. More business school.</p>
+
+        <hr class="divider" />
+
+        <h2>Today's Non-AI Signal: Belgium Stops Closing Nuclear Plants</h2>
+
+        <p>Not everything today is AI. Belgium's parliament voted to halt the decommissioning of its nuclear power plants, making it the latest European country to reverse course on nuclear as the continent recalculates its energy math post-Ukraine and post-AI buildout. The 770-point HN story (732 comments) is notable partly because it arrives the same week that a German battery storage installation at the site of the former Grohnde nuclear plant announced it would exceed the old plant's output — 1.4 GW power, 6 GWh capacity. Nuclear reversal and battery storage scaling are happening simultaneously in Europe, which is unusual. The common driver is the inference inflection: European governments are looking at the compute demand projections from their own AI ministries and realizing that the energy transition and the AI buildout are the same problem.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The tollbooth era has begun.</strong> Claude Code's reported OpenClaw billing behavior — whatever its true cause — signals that AI-native tools are becoming platforms with their own economic and political logics embedded. The closer a model is to your workflow, the more leverage the model provider has. Choose your stack carefully.</li>
+            <li><strong>Inference is the new training.</strong> The shift from compute-for-training to compute-for-deployment is real, structural, and accelerating. CPUs are the unexpected bottleneck. Prefill/decode disaggregation is now standard. The next wave of infrastructure spending is going toward making tokens cheaper, not models smarter.</li>
+            <li><strong>Open-weight models have closed the quality gap on agentic tasks.</strong> Kimi K2.6, MiMo-V2.5, Granite 4.1 — the efficiency and capability numbers from open-weight models are now competitive with proprietary APIs on the tasks that matter for production agents. The MIT license advantage is not trivial for enterprise procurement.</li>
+            <li><strong>Your AI can identify you.</strong> Models trained on large corpora of human text have developed inference-time identity-detection capabilities that were not designed in and are not well understood. The privacy infrastructure for this does not exist yet. Mozilla's Prompt API opposition is the first major standards-body pushback.</li>
+            <li><strong>RL doesn't reach science's longest verification loops.</strong> The coding-agent playbook — tight feedback, verifiable outputs, RL at scale — has real limits in domains where the correctness of a theory takes decades to establish. AI will accelerate science, but the mechanism will look different from coding: more portfolio management of competing hypotheses, less "run the tests and ship."</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47963204">Claude Code refuses requests or charges extra if commits mention "OpenClaw" (1,004 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47959463">Mozilla's opposition to Chrome's Prompt API (602 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47961319">Belgium stops decommissioning nuclear power plants (770 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47964034">Spain's parliament acts against LaLiga massive IP blockages (425 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47964617">Shai-Hulud Malware Found in PyTorch Lightning AI Training Library (340 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47960507">Granite 4.1: IBM's 8B Model Matching 32B MoE (282 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47951295">Opus 4.7 knows the real Kelsey (213 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47957627">Alignment whack-a-mole: Finetuning activates recall of copyrighted books in LLMs (190 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47968112">Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell (71 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-the-inference-inflection">AINews: The Inference Inflection (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-imagegen-is-on-the-path-to">AINews: ImageGen is on the Path to AGI (Latent Space)</a></li>
+          <li><a href="https://www.dwarkesh.com/p/what-ive-been-thinking-april-27">What I've Been Thinking About: Intelligence vs Power, Science Verification (Dwarkesh Patel)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://youtube.com/watch?v=EV7WhVT270Q">State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI — Lex Fridman Podcast #490</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
