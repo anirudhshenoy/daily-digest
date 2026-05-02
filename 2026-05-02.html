@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Physics of Inference — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Saturday, May 2, 2026</div>
+        <h1>The Physics of Inference</h1>
+        <p class="subtitle">A blackboard full of equations explains what AI really costs — and that same logic runs through Grok 4.3's agentic leap, Spotify's human badges, and a robot that just learned to hold a light bulb.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Math Behind Why Tokens Cost What They Cost</h2>
+
+        <p>There's a video making the rounds — technically a Dwarkesh Patel podcast episode, but really a blackboard lecture — in which Reiner Pope, CEO of chip startup MatX and former TPU architect at Google, explains the economics of AI inference using nothing but chalk and a handful of equations. It is one of the most clarifying pieces of AI infrastructure writing this year, and it reveals something important: almost everything puzzling about the AI industry becomes obvious once you understand two numbers.</p>
+
+        <p>Those two numbers are <strong>memory bandwidth</strong> and <strong>compute throughput (FLOPs)</strong>. The roofline model says that any operation is bottlenecked by whichever resource runs out first. For frontier LLM inference — serving live user requests — the bottleneck is almost always memory bandwidth, not compute. The GPU's math units sit idle while waiting for the model's weights to stream in from high-bandwidth memory. This is why scaling laws look different at inference than at training, and why quantization — reducing the weight precision from FP16 to INT8 or lower — is the single most impactful inference optimization available today.</p>
+
+        <p>Batch size is the lever. When you serve many users simultaneously, their requests share the same weight-loading cost. Each additional user in a batch adds only the cost of their <em>attention computation</em> (cheap) while the weight load (expensive) is amortized across all of them. This is the mechanical explanation for why "Fast Mode" in Claude or Codex costs 6x the standard rate: you are paying for a small, dedicated batch — fewer users time-sharing the rack with you, so your tokens arrive faster. The economics scale inversely: a larger batch means a lower cost per token, which is why hyperscalers can offer lower API prices than a startup running the same model at lower utilization.</p>
+
+        <blockquote>
+          "You can pay 100x more and get much faster speeds, or you can wait minutes and get even cheaper prices. Both directions are mechanically available — it's all batch size."
+          <cite>— Reiner Pope, Dwarkesh Podcast blackboard lecture</cite>
+        </blockquote>
+
+        <p>Pope also surfaced a less obvious finding: models serving frontier inference may be <strong>100x over-trained</strong> relative to the Chinchilla-optimal token count, specifically because of reinforcement learning from human feedback. RL requires many sampled completions per training step; a model generating 64 completions for a single prompt effectively sees 64x the compute per parameter compared to a standard next-token prediction pass. This is one reason why inference at the frontier costs more than the scaling laws naively predict — the models have been trained far deeper into their weight space, which helps with reasoning quality but also makes them costlier to serve.</p>
+
+        <p>This all connects directly to two other stories today. Intel's <a href="https://github.com/intel/auto-round">auto-round</a> quantization algorithm (118 points, 16 comments on HN this morning) claims state-of-the-art accuracy for low-bit LLM inference, with native support for vLLM, SGLang, and Transformers. And <strong>vLLM 0.20</strong> — covered in the Latent Space AINews dispatch — ships with TurboQuant 2-bit KV cache, cutting KV cache memory consumption by 4×. That 4× matters precisely because it allows the system to hold larger batches in memory: the KV cache for each active request is one of the main memory consumers during inference, and halving it allows you to double the live batch, directly halving cost per token.</p>
+
+        <hr class="divider" />
+
+        <h2>Grok 4.3, Poolside, Nemotron — The Model Pile Gets Deeper</h2>
+
+        <p><strong>Grok 4.3</strong> is the top story on HN this morning, with 381 points and an unusually engaged 508-comment thread. xAI's new model is approximately 1 trillion parameters — twice Grok 4.20 — and was trained considerably longer. The benchmarks that matter most aren't the headline accuracy numbers but the agentic task scores: Grok 4.3 gained <strong>+321 ELO points on GDPval-AA</strong>, a real-world agentic evaluation that models tasks like multi-step web browsing and tool use. That's not a rounding error — it puts Grok 4.3 meaningfully above Gemini 3.1 Pro, Muse Spark, and GPT-5.4 mini on the task that increasingly defines frontier AI utility. Cost-per-intelligence also improved, running the full benchmark suite for ~20% less than Grok 4.20 despite using more output tokens.</p>
+
+        <p>The model wars continued on the open-weight front. <strong>Poolside</strong>, which has been building in stealth for years, made its first public model release with <strong>Laguna XS.2</strong> — a 33B total / 3B active MoE coder under Apache 2.0 that runs on a single GPU. Poolside trained everything from scratch: data, training infra, RL, and inference stack are all proprietary. Ollama shipped it the same day. The larger sibling, <strong>Laguna M.1</strong> (225B/23B active), is aimed at the enterprise coding segment that Claude Code and Codex are fighting over.</p>
+
+        <p><strong>NVIDIA Nemotron 3 Nano Omni</strong> is a different kind of release: a 30B/3B active multimodal MoE with a 256K context window, handling text, image, video, audio, and documents in a single model. Nine inference providers shipped same-day availability (OpenRouter, Ollama, Fireworks, Together, fal, and more), which has become the new de-facto standard for NVIDIA model releases. The 9× throughput claim over comparable omni models is plausible given the MoE architecture — only 3B parameters are active on any forward pass, which means the memory bandwidth roofline shifts dramatically in its favor at inference time.</p>
+
+        <p>Meanwhile, <strong>GPT-5.5 Pro</strong> achieved 159 on the Epoch Capabilities Index and — more significantly — <strong>52% on FrontierMath Tiers 1–3</strong> and 40% on Tier 4. FrontierMath problems are deliberately designed to defeat human PhDs; until very recently, models were in single-digit territory. A 52% pass rate on problems that stump expert mathematicians is a different category of capability than anything we were calling "AI" three years ago.</p>
+
+        <hr class="divider" />
+
+        <h2>Humans in the Loop — And How to Verify Them</h2>
+
+        <p>Three stories today are variations on the same problem: as AI-generated content becomes indistinguishable from human output at scale, every platform that surfaces that content faces an authentication crisis. How do you know something was made by a person?</p>
+
+        <p><strong>Spotify launched "Verified by Spotify"</strong> badges, appearing as a green checkmark on artist profiles in search results. The timing is pointed: Deezer reported this week that 44% of daily uploads to its platform are now AI-generated music. Spotify's eligibility criteria require "signals of a real artist" — concert dates, linked social accounts, merchandise, and most importantly, <em>sustained listener engagement over time</em> rather than one-time algorithmic spikes. That last criterion is doing a lot of work. Burst-and-fade engagement patterns are characteristic of AI-generated content because there's no underlying fanbase; organic human artists tend to accumulate listeners gradually. More than 99% of artists who listeners actively search for will be verified at launch, Spotify says.</p>
+
+        <p>The deeper question — what counts as a "human artist" when humans use AI to generate parts of their music? — is conspicuously left open. The badge targets the <em>persona</em>, not the process. An artist who generates stems with AI but performs, tours, and maintains a real audience relationship can be verified; an AI persona generating faceless catalog music cannot. This is a workable pragmatic distinction, but it will erode as AI tools become embedded deeper in human creative workflows.</p>
+
+        <blockquote>
+          "In the AI era, it's more important than ever to be able to trust the authenticity of the music you listen to."
+          <cite>— Spotify, announcing Verified by Spotify</cite>
+        </blockquote>
+
+        <p>On the same day, <strong>a jailbreak technique</strong> was trending on HN with 415 points. The repository documents a method that reliably elicits behaviors that safety training is supposed to prevent, using identity-framing signals that weren't well-represented in the RLHF training distribution. The mechanism is well-understood: RLHF trains on a distribution of prompts; any framing that lies outside that distribution can shift model behavior in unintended directions. The adversarial space of possible framings is effectively infinite. This is why jailbreaks have remained a persistent problem despite years of safety training investment — you cannot enumerate and train against an unbounded input space.</p>
+
+        <p>Spotify's badge and the jailbreak problem are structurally identical: both require an authentication signal that is hard to fake at scale. Both are currently solved imperfectly — through probabilistic heuristics rather than cryptographic certainty. And both will face increasing pressure as the tools for forgery improve alongside the tools for generation.</p>
+
+        <p>A third data point worth noting: a California water blog piece arguing that <strong>AI uses less water than the public thinks</strong> reached 352 points on HN, suggesting significant appetite for reality-checking on AI resource narratives. Total US data center water use remains under 1% of US freshwater withdrawals. This matters for policy: Maine recently banned new data centers, calibrating against a threat model that may be substantially overstated. Getting the numbers right is a precondition for getting the policy right.</p>
+
+        <hr class="divider" />
+
+        <h2>The Body Has Entered the Chat</h2>
+
+        <p>A WIRED piece on <strong>Eka Robotics</strong> is getting serious traction (103 points, 132 comments): Eka's robotic claw can now screw in light bulbs and sort chicken nuggets — tasks that, as the article notes, no other commercial robot arm currently handles. The founding team is unusually credentialed: Pulkit Agrawal is a professor at MIT running one of the leading dexterous manipulation labs; Tuomas Haarnoja co-authored Soft Actor-Critic, one of the most-cited reinforcement learning papers of the past decade. Their credibility is not marketing.</p>
+
+        <p>The key capability is generalization. Traditional industrial arms are programmed for specific grip geometries and trajectories; they are brittle to unexpected object shapes, orientations, or surface textures. Eka's system appears to generalize across this variation without task-specific programming. The telling detail in the piece: when the writer tried to take her keys back from the robot, it "resisted for just a moment, then let go and instantly turned its attention back to the table." That dynamic grip release — detecting the competing force, yielding gracefully, re-orienting — is exactly the dexterity behavior that researchers have been chasing for years.</p>
+
+        <p>The HN comments are, appropriately, skeptical: Rodney Brooks is cited on the gap between demo dexterity and deployable dexterity, and several engineers note how difficult even basic tasks like recovering from being knocked over remain for current robots. But the inflection being described here isn't locomotion — the legs have been mostly solved — it's <em>manipulation</em>. Hands have been the bottleneck. The light-bulb demo is evidence that the bottleneck is loosening.</p>
+
+        <p>The timing is not coincidental. This week also saw GPT-5.5 Pro reaching 52% on FrontierMath, Grok 4.3 gaining 321 ELO points on agentic tasks, and vLLM 0.20 cutting KV cache memory by 4×. The intelligence curve is continuing to steepen; the embodiment curve is starting to follow. Both are moving faster than most of the people building on top of them realize.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The roofline model is the most important thing to understand about AI economics.</strong> Token prices are falling because memory bandwidth is being squeezed harder — through quantization, KV cache compression, and smarter batching. Reiner Pope's blackboard lecture is required reading for anyone making infrastructure bets.</li>
+            <li><strong>Grok 4.3's +321 ELO jump on agentic tasks is the biggest benchmark movement of the week.</strong> xAI has been consistently underrated in the agentic evaluation space, and a 1T-parameter model trained longer than its predecessor with explicit agentic focus deserves serious attention from builders.</li>
+            <li><strong>Spotify's human badge is the first major "proof of humanity" deployment in a consumer product.</strong> The criteria — sustained organic engagement, live presence, off-platform signals — will become a template. Expect similar systems in writing platforms, news sites, and creative marketplaces within 18 months.</li>
+            <li><strong>The jailbreak problem and the authentication problem are structurally identical.</strong> Both require signals that are hard to forge at scale; neither has a cryptographically robust solution. Until they do, both will remain adversarial arms races.</li>
+            <li><strong>Robotic manipulation, not locomotion, is the frontier.</strong> The light-bulb demo matters not because it's commercially ready but because generalized grip behavior has been the bottleneck for a decade. If it's softening, everything downstream — warehousing, home robotics, surgery — accelerates.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=47972447">Grok 4.3 (381 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47977383">AI uses less water than the public thinks (352 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47977134">The gay jailbreak technique (415 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47976856">Spotify adds 'Verified' badges to distinguish human artists from AI (220 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47955789">Eka's robotic claw feels like we're approaching a ChatGPT moment (103 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=47972659">Advanced Quantization Algorithm for LLMs — Intel auto-round (118 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.dwarkesh.com/p/reiner-pope">Reiner Pope – The math behind how LLMs are trained and served (Dwarkesh Podcast)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-not-much-happened-today">AINews: not much happened today — vLLM 0.20, Poolside, Nemotron 3 Nano (Latent Space)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
