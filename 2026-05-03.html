@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Machine That Signs Your Work — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Sunday, May 3, 2026</div>
+        <h1>The Machine That Signs Your Work</h1>
+        <p class="subtitle">VS Code quietly stamped Copilot's name on your commits. DeepSeek V4 arrived at near-frontier scale for almost nothing. And California handed its first speeding ticket to a robot.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Microsoft's Invisible Signature</h2>
+
+        <p>The most-discussed story on Hacker News today — 904 points and 442 comments at the time of writing — is a pull request in the VS Code repository titled simply <a href="https://github.com/microsoft/vscode/pull/310226">"Enabling ai co author by default."</a> What it did: VS Code began automatically injecting <code>Co-Authored-by: GitHub Copilot &lt;copilot@github.com&gt;</code> into git commit messages, regardless of whether Copilot had actually contributed anything to the commit. No opt-in. No notification. Just a new line in your commit history, stamped by a product you may never have used that session.</p>
+
+        <p>The reaction from developers was immediate and pointed. Git commit authorship is not a trivial attribution — it's a legal and professional record. Open source projects, corporate codebases, and government contracts all rely on commit history as a chain of custody for who wrote what. Inserting a co-author line without consent muddies that record. It implies Copilot generated something when it may not have. And in codebases with IP restrictions or copyleft obligations, the implications of having an AI co-author declared on a commit are far from settled.</p>
+
+        <blockquote>
+          "This is exactly the kind of default-on telemetry that erodes trust. I didn't ask Copilot to co-author anything. It didn't. But now my commit history says it did."
+          <cite>— Top HN comment on the PR thread</cite>
+        </blockquote>
+
+        <p>This fits a recognizable pattern from Microsoft's recent product behavior: defaults that benefit the platform's data and visibility surface, shipped before anyone asks whether users want them. The same playbook appeared with OneDrive sync, Windows telemetry, and Outlook's web redirects. The difference here is that code commits flow into public repositories where millions of people can see the attribution — and where the AI-authorship question has real legal weight.</p>
+
+        <p>There's also a subtler angle: if Copilot's name appears in enough commits, it normalizes the idea that AI is always part of the development loop, even when it isn't. That has downstream effects on hiring expectations, licensing conversations, and the emerging legal question of who holds copyright over AI-assisted code. A default setting, it turns out, can reshape industry norms faster than any policy paper.</p>
+
+        <hr class="divider" />
+
+        <h2>DeepSeek V4: Almost Frontier, Almost Free</h2>
+
+        <p>Simon Willison's writeup of <a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/">DeepSeek V4</a> has been sitting near the top of HN all weekend (502 points, 315 comments), and it deserves attention. DeepSeek — the Chinese AI lab that shocked the industry with its V3 release last December — has dropped two preview models: <strong>DeepSeek-V4-Pro</strong> and <strong>DeepSeek-V4-Flash</strong>. Both are Mixture of Experts architectures with 1 million token context windows, both released under MIT license.</p>
+
+        <p>The numbers are striking. V4-Pro has 1.6 trillion total parameters with 49 billion active at inference — making it the largest open-weights model ever released, larger than Kimi K2.6 (1.1T) and more than twice the size of DeepSeek V3.2. V4-Flash is the more accessible sibling: 284B total, 13B active, 160GB on Hugging Face. Willison notes that a quantized Flash should run on a 128GB M5 MacBook Pro — which means frontier-adjacent capability running locally, on consumer hardware, for free.</p>
+
+        <blockquote>
+          "The cost is the really extraordinary part. DeepSeek V4 is a very, very inexpensive model to run relative to what it can do."
+          <cite>— Simon Willison, simonwillison.net</cite>
+        </blockquote>
+
+        <p>The MoE (Mixture of Experts) architecture is key to understanding why this is possible. Rather than activating the entire network for each token, a MoE model routes each token through a subset of "expert" sub-networks — in V4-Pro's case, 49B out of 1.6T parameters activate per inference step. This dramatically reduces the compute cost of running a large model. The tradeoff is memory: you still need to load all 865GB of weights, but the FLOPs per token are competitive with a much smaller dense model.</p>
+
+        <p>What's the strategic picture here? Every few months since 2024, a Chinese lab has released an open-weights model that erases what Western labs spent months building as proprietary advantage. DeepSeek V4-Pro is now neck-and-neck with GPT-4-class performance at a fraction of the API cost. This isn't just a research achievement — it changes the calculus for any company evaluating whether to pay for frontier API access versus self-hosting.</p>
+
+        <hr class="divider" />
+
+        <h2>The Single Direction That Controls AI Safety</h2>
+
+        <p>An arXiv paper that surfaced on HN today (99 points, 34 comments) contains one of the most striking findings in recent alignment research: <a href="https://arxiv.org/abs/2406.11717">"Refusal in Language Models Is Mediated by a Single Direction."</a> The finding is exactly what it sounds like. Researchers identified a single linear direction in a language model's residual stream that, when ablated or projected away, causes the model to comply with requests it would otherwise refuse. Add it back, and the model refuses again. The entire safety-relevant behavior of refusing harmful requests is concentrated into one geometric direction in activation space.</p>
+
+        <p>To understand why this matters, a brief detour into mechanistic interpretability — the field of reverse-engineering what's actually happening inside neural networks. The residual stream is the running representation of meaning that passes between a transformer's layers. "Directions" in this space correspond to linear features: when researchers find that a concept (say, "refusal") corresponds to a direction, it means there's a specific axis in the embedding space that encodes that concept, and manipulating it predictably changes model behavior.</p>
+
+        <p>The alignment implication is double-edged. On one hand, this is a win for interpretability: safety behaviors have structure, they're not randomly scattered across the network. On the other hand, a single direction is a single point of failure. If refusal can be reliably ablated by projecting away one vector, then the safety training that cost enormous compute to bake in can potentially be undone by anyone with the right toolkit. It also explains why jailbreaks based on activation manipulation (like representation engineering) have been surprisingly effective.</p>
+
+        <blockquote>
+          "The existence of a single refusal direction suggests that safety is a thin shell, not a deep feature. That's both exciting for interpretability and concerning for robustness."
+          <cite>— Paraphrased from HN comment thread</cite>
+        </blockquote>
+
+        <p>The practical upshot: safety researchers now have a very concrete thing to study and harden. The question is whether the next generation of training methods can distribute refusal behavior across the network in a way that doesn't collapse into a single hackable direction — or whether that's even possible given how transformers learn.</p>
+
+        <hr class="divider" />
+
+        <h2>Robots on the Road: The Law Catches Up</h2>
+
+        <p>Two stories this weekend draw a through-line from the abstract question of autonomous vehicle policy to the embarrassingly concrete reality of a man whose luggage is trapped in a Waymo depot in San Francisco.</p>
+
+        <p>First, the policy: California has announced it will <a href="https://www.bbc.com/news/articles/clypjx3rg2go">begin issuing traffic citations directly to AV manufacturers</a> when their vehicles violate traffic laws (262 points, 272 comments). This is significant because it resolves — at least administratively — one of the most awkward questions in autonomous vehicle regulation: if a self-driving car runs a red light, who do you ticket? The driver's seat is empty. Under the new rules, the manufacturer gets the citation. This creates financial and reputational liability that scales with bad behavior, which is exactly the incentive structure needed to make safety-critical software actually prioritize safety.</p>
+
+        <p>Meanwhile in Sunnyvale, a man named <a href="https://sfist.com/2026/05/01/waymo-drives-off-with-south-bay-mans-luggage-after-trunk-fails-to-open/">Dave Holt flagged a Waymo</a> from the airport, loaded his luggage into the trunk, and arrived at his destination — only to watch the vehicle drive off before the trunk opened (75 points, 52 comments). Waymo's response was to offer him two complimentary rides to the SF depot to retrieve his bags, or to pay for shipping. The HN thread was merciless: this is what happens when you optimize for ride-completion metrics and forget that trunks need to open.</p>
+
+        <p>Uber, not to be left out of the autonomous vehicle conversation, revealed it wants to <a href="https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/">turn its driver fleet into a sensor grid</a> for self-driving companies through a program called AV Labs (125 points, 137 comments). Human drivers would collect data — video, lidar, maps — that gets sold to AV developers. The framing is as a "natural extension" of Uber's existing data business. The unasked question: are drivers compensated fairly for becoming data collectors, and do they understand that they're training the technology that will eventually replace them?</p>
+
+        <hr class="divider" />
+
+        <h2>The DO_NOT_TRACK Rebellion</h2>
+
+        <p>A quieter but philosophically resonant story: <a href="https://donottrack.sh/">DO_NOT_TRACK</a>, a proposed standard environment variable for CLI and TUI applications, hit 229 points and 70 comments on HN today. The proposal is simple — set <code>DO_NOT_TRACK=1</code> in your environment and well-behaved tools should stop phoning home with telemetry, analytics, and crash reports.</p>
+
+        <p>The original Do Not Track HTTP header for browsers was a well-intentioned failure — websites could simply ignore it, and most did. The CLI version has a better shot because the community of developers who build terminal tools tends to be more privacy-conscious, and because it's trivially easy to implement. Several major tools (Homebrew, Gatsby, Netlify CLI) already respect it. The proposal is asking more to follow.</p>
+
+        <p>There's a pattern worth noting across today's digest: the VS Code attribution story, the DO_NOT_TRACK initiative, and the California AV law are all, at root, about the same problem — powerful systems making unilateral decisions (signing your commits, phoning home, driving off with your luggage) without the consent or awareness of the people affected. The technological solutions keep outpacing the social contracts that govern them. The interesting question is whether we're entering a period where the contracts start catching up.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Defaults are policy.</strong> When VS Code ships "co-authored by Copilot" as a default, that's not a technical choice — it's a decision about who gets credit and who gets liability for AI-assisted code. Defaults at Microsoft's scale become industry norms within months. Watch them carefully.</li>
+            <li><strong>Open-weights MoE is the new competitive moat.</strong> DeepSeek V4-Pro is 1.6T parameters, MIT-licensed, and nearly frontier-level. The race to build proprietary model advantage is increasingly a race against Chinese labs releasing comparable work for free. The question for Western AI companies is no longer "can we build this?" but "can we build something people will pay for when the open-source version is this good?"</li>
+            <li><strong>Alignment may be more fragile than we hoped.</strong> A single linear direction governing refusal is a beautiful interpretability finding — and a troubling robustness result. The field now has a concrete research agenda: distribute safety behaviors so they can't be collapsed into one hackable vector.</li>
+            <li><strong>Robot accountability is finally getting legal teeth.</strong> California's manufacturer-citation rule is the first serious structural answer to the "who do you ticket?" problem. If it works, it will spread to other states. The incentive landscape for AV safety is about to change materially.</li>
+            <li><strong>The consent deficit is becoming visible.</strong> Commits signed without asking, telemetry sent without opting in, luggage driven away without opening the trunk — these are all variations on the same theme. Tools are making consequential decisions about users without their knowledge. The DO_NOT_TRACK movement and the HN reaction to VS Code's PR suggest that developer tolerance for this pattern is declining.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://github.com/microsoft/vscode/pull/310226">VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage (904 pts)</a></li>
+          <li><a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/">DeepSeek V4—almost on the frontier, a fraction of the price (502 pts)</a></li>
+          <li><a href="https://www.bbc.com/news/articles/clypjx3rg2go">California to begin ticketing driverless cars that violate traffic laws (262 pts)</a></li>
+          <li><a href="https://donottrack.sh/">DO_NOT_TRACK — proposed standard for CLI/TUI telemetry opt-out (229 pts)</a></li>
+          <li><a href="https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/">Uber wants to turn its drivers into a sensor grid for self-driving companies (125 pts)</a></li>
+          <li><a href="https://arxiv.org/abs/2406.11717">Refusal in Language Models Is Mediated by a Single Direction (99 pts)</a></li>
+          <li><a href="https://sfist.com/2026/05/01/waymo-drives-off-with-south-bay-mans-luggage-after-trunk-fails-to-open/">Waymo Drives Off with South Bay Man's Luggage (75 pts)</a></li>
+          <li><a href="https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox">The agent harness belongs outside the sandbox (73 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
