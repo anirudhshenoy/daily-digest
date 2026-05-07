@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Bottleneck Was Never the Code — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, May 7, 2026</div>
+        <h1>The Bottleneck Was Never the Code</h1>
+        <p class="subtitle">Agents shift the constraint upstream to specs and coordination — and nobody's ready for what that actually means.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Management Is the New Compiler</h2>
+
+        <p>For fifty years, software's cost structure made the code itself look like the constraint. Typing speed, language design, IDEs, code review tooling — entire industries grew up around shaving time off the residue. The residue was expensive enough that everyone stared at it. Now it isn't, and we can see what's underneath.</p>
+
+        <p>A quietly essential essay hit Hacker News this week — <a href="https://www.thetypicalset.com/blog/thoughts-on-coding-agents">The Bottleneck Was Never the Code</a> — written by someone running an AI-assisted company. The thesis: "Software is what's left over after a group of humans finishes negotiating with each other about what the system should do. The code matters, but it is the residue of the harder work, not the work itself." With coding agents, the cost of residue production has dropped far enough that the negotiation — specs, roadmaps, acceptance criteria, the "what we actually want" forced into precision — is now visibly the work.</p>
+
+        <blockquote>
+          "The bottleneck moves from the people writing the code to the people deciding what code should exist. Which is to say: management."
+          <cite>— <a href="https://www.thetypicalset.com/blog/thoughts-on-coding-agents">The Bottleneck Was Never the Code, thetypicalset.com</a></cite>
+        </blockquote>
+
+        <p>This isn't just a theoretical claim. It's showing up empirically. The author observes that engineers are no longer waiting on other engineers — they're waiting on the next well-formed spec. And there's a Jevons Paradox at work: when code becomes 10× cheaper to write, teams don't do the same amount of work for less. They expand the scope of what they try. Prototypes that weren't worth the time three months ago now are. The surface that has to be agreed on keeps growing. The bottleneck doesn't disappear; it relocates.</p>
+
+        <p>Spencer Skates, CEO of Amplitude — the analytics platform used by DoorDash, Cursor, and Walmart — tells a strikingly similar story from the inside. <a href="https://www.youtube.com/watch?v=t8co94HS6tY">His interview with Y Combinator</a> this week is one of the more honest accounts of what it takes for an established SaaS company to actually transform. Amplitude had 800 people, a decade of product-market fit, and a leadership team that was, by his own admission, deeply skeptical of AI until late 2024. Then they ran an "AI week" — a mandatory hackathon where every VP of product and engineering manager had to use the tools in front of the organization. One product leader vibe-coded a dark mode for Amplitude live on stage. It happened. The org saw it.</p>
+
+        <blockquote>
+          "Step one was actually not 'here's what we need to build at Amplitude with AI.' Step one is just get the existing team using tools and bought in and believing in them."
+          <cite>— Spencer Skates, Amplitude CEO (Y Combinator interview)</cite>
+        </blockquote>
+
+        <p>What followed was two full organizational reorganizations in a single year, multiple acquisitions, and a reorientation of the entire product roadmap toward what Skates calls a "Cursor for analytics." His key observation about why incumbents struggle: the SaaS delivery loop — talk to customers, ask what they want, build it, repeat — breaks down with AI. Customers can't describe what's possible with jagged capabilities they've never seen. You have to understand the models first, then work backward to the product. "It's a technology-first understanding of what is possible," he says. "It's not a customer-first one."</p>
+
+        <p>Simon Willison, creator of Datasette and one of the more reliable observers of the vibe coding phenomenon, published a related piece this week — <a href="https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/">Vibe Coding and Agentic Engineering Are Getting Closer Than I'd Like</a>. His concern: what began as a useful distinction between "I don't care about the code" (vibe coding) and "I'm building systems with autonomous agents" (agentic engineering) is eroding as the tools blur together. The more these two modes converge, the harder it becomes to know which one you're actually doing — and therefore what level of quality bar you're actually holding yourself to.</p>
+
+        <hr class="divider" />
+
+        <h2>The Fake Expert and the Knitting Bullshit</h2>
+
+        <p>Two essays trending on Hacker News this week circle the same problem from different directions: AI is producing work that looks expert without being expert. The failure mode is well-documented but still poorly understood.</p>
+
+        <p>The first, <a href="https://nooneshappy.com/article/appearing-productive-in-the-workplace/">Appearing Productive in the Workplace</a>, opens with Parkinson's Law updated for the AI era: "workers now have a tool that expands to fill whatever a large language model can be persuaded to generate, which is to say, without limit." The author watched a colleague reply via Claude — detectable by the punctuation, the em dashes, the confident grasp of technologies he didn't actually have. The colleague wasn't lying. He was, in some meaningful sense, simply absent from the conversation.</p>
+
+        <p>The author identifies two distinct failure modes. The first — novices producing work that resembles expert output — gets most of the research attention. The second is subtler and, they argue, riskier: people generating artifacts in domains they were never trained in. Engineers designing data systems. Non-designers designing interfaces. People who cannot write code building software. Most of it gets used quietly, without fanfare, occasionally surfaced to a client without much examination.</p>
+
+        <p>The second essay — <a href="https://katedaviesdesigns.com/2026/04/29/knitting-bullshit/">Knitting Bullshit</a> by Kate Davies, a Scottish knitwear designer — takes the Princeton philosopher Harry Frankfurt's framework from his 1986 essay <em>On Bullshit</em> and applies it to AI-generated craft content. Frankfurt's distinction: a <em>liar</em> respects the truth enough to deliberately distort it. A <em>bullshitter</em> is simply indifferent to how things really are. "The essence of bullshit is not that it is false but that it is phony."</p>
+
+        <blockquote>
+          "Bullshit is discourse from which incidental matters like truth and reality have been completely hollowed out and replaced by performance and simulation."
+          <cite>— Harry Frankfurt, <em>On Bullshit</em> (1986), as cited in Knitting Bullshit by Kate Davies</cite>
+        </blockquote>
+
+        <p>Davies encountered AI-generated knitting patterns — technically formatted, plausible-looking, totally unworkable. The patterns failed not because they were lies (they didn't claim to be human-crafted) but because they had no relationship with the physical reality of wool, gauge, and needles. The generator was indifferent to whether the garment would actually come together. That's bullshit in Frankfurt's precise sense.</p>
+
+        <p>The joint implication of these two pieces is uncomfortable: AI doesn't just produce wrong answers. It produces work with the surface texture of correctness — the grammar of expertise, stripped of its substance. And because that surface is what most organizational review processes are built to catch, the second-order failure (the bullshitter's work getting through) is structurally harder to detect than simple error. You have to actually know the domain to see it.</p>
+
+        <hr class="divider" />
+
+        <h2>Anthropic Goes to Space for Compute</h2>
+
+        <p>Anthropic announced this week that it has <a href="https://www.anthropic.com/news/higher-limits-spacex">raised Claude's usage limits and struck a compute partnership with SpaceX</a> that will "substantially increase capacity in the near term." The announcement was brief, but the pairing is noteworthy. SpaceX — Starlink's parent, owner of a rapidly expanding orbital internet infrastructure and an increasingly large ground-based data center footprint — is an unusual cloud partner for an AI lab. It is not AWS. It is not Google. It is not Azure.</p>
+
+        <p>The implication is that Anthropic is diversifying compute sourcing in ways that bypass the traditional hyperscaler stack entirely. SpaceX brings server capacity, energy infrastructure at launch sites, and Starlink's global low-latency network. Whether this is primarily about GPUs, edge inference, or cost arbitrage is unclear from the announcement — but the higher usage limits suggest this is real, near-term capacity being added, not a long-horizon research arrangement.</p>
+
+        <p>On Hacker News, the deal generated 361 comments and 407 points. The dominant thread was less about the technical specifics and more about what it says about the AI compute market: that demand for inference capacity is now so large and so persistent that the major labs are actively seeking alternatives to the standard cloud triumvirate. If SpaceX can serve Anthropic, Elon Musk's infrastructure plays — whatever their political valence — are becoming structural to the AI industry's supply chain.</p>
+
+        <hr class="divider" />
+
+        <h2>We Still Don't Know Why Deep Learning Works</h2>
+
+        <p>This week produced two pieces on deep learning theory that together make a striking contrast: one on the embarrassing absence of foundational understanding, and one on sophisticated practical advances built on top of that absence.</p>
+
+        <p><a href="https://elonlit.com/scrivings/a-theory-of-deep-learning/">A Theory of Deep Learning</a> opens with Borges's Funes the Memorious — a man who, after an accident, can perceive and remember everything with perfect resolution but cannot think. "To think is to ignore (or forget) differences, to generalize, to abstract." Funes is the limit case of empiricism with infinite data and no compression. The author's argument: deep learning theory is building Locke's impossible language, "in which each individual thing, each stone, each bird and each branch, would have its own name" — more parameters, more data, more compute — and none of the theoretical frameworks (uniform convergence, NTK, PAC-Bayes, mean-field) are speaking the same language or proving useful bounds.</p>
+
+        <blockquote>
+          "Deep learning alchemy today is where chemistry was before Lavoisier: a practice that works, built on a theory that doesn't."
+          <cite>— <a href="https://elonlit.com/scrivings/a-theory-of-deep-learning/">A Theory of Deep Learning, elonlit.com</a></cite>
+        </blockquote>
+
+        <p>Lavoisier, in the 1770s, replaced phlogiston theory — a working practical chemistry that had no correct account of combustion — with the concept of oxygen and conservation of mass. Practitioners could make gunpowder before Lavoisier. They just couldn't explain it. The author's implied question: what is the Lavoisier moment for deep learning going to look like, and are we anywhere near it?</p>
+
+        <p>Against this backdrop, Sander Dieleman — a research scientist at Google DeepMind — published an 84-minute deep dive: <a href="https://sander.ai/2026/05/06/flow-maps.html">Learning the Integral of a Diffusion Model</a>. The subject is flow maps — a technique for training neural networks to directly predict where a diffusion path ends up, rather than just its local direction. Standard diffusion sampling is iterative: you take many small steps along a trajectory, estimating the tangent at each point and integrating numerically. Flow maps learn to skip that integration, predicting the endpoint from any position along the path. The result is substantially faster sampling, with some additional useful properties for trajectory interpolation.</p>
+
+        <p>The irony is pointed: flow maps are a sophisticated and principled engineering advance built on a process — diffusion — that nobody fully understands. We're getting better at integrating trajectories in a space whose geometry we can't yet describe. Pre-Lavoisier chemistry, making better gunpowder.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents as Economic Actors: The Web Adapts</h2>
+
+        <p>Google this week launched <a href="https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-fraud-defense-the-next-evolution-of-recaptcha/">Google Cloud Fraud Defense</a> — described as "the trust platform for the agentic web and the next evolution of reCAPTCHA." The framing is significant. reCAPTCHA, for two decades, has been built around a single assumption: that the actor you want to verify is human, and the threat you're blocking is a bot. Fraud Defense reorients this. In the agentic web, bots are customers. Legitimate agents need to transact; fraudulent agents need to be blocked. The signal you're looking for is no longer "is this a machine?" but "is this machine acting legitimately on behalf of its stated principal?"</p>
+
+        <p>Cloudflare made a parallel move just this week, announcing that <a href="https://blog.cloudflare.com/agents-stripe-projects/">agents can now create Cloudflare accounts, buy domains, and deploy</a> — using Stripe's agent payment flows and Cloudflare's Projects API. An agent can go from "spin up a web presence" to a live domain with deployed code, no human in the payment loop, no dashboard interaction required. This is infrastructure built for autonomous economic actors, not assisted human ones.</p>
+
+        <p>Both announcements point at the same structural shift: the internet was built assuming a human at the keyboard. Routing, authentication, payment, and fraud detection all relied on that assumption. It no longer holds, and the plumbing is being rebuilt. The CARA 2.0 project — a <a href="https://www.aaedmusa.com/projects/cara2">DIY robot dog built on an M4 Mac mini and custom actuators</a> — represents the physical side of the same trend: autonomous actors that navigate the world are getting cheaper, more capable, and more available to hobbyists at a rate that parallels what happened to language models in 2022. The gap between "impressive demo" and "deployable platform" is closing.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The constraint has moved upstream.</strong> Coding agents shift the bottleneck from implementation to specification. Teams that master writing precise, unambiguous requirements will have a structural advantage over teams that master prompting. The new leverage is clarity of thought, not speed of typing.</li>
+            <li><strong>AI bullshit is not AI lying.</strong> Frankfurt's distinction matters practically: AI-generated work that fails does so not because it's false but because it's indifferent to whether it's true. Detection requires domain knowledge, not just fact-checking. Organizations without deep subject-matter expertise in every function are flying half-blind.</li>
+            <li><strong>Compute is becoming a geopolitical and infrastructure game.</strong> Anthropic going to SpaceX for capacity is a signal: the bottleneck in AI deployment is no longer model quality but raw compute and energy. The organizations that control those resources — including unconventional ones like SpaceX — are gaining structural leverage over AI development.</li>
+            <li><strong>We're engineering without a theory.</strong> Deep learning keeps producing powerful advances — flow maps, distillation, capability gains — while the theoretical foundations remain pre-Lavoisier. This isn't necessarily a problem until it is: the moment we need principled guarantees (safety, reliability, interpretability), the gap between practice and theory will matter enormously.</li>
+            <li><strong>The internet is being rebuilt for agents.</strong> Authentication, payments, fraud detection, and infrastructure provisioning are all being redesigned around the assumption that the actor may not be human. This is infrastructure work, not product work — and infrastructure changes are slow, durable, and consequential.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://www.thetypicalset.com/blog/thoughts-on-coding-agents">The bottleneck was never the code (527 pts)</a></li>
+          <li><a href="https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/">Vibe coding and agentic engineering are getting closer than I'd like (441 pts)</a></li>
+          <li><a href="https://nooneshappy.com/article/appearing-productive-in-the-workplace/">Appearing productive in the workplace (781 pts)</a></li>
+          <li><a href="https://katedaviesdesigns.com/2026/04/29/knitting-bullshit/">Knitting bullshit (433 pts)</a></li>
+          <li><a href="https://www.anthropic.com/news/higher-limits-spacex">Higher usage limits for Claude and a compute deal with SpaceX (407 pts)</a></li>
+          <li><a href="https://elonlit.com/scrivings/a-theory-of-deep-learning/">A Theory of Deep Learning (143 pts)</a></li>
+          <li><a href="https://sander.ai/2026/05/06/flow-maps.html">Learning the Integral of a Diffusion Model (107 pts)</a></li>
+          <li><a href="https://cloud.google.com/blog/products/identity-security/introducing-google-cloud-fraud-defense-the-next-evolution-of-recaptcha/">Google Cloud Fraud Defense: the next evolution of reCAPTCHA (230 pts)</a></li>
+          <li><a href="https://blog.cloudflare.com/agents-stripe-projects/">Agents can now create Cloudflare accounts, buy domains, and deploy (628 pts)</a></li>
+          <li><a href="https://www.aaedmusa.com/projects/cara2">CARA 2.0 – I Built a Better Robot Dog (454 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=t8co94HS6tY">How Amplitude Went From Skeptics to "All In" on AI — Spencer Skates (Y Combinator)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
