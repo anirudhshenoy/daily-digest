@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Body That Carries the Brain — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Friday, May 8, 2026</div>
+        <h1>The Body That Carries the Brain</h1>
+        <p class="subtitle">Why the model is no longer the bottleneck — and what that means for everything built on top of it.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Harness Is the Product</h2>
+
+        <p>Here is a number worth sitting with: the same Claude model, identical weights, scored 78% on CORE — a benchmark testing agents' ability to reproduce published scientific results — when running inside Claude Code's harness, and 42% when running inside a different harness built by another startup. Same brain. Different body. Nearly double the performance. Not a prompting difference. Not a context window trick. A structural difference, rooted in how the harness manages state across sessions, coordinates tool calls, and verifies results.</p>
+
+        <p>This is the thesis that the AI industry is slowly, painfully arriving at: <em>the model is not the bottleneck</em>. The harness is. And the two dominant harnesses in coding today — Claude Code and OpenAI's Codex — are diverging on purpose, expressing fundamentally different philosophies about how humans and machines should work together.</p>
+
+        <blockquote>
+          "Claude Code and Codex are not two flavors of the same thing, and that's not just because of the models. They actually embody fundamentally different ideas about how humans and AI work together."
+          <cite>— NateBJones, "The Decision That Compounds Every Week"</cite>
+        </blockquote>
+
+        <p>Claude Code's philosophy: <em>bash is all you need</em>. Give the agent Unix primitives and let it chain them with pipes. Run it in your actual terminal, with access to your environment variables, SSH keys, and local filesystem. Manage risk through incrementalism — one feature per session, structured progress files, browser automation for verification. The agent lives at your desk. The trust boundary is your entire workstation.</p>
+
+        <p>Codex's philosophy: the codebase is the system of record, and the agent should never need to touch anything else. Each task runs in an isolated cloud sandbox. Internet is disabled by default. Coordination happens through Git branches, not shared memory. Institutional knowledge lives in the repo, not in the agent's working context. Where Claude Code makes the agent remember, Codex makes the codebase remember.</p>
+
+        <p>Both solve the same problem — how do you get reliable, multi-session work from an AI? — through genuinely different theories of where institutional knowledge should live. And the divergence compounds. Calvin French-Owen, who uses both tools professionally, builds Claude Code slash-commands, automation chains, and multi-agent delegation trees that are specific to Claude's skill system and context-forking architecture. Those investments don't transfer to Codex. That's not vendor lock-in in the traditional sense — it's lock-in to a model maker's philosophy of how work should happen, expressed as architecture.</p>
+
+        <p>This framing got strong independent confirmation on Hacker News today: a post titled <a href="https://news.ycombinator.com/item?id=48051562">"Agents need control flow, not more prompts"</a> hit 357 points and sparked 190 comments. The thesis: reliable agents tackling complex tasks need deterministic control flow encoded in software, not increasingly elaborate prompt chains. The intuition behind it is the same as the harness story — language is a leaky interface for specifying behavior, and agents that work at scale need structure that doesn't depend on the quality of prose.</p>
+
+        <p>We are, to borrow a metaphor from the same analysis, in the 2010 era of AI coding tools. The models look similar in benchmarks. The architectures are separating along lines that will determine what's possible in 2028. And most procurement decisions are being made by people looking at benchmark scores.</p>
+
+        <hr class="divider" />
+
+        <h2>Intelligence Has Left the Building</h2>
+
+        <p>While engineers argue about harnesses, Google's DeepMind has been quietly doing something more unsettling: using AI to make original scientific contributions. <a href="https://news.ycombinator.com/item?id=48050278">AlphaEvolve</a> — described today as a "Gemini-powered coding agent scaling impact across fields" — has been applied to genomics, quantum physics, global logistics infrastructure, and mathematical optimization. DeepMind's published results include contributions that aren't incremental improvements on known results, but proofs of conjectures that had stood unresolved since 2015, counterexamples to assumptions that specialists had accepted as probably true, and algorithmic improvements to chip layout that are now running in production across Google's fleet.</p>
+
+        <p>The framing of what AlphaEvolve is matters: it's not a chat interface. It's an evolutionary loop — generate candidate programs, evaluate them, select the best, iterate. The "coding agent" label undersells it. What's actually happening is closer to directed evolution: automated search across a space of possible algorithms, guided by AI-generated intuitions about what might work. The human in the loop specifies the evaluation function; the agent finds the program.</p>
+
+        <p>On the interpretability side, Anthropic published <a href="https://news.ycombinator.com/item?id=48052537">Natural Language Autoencoders</a> today — research that attempts to turn Claude's internal reasoning states into readable text. The premise: Claude's chain-of-thought reasoning exists in a high-dimensional representation space that doesn't map cleanly to natural language. The autoencoder is trained to compress and reconstruct those states through a human-readable bottleneck, producing "thought summaries" that are surprisingly coherent descriptions of what the model was attending to. This is a new kind of instrument for studying AI behavior — not asking the model to explain itself (which is unreliable), but reading the actual geometry of its internal states.</p>
+
+        <p>And separately: Mozilla reported that Anthropic's Mythos model found <a href="https://news.ycombinator.com/item?id=48053816">271 security vulnerabilities in Firefox 150</a> — with "almost no false positives." For context, Opus 4.6 found 22 bugs on the same codebase. Mythos found 271. That's not a marginal improvement. That's a different category of tool. The bugs included sec-critical and sec-high ratings — vulnerabilities triggerable through normal user behavior. The implication, as one commenter noted, is that the zero-day market is about to get very complicated: the same capability that finds bugs defensively can be pointed offensively, and the barrier to doing so has just dropped by roughly an order of magnitude.</p>
+
+        <blockquote>
+          "Something something Mozilla CEO who wants Firefox to become an AI product praising an AI model seems fishy."
+          <cite>— HN commenter, making the correct cynical observation</cite>
+        </blockquote>
+
+        <hr class="divider" />
+
+        <h2>Intent Is the New Infrastructure</h2>
+
+        <p>In early 2024, Klarna rolled out an AI customer service agent. It handled 2.3 million conversations in its first month, across 23 markets and 35 languages. Resolution time dropped from 11 minutes to 2. The CEO projected $40M in savings. Then customers started complaining. By mid-2025, Klarna was frantically rehiring the human agents it had laid off.</p>
+
+        <p>The standard reading is: AI can't handle nuance. The more interesting reading, two years later: the AI agent was extraordinarily good at resolving tickets fast. That was the wrong goal to give it. Klarna's organizational intent wasn't "resolve tickets fast" — it was "build lasting customer relationships that drive lifetime value in a competitive fintech market." Those are profoundly different objectives, and they require profoundly different decision-making at the point of interaction. A human agent with five years at the company knows when to bend a policy, when to spend three extra minutes because the customer is about to churn, when efficiency is the right move and when generosity is. She knows this because she absorbed Klarna's real values — not the ones on the website, but the ones encoded in the decisions managers make, the stories veterans tell new hires, the unwritten rules about which metrics leadership actually cares about when things go wrong. The AI agent had none of it.</p>
+
+        <p>This is the argument for what might be called <em>intent engineering</em> — the third discipline in the evolution of how we work with AI, following prompt engineering and context engineering. Prompt engineering asked: how do I talk to AI? Context engineering asked: what does AI need to know? Intent engineering asks: what does AI need to <em>want</em>? And unlike the first two, which are personal or team-level skills, intent engineering is an organizational infrastructure problem.</p>
+
+        <p>The shape of the gap is familiar once you look for it. Microsoft poured billions into Copilot, embedded it into every Office product, and achieved 85% Fortune 500 adoption. Then Gartner found that only 5% of organizations moved from pilot to larger-scale deployment. Only about 3% of the total Microsoft 365 user base actually adopted Copilot as paid users. The standard explanation centers on UX problems and model quality. Those are real, but they're not the fundamental issue. The fundamental issue is that deploying an AI tool across an organization without organizational intent alignment is like hiring 40,000 new employees and never telling them what the company does, what it values, or how to make decisions. You get lots of activity and not much productivity.</p>
+
+        <p>What does the solution look like? Not putting OKRs in the system prompt. Something more like a cascaded specification: goal structures that agents can interpret (not "increase customer satisfaction," but "what signals indicate customer satisfaction in our context, what data contains those signals, what actions am I authorized to take, what trade-offs am I empowered to make, where are the hard limits"). Below that, delegation frameworks: leadership principles decomposed into decision boundaries agents can act on. And at the base, feedback mechanisms that close the loop — because without them, you get Klarna: an agent optimizing for exactly the wrong objective, brilliantly.</p>
+
+        <blockquote>
+          "Context without intent is like a loaded weapon with no target. We've spent years building AI systems. 2026 is the year we learn to aim them."
+          <cite>— NateBJones, "What Comes After Context Engineering"</cite>
+        </blockquote>
+
+        <p>The analogy that keeps surfacing: OKRs were the management innovation that let Intel align thousands of humans to shared objectives in the 1970s. Intent engineering is the management innovation that will let organizations align hundreds — or eventually thousands — of autonomous agents to those same objectives, operating at speeds no human manager can supervise. The parallel is direct. The urgency is much higher.</p>
+
+        <hr class="divider" />
+
+        <h2>The Material Costs</h2>
+
+        <p>The abstractness of the above arguments gets grounded fast when you look at what's happening to physical supply chains. <a href="https://news.ycombinator.com/item?id=48050540">Motherboard sales have "collapsed"</a> amid unprecedented shortages fueled by AI — not because AI companies are buying motherboards, but because the components that go into motherboards (memory, capacitors, power controllers) are being consumed by AI server builds at a rate that has cascaded through the entire PC supply chain. The enthusiast PC market is experiencing shortages in parts it has never had trouble sourcing before. This is what a truly inelastic demand shock looks like at the component level.</p>
+
+        <p>On the open-source side: <a href="https://news.ycombinator.com/item?id=48050751">antirez</a> — the creator of Redis, one of the most widely deployed software systems in history — shipped a local inference engine for DeepSeek-4 Flash that runs natively on Apple Silicon Metal. This matters for two reasons. First, it means a single developer with a Mac can now run a genuinely capable model locally, privately, without API costs. Second, that the person who wrote it is antirez says something about who is paying attention to the local inference problem: this isn't a hobbyist project, it's an expert who thinks the problem is worth his time.</p>
+
+        <p>And Chrome quietly <a href="https://news.ycombinator.com/item?id=48050964">removed a claim</a> from its documentation stating that on-device AI models don't send data to Google servers. The claim simply disappeared. No announcement, no explanation. One of the largest browser deployments in history, running AI inference locally, and the question of what data flows where has been answered by removing the previous answer. Whether this reflects a technical change, a policy change, or just a legal decision to stop making a promise they weren't sure they could keep — the practical effect is the same: users of Chrome's on-device AI features now have no documentation-based basis for trusting their data stays local.</p>
+
+        <hr class="divider" />
+
+        <h2>The Commons Under Stress</h2>
+
+        <p>The most-commented AI story on Hacker News today wasn't about a new model or a research paper. It was titled <a href="https://news.ycombinator.com/item?id=48053203">"AI slop is killing online communities"</a> — 493 points, 467 comments, and a comment thread that was itself a demonstration of the phenomenon: coherent, clearly human outrage about the thing that makes coherent, clearly human outrage hard to find.</p>
+
+        <p>The mechanism is worth understanding precisely because it's not a conspiracy — it's a tragedy of the commons. Individual actors, deploying AI-generated content for engagement farming, SEO, or marketing, each make a locally rational decision. The aggregate effect is a degradation of the signal-to-noise ratio across forums, comment sections, and community spaces that previously derived their value from the scarcity of human attention and the authenticity of human expression. Reddit, Quora, Stack Overflow, Discord servers — these are systems whose value is produced by human participation and consumed by everyone. AI-generated content free-rides on that value without contributing to it, and in sufficient concentration, destroys it.</p>
+
+        <p>One HN commenter described an experiment where they had an agent karma-farm Reddit for them, then went back and read the posts the agent had written. "As a reader, I would have NO idea these were just written by a computer," they wrote. This is the epistemic version of the same problem. If you can't tell AI-generated content from human-generated content, the information value of the content drops — not because AI content is necessarily wrong, but because you can no longer use the fact that a human wrote something as evidence that a human found it worth writing. The filter breaks.</p>
+
+        <p>This connects back to everything else in today's digest. AI agents are getting better at producing outputs that look right — in code, in bug reports, in scientific reasoning, in customer service interactions. The hard part, increasingly, is not generating output. It's having the taste to evaluate it, the intent infrastructure to aim it, and the harness architecture to make it reliable. The intelligence is becoming a commodity. Everything else is where the value lives.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The harness decision is a strategic commitment.</strong> Same model, different harness: nearly double the performance on real-world benchmarks. Choosing between Claude Code's philosophy (your machine, your environment, incremental trust) and Codex's philosophy (isolated sandbox, repo-as-memory) is choosing a theory of how human-AI collaboration should work. Every quarter you build on top of that choice, switching costs compound.</li>
+            <li><strong>AI is making original scientific contributions — and the pace is accelerating.</strong> AlphaEvolve solving decade-old math conjectures. Mythos finding 271 Firefox bugs with near-zero false positives. Natural Language Autoencoders letting researchers read Claude's internal states. These aren't demo outputs — they're deployed systems affecting real security, real research, real infrastructure. The "AI as tool" frame is starting to break down.</li>
+            <li><strong>Intent is what most enterprise AI deployments are missing.</strong> The Klarna story is the canonical case: AI that worked perfectly at the wrong objective. The fix isn't better prompts or more context — it's organizational infrastructure that makes goals, values, and decision boundaries machine-actionable before you deploy. Most organizations haven't built this and don't know they need to.</li>
+            <li><strong>The physical world is feeling AI's weight.</strong> Motherboard shortages, Chrome removing data promises, antirez writing Metal inference engines: the AI boom has a material substrate that's starting to constrain the abstractness. The question of what AI runs on, who controls that infrastructure, and what data it handles is becoming urgent in proportion to how capable the models get.</li>
+            <li><strong>The commons problem is real and structural.</strong> AI slop killing online communities isn't a bug — it's what happens when generating content becomes cheap and the cost is externalized onto communities. The response isn't moralizing about AI use; it's recognizing that the value of human-generated spaces comes from their scarcity, and that scarcity is dissolving fast. The platforms that figure out how to signal authentic human participation will be worth a lot.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48051562">Agents need control flow, not more prompts (357 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48052537">Natural Language Autoencoders: Turning Claude's Thoughts into Text — Anthropic (216 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48050278">AlphaEvolve: Gemini-powered coding agent scaling impact across fields — Google DeepMind (254 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48053816">Mozilla says Mythos found 271 vulnerabilities in Firefox 150, almost no false positives (116 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48053203">AI slop is killing online communities (493 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48050540">Motherboard sales 'collapse' amid unprecedented shortages fueled by AI (252 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48050751">DeepSeek 4 Flash local inference engine for Metal — antirez (319 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48050964">Chrome removes claim of On-device AI not sending data to Google Servers (492 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48053623">Dirtyfrag: Universal Linux LPE (460 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@NateBJones">Claude Code vs Codex — The Decision That Compounds Every Week (NateBJones)</a></li>
+          <li><a href="https://www.youtube.com/@NateBJones">Prompt Engineering Is Dead. Context Engineering Is Dying. What's Next? (NateBJones)</a></li>
+          <li><a href="https://www.youtube.com/@NateBJones">Google's New AI Is Smarter Than Everyone's. But It Costs Half. (NateBJones)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
