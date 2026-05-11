@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Bills Are Coming Due — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Monday, May 11, 2026</div>
+        <h1>The Bills Are Coming Due</h1>
+        <p class="subtitle">AI's honeymoon is ending in three directions at once: local devices are fighting back, vibe-coded codebases are collapsing, and your power utility just got handed a $2 billion tab it didn't ask for.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Bring It Home: The Local AI Manifesto</h2>
+
+        <p>The most-discussed post on Hacker News this morning isn't about a new model release or a benchmark. It's a <a href="https://unix.foo/posts/local-ai-needs-to-be-norm/">blunt 800-word argument</a> that the entire premise of cloud AI in applications is broken — and that local, on-device AI should be the default. "We are building applications that stop working the moment the server crashes or a credit card expires," the author writes. "That's ridiculous."</p>
+
+        <p>The piece landed 693 upvotes and 332 comments because it names something a lot of developers feel but rarely say out loud. Every time your app ships an API call to Anthropic or OpenAI for a feature that a local model could handle, you've added a distributed system's worth of failure modes — network conditions, rate limits, billing lapses, vendor uptime, data retention questions — to what was originally a simple UX enhancement. The author built an iOS news reader that runs summaries on-device via Apple's Neural Engine and calls it "embarrassingly fast." The Neural Engine in your iPhone 16 has been sitting mostly idle while your apps wait for JSON from Virginia.</p>
+
+        <p>The argument got concrete support the same day from a developer who spent weeks experimenting with <a href="https://jola.dev/posts/running-local-models-on-m4">running local models on an M4 MacBook Pro with 24GB of RAM</a>. The results were genuinely usable: Mistral Small and Qwen 14B ran at 40+ tokens/second, good enough for real coding workflows. The catch is memory — you hit the 24GB ceiling surprisingly fast when running a larger model alongside a browser and a bunch of apps. But the point holds: for many inference tasks, the laptop on your desk is already good enough.</p>
+
+        <blockquote>
+          "AI everywhere is not the goal. Useful software is the goal."
+          <cite>— "Local AI needs to be the norm," HN front page, May 11, 2026</cite>
+        </blockquote>
+
+        <p>And then there's the irony hiding in story #47: <a href="https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features">Chrome has been quietly installing a 4GB Gemini Nano model on users' machines</a> without asking — precisely the use case the local AI advocates are cheering for — but Chrome removed its own disclosure that the weights aren't sent to Google's servers. Users discovered the silent installation. 100 upvotes, 53 comments. One of those situations where the right technology decision is still paired with the worst-possible communications decision.</p>
+
+        <hr class="divider" />
+
+        <h2>Hardware Attestation and the AI Lock-In Nobody's Talking About</h2>
+
+        <p>The single highest-voted story today — 1,007 points, 365 comments — is a GrapheneOS thread on <a href="https://grapheneos.social/@GrapheneOS/116550899908879585">hardware attestation as a monopoly enabler</a>. This one deserves more attention than it usually gets outside security circles.</p>
+
+        <p>Both Apple and Google are expanding their use of hardware-based attestation: Apple's App Attest API and Google's Play Integrity API work similarly. They let a service verify that the device running their client software is "legitimate" — hasn't been rooted, hasn't been modified. On its face, this sounds like a security feature. In practice, it's a mechanism that lets platform owners decide which software can access which services. If you run GrapheneOS, CalyxOS, or any de-Googled Android, you increasingly can't authenticate to apps that check Play Integrity. Google intends to bring this to the web via Privacy Pass.</p>
+
+        <p>The AI dimension here is underappreciated. As local AI inference becomes viable and desirable (see above), the question of <em>which local models</em> a device "trusts" becomes a gatekeeping question. Apple already controls what runs on its Neural Engine via signed frameworks. If attestation expands to AI inference — and there's no technical reason it couldn't — hardware vendors gain a chokepoint on which models can run locally on your own device. The conversation thread is long and worth reading. The concern is structural, not paranoid.</p>
+
+        <hr class="divider" />
+
+        <h2>The Vibe Coding Hangover</h2>
+
+        <p>Seven months. 234 commits. 1,690 lines in a single god-object file. That's what one developer built by vibe-coding a GPU-aware Kubernetes TUI dashboard with Claude — and then <a href="https://blog.k10s.dev/im-going-back-to-writing-code-by-hand/">archived it all and started from scratch</a>. The dev-log is titled "I'm going back to writing code by hand," and the comments on Hacker News feel like a support group meeting.</p>
+
+        <p>The core diagnosis: AI writes features, not architecture. In the early weeks, the velocity felt like magic — "add a pods view with live updates" and it just worked. But the model kept solving problems locally without any global context of the system it was building. Each feature arrived at the cost of coherence. By month seven, the codebase had become something nobody, human or model, could reason about. The author's pithy observation: "like em-dash is to AI writing, god-object is to AI coding."</p>
+
+        <blockquote>
+          "The velocity makes you think you're winning right up until the moment everything collapses simultaneously."
+          <cite>— "I'm going back to writing code by hand," HN #48090029</cite>
+        </blockquote>
+
+        <p>Meanwhile, the team behind RPCS3 — the PlayStation 3 emulator, one of the most technically demanding open source projects in existence — <a href="https://kotaku.com/playstation-3-emulator-devs-politely-ask-that-people-stop-flooding-it-with-ai-code-pull-requests-2000694656">posted a gentle but pointed request</a>: please stop sending AI-generated pull requests. The team is drowning in PRs that look plausible but don't compile, don't understand the subsystem they're touching, and require hours of review time to reject. "Learn how to debug and code," they write, with more restraint than many would muster.</p>
+
+        <p>The RPCS3 situation is the PS3 emulator equivalent of the "AI PR flood" that smaller open source projects have been experiencing for months, now hitting one of the most complex codebases in hobbyist software. Emulation requires understanding hardware at a level where "AI writes the patch" almost never works. These projects are canaries for everywhere the vibes don't reach.</p>
+
+        <hr class="divider" />
+
+        <h2>Your Power Bill, Their Data Center</h2>
+
+        <p>Maryland is asking federal energy regulators to step in after its citizens were handed a <strong>$2 billion</strong> power grid upgrade bill to support out-of-state AI data centers. The state's complaint is pointed: AI hyperscalers promised ratepayer protections when they were lobbying for grid access, and now the infrastructure costs are being socialized while the compute profits go elsewhere.</p>
+
+        <p>This is a real and underappreciated externality of the AI infrastructure boom. When a hyperscaler builds a 500MW data center in Northern Virginia — the densest data center market on earth — the grid upgrades required to serve it don't stop at the state line. PJM Interconnection, which manages the grid across 13 states, allocates transmission upgrade costs broadly. A company that sets up shop in Ashburn, Virginia might be causing rate increases for a homeowner in Baltimore who has never interacted with an AI product.</p>
+
+        <p>Maryland's complaint joins a growing list of regulatory pushback on AI infrastructure's hidden costs. Maine's legislature voted to restrict new data centers near sensitive ecosystems earlier this year. The pattern is consistent: the people making the investment decisions for AI compute are not the same people paying for the electrical infrastructure those investments require.</p>
+
+        <hr class="divider" />
+
+        <h2>LLMorphism: When You Start Thinking Like a Language Model</h2>
+
+        <p>A new preprint with the wonderful neologism "<a href="https://arxiv.org/abs/2605.05419">LLMorphism</a>" argues that the rise of conversational AI may be producing a new cognitive bias: the belief that human cognition works like a large language model. The logic runs backwards from the usual anthropomorphism concern. We've spent years worried about people treating AI as human. The paper argues we should also worry about the reverse — people treating <em>themselves</em> as AI.</p>
+
+        <p>The mechanism is plausible. When an AI system produces convincing human-like language, observers may infer: "if an LLM can speak like me, maybe I think like an LLM." This inference is biased because linguistic output and cognitive architecture are completely different things. But LLM vocabulary — context windows, tokens, prompts, outputs — is becoming a culturally available framework for describing thought. People already say things like "I need to clear my context" when they mean they're overwhelmed. The paper traces implications for work, education, healthcare, responsibility, and creativity.</p>
+
+        <blockquote>
+          "The public debate may be missing half of the problem: the issue is not only whether we are attributing too much to AI, but also whether we are attributing too little to ourselves."
+          <cite>— LLMorphism preprint, arXiv 2605.05419</cite>
+        </blockquote>
+
+        <p>Running adjacent to this: a <a href="https://g5t.de/articles/20260510-task-paralysis-and-ai/index.html">personal essay on Task Paralysis and AI</a> that landed 211 upvotes and a thread full of people recognizing themselves. The author, possibly ADHD, describes how AI has become a kind of external executive function — the thing that breaks them out of the frozen state where every task feels impossibly large. They're not a cheerleader for AI; they note its effects on artists with genuine moral unease. But they can't deny that having a model to talk to, to help sequence the next step, has changed something real. The essay is honest in a way that's rarer than it should be.</p>
+
+        <hr class="divider" />
+
+        <h2>The Real AI Revolution Is in a Field, Not a Terminal</h2>
+
+        <p>The hype cycle for AI has been almost entirely about software — code generation, knowledge work, chatbots. Qasar Younis, co-founder and CEO of Applied Intuition, thinks this misses the bigger picture entirely. Applied Intuition is a $15 billion company that 18 of the top 20 automakers use, along with the largest global construction, mining, and trucking companies, and the Department of Defense. You've probably never heard of it.</p>
+
+        <p>In a Lenny's Podcast conversation, Younis makes a case that's hard to argue with: the industries that AI will transform most dramatically in the next decade aren't software companies. They're farming, mining, and construction — sectors that are enormous, productivity-starved, and facing a demographic cliff. The average age of a farmer in America is in their late fifties. In ten years, that's a crisis. Autonomous vehicles and AI-controlled equipment aren't an upgrade story for agriculture — they're a succession plan.</p>
+
+        <blockquote>
+          "The real impact of AI in the next five to ten years really is going to be in farming, mining, construction. These industries, they need autonomy and it couldn't come soon enough."
+          <cite>— Qasar Younis, Applied Intuition, on Lenny's Podcast</cite>
+        </blockquote>
+
+        <p>Applied Intuition's approach is to be the software stack for autonomous vehicles across every domain — not the hardware, not the end product, but the simulation, testing, and deployment infrastructure that any organization building autonomous machines needs. Think of it as the AWS for anything that moves. The company has been growing quietly for a decade, and the contrast with the AI hype cycle — loud, fast, software-first — couldn't be sharper. Sometimes the most important companies are the ones nobody's writing breathless threads about.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The local AI argument has teeth now.</strong> A year ago, "run it locally" was a hobbyist's preference. Today, an M4 laptop with 24GB RAM runs useful models at 40+ tokens per second. The case for cloud-first AI in applications is weakening against real hardware benchmarks.</li>
+            <li><strong>Attestation is the next AI policy battleground.</strong> If platform owners can verify what software runs on "their" hardware, they can eventually control which AI models run locally on your device. This is the hardware-level enclosure that local AI advocates should be watching.</li>
+            <li><strong>Vibe coding's failure mode is architectural, not syntactic.</strong> The code usually runs. The problem is that no single component of the system knows what any other component is doing, and the model has no incentive to care about that coherence. Architecture requires a human with long-term context and accountability.</li>
+            <li><strong>AI infrastructure costs are being externalized to the public.</strong> The investment decisions happen in one boardroom; the grid upgrade bills land in millions of utility statements. This will become a major political issue before it becomes a technical one.</li>
+            <li><strong>The most transformative AI applications aren't on your laptop.</strong> Software productivity tools are real but ultimately incremental. Autonomous equipment in agriculture, mining, and construction represents category-level change in industries that employ hundreds of millions of people globally and haven't seen meaningful productivity improvements in decades.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://grapheneos.social/@GrapheneOS/116550899908879585">Hardware Attestation as Monopoly Enabler (1007 pts)</a></li>
+          <li><a href="https://unix.foo/posts/local-ai-needs-to-be-norm/">Local AI needs to be the norm (693 pts)</a></li>
+          <li><a href="http://fourlightyears.blogspot.com/2026/05/i-returned-to-aws-and-was-reminded-hard.html">I returned to AWS and was reminded why I left (679 pts)</a></li>
+          <li><a href="https://twitter.com/jarredsumner/status/2053047748191232310">Bun's experimental Rust rewrite hits 99.8% test compatibility (690 pts)</a></li>
+          <li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises">Maryland citizens hit with $2B power grid upgrade for out-of-state AI (177 pts)</a></li>
+          <li><a href="https://g5t.de/articles/20260510-task-paralysis-and-ai/index.html">Task Paralysis and AI (211 pts)</a></li>
+          <li><a href="https://jola.dev/posts/running-local-models-on-m4">Running local models on an M4 with 24GB memory (149 pts)</a></li>
+          <li><a href="https://blog.k10s.dev/im-going-back-to-writing-code-by-hand/">I'm going back to writing code by hand (106 pts)</a></li>
+          <li><a href="https://kotaku.com/playstation-3-emulator-devs-politely-ask-that-people-stop-flooding-it-with-ai-code-pull-requests-2000694656">PS3 Emulator Devs Ask People to Stop Flooding It with AI PRs (103 pts)</a></li>
+          <li><a href="https://arxiv.org/abs/2605.05419">LLMorphism: When humans come to see themselves as language models (75 pts)</a></li>
+          <li><a href="https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features">Chrome's AI features may be hogging 4GB of your computer storage (100 pts)</a></li>
+          <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/">Gemini API File Search is now multimodal (145 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=NA_the-real-ai-revolution-isnt-software-its-farms-mines-and-tru">The real AI revolution isn't software — it's farms, mines, and trucks · Qasar Younis (Lenny's Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
