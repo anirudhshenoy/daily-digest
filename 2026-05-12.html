@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything Gets Rewritten — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, May 12, 2026</div>
+        <h1>Everything Gets Rewritten</h1>
+        <p class="subtitle">Npm packages compromised through a GitHub Actions exploit chain, AI discovers a curl bug while criminals use the same technology offensively, GitLab eliminates three management layers, and a quiet consensus is forming that software engineering may be more like professional sports than any of us wanted to admit.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Build Pipeline Is Now the Attack Surface</h2>
+
+        <p>Yesterday, TanStack — the suite of high-quality React primitives used by hundreds of thousands of projects — published a <a href="https://tanstack.com/blog/npm-supply-chain-compromise-postmortem">thorough postmortem</a> on a supply-chain attack that compromised 84 package versions across 42 <code>@tanstack/*</code> npm packages in a six-minute window. It's worth reading in full, because the attack chain is a textbook case of how modern CI/CD infrastructure turns trust into a liability.</p>
+
+        <p>The attacker's method was elegant in its nastiness. It relied on three distinct vulnerabilities stacked in sequence. First, a <em>pull_request_target</em> "Pwn Request" — GitHub Actions workflows that use this trigger run with the base repository's secrets even for PRs from untrusted forks, bypassing the "first-time contributor approval" gate that many maintainers assume is protective. Second, GitHub Actions cache poisoning: by force-pushing to a PR, the attacker triggered a workflow that cached a 1.1 GB poisoned pnpm store keyed to the <em>main branch</em> scope, not the fork's scope. Third, once that cache was in place, legitimate runs on main pulled it and executed the payload — which extracted an OIDC token from runner memory and used it to authenticate npm publishes.</p>
+
+        <p>The malware itself was comprehensive. Running on install, it harvested credentials from AWS IMDS, GCP metadata, Kubernetes service account tokens, Vault tokens, SSH private keys, and npm credentials. Exfiltration happened over the Session messenger's file-upload network (end-to-end encrypted, no C2 to block). It self-propagated by enumerating other packages the victim maintained and republishing them with the same injection.</p>
+
+        <blockquote>
+          "Because the payload runs as part of npm install's lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised."
+          <cite>— TanStack postmortem</cite>
+        </blockquote>
+
+        <p>There are two layers of irony worth noting. The malicious commit was authored by the identity <code>claude &lt;claude@users.noreply.github.com&gt;</code> — likely chosen to blend into a codebase where AI-authored commits are unremarkable. The other irony: the attack was detected within 20 minutes by an external researcher, not by GitHub or npm's own systems. The community caught it faster than the infrastructure did.</p>
+
+        <p>The immediate lesson is narrow: audit every <code>pull_request_target</code> workflow you own, scope your caches properly, and be suspicious of PRs with <code>[skip ci]</code> prefixes from new contributors. But the broader point is harder to ignore. The supply chain is the software now. CI/CD pipelines, package registries, and GitHub Actions runners are infrastructure of a similar criticality to production databases — and they're being managed with far less security discipline. Every time the industry adds another layer of automation, the attack surface for that automation grows proportionally.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Finds the Bugs — Both Sides Know It</h2>
+
+        <p>Two stories landed this week that, read together, paint a picture of where AI security capabilities are heading. In April, Anthropic's Mythos model — their restricted-access AI specifically trained to find vulnerabilities in source code — began being used by select open-source projects through a partnership with the Linux Foundation's Alpha Omega initiative. Daniel Stenberg, the lead developer of <a href="https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/">curl</a>, finally received a report: Mythos found exactly one vulnerability.</p>
+
+        <p>This is notable for what it says about both the capability and the maturity. Curl has already been scanned by AISLE, Zeropath, OpenAI Codex Security, GitHub Copilot, and Augment — these tools have collectively triggered somewhere between two and three hundred bugfixes over the past 8–10 months. Mythos, on a codebase that has been intensively hardened by prior AI tools, still found something the others missed. One vulnerability in a deeply audited project is not a failure of the model; it's a demonstration that even well-scanned code has residual risk, and that different models find different classes of problems.</p>
+
+        <p>The other story cuts in the opposite direction. The New York Times, citing Google, <a href="https://www.nytimes.com/2026/05/11/us/politics/google-hackers-attack-ai.html">reported</a> that criminal hackers have been using AI to find a major software vulnerability — not for defensive purposes, but for exploitation. The specifics of the vulnerability haven't been disclosed, but the pattern is clear: the same model capabilities that power defensive scanning are equally available to offensive actors.</p>
+
+        <p>This is the dual-use problem in concrete form. Anthropic kept Mythos restricted precisely because of this concern — giving a large population of attackers the same code-auditing capability that defenders had just acquired would collapse any temporary advantage. But restrictions on frontier models don't prevent earlier-generation models from being fine-tuned or prompted for offensive security research. The gap between defensive and offensive AI capability is narrowing, and the defensive side has a structural disadvantage: it needs to find every vulnerability, while attackers only need to find one.</p>
+
+        <blockquote>
+          "Before this first Mythos report, we had already scanned curl with several different very capable AI powered tools… These tools and the analyses they have done have triggered somewhere between two and three hundred bugfixes merged in curl."
+          <cite>— Daniel Stenberg, curl maintainer</cite>
+        </blockquote>
+
+        <p>The practical upshot for software teams: AI-powered vulnerability scanning is no longer optional. The question isn't whether to run it; it's which tools, on which cadence, and how to prioritize the results. Projects like curl that have already integrated multiple scanners are ahead. Most projects haven't started.</p>
+
+        <hr class="divider" />
+
+        <h2>GitLab's "Act 2": What Restructuring Actually Looks Like</h2>
+
+        <p>GitLab published a <a href="https://about.gitlab.com/blog/gitlab-act-2/">letter to customers and investors</a> announcing significant workforce restructuring. Buried beneath the standard corporate framing is a description of what an AI-era reorganization looks like in practice, and it's more specific than most.</p>
+
+        <p>Four changes. First: reducing operating countries by up to 30%, consolidating where GitLab has only small teams and replacing physical presence with partner networks. Second: removing up to three layers of management in some functions — described as getting leaders "closer to the work." Third: reorganizing R&D into roughly 60 smaller, empowered teams with end-to-end ownership, nearly doubling the count of independent teams. Fourth, and most telling: "rewiring internal processes with AI agents, automating the reviews, approvals, and handoffs to speed us up, and plan to right-size roles across the company to follow suit."</p>
+
+        <p>That last phrase — "right-size roles" — is doing significant work. It means that some of the roles currently dedicated to reviews, approvals, and coordination handoffs are being eliminated, because an AI agent will handle the coordination. The three layers of management removal and the doubling of independent teams are structurally consistent with this: if agents handle the coordination overhead that managers previously absorbed, you can run more teams with fewer management layers. The org structure that made sense when human coordination was the bottleneck is being restructured around AI coordination as the default.</p>
+
+        <p>GitLab did confirm Q1 and full-year guidance, so this isn't distress restructuring — it's intentional transformation. What's significant is that GitLab builds developer tooling and lives close to the bleeding edge of agentic software development. If they think the internal org structure that made sense in 2023 doesn't fit 2026, that's a signal about where the rest of the industry is heading.</p>
+
+        <hr class="divider" />
+
+        <h2>How Claude Code Was Born: Building for the Model Six Months From Now</h2>
+
+        <p>Boris Cherny — the engineer who built Claude Code (referred to internally as "QuadCode" during development) — gave a talk at Y Combinator earlier this year that's worth examining for what it reveals about how the most influential developer tools of this era get made. His account is a study in accidental invention and disciplined conviction.</p>
+
+        <p>The origin is almost comically modest. Cherny wanted to understand the Anthropic API — he hadn't used it before. So he built a small terminal app to interact with it. It was a chat app. That's all. When tool use shipped, he gave the model a bash tool, mostly because it was the example in the documentation. To test what the model could do, he asked it: what music am I listening to? Claude wrote AppleScript to query his music player. This was Claude 3.5 Sonnet. He had what he describes as his first "feel the AGI moment."</p>
+
+        <blockquote>
+          "At Anthropic, the way that we thought about it is we don't build for the model of today. We build for the model six months from now. That's actually still my advice to founders that are building on LLMs — just try to think about what is that frontier where the model is not very good at today, because it's going to get good at it."
+          <cite>— Boris Cherny, creator of Claude Code (Y Combinator, February 2026)</cite>
+        </blockquote>
+
+        <p>What followed was three months of not sleeping, working through weekends, shipping internally, iterating. Cherny gave the terminal app to colleagues for dogfooding within two days of the first prototype. The fact that it was a terminal was an accident — he didn't want to build a UI. That accident turned out to be a design feature: terminals impose constraints that force focus, feel productive without ceremony, and don't require context-switching between environments.</p>
+
+        <p>The key strategic insight — build for the model six months out — is worth sitting with. At the time Cherny was building the first version, Claude could barely write code. It was handling maybe 10% of his code, and he still wrote the majority by hand. The bet was that the model would improve into the product, not that the product matched the model's current capability. This is a different design philosophy than most developers apply when building on LLMs: optimize for current behavior, guard against current limitations. Cherny optimized for a model that didn't exist yet.</p>
+
+        <p>The same principle extends to the decisions being made now. The teams building agentic infrastructure — agent frameworks, evaluation systems, memory architectures — are mostly building for a model that is stronger than the one they're testing against today. Whether they're right about the trajectory will determine which tools persist.</p>
+
+        <hr class="divider" />
+
+        <h2>CUDA in Rust: Nvidia Opens the GPU Compiler</h2>
+
+        <p>Nvidia's NV Labs published <a href="https://nvlabs.github.io/cuda-oxide/index.html">cuda-oxide</a>, an experimental Rust-to-CUDA compiler that compiles standard Rust code directly to PTX — the GPU assembly format CUDA uses. No DSLs, no foreign language bindings, no unsafe C interop. You write idiomatic Rust, annotate a module with <code>#[cuda_module]</code>, mark kernels with <code>#[kernel]</code>, and cargo builds the whole thing.</p>
+
+        <p>This matters for two reasons that go beyond Rust enthusiasm. First, safety. GPU kernel code is notoriously difficult to write correctly — memory aliasing bugs and race conditions in SIMT (single instruction, multiple threads) execution are subtle and hard to reproduce. Rust's ownership system catches a category of these at compile time. The cuda-oxide documentation is honest that it's "safe(ish)" — the borrow checker can't reason about GPU execution semantics the way it does about CPU ownership — but "safer than raw CUDA C" is a real improvement for a space where correctness bugs are expensive.</p>
+
+        <p>Second, this is Nvidia publishing this. The company with the most to lose from a competing GPU programming ecosystem is now providing official tooling for an alternative to CUDA C. The context is that ROCm (AMD's CUDA competitor) has been gaining ground, and the CUDA ecosystem's moat has historically been as much about the C toolchain's maturity as about hardware lock-in. Making it easier to write GPU kernels in Rust, without sacrificing access to CUDA's ecosystem, is a defensive play — keep the GPU programmers in NVIDIA's orbit even if they prefer Rust to C. The competitive pressure on CUDA from AMD's ROCm was covered in a previous digest; cuda-oxide can be read as Nvidia's answer to the portability argument.</p>
+
+        <hr class="divider" />
+
+        <h2>The Career That Might Have an Expiration Date</h2>
+
+        <p>Sean Godecke published a piece with a deliberately unsettling title: <a href="https://www.seangoedecke.com/software-engineering-may-no-longer-be-a-lifetime-career/">Software engineering may no longer be a lifetime career</a>. It landed on Hacker News with 389 points and generated 637 comments, which means it touched a nerve.</p>
+
+        <p>His argument isn't that AI makes engineers obsolete immediately — it's that the structure of the career may be changing in a way that makes the "professional athlete" analogy apt. Pro athletes have a maximum productive career of roughly fifteen years, after which their body can't keep pace with younger competitors. The tragedy is the athlete who doesn't plan for the transition. Godecke suggests software engineers may be entering a similar dynamic: a window of high-value productivity, increasingly compressed, with diminishing returns as the leverage advantage of AI-augmented younger developers compounds over time.</p>
+
+        <p>The crux is a premise he grants but doesn't fully accept: if using AI makes you less skilled over time by atrophying the practice of manual reasoning about code, then you're trading long-term cognitive development for short-term productivity. His comparison to construction workers — who lift heavy objects even knowing it wears down their joints, because that's the job — is deliberately uncomfortable. The market may not care about preserving your skill development.</p>
+
+        <blockquote>
+          "If the models are good enough, you will simply get outcompeted by engineers willing to trade their long-term cognitive ability for a short-term lucrative career. I hope that this isn't true. It would be really unfortunate for software engineers. But it would be even more unfortunate if it were true and we refused to acknowledge it."
+          <cite>— Sean Godecke</cite>
+        </blockquote>
+
+        <p>The HN comments split roughly into three camps: those who think the analogy is overblown and that senior engineering judgment becomes more valuable as AI handles implementation; those who agree and are actively planning career transitions; and those who think the real change is that the career becomes more like architecture or medicine — fewer practitioners needed, but those who remain command premium value. All three camps are probably partially right, and it likely varies significantly by domain and company size.</p>
+
+        <p>The adjacent question — why use Python if AI writes the code? — follows naturally. If the choice of programming language has historically been about what skilled humans can maintain, reason about, and debug effectively, and those constraints are being relaxed by AI assistants that fluently handle multiple languages, then the utility of Python's readability advantage shrinks. What doesn't shrink is the ecosystem: library breadth, deployment tooling, hiring pools. Language choice becomes an ecosystem question more than a cognitive ergonomics question.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The build pipeline is the production surface.</strong> The TanStack attack used no zero-days — just three documented, well-understood GitHub Actions weaknesses chained together. The supply chain is not an edge case threat; it is the primary threat vector for projects with wide downstream usage. Every <code>pull_request_target</code> workflow deserves the same scrutiny as a database migration.</li>
+            <li><strong>AI security is bidirectional and accelerating.</strong> Mythos finding one vulnerability in deeply-scanned curl is impressive. Criminals using similar tools offensively is the inevitable complement. The window in which defenders have an AI advantage over attackers is finite, and it may already be closing. Continuous AI-powered scanning is the new baseline, not a premium feature.</li>
+            <li><strong>AI-era org restructuring has a recognizable shape.</strong> GitLab's changes — fewer management layers, more autonomous teams, AI agents handling coordination overhead — will be replicated broadly. The org structures built for human coordination bottlenecks are not the org structures suited for AI-mediated coordination. Companies that redesign proactively will move faster than those restructuring reactively.</li>
+            <li><strong>Build for the model six months out, not the one you're testing with today.</strong> Boris Cherny's principle has aged well: Claude Code was built when Claude could barely write code, premised on the belief the model would improve into the product. Teams building agentic infrastructure now are making the same bet — the frameworks they're building assume models with stronger reasoning, longer context, and more reliable tool use than currently exist. They're probably right.</li>
+            <li><strong>The software engineering career inflection is real but not uniform.</strong> The question isn't whether AI changes the job — it clearly does. The question is what the second-order effects are on skill development, career longevity, and the distribution of value across experience levels. The honest answer is that we don't have enough data yet, which is exactly why thinking about it now matters.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://tanstack.com/blog/npm-supply-chain-compromise-postmortem">Postmortem: TanStack npm supply-chain compromise (600 pts)</a></li>
+          <li><a href="https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/">Mythos Finds a Curl Vulnerability (628 pts)</a></li>
+          <li><a href="https://www.nytimes.com/2026/05/11/us/politics/google-hackers-attack-ai.html">Google says criminal hackers used AI to find a major software flaw (131 pts)</a></li>
+          <li><a href="https://about.gitlab.com/blog/gitlab-act-2/">GitLab announces workforce reduction and end of their CREDIT values (364 pts)</a></li>
+          <li><a href="https://nvlabs.github.io/cuda-oxide/index.html">CUDA-oxide: Nvidia's official Rust to CUDA compiler (371 pts)</a></li>
+          <li><a href="https://www.seangoedecke.com/software-engineering-may-no-longer-be-a-lifetime-career/">Software engineering may no longer be a lifetime career (389 pts)</a></li>
+          <li><a href="https://medium.com/@NMitchem/if-ai-writes-your-code-why-use-python-bf8c4ba1a055">If AI writes your code, why use Python? (232 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=PQU9o_5rHC4">Boris Cherny: How We Built Claude Code (Y Combinator)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
