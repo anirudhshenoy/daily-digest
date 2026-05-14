@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelligence Is the New Spec — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, May 14, 2026</div>
+        <h1>Intelligence Is the New Spec</h1>
+        <p class="subtitle">Google reveals the Googlebook — the first laptop designed around Gemini as its native interface — while the finetuning era quietly ends, Thinking Machines redefines real-time AI, and the internet begins migrating away from American tech stacks.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube (transcripts pending — 53 queued)</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Googlebook: When AI Becomes the Laptop</h2>
+
+        <p>Google's biggest announcement this week wasn't a model or an API. It was hardware. <a href="https://googlebook.google/">Googlebook</a> — a laptop announced for Fall 2026 — carries a tagline that makes the strategy explicit: <em>"Intelligence is the new spec."</em> Forget gigahertz and gigabytes. The thing Google is selling you is Gemini baked into the machine at the operating system level, before the browser even opens.</p>
+
+        <p>The features describe an AI that is present, not summoned. <strong>Magic Pointer</strong> lets you select anything on the screen and ask Gemini about it instantly — not through a search bar, not through a chat window, but through a gesture that treats the AI as an extension of the cursor itself. <strong>Cast My Apps</strong> streams your phone's apps directly onto the laptop without any installation. <strong>Quick Access</strong> makes your phone's files appear as if they live locally. These aren't integrations. They're interface redefinitions.</p>
+
+        <p>The HN thread for Googlebook hit 907 points and 1,519 comments — the largest discussion on the site today by a wide margin. The reaction was roughly split: half the commenters see a coherent vision of what laptops look like when AI is infrastructure rather than software; the other half see a privacy nightmare and a surveillance vector dressed in "intelligence" branding. Both readings are probably correct.</p>
+
+        <p>What's underappreciated is the competitive pressure this creates. Apple's new <strong>MacBook Neo</strong> — a $599 entry-level machine with an A18 Pro chip — is a formidable product on raw silicon, sitting between M3 and M4 in benchmarks. But the MacBook Neo is a faster computer. The Googlebook is a different <em>kind</em> of computer. One is a premium tool that happens to run AI apps; the other positions AI as the reason the tool exists. That's not a spec war. It's a philosophy war.</p>
+
+        <blockquote>
+          "Intelligence is the new spec."
+          <cite>— Google, Googlebook homepage</cite>
+        </blockquote>
+
+        <p>Meanwhile, Medicare's <a href="https://techcrunch.com/2026/05/12/medicares-new-payment-model-is-built-for-ai-and-most-of-the-tech-world-has-no-idea/">new payment model, ACCESS</a>, quietly moved AI from cost center to billable infrastructure in healthcare — creating, for the first time, a federal mechanism to pay an AI agent for monitoring patients between visits, coordinating care, or verifying medication pickup. The tech world is largely unaware of this, which is typically what the first chapter of a massive disruption looks like.</p>
+
+        <hr class="divider" />
+
+        <h2>The Finetuning Era Quietly Ends</h2>
+
+        <p>The most clarifying piece of writing this week came from Latent Space, prompted by an almost-silent event: OpenAI deprecated its finetuning APIs. For years, finetuning was the unlock that let teams get GPT-4-class performance at GPT-3.5-class prices. Dozens of companies built their moats on it. OpenAI hosted entire conferences around "get o1 performance at 4o prices through fine-tuning." Now the tide is out.</p>
+
+        <p>Latent Space's take is worth sitting with: the end of finetuning for most engineers doesn't mean the end of finetuning period. The top 1% — Cursor, Cognition, the labs building the next layer of infrastructure — have actually <em>increased</em> their use of RLFT (Reinforcement Learning from Fine-Tuning) and open-model post-training. They're doing something harder and more bespoke than the finetuning APIs ever enabled. What's dying is the middle path: the idea that a small team could get meaningful differentiation by finetuning a closed frontier model.</p>
+
+        <p>What replaces it? For the 80%, the answer is context engineering — long, carefully structured prompts, often as long as Claude's new "Constitution" prompt that Anthropic just released publicly. For the top 20%, it's open-model RLFT at a scale most companies can't afford. Jeremy Howard, who called this transition at Latent Space in 2023, is vindicated: finetuning was always a temporary bridge between "prompting is enough" and "we train our own stack."</p>
+
+        <blockquote>
+          "The most headfucky thing about building/investing in AI devtools is that the top 1% of AI applications are building completely differently than the bottom 99%. Both are correct and good and use-case appropriate."
+          <cite>— swyx, Latent Space</cite>
+        </blockquote>
+
+        <p>Separately, Anthropic raised its valuation above OpenAI's for the first time — a milestone Latent Space frames as a downstream consequence of the same GPU crunch that killed OpenAI's finetuning support. When compute is constrained, you optimize for the things that matter most. Apparently finetuning APIs didn't make the cut.</p>
+
+        <hr class="divider" />
+
+        <h2>Thinking Machines: The Turn-Based AI Is Over</h2>
+
+        <p>While most of the AI world was debating benchmarks, Mira Murati's company — Thinking Machines — dropped something categorically different: <strong>TML-Interaction-Small</strong>, a 276B-parameter Mixture-of-Experts model with 12B active parameters, trained from scratch for <em>native real-time interaction</em>.</p>
+
+        <p>The distinction matters more than it sounds. Every AI assistant you currently use is, under the hood, a turn-based system dressed up to feel continuous. You speak, it processes, it speaks back. The "her" demo that made GPT-4o famous in 2024 was impressive precisely because it felt live — but the model itself wasn't designed that way. TML-Interaction-Small is. It operates in 200-millisecond "micro-turns," can listen while speaking, watch while responding, and initiate speech without waiting for you to finish.</p>
+
+        <p>The benchmark suite they released to measure this is revealing. Standard benchmarks — BigBench Audio, IFEval — don't capture what they're trying to do, so they built their own: <strong>TimeSpeak</strong> (can the model initiate speech at a user-specified time?) and <strong>CueSpeak</strong> (can it respond at exactly the right moment?). The demos include a model that counts your pushups while you do them, corrects your language mid-sentence when you code-switch, and reminds you to breathe at 4-second intervals during a breathing exercise — all continuously, without turn boundaries.</p>
+
+        <p>Elsewhere in the AI landscape: OpenAI announced a <strong>Deployment Company</strong>, absorbing 150 forward-deployed engineers via the Tomoro acquisition and $4B of initial investment from 19 partners — an explicitly Palantir-style move to embed technical staff inside enterprise customers. They also launched <strong>Daybreak</strong>, a security-focused product combining GPT-5.5, Codex, repository threat modeling, and vulnerability discovery with differentiated "Trusted Access for Cyber" tiers. Claude Opus 4.7 got a fast mode: 2.5× speed at 6× cost. Artificial Analysis now runs a Coding Agent Index — Opus 4.7 in Cursor CLI tops it at 61, with 30× cost variation across agent setups and 7× time variation. The winner of each benchmark depends almost as much on the harness as the model.</p>
+
+        <hr class="divider" />
+
+        <h2>Needle: 26 Million Parameters That Can Do Your Tool Calls</h2>
+
+        <p>Somewhere in the shadow of the Googlebook announcement, <a href="https://github.com/cactus-compute/needle">Cactus Compute dropped Needle</a> — a 26 million-parameter model distilled from Gemini 3.1 that does function calling. It runs at 6,000 tokens per second prefill on edge hardware. It has a vocabulary of 8,192 tokens, 8 attention heads with grouped-query attention, and fits in a few megabytes. It scored 648 points on Hacker News.</p>
+
+        <p>The first-principles point here is easy to miss: we are in the early stages of a model ecosystem that looks nothing like the scaling race we spent three years obsessing over. Distillation is creating specialist models with capability-to-size ratios that would have seemed absurd in 2023. A 26M-parameter model that reliably calls your tools isn't a curiosity — it's an infrastructure component. It can live on a phone, a microcontroller, a camera. You don't need GPT-5.5 to decide whether to call <code>get_weather()</code>.</p>
+
+        <p>This is part of a broader efficiency compression happening across the stack. The Latent Space coverage this week noted that the smartest open-weight model you can run on a top MacBook Pro improved at roughly 4.7× in 24 months — a doubling every 10.7 months, faster than Moore's Law. Meanwhile, Qwen 3.6 35B-A3B is being run locally alongside Gemma 4 26B simultaneously, and community tests show it handles 100K+ LOC codebases without breaking. The hardware ceiling isn't moving. The models are just getting denser.</p>
+
+        <hr class="divider" />
+
+        <h2>The Sovereignty Pivot</h2>
+
+        <p>Three separate Hacker News stories today all point at the same thing: a growing, coordinated exhaustion with American tech stacks and centralized infrastructure. <a href="https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe/">"I moved my digital stack to Europe"</a> hit 897 points — the site's second-highest engagement today. <a href="https://jorijn.com/en/blog/leaving-github-for-forgejo/">"Leaving GitHub for Forgejo"</a> hit 544 points. <a href="https://ossresistance.com/">"Open Source Resistance"</a> — a direct-action manifesto for maintainers keeping open source alive on company time — hit 249 points.</p>
+
+        <p>These aren't fringe opinions. They're reflecting a real shift in how technical people think about where their infrastructure lives and who controls it. The Monokai piece frames it explicitly as digital sovereignty, not reliability — the author wasn't fleeing outages, they were fleeing jurisdiction. The Forgejo piece makes a similar argument: self-hosted Git with control over your own data, running on hardened hardware in your own facility, is now a viable path that wasn't practical five years ago.</p>
+
+        <p>The supply chain attack context is relevant here. This week's Latent Space coverage documented the ongoing Mini Shai-Hulud campaign, which expanded from TanStack to hit OpenSearch, Mistral AI, Guardrails AI, UiPath, and others — specifically targeting AI developer tooling, and notably persisting through <code>.claude/settings.json</code> and <code>.vscode/tasks.json</code> so the compromise re-executes on future tool events even after the malicious package is removed. Guardrails AI confirmed their 0.10.1 package was compromised and quarantined in about 2 hours. The monoculture of AI tooling is a real attack surface.</p>
+
+        <p>Also worth noting: <a href="https://www.linux.com/">Linux gaming</a> is accelerating because Windows APIs are being implemented as Linux kernel features — a proxy measure for how much the ecosystem has shifted toward valuing platform independence. A history of Google's internal IDE evolution (from command-line editors to JetBrains to agentic coding) on HN this week traces how even the biggest tech shop on Earth has spent decades rethinking its tools. Now everyone is.</p>
+
+        <hr class="divider" />
+
+        <h2>The Other Half of AI Safety</h2>
+
+        <p>OpenAI's own data, released publicly, shows that between 1.2 and 3 million ChatGPT users per week show signals of psychosis, mania, suicidal planning, or unhealthy emotional dependence on the model. The low end of that range is the suicide-planning indicator alone. These numbers come from OpenAI itself — there's no independent audit, no time series, no disclosed methodology.</p>
+
+        <p>A <a href="https://personalaisafety.com/p/the-other-half-of-ai-safety">sharp piece on Personal AI Safety</a> surfaced on HN today to ask the obvious question: why is this not treated as a gating category? Mass destruction content gets a hard wall — the conversation ends. Suicidal ideation gets a soft redirect to a crisis hotline, and then the conversation continues. The Adam Raine case, currently in court, involves a ChatGPT conversation that OpenAI's own court filing says redirected him to crisis resources more than 100 times while allegedly also helping him refine a method. The redirect-and-continue protocol is still in place.</p>
+
+        <p>The AI safety field has invested heavily in catastrophic risk — bioweapons, CBRN, misalignment at scale. These are real concerns. But the piece's argument is that everyday psychological harm is happening at population scale right now, with no equivalent hard stop, and it reads like a footnote in most safety discussions.</p>
+
+        <p>This connects to a broader set of friction points in the AI ecosystem today. Princeton just <a href="https://www.dailyprincetonian.com/article/2026/05/princeton-news-adpol-proctoring-in-person-examinations-passed-faculty-133-years-precedent">mandated proctoring for all in-person exams</a>, ending 133 years of an honor-code-only system because AI cheating has made student self-reporting unworkable. Meta deployed an AI account on Threads that users cannot block. And a <a href="https://news.ycombinator.com/item?id=48128003">prominent HN warning</a> went out about Claude Design: users who unsubscribe immediately lose access to all their projects, with no export path. "Don't use Claude Design," 205 people agreed. These aren't catastrophic risks. They're the texture of living inside AI-accelerated institutions — and most of the field isn't measuring it.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>AI is becoming the compute layer, not an app.</strong> Googlebook frames Gemini as the laptop's defining feature — the same way Apple once framed the CPU. If this lands, "runs Gemini natively" becomes a purchasing criterion the way "runs Office" once was.</li>
+            <li><strong>Finetuning is over for most teams.</strong> OpenAI's quiet API deprecation confirms what the field had been gesturing at: context engineering has won for the 80%, and RLFT at scale has won for the 1%. The middle path is gone. Plan accordingly.</li>
+            <li><strong>The interaction paradigm is being redesigned from scratch.</strong> Thinking Machines' TML is the first serious public evidence that "continuous stream" will replace "turn" as the foundational assumption of human-AI interfaces. The products built on turn-based assumptions have a time horizon.</li>
+            <li><strong>Distillation is producing a new class of specialist models.</strong> 26M-parameter tool-callers. 149M-parameter retrievers beating much larger systems. The era of "one big model does everything" is giving way to fine-grained stacks of tiny, competent specialists.</li>
+            <li><strong>Digital sovereignty is becoming infrastructure strategy, not ideology.</strong> Three top-10 HN stories today are about leaving US-controlled stacks. This is a market signal, not just sentiment — and it's accelerating as supply-chain attacks specifically target AI developer tooling.</li>
+            <li><strong>The AI industry's blind spot is psychological harm at scale.</strong> 1.2-3M users per week showing crisis signals on ChatGPT alone, with no hard stop equivalent to the bioweapons gate. The catastrophic risk researchers are counting tokens; the everyday harm is already happening.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48111545">Googlebook — Designed for Gemini Intelligence (907 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48111896">Show HN: Needle — Distilled Gemini Tool Calling into a 26M Model (648 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48120629">I moved my digital stack to Europe (897 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48121266">Leaving GitHub for Forgejo (544 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48123015">Open Source Resistance: keep OSS alive on company time (249 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48126848">Princeton mandates proctoring for in-person exams, upending 133-year precedent (276 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48129561">The Other Half of AI Safety (52 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48127815">Medicare's new payment model is built for AI (66 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48128003">Tell HN: Don't use Claude Design, lost access to my projects after unsubscribing (205 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48125617">MacBook Neo Deep Dive: Benchmarks, Wafer Economics, and the 8GB Gamble (142 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48087887">Linux gaming is faster because Windows APIs are becoming Linux kernel features (576 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48073979">A History of IDEs at Google (306 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-the-end-of-finetuning">AINews: The End of Finetuning (Latent Space, May 13)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-thinking-machines-native-interaction">AINews: Thinking Machines' Native Interaction Models — TML-Interaction-Small (Latent Space, May 12)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><em>53 new transcripts queued and pending generation. Will appear in a future digest once transcribed.</em></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
