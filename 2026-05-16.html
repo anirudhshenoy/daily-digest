@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theater and Transformation — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Saturday, May 16, 2026</div>
+        <h1>Theater and Transformation</h1>
+        <p class="subtitle">Amazon workers are faking AI tasks. Abridge is running through 100 million doctor visits. Both things are true — and the gap between them explains everything about where we are right now.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Steam Engine Is Still in the Building</h2>
+
+        <p>There is a famous footnote in the history of electrification that almost nobody talks about. When factories in the 1890s started replacing steam engines with electric motors, their productivity didn't improve — not for nearly thirty years. The reason: they swapped the power source but kept the layout. The electric motor sat where the steam engine sat, still turning the same central shaft, still powering the same line of belts, still running a floor designed around a technology that no longer existed. Productivity only exploded in the 1920s when someone finally asked the obvious question: what if we redesign the factory <em>around</em> the electricity?</p>
+
+        <p>This week offered two stories that are, at their core, the same story told from opposite angles. First: <a href="https://www.fastcompany.com/91541586/amazon-workers-pressured-to-up-ai-use-extraneous-tasks">Amazon workers are making up tasks</a> to hit AI usage quotas, according to Fast Company. Managers are being measured on whether their teams use AI tools. Teams are responding rationally: they use AI tools to do things that didn't need doing, just to generate the log entries. The metric is being hit. The work is not getting better. Second: Mitchell Hashimoto, who built HashiCorp and knows something about organizational behavior at scale, <a href="https://twitter.com/mitchellh/status/2055380239711457578">posted something blunt</a> that hit 924 points on Hacker News: "I strongly believe there are entire companies right now under heavy AI psychosis and it's impossible to have rational conversations about it with them."</p>
+
+        <p>Psychosis is a strong word. What he means is something more precise: organizations where AI has become the answer before anyone has articulated the question. The mandate comes down, the usage goes up, the metrics look great, and nobody has paused to ask whether the underlying work is actually improving. This is exactly the steam-engine-with-electricity problem. You can bolt a new technology onto an old workflow. The workflow does not become new. It just gets a new label.</p>
+
+        <blockquote>
+          "I can't name any specific people because they include personal friends I deeply respect, but I worry about how this plays out."
+          <cite>— Mitchell Hashimoto (@mitchellh), May 2026</cite>
+        </blockquote>
+
+        <p>The historical corrective is worth sitting with. The factories that won in the 1920s were not the ones that installed the most electric motors. They were the ones that redesigned their floors — that understood electricity as a design primitive, not a substitution. Individual machines got their own motors. The assembly line became possible because you could run the drill press without running the lathe. The gains were architectural, not incremental. Measuring token counts won't get you there. Measuring outcomes might.</p>
+
+        <hr class="divider" />
+
+        <h2>The Platform Reckoning: When the Meter Goes On</h2>
+
+        <p>While companies are busy mandating AI at the application level, a sharp fight is playing out at the infrastructure level — one that reveals how fragile the current developer ecosystem actually is. This week, Anthropic began metering programmatic usage of Claude in ways that hit third-party harnesses hard. Tools built on top of Claude's subscription tier — the kind of wrappers and open-source integrations that the developer community has been building for the past year — suddenly found their effective token budgets slashed by 70–90%. Theo's thread became the focal point: he argued that users of T3 Code were hit with dramatic rate-limit reductions despite integrating through what he understood to be the officially supported path.</p>
+
+        <p>Latent Space's <a href="https://www.latent.space/p/ainews-codex-rises-claude-meters">AINews dispatch</a> captured the broader signal clearly: Anthropic's pricing shift keeps favorable economics for its own first-party tools (Claude.ai, Claude Code) while metering everything else. Meanwhile, OpenAI pushed Codex further into everyday workflows — Codex is now in the ChatGPT mobile app, letting users start tasks on their phone and review outputs while an agent continues running on a Mac mini at home. For a large slice of AI engineers, the week's practical takeaway landed cold and fast: <em>subscription-backed harnesses are not stable platform primitives</em>. If you built on top of a flat-fee Claude subscription and assumed the economics would persist, this week was your correction.</p>
+
+        <p>The deeper story here isn't really about Anthropic or OpenAI. It's about what happens when two companies with different cost structures compete for the same developer wallet. OpenAI can subsidize generous Codex limits because its current fundraising gives it runway to burn. Anthropic is tightening margins as it reaches higher revenue. Both behaviors make sense inside their respective balance sheets. Neither makes sense as a foundation for developer tooling. The historical lesson from cloud computing is that the application layer that won was the one that treated the infrastructure as a commodity and built abstraction on top of it — not the one that bet on any single provider's pricing staying stable.</p>
+
+        <hr class="divider" />
+
+        <h2>What Real Transformation Looks Like</h2>
+
+        <p>While the AI theater plays out in corporate metrics and the platform wars heat up in pricing spreadsheets, there is a quieter set of stories this week about what it looks like when someone actually redesigns the floor.</p>
+
+        <p>Abridge — a company founded in 2018, years before ChatGPT existed, doing the unglamorous work of building trust in one of the highest-stakes workflows in medicine — <a href="https://www.latent.space/p/abridge">sat for an hour-long interview with Latent Space</a>. The numbers are remarkable: Abridge is on track to support 80 million or more patient-clinician conversations this year, across 250 large health systems, in 28 languages and 50-plus specialties. The product listens to doctor-patient visits, generates the clinical note, and saves clinicians an estimated 10 to 20 hours per week — hours that used to go to what the industry grimly calls "pajama time," meaning doctors completing documentation at 11pm. The company's $5.3 billion valuation reflects something real: it isn't a chat wrapper on a healthcare database. It's a clinical intelligence layer that spent years earning the trust of systems that simply cannot afford to be wrong.</p>
+
+        <p>The Abridge framing that keeps sticking is a line from Chai Asawa, one of the leaders they interviewed: <em>"AI slop is AI without context."</em> The reason Abridge works in a domain where most AI products fail is that it has unique, irreplaceable context — years of actual medical conversations, specialty-specific evaluation teams, deep EHR integrations — that no general-purpose model can replicate. This is the assembly line insight rephrased for software: the companies that win won't be the ones that plugged in the most capable model. They'll be the ones that redesigned their workflows to use context as a first-class resource.</p>
+
+        <blockquote>
+          "Every agent is a coding agent underneath. The EHR can be thought of as a filesystem for healthcare agents."
+          <cite>— Chai Asawa, Abridge, via Latent Space</cite>
+        </blockquote>
+
+        <p>Simultaneously, on the physical side: Figure's humanoid robot completed 24 continuous hours of fully autonomous package sorting this week — no teleoperator, onboard policy only, human-parity throughput — and kept the livestream running to prove it. You can argue about whether Figure specifically will win the embodied AI race. What's harder to argue is that the category is producing sustained autonomous operation at production-like uptime. That's a phase transition, not an incremental improvement.</p>
+
+        <p>And in open-source security: Metabase published a clear-eyed account of what it calls the <a href="https://www.metabase.com/blog/strip-mining-era-of-open-source-security">Strip Mining Era of OSS Security</a>. Starting in January, their inbound security reports went from 10 per month to 10 per week — and many of the new ones are legitimate. LLM-powered code scanners are going through public repositories the way industrial dredges go through riverbeds: fast, thorough, and indifferent to the disruption they cause. For OSS maintainers, the implication is uncomfortable: every publicly available codebase is now being continuously scanned by tools that are getting better every few months. The vulnerability surface that used to require a motivated human expert to map now requires only an API call and some tokens.</p>
+
+        <hr class="divider" />
+
+        <h2>Everything Is Conductor: The Convergence at the Agent Layer</h2>
+
+        <p>One of the more interesting structural observations of the week came from Latent Space's swyx, who noted that the IDE space is experiencing its own version of convergent evolution — what he called "Everything is Conductor." GitHub announced a technical preview of the GitHub Copilot App, a desktop environment for parallel AI agent workstreams and PR lifecycle management. VS Code shipped a new Agents window for multi-agent, multi-project workflows. Conductor, which pioneered this form factor, has been making the case for parallel agent workflows for months. All three products are now converging on essentially the same interface: multiple agents running simultaneously, humans reviewing rather than doing, tasks distributed across worktrees.</p>
+
+        <p>This convergence is worth pausing on. When multiple teams — in different companies, with different business models, working from different user research — independently arrive at the same product form factor, it usually means they've all discovered something real about how the work wants to be organized. The form factor here is: agents as background processes, humans as approval layers, parallelism as the primary efficiency lever. This is not a feature. It is an architectural shift in how software development is understood.</p>
+
+        <p>Eric Jang, in a <a href="https://www.dwarkesh.com/p/eric-jang">new Dwarkesh interview</a> framed in terms of rebuilding AlphaGo from scratch, offered a useful first-principles lens. AlphaGo's key insight — the reason it worked when naive reinforcement learning kept failing — was that Monte Carlo Tree Search solves the credit assignment problem that makes policy gradient RL so difficult. When you have a good search procedure, every suggested move is strictly better than what the network would have produced alone. You never have to figure out which of 100,000 tokens in a trajectory caused the win or the loss. The training signal is clean. Jang's argument is that we are still, in some ways, looking for the equivalent structure for language agents — a way to generate training signal that is as clean and unambiguous as AlphaGo's MCTS was for Go. The agent IDE convergence may be part of how we find it: humans reviewing at the task level, not the token level, creating approval signals that are actually meaningful.</p>
+
+        <hr class="divider" />
+
+        <h2>The Surveillance Ratchet and the Forecasting Question</h2>
+
+        <p>Two stories this week that don't look like they belong together: a person in Texas who <a href="https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/">removed the modem and GPS from their 2024 RAV4 hybrid</a> to prevent Toyota from sending telemetry home (1,050 points on HN, one of the highest scores of the week), and the U.S. Department of Justice <a href="https://macdailynews.com/2026/05/15/u-s-doj-demands-apple-and-google-unmask-over-100000-users-of-popular-car-tinkering-app-in-emissions-crackdown/">demanding that Apple and Google hand over the personal data of over 100,000 users</a> who downloaded a car-tuning app as part of an emissions investigation.</p>
+
+        <p>They belong together. The first is a citizen trying to opt out of vehicle surveillance. The second is the government using app store data to pull back in anyone who tried to modify their car's behavior. The ratchet tightens from both ends simultaneously: manufacturers collect more data, regulators use app store records as subpoenas-in-waiting. The RAV4 post resonated because it made something visceral that most people sense abstractly — that the car you paid for is not entirely yours, and opting out requires genuine technical sophistication. The DOJ story shows what happens when people try to assert control over their machines and leave a digital trail in the process.</p>
+
+        <p>Finally, the week's most intellectually satisfying piece: Scott Alexander at Astral Codex Ten published <a href="https://www.astralcodexten.com/p/the-sigmoids-wont-save-you">"The Sigmoids Won't Save You,"</a> a systematic dismantling of the most common AI-dismissal argument. The argument goes: all exponentials eventually become sigmoids, AI will plateau, therefore no need to take the scary growth curves seriously. Alexander's response is essentially a Hall of Shame — case after case where forecasters said "it'll flatten soon" about solar deployment, global birthrates, AI benchmark performance, and were wrong every single time. The sigmoid argument is technically unfalsifiable and therefore immune to evidence, which is exactly why it's so rhetorically satisfying and so analytically useless.</p>
+
+        <p>The revealed-preference version of this argument arrived the same week: Tim Abbott, founder of Zulip, announced that he is <a href="https://blog.zulip.com/2026/05/15/announcing-zulip-foundation/">stepping back from full-time leadership to join Anthropic</a>, along with three senior team members. He's also donating the company to a newly created, independent nonprofit Zulip Foundation, in the governance tradition of Mozilla, Signal, and Wikipedia. Whatever you think about AI timelines, this is a person who built and ran a beloved open-source project for a decade, looked at the current moment, and decided that his best contribution was to go work on AI. That is a data point. It is not nothing.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Measuring usage is not measuring value.</strong> Amazon's AI theater and Mitchell Hashimoto's "psychosis" observation point at the same failure: organizations that set targets for AI adoption without defining what AI-driven improvement looks like will get the former and miss the latter. The productivity gains from electrification came from architectural redesign, not from counting how many motors were installed.</li>
+            <li><strong>Platform risk is real and it arrived fast.</strong> Developers who built on subscription-tier Claude pricing discovered this week that the economics were not a promise. BYOK (bring your own key) and multi-provider abstraction layers are now looking less like nice-to-haves and more like foundational engineering hygiene.</li>
+            <li><strong>The companies that redesigned the floor are winning.</strong> Abridge spent years building context and trust before LLMs were available to use it. Figure spent years on embodied AI before reaching production uptime. The lesson isn't "move fast." It's "know what you're actually building and be willing to take the time to build it right."</li>
+            <li><strong>Agent-first IDE convergence is a signal, not a coincidence.</strong> When GitHub, Microsoft, and Conductor independently arrive at the same form factor — parallel agents, human review layer, task-level approval — that's the market finding the right organizational structure for AI-augmented software development. Pay attention to what they've converged on, not which of them wins.</li>
+            <li><strong>The sigmoid argument will be wrong until it isn't, and nobody knows when that is.</strong> Scott Alexander's piece is the most useful framing available for thinking about AI forecasting. The people who said "it'll plateau" about solar in 2010 were not stupid. They were applying a historically reasonable heuristic to a situation where it didn't apply. The correct posture is to take the growth curves seriously until there is specific, mechanistic evidence for a ceiling — not to assume the ceiling exists because ceilings usually do.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48148337">Amazon workers pressured to up AI use are making up tasks (324 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48153379">I believe there are entire companies right now under AI psychosis (924 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48147021">The sigmoids won't save you — Astral Codex Ten (164 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48152168">The Zulip Foundation — founder joins Anthropic (235 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48147339">Welcome to the Strip Mining Era of OSS Security (106 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48138136">Removing the modem and GPS from my 2024 RAV4 hybrid (1,050 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48151383">U.S. DOJ demands Apple and Google unmask 100k+ users of car-tinkering app (382 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/abridge">AI-Native Healthcare: 100M Doctor Visits, 10–20 Hours Saved — Latent Space</a></li>
+          <li><a href="https://www.latent.space/p/ainews-everything-is-conductor">AINews: Everything Is Conductor — Latent Space</a></li>
+          <li><a href="https://www.latent.space/p/ainews-codex-rises-claude-meters">AINews: Codex Rises, Claude Meters Programmatic Usage — Latent Space</a></li>
+          <li><a href="https://www.dwarkesh.com/p/eric-jang">Eric Jang — Building AlphaGo from Scratch — Dwarkesh Patel</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
