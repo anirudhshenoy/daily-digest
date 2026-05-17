@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Copernicus Problem — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Sunday, May 17, 2026</div>
+        <h1>The Copernicus Problem</h1>
+        <p class="subtitle">Why AI will solve hacking before it solves science — and what's actually breaking inside the training runs that matter.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Why AI Can't Verify Science (Yet)</h2>
+
+        <p>A provocative post from Dwarkesh Patel landed this morning that deserves to be read slowly. The claim: RLVR — reinforcement learning from verifiable rewards — is almost certainly going to work poorly for scientific breakthroughs, and the history of science explains exactly why.</p>
+
+        <p>The argument starts with a deceptively simple observation. AI is crushing every domain where verification is fast and unambiguous: coding, math, chess. You run the code, the test passes or fails. You check the proof. You see who wins the game. RLVR works because the loop closes quickly. But in science, the verification loop can take <em>decades</em>. Sometimes centuries.</p>
+
+        <p>Dwarkesh's key example is Copernicus. When he published heliocentrism in 1543, it wasn't even a better model. Ptolemy's geocentric model — with its accumulated millennia of correcting epicycles — made more accurate predictions. What nobody knew in 1543 was that Copernicus's framework, married to Kepler's laws in 1619 and Newton's gravity in 1686, would eventually produce something far more powerful. But you could not have RL'd your way to that conclusion. The reward signal was pointing in the wrong direction.</p>
+
+        <blockquote>
+          "The verification loop for theories can be on the order of decades and centuries, and even then experiments do not definitively rule out alternatives."
+          <cite>— Dwarkesh Patel, <em>RLVR might be disproportionately bad at science</em></cite>
+        </blockquote>
+
+        <p>The Neptune / Vulcan asymmetry makes this even sharper. When Uranus's orbit deviated from Newtonian predictions, astronomers predicted an unknown planet — and found Neptune almost exactly where calculated. Textbook success. But when Mercury's orbit deviated from Newtonian predictions, astronomers predicted an unknown planet — "Vulcan" — and never found it. The discrepancy was resolved in 1915 by General Relativity. Both cases started from the same anomaly. Only one required discarding Newton entirely. An RL loop trained on past successes had no way to know in advance which playbook to run.</p>
+
+        <p>The downstream implication is uncomfortable: true scientific breakthroughs require something like institutional stubbornness. Prout's hypothesis about atomic weights — that all elements have integer atomic weights — was technically wrong for decades until the concept of isotopes emerged to vindicate the underlying intuition. Multiple generations of researchers had to maintain that dormant research agenda without verification, against accumulating counterevidence, for nearly a century. That's not a task you can train an RL agent to do. The reward signal would have killed it by year three.</p>
+
+        <p>Dwarkesh's companion post — <em>The Mistake of Conflating Intelligence and Power</em> — adds another layer. The common assumption is that superintelligent AI means supremely powerful AI. But intelligence (the ability to build on abstract concepts) and power (the ability to achieve goals across domains) come apart in the real world. The physicists are not running the world. George III went mad halfway through his reign and Britain still defeated Napoleon. Powerful entities are powerful because of coordination and legitimacy, not raw cognitive horsepower. This means that even a society of superintelligent AI scientists, each a Copernicus-level genius, wouldn't automatically translate into control — any more than having the best chess engine means winning the World Cup. The real transformation, Dwarkesh argues, will be more mundane: AI-empowered firms and countries outcompeting everyone else through normal capitalist dynamics, not a single AI outthinking the world.</p>
+
+        <hr class="divider" />
+
+        <h2>Inside the Training Runs: Where Things Actually Break</h2>
+
+        <p>If the first Dwarkesh post was about what AI can't learn from the world, his second is about the surprisingly fragile machinery that produces AI in the first place. Published alongside a set of flashcards for retention, it's a technical tour through the ways pretraining runs fail — and the reading is humbling.</p>
+
+        <p>Two categories of failure dominate: <strong>breaking causality</strong> and <strong>adding bias</strong>.</p>
+
+        <p>On causality: when training a mixture-of-experts model, you face a routing dilemma. You can route tokens to their preferred experts (token choice), but this creates wildly unbalanced expert utilization. Or you can route experts to their preferred tokens (expert choice), enforcing balance — but only by allowing each token's expert assignment to depend on tokens that haven't appeared yet. This breaks the causal assumption that every model implicitly relies on: the model sees information during training that it won't have at inference time. Rumor has it this is the explanation for why Llama 4 underperformed expectations. A training regime that looked efficient on paper was quietly poisoning the distribution.</p>
+
+        <p>On bias: the GPT-4 training story is remarkable. A silent bug in how gradients were being accumulated in FP16 meant that once the running total crossed 1,024, adding 1 would round back down to 1,024. Ten thousand gradient additions might only register as a thousand. Bias is catastrophically worse than variance in optimization — variance averages out across batches, but bias compounds and propagates. The bug had to have been excruciatingly hard to find.</p>
+
+        <blockquote>
+          "At a high level, breaking causality and adding bias seem to be key culprits. Training failures appear to be an open-ended problem at each new level of scale — new bespoke issues will keep emerging."
+          <cite>— Dwarkesh Patel, <em>Notes on pretraining parallelisms and failed training runs</em></cite>
+        </blockquote>
+
+        <p>The section on data parallelism is equally instructive. FSDP — Fully Sharded Data Parallel — is the standard approach because compute and communication can overlap naturally: you all-gather the next layer's weights while still computing the current one. But as you add GPUs past a crossover point, communication time stops scaling while compute time shrinks, and your model utilization craters. The fix is to add pipeline parallelism — but that introduces "bubbles" (idle stages at the start and end of each batch) and imposes architectural constraints that slow research iteration. Every solution creates the next problem.</p>
+
+        <p>This technical humility matters because it connects to a larger question: will AI eventually automate kernel engineering and model training itself? The person Dwarkesh spoke with was bearish. Nvidia's best engineers took a long time to optimize Blackwell. That's evidence the problem isn't as mechanically verifiable as it appears — even if you can measure throughput, the design space is too irregular for naive RL to navigate efficiently.</p>
+
+        <p>Context for the infrastructure side: <strong>Cerebras went public this week</strong>, with shares landing at $280 and a $60B market cap. The Latent Space AINews covers the arc well — this is a company that spent a decade building a wafer-scale chip that most investors found implausible, only to emerge into a market that has dramatically repriced around inference economics rather than training prestige. The IPO matters not as a capital event but as a signal that non-NVIDIA architectural bets can survive long enough for the world to catch up. Cerebras CFO Bob Komin said on CNBC that the company is currently serving <em>trillion-parameter internal OpenAI models</em>, including OpenAI 5.4 and 5.5. Whether or not that's exactly as it sounds, it was enough for the market.</p>
+
+        <p>Separately: Elon Musk's argument to Dwarkesh that <em>space will be the cheapest place to put AI within 36 months</em> looks a little different after the Cerebras IPO. The logic — solar panels are 5x more effective in space, no batteries needed for day/night cycles, regulatory friction makes large-scale terrestrial deployment near-impossible — has a hardware-contrarian flavor that echoes Cerebras's own story. Both bets require being willing to be wrong for a long time before being obviously right.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Broke the Hacker Game</h2>
+
+        <p>The most viral AI story on Hacker News today isn't about a new model release. It's an obituary for competitive cybersecurity.</p>
+
+        <p>Kabir, a top-ranked CTF (Capture the Flag) competitor who played with international elite teams, <a href="https://kabir.au/blog/the-ctf-scene-is-dead">argues that frontier AI has hollowed out the open CTF format</a>. The inflection point was Claude Opus 4.5, which made most medium-difficulty challenges agent-solvable. You could build a simple orchestrator using the CTFd API, spin up a Claude instance per challenge, and come back an hour later to find the easy and medium work done. GPT-5.5 Pro finished the job — it can one-shot Insane-difficulty active heap exploitation challenges on HackTheBox. The kind of thing that would take an elite human competitor hours of careful work.</p>
+
+        <p>The result: open CTFs are now pay-to-win. More tokens equals faster flag capture. The scoreboard measures your budget and orchestration skill more than your security knowledge. Teams that refuse to use AI aren't playing a more principled game — they're just playing a slower one.</p>
+
+        <blockquote>
+          "Your performance in a CTF no longer defines your skill the way it used to. Recruiting security practitioners by CTF performance is becoming less meaningful. It is not even a particularly good measure of AI skill."
+          <cite>— Kabir, <em>The CTF scene is dead</em></cite>
+        </blockquote>
+
+        <p>This is the Copernicus inversion made concrete. Science is hard to verify, so RLVR stalls. Security challenges <em>are</em> verifiable — you either captured the flag or you didn't. So AI dominates. The very properties that made CTF a beautiful meritocracy (objectively correct solutions, tight feedback loops) are exactly what makes it vulnerable to the current generation of frontier models.</p>
+
+        <p>What comes next for security talent evaluation is genuinely unclear. The author suggests private, invite-only competitions with strict tooling restrictions, or shifting to assessments that measure design and judgment rather than exploitation mechanics. Neither solves the underlying problem: the hardest practical security problems are now at least partly automate-able, and the boundary keeps moving.</p>
+
+        <p>On a related note, <strong>DeepSeek-V4-Flash makes LLM steering interesting again</strong>. Steering — the technique of extracting a concept vector from a model's internal activations and directly manipulating it at inference — has been a research curiosity since Anthropic's Golden Gate Claude experiment. The barrier was always that steering requires a local model you can reach inside. Now that DeepSeek-V4-Flash is good enough to serve as a practical local model for agentic coding, the open-source project DwarfStar 4 has baked steering in as a first-class feature. This is early-stage — currently just the "verbosity" example you can replicate with prompting — but the infrastructure is there. Steering is how you get a "smartness dial" or a "succinctness slider" without touching training at all. The CTF community might find it ironic that models are now being operated on from the inside out.</p>
+
+        <hr class="divider" />
+
+        <h2>The Speed Layer: Inference Improvements That Compound</h2>
+
+        <p>Three separate inference breakthroughs surfaced on Hacker News today, none of them front-page news but all worth tracking.</p>
+
+        <p><strong>Orthrus-Qwen3</strong> claims up to 7.8× more tokens per forward pass on Qwen3, with an identical output distribution. Not faster with some quality degradation — identical output, dramatically faster. The approach is "dual-view diffusion decoding," a lossless speculative execution strategy. 220 points, 43 comments; the skepticism in the thread is healthy but the claims have been reproducible so far.</p>
+
+        <p><strong>δ-mem</strong> is a new approach to efficient online memory for large language models. The core insight: instead of maintaining a fixed-size KV cache or doing expensive retrieval, δ-mem stores and retrieves a compressed delta representation of what's changed in context. The efficiency gains matter most for long-running agentic workloads where context accumulates continuously over hours rather than sessions.</p>
+
+        <p><strong>SANA-WM</strong>, from NVIDIA Labs, is an open-source world model that generates one minute of camera-controlled 720p video from a 2.6 billion parameter model. This is 310 points and 128 comments — the highest-scoring AI model release of the day — because the combination of resolution, duration, and model size is genuinely novel. Previous approaches either needed much larger models or produced much shorter, lower-resolution output. The camera control is the part that's most practically useful for simulation and agent training environments.</p>
+
+        <p>Taken together, these three stories share a pattern: inference is getting cheaper faster than training is getting cheaper. The model you trained last year runs materially faster and serves materially more users per dollar than it did when it shipped. This is the "Inference Inflection" thesis that Latent Space has been tracking — and Cerebras's IPO is partly a bet that this trend continues long enough to generate sustainable hardware-level returns.</p>
+
+        <p>One policy footnote: <strong>OpenAI and the Government of Malta</strong> announced a partnership to roll out ChatGPT Plus to all Maltese citizens. It's easy to read this as a curiosity, but it's actually a meaningful data point in the race to make frontier AI a state-level public good. Malta has ~530,000 people — a manageable size for a pilot that generates real usage data on what "universal access to frontier AI" looks like in practice. The EU's general nervousness about American AI providers has not, apparently, extended to blocking this arrangement.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Science is the last domain AI will conquer.</strong> RLVR dominates when verification is fast. But real scientific progress — the kind that rewrites frameworks, not just fills them in — has verification loops measured in decades. Don't expect AI to autonomously discover the next General Relativity. Expect it to be an extraordinary research assistant that speeds up the verifiable parts.</li>
+            <li><strong>Training fragility is a deeper constraint than it appears.</strong> The specific failure modes — causality-breaking expert routing, FP16 gradient bias at scale — are not random bugs. They're structural properties of how large models are trained. Each new scale reveals a new variant. The people who know how to diagnose these failures are rare, and that knowledge doesn't fully transfer to AI yet.</li>
+            <li><strong>The Cerebras lesson: hardware contrarianism has a 10-year time horizon.</strong> The company spent a decade being wrong-for-good-reasons before the market rewarded them. In AI infrastructure, the bet that matters is not "is this architecture better right now" but "will the workload evolve toward this architecture's strengths." Inference-heavy, latency-sensitive serving of trillion-parameter models is exactly that evolution.</li>
+            <li><strong>Security's meritocracy just collapsed.</strong> CTF scores, which have been the primary talent signal in competitive security, are now a proxy for AI budget and orchestration skill. The field needs new evaluation frameworks. The same dynamic will hit other "verifiable" skill domains on an accelerating schedule.</li>
+            <li><strong>Inference efficiency is compounding quietly.</strong> 7.8× on lossless token generation, better KV cache strategies, smaller world models at higher resolution — none of these were the story this week. But they're the mechanism by which AI capability will land in more places faster than the training-centric discourse suggests.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48157559">Frontier AI has broken the open CTF format (346 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48159445">SANA-WM: open-source 2.6B world model for 1-min 720p video (310 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48154865">Orthrus-Qwen3: up to 7.8× tokens/forward, identical output distribution (220 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48160807">DeepSeek-V4-Flash means LLM steering is interesting again (216 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48158506">δ-mem: Efficient Online Memory for Large Language Models (198 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48163392">OpenAI and Malta partner to roll out ChatGPT Plus to all citizens (102 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.dwarkesh.com/p/rlvr-might-be-disproportionately">RLVR might be disproportionately bad at science (Dwarkesh Patel)</a></li>
+          <li><a href="https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms">Notes on pretraining parallelisms and failed training runs (Dwarkesh Patel)</a></li>
+          <li><a href="https://www.dwarkesh.com/p/the-mistake-of-conflating-intelligence">The mistake of conflating intelligence and power (Dwarkesh Patel)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-cerebras-60b-ipo-slowly-then">AINews: Cerebras' $60B IPO — Slowly, then All at Once (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=BYXbuik3dgA">Elon Musk: In 36 Months, Space Will Be the Cheapest Place for AI (Dwarkesh Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
