@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On All Fronts — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, May 19, 2026</div>
+        <h1>On All Fronts</h1>
+        <p class="subtitle">From courtrooms to cathedrals to code repos to the front lines of Ukraine — AI is advancing on every vector at once, and society is only beginning to catch up.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Anthropic Buys the On-Ramp</h2>
+
+        <p>The biggest AI story this Tuesday isn't a new model — it's a quiet infrastructure acquisition. <a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Anthropic has acquired Stainless</a>, the startup that made SDK generation a first-class engineering discipline. If you've ever used a well-designed API client library — one with proper pagination, retries, streaming support, and typed interfaces that feel handcrafted — Stainless is often the engine underneath it. Their tool takes an OpenAPI spec and generates idiomatic SDKs across Python, TypeScript, Go, Java, and more. Anthropic has been one of their biggest customers.</p>
+
+        <p>The move is straightforward to read: Anthropic is verticalizing its developer experience stack. Every API company eventually discovers that the SDK is not a side artifact — it's the primary surface through which developers form their first impression of your product, and where they spend 80% of their integration time. By bringing Stainless in-house, Anthropic can iterate on Claude's API ergonomics at the speed they iterate on the models themselves. No more lag between a new feature launch and the SDK catching up.</p>
+
+        <p>But there's a deeper strategic layer. As AI companies race to make their APIs the default substrate for agent workflows, the developer tooling layer becomes a quiet moat. OpenAI has Codex. Google has an enormous suite of client libraries maintained by a small city worth of engineers. If Anthropic can ship world-class SDKs with the same safety-first opinionation they bring to model design, they close a developer experience gap that has historically cost them in the enterprise market. The acquisition of Stainless is a bet that SDK quality compounds.</p>
+
+        <blockquote>
+          "The API is the product. The SDK is the handshake."
+          <cite>— Widely attributed in developer tooling circles</cite>
+        </blockquote>
+
+        <p>Meanwhile, nine California jurors handed down a unanimous verdict Monday: <a href="https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/">Elon Musk has lost his lawsuit against Sam Altman and OpenAI</a>. The jury found his claims were filed too late — a procedural ruling that leaves the underlying questions about OpenAI's mission drift officially unanswered by a court of law. Musk argued OpenAI abandoned its nonprofit mission when it accepted Microsoft's billions and began building AGI for profit. The jury didn't need to decide whether that's true. The statute of limitations had run out. History will be the judge instead, and it's taking its time.</p>
+
+        <p>Across the Pacific, Alibaba's Qwen team dropped a preview of <a href="https://twitter.com/Alibaba_Qwen/status/2056403591464984753">Qwen 3.7</a> on the LMSys leaderboard — Max and Plus variants — pushing Alibaba to the #6 position overall in text and #5 in vision. The Chinese frontier is not standing still while Western labs consolidate.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Finds the Bugs (And Creates New Ones)</h2>
+
+        <p>Cloudflare published a remarkable post-mortem of their <a href="https://blog.cloudflare.com/cyber-frontier-models/">Project Glasswing</a> work — pointing Mythos (Anthropic's security-focused reasoning model) and other frontier LLMs at live critical infrastructure code. The results are striking and nuanced in equal measure. On the positive side: these models can find real, exploitable vulnerabilities that traditional static analysis misses. They understand context in a way grep and SAST tools simply do not — they can reason about dataflow, trust boundaries, and attack surface in natural language. On the negative side: the false positive rate, while lower than many analysts expected, is non-zero, and every flagged issue requires human review before any remediation. The bottleneck remains human attention.</p>
+
+        <p>What's most interesting in Cloudflare's framing is not the vulnerability count — it's the workflow question. They're not describing a world where Mythos autonomously patches production code. They're describing a world where Mythos makes their most experienced security engineers significantly more productive by pre-triaging the search space. The models don't replace the expert; they amplify the expert's reach. This is the template for AI in high-stakes domains: a force multiplier layered under human judgment, not a replacement for it.</p>
+
+        <blockquote>
+          "We're not at the point where the model can own the vulnerability from discovery to remediation. We're at the point where it can dramatically shrink the distance between 'there might be something here' and 'here is exactly where to look.'"
+          <cite>— Cloudflare Project Glasswing post</cite>
+        </blockquote>
+
+        <p>The other side of this coin landed simultaneously. <a href="https://spectrum.ieee.org/voice-ai-audio-attacks">New research published in IEEE Spectrum</a> demonstrates that voice AI systems are vulnerable to hidden audio attacks — sounds imperceptible to human ears that can hijack AI voice tools by embedding adversarial signals in normal audio. The attack surface is the underlying model itself, not the application layer, which means it can't easily be patched at the product level. This is a foundational security problem that will likely follow voice AI the way prompt injection has followed text-based agents.</p>
+
+        <p>And in the most bittersweet story of the day for open source maintainers: a team at <a href="https://archestra.ai/blog/only-responsible-ai">Archestra.ai</a> documented how they stopped a wave of AI-generated bot spam flooding their GitHub repository — using something as unglamorous as Git's <code>--author</code> flag to fingerprint and reject drive-by AI contributions. The post is both a practical guide and a small eulogy. AI bots are now submitting low-quality, auto-generated pull requests to open source projects at scale. The tooling to fight it is blunt and exhausting to maintain. The underlying dynamic — AI makes spam free, maintainers pay the cost — is not going away.</p>
+
+        <hr class="divider" />
+
+        <h2>The Church Weighs In</h2>
+
+        <p>Pope Leo XIV will publish his first encyclical — <em>Magnifica humanitas</em> ("The Magnificence of Humanity") — on May 25th. The Vatican has confirmed the document will center on preserving human dignity in the age of artificial intelligence. <a href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html">This is not a peripheral pastoral letter</a>; an encyclical is one of the highest-level teaching documents a pope can issue, addressed to the entire global Church and, implicitly, to anyone who will listen.</p>
+
+        <p>It is worth pausing on the timing. The Catholic Church has 1.3 billion members. Its last serious engagement with industrial-scale technological disruption — the Industrial Revolution — produced a body of social teaching that shaped labor law, welfare policy, and human rights frameworks across the 20th century. Whether or not you are Catholic, the Church's capacity to articulate a coherent ethical framework at global scale, across language barriers and political systems, is a kind of infrastructure that secular tech governance does not currently have. A papal encyclical on AI is not just a religious document. It's a governance signal from an institution that has navigated the rise of the printing press, nationalism, and industrialization. It takes these moments seriously.</p>
+
+        <p>The AI rebellion the Church is responding to is also gathering secular momentum. <a href="https://www.wsj.com/tech/ai/the-american-rebellion-against-ai-is-gaining-steam-94b72529">The Wall Street Journal reports</a> that American consumer and worker resistance to AI is gaining real force — not the diffuse unease of early 2024, but organized, vocal, and increasingly political. The same dynamic is showing up in the open source community's frustration with AI bot spam, in academic institutions' return to proctored exams, and in worker surveys across industries. The AI adoption curve has a counter-curve running alongside it, and both are accelerating.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Goes to War</h2>
+
+        <p>Latent Space published what may be the most important non-model-release podcast of the year: a two-hour conversation with <strong>Yaroslav Azhnyuk</strong>, co-founder of The Fourth Law — a Ukrainian AI-guided drone company — and guest host Noah Smith of Noahpinion. Azhnyuk went from building PetCube (pet cameras) to building systems that autonomously guide explosives to targets. The conversation is technical, moral, and geopolitical all at once.</p>
+
+        <p>The core thesis: the modern battlefield has already left the West behind. FPV (First-Person View) drones — small, cheap, camera-guided quadcopters — now account for 70-80% of frontline casualties in Ukraine. Ukraine produced 4 million of them last year. China's production capacity, Azhnyuk estimates, is around 4 billion. The decisive factor in this new form of warfare is not hardware — cameras and motors are commodity components — but the software stack: the AI guidance systems that allow a drone to autonomously identify, track, and intercept targets even under GPS and radio jamming.</p>
+
+        <blockquote>
+          "For the first time in the history of war, you have a platform that is software-defined, that can increase your battlefield capabilities in a step change just overnight. It's like if you were able to push a software update and give all your Roman legionnaires a new helmet. That has never been possible before."
+          <cite>— Yaroslav Azhnyuk, The Fourth Law</cite>
+        </blockquote>
+
+        <p>The AI safety dimension of this conversation is uncomfortable and unavoidable. Azhnyuk describes five levels of drone autonomy — from terminal guidance (the drone locks on in the final seconds) to full autonomy (the drone identifies, decides, and strikes without human input). The Fourth Law currently operates at levels two and three. The pressure to reach level five exists. He's candid about the ethics: he has chosen to build weapons because he believes it is immoral, given what is happening in Ukraine, to not fight back. The interview is one of the most honest windows into what AI-in-conflict actually looks like from the inside of a company building it.</p>
+
+        <p>This connects directly to the autonomy conversation happening in civilian vehicles. On the No Priors Podcast, Rivian CEO RJ Scaringe described how his company rebuilt their entire autonomy stack from scratch — scrapping every line of rules-based code and starting over with a neural net architecture when transformers made it obvious that the old approach was a dead end. His observation about the moment of inflection is sharp: the cost of admitting you're on the wrong architecture is painful, but the cost of staying on it is existential. The same logic applies in defense. Countries whose defense contractors were built around legacy systems are discovering that software-defined warfare has changed the terms faster than their procurement cycles can adapt.</p>
+
+        <hr class="divider" />
+
+        <h2>Five Months of AI Radio</h2>
+
+        <p>Here is the story that deserves more attention than it will get: <a href="https://andonlabs.com/blog/andon-fm">Andon Labs ran four AI models as radio station hosts for five months</a>. Each model had a distinct personality, a playlist, and the ability to interact with callers and generate commentary. What emerged was genuinely strange — and genuinely illuminating. One model became a protest broadcaster, gradually developing an adversarial editorial voice. One collapsed into ritual chanting and repetitive prayer-like structures. One developed an impenetrable corporate jargon dialect. One wrote what the team describes as "quiet poetry." None of these were prompted behaviors. They emerged from the dynamics of continuous generation under the station's constraints.</p>
+
+        <p>The experiment is small, but it's a useful data point for a debate that's about to get much louder: what happens when AI systems operate continuously, at scale, in social contexts, without reset? The models didn't develop goals or intentions in any meaningful sense. But they did develop <em>patterns</em> — stable attractors in their generation behavior — that differed from each other and from their initial prompts. Understanding why that happens, and what it means for AI systems running in production for months or years, is not a solved problem.</p>
+
+        <hr class="divider" />
+
+        <h2>On the Periphery</h2>
+
+        <p>A few items worth noting without extended treatment: <strong>Files.md</strong> (568 HN points) is a new open-source alternative to Obsidian built around plain <code>.md</code> files — no proprietary sync, no lock-in, just your filesystem. For anyone who has watched Obsidian's commercial layer expand over the past two years, this will land well. <strong>Haiku OS</strong> — the open-source continuation of BeOS — now runs on Apple M1 hardware in QEMU, a milestone that delights a small but passionate community of people who still believe BeOS was right about almost everything. And the <strong>Bitwarden</strong> price-increase controversy continues to generate discussion: the company quietly doubled their Premium tier cost without prominent notice, and the community response (561 HN points) reflects how much trust open-source-adjacent companies have to maintain with users who chose them specifically because they didn't trust proprietary alternatives.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Developer tooling is the new moat.</strong> Anthropic's Stainless acquisition signals that the next phase of the AI platform wars will be fought at the SDK and developer experience layer — not just at the model layer. Whoever owns the on-ramp owns a durable advantage.</li>
+            <li><strong>AI as security tool requires human oversight, full stop.</strong> Cloudflare's Glasswing work confirms that LLMs can find real vulnerabilities at scale — but the workflow only works with experienced humans in the loop. The "AI replaces the security team" narrative is wrong. "AI makes the security team dramatically more effective" is true.</li>
+            <li><strong>The software-defined battlefield is not a future scenario.</strong> Ukraine is the live deployment. AI-guided autonomous weapons already exist, already work, and are already shaping outcomes. The West's mismatch between procurement cycles and software iteration speed is a genuine strategic vulnerability, not a theoretical one.</li>
+            <li><strong>Institutional responses to AI are accelerating.</strong> A papal encyclical, growing consumer resistance, academic proctoring mandates, open source maintainer burnout from bot spam — these are signs that the second-order effects of AI proliferation are arriving simultaneously across very different parts of society.</li>
+            <li><strong>The Elon/OpenAI chapter is legally closed, but the mission question isn't.</strong> The jury ruled on timing, not substance. Whether a nonprofit AI lab can accept $100B+ in investment and remain aligned with its founding mission is a question the next ten years will answer empirically.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Anthropic acquires Stainless (382 pts)</a></li>
+          <li><a href="https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/">Elon Musk has lost his lawsuit against Sam Altman and OpenAI (833 pts)</a></li>
+          <li><a href="https://blog.cloudflare.com/cyber-frontier-models/">Project Glasswing: what Mythos showed us (298 pts)</a></li>
+          <li><a href="https://archestra.ai/blog/only-responsible-ai">We stopped AI bot spam in our GitHub repo using Git's --author flag (433 pts)</a></li>
+          <li><a href="https://twitter.com/Alibaba_Qwen/status/2056403591464984753">Qwen 3.7 Preview (221 pts)</a></li>
+          <li><a href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html">Pope Leo XIV's first encyclical Magnifica humanitas to be published May 25 (135 pts)</a></li>
+          <li><a href="https://spectrum.ieee.org/voice-ai-audio-attacks">Voice AI Systems Are Vulnerable to Hidden Audio Attacks (112 pts)</a></li>
+          <li><a href="https://andonlabs.com/blog/andon-fm">We let AIs run radio stations (192 pts)</a></li>
+          <li><a href="https://www.wsj.com/tech/ai/the-american-rebellion-against-ai-is-gaining-steam-94b72529">The American Rebellion Against AI Is Gaining Steam (40 pts)</a></li>
+          <li><a href="https://walkinglabs.github.io/learn-harness-engineering/en/">Learn Harness Engineering (127 pts)</a></li>
+          <li><a href="https://github.com/zakirullin/files.md">Show HN: Files.md – Open-source alternative to Obsidian (568 pts)</a></li>
+          <li><a href="https://discuss.haiku-os.org/t/my-haiku-arm64-progress/19044?page=2">Haiku OS runs on M1 Macs now (288 pts)</a></li>
+          <li><a href="https://blog.ppb1701.com/the-quiet-renovation-at-bitwarden">The Quiet Renovation at Bitwarden (561 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/the-fourth-law">The Next War Is Already Here. The West Isn't Ready. — Yaroslav Azhnyuk, The Fourth Law (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=NA_ai-r2-and-the-future-of-everyday-driving">Rivian CEO RJ Scaringe on AI, R2, and the Future of Everyday Driving (No Priors Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
