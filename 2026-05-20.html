@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Karpathy Move — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, May 20, 2026</div>
+        <h1>The Karpathy Move</h1>
+        <p class="subtitle">The man who coined "vibe coding" joins Anthropic's pretraining team, Google drops its biggest I/O yet, and the watermark wars heat up the same day OpenAI adopts one.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Karpathy Goes to Anthropic</h2>
+
+        <p>Andrej Karpathy — OpenAI co-founder, former head of Tesla AI, the person who coined the phrase "vibe coding" — announced yesterday that he's joining Anthropic. He'll be working on pretraining, which is about as deep as it gets: the phase where models acquire their core knowledge and reasoning capabilities, before any fine-tuning or alignment work happens. Anthropic confirmed he starts this week and will be building a new team focused on using Claude to accelerate pretraining research itself — essentially, getting the model to help improve the next version of the model.</p>
+
+        <p>This is not a typical hire. Karpathy has spent the last year in what he called a "state of AI psychosis," aggressively stress-testing frontier models, publishing pedagogical content on transformers and neural networks that became the standard curriculum for a generation of AI engineers, and evangelizing the idea that anyone can now build serious software with AI if they embrace the workflow. He's been a full-time independent observer and thinker. Now he's betting on Anthropic to be where the most interesting pretraining work happens.</p>
+
+        <blockquote>
+          "Karpathy will be starting a team focused on using Claude to accelerate pretraining research."
+          <cite>— Anthropic, via CNBC</cite>
+        </blockquote>
+
+        <p>The move consolidates a striking pattern: the people who understand training the most deeply — not deployment, not product, not fine-tuning, but the raw intellectual work of making the next model smarter — are gravitating toward Anthropic. Whether that's the Dario effect, the safety culture, or simply that Anthropic is now the lab writing the biggest checks for research talent, the signal is clear. Anthropic is becoming the destination for researchers who want to work on what matters most.</p>
+
+        <hr class="divider" />
+
+        <h2>Google I/O 2026: Everything Is an Agent Now</h2>
+
+        <p>Google held its annual developer conference this week and, rather than announcing one big thing, announced several smaller things that collectively point in the same direction: Google wants to be the platform everything else runs on. The centerpiece announcements were <a href="https://news.ycombinator.com/item?id=48196570">Gemini 3.5 Flash</a> — their new frontier efficiency model, claiming 4× faster performance than rival models and a 76.2% score on TerminalBench (a coding agent evaluation) — and <a href="https://news.ycombinator.com/item?id=48196609">Gemini Omni</a>, a multimodal system for in-context video generation and editing.</p>
+
+        <p>Gemini Spark, also announced, is Google's answer to the "always-on personal agent" concept: a 24/7 assistant that can manage apps, inboxes, chats, and web tasks on your behalf. And Google <a href="https://news.ycombinator.com/item?id=48197370">changed its search box</a> — the first major redesign of the most-used UI in the world in years — to center the AI-native query experience. The old text box is becoming a prompt box.</p>
+
+        <p>The unifying theme is that Google is not trying to win any single model benchmark. It's trying to make Gemini the connective tissue between your calendar, your email, your documents, your photos, and the open web — the same way Android became the connective tissue between apps and hardware a decade ago. The individual models are good; the platform ambition is bigger.</p>
+
+        <blockquote>
+          "Gemini 3.5 Flash — 4× faster than rival frontier models, 76.2% TerminalBench. Gemini Omni: multimodal video generation in-context. Gemini Spark: a 24/7 agent for everything."
+          <cite>— Google I/O 2026 announcements</cite>
+        </blockquote>
+
+        <p>Also worth noting in the same breath: <a href="https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai">Mistral acquired Emmi AI</a>, a conversational AI company. And Gemini CLI — the command-line tool — will stop working on June 18, as Google consolidates developer access through its new API surfaces. The platform consolidation is real, and it's happening fast.</p>
+
+        <hr class="divider" />
+
+        <h2>Six Months That Changed Everything</h2>
+
+        <p>Simon Willison gave a five-minute lightning talk at PyCon US 2026 and turned it into <a href="https://simonwillison.net/2026/May/19/5-minute-llms/">one of the best essays this month</a>: a precise account of what changed in the last six months of LLM development, and why November 2025 was the inflection point. According to Willison, leadership in the "best model" category changed hands five times in November alone — between Claude Sonnet 4.5, GPT-5.1, Gemini 3, GPT-5.1 Codex Max, and Claude Opus 4.5 — before Opus 4.5 settled in as the consensus leader heading into 2026.</p>
+
+        <p>But the model leaderboard was almost a distraction. The real story was that coding agents crossed a qualitative threshold. OpenAI and Anthropic had spent most of 2025 applying Reinforcement Learning from Verifiable Rewards (RLVR) — a technique where you train a model by rewarding it for producing code that passes tests, rather than code that sounds plausible — and in November, the results became undeniable. Coding agents went from "often works" to "daily driver." They stopped requiring most of their time to be spent fixing stupid mistakes.</p>
+
+        <blockquote>
+          "Coding agents went from often-work to mostly-work, crossing a quality barrier where you could use them as a daily-driver to get real work done, without needing to spend most of your time fixing their stupid mistakes."
+          <cite>— Simon Willison, PyCon US 2026</cite>
+        </blockquote>
+
+        <p>This is worth sitting with. The tools that practitioners are actually using today — Claude Code, Codex, Cursor — are not the same tools they were using eight months ago, even if they look similar on the surface. The underlying capability gap between "plausible output" and "production-worthy output" is closing, and RLVR is the mechanism. Karpathy understood this. So does Anthropic's pretraining team. That's why the Karpathy hire makes sense.</p>
+
+        <hr class="divider" />
+
+        <h2>What It Takes to Get Into a Frontier Lab</h2>
+
+        <p>The Latent Space newsletter <a href="https://www.latent.space/p/ainews-how-to-land-a-job-at-a-frontier">amplified a guide</a> by Vlad Feinberg (a Google researcher) on what actually gets you hired at a frontier AI lab, specifically on pretraining. The answer is not what most people expect: it's not prompt engineering, it's not knowing the latest agent frameworks, and it's not even having good benchmark numbers on open-source fine-tuning. It's kernel performance work.</p>
+
+        <blockquote>
+          "The biggest bottleneck and innermost loop of all LLM work is performance work that makes abstract, logical changes to the LLM practical to run. Every project needs people who can tune the LLMs at the kernel level. It is a skill you can pick up and is the most direct path into the labs."
+          <cite>— Vlad Feinberg, on landing a job at a frontier lab</cite>
+        </blockquote>
+
+        <p>The concrete hiring test Feinberg proposes: derive the Chinchilla scaling laws (which describe the optimal compute-efficient relationship between model size and training tokens) for both dense and Mixture-of-Experts (MoE) architectures, then write a Pallas kernel — a JAX-based GPU kernel language — that beats the standard <code>jax.lax.ragged_dot</code> for MoE layers by fusing the up and down projections. Find a measurable speedup. Explain why it's there.</p>
+
+        <p>This is a direct window into what frontier labs actually spend their time on. The models are getting better because someone is writing faster matrix operations. The research is often theoretical, but the bottleneck is always implementation. Latent Space also flagged that autoresearch — using agents to discover new ML architectures automatically — is beginning to show up at this layer too, with Meta's AIRA system beating Llama 3.2 at multiple scales through agent-driven architecture search. The tools and the research are converging.</p>
+
+        <hr class="divider" />
+
+        <h2>Making Agents Actually Work</h2>
+
+        <p>A <a href="https://news.ycombinator.com/item?id=48192383">quiet but interesting Show HN post</a> made the top of Hacker News: Forge, a Python reliability layer for self-hosted LLM tool-calling that takes an 8-billion-parameter local model from 53% accuracy to 86.5% on a multi-step agentic eval suite, using no model changes — only guardrails, retry nudges, rescue parsing, and VRAM-aware context budgeting. The best self-hosted configuration (Ministral-3 8B on llama-server) scores 76% on the hardest eval tier.</p>
+
+        <p>This is a microcosm of the broader conversation happening in agent infrastructure right now. François Chollet described coding agents as "blind squirrels" — capable of producing correct output if the environment is structured correctly, but failing when it isn't. The practitioners converging on the same mental model: constrain, verify, decompose. Not cleverer prompts. Not bigger models. Better harnesses.</p>
+
+        <p>The Latent Space AINews summary from this week made the same point from a different angle: LangSmith Engine is being positioned as a CI/CD loop for agents, Cognition launched Devin Auto-Triage as an always-on incident responder, and Anthropic published best practices for Claude Code in multi-million-line monorepos. The product direction everywhere is the same — background execution, remote supervision, verification surfaces — not interactive chat. The era of asking an agent a question is giving way to the era of delegating a process to one.</p>
+
+        <hr class="divider" />
+
+        <h2>The Watermark That Was Already Gone</h2>
+
+        <p>Two things happened on the same day. OpenAI <a href="https://news.ycombinator.com/item?id=48198291">announced it was adopting SynthID</a> — Google's invisible watermarking standard for AI-generated images — as a shared provenance tool, framing it as a step toward verifiable content provenance. Hours later, a GitHub repository called <a href="https://news.ycombinator.com/item?id=48200569">Remove-AI-Watermarks</a> — a CLI for stripping AI watermarks from images — was climbing the HN front page with 147 points.</p>
+
+        <p>This is not new territory. Every content protection system faces the same adversarial dynamic: the moment the standard is public, the removal tool follows. What's interesting here is the speed. The watermark convergence (OpenAI adopting Google's standard is genuinely significant — it's rare for these two labs to agree on anything technical) is happening in the same news cycle as the countermeasure. The gap between "protection deployed" and "protection broken" is now measured in hours, not months.</p>
+
+        <p>Infrastructure trust had a rough day beyond watermarks too. <a href="https://status.railway.com/?date=20260519">Railway</a> — a popular developer hosting platform — was blocked by Google Cloud, taking their service down entirely and exposing the fragility of cloud-dependent infrastructure. And <a href="https://news.ycombinator.com/item?id=48201316">GitHub confirmed it was investigating unauthorized access to internal repositories</a>. Two separate incidents, same theme: the platforms developers depend on are not as stable as we assume.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Pretraining is the frontier that matters.</strong> Karpathy's move to Anthropic is a bet on pretraining research being the highest-leverage place to be in AI right now — not fine-tuning, not agents, not deployment. The people who understand what's inside the models are going to Anthropic.</li>
+            <li><strong>Google is playing platform, not model.</strong> Gemini 3.5 Flash and Gemini Omni are impressive releases, but the I/O story is about surface area — search, agents, Android, video, the entire stack. Google is trying to own the infrastructure layer the way it owns search.</li>
+            <li><strong>The November 2025 inflection was real.</strong> Simon Willison's account confirms what practitioners already felt: something changed in coding agents six months ago, and RLVR was the mechanism. The tools that exist now are not the tools that existed then.</li>
+            <li><strong>Agent quality is an engineering problem, not a prompting problem.</strong> Forge taking an 8B model from 53% to 86.5% through guardrails alone is the thesis statement. The bottleneck is harness design, verification, and constraint — not model size.</li>
+            <li><strong>Provenance is a race nobody wins.</strong> The same news cycle that saw OpenAI adopt Google's watermark standard saw a CLI appear to remove it. Content provenance is a valuable signal, not an enforceable guarantee.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48194352">I've joined Anthropic — Andrej Karpathy (1,214 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48188183">The last six months in LLMs in five minutes — Simon Willison (742 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48196570">Gemini 3.5 Flash (631 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48196609">Gemini Omni (283 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48197370">Google changes its search box (408 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48192383">Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks (319 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48198291">OpenAI Adopts Google's SynthID Watermark for AI Images (218 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48200569">Remove-AI-Watermarks – CLI for removing AI watermarks from images (147 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48201484">Railway Blocked by Google Cloud (248 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48201316">GitHub is investigating unauthorized access to their internal repositories (200 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48197995">Mistral AI acquires Emmi AI (186 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-how-to-land-a-job-at-a-frontier">AINews: How to land a job at a frontier lab (on Pretraining) — Latent Space</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
