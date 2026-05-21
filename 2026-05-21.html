@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Proof You Couldn't Write — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, May 21, 2026</div>
+        <h1>The Proof You Couldn't Write</h1>
+        <p class="subtitle">An AI disproves a decades-old math conjecture, Google rewrites the web at Google I/O, Qwen3.7 crashes the agent frontier, and the infrastructure to run it all starts to cohere.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>An AI Just Did Something Mathematicians Couldn't</h2>
+
+        <p>Yesterday, OpenAI published something that deserves a longer pause than the usual AI news cycle allows: a model they haven't publicly named has <a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">disproved a central conjecture in discrete geometry</a> that had stood for decades. The conjecture concerned the structure of high-dimensional convex bodies — a domain where human intuition breaks down almost immediately and where progress typically takes years of specialized effort. 818 upvotes and 608 comments on HN, the highest-engagement story of the day. The reaction ranged from awe to careful skepticism, but the core fact held up to scrutiny: this wasn't a model retrieving a known proof. It found a genuine counterexample.</p>
+
+        <p>To understand why this is different from previous "AI solves math" headlines, it helps to know what discrete geometry conjectures look like. A conjecture in this field isn't a puzzle waiting for a formula; it's a claim about what's possible in spaces our intuition doesn't reach. Disproving one requires constructing an object that shouldn't exist — and then proving it does. That's not pattern-matching on training data. That's reasoning under uncertainty in an abstract domain.</p>
+
+        <blockquote>
+          "This is not a model that got lucky on a competition problem. It's a model that found a counterexample in a space that humans had been probing unsuccessfully for years."
+          <cite>— HN discussion, top comment</cite>
+        </blockquote>
+
+        <p>The timing matters. We are in a moment where AI math claims come constantly and often deflate on inspection. This one didn't. OpenAI has been notably quiet about which model was used and what its architecture looks like — probably because this is a preview of something coming. Whatever it is, the story arc of "AI as math assistant" just quietly became "AI as math collaborator."</p>
+
+        <hr class="divider" />
+
+        <h2>Google Declares War — on the Web, and on Itself</h2>
+
+        <p>Google I/O 2026 dropped yesterday, and the dual narrative of the day was impossible to miss. On one side: a genuinely impressive technical showcase. On the other: a growing chorus from publishers and developers watching their Google traffic disappear in real time.</p>
+
+        <p>The technical story, covered in depth by Latent Space's Google I/O roundup, is substantial. <strong>Gemini 3.5 Flash</strong> is now generally available — not a preview, not a staged rollout — with a 1 million token context window, 65,000 max output tokens, four thinking levels (including "thought preservation" across multi-turn conversations), and benchmark results showing it beating Gemini 3.1 Pro on agentic/coding evals. Third-party tester Artificial Analysis clocked it at over 280 output tokens per second, with Google claiming 12× faster performance inside Antigravity — their agent harness. The stat that should reframe how you think about Google's scale: they now process <strong>3.2 quadrillion tokens per month</strong>, up 7× year-over-year from 480 trillion. At those numbers, the inference optimization work happening inside Google is unlike anything happening elsewhere.</p>
+
+        <p>Alongside Flash, Google launched <strong>Gemini Omni</strong> — a multimodal family that handles video input and output natively — and <strong>Gemini Spark</strong>, which runs background agent tasks on dedicated Google Cloud VMs rather than inside a chat session. Spark is the quiet one to watch: it's the first time Google has formally shipped the notion of an AI agent that persists across your device being closed. That's a different product category than a chatbot.</p>
+
+        <blockquote>
+          "Google claimed a demo built a functioning OS in 12 hours using 93 parallel sub-agents, 15,000+ model requests, 2.6 billion tokens, and under $1,000 in API credits."
+          <cite>— Latent Space, Google I/O 2026 roundup</cite>
+        </blockquote>
+
+        <p>But the other Google story was harder to watch. "Apparently Google hates us now" — a post from Pokémon Central Wiki, the dominant Italian Pokémon resource for 15 years — gathered 438 points on HN and a torrent of similar stories in the comments. Small publishers, enthusiast sites, niche vertical resources: all watching organic search traffic collapse as AI Overviews serve synthesized answers without attribution. A separate BBC investigation found that Google's AI results are actively being manipulated by adversarial prompts, with Google acknowledging the problem and quietly deploying countermeasures — but the problem is structural. When search becomes answer delivery, the incentive to maintain the source ecosystem breaks down. The web that trained these models is being hollowed out by the models themselves.</p>
+
+        <p>A piece in HN's top stories framed it directly: "Google Declaring War on the Web." That's hyperbole, but it captures something real. Google's business model used to depend on a thriving open web. The AI Overviews model doesn't — or not in the same way. It's a platform transition that benefits Google and costs everyone else a little at a time.</p>
+
+        <hr class="divider" />
+
+        <h2>The Model Wars: Qwen3.7 Arrives, OpenAI Heads for Wall Street</h2>
+
+        <p>While Google had its keynote, Alibaba's Qwen team quietly shipped something that might matter more for developers. <strong>Qwen3.7-Max</strong> dropped this week with benchmarks that put it at or near the frontier on agentic tasks — the kind of long-horizon, tool-using, multi-step reasoning that most enterprise AI use cases actually require. With 632 points and 251 comments on HN, the reception was warmer than most model launches. The community's read: this is the best open-weight or near-open model for agent workloads that exists right now, and it makes the "we need a frontier model for this" conversation more complicated.</p>
+
+        <p>Separately — and this deserves its own paragraph — OpenAI filed <a href="https://www.cnbc.com/2026/05/20/openai-ipo-filing.html">confidentially for an IPO</a> as early as Friday. Working with Goldman Sachs and Morgan Stanley, the company is moving toward a public offering while still in active pursuit of the technology that supposedly justifies a private valuation north of $850 billion. The S-1 will eventually reveal what the financials actually look like: how much revenue, what the cost structure is, how fast compute costs are rising. That document will be the most consequential thing OpenAI publishes this year — more so than any model release.</p>
+
+        <p>A short but illuminating piece making the rounds: "<a href="https://mikeveerman.github.io/tokenspeed/">How fast is N tokens per second, really?</a>" — a 320-point HN story that builds an interactive tool for translating inference speed into human-legible experience. At 10 tokens/second you're reading a thoughtful writer. At 100 you're watching a firehose. At 867 tokens/second (what Antigravity reportedly achieves with Gemini 3.5 Flash) you're somewhere beyond what any human can parse in real time. The point isn't just raw speed; it's that we're reaching speeds where agents operate faster than any human supervisor can meaningfully oversee. That asymmetry has implications we're not fully reckoning with yet.</p>
+
+        <hr class="divider" />
+
+        <h2>Agent Infrastructure Comes Into Focus</h2>
+
+        <p>The most grounded conversation in today's feeds is about the plumbing — what does it actually take to run agents reliably at scale? Two stories pull this into focus.</p>
+
+        <p>Latent Space published a long interview with <strong>Jake Cooper</strong>, founder of Railway, under the title "The Agent-Native Cloud." Railway is a cloud platform that most developers know as "Heroku but modern" — but the numbers are startling: 35 employees, 3 million users, 100,000 new signups per week. Their own bare metal data centers have a three-month cloud payback period and 70% margins. And their customers are now spending over $200,000 a month on compute for coding agents alone, a figure that barely existed 18 months ago. Cooper's thesis is that the entire deployment loop — Git, pull requests, CI/CD, static cloud resources — is built for human-paced iteration and is fundamentally misaligned with what agents need. Agents need instant feedback loops, production forks, and the ability to run thousands of parallel experiments. The PR is not the right unit of work for this.</p>
+
+        <blockquote>
+          "The traditional deployment loop is fundamentally misaligned with agent-native workflows, which require instant feedback loops, production forks, and massive parallelization rather than sequential human review."
+          <cite>— Jake Cooper, Railway, via Latent Space</cite>
+        </blockquote>
+
+        <p>The irony of that Railway interview: it was recorded before Railway suffered a <a href="https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage">major platform outage</a> when Google Cloud incorrectly suspended their account on May 19th — despite Railway running a multi-AZ, multi-zone mesh ring with HA fiber interconnects between their metal, GCP, and AWS infrastructure. The incident (395 points on HN) exposed a dependency they hadn't fully resolved: workload discoverability was still tied to GCP. It's a reminder that infrastructure resilience is always one abstraction layer behind where you think it is.</p>
+
+        <p>On the model-side of infrastructure: Anthropic is expanding onto Colossus 2, the SpaceX AI data center in Memphis, and will be scaling up on <strong>Nvidia GB200</strong> capacity throughout June. The GB200 — part of Nvidia's Blackwell architecture — is the current frontier for inference throughput on large models. Anthropic's move to Colossus 2 is a bet that the compute they need doesn't exist at any hyperscaler at the required scale. The SpaceX-Anthropic partnership is quietly becoming one of the most consequential data center arrangements in the industry.</p>
+
+        <p>Also worth noting: a 115-point HN post on <a href="https://reubenbrooks.dev/blog/structural-backpressure-beats-smarter-agents/">"Formal Verification Gates for AI Coding Loops"</a> argues that the right answer to agentic reliability isn't better prompts or smarter models — it's putting formal verification checkpoints in the loop so agents can't produce structurally invalid code without triggering an error. This is the grown-up version of "unit tests for agents," and the post has a working implementation. If this pattern propagates, it could quietly become a standard piece of every coding agent harness within a year.</p>
+
+        <hr class="divider" />
+
+        <h2>The Apps That Won't Survive This</h2>
+
+        <p>Y Combinator published an interview this week with <strong>Peter Steinberger</strong>, the creator of OpenClaw — the open-source personal AI agent that went viral earlier this year, climbing to 160,000 GitHub stars almost overnight. The conversation is worth reading in full, but the central thesis is blunt: <em>80% of apps are going away.</em></p>
+
+        <p>Steinberger's argument isn't about AI replacing apps in some abstract future sense. It's specific. Apps that exist to manage data — fitness trackers, reminders, note-taking tools, simple dashboards — will be replaced by agents that simply know what you do and act on it. "Why do I need MyFitnessPal? My agent already knows I'm making bad decisions at the restaurant. It tracks it automatically. I don't need an app for that." The only apps that survive, in his view, are the ones that interface with physical sensors or physical world infrastructure that agents can't otherwise access.</p>
+
+        <blockquote>
+          "I think 80% of apps are going away. Only the apps that actually have sensors — maybe they survive. Everything else that just manages data can be managed better and more naturally by agents."
+          <cite>— Peter Steinberger, Creator of OpenClaw, via Y Combinator</cite>
+        </blockquote>
+
+        <p>Steinberger built OpenClaw with no MCP support — the protocol everyone else was racing to adopt — because he thought the whole approach was overcomplicated. Instead: CLIs. "No sane human tries to call MCP manually. They just use CLIs." His agent wraps any MCP as a CLI on the fly. The philosophy is that if a tool isn't useful to a human, it won't be useful to an agent either. That turns out to be a reasonable filter.</p>
+
+        <p>The economic signal to reinforce this thesis: Intuit is <a href="https://techcrunch.com/2026/05/20/intuit-to-lay-off-over-3000-employees-to-refocus-on-ai/">laying off over 3,000 employees</a> to "refocus on AI," per their CEO. Intuit makes TurboTax, QuickBooks, and Mailchimp — all software that manages data and automates workflows. If the creator of the dominant tax software in America believes the current product stack needs to be rebuilt from scratch around AI, Steinberger's thesis about apps gets some CFO-grade confirmation.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>AI just crossed a line in mathematics.</strong> Disproving a geometric conjecture isn't pattern-matching — it's construction and proof. This is the clearest demonstration yet that current-generation models can generate genuinely new knowledge, not just retrieve it. Expect more of this, quietly, before it becomes a press release.</li>
+            <li><strong>Google I/O set a benchmark others now have to match.</strong> 3.2 quadrillion tokens/month, 7× year-over-year growth, Gemini 3.5 Flash GA, background agents on VMs — Google spent 2025 looking defensive. Today's I/O looked like a company that figured out what it actually wants to be. The counter-narrative (web publishers getting destroyed) doesn't cancel the technical story; both are true simultaneously.</li>
+            <li><strong>The agent frontier is no longer a US-only conversation.</strong> Qwen3.7-Max competing seriously with OpenAI and Anthropic for agent workloads means the model landscape is now genuinely multipolar. That's good for developers and bad for anyone betting on proprietary moat.</li>
+            <li><strong>Infrastructure is the sleeper story.</strong> Railway's numbers — 35 people, 3M users, 100K/week signups, 70% margins on owned metal — are a template for what AI-era infrastructure startups can look like. The GCP outage they just survived is a reminder that resilience is still being discovered through failure.</li>
+            <li><strong>The app apocalypse is an accounting question now, not a philosophy question.</strong> When Intuit lays off 3,000 people and Peter Steinberger says 80% of apps are going away, they're pointing at the same underlying economic shift. The question is no longer whether this happens. It's what you build on the other side of it.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48212493">An OpenAI model has disproved a central conjecture in discrete geometry (818 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48205626">Qwen3.7-Max: The Agent Frontier (632 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48210263">Apparently Google hates us now (438 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48204770">Incident Report: May 19, 2026 – GCP Account Suspension — Railway (395 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48214449">Google Declaring War on the Web (384 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48174920">How fast is N tokens per second really? (320 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48205782">Google's AI is being manipulated. The search giant is quietly fighting back (265 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48213933">SpaceX S-1 (261 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48209323">Formal Verification Gates for AI Coding Loops (115 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48214017">Anthropic is expanding to Colossus2. Will use GB200 (94 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48216278">Intuit to lay off over 3k employees to refocus on AI (62 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48217052">OpenAI to confidentially file for IPO as soon as Friday</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash">[AINews] Google I/O 2026: Gemini 3.5 Flash, Omni, Spark, and Antigravity 2.0 (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/railway">Railway: The Agent-Native Cloud — Jake Cooper (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=4uzGDAoNOZc">OpenClaw Creator: Why 80% of Apps Will Disappear — Peter Steinberger (Y Combinator)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
