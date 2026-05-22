@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ground Truth — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Friday, May 22, 2026</div>
+        <h1>The Ground Truth</h1>
+        <p class="subtitle">Seven people at Poetic just outscored every foundation model on Humanity's Last Exam. Waymo drove into a flood. Google nuked your IDE and replaced it with a chatbot. AI is having its reality test week.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Stilts Strategy: What Poetic AI Is Doing to Foundation Models</h2>
+
+        <p>There's a startup called <a href="https://poetic.ai">Poetic</a> with seven employees. Last week, they scored 55% on Humanity's Last Exam — a benchmark of 2,500 questions designed to stump PhDs across every discipline. The previous best was 53.1%, set by Anthropic's Claude Opus 4.6. The cost of Poetic's run: under $100,000. The cost of training a frontier model that might match it: hundreds of millions, and months.</p>
+
+        <p>This is what Ian Fisher, Poetic's co-founder and a former decade-long Google DeepMind researcher, is calling "recursive self-improvement at inference time." The core insight is subtle but profound: you don't need to retrain a model to make it dramatically smarter for a specific task. You need a system that <em>generates</em> the right reasoning harness, the right prompts, the right strategies — and can keep improving that harness automatically, without touching the underlying model weights.</p>
+
+        <blockquote>
+          "What would you have done without Poetic? You probably would have collected tens of thousands of examples, fine-tuned the best model you could get your hands on, spent a lot of money on compute — and by the time you finished, a new model came out that was better than the thing you fine-tuned on top of."
+          <cite>— Ian Fisher, co-founder of Poetic AI (Y Combinator)</cite>
+        </blockquote>
+
+        <p>Fisher uses the metaphor of "stilts": Poetic's meta-system sits on top of whichever foundation model you choose, making it taller than it would be on its own. When Gemini 3 Deep Think came out at 45% on ARC-AGI V2, Poetic built on top of Gemini 3 Pro (the cheaper tier) and scored 54% — at half the cost. The key was not better prompts alone, but programmatic reasoning strategies embedded in code. When they optimized one particularly hard task, performance jumped from 5% to 95% — not because the model got smarter, but because the harness got smarter about how to use the model.</p>
+
+        <p>The implications for startups building on top of foundation models are real. Fine-tuning is essentially betting that your custom data will outrun the next frontier model release — a bet that has lost, repeatedly, since 2022. A harness that works with <em>any</em> model and automatically improves is, in theory, the opposite of the bitter lesson: instead of pretraining your way to better performance, you're optimizing the usage layer, which doesn't expire when GPT-6 ships.</p>
+
+        <hr class="divider" />
+
+        <h2>What "Intelligence" Actually Means: ARC Prize and the Coming Video Game Test</h2>
+
+        <p>The question of what Poetic is actually doing leads directly to a harder question that Greg Kamradt of the ARC Prize Foundation has been wrestling with publicly: what does it even mean for AI to be intelligent?</p>
+
+        <p>François Chollet's original 2019 paper defined intelligence not as performance on hard tasks, but as the <em>efficiency</em> with which you acquire new skills — how many data points and how much compute you need to generalize to something genuinely novel. ARC-AGI was designed to test exactly this: puzzles that normal people can solve, that require no domain expertise, but that require genuine generalization. The fact that base language models scored 4–5% on it in 2024 while regular humans scored near-perfect was the whole point.</p>
+
+        <blockquote>
+          "It's kind of weird, but nowadays it's hard to come up with problems to stump AI. Back in 2012 with ImageNet, all you needed was a photo of a cat."
+          <cite>— Greg Kamradt, President, ARC Prize Foundation (Y Combinator)</cite>
+        </blockquote>
+
+        <p>ARC-AGI V3, coming next year, will be interactive: 150 video game environments with no instructions in any language. The AI must take actions, observe responses, and figure out the goal — which is precisely how humans encounter genuinely novel problems in the real world. Performance will be measured not just by success rate but by action efficiency compared to human baselines. Brute-force strategies that use millions of frames, as in classic Atari RL agents, won't be allowed.</p>
+
+        <p>This is a meaningful corrective to benchmark inflation. The field has been racing up an escalating ladder of PhD-level question difficulty — MMLU, MMLU+, Humanity's Last Exam — but that ladder measures knowledge retrieval and reasoning depth in known domains, not generalization speed. Poetic, interestingly, is optimizing on exactly those harder benchmarks. Whether their meta-system would transfer to a genuinely novel, instruction-free interactive environment — ARC-AGI V3 territory — is a genuinely open question.</p>
+
+        <p>A new paper this week from arXiv adds another wrinkle: <a href="https://arxiv.org/abs/2605.12460">Multi-Stream LLMs</a> proposes running parallel streams of thoughts, inputs, and outputs simultaneously rather than sequentially. Current transformer architectures process one token at a time and think "before" generating. Multi-stream systems could think and generate in parallel, with different streams handling different aspects of a problem — a structural change rather than a scaling one.</p>
+
+        <hr class="divider" />
+
+        <h2>Google I/O Reality Check: The Antigravity Bait-and-Switch</h2>
+
+        <p>Google had a big I/O. Gemini 3.5 Flash is genuinely impressive — GA immediately, 1M context, 65k output, 4x faster than comparable frontier models, scoring near the top of Text and Code Arena despite being a "Flash" tier model. The Latent Space writeup of the event from this week describes Google processing 3.2 quadrillion tokens per month, up 7x year-over-year, with 900 million monthly Gemini users. By raw numbers, Google is executing.</p>
+
+        <p>But the developer community's response on Hacker News was considerably more pointed, and it centered on something operational rather than benchmarks. Google launched Antigravity 2.0 at I/O — a standalone, Codex-style conversational coding interface — by automatically updating existing users' Antigravity IDE installations and replacing them with the chatbot. No opt-in. No migration path. The IDE was just gone.</p>
+
+        <p>The <a href="https://www.0xsid.com/blog/antigravity-bait-n-switch">write-up that hit #2 on HN today</a> with 565 points describes the experience: the author opened Antigravity expecting to get work done, found the IDE had been silently replaced, discovered that the legacy IDE download on Google's own site would reinstall the chatbot anyway due to path hijacking, and ultimately had to purge everything Antigravity-related from their system to get the old version running again. Chat history: gone. Settings: wiped.</p>
+
+        <blockquote>
+          "The 2.0 update aggressively rewrites the default application paths to the point where it's impossible, at the time of writing, to have both versions of Antigravity installed and functioning at the same time."
+          <cite>— 0xsid, "Google's Antigravity Bait and Switch"</cite>
+        </blockquote>
+
+        <p>Separate from the Antigravity drama, Google's marketing blog announced <a href="https://blog.google/products/ads-commerce/google-marketing-live-search-ads/">new AI-powered ad formats in Search</a>, built with Gemini, and the expansion of its Direct Offers pilot. With 570 points and 520 comments, this was the most-engaged story on HN today. The HN thread is predictably grim: users describing Google Search as increasingly unusable, the irony of building AI tools that make users' lives better while simultaneously monetizing the same AI infrastructure to show them more ads.</p>
+
+        <p>A longer essay asking whether Google is going through <a href="https://zeroshot.bearblog.dev/google-is-shattering-under-its-own-weight-the-ibm-ification-of-google/">the IBM-ification process</a> made rounds today as well — the argument being that Google's vertical integration (TPUs, data centers, models, Search) is becoming a liability rather than an asset as the company struggles to move coherently across a surface area that has grown faster than its organizational coherence. The comparison to IBM in the mainframe era is imprecise but structurally resonant: a dominant player that owns the whole stack, increasingly disliked by the people who depend on it, facing smaller competitors that move faster on any given layer.</p>
+
+        <hr class="divider" />
+
+        <h2>The Physics of Local AI: $48K Servers and a MacBook Running Gemma4-31B</h2>
+
+        <p>Two stories today illuminate what local AI actually costs and what it can do — and together they suggest we're in a transitional moment where the economics of compute are genuinely unclear.</p>
+
+        <p>The first: a researcher who quit a FAANG job in 2024 to do independent ML research <a href="https://rosmine.ai/2026/05/13/was-my-48k-gpu-worth-it/">spent $48,000 building a 6x RTX 6000 Ada GPU server</a>, running it out of an apartment (and later his parents' basement). His logic was clean: if a more powerful machine lets him complete useful research 2 months earlier than a smaller one, the $48K pays for itself relative to lost income. He chose 6000 Adas over H100s on price-performance grounds. The question he asks — was it worth it? — is one the HN community (325 pts, 239 comments) has been debating vigorously, mostly because the cloud vs. owned hardware question is now live at every AI organization that isn't a hyperscaler.</p>
+
+        <p>The second: someone <a href="https://blog.simbastack.com/indexed-a-year-of-video-locally/">indexed an entire year of personal video footage</a> using Gemma4-31B running locally on a 2021 MacBook Pro M1 Max — with 50GB of swap. The machine was running at full tilt for extended periods. The result was a fully queryable semantic video archive, running entirely on-device, with no data leaving the machine. The swap situation was absurd by normal standards, but it worked. (310 pts, 94 comments.)</p>
+
+        <p>These two stories are the same story told from different scales. At the high end, a $48K dedicated research rig is now table stakes for independent ML work. At the consumer end, a three-year-old MacBook can run a 31B parameter model in a use case that would have required a cloud API and privacy tradeoffs eighteen months ago. The frontier moves up; the local tier follows at a lag of roughly two years. Samsung's chip workers are getting <a href="https://qz.com/samsung-chip-workers-bonus-ai-profits-052126">an average $340,000 bonus</a> this cycle as AI hardware demand drives semiconductor profits to new highs — a data point that suggests the hardware economics, while improving for end users, are generating extraordinary returns upstream.</p>
+
+        <hr class="divider" />
+
+        <h2>When the Models Meet the Vibe Check</h2>
+
+        <p>Two stories today are about what happens when AI-generated content collides with humans operating in good faith.</p>
+
+        <p>The first is a website, <a href="https://noslopgrenade.com/">noslopgrenade.com</a>, that hit 519 points and 311 comments on HN today. It makes one argument: stop pasting AI-generated essays into group chats, forum threads, and conversations. "If they wanted an AI essay, they would have asked ChatGPT themselves." The comment thread is a working taxonomy of the phenomenon — people describing getting a 2,000-word Gemini response when they asked a friend for a restaurant recommendation, group chats that have devolved into people swapping Claude outputs at each other. The site itself is deliberately short, deliberately human.</p>
+
+        <p>The second is Waymo. The company has <a href="https://techcrunch.com/2026/05/21/waymo-pauses-atlanta-service-as-its-robotaxis-keep-driving-into-floods/">suspended robotaxi service in both Atlanta and San Antonio</a> because its vehicles keep driving into flooded roads. This is a crisp edge case failure: the cars' routing systems either can't detect flood conditions in real time or are operating on stale map data that doesn't account for flash flooding patterns in the American South. The cars aren't doing anything obviously wrong by the metrics they're optimized on. They're just wrong about what the road looks like right now.</p>
+
+        <p>These failures are structurally different — one is social, one is operational — but they share an underlying shape. Both involve AI systems producing outputs that are technically coherent but contextually inappropriate. The language model doesn't know that the conversation it's summarizing is a casual group chat where you're supposed to sound like a person. The robotaxi doesn't know that the road it's routing through is underwater. Both systems are operating confidently inside their training distribution while the real world has stepped just outside it.</p>
+
+        <p>That gap — between model confidence and situational awareness — is where the actual interesting safety work is happening right now. Not in grand alignment theory, but in the unglamorous engineering of detecting when the world has changed faster than the model's priors.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Fine-tuning has an expiration date.</strong> Poetic's approach — harnesses that sit atop any foundation model and improve automatically — is a genuine alternative architecture for production AI. If it generalizes beyond benchmarks, it's worth watching closely. The insight that reasoning strategies matter more than better prompts is not new, but automating their generation at this scale is.</li>
+            <li><strong>Google is executing on scale and fumbling on trust.</strong> The Antigravity forced-update story will do more damage to developer sentiment than any benchmark can repair. AI products that modify users' environments without consent are storing up a credibility debt. Google's technical progress at I/O was real; its product judgment was not.</li>
+            <li><strong>The intelligence question still has no consensus answer.</strong> ARC-AGI V3's interactive, instruction-free design is the most honest attempt yet to measure generalization rather than memorization. Whether the systems scoring high on Humanity's Last Exam can also adapt efficiently to novel environments is the empirical question that will define the next phase of the capability debate.</li>
+            <li><strong>Local AI is closing the gap faster than expected.</strong> A 31B model running on a 2021 MacBook with swap, producing genuinely useful results, is a 2024 impossibility that is a 2026 annoyance. The capability floor keeps rising. The ceiling (a $48K server in someone's basement) is already far above what most users need.</li>
+            <li><strong>Confidence calibration is the unglamorous frontier.</strong> Waymo's flood problem and AI text-dumping in social contexts are different expressions of the same issue: systems that don't know what they don't know about the present moment. The fix isn't more intelligence — it's better situational awareness and, failing that, better defaults toward restraint.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48222529">Google's Antigravity Bait and Switch (565 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48220105">Google testing new AI ad formats in Search (570 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48230049">The IBM-ification of Google? (108 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48225426">Waymo pauses Atlanta service as robotaxis drive into floods (272 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48219992">Throwing AI-generated walls of text into conversations (519 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48184402">Was my $48K GPU server worth it? (325 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48222733">Indexing a year of video locally on a 2021 MacBook with Gemma4-31B (310 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48227923">Multi-Stream LLMs: Parallelizing Thoughts, Inputs and Outputs (69 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48230892">Samsung chip workers to get average $340K bonus as AI profits soar (65 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=pBlIgs6w7Ss">How Intelligent Is AI, Really? — ARC Prize Foundation (Y Combinator)</a></li>
+          <li><a href="https://poetic.ai">The Powerful Alternative to Fine-Tuning — Poetic AI / Ian Fisher (Y Combinator)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
