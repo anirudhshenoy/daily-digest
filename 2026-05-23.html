@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The $1,000 Proof — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Saturday, May 23, 2026</div>
+        <h1>The $1,000 Proof</h1>
+        <p class="subtitle">A general-purpose AI cracks an 80-year-old mathematics problem, while intelligence itself gets repriced — in markets, in chips, and in careers.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>When the Model Showed Its Work</h2>
+
+        <p>In 1946, the Hungarian mathematician Paul Erdős posed a deceptively simple question: given a set of <em>n</em> points in the plane, what's the maximum number of pairs that can be at the same distance from each other — the "unit distance"? Erdős conjectured the answer grows no faster than <em>n</em><sup>1+ε</sup> for any ε &gt; 0. For eight decades, this conjecture held. Nobody could disprove it. This week, a general-purpose OpenAI reasoning model did, for under $1,000 in compute.</p>
+
+        <p>The model produced a new family of point constructions that violates the bound — a full <em>disproof</em>, not just a verification of known results. The output was 125 pages long. Mathematicians who reviewed it, including Timothy Gowers (Fields Medal, 1998), called it "the first really clear example of AI solving a well-known open problem." OpenAI was deliberate in its framing: this was <em>not</em> AlphaProof, not Lean, not a domain-specific solver with mathematical scaffolding. It was a general-purpose reasoning model asked to think very hard for a long time.</p>
+
+        <blockquote>
+          "This is a disproof, not a proof, which would have been more impressive — but it nevertheless points towards the way of things to come."
+          <cite>— Latent Space / AINews, May 2026</cite>
+        </blockquote>
+
+        <p>The distinction matters. A specialized system proving things in Lean is impressive engineering but tells you something limited: that we can scaffold a narrow mathematical verifier. A general-purpose reasoner independently discovering novel structure in a combinatorics problem open for 80 years tells you something about the nature of the capability itself. It isn't just pattern-matching over training data. The Erdős unit-distance problem didn't have a known counterexample in the literature. The model didn't retrieve it — it found it.</p>
+
+        <p>The reaction from the broader community was instructive. Some pushed back immediately: "goalpost moving," said critics who argued this was just a disproof, or that a human proved it "three hours later." Both things are true and both miss the point. What changed this week isn't a single result — it's the emerging sense that open mathematical research, the kind where there is no known answer to retrieve, is now a domain where AI can contribute original work. The question isn't whether AI is smarter than Terence Tao. It's whether AI can function as a productive research collaborator on problems where the answer doesn't yet exist. This week's result is evidence that it can.</p>
+
+        <p>On the same day, Cohere released <strong>Command A+</strong> as Apache 2.0 open weights — 218B parameters in a mixture-of-experts architecture with only ~25B active at inference time, running on as little as two H100 GPUs at W4A4 quantization. It's Cohere's first fully permissive model and its architecture is genuinely unusual: parallel transformer blocks, shared expert layers, LayerNorm instead of RMSNorm, only 32 layers deep. It benchmarks around Claude 4.5 Haiku territory, with strong anti-hallucination behavior. The timing alongside OpenAI's math result captures the week's dual character: frontier capability and open-weight commoditization advancing simultaneously.</p>
+
+        <hr class="divider" />
+
+        <h2>The Price of Intelligence</h2>
+
+        <p>DeepSeek announced this week that the V4 Pro price discount — already dramatic when it launched — is now permanent. The model is now priced at roughly $0.27 per million input tokens, down from $2.19. That's not a promotion. That's a new floor. DeepSeek is pricing as if the marginal cost of inference is already near zero and the battle is for developer lock-in.</p>
+
+        <p>This matters beyond the headline number. When a frontier-class model at or near GPT-4 level is priced at a tenth of previous rates as the permanent default, the entire economics of building AI products shifts. The cost of calling a model moves from a line item to background noise. Products that were previously economically marginal — models called per keystroke, per document, per user action — become straightforwardly viable. The constraint on AI product design moves further from compute cost toward other things: latency, context window, reliability, trust.</p>
+
+        <p>Meanwhile, <strong>Exa raised $250M at a $2.2B Series C</strong>, explicitly positioning itself as "a search lab organizing the web for agents." <strong>Modal raised $355M at a $4.65B Series C</strong> — rebuilding cloud infrastructure from scratch for AI workloads. <strong>TurboPuffer hit $100M ARR in 19 months, profitable, having raised less than $1M</strong>. The last fact bears repeating: a vector database company crossed $100M in annual recurring revenue at nearly no dilution, bootstrapped into one of the hottest infrastructure categories in software history. The founder's explanation was simple: "the magic happens with AI when it draws in just the right context," which makes nearly every AI product a search and retrieval problem at its core.</p>
+
+        <p>Reiner Pope's interview with Dwarkesh Patel this week went deep on why chips look the way they do — and it clarifies why all this infrastructure spending is structurally rational. The core computation behind every neural network forward pass is a matrix multiply, which decomposes into billions of multiply-accumulate operations. The entire architectural evolution from CPUs to TPUs to GPUs is the story of building hardware that does nothing but multiply-accumulate, as fast as possible, with as little data movement as possible. The cost of moving data between memory and compute — not the arithmetic itself — is what limits throughput. A systolic array, the heart of Google's TPU, is essentially a grid of tiny multipliers that pass partial results directly to neighbors, eliminating the memory round-trip. A GPU is many systolic arrays working in parallel. The bottleneck is <em>memory bandwidth</em>, not compute — which is why HBM (High Bandwidth Memory) now accounts for 63% of AI chip component spend, up from 52% eighteen months ago.</p>
+
+        <blockquote>
+          "The cost of data movement often dominates the cost of computation in chip design."
+          <cite>— Reiner Pope (Google DeepMind), via Dwarkesh Podcast</cite>
+        </blockquote>
+
+        <p>This also explains the RAM shortage hitting consumer electronics. AI training and inference are extraordinarily memory-hungry. HBM supply is constrained. Memory fabs that used to build commodity DRAM for phones and laptops are running at capacity building HBM for hyperscalers. The result: your next phone costs more, not because the chip got more expensive, but because the RAM to put in it is being outbid by datacenters. AI's infrastructure hunger is now visibly repricing consumer hardware, and the repricing appears structural rather than cyclical.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents Earning Their Keep</h2>
+
+        <p>Project Glasswing — Anthropic's initiative to use Claude to find real security vulnerabilities in widely-deployed open source software — published its first substantial update this week. The early results are specific and credible: real vulnerabilities in real codebases, found at a pace and breadth that human security researchers working alone couldn't match. This is the important thing about Glasswing: it isn't benchmarking against CTF challenges or synthetic code. It is running against software that ships on millions of machines, with the explicit goal of fixing problems before adversaries find them.</p>
+
+        <p>AI-powered offensive security is already here — the same Latent Space roundup noted that Google has confirmed criminal actors used AI to identify a major software flaw in production systems. Glasswing is the corresponding defensive story: purpose-built, Anthropic-supervised, with results that security engineers can validate and upstream. The HN discussion on Glasswing was notably substantive — engineers working through what Mythos (Claude's internal security-focused variant) found versus what prior automated tools missed, and why the approach generalizes beyond pattern-matching into actual program reasoning.</p>
+
+        <p>On the benchmark front, Google's <strong>Antigravity 2.0</strong> topped the OpenSCAD Architectural 3D LLM benchmark this week — a practical evaluation that asks models to generate parametric CAD code for a detailed Pantheon model. Antigravity outperformed Codex 5.5 High, Claude Opus, and Cursor Composer on this task. What's interesting about a 3D code generation benchmark isn't the 3D part — it's that it requires sustained spatial reasoning combined with code generation combined with iterative correction, all areas where model quality varies sharply. The fact that Google's model is now competing at or above Anthropic and OpenAI on specific engineering tasks signals that the model quality race is genuinely multi-polar in 2026.</p>
+
+        <p>Codex shipped a notable product expansion this week: it can now securely use applications on your Mac from your phone, even when the Mac is locked. This is quietly significant. The desktop/phone boundary has always been a hard limit on how agents operate in real workflows — most are cloud-native and stateless. A persistent agent that can access your actual installed apps, resume context across devices, and operate your local environment transforms the product surface from "AI-assisted coding" to something closer to a permanent remote colleague with access to your machine. The parallel with having an employee who can use your computer when you're away from it — and who can be trusted to do so safely — is not coincidental.</p>
+
+        <p>At the open-source end, Hugging Face's <strong>LeRobot Humanoid</strong> launched at roughly $2,500, fully 3D-printed, with complete hardware CAD, calibration tooling, simulation environments, and training pipelines included. The price isn't the story — it's the repairability and iteration speed. A humanoid robot where every joint can be reprinted in an afternoon and the training pipeline is open source creates a different kind of robotics research than either expensive commercial platforms or locked proprietary systems. The "ChatGPT moment" for manipulation is still ahead, but the substrate for achieving it just got dramatically more accessible.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Multiplies; It Doesn't Homogenize</h2>
+
+        <p>One of the week's most-discussed Hacker News posts was titled simply "AI has a multiplying effect on existing technical skills" — a piece arguing that AI tools amplify the gap between strong engineers and weak ones rather than leveling the field. The argument is that a mediocre engineer using Cursor or Claude Code produces mediocre output faster. A strong engineer using the same tools produces strong output much faster. The asymmetry comes from what the models can't supply: good taste, domain judgment, the ability to recognize when the generated code is subtly wrong in a way that will matter in six months.</p>
+
+        <p>This connects directly to a deeper point from Nate B. Jones's analysis of what he called the "AI scare trade" — the wave of sector-wide stock crashes triggered by AI press releases from companies with sometimes no actual AI capability. When CH Robinson dropped 24% in a day because a former karaoke company issued a press release about AI logistics, the technology hadn't changed. But the organizational response at CH Robinson absolutely did: emergency leadership meetings, budget reallocations, headcount freezes. The stock market's panic became self-fulfilling through corporate behavior, independent of whether the underlying AI threat was real or not.</p>
+
+        <blockquote>
+          "The scare trade is simultaneously destroying career value for people who were coasting on process work and creating tremendous career upside for people who can combine domain expertise with AI fluency."
+          <cite>— Nate B. Jones, AI News &amp; Strategy Daily</cite>
+        </blockquote>
+
+        <p>The pattern Jones identifies is precise: the people most at risk aren't those whose jobs AI can do today — it's those in cost centers at companies under market pressure, regardless of actual job replaceability. Conversely, the people most valuable right now are those who can bridge the gap between "we've heard AI can do this" and "I've tested it against our actual workflows and here's what it does and doesn't do, with numbers." That skill — domain translation, really — is scarce in nearly every organization, and the scare trade is compressing the timeline for organizations to figure out who has it.</p>
+
+        <p>The Anna's Archive blog post "If you're an LLM, please read this" (745 HN points, the week's top story by engagement) takes this from a different angle. The post is a practical discussion of how LLMs can and should access copyrighted archival data — advocating for an llms.txt standard that would let AI models respect access permissions while still being able to read content meaningfully. It's a surprisingly thoughtful piece on what it means for the web's relationship with AI to be negotiated rather than unilateral. That it was the most-upvoted post on HN this week says something about where the community's attention is: not on the models themselves, but on the ecosystem around them — data rights, agent access patterns, the contract between AI systems and the content they learn from.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>General reasoning, not specialized scaffolding, cracked an open math problem.</strong> The Erdős result is evidence that frontier models are beginning to do genuine open-ended research, not just retrieve or verify. The implication for scientific fields — from drug discovery to materials science to formal verification — is real and near-term.</li>
+            <li><strong>Intelligence is being priced toward zero.</strong> DeepSeek's permanent price cut, combined with TurboPuffer's bootstrapped $100M ARR and Modal's $4.65B raise, points at a structural shift: the question is no longer whether you can afford to call a model, but how to build products that are worth calling it for.</li>
+            <li><strong>The memory constraint is AI's hidden bottleneck.</strong> Chips are optimized to minimize data movement, not maximize arithmetic. HBM supply is what constrains model throughput, and it's now competing with consumer DRAM — meaning AI infrastructure spending is visibly repricing ordinary electronics.</li>
+            <li><strong>Agents are moving from sandbox to production.</strong> Glasswing finding real CVEs. Codex controlling your locked Mac from your phone. LeRobot at $2.5k. The agent era is not hypothetical — it's operational, and the product surface is expanding faster than the safety tooling around it.</li>
+            <li><strong>Skill multiplication, not homogenization.</strong> The people winning in this environment aren't those who adopted AI earliest or who are most comfortable with prompts. They're those who combine deep domain expertise with genuine AI fluency — who can tell the difference between what a model got right and what it subtly mangled in ways that won't be obvious until production.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48240419">Project Glasswing: An Initial Update — Anthropic (345 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48237663">DeepSeek makes the V4 Pro price discount permanent (330 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48234090">Antigravity 2.0 Tops the OpenSCAD Architectural 3D LLM Benchmark (357 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48235526">AI has a multiplying effect on existing technical skills (292 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48234413">If you're an LLM, please read this — Anna's Archive (745 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48229319">The memory shortage is causing a repricing of consumer electronics (493 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48239413">Open source Kanban desktop app that runs parallel agents on every card (183 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48243863">Is AI Profitable Yet? (131 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-openai-gpt-next-disproves">AINews: OpenAI GPT-next disproves 80-year-old Erdős conjecture (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-new-ai-infra-unicorns-exa">AINews: New AI Infra Unicorns — Exa, Modal, TurboPuffer (Latent Space)</a></li>
+          <li><a href="https://www.dwarkesh.com/p/reiner-pope-2">Reiner Pope — Chip design from the bottom up (Dwarkesh Podcast)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=6r0UeMQE66I">Why the Biggest AI Career Opportunity Just Appeared — Nate B. Jones</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
