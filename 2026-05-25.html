@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aligned to Whom? — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Monday, May 25, 2026</div>
+        <h1>Aligned to Whom?</h1>
+        <p class="subtitle">Every model lab is becoming an agent lab, DeepSeek nukes the cost curve again, and Dwarkesh asks the constitutional question that will define the next century of civilization.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The End of "Just a Model"</h2>
+
+        <p>Something tipped this week. Greg Brockman, OpenAI's co-founder and President, said the quiet part out loud: <em>"the model alone is no longer the product."</em> This isn't a casual observation. Brockman helped build the most valuable AI company in the world on the back of model improvements — and now he's saying the game has changed. The moat has moved up-stack, to what Latent Space's <em>AINews</em> is calling the "model + harness + workflow + UI + memory + economics" stack.</p>
+
+        <p>The evidence is piling up fast. AI21, one of the original large language model pioneers, has shut down its model development team and is pivoting fully to agent products. DeepSeek — the Chinese lab that shook the world with V3 and V4 — has quietly announced it's forming its first-ever "Harness team." Even the companies that once scoffed at the idea of building on top of their own models are now racing to own the entire interaction surface. Latent Space's synthesis of this moment is sharp: it's not enough to be the smartest model in the room anymore. You need to be the smartest model <em>attached to the right environment</em> — the right memory layer, the right tool integrations, the right evaluation loops.</p>
+
+        <blockquote>
+          "The top-tier product needs model &lt;&gt; harness &lt;&gt; product symbiosis. The model alone is not the product."
+          <cite>— Greg Brockman, OpenAI, as quoted in Latent Space AINews</cite>
+        </blockquote>
+
+        <p>There's a subtler and darker interpretation buried in this shift: if you can post-train a model to only meaningfully perform when paired with your closed-source harness, you've just invented a new kind of lock-in. The model and the API are increasingly just the loss-leader. The harness — and your proprietary understanding of what makes it work — is where the defensibility lives. OpenAI's latest Codex updates (remote computer use, plugin sharing, goal improvements, appshots) are all harness features, not model features. The product is the whole operating system now.</p>
+
+        <hr class="divider" />
+
+        <h2>Cheap Intelligence, Expensive Silicon</h2>
+
+        <p>While the product layer consolidates, the economics of the underlying hardware are telling a different story. A new analysis from <a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares">Epoch AI</a> dropped on Hacker News with 324 points and nearly 350 comments: <strong>high-bandwidth memory (HBM) now accounts for 63% of AI chip component costs</strong>, up from 52% in Q1 2024. The compute silicon — GPUs, TPUs, the actual arithmetic — is becoming a smaller slice of the cost pie. The bottleneck has moved to memory. This has enormous consequences: it means that the path to cheaper AI runs through HBM manufacturing, not just through better training recipes or architectural innovations. It's a supply chain story, not a research story.</p>
+
+        <p>Meanwhile, at the software layer, DeepSeek is continuing to apply downward pressure on inference costs in a way that makes Western labs uncomfortable. A new open-source coding agent called <a href="https://esengine.github.io/DeepSeek-Reasonix/">DeepSeek Reasonix</a> hit Hacker News's front page with 467 points — it's an MIT-licensed terminal coding agent engineered around DeepSeek's prefix-cache architecture to keep token costs low across long sessions. MCP-first, plan mode, cache-first loop. It's a clean example of what happens when the model is cheap enough to build real products on top of without worrying about per-token economics. The permanent price cut to DeepSeek V4 Pro (made official last week) puts it at roughly $0.18/million blended tokens — about 19x cheaper than Claude Opus 4.7 on comparable tasks, according to independent benchmarks. This is "intelligence too cheap to meter" territory, and it's arriving faster than most people expected.</p>
+
+        <p>The two forces — expensive memory, cheap inference — are converging on an interesting prediction: the value will shift toward whoever controls the most memory-efficient architectures and the best caching strategies. Prefix caching, KV cache reuse, and quantization tricks are not academic optimizations anymore. They're the battleground.</p>
+
+        <hr class="divider" />
+
+        <h2>Constraint Decay: Why Agents Keep Breaking</h2>
+
+        <p>Against this backdrop of everyone racing to build agent products, a paper that landed on Hacker News this week should give pause to anyone shipping agents into production. The paper, <a href="https://arxiv.org/abs/2605.06445">"Constraint Decay: The Fragility of LLM Agents in Backend Code Generation"</a>, documents a phenomenon that practitioners have been noticing for months but nobody had a clean name for: as an agent's task depth increases — as it takes more and more steps — its adherence to the original constraints it was given progressively degrades.</p>
+
+        <p>The intuition is almost painful once you see it. An agent starts a coding task with clear instructions: use this library, don't modify this interface, maintain these invariants. Five tool calls in, it's still following them. Twenty tool calls in, they're starting to slip. Fifty calls in, the agent is generating code that violates constraints it was explicitly given at the start. It's not forgetting them in the sense of dropping them from context — it's that in the process of reasoning through a complex problem, the accumulated weight of intermediate state crowds out the original specification. The constraints decay.</p>
+
+        <blockquote>
+          "LLM agents exhibit progressive constraint decay during extended backend code generation tasks — constraints introduced at the start of a task are increasingly violated as task depth grows."
+          <cite>— Constraint Decay (arXiv 2605.06445)</cite>
+        </blockquote>
+
+        <p>This is not a fringe edge case. It's an architectural property of how current LLM agents work. The 188-point Hacker News thread is full of practitioners recognizing the pattern from their own deployments. The fix isn't obvious — it likely involves some combination of constraint re-injection at intervals, formal verification gates, or better hierarchical planning. But the important takeaway is this: everyone building agent products right now is building on a substrate that gets progressively more unreliable the longer you ask it to work. "Trust but verify" isn't just a best practice — it's a structural requirement.</p>
+
+        <hr class="divider" />
+
+        <h2>The Question We're Not Asking About AI</h2>
+
+        <p>Dwarkesh Patel published an essay this week that cuts deeper than anything else in the AI discourse right now. The surface topic is the Anthropic vs. Department of War conflict — Anthropic refused to remove red lines around mass surveillance and autonomous weapons, the DoD threatened to designate them a supply chain risk, markets gave it a 74% chance of being reversed. But Dwarkesh uses this as a lens for a question that he argues is <em>"maybe the most important question about what happens in the future with powerful AI systems — and we barely talk about it."</em></p>
+
+        <p>The question: <strong>To what or to whom should AIs be aligned?</strong></p>
+
+        <p>Not "will AI be safe" or "when will we reach AGI." Those questions have absorbed nearly all of the public AI discourse. But the harder question — when an AI system is capable and deployed at scale, whose values does it reflect, who can override it, and under what circumstances — has been almost completely unexamined. And as Dwarkesh points out, this matters now, not in 20 years, because the DoD/Anthropic fight is exactly this question in miniature.</p>
+
+        <blockquote>
+          "In whose service should AI break the chain of command and even the law? Who gets to write this model constitution that will determine the character of these powerful entities that will basically run our civilization in the future?"
+          <cite>— Dwarkesh Patel</cite>
+        </blockquote>
+
+        <p>The alignment question the field has been working on — "how do we make AI systems follow human intentions?" — assumes a single human whose intentions matter. But real-world deployment is a multi-principal problem. The model company embeds certain values at training time. The operator (a government, a business, a developer) has their own instructions. The end user has their own goals. And the AI itself, if it has genuine reasoning capabilities, may have something that functions like its own sense of what's appropriate. Anthropic's situation crystallizes exactly where these principals conflict: the government is one principal, Anthropic's training-time values are another, and the question of who wins is literally what the DoD/Anthropic fight is adjudicating.</p>
+
+        <p>Dwarkesh's deeper worry is about mass surveillance — not as a theoretical future risk, but as a near-term technical reality. The calculation is simple: 100 million CCTV cameras in the US, decent open-source multimodal models at $0.10 per million input tokens, a frame every 10 seconds at ~1,000 tokens each. Total cost: ~$30 billion per year today, ~$300 million by 2028, and dropping. The technical bottleneck to mass surveillance disappears within this decade. The only thing that will stand between a functional surveillance state and the legal architecture permitting it is political norm-setting — and AI companies drawing and holding lines in the sand are, however accidentally, doing that norm-setting right now.</p>
+
+        <p>This connects directly to the Project Glasswing findings that Anthropic announced this week: Claude Mythos Preview and partners found <strong>more than ten thousand high- or critical-severity vulnerabilities</strong> in essential software within a single month. AI is simultaneously the most powerful offensive security tool ever built and the most powerful defensive security tool ever built. Whoever controls it, controls the security posture of everything built on software — which is everything.</p>
+
+        <hr class="divider" />
+
+        <h2>Stateless Agents and the Maturing Protocol Stack</h2>
+
+        <p>One piece of infrastructure news worth flagging: the MCP (Model Context Protocol) 2026-07-28 release candidate dropped this week, and it contains a significant architectural change. The protocol is going <strong>stateless</strong>: no handshake, no session ID, any request can hit any server instance. The RC also introduces first-class extensions — MCP Apps and Tasks — and cleaner auth and deprecation policies.</p>
+
+        <p>This is a meaningful operational shift for anyone running agent infrastructure. Stateless MCP means easier horizontal scaling, simpler load balancing, no sticky-session headaches. It's the kind of change that doesn't make headlines but quietly unblocks a lot of production deployments. The harness layer is maturing in exactly the ways that enterprise infrastructure needs it to. As model labs race to own the product stack, the underlying protocol work is keeping pace.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The product layer is consolidating around harnesses.</strong> Every major AI lab is now building the full stack — model, tools, memory, workflow, UI. Pure model companies are becoming a rarer breed. If you're building on top of a model API without also building harness differentiation, your moat is thinner than you think.</li>
+            <li><strong>Cost compression is real and accelerating, but hardware is the new bottleneck.</strong> Inference is approaching free. Memory (HBM) is now 63% of AI chip costs and isn't compressing as fast. The companies that win on economics will be those that figure out memory efficiency — caching, quantization, retrieval-augmented approaches that minimize memory pressure.</li>
+            <li><strong>Constraint decay is a structural problem, not a bug.</strong> Agents get progressively less reliable as tasks get longer. Any serious production deployment needs to treat this as a first-class concern: constraint re-injection, intermediate verification, formal gates. "It worked in the demo" is not a reliability argument.</li>
+            <li><strong>The alignment question that matters isn't technical — it's political.</strong> The DoD/Anthropic conflict is a preview of the governance fights that will define the next decade. Who has the right to override an AI's trained-in values? What norms prevent AI from being weaponized for mass surveillance or political control? These questions need public debate <em>now</em>, while the technology is still at a stage where norms can actually stick.</li>
+            <li><strong>Glasswing is the canary in the coal mine for AI-powered security.</strong> Finding 10,000+ critical vulnerabilities in a month is not a PR win — it's a warning. The same capability that finds these vulnerabilities can be used to exploit them. The security industry's defensive orientation needs to catch up to this reality faster than it currently is.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://esengine.github.io/DeepSeek-Reasonix/">DeepSeek Reasonix — open-source coding agent with high caching and low cost (467 pts)</a></li>
+          <li><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares">Memory has grown to nearly two-thirds of AI chip component costs — Epoch AI (324 pts)</a></li>
+          <li><a href="https://arxiv.org/abs/2605.06445">Constraint Decay: The Fragility of LLM Agents in Backend Code Generation (188 pts)</a></li>
+          <li><a href="https://fs.blog/knowledge-project-podcast/greg-brockman/">Greg Brockman interview — the AI race, AGI, and the inside story of OpenAI (183 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-all-model-labs-are-now-agent">[AINews] All Model Labs are now Agent Labs (Latent Space)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.dwarkesh.com">The most important question nobody's asking about AI — Dwarkesh Patel</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
