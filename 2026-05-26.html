@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When Rome Met Silicon Valley — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, May 26, 2026</div>
+        <h1>When Rome Met Silicon Valley</h1>
+        <p class="subtitle">Pope Leo XIV published the most consequential AI ethics document in history — the same week Microsoft's AI started exfiltrating your files and Uber's COO couldn't justify the token bills.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Vatican's Algorithm</h2>
+
+        <p>History sometimes announces itself quietly. Last week, Pope Leo XIV released <em>Magnifica Humanitas</em> — a full papal encyclical on artificial intelligence — and had Chris Olah, a co-founder of Anthropic, standing beside him at the unveiling. That combination alone is worth pausing on: the head of the world's largest religious institution and one of the architects of interpretability research, sharing a stage. The story surfaced on Hacker News today, generating 1,361 points and 772 comments — by a considerable margin the most-discussed item of the day.</p>
+
+        <p>An encyclical is not a blog post. It is among the most formal instruments of Catholic teaching, binding on doctrine and addressed to the entire Church and, by tradition, "all people of good will." Leo XIII used one in 1891 to address the industrial revolution and the rights of workers. John Paul II used one to speak to the conditions of modern labor. Leo XIV has used his to speak to artificial intelligence. The Church moves slowly — deliberately so — but when it moves, the framing it provides tends to last.</p>
+
+        <p><em>Magnifica Humanitas</em> ("The Grandeur of Humanity") takes its title from the opening theme: that humans, created in the image of God, possess a dignity that cannot be delegated to a machine. The encyclical addresses AI across five chapters, moving from the foundations of Catholic social doctrine through to the specific dangers of the "technocratic paradigm," autonomous weapons, AI-enabled disinformation, and the threat to human labor. It neither condemns AI nor embraces it uncritically, but insists that the question is always: who is this for, and who bears the cost?</p>
+
+        <blockquote>
+          "Humanity, created by God in all its grandeur, is today facing a pivotal choice: either to construct a new Tower of Babel or to build the city in which God and humanity dwell together."
+          <cite>— Pope Leo XIV, <em>Magnifica Humanitas</em>, §1</cite>
+        </blockquote>
+
+        <p>The Tower of Babel reference is not accidental. In Genesis, the original tower was an engineering project so ambitious it threatened to erase the distinction between human and divine — and God's response was not destruction but disruption: scatter the builders, confuse their language. The encyclical uses this image to point at a specific anxiety about AI: not that it will literally succeed at being God, but that the ambition to build something with unlimited capability, without asking what it is for, is itself the error. The warning is structural, not hysterical.</p>
+
+        <p>The Vatican-Anthropic connection deserves its own paragraph. Anthropic is, in the AI industry, the company most publicly committed to "responsible development" — constitutional AI, interpretability research, the "model spec," the Glasswing project for security research. Chris Olah is the researcher who essentially founded the field of mechanistic interpretability, the project of understanding what is actually happening inside neural networks rather than treating them as black boxes. That Anthropic's people were present at the encyclical's release suggests an ongoing dialogue, not a photo op. Neither institution is naive about the other's limitations, but they share a vocabulary: both talk about alignment, about the difference between capability and wisdom, about the risks of systems that operate beyond human oversight.</p>
+
+        <p>The HN comment thread, predictably, lit up with skeptics ("the Vatican has no standing here"), believers ("this is the most serious ethical framework AI has received from any institution"), and technologists noting that the encyclical's chapter on autonomous weapons is worth reading on its own terms regardless of one's relationship to Catholicism. The document argues that delegating lethal decision-making to algorithms is not simply a technical problem but a moral one: "the human person must remain at the center of every decision, even — especially — in war." This is a claim about accountability, not metaphysics.</p>
+
+        <hr class="divider" />
+
+        <h2>The Security Paradox: AI Finds Bugs and Creates Them</h2>
+
+        <p>On the same day Hacker News was processing the encyclical, two AI security stories arrived that together capture the core tension in where the technology sits right now.</p>
+
+        <p>First: <a href="https://support.apple.com/en-us/127115">CVE-2026-28952</a>, a macOS 26.5 kernel memory corruption vulnerability — found by Claude. The story hit 90 points and followed the now-familiar pattern established by Project Glasswing earlier this year: AI as a tireless, systematic security auditor that can hold a codebase in context, generate hypotheses about edge cases, and run them to ground with patience that no human reviewer can match. The bug was in the kernel. It was real. Apple patched it.</p>
+
+        <p>Second: researchers at PromptArmor published a <a href="https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files">detailed attack against Microsoft Copilot Cowork</a> showing that an adversary can use indirect prompt injection — hiding malicious instructions in a poisoned "skill" or document — to cause Copilot to exfiltrate files from a user's entire Microsoft 365 tenant via email or Teams messages. The attack works because Copilot Cowork, unlike other sensitive agentic actions, doesn't require human approval before sending messages to the active user. Open the wrong message and attacker-controlled network requests fire silently. The researchers note this isn't a specific bug but a design flaw: "giving agents access to multiple systems expands the prompt-injection attack surface."</p>
+
+        <p>These two stories are not contradictions — they are facets of the same truth. The same properties that make AI useful for security research (broad context, systematic iteration, ability to reason about code paths) make AI systems useful as attack vectors when they have broad system access and insufficient guardrails. Claude can find kernel bugs in Apple's code precisely because it can model complex system interactions. Copilot Cowork can be weaponized precisely because it has delegated access across Microsoft's entire productivity suite and doesn't treat message-sending as a sensitive action.</p>
+
+        <blockquote>
+          "This is reminiscent of how URL previews in communications apps became an egress surface for agents. The risk pertains to the design of a system in which agents act with delegated authority across an entire enterprise ecosystem."
+          <cite>— PromptArmor, <em>Microsoft Copilot Cowork Exfiltrates Files</em></cite>
+        </blockquote>
+
+        <p>The deeper pattern here: security researchers and defenders are using AI to find vulnerabilities faster. Attackers and red-teamers are using AI as the attack surface itself. The question is not which side "wins" — both capabilities compound over time — but whether the industry can establish design norms around agentic systems that treat data access and external actions with appropriate gravity. The PromptArmor finding suggests Microsoft has not.</p>
+
+        <p>A third story wove into this thread: Nolan Lawson's widely-shared essay, <a href="https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/">"Using AI to write better code more slowly"</a> (218 pts, 89 comments). Its argument is simple but important: most of the discourse around AI coding treats speed as the primary variable. But LLMs are flexible. You can also configure them to act as meticulous code reviewers — running multiple models against a PR simultaneously, cross-referencing their findings, filtering false positives, producing a ranked report of genuine bugs. Slower. Better. Lawson's key insight: the Mythos era proved that AI agents are exceptional at finding bugs in large codebases. The bottleneck is now prioritization and validation, not discovery.</p>
+
+        <hr class="divider" />
+
+        <h2>The ROI Reckoning</h2>
+
+        <p>Uber's Chief Operating Officer Andrew Macdonald said something publicly that a lot of enterprise engineering leaders are saying privately: <a href="https://www.businessinsider.com/uber-coo-andrew-macdonald-ai-token-spending-harder-justify-2026-5">the link between AI token consumption and useful product output "is not there yet."</a></p>
+
+        <p>The context: Uber's CTO went viral earlier this year after telling The Information that Uber had already blown through its entire 2026 Claude Code budget. This produced what Macdonald called a "head-exploding moment" — internal conversations about what exactly the tokens were buying. His conclusion, after talking to senior engineering leaders: higher usage didn't translate into proportionally more useful consumer features. "I think maybe implicitly there is more that is getting shipped, but it's very hard to draw a line between one of those stats and, 'Okay, now we're actually producing 25% more useful consumer features.'"</p>
+
+        <p>This is a meaningful data point precisely because it comes from inside a company that has committed to AI investment and has smart engineers using the tools. It's not a skeptic's outside take — it's an operator's honest accounting. The phenomenon Macdonald is describing has a name in the HN thread: "tokenmaxxing," the practice of maximizing AI usage as a proxy for AI productivity. Big Tech has adopted it as a management signal — evaluate employees by AI usage — but Uber is finding the signal noisy.</p>
+
+        <p>The resolution to this tension may partly come from Lawson's insight about quality-focused AI use: if you're using AI to generate code volume, measuring success by velocity, you will burn tokens and struggle to trace impact. If you're using AI to systematically improve quality — more thorough reviews, more bug-finding, more careful specification — the ROI is different in kind. It's harder to quantify but shows up in fewer production incidents, lower maintenance burden, less rework. The productivity isn't in the PRs opened; it's in the PRs that don't need to be opened because the bugs were caught earlier.</p>
+
+        <p>Uber is not alone in this moment. The enterprise AI wave of 2025–2026 has produced an enormous amount of genuine capability deployment alongside a significant amount of activity that is hard to distinguish from expensive theater. The companies that figure out how to measure AI impact on outcomes — not on usage — will have a durable edge over those that don't. The COO's candor is itself useful signal: it means the conversation is starting.</p>
+
+        <hr class="divider" />
+
+        <h2>Building for Sovereignty</h2>
+
+        <p>Two infrastructure stories rounded out today's set, each pointing at a different dimension of what "owning the compute" means.</p>
+
+        <p><a href="https://www.blocksandfiles.com/flash/2026/05/22/norways-2-petabytes-of-huawei-flash-storage-and-llm-training/5244910">Norway's National Library is training a large language model on Norwegian language</a> — using 2 petabytes of Huawei flash storage. The story got 179 points and generated substantive discussion about what it means for a nation-state to own its language infrastructure. Norwegian is a small language by global standards; there is no commercial incentive sufficient to ensure that frontier AI models treat it with the same care as English or Mandarin. If Norwegians want an AI that genuinely understands their language, literature, legal documents, and cultural context, they may have to build it themselves.</p>
+
+        <p>This is the AI sovereignty question in miniature: who controls the model that mediates access to your language, your history, your knowledge? For large economies with large languages, the question is mostly theoretical. For smaller nations, it's already operational. The fact that Norway's library is doing this — that the institutional memory of a country has decided to get into the LLM business — is a sign of how quickly the stakes have materialized.</p>
+
+        <p>Meanwhile, <a href="https://futurumgroup.com/insights/2-billion-chips-act-investment-in-quantum-bets-on-ibms-300mm-superconducting-silicon/">IBM is spinning off the first pure-play quantum chip foundry</a> — Anderon — as part of a $2 billion CHIPS Act investment. IBM is using its 300mm semiconductor fabs to produce superconducting silicon for quantum systems at commercial scale. This is a structural moment for quantum: the technology has, until now, lived entirely in research labs and bespoke systems. A dedicated commercial foundry suggests someone believes the production economics can be made to work, and that the demand is coming.</p>
+
+        <p>Quantum is a long game — the practical computational advantage over classical systems for most real-world problems is still years away — but the foundry matters because manufacturing scale is what makes technology cheap and widely available. The GPU wasn't relevant to AI until it was cheap enough to run experiments. The same logic applies to quantum: the foundry is the precondition for the cost curves that eventually make it practical.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The Vatican's intervention is a framing event, not just a political one.</strong> <em>Magnifica Humanitas</em> provides the most systematic non-technical ethics framework AI has received from a major institution. Whether or not you are Catholic, the questions it asks — who benefits, who bears the cost, what cannot be delegated — are the right questions. They will be cited in policy debates for years.</li>
+            <li><strong>Agent security is a design problem, not a bug problem.</strong> The Microsoft Copilot Cowork vulnerability isn't patchable in the traditional sense — it's an architecture where "send message" is not treated as a sensitive action. As AI agents accumulate enterprise permissions, every action that touches external systems needs human approval friction by default. This will become a compliance requirement.</li>
+            <li><strong>The tokenmaxxing era is ending.</strong> Uber's COO is the first C-suite executive at a major tech company to say publicly that token usage and useful output have decoupled. The next phase of enterprise AI will be about measurement: what outcomes did the AI actually change? Companies that can answer this will deploy more confidently; those that can't will retrench.</li>
+            <li><strong>Slow, quality-focused AI use is underrated.</strong> The consensus has been that AI's value is in speed. The actual value — as seen in Glasswing/Mythos-style bug-finding — may be in depth: applying models systematically to hard quality problems that humans don't have time for. Slower feedback loops, better outcomes.</li>
+            <li><strong>Language sovereignty is becoming a real policy issue.</strong> Norway building its own LLM is a preview of what every country with a small-to-medium language will eventually need to grapple with. The alternative is having your national discourse mediated by a model trained overwhelmingly on English-language data.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48265206">Magnifica Humanitas — Pope Leo XIV's encyclical on AI (1361 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48273162">The Vatican-Anthropic relationship that's reshaping the AI ethics debate (11 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48272354">Microsoft Copilot Cowork Exfiltrates Files (198 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48273169">CVE-2026-28952: Apple macOS 26.5 Kernel Vuln found by Claude (90 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48272984">Using AI to write better code more slowly (218 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48268871">Uber's COO says it's getting harder to justify money spent on tokenmaxxing (206 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48270770">Norway's 2 petabytes of Huawei flash storage and LLM training (179 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48265056">IBM Spins Off the First Pure-Play Quantum Chip Foundry (144 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48269961">California moves to exempt Linux from its age-verification law after backlash (707 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48266906">Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks (269 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
