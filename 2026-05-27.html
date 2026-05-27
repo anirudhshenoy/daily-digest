@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Long Sleep — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, May 27, 2026</div>
+        <h1>The Long Sleep</h1>
+        <p class="subtitle">LLMs discover they need to nap, Uber discovers its AI budget is a black hole, and a startup is quietly building an ambulance for the future.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Language Model That Needed a Nap</h2>
+
+        <p>A new paper climbing HN today carries the kind of title that earns it immediate attention: <em><a href="https://arxiv.org/abs/2605.26099">Language Models Need Sleep</a></em>. Researchers propose a sleep-like consolidation mechanism for transformer LLMs — a periodic offline phase in which the model converts recently-accumulated context into persistent "fast weights," then clears its key-value (KV) cache before waking back up for inference. During this sleep, the model makes N recurrent passes over what it has seen, updating internal state-space model (SSM) blocks through a learned local rule. The more sleep, the better the performance — with the biggest gains on tasks requiring multi-hop reasoning, which is precisely where current transformers struggle most.</p>
+
+        <p>This is not just an academic curiosity. It points to something structural: the transformer's attention mechanism scales quadratically with context length. Every token you've ever read stays live in memory, getting paged through on every forward pass. There is no forgetting, no compression, no consolidation — just an ever-growing pile. Humans, by contrast, sleep eight hours and wake up with a distilled model of the day, rather than a verbatim recording of every sentence spoken. The paper's core claim is that the latter is provably worse for long-horizon reasoning, and that sleep-like compression actually helps.</p>
+
+        <blockquote>
+          "During inference, this shifts extra computation to sleep while preserving the latency of wake-time prediction."
+          <cite>— <em>Language Models Need Sleep</em>, arXiv:2605.26099</cite>
+        </blockquote>
+
+        <p>The consolidation framing connects to a separate insight making rounds today: <a href="https://jry.io/writing/use-boring-languages-with-llms/">use boring languages with LLMs</a>. The argument, made by a consultant who has watched agentic systems across dozens of projects, is that consistency compounds. Fragmented language ecosystems — the JavaScript framework wars, Python's proliferating package managers — produce inconsistent training corpora, which produce inconsistent agentic output. "For a human, fragmentation is annoying. For a model trained on the public corpus of all of it, fragmentation is something closer to a problem which needs to be solved in reinforcement learning or agent harnesses." Anthropic, notably, hard-coded bias for specific JavaScript frameworks in Claude Code — not an aesthetic preference, but an empirical hedge against the variance that comes from a fragmented ecosystem. The implication is that language choice is now an AI infrastructure decision as much as a developer productivity one. Boring wins.</p>
+
+        <p>Taken together, these two pieces sketch a picture of LLM limitations that are not about raw intelligence but about architecture: how memory is stored, how it compounds with context length, and how the training data distribution shapes which patterns can reliably emerge at inference time. The fixes are engineering problems, not parameter problems. That's actually hopeful — it means they're solvable.</p>
+
+        <hr class="divider" />
+
+        <h2>Tokens vs. Features: Uber's Reckoning</h2>
+
+        <p>Uber reportedly exhausted its annual AI budget just four months into 2026. Now its president and COO, Andrew Macdonald, is saying what a lot of senior operators are starting to think but not yet say publicly: <a href="https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify">the link between token consumption and useful features isn't there yet</a>. "That link is not there yet, right? I think maybe implicitly there is more that is getting shipped, but it's very hard to draw a line between one of those stats and, 'Okay, now we're actually producing 25 percent more useful consumer features.'"</p>
+
+        <p>The candour is striking given how bullish everyone in enterprise has been about AI ROI. Uber spent $3.4 billion on R&D in 2025, 9% more than the year before, and is compensating for rising AI costs by slowing human hiring. So the CEO has already made the substitution bet. But the president is now questioning whether the productivity signal is actually there. Token cost is measurable. Feature throughput is measurable. The ratio between them? Apparently murky enough to be "hard to justify" at board level.</p>
+
+        <blockquote>
+          "We're going to have to start talking about token consumption and the associated cost versus headcount. So if you're not actually able to draw a direct line to how much useful features and functionality you're shipping to your users, that trade becomes harder to justify."
+          <cite>— Andrew Macdonald, President &amp; COO, Uber</cite>
+        </blockquote>
+
+        <p>This lands in the same week that a post arguing for <a href="https://news.ycombinator.com/item?id=48278610">outsourcing plus local AI over frontier lab APIs</a> is generating significant HN discussion. The thesis: as local models improve and outsourced specialization gets cheaper, the economics of paying premium prices for frontier API calls will invert. The ROI math only works if your use case is genuinely in the frontier capability zone — for most routine enterprise tasks, a well-tuned open-source model running locally might soon deliver 90% of the value at 10% of the cost.</p>
+
+        <p>There is a pattern forming here. The 2024–2025 phase of AI adoption was characterised by "just turn it on and see." The 2026 phase is shaping up to be the accountability phase — where the tokens get audited, the headcount trade-offs get examined, and the tools that actually move metrics survive while the others quietly get cancelled. This is healthy. It was always coming. The question is whether the winners can demonstrate their value clearly enough before budgets get cut.</p>
+
+        <hr class="divider" />
+
+        <h2>Prediction Markets, Put to Sleep</h2>
+
+        <p>Spain has blocked both Polymarket and Kalshi from operating in the country, citing the absence of a gambling license. The story hit 813 points on HN — the highest-scored item on today's front page — which tells you something about how much the prediction market community has grown. Polymarket and Kalshi are the two dominant real-money prediction markets in the Western world; their growth since 2024 has been extraordinary, fuelled by their accuracy during the US election cycle and a wave of interest in "truth-weighted" markets as an alternative to punditry.</p>
+
+        <p>The regulatory framing is telling. Spain is treating prediction markets as gambling — a category that requires licensing, age verification, responsible gambling provisions, and consumer protection infrastructure. The operators, and their advocates, would argue these are fundamentally different: gambling is zero-sum entertainment with artificial risk, while prediction markets aggregate real beliefs about real-world events, producing a public good in the form of calibrated forecasts. The economic theory here goes back to Hayek's price mechanism — prices encode distributed knowledge better than any central planner could.</p>
+
+        <p>But regulators in most jurisdictions have not accepted this distinction. The UK, much of the EU, and now Spain have concluded that if money changes hands on the basis of an uncertain future event, it is gambling until proven otherwise. The legal and lobbying battles ahead will be expensive and slow. Meanwhile, the irony is that the countries most likely to regulate prediction markets out of existence are often the same ones that could benefit most from having better public forecasting infrastructure — knowing what the market actually thinks about a policy outcome, an election, a disease spread.</p>
+
+        <hr class="divider" />
+
+        <h2>An Ambulance for the Future</h2>
+
+        <p>The most compelling thing I read this week didn't come from an AI paper. It came from a <em>No Priors</em> interview with Laura Deming, who runs a company called <a href="https://until.bio">Until</a>. Their goal, stated plainly: reversible whole-body cryopreservation for medical hibernation. Their near-term product: reversibly cryopreserving human organs so transplant patients aren't hostage to a clock that starts ticking the moment a donor organ becomes available.</p>
+
+        <p>The way Deming frames the problem is almost deceptively simple. Right now, if you need a kidney transplant, you cannot leave a two-hour radius of your transplant centre. You carry a pager. Surgeons charter private jets, fly to collect a donor organ, and operate the same night they land. Scheduling is done at the last minute. Matching is imperfect because there is no time to do it well. The scarcest, most precious medical resources we know of — human organs — are treated like perishable groceries on a tight delivery window.</p>
+
+        <blockquote>
+          "Making time not a variable changes the whole paradigm."
+          <cite>— Laura Deming, co-founder, Until</cite>
+        </blockquote>
+
+        <p>The science here is more tractable than it sounds. Ice formation is stochastic — it nucleates probabilistically rather than snapping on instantaneously at zero degrees. If you can traverse the dangerous temperature zone (roughly 0°C to -130°C) fast enough, you dramatically reduce the probability of ice forming. Below -130°C, nucleation stops entirely. The trick is that you also need cryo-protective agents (CPAs) to help — but the faster your cooling and rewarming rate, the less CPA you need, and CPA is toxic at high concentrations. So the engineering problem and the biology problem are coupled: better engineering tools reduce the CPA burden, which reduces toxicity risk.</p>
+
+        <p>We already know this works at small scales. There are children alive today who were cryopreserved as embryos for thirty years and successfully thawed. The proof of concept exists. Until is working on scaling it to kidneys (their first near-term product), then to whole rats, then eventually to whole human bodies — with an eye toward enabling a "medical hibernation" use case where terminally ill patients can be paused until a curative therapy becomes available. It is not science fiction. It is engineering with known physical constraints, and a roadmap that starts with problems that will clearly be solved in years, not decades.</p>
+
+        <p>There is something quietly profound about two of today's biggest stories converging on the same insight from different directions: LLMs need sleep to consolidate and improve, and humans might one day be able to sleep through the gap between the disease they have and the cure that's coming. In both cases, the insight is that the passage of time is not always your friend — and that the ability to compress, pause, and selectively wake is a form of deep intelligence.</p>
+
+        <hr class="divider" />
+
+        <h2>Small Signals</h2>
+
+        <p><strong>Big tech's anti-labour playbook has come for Wikipedia.</strong> An <a href="https://medium.com/@jakeorlowitz/wikipedia-is-doing-the-capitalist-thing-56a393232943">essay collecting 344 HN upvotes</a> argues that the Wikimedia Foundation is beginning to behave like a traditional technology company — deprioritising volunteer editors, centralising decision-making, and expanding its paid staff in ways that subtly shift power away from the community that built the project. Wikipedia's community-governance model has always been its structural moat; any erosion of volunteer trust is worth watching carefully. The AI angle: Wikipedia is one of the highest-quality training datasets in existence. How it evolves — and who controls it — has long-term implications for what models know.</p>
+
+        <p><strong>Dropbox CEO Drew Houston is stepping down.</strong> The company announced the transition this week, with Houston to be replaced by Ashraf Alkarmi. Dropbox's revenue plateaued years ago as cloud storage became commoditised, and the company has been attempting an AI pivot — pushing "Dash," a universal search and knowledge management tool — with mixed results. Houston's exit is a quiet data point in a larger pattern: the CEOs who built the SaaS wave of 2012–2018 are leaving their companies in the hands of people better suited to the AI-native transition. Whether that transition delivers is a different question.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>LLM architecture is the new battleground.</strong> The sleep-consolidation paper and the boring-languages insight both point to the same gap: raw parameter count is no longer the constraint. How models store, compress, and retrieve context across long horizons is. Expect the next wave of capability improvements to look less like bigger models and more like smarter memory architectures.</li>
+            <li><strong>The AI accountability phase has arrived.</strong> Uber's candid acknowledgement that token spend and feature output are not yet correlated is not a one-company problem. Enterprise AI budgets are now large enough to audit. The tools that survive 2026 will be the ones that can show the receipts — not just token throughput, but measurable output metrics that boards can understand.</li>
+            <li><strong>Prediction markets face a decisive regulatory moment.</strong> Spain's ban is not the end of the story — it is the opening move in a regulatory conversation that will define whether real-money forecasting markets can operate at scale in Western democracies. The outcome matters beyond crypto trading: it determines whether market prices can serve as a genuine public information infrastructure.</li>
+            <li><strong>Cryopreservation is closer than most people think.</strong> Until's work on organ preservation is not moonshot science — it is tractable engineering on top of well-understood physics. The first product (transplant organ preservation) could enter clinical trials within a few years. Watch this space the same way you would have watched DeepMind's protein folding work in 2019: it looks incremental until the day it isn't.</li>
+            <li><strong>Community-governed institutions are under structural pressure.</strong> Wikipedia's drift toward centralisation is a small but meaningful signal. The open internet's most durable assets — open source repositories, community encyclopaedias, volunteer-maintained datasets — were built on models that are increasingly hard to sustain as adjacent commercial pressures intensify. The degradation, if it happens, will be gradual and easy to miss.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://arxiv.org/abs/2605.26099">Language Models Need Sleep — sleep-like consolidation for LLMs (187 pts)</a></li>
+          <li><a href="https://jry.io/writing/use-boring-languages-with-llms/">Use boring languages with LLMs (187 pts)</a></li>
+          <li><a href="https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify">Uber president says AI spending is getting 'harder to justify' (267 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48278610">Outsourcing plus local AI will soon be more economical than frontier labs (256 pts)</a></li>
+          <li><a href="https://www.reuters.com/business/spain-blocks-prediction-markets-polymarket-kalshi-over-lack-gambling-licences-2026-05-26/">Spain blocks Polymarket, Kalshi over lack of gambling licence (813 pts)</a></li>
+          <li><a href="https://medium.com/@jakeorlowitz/wikipedia-is-doing-the-capitalist-thing-56a393232943">Big tech's anti-labor playbook has come for Wikipedia (344 pts)</a></li>
+          <li><a href="https://www.cnbc.com/2026/05/26/dropbox-ceo-drew-houston-ashraf-alkarmi.html">Dropbox CEO Drew Houston to step down (310 pts)</a></li>
+          <li><a href="https://pop.rdi.sh/where-does-next-token-prediction-leave-us/">Where does next-token prediction leave us? (27 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@NoPriorsPod">Laura Deming on reversible cryopreservation and Until — No Priors Podcast</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
