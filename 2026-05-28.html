@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Found: Product-Market Fit. Lost: The Friday Afternoon. — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, May 28, 2026</div>
+        <h1>Found: Product-Market Fit. Lost: The Friday Afternoon.</h1>
+        <p class="subtitle">Anthropic is about to turn its first profit, companies are paying real API prices, and someone forgot to schedule the dividend for workers.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Bill Has Come Due — and It's Enormous</h2>
+
+        <p>Simon Willison published a short, precise piece yesterday that should be required reading for anyone tracking the AI industry's economics: <a href="https://simonwillison.net/2026/May/27/product-market-fit/">Anthropic and OpenAI have found product-market fit</a>. Not the startup-pitch kind — the "companies are showing up with actual purchase orders" kind. Anthropic is strongly rumored to be posting its first profitable quarter. The mechanism is simpler than most people expected: enterprises that used to buy cheap subscriptions for their teams are now consuming so much via agentic workflows that they've crossed over into API pricing territory.</p>
+
+        <p>Willison ran the numbers on his own usage. His Claude Code and Codex activity over 30 days would have cost <strong>$2,180</strong> at API rates. He pays $200/month across two subscriptions. For him as an individual power user, that's an extraordinary deal. But multiply that same usage pattern across a thousand-person engineering org — even at 10% of his intensity — and suddenly you're looking at millions of dollars a month in API spend. That's the inflection point. The enterprise discount that made Claude palatable is evaporating as utilization climbs, and Anthropic is capturing that revenue now.</p>
+
+        <blockquote>
+          "I had assumed that companies making extensive use of agents were still getting a deal. I'm no longer sure that's true. API revenue is becoming less important than enterprise agreements where usage is metered differently."
+          <cite>— Simon Willison, simonwillison.net</cite>
+        </blockquote>
+
+        <p>The second data point this week tells the same story from the opposite direction. DuckDuckGo — the search engine that has made "no AI" its primary brand differentiator — <a href="https://www.pcgamer.com/hardware/duckduckgos-ai-free-search-saw-nearly-28-percent-more-visits-in-the-week-following-googles-insistence-that-people-love-ai-mode/">saw a 28% surge in traffic</a> in the week after Google publicly insisted that users love AI Mode. That counterintuitive result isn't really counterintuitive at all: when a platform tells you it knows what you want, you remember it doesn't. A meaningful slice of Google's user base is not rushing toward AI-first search — they're fleeing it. Two truths can coexist: AI is generating real commercial value for enterprise customers paying API prices, while consumers are increasingly organizing around its absence.</p>
+
+        <hr class="divider" />
+
+        <h2>CEO Psychosis and the Gap Between Demo and Reality</h2>
+
+        <p>Aaron Levie — the CEO of Box, an AI bull, and one of the more honest voices in enterprise software — handed TechCrunch a gift this week by naming something that a lot of practitioners have noticed but few have said plainly: <a href="https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/">tech CEOs are suffering from AI psychosis</a>. His diagnosis: executives are "sufficiently distant from the last mile of work" that when they play with an AI prototype and it produces a convincing output, they immediately leap to "therefore, we can automate the entire workflow." They're the only people in the building who don't have to deal with hallucinated library calls, review queues that don't scale, and the ten other steps between "AI wrote some code" and "code shipped safely."</p>
+
+        <blockquote>
+          "CEOs are uniquely prone to AI psychosis because they're sufficiently distant from the last mile of work that still has to happen to generate most value with AI. They play with AI, develop a prototype, or generate a contract — and make the leap to believing agents can do the work."
+          <cite>— Aaron Levie, founder of Box</cite>
+        </blockquote>
+
+        <p>The antidote Levie prescribes is to use AI "a ton" — not to form opinions about it, but to crash into its actual limitations. CEOs who skip that step arrive at their board meetings with a very compelling narrative about headcount reduction and almost no model for what breaks when you pull those people out. The real cost of AI-led layoffs, as we've seen across multiple companies this year, shows up six to twelve months later as degraded code quality, eroded institutional knowledge, and agents confidently doing the wrong thing with nobody to catch it.</p>
+
+        <p>This lands differently against the backdrop of a sardonic essay that climbed HN yesterday: <a href="https://mlsu.io/posts/day-off/">Can we have the day off?</a> The premise is simple. If AI is about to 10x white-collar productivity, the logical implication is that a worker can produce Monday-through-Thursday what previously took a full five-day week. So — can they take Friday off? The author is not actually asking. They know the answer. The 10x productivity narrative is deployed almost exclusively in the direction of "do more with fewer people," never in the direction of "do the same with more leisure." The productivity dividend, in other words, appears to be a one-way valve. It flows up.</p>
+
+        <hr class="divider" />
+
+        <h2>The Practitioner's Edge: Claude Code Mastery Goes Deep</h2>
+
+        <p>While executives debate the future, engineers are in the trenches figuring out how to actually extract compounding value from agentic tools right now. A blog post from arps18 titled <a href="https://arps18.github.io/posts/claude-code-mastery/">Beyond the Prompt: Claude Code as a Daily Driver</a> hit the top of HN yesterday and deserved every upvote it got. It's the kind of post that only gets written by someone who has internalized the tool so deeply they can articulate the gap between surface-level and expert usage.</p>
+
+        <p>The most important insight in the piece comes straight from Boris Cherny (Head of Claude Code at Anthropic): give Claude a verifiable feedback loop for its own output. This single change — making sure Claude can run tests, lint its work, or otherwise check itself — yields a 2-3x quality improvement over naive prompt-and-accept. Without it, you are the only feedback loop; with it, Claude iterates until things actually work. That asymmetry compounds fast.</p>
+
+        <p>The practical workflow the post describes: use <strong>Plan Mode</strong> (Shift+Tab twice in the terminal) to put Claude in read-only exploration before touching any code. Have it trace data flows, understand the architecture, and write a plan. Then spin up a <em>second</em> Claude session to review that plan as a "staff engineer" — with no prior context bias, so it catches gaps the first session rationalized away. Only then do you execute. Skip planning for small fixes; use it for anything touching more than one file. The other key discipline: <strong>reference, don't describe</strong>. Type <code>@src/auth/login.py</code>, not "look at the auth module." Precision in references eliminates an entire class of hallucination.</p>
+
+        <blockquote>
+          "The casual user types prompts, accepts suggestions, and treats it like a fancier autocomplete. The daily driver uses it like a programmable agent with memory, custom commands, parallel sessions, and a project setup that compounds over time."
+          <cite>— arps18, Beyond the Prompt</cite>
+        </blockquote>
+
+        <p>The Claude.md file as persistent project memory is the detail most people skip. A well-maintained Claude.md means every new session starts with full context about the codebase architecture, the conventions the team follows, the things Claude should never do without asking, and the verification steps specific to this project. It's not documentation for humans — it's a standing brief for your agent. The teams who invest in it see dramatically less drift across sessions.</p>
+
+        <hr class="divider" />
+
+        <h2>YouTube Starts Labeling What You're Actually Watching</h2>
+
+        <p>On the content transparency front, YouTube <a href="https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/">announced two significant changes</a> to how AI-generated content is labeled on the platform. First, the disclosure label moves from the expanded description (where almost nobody reads it) to directly below the video player for long-form content and as an overlay on Shorts — so it's visible without any action on the viewer's part. Second, and more consequential: YouTube is now rolling out <strong>automatic AI detection</strong> for photorealistic content. If a creator doesn't manually disclose AI use but the platform's systems detect significant AI generation, the label goes on anyway.</p>
+
+        <p>This is a meaningful shift in platform accountability. For the past two years, disclosure has been self-reported and creator-initiated, which means it was inconsistently applied and largely absent where it mattered most — in politically sensitive, financial, or documentary-style content where realistic AI generation is most deceptive. Automatic detection closes that gap in the cases where the signal is clear, while still relying on creator disclosure for ambiguous edge cases. It won't catch everything, but it reframes the default from "assume it's real unless labeled" to "the platform is actively checking."</p>
+
+        <hr class="divider" />
+
+        <h2>PostHog Is Training Its Own Models — and So Should You Be Thinking About This</h2>
+
+        <p>PostHog, the open-source product analytics platform, published a post this week explaining that <a href="https://posthog.com/blog/training-ai-models">they're starting to train their own AI models</a>. The first target is session replay analysis — they currently use frontier models to detect UX issues in session recordings, but at scale, the cost and latency make it impractical. A smaller model trained specifically on session replay patterns and their own data will be dramatically more efficient. The second target is synthetic user testing: predicting where users will get confused or where flows will break before shipping to production.</p>
+
+        <p>The interesting signal here isn't PostHog specifically — it's the pattern. We're entering a phase where companies that have accumulated enough domain-specific data and have enough AI-generated outputs to train on are no longer willing to pay frontier-model prices for tasks that a smaller specialized model can handle at 10-50x lower cost. Frontier models as a catch-all tool made sense when the task space was undefined. As task spaces become better understood, purpose-built models win on cost and speed. This is the same economic logic that drove companies to move compute from mainframes to mini-computers to workstations — general-purpose power loses to fit-for-purpose efficiency as usage matures.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>AI has found its business model, and it's not subscriptions.</strong> Anthropic's path to profitability runs through enterprise API contracts, not the $100/month plans. The subscription era bought adoption; the API era is where the revenue actually lives. Expect pricing pressure on consumer tiers and far more aggressive enterprise metering.</li>
+            <li><strong>The productivity narrative is a power struggle, not a fact.</strong> "10x productivity" is a real capability claim when applied honestly. But whether that translates into more output from the same workforce, the same output from a smaller workforce, or more leisure for the same workforce is a political and organizational choice — not a technical inevitability. The current evidence strongly suggests it's mostly the second option, and workers have noticed.</li>
+            <li><strong>The gap between naive and expert Claude Code usage is enormous and widening.</strong> The practitioners who build plan-verify-iterate workflows, invest in Claude.md, and treat the agent as a programmable system with guardrails are pulling ahead of those who type prompts and accept suggestions. This gap compounds. Start closing it now.</li>
+            <li><strong>AI transparency is shifting from opt-in to ambient.</strong> YouTube's automatic labeling is the template. In two years, the assumption that AI-generated content will always be distinguishable by a voluntary label will seem quaint. Platforms are moving to detection-first architectures. Expect this pattern everywhere that synthetic realism has meaningful stakes: video, images, audio, news.</li>
+            <li><strong>The next phase isn't "use AI" — it's "train on your data."</strong> Companies with proprietary datasets and well-understood task definitions are beginning to graduate beyond frontier models for their core workflows. The infrastructure for this is maturing rapidly. If you have a high-volume, domain-specific task that you currently route to a frontier model, start thinking about what it would take to own that capability.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48296794">I think Anthropic and OpenAI have found product-market fit (694 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48296649">DuckDuckGo search saw 28% more visits after Google said people love AI (707 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48295679">Tech CEOs are apparently suffering from AI psychosis (605 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48302745">Can we have the day off? (599 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48299753">YouTube to automatically label AI-generated videos (581 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48289950">Claude Code as a Daily Driver: Claude.md, Skills, Subagents, Plugins (379 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48296359">Training our own AI models — PostHog (194 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
