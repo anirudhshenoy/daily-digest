@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We Should Be More Tired Than the Model — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Saturday, May 30, 2026</div>
+        <h1>We Should Be More Tired Than the Model</h1>
+        <p class="subtitle">On a day when HN erupted over deskilling, three independent thinkers arrived at the same uncomfortable truth: the cognitive work you outsource is the skill you lose.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Frontend's Lost Decade, Now for Everyone</h2>
+
+        <p>Three separate pieces landed on Hacker News today and sparked a conversation that is still running hot as of this morning. Taken together, they form an argument that feels almost coordinated — though it isn't. The thread: AI is doing to all programmers what JavaScript frameworks did to frontend developers a decade ago. And if you were around for that transition, you know how it ended.</p>
+
+        <p>Developer Mauro Bieg's essay <a href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/">"Is AI causing a repeat of frontend's lost decade?"</a> opens with the Wikipedia definition of <em>deskilling</em>: "the process by which skilled labor within an industry or economy is eliminated by the introduction of technologies operated by semi- or unskilled workers. This results in cost savings… and reduces barriers to entry, weakening the bargaining power of workers." He applies this first to the frontend: HTML, CSS, accessibility, progressive enhancement, browser compatibility — all of it was once specialized craft. Then React, Next.js, and Shadcn arrived, and frontend became something any generalist could wrangle. The "front of the frontend" became a lost art.</p>
+
+        <p>The parallel to AI-assisted coding is direct. The same economic logic operates: businesses can now put junior engineers (or non-engineers) to work on tasks that previously required senior expertise. The craft gets devalued. The worker's leverage shrinks. And crucially, much of what gets dismissed as an "unimportant detail" — the stuff abstracted away — has a nasty habit of leaking back through. (Joel Spolsky's <a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">Law of Leaky Abstractions</a>, published in 2002, hasn't aged out.)</p>
+
+        <blockquote>
+          "Just like artisans and craftsmen that were replaced by assembly line workers more than a century ago, we feel a profound sense of loss. We grieve that a skill, that we spent half a lifetime honing, is not being valued by the market anymore."
+          <cite>— Mauro Bieg, "Is AI causing a repeat of frontend's lost decade?"</cite>
+        </blockquote>
+
+        <p>But here's where the thread gets interesting. Bieg doesn't stop at grief. He also acknowledges the counter-framing: working at a higher level of abstraction is genuinely valuable when done thoughtfully. The Bauhaus movement didn't reject industrialization — it tried to bring craft <em>into</em> it. The question isn't whether to use the tools; it's whether the tools are making you better or hollowing you out.</p>
+
+        <hr class="divider" />
+
+        <h2>The Brain Fog Problem</h2>
+
+        <p>ML engineer Vicki Boykis's post <a href="https://vickiboykis.com/2026/05/28/we-should-be-more-tired-than-the-model/">"We should be more tired than the model"</a> is the most visceral piece of the three, and it hit a nerve. She describes finishing an agentic coding session and getting all the outward signs of productivity — a working diff, merged changes — but none of the internal processes that come from writing code by hand. The cognitive loading, the working memory engagement, the sense of having genuinely understood something: absent.</p>
+
+        <p>The neuroscience here is worth unpacking. When you read and write code manually, your brain is simultaneously pulling from long-term memory (patterns you've encountered before), building a working model of the current system in short-term memory, and synthesizing both into decisions. Agentic code generation bypasses much of this. You pull a lever. You get a solution. The slot-machine analogy she uses is exact: the UX of code generation is antithetical to skill retention in the same way that social media feeds are antithetical to sustained attention.</p>
+
+        <p>Her workarounds are worth taking seriously for anyone who builds with AI daily. Write the initial implementation yourself, then use the agent for review. Ask the agent questions about code you don't understand rather than asking it to write the code. Start a session only after spending 20 minutes on the problem first. Crucially: rewrite things. Not because the agent's version is wrong, but because the act of rewriting is the learning.</p>
+
+        <blockquote>
+          "All of these negate the supposed speed up effects of LLM-generated code in the short-term by adding friction, and yet, in the longer term, make me better at using the tool, because they solidify my own foundation instead of the foundation models'."
+          <cite>— Vicki Boykis, "We should be more tired than the model"</cite>
+        </blockquote>
+
+        <p>The title is the thesis. The model doesn't get tired. It doesn't build memory. It doesn't carry the satisfaction of having struggled through something and emerged changed. We should be the ones who do that work — and if we aren't, we're training ourselves out of relevance while congratulating ourselves on speed.</p>
+
+        <hr class="divider" />
+
+        <h2>Who Is Actually Worth Hiring?</h2>
+
+        <p>The third piece in today's unofficial trilogy, <a href="https://www.moderndescartes.com/essays/ai_and_expertise/">"Expertise in the Age of AI"</a> by an anonymous engineer at a top AI lab, takes the deskilling concern and asks a concrete business question: does it still make sense to hire junior engineers?</p>
+
+        <p>The essay's central analogy is compelling. We stopped needing human "calculators" (the job title for people who did arithmetic) in the 1970s when scientific calculators arrived. And yet we still teach algebra, calculus, and linear algebra in schools. Why? Two competing hypotheses: the <em>signaling hypothesis</em> (math degrees filter for people who can persist through difficulty) and the <em>skills hypothesis</em> (struggling through math builds genuine mathematical intuition that makes you better at operating calculators). The author, previously a signaling-hypothesis believer, has shifted toward the skills hypothesis — maybe 50/50 now.</p>
+
+        <p>Applied to software: senior engineers are dramatically better at using coding agents than juniors, and most of that gap comes from having accumulated years of "coding intuition" by writing code the hard way. The threshold for being productive with an agent currently sits around five years of coding experience. Below that, you're likely to make mistakes you can't catch, accept outputs you can't verify, and spiral into technical debt at machine speed.</p>
+
+        <p>The practical implication: the elite companies still competing hard for junior talent are betting that fast learners with strong fundamentals will build the intuition they need within two to three years. For the rest — a growing second tier of software consultants — the job exists, but wage growth will lag far behind the seniors who can actually steer agents effectively.</p>
+
+        <hr class="divider" />
+
+        <h2>The Price Wars Begin</h2>
+
+        <p>While the HN discourse churned on human expertise, the model landscape shifted in a quieter but significant direction: price, not capability, is becoming the differentiator.</p>
+
+        <p>Analyst Max Woolf noticed something strange on OpenRouter's AI Model Rankings: Tencent's <a href="https://hy.tencent.com/research/hy3">Hy3 preview</a> — a model almost nobody had heard of — was outranking Claude Opus by 50% in token usage. Not because it's better. Benchmarks show it's behind leading models in most dimensions. But at $0.066 per million input tokens, it undercuts DeepSeek V4 Flash ($0.10/1M), which itself is already dramatically cheaper than frontier models. Woolf's analysis suggests Hy3's dominance is likely driven by a specific app or set of apps switching their default model to it — a pattern OpenRouter has seen before. But the underlying signal is real: in a world where coding agents are burning tokens by the billions, cost per million tokens matters enormously, and "good enough at a fraction of the price" can beat "best in class" in aggregate consumption.</p>
+
+        <p>On the edges of the model landscape, Liquid AI released <a href="https://www.liquid.ai/blog/lfm2-5-8b-a1b">LFM2.5-8B-A1B</a>, an on-device Mixture-of-Experts model that represents a notable step forward for running capable AI locally. The model uses only 1 billion active parameters out of 8 billion total (the rest are "experts" activated selectively per token), and was trained on 38 trillion tokens — triple its predecessor. The hallucination rate dropped from 92.5% to 36.5% (non-hallucination rate jumped from 7.46% to 63.47%). It supports 128K context, chains tool calls, and runs on an entry-level laptop. The direction is clear: on-device AI that can handle agentic workflows is arriving faster than most infrastructure plans anticipated.</p>
+
+        <blockquote>
+          "Of note, if you do the math on the numbers presented here, the input-token-to-output-token breakdown on LLM API calls is now 98% input, 2% output in aggregate."
+          <cite>— Max Woolf, on Hy3's OpenRouter dominance</cite>
+        </blockquote>
+
+        <p>That 98/2 ratio is worth pausing on. Modern AI usage is almost entirely retrieval and reasoning over provided context, not generation. The implication: models that are efficient at context processing (large context windows, fast prefill) will win on cost, even if their generation quality is merely "good enough."</p>
+
+        <hr class="divider" />
+
+        <h2>Mistral Bets on Sovereignty, Not AGI</h2>
+
+        <p>From Paris this week, developer Koen van Gilst attended <a href="https://koenvangilst.nl/lab/mistral-ai-now-summit">Mistral's AI Now Summit</a> near the Louvre and came back with notes worth reading. The picture that emerged: Mistral has consciously decided not to race Anthropic and OpenAI to AGI. Instead, they are building the European full-stack AI partner — compute (a 40MW data center in Paris, more in Sweden), models, platform, and consultancy.</p>
+
+        <p>The key insight from one of the talks: "the model alone isn't enough — the harness is everything." With a harness, you add context, persistence, and learning. Reasoning is what lets a system backtrack, recover from errors, and stay transparent. Skills (organizational best practices captured in collaboration with AI agents) are what compound over time. This is not a controversial point — it's the same insight driving OpenClaw and Claude Code's success — but hearing it articulated as Mistral's core product thesis is telling.</p>
+
+        <p>Mistral's go-to-market is explicitly about European sovereignty and on-premises deployment. BNP Paribas runs Mistral models on-prem for KYC in Belgium, sensitive data never leaving the bank's infrastructure. Abanca uses their orchestration for over a million customers. The EU Patent Office runs large-scale OCR with Mistral's Document AI. And perhaps the most striking example from the summit: a team from the Austrian Academy of Sciences fine-tuned Mistral's Codestral on ancient papyrus documents, making 180,000 previously inaccessible Egyptian desert texts readable by AI — work that would have taken more than 2,000 years by hand.</p>
+
+        <p>Whether Mistral's bet pays off depends on whether enough European enterprises commit to the vision. But the combination of open models, on-prem deployment, and specialized small models (Voxtral for multilingual voice, Robostral for industrial robotics with ASML) could be exactly right for regulated industries that can't or won't hand their data to US hyperscalers.</p>
+
+        <hr class="divider" />
+
+        <h2>MCP's Context Tax (And Its Partial Fix)</h2>
+
+        <p>The Model Context Protocol — Anthropic's open standard for connecting LLMs to external tools, called "the USB-C of the AI ecosystem" — is starting to show its rough edges at production scale. Engineering team at Quandri published their findings: with four MCP servers connected (Linear, Notion, Slack, Postgres), tool definitions alone consume 10.5% of Claude's 200K context window — 21,077 tokens before a single line of actual work appears. Linear alone accounts for over 12,800 tokens across 42 tool definitions, most of which you'll never call in a given session.</p>
+
+        <p>The operational issues compound the context problem. MCP servers require separate processes, add authentication overhead, introduce external round-trip latency (3x slower per call vs. direct API, 9.4x on first call including init), and can crash mid-session. The alternative they found was more reliable: fine-grained CLI tools and direct API calls, wrapped in a thin layer the agent can invoke. Less impressive to demo. More reliable in practice.</p>
+
+        <p>The important caveat: Claude Code has since shipped <a href="https://code.claude.com/docs/en/mcp">Tool Search with Deferred Loading</a>, which loads MCP tool schemas on-demand and cuts context bloat by 85%+. This addresses the core context complaint. But the architectural arguments — reliability, debuggability, overlap with existing CLIs — remain live. MCP is not going away, but the early hype that it would supersede direct API integration looks premature. The right mental model may be: MCP for broad ecosystem discovery, CLIs for production reliability.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The cognitive cost of delegation is real and compounding.</strong> Three independent thinkers arrived at the same conclusion today: using AI to do your thinking for you trades short-term speed for long-term capability. The developers who will thrive are those who treat agents as interlocutors, not autocomplete. Add friction deliberately. Write things yourself first.</li>
+            <li><strong>Expertise is becoming rarer and more valuable, not obsolete.</strong> The skills hypothesis wins: years of manual coding build intuition that lets you effectively direct agents. A growing underclass of AI-assisted generalists will expand the job market, but the economic gains will accrue overwhelmingly to the engineers who can actually steer. Hire for coding intuition, not just familiarity with agent tooling.</li>
+            <li><strong>Price, not capability, is now the battleground in AI commodities.</strong> Hy3's mysterious OpenRouter dominance and Liquid AI's on-device MoE both point to the same shift: "good enough at a fraction of the price" is winning share from "best in class." The 98/2 input/output ratio means context efficiency matters more than generation quality for most production workloads.</li>
+            <li><strong>Mistral's sovereignty bet is niche now but prescient.</strong> European regulated industries are genuinely constrained from US hyperscalers. A full-stack European AI partner — even one that doesn't race for AGI — has a real market. The specialized small model strategy (OCR, voice, robotics) beats frontier generalists on cost and compliance in specific domains.</li>
+            <li><strong>MCP is maturing, not dying.</strong> The context tax is largely fixed. The reliability and architectural concerns are real but workable. The correct posture: use MCP for tool discovery and broad ecosystem connectivity, use direct CLIs for production-critical paths. Don't abandon it; tune it.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/">Is AI causing a repeat of frontend's lost decade? (300 pts)</a></li>
+          <li><a href="https://vickiboykis.com/2026/05/28/we-should-be-more-tired-than-the-model/">We should be more tired than the model (156 pts)</a></li>
+          <li><a href="https://www.moderndescartes.com/essays/ai_and_expertise/">Expertise in the Age of AI (104 pts)</a></li>
+          <li><a href="https://minimaxir.com/2026/05/openrouter-hy3/">The mysterious Hy3 LLM is topping OpenRouter rankings by a large margin (111 pts)</a></li>
+          <li><a href="https://www.liquid.ai/blog/lfm2-5-8b-a1b">Liquid AI reveals LFM2.5-8B-A1B: on-device MoE trained on 38T tokens (161 pts)</a></li>
+          <li><a href="https://koenvangilst.nl/lab/mistral-ai-now-summit">Notes from the Mistral AI Now Summit (315 pts)</a></li>
+          <li><a href="https://www.quandri.io/engineering-blog/mcp-is-dead">MCP is dead? (111 pts)</a></li>
+          <li><a href="https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request-">Real-time LLM inference on standard GPUs: 3k tokens/s per request (198 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
