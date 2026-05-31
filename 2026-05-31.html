@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Billion-Dollar Plumbing Problem — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Sunday, May 31, 2026</div>
+        <h1>The Billion-Dollar Plumbing Problem</h1>
+        <p class="subtitle">OpenRouter raises $113M as the inference routing layer becomes the new infrastructure battleground — and a CEO coach, a Pope, and a very embarrassed auditing firm all weigh in on what AI actually costs us.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>When Models Commoditize, the Router Wins</h2>
+
+        <p>There is a pattern in the history of technology infrastructure that repeats itself with eerie regularity: first the product, then the plumbing. When electric power became widely available in the early 20th century, the transformers and switchgear routing that power into factories turned out to be worth more, over time, than many of the factories themselves. When the internet matured, the CDNs — the content delivery networks that sat between origin servers and end users — became enormous, durable businesses. The model: whoever sits in the middle, routing capacity to demand, tends to accumulate leverage.</p>
+
+        <p>This week, <a href="https://openrouter.ai/announcements/series-b">OpenRouter announced a $113 million Series B</a> led by Google CapitalG, with participation from NVIDIA Ventures, Snowflake Ventures, Databricks Ventures, MongoDB Ventures, and ServiceNow Ventures. The round was one of the most strategically revealing funding announcements of the year — not because of the dollar amount, but because of who wrote the checks. Every major enterprise data infrastructure company in the world just bet that the layer sitting between AI applications and the underlying models is where the value will settle.</p>
+
+        <p>OpenRouter is, in essence, an LLM router. It gives developers and enterprises a single API endpoint that can dispatch inference requests to Anthropic, OpenAI, Google, Meta, Mistral, or dozens of other providers — optimizing across price, latency, availability, and capability. The pitch is conceptually simple: models are increasingly interchangeable commodities (at least at the margin), and the hard operational problem is deciding <em>which</em> model to use for <em>which</em> task at <em>which</em> cost, in real time, at scale. OpenRouter solves that problem.</p>
+
+        <blockquote>
+          "Models are increasingly interchangeable commodities. The hard problem is deciding which model to use for which task at which cost, in real time, at scale."
+          <cite>— The OpenRouter Series B thesis, in essence</cite>
+        </blockquote>
+
+        <p>The HN discussion (371 points, 184 comments) was notably substantive. Experienced engineers noted that model routing is harder than it sounds: different models have different context window behaviors, different tool-calling implementations, different rate limits, different failure modes under load. Building reliability and correctness guarantees across a heterogeneous fleet of inference providers is a genuine distributed systems problem. One commenter compared it to building a reliable multi-cloud database abstraction — the interface looks simple, the internals are brutal.</p>
+
+        <p>What this round signals at a macro level: the enterprise software world has decided that AI is infrastructure, not a feature. When Snowflake, Databricks, and MongoDB all co-invest in the same routing layer, they're not making a financial bet so much as an architectural declaration. They expect inference routing to be as standard a component in enterprise AI stacks as a load balancer or a message queue. The race is on to own that layer before it becomes a commodity too.</p>
+
+        <hr class="divider" />
+
+        <h2>Domain Expertise as the Last Moat — and Why That's Complicated</h2>
+
+        <p>The most-discussed non-infrastructure story on HN this week was <a href="https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/">a blog post titled "Domain expertise has always been the real moat"</a> — 333 points, 202 comments. The argument is familiar: AI tools are widely available, so the companies that will win are those whose people have deep, accumulated, hard-to-replicate knowledge of their domain. The model is a commodity; the judgment is the asset.</p>
+
+        <p>On the surface, this is reassuring. On examination, it is more complicated than it sounds.</p>
+
+        <p>The HN comment section split sharply. The skeptical camp pointed out that "domain expertise as a moat" has been the standard consultant response to every disruptive technology wave since the spreadsheet. It is usually wrong in the short term, and it often underestimates how much of what feels like "expertise" is actually pattern-matching that a sufficiently capable model can replicate. The sympathetic camp countered that genuine expertise — the kind that involves novel judgment, ethical calibration, and contextual taste — resists compression into training data in ways that shallow knowledge does not.</p>
+
+        <p>This tension runs through Brian Halligan's recent conversation on Lenny's podcast. Halligan was the co-founder and longtime CEO of HubSpot; he now coaches CEOs for Sequoia. His thesis is that the hardest parts of the CEO job — inspiring people, delivering hard feedback, building trust across an organization, making irreversible decisions under uncertainty — are precisely the things AI cannot do for you. AI speeds up everything else; it does not speed up the formation of judgment.</p>
+
+        <blockquote>
+          "There's a massive tax on optionality when you can move this fast and try a lot of things. It puts pressure on CEOs to be faster and better decision makers."
+          <cite>— Brian Halligan, Sequoia CEO Coach (Lenny's Podcast)</cite>
+        </blockquote>
+
+        <p>Halligan's observation is pointed. The companies that will get left behind are not those that fail to adopt AI tools — it is those whose leaders treat the speed AI enables as an excuse to defer the hard human work of running an organization. The planning cycle compresses from a year to three months. The number of projects multiplies. The decisions that used to sit on a CEO's desk for six months need an answer in six days. The moat isn't your AI stack; it's your judgment under compression.</p>
+
+        <p>This is also, interestingly, the message buried inside the Codex clip circulating from Lenny's Podcast. Engineers at multiple companies are describing how Codex handles code review for all their PRs — compressing a 10-15 minute task to 2-3 minutes by pre-loading suggestions. For small PRs, they trust the model's review without human oversight at all. This is not AI replacing engineers; it is AI removing the most friction-laden part of an engineer's day and freeing their judgment for the decisions that actually require it. The expertise moat gets <em>deeper</em> when the tedious load is removed — but only if the human on the other end has real expertise to deploy.</p>
+
+        <hr class="divider" />
+
+        <h2>When the Audit Report Hallucinates: EY and the Credibility Gap</h2>
+
+        <p>One of the most striking stories this week was a methodical investigation published by GPTZero: <a href="https://gptzero.me/investigations/ey">EY Canada published a major cybersecurity report, and the majority of its citations were fabricated</a>. The report — titled "Points of Attack" and focused on loyalty system fraud — contained broken references, non-existent papers, and hallucinated authors throughout. EY is not a startup experimenting with AI on the margins; it is one of the Big Four global accounting and consulting firms, with rigorous processes and reputational stakes in the hundreds of billions of dollars.</p>
+
+        <p>The HN reaction (281 points, 129 comments) was a mixture of schadenfreude and alarm. The schadenfreude is understandable: professional services firms have spent considerable energy positioning themselves as AI-native, and this is a particularly visible failure. The alarm is more important. EY's credibility problem is everyone's problem.</p>
+
+        <p>Here is why. The hallucination failure mode in AI is well understood: models trained to produce fluent, authoritative-sounding text will sometimes confabulate citations, statistics, and attributions because the training incentive is fluency, not factual grounding. What is less understood is how this failure mode scales into institutional contexts. When an individual researcher uses an LLM and gets a hallucinated citation, they (hopefully) catch it before publishing. When a large organization integrates LLM assistance into report production workflows without adequate verification checkpoints, the error can propagate to final output undetected — especially if the human reviewer's job has been implicitly redefined from "check everything" to "spot-check things that look off."</p>
+
+        <blockquote>
+          "The bottleneck was never writing the report. The bottleneck was always verifying it. AI speeds up writing. It does not speed up verification."
+          <cite>— A synthesis of the HN comment thread on the EY incident</cite>
+        </blockquote>
+
+        <p>This connects directly to the AI job grief piece that also circulated this week — a reported piece tracking the psychological impact of AI-driven displacement on tech workers. The framing the author uses is grief, specifically the non-linear grief associated with losing a professional identity. The finding that resonates most: many workers aren't losing their <em>jobs</em> yet, they're losing their sense that their expertise is valuable and legible. When a model can produce a document that looks like your work product, the question "what exactly am I contributing?" becomes genuinely difficult to answer. The EY case shows both sides of this in a single incident: the organization deployed AI to produce the document faster, and the result was that nobody was clearly responsible for the quality of its contents.</p>
+
+        <hr class="divider" />
+
+        <h2>The Pope Has Entered the Chat</h2>
+
+        <p>Pope Leo XIV's first papal encyclical — <em>Magnifica Humanitas</em> — made significant waves when it dropped last week, and the HN discussion this week continued to process it. The <em>Economist</em>'s coverage, which framed the document as an attack on "technological messianism," topped the HN front page with 193 points and 221 comments.</p>
+
+        <p>"Technological messianism" is a precise and useful phrase. It describes the belief — held with quasi-religious conviction in some quarters of Silicon Valley — that sufficiently advanced technology will resolve the fundamental problems of the human condition: scarcity, suffering, death, and the difficulty of living well alongside other people. The encyclical argues this belief is not merely wrong but harmful — that it displaces genuinely human moral work onto technical systems that cannot bear it, and that it breeds a kind of passivity in the face of structural injustice ("the algorithm will fix it") that is corrosive to genuine moral agency.</p>
+
+        <p>The HN comment thread was, somewhat unexpectedly, serious and substantive. The predictable "lol the Pope" contingent was present but outnumbered by people engaging with the actual argument. Several commenters noted that the critique is not anti-technology — Leo XIV's track record on previous AI statements has been notably nuanced — but anti-idolatry. The concern is not that AI is powerful; it is that people will relate to AI's power the way previous generations related to markets, or the nation-state, or Progress: as forces beyond human accountability that will inevitably produce good outcomes if left to operate without moral friction.</p>
+
+        <blockquote>
+          "The question isn't whether AI is good or bad. The question is whether we're using it as a tool or worshipping it as a savior."
+          <cite>— Paraphrase of the encyclical's core critique, as rendered in HN discussion</cite>
+        </blockquote>
+
+        <p>This is a genuinely important frame for understanding some of the AI discourse of the past two years. The labs' communications around frontier models have sometimes drifted in a messianic direction — the language of "transforming humanity," "ending disease," "solving everything" that surrounds major model announcements. The encyclical's intervention is a reminder that moral seriousness about technology is not the same as technophobia, and that the most important questions about AI are not "how capable is it?" but "what are we doing with it, who decides, and who is accountable when it fails?"</p>
+
+        <p>The EY story and the papal encyclical are, in this light, adjacent. EY's hallucinated report is a small but vivid instance of what happens when humans outsource judgment to systems they don't fully understand and haven't adequately verified. The encyclical is asking the larger structural question: what happens when that outsourcing becomes systemic and normalized?</p>
+
+        <hr class="divider" />
+
+        <h2>Signals from the Edges</h2>
+
+        <p>A few smaller items worth noting from this week's HN front page, as signal rather than noise:</p>
+
+        <p><strong>Microsoft degrades perpetual license functionality</strong> (516 pts, 163 comments): Microsoft has announced that Office 2019 and 2021 for Mac will enter view-only mode for unlicensed users — effectively retiring the concept of perpetually-licensed software for macOS Office. This is a slow-motion story that's been building for years, but it accelerated this week. The moat that Microsoft has built around Microsoft 365 subscriptions means that every major enterprise AI feature — Copilot, the agentic integrations, the Teams AI tools — is now only accessible via recurring subscription. AI is becoming the forcing function that completes the transition from software as a product to software as a service, and companies with large perpetual-license install bases are being squeezed accordingly.</p>
+
+        <p><strong>AI-native hedge funds</strong> (Y Combinator): A short YC video argued that the hedge funds built on AI from first principles — not bolting AI onto existing quantitative strategies, but using AI to generate entirely new ones — will be the next Renaissance or Bridgewater. The analogy to the 1980s quant revolution is deliberate and apt. Renaissance Technologies succeeded not because it used computers, but because it rethought what it meant to do finance using computers. The question for the current wave is whether any firm will make that same conceptual leap, rather than just running faster on the same tracks.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The inference routing layer is locking in.</strong> OpenRouter's $113M round — backed by Snowflake, Databricks, NVIDIA, MongoDB, and CapitalG — is a declaration that enterprise AI infrastructure is settling around a routing-and-abstraction layer. Whoever owns the router controls the flow. Watch this space closely over the next 18 months.</li>
+            <li><strong>Domain expertise is the moat — but only real expertise.</strong> The HN debate and Halligan's CEO framework both point to the same thing: AI compresses the time it takes to produce outputs, which means the differentiator becomes the quality of judgment that goes into them. Shallow expertise gets commoditized. Deep expertise gets amplified. The question is which kind you have.</li>
+            <li><strong>Professional AI deployments need verification infrastructure, not just generation infrastructure.</strong> EY's hallucinated report is a preview of what happens when organizations optimize for AI-assisted generation without proportionate investment in AI-assisted verification. The failure mode is not that AI is bad at writing; it's that AI-written text looks authoritative whether it's correct or not. Trust in AI outputs has to be earned at the workflow level, not assumed at the model level.</li>
+            <li><strong>The moral and philosophical reckoning is arriving, not departing.</strong> Pope Leo XIV's encyclical on technological messianism is not a fringe position. It is a careful, historically informed critique that is finding significant secular resonance. The AI field's communications strategies, its accountability structures, and its governance frameworks will all face increasing scrutiny from people asking these questions seriously.</li>
+            <li><strong>The tools are already transforming the daily rhythm of software engineering.</strong> Codex reviewing all PRs, Gemini summarizing channel data, agents running in the background — these are not future scenarios. They are current practice in fast-moving engineering organizations. The gap between organizations that have internalized this and those that haven't is growing every month.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48338660">OpenRouter raises $113M Series B (371 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48340411">Domain expertise has always been the real moat (333 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48339580">EY Canada cybersecurity report citations were hallucinated (281 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48341578">Microsoft degrades functionality of perpetually-licensed offline products (516 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48334710">Leo's first encyclical attacks technological messianism (193 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48336760">AI job grief: A psychological crisis hitting tech workers (120 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=3UyitfSbY6c">How to be a CEO when AI breaks all the old playbooks — Brian Halligan, Sequoia (Lenny's Podcast)</a></li>
+          <li><a href="https://www.youtube.com/shorts/meejSpLFuOo">"Codex reviews all of our PRs" (Lenny's Podcast)</a></li>
+          <li><a href="https://www.youtube.com/shorts/3-Zj8i8XNP8">AI Native Hedge Funds (Y Combinator)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
