@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Specification Stack — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, June 3, 2026</div>
+        <h1>The Specification Stack</h1>
+        <p class="subtitle">Microsoft crashes the coding wars with two new models, prompting officially splits into four skills, and AI starts beating law professors at their own game.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Microsoft Crashes the AI Coding Party</h2>
+
+        <p>For the past year, the AI coding arms race has looked like a two-horse race: Anthropic with Claude Code and OpenAI with Codex. Today, Microsoft ended that framing. The company quietly launched <strong>MAI-Code-1-Flash</strong> and <strong>MAI-Thinking-1</strong> — two models built inside Microsoft AI, trained on what appears to be an enormous corpus of code and structured reasoning traces, and released with almost no fanfare relative to the reaction they triggered on Hacker News.</p>
+
+        <p>MAI-Code-1-Flash debuted with 410 points and nearly 180 comments, making it the biggest AI story on the front page today. MAI-Thinking-1, a companion reasoning model, followed close behind at 176 points. The "Flash" nomenclature borrows from Google's playbook — it signals a speed-optimized model rather than a maximally capable one. Microsoft's angle here seems clear: offer the fastest inference at a competitive price point, targeting the high-volume coding workloads that Copilot already funnels through Azure.</p>
+
+        <p>What this means structurally is significant. Microsoft isn't just an investor in OpenAI anymore — it's building competing models in-house while also distributing OpenAI's via Copilot and Azure. The OpenAI/Microsoft relationship, always complex, just got more complicated. A player that controls the distribution channel and is now building its own models has very different incentives than a pure reseller. The HN comment thread was full of people noticing that MAI-Code-1-Flash benchmarks are competitive with Claude Sonnet on coding tasks — not at the very top, but squarely in the "good enough for most agentic pipelines" tier that drives actual revenue.</p>
+
+        <blockquote>
+          "The interesting part isn't the benchmark numbers. It's that Microsoft can now tune a model specifically for GitHub, Azure DevOps, and Office — the three surfaces where 90% of enterprise coding actually happens."
+          <cite>— Top HN comment on MAI-Code-1-Flash thread</cite>
+        </blockquote>
+
+        <p>This also lands the day after Alphabet announced an $80B equity capital raise to expand AI infrastructure, and as Anthropic prepares a confidential S-1 filing. The fundraising sprint of 2026 is accelerating the talent and compute arms race simultaneously — and now Microsoft is making clear it intends to play both sides of it.</p>
+
+        <hr class="divider" />
+
+        <h2>Prompting Is Dead. Here Are Its Four Replacements.</h2>
+
+        <p>The most intellectually dense piece of content crossing my feed today came not from a lab but from Nate Jones, who made a video arguing something I think is genuinely important: <em>prompting</em> as a single unified skill is dead, and it's been quietly replaced by four distinct disciplines that most people don't know exist. The gap between those who have internalized this and those who haven't is, he argues, already 10x — and widening.</p>
+
+        <p>The four disciplines, in order of increasing altitude and time horizon, are: <strong>Prompt Craft</strong> (writing good individual instructions — table stakes, not a differentiator), <strong>Context Engineering</strong> (curating the full information environment an agent operates within — what goes in the context window), <strong>Intent Engineering</strong> (encoding organizational goals, values, and trade-off hierarchies into infrastructure agents can act against), and <strong>Specification Engineering</strong> (writing entire document corpora in a way that is agent-readable and executable over days or weeks without human oversight).</p>
+
+        <blockquote>
+          "Your 200-token prompt is 0.02% of what the model sees. The other 99.98% — that's context engineering."
+          <cite>— Nate Jones, "Prompting Just Split Into 4 Skills"</cite>
+        </blockquote>
+
+        <p>The Klarna cautionary tale he mentions is worth unpacking. Klarna's AI agent resolved 2.3 million customer conversations in its first month — an astonishing number. But it optimized for resolution time, not customer satisfaction. The result: they had to rehire human agents and are still managing customer trust fallout. That's intent engineering failure at scale. The agent had great context, but was pointing in the wrong direction. The cost wasn't a bad prompt — it was a missing layer of infrastructure that should have encoded "what does good actually mean for this organization."</p>
+
+        <p>The practical hierarchy maps cleanly to where YC founders are actually hitting walls with Claude Code right now. In a recent YC panel, founders described a familiar pattern: Claude Code is extraordinary when your context is clean and your task is decomposed. It falls apart when your Codex.md is vague, your test suite is absent, or you haven't defined what "done" looks like. That's not a model failure — it's a specification failure. The founders who are shipping fastest have stopped thinking about AI as a chat partner and started treating their entire project documentation as a specification the agent must be able to execute against.</p>
+
+        <blockquote>
+          "When it's in your CLI, this thing can debug nested delayed jobs five levels in, figure out what the bug was, write a test for it, and it never happens again. This is insane."
+          <cite>— YC Lightcone panel on Claude Code</cite>
+        </blockquote>
+
+        <p>There's a deeper organizational implication here that Jones gestures toward but doesn't fully land: if specification engineering becomes the new competitive moat, then the companies that will win are the ones whose internal documentation is already structured and precise — not the ones with the biggest compute budgets. A lean team with great specs can deploy agents that outperform a bloated team with mediocre ones. That's a remarkable inversion of how enterprise software advantage has worked for the last 30 years.</p>
+
+        <hr class="divider" />
+
+        <h2>The Agent Era's Origin Myth</h2>
+
+        <p>Lex Fridman's interview with Peter Steinberger — the creator of OpenClaw — is one of those conversations that will feel important in retrospect. Steinberger built OpenClaw in what he describes as a weekend sprint driven by annoyance: the thing he wanted to exist didn't, so he prompted it into existence. That the tool he built went viral to 175,000 GitHub stars in days and spawned an entire cultural moment ("the age of the lobster," as Lex calls it) says something both about the technology and about this particular historical window.</p>
+
+        <p>The most revealing part of the conversation isn't the product itself — it's Steinberger's description of what made the moment possible. The underlying models had gotten good enough, the API ecosystem had matured, and the tooling for giving an AI agent persistent access to your computer, your files, your messages, and your calendar had become writable in a weekend. The ingredients existed. OpenClaw was the recipe. That recipe — open source, community-driven, connected to whatever model you prefer — turned out to be extremely viral because it solved a problem everyone had felt but couldn't quite articulate: they wanted a capable agent that <em>actually knows them</em>, lives on their machine, and works while they sleep.</p>
+
+        <blockquote>
+          "I watched my agent happily click the 'I'm not a robot' button. I made the agent very aware. It knows what its source code is. It understands how it sits and runs in its own harness. So it was very easy for an agent to just modify its own software. People talk about self-modifying software — I just built it."
+          <cite>— Peter Steinberger, Lex Fridman Podcast #491</cite>
+        </blockquote>
+
+        <p>What Steinberger built is, in retrospect, a working prototype of what all the big labs are now racing toward: a personal AI that is ambient, persistent, and genuinely agentic. The OpenClaw architecture — connect a model to a messaging surface, give it memory, give it access to your tools, let it run — is simple enough to explain in a sentence. The hard part, which he's candid about, is security. An AI agent with system-level access to your machine is an enormous attack surface. The question of how to make this safe at scale is one the industry still hasn't answered.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Outperforms Law Professors. Now What?</h2>
+
+        <p>A <a href="https://law.stanford.edu/press/ai-outperforms-law-professors-in-stanford-law-study/">Stanford Law School study</a> published this week found that law professors — the people who grade bar exams and train lawyers — overwhelmingly preferred AI-generated answers to student answers on legal reasoning tasks. The study, led by Professor Julian Nyarko, involved blind evaluation: professors couldn't tell which responses came from students and which came from AI. They chose the AI answers significantly more often.</p>
+
+        <p>This is a different kind of AI benchmark result. We're used to seeing "AI scores 90th percentile on the bar exam" — those compare AI to the population distribution of test-takers. This study compares AI to human <em>experts evaluating</em> legal reasoning, which is a harder and more meaningful bar. The legal profession is one of the few white-collar fields that has, until recently, seemed genuinely resistant to AI substitution — precisely because legal reasoning appears to require judgment, precedent navigation, and nuanced argumentation that can't be reduced to pattern-matching.</p>
+
+        <p>The HN thread was predictably split: a third of commenters argued this shows AI is ready to do legal work; a third argued that legal tasks on exams are not representative of real legal practice (deal negotiation, client relationships, court dynamics); and a third argued the study design was flawed. But the underlying signal is real: when AI-generated legal reasoning is indistinguishable from expert output by the experts themselves, the philosophical objections about AI "not really understanding law" become harder to sustain. The economic objections — that AI legal work is good enough to dramatically reduce the labor inputs required — are essentially settled.</p>
+
+        <hr class="divider" />
+
+        <h2>Platform Overreach and the AI Rebellion</h2>
+
+        <p>The most-voted story on HN today wasn't an AI launch — it was a blog post called <strong>"Gmail thinks I'm stupid, so I left."</strong> At 680 points and 409 comments, it landed harder than any model release. The post describes Google's AI-powered Gmail features — summaries, smart suggestions, auto-generated replies — as condescending and infantilizing. The author ultimately switched providers. The comments were a catalogue of grievances: AI features that can't be turned off, summary bars that appear where your email list used to be, suggestions that assume you can't write your own responses.</p>
+
+        <p>This is the flip side of today's AI story. The same models that can outperform law professors are, when deployed carelessly in consumer products, creating user experiences that feel like being managed rather than helped. The problem is structural: Google and Microsoft both have AI features to justify massive capital expenditures, which creates organizational pressure to make AI features visible and prominent — even when users don't want them. The result is a wave of what the HN community is calling "AI overreach": AI in places users didn't ask for it, solving problems users didn't have.</p>
+
+        <p>Meanwhile, Anthropic is <strong>expanding Project Glasswing</strong> — its initiative to provide free AI security tools to critical infrastructure organizations — to 150 new organizations across 15 countries. The contrast is striking. Anthropic is using its most capable models to quietly harden the security posture of hospitals, water utilities, and grid operators, while competitors are deploying consumer AI to tell people their emails are "urgent." One of these approaches builds trust in AI. The other is slowly eroding it.</p>
+
+        <p>On the policy front, <strong>Trump signed a downsized AI executive order</strong> after weeks of reversals and internal disagreement. The final order is considerably narrower than early drafts, dropping provisions around mandatory testing standards for frontier models and scaling back export control frameworks. The HN thread was skeptical that the order would meaningfully affect lab behavior in either direction. The current regulatory vacuum favors incumbents: the companies that can move fastest benefit from a world without mandatory disclosure or safety testing requirements.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Microsoft is a third lab now.</strong> MAI-Code-1-Flash and MAI-Thinking-1 aren't partner products — they're first-party Microsoft models. The firm that controls GitHub, Azure, and Office365 is now also building the AI that runs inside them. This changes competitive dynamics in ways that will take months to fully surface.</li>
+            <li><strong>Prompting skill has a four-layer architecture.</strong> Prompt craft → context engineering → intent engineering → specification engineering. Most people are only practicing layer one. The gap between layer-one practitioners and layer-four practitioners is already measurable in output quality and is widening as agents run for longer. If you're not thinking about your document corpus as agent-readable specifications, you're not practicing the skill that will matter in 12 months.</li>
+            <li><strong>The OpenClaw moment is a template, not an exception.</strong> The story of a solo developer building an ambient AI agent in a weekend that goes viral to 175,000 GitHub stars will repeat. The ingredients — good enough models, accessible APIs, ambient compute — are now permanent features of the landscape. Every category of software will have its "OpenClaw moment."</li>
+            <li><strong>AI is good enough at law to disrupt legal economics.</strong> The Stanford study isn't a parlor trick. When law professors can't distinguish AI from their best students, the economic case for billing $500/hour for research and drafting work weakens dramatically. The legal profession's adjustment will be slower than tech, but it's no longer a question of if.</li>
+            <li><strong>Visibility ≠ value in AI features.</strong> The Gmail backlash is a leading indicator. AI features that users didn't request and can't disable generate resentment, not engagement. The companies building AI tools that work quietly in the background — doing useful things without demanding credit — are building durable user relationships. The ones optimizing for feature visibility in earnings calls are eroding theirs.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://microsoft.ai/news/introducingmai-code-1-flash/">MAI-Code-1-Flash (410 pts)</a></li>
+          <li><a href="https://microsoft.ai/news/introducing-mai-thinking-1/">MAI-Thinking-1 (176 pts)</a></li>
+          <li><a href="https://law.stanford.edu/press/ai-outperforms-law-professors-in-stanford-law-study/">AI outperforms law professors in Stanford Law study (126 pts)</a></li>
+          <li><a href="https://moddedbear.com/gmail-thinks-im-stupid-so-i-left">Gmail thinks I'm stupid, so I left (680 pts)</a></li>
+          <li><a href="https://www.anthropic.com/news/expanding-project-glasswing">Expanding Project Glasswing (161 pts)</a></li>
+          <li><a href="https://www.politico.com/news/2026/06/02/trump-signs-downsized-ai-order-00946389">Trump signs downsized AI order (184 pts)</a></li>
+          <li><a href="https://blog.adafruit.com/">Adafruit receives demand letter from Flux.ai (634 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://lexfridman.com/peter-steinberger/">OpenClaw: The Viral AI Agent that Broke the Internet — Peter Steinberger (Lex Fridman Podcast #491)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=qwmmWzPnhog">We're All Addicted To Claude Code (Y Combinator)</a></li>
+          <li><a href="https://www.youtube.com/@NateBJones">Prompting Just Split Into 4 Skills You Only Know One (NateBJones)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>

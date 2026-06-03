@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Price of Intelligence — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, June 2, 2026</div>
+        <h1>The Price of Intelligence</h1>
+        <p class="subtitle">Anthropic files its S-1, Stanford opens the LLM classroom to anyone brave enough, Florida hauls OpenAI into court, and NVIDIA puts a petaflop in your laptop bag.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Going Public: The AI IPO Inflection Point</h2>
+
+        <p>The day the AI industry has been anticipating — and dreading — arrived quietly this morning. <a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic confidentially submitted a draft S-1</a> to the Securities and Exchange Commission, formally beginning the process of going public. The announcement is terse by design — "the number of shares to be offered and the price have not yet been set" — but the implications are enormous. The company that has positioned itself as the safety-first alternative to OpenAI, that raised $65 billion in a Series H at a $965 billion valuation just days ago, is now inviting Wall Street to put a number on what responsible AI development is worth.</p>
+
+        <p>The timing raises a question that <em>The Economist</em> asked directly in a piece that generated 281 comments on Hacker News: <a href="https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai">can the stock market actually absorb Anthropic, SpaceX, and OpenAI?</a> The concern isn't whether these companies are valuable — they clearly are — but whether public markets are structurally equipped to hold companies this large, this fast-moving, and this dependent on narratives about futures that haven't arrived yet. When Anthropic IPOs at near-trillion valuations, index funds will be forced to buy it. Pension funds will hold it. The entire architecture of passive investing, built for companies that grow at 10-15% annually, will suddenly contain a company whose entire value proposition is that it might change civilization.</p>
+
+        <blockquote>
+          "The proposed initial public offering will depend on market conditions and other factors."
+          <cite>— Anthropic's SEC announcement, understating things considerably</cite>
+        </blockquote>
+
+        <p>Meanwhile, <a href="https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Proposed-80-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure-and-Compute-2026-b0myAMewCa/default.aspx">Alphabet announced an $80 billion equity capital raise</a> — not a debt offering, actual equity — to fund AI infrastructure and compute expansion. Google is essentially running a secondary offering at planetary scale to stay competitive in a race where the capital requirements grow faster than the revenues. And <a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/">OpenAI announced its frontier models and Codex are now available on AWS</a>, completing a kind of full-circle moment: OpenAI began life with massive Azure investment, and now distributes through its nominal competitor's cloud. In the AI era, the enemy of your enemy is still your customer.</p>
+
+        <p>The shape of the next five years is becoming clear: AI companies will go public, sovereign wealth funds and index funds will hold them, and the entire debate about whether to regulate AI will be complicated by the fact that everyone's retirement account depends on it going well. This is not a cynical outcome — it may actually be one of the more stable equilibria — but it is a different world than the one where AI safety was primarily a philosophical debate among researchers.</p>
+
+        <hr class="divider" />
+
+        <h2>Teaching Machines from Scratch: Stanford's CS336</h2>
+
+        <p>While billions of dollars are flowing into AI infrastructure, Stanford University is doing something quietly radical: <a href="https://cs336.stanford.edu/">teaching students to build language models entirely from scratch</a>. CS336, "Language Modeling from Scratch," drew 382 upvotes and 43 comments on Hacker News — a reaction that reflects how unusual the course is. In an era where most AI education involves fine-tuning pre-built models or calling APIs, this course requires students to implement data pipelines, build transformer architectures, optimize GPU training across multiple machines, and evaluate models before deployment. No scaffolding. Minimal shortcuts.</p>
+
+        <p>The course draws its inspiration from classic operating systems courses that teach students to build a complete OS from scratch — not because anyone will ship their course project as a real OS, but because understanding the full stack from silicon to system call changes how you think about every problem above it. The bet is the same here: engineers who have built a language model from the ground up will make fundamentally different architectural decisions than those who have only ever prompted them.</p>
+
+        <blockquote>
+          "Unlike most other AI classes, students will be given minimal scaffolding. The amount of code you will write will be at least an order of magnitude greater than for other classes."
+          <cite>— Stanford CS336 course description</cite>
+        </blockquote>
+
+        <p>Even more striking was a <a href="https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md">companion story about the course's CLAUDE.md file</a> — the AI agent guidelines embedded in the CS336 repository as part of Assignment 1 — which generated 344 upvotes and 121 comments. The file instructs Claude (which students are apparently allowed to use) on how to assist with the assignment without doing the work for them. It is, in miniature, the central problem of AI-era education: how do you teach humans to build the tools they're also allowed to use as crutches? The CLAUDE.md approach — specify what the agent can and cannot do, make it a collaborator rather than a replacement — is a model that will spread far beyond Stanford.</p>
+
+        <p>There is something hopeful about this. The dominant narrative about AI and education has been one of collapse — students submitting AI-written essays, universities banning laptops, the credential system rotting from within. CS336 suggests an alternative: make the work so fundamentally mechanical and demanding that shortcuts are actually harder than doing it right. If you have to train a transformer from scratch, "have Claude do it" is not a viable strategy — Claude can help you debug a CUDA kernel, but it cannot will away your understanding of gradient flow.</p>
+
+        <hr class="divider" />
+
+        <h2>The Hardware Shift: AI at Every Altitude</h2>
+
+        <p>NVIDIA launched <a href="https://www.nvidia.com/en-us/products/rtx-spark/">RTX Spark</a>, its new superchip for slim laptops and small desktops, and the specs tell a story worth sitting with: up to 6,144 Blackwell GPU cores, up to 128GB unified memory, and up to 1 petaflop of FP4 AI performance — in a laptop thin enough to forget you're carrying it. Microsoft immediately announced the <a href="https://www.windowslatest.com/2026/06/01/microsoft-builds-its-ultimate-macbook-pro-rival-with-the-nvidia-powered-surface-laptop-ultra/">Surface Laptop Ultra</a>, a direct MacBook Pro competitor built around RTX Spark, with 128GB unified memory. The hardware press is calling it the most direct challenge to Apple Silicon since Apple Silicon launched.</p>
+
+        <p>CUDA — the software that has underpinned virtually all serious AI research and production deployment for fifteen years — runs natively on RTX Spark. This matters because it means the entire ecosystem of AI tools, frameworks, and models built for CUDA follows the chip into the laptop market without porting costs. Apple Silicon is extraordinarily fast and efficient, but the model zoo that has grown up around CUDA doesn't care about Metal. RTX Spark is NVIDIA's answer to that market segment, and it arrived with full ecosystem support on day one.</p>
+
+        <p>The counterpoint came from an unlikely direction: a post titled <a href="https://point.free/blog/gemma-4-on-a-2016-xeon/">"A 10-Year-Old Xeon Is All You Need"</a> topped the HN charts with 674 upvotes and 272 comments. Written by Christina Sørensen, NixOS Steering Committee member and author of the <code>eza</code> file listing tool, the post demonstrates running Gemma 4 — Google's latest multimodal open model — on a 2016-era Xeon server, comfortably. The comment thread became a meditation on the gap between what frontier AI needs (petaflops and billions of parameters) and what most real work needs (a fast enough model that can run locally, privately, cheaply). NVIDIA's RTX Spark and a decade-old Xeon are not competing for the same users. But they're both proof that the hardware floor for "good enough AI" keeps dropping.</p>
+
+        <hr class="divider" />
+
+        <h2>Florida Draws First Blood</h2>
+
+        <p>Florida became the first U.S. state to file a lawsuit against OpenAI and Sam Altman personally, citing AI risks. The suit, first reported by <em>Politico</em>, <a href="https://www.politico.com/news/2026/06/01/openai-hit-with-florida-lawsuit-00944215">generated 189 upvotes and 163 comments on HN</a> — a mix of people who think it's grandstanding, people who think it's overdue, and a surprisingly large contingent parsing the specific legal theories being deployed. Florida has been aggressive on tech regulation in recent years (it sued Meta, it passed age-verification legislation), so the move fits a pattern. But it's the first time a sitting state attorney general has trained legal fire specifically on an AI company's leadership.</p>
+
+        <p>This is the beginning of a cycle that will last years. State AGs are natural laboratories for novel legal theories — they have standing, they have staff, and they have electoral incentives to be seen acting on issues voters care about. What Florida files today, twenty other states are reading. The specific claims in the suit matter less than the fact that it exists: AI companies now have state-level litigation risk to manage alongside federal regulatory uncertainty, investor scrutiny, and the basic engineering challenge of building systems that work reliably.</p>
+
+        <p>In a parallel thread, the HN community was debating <a href="https://www.zach.be/p/how-the-hell-is-groq-raising-more">how Groq keeps raising money</a>. Groq builds custom inference hardware (Language Processing Units) that runs LLMs dramatically faster than GPUs for inference workloads — but the company has burned through multiple funding rounds without reaching profitability. The post's title captures the market's genuine confusion: Groq's technology is real and impressive, but the business model has always looked precarious against hyperscaler GPU clouds. The fact that it keeps finding investors suggests either that the LPU thesis is more durable than skeptics believe, or that the AI funding market has not yet fully repriced from 2024.</p>
+
+        <hr class="divider" />
+
+        <h2>Infrastructure Under Attack</h2>
+
+        <p>The most commented story on HN today — 418 comments, 733 upvotes — was not about AI models or IPOs. It was about <a href="https://github.com/RedHatInsights/javascript-clients/issues/492">malicious npm packages detected across Red Hat Cloud Services</a>. The attack, documented by security firm StepSecurity, compromised multiple packages in the <code>@redhat-cloud-services</code> namespace — packages used in enterprise environments, CI/CD pipelines, and cloud infrastructure management. The comment thread is a grim tour of how supply chain attacks work: maintainer account compromise, delayed detection, the difficulty of auditing transitive dependencies in large JavaScript projects.</p>
+
+        <p>The Red Hat incident is not isolated. The pattern — compromising widely-used packages to gain code execution in downstream environments — has accelerated sharply as AI coding tools generate more dependencies more quickly with less human review of what's actually being installed. When Codex or Claude Code suggests <code>npm install some-useful-library</code>, developers are more likely to accept the suggestion than to audit the library's maintainer history. The attack surface grows with the automation.</p>
+
+        <p>A more philosophical take on infrastructure decay came from a long essay, <a href="https://eblog.fly.dev/githubbad.html">"GitHub and the Crime Against Software"</a> — 205 upvotes, 97 comments — cataloguing how GitHub has degraded since its Microsoft acquisition: slower, more bloated, increasingly oriented toward enterprise features over developer experience, with search that has regressed, notifications that don't work reliably, and a UI that grows more confusing with each redesign. The essay draws comparisons to GitLab, Codeberg, and Forgejo as alternatives. The comment thread splits, as these threads always do, between people who agree and have already migrated, and people who argue that GitHub's network effects are simply too powerful to abandon regardless of quality.</p>
+
+        <blockquote>
+          "The decay of our tech infrastructure is a crime against software — not in the legal sense, but in the moral one."
+          <cite>— "GitHub and the Crime Against Software," eblog.fly.dev</cite>
+        </blockquote>
+
+        <p>There's a real tension in all of this. GitHub is where the world's code lives. Red Hat packages are in critical infrastructure. npm is the dependency layer for a third of the web. These are not niche concerns — they are load-bearing pillars. And they are all, simultaneously, showing stress fractures. The AI boom has accelerated the demand on software infrastructure without proportionally increasing investment in its security and reliability.</p>
+
+        <hr class="divider" />
+
+        <h2>The Essay That Won't Rest</h2>
+
+        <p>Idlewords' 2016 essay <a href="https://idlewords.com/talks/superintelligence.htm">"Superintelligence: The Idea That Eats Smart People"</a> resurfaced on HN today with 123 upvotes and 161 comments — ten years after it was written. The essay is a sustained critique of the rationalist AI safety movement's core assumptions: that intelligence is an optimization process that will inevitably converge on dangerous goals, that the paperclip maximizer scenario is a useful lens rather than a distraction, and that worrying about hypothetical future superintelligence is more productive than addressing real present harms.</p>
+
+        <p>That it resurfaces now, on the same day Anthropic files its S-1, is either coincidental or a perfect piece of editorial timing by whoever submitted it. Anthropic was founded largely by people who take the superintelligence risk seriously — Dario and Daniela Amodei left OpenAI over concerns about safety practices. The company's "responsible scaling policy" is a direct institutional response to the concerns the Idlewords essay mocks. And yet the essay's core point — that the AI discourse has been captured by people who find civilization-ending scenarios more intellectually exciting than proximate harms — has only gotten harder to dismiss as AI has become more powerful and more immediately consequential.</p>
+
+        <p>The HN comment thread in 2026 is different from what it would have been in 2016. Back then, "AI risk" was largely theoretical. Today, Florida is suing OpenAI. States are enacting age verification laws. npm packages are being compromised to exfiltrate data. The near-term harms are real and documented. Whether that vindicates the Idlewords critique or merely means we're dealing with multiple problems at once — the boring present-day harms and the hypothetical catastrophic futures — is a genuine question the thread doesn't resolve. It never does.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Anthropic's S-1 changes the accountability structure of AI.</strong> Going public means quarterly earnings calls, activist shareholders, and the discipline of explaining your safety philosophy to people whose job is to maximize returns. This could strengthen or weaken safety culture — possibly both simultaneously.</li>
+            <li><strong>Stanford CS336 is a bet on technical depth as a moat.</strong> The course's premise — that building from scratch creates understanding you can't shortcut — is increasingly contrarian in an era of abstractions. If the bet pays off, CS336 graduates will be the engineers who understand what everyone else is using blindly.</li>
+            <li><strong>AI hardware is bifurcating into ultra-high-end and surprisingly capable old iron.</strong> RTX Spark's petaflop-in-a-laptop and a 2016 Xeon running Gemma 4 are both real. The question is what problem you're solving — frontier research needs the former; most business applications work fine with the latter.</li>
+            <li><strong>State-level AI litigation will compound faster than federal regulation.</strong> Florida's OpenAI lawsuit is the first of many. Fifty different state AGs, each with their own theories, is a regulatory environment orders of magnitude more complex than a single federal agency — and it starts now.</li>
+            <li><strong>Supply chain security is the infrastructure problem that AI made worse.</strong> Every coding agent that suggests a dependency, every CI pipeline that auto-updates, adds to an attack surface that defenders are already struggling to cover. The Red Hat incident won't be the last.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48358646">Anthropic confidentially submits draft S-1 to the SEC (464 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48357075">CS336: Language Modeling from Scratch — Stanford (382 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48352939">Nvidia RTX Spark — new superchip for slim laptops (350 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48359232">AI Agent Guidelines for CS336 at Stanford — the CLAUDE.md file (344 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48356625">Malicious npm packages detected across Red Hat Cloud Services (733 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48353348">A 10 Year Old Xeon Is All You Need — running Gemma 4 on old hardware (674 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48358667">Florida sues OpenAI and Sam Altman over AI risks (189 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48355720">Microsoft Surface Laptop Ultra with NVIDIA RTX Spark (169 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48363132">OpenAI frontier models and Codex now available on AWS (168 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48362515">Alphabet announces $80B equity capital raise for AI infrastructure (130 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48364055">Can the stock market swallow Anthropic, SpaceX, and OpenAI? — The Economist (128 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48360137">Superintelligence: The Idea That Eats Smart People (2016) — resurfaces (123 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48361064">GitHub and the Crime Against Software (205 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48364620">How is Groq raising more money? (34 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
