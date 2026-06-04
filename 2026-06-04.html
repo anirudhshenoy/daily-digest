@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Harness Economy Arrives — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, June 4, 2026</div>
+        <h1>The Harness Economy Arrives</h1>
+        <p class="subtitle">Satya Nadella reframes enterprise AI around harnesses and private evals; Gemma 4 12B runs multimodal on your laptop; and a math startup claims formal verification is the only road to AGI.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Microsoft's Third Act: The Harness Is the Moat</h2>
+
+        <p>For two decades, the Microsoft playbook was: own the platform, let the ecosystem build on top. Windows gave us Adobe and Autodesk. Azure gave us a generation of SaaS. Now, speaking at Microsoft Build in a crossover episode with Latent Space and No Priors, Satya Nadella named what comes next — and it isn't "the best model." It's the best <em>harness</em>.</p>
+
+        <p>The harness, in Satya's framing, is the loop of models + context + tools that an enterprise wraps around their work. You pick your models — frontier or open, Microsoft's MAI or OpenAI's GPT-5.5, it doesn't matter — but what you <em>own</em> is the context layer, the tool definitions, and above all, your private evals. That combination, Satya argued, is the new enterprise IP: not patentable, not directly copyable, and compounding in value over time as your agents accumulate traces.</p>
+
+        <blockquote>
+          "Every company will have its own private eval. That end-to-end platform story around our models is sort of what I think is interesting. Private evals may be the biggest IP. Think about it — you have an eval that's private. You're using Model A. Can you switch it to Model B and climb up? If you can, then you're in control. If you can't, you're not."
+          <cite>— Satya Nadella, Microsoft Build 2026 (via Latent Space)</cite>
+        </blockquote>
+
+        <p>This is a subtle but significant shift. The conversation in enterprise AI has been "which model should I use?" Satya is reframing it as "what is your hill-climbing infrastructure?" Microsoft's MAI-Thinking-1 (released alongside the keynote) is, by their account, the most transparently documented frontier model in history — a 109-page technical report covering MFU numbers, training data splits (50% code, 17.5% STEM, 17.5% math), and a post-training stack built with no synthetic data and no distillation from other models. They shipped it not just as a product but as a demonstration that you can own your model lineage.</p>
+
+        <p>The broader context makes Satya's framing feel urgent rather than abstract. On the same day, Hacker News lit up around <a href="https://simonwillison.net/2026/Jun/3/uber-caps-usage/">Simon Willison's analysis of Uber capping coding-agent spend at $1,500 per employee per tool per month</a> — a cap they apparently hit in four months. The 392-point thread became one of the day's most discussed: enterprises are finally drawing lines in the sand not around capabilities but around ROI. Token spend is now an opex line item that CFOs scrutinize. Satya's answer to this is "Frontier Tuning" — using RL environments to adapt small MAI models to specific enterprise workflows until a 5B specialist outperforms GPT-5.5 on the tasks that matter, at a fraction of the cost.</p>
+
+        <blockquote>
+          "Right now a lot of dialogue is: 'if I train the harness plus tools and the model together, you get evals.' What we are proving is that you can have a multimodal harness that can in fact be more performant in the real world."
+          <cite>— Satya Nadella</cite>
+        </blockquote>
+
+        <p>The SaaS implications are thorny. Satya acknowledged the "End of SaaS" discourse directly: yes, the build-vs-buy equation has changed. But he pushed back on the idea that enterprise workflow apps are dead. What's actually happening is unbundling-and-rebundling: the data model underneath your CRM is still valuable (the schema is correct), the business logic is still valuable, but the UI layer and the entitlements model are not. Work IQ — Microsoft's enterprise context layer — exposes the "most important database in a company that was never used as a database" (all the email, Teams, SharePoint activity). Feed that to a coding agent and it can pull design meeting transcripts to inform a code change. That was previously unthinkable.</p>
+
+        <hr class="divider" />
+
+        <h2>Gemma 4 12B and the Open Model Surge</h2>
+
+        <p>While Microsoft held court at Build, Google quietly dropped what may be the most practically significant open model of 2026: <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/">Gemma 4 12B</a>. It topped Hacker News with 728 points — more than any AI story in weeks — and the reason is architectural rather than benchmark-driven. Gemma 4 12B is encoder-free. There is no separate vision tower, no audio encoder, no separate modality processing pipeline. Images are handled through a lightweight embedding module; raw audio is projected directly into the text-token space. One backbone, everything in.</p>
+
+        <p>The practical result: 16GB VRAM runs it at full quality. Quantized, it fits in 8GB. Tooling support appeared within hours — vLLM, Ollama, llama.cpp, Unsloth GGUFs. This is the first genuinely multimodal open model that fits on a MacBook Pro with 16GB unified memory without compromises. The community reaction on HN was less "wow, benchmarks" and more "I'm downloading this right now."</p>
+
+        <p>The same day, Ideogram made a move that got less coverage than it deserved: they open-sourced Ideogram 4.0, immediately claiming the #1 spot among open image models on the Arena leaderboard. Ideogram has been closed and design-centric until now; the switch drew comparisons to Mistral's early open-weights releases. Meanwhile, Reve 2.0 launched with a layout-first approach to image generation — bounding boxes tied to region descriptions, turning image composition into a next-token prediction problem. Latent Space noted that both Reve and Ideogram independently converged on the same architectural insight on the same day: precise labeling + layout supervision is the key to compositional image quality.</p>
+
+        <p>The pattern across all three releases is "local AI becoming a mainstream deployment target." Gemma 4 12B on-device, Ideogram 4.0 open-weights, Reve 2.0 open-sourced layouts — the frontier is diffusing downward faster than most infrastructure is ready for.</p>
+
+        <hr class="divider" />
+
+        <h2>The Verification Gap: What AI Still Can't Prove</h2>
+
+        <p>Carina Hong, CEO of Axiom Math, was on Latent Space this week with a claim that sounds like hyperbole until you sit with it: "We do not believe there is any other possible future" than one where AGI requires formal verification. The story she tells involves Ramanujan.</p>
+
+        <p>When G.H. Hardy finally persuaded Ramanujan to formally prove his theorems rather than relying on intuition, it improved Ramanujan's own capabilities. Formal proof forced articulation of details that opened new lines of thinking. It also allowed others to build on his work — the proof was both a communication medium and a compounding foundation. This, Carina argues, is the bottleneck in current AI: models trained on statistical signals (GRPO, RLHF) lack the sample efficiency and maximum performance ceiling of models trained with formal verification as a reward signal.</p>
+
+        <blockquote>
+          "Verification to me is about scaling brilliance, compounding brilliance. Once I have proved something in Lean, the quality of the output is basically as high as if it came from a human. My high-quality training set has grown in a way that an informal rollout corpus cannot. I can trust my Lean proofs."
+          <cite>— Carina Hong, Axiom Math (via Latent Space)</cite>
+        </blockquote>
+
+        <p>Lean is a proof assistant — think of it as a type checker for mathematics. Axiom's benchmark number is striking: 99% ProofGen (187/189) on the Verina codegen benchmark, which tests the ability to generate code <em>and</em> a proof of correctness. For comparison, OpenAI's o3 scored 4.9% on the same benchmark. The frontier labs, Carina suggests, are not yet training to generate Lean proofs directly — they rely on informal mathematical proofs, which can be wrong in subtle ways that compound downstream.</p>
+
+        <p>This connects directly to a story that landed this week with quiet force: <a href="https://www.science.org/content/article/mathematicians-issue-warning-ai-rapidly-gains-ground">Science.org reported that mathematicians are issuing warnings</a> as AI rapidly gains ground in the field. The concern is not that AI will replace mathematicians — it's that AI-assisted mathematics is outpacing our ability to verify what it produces. Automated proofs are arriving faster than human review infrastructure can process them. The arXiv recently implemented a one-year ban for papers with hallucinated references.</p>
+
+        <p>The undergraduate data from Berkeley completes the picture from the other end. In CS 10 ("The Beauty and Joy of Computing"), 35.3% of students received F's in spring 2026 — up from under 10% in prior years. In CS 61A, 10.6% failed. Professor Dan Garcia attributes a significant portion to AI-assisted cheating: students submitted AI-generated work they couldn't explain or defend, were caught, and are now facing the academic integrity process. The cruel irony is that the students who leaned hardest on AI to do their thinking are the ones who understand the material least — and are now failing at the very moment the math matters most.</p>
+
+        <hr class="divider" />
+
+        <h2>Made of Weights</h2>
+
+        <p>Ted Chiang published a piece in The Atlantic this week with the subtitle: "Taken to its logical conclusion, this line of thinking is absurd — and damning." The argument: AI does not possess a self, lacks personhood, and is not conscious. The piece drew 283 points and 516 comments on Hacker News — one of the most-discussed threads of the month. A playful parody piece titled <a href="https://maxleiter.com/blog/weights">"They're made out of weights"</a> (a riff on Terry Bisson's 1990 story "They're Made Out of Meat") arrived the same day, offering an alien's perspective on transformer models as the punchline.</p>
+
+        <p>The timing is not accidental. Anthropic published a quiet engineering post this week titled <a href="https://www.anthropic.com/engineering/how-we-contain-claude">"The ways we contain Claude across products"</a> — a technical accounting of the isolation, permission scoping, and sandboxing mechanisms that prevent Claude from doing things users don't intend. The post is notable less for its technical content (responsible engineering) and more for what it presupposes: that the system you're building is complex enough, capable enough, and agentic enough that "containment" is now an engineering discipline with its own vocabulary.</p>
+
+        <p>Chiang's argument and Anthropic's post sit at an interesting tension. Chiang says AI lacks personhood and therefore shouldn't be making decisions. Anthropic's post describes in detail exactly the kinds of decisions Claude makes across products — and how they're managed. The Axiom thesis adds a third angle: formal verification as the path to systems whose outputs we can actually trust. What all three share is a question the industry is only beginning to ask seriously: not "how capable is the model?" but "how do we know what it's actually doing, and why?"</p>
+
+        <p>Separately, Meta workers learned this week that they can opt out of having their mouse movements and keystrokes captured for AI training — for up to 30 minutes at a time. The surveillance story got 699 points and 673 comments, more than any other story of the day. The backlash suggests there is a meaningful gap between "AI is transforming work" and "employees enthusiastically handing their biometric data to their employer's training pipeline." The 30-minute opt-out window is being widely read as a signal about whose interests the architecture serves.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Harnesses and private evals are the new moat.</strong> Satya Nadella's Microsoft Build message is the clearest articulation yet of where enterprise AI differentiation is headed: not which model you use, but how well you've tuned your context, tools, and private evals. The model is rented. The harness is yours.</li>
+            <li><strong>Open models are closing the gap faster than expected.</strong> Gemma 4 12B on 16GB VRAM, multimodal, Apache 2.0 — this is the "local AI becomes mainstream" inflection moment. Ideogram 4.0 going open the same week doubles the signal. The frontier is diffusing.</li>
+            <li><strong>Formal verification may be the actual wall between AI and AGI.</strong> Axiom's 99% vs. o3's 4.9% on ProofGen is a remarkable gap. If Carina Hong is right that AGI requires verified generation as a training foundation, the frontier labs are building on sand. The mathematicians warning AI is gaining ground may be missing the more important story: AI is gaining ground but can't yet prove it's right.</li>
+            <li><strong>The ROI reckoning is real and it's now.</strong> Uber's $1,500/month cap. Berkeley's 35% failure rate. Meta's 30-minute opt-out. Each of these is a different version of the same question: does this actually work, at what cost, and who pays the price when it doesn't?</li>
+            <li><strong>Containment is a first-class engineering problem.</strong> Anthropic publishing a post about how they contain Claude — not as a safety disclaimer but as an engineering discipline — is a small but significant milestone. We are past the era where "it's just a chatbot" is a useful frame.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/">Gemma 4 12B: A unified, encoder-free multimodal model (728 pts)</a></li>
+          <li><a href="https://www.bbc.com/news/articles/c93x0k194yno">Meta workers can opt out of being tracked at work up to 30 min (699 pts)</a></li>
+          <li><a href="https://simonwillison.net/2026/Jun/3/uber-caps-usage/">Uber's $1,500/month AI limit is a useful signal for AI tool pricing (392 pts)</a></li>
+          <li><a href="https://www.macrumors.com/2026/06/03/macbook-neo-production-doubled-says-kuo/">MacBook Neo is so popular that Apple doubled production (335 pts)</a></li>
+          <li><a href="https://blog.nns.ee/2026/06/03/katana-badusb/">Pwnd Blaster: Hacking your PC using your speaker without ever touching it (656 pts)</a></li>
+          <li><a href="https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/">Artificial intelligence is not conscious – Ted Chiang (283 pts)</a></li>
+          <li><a href="https://www.science.org/content/article/mathematicians-issue-warning-ai-rapidly-gains-ground">Mathematicians issue warning as AI rapidly gains ground (188 pts)</a></li>
+          <li><a href="https://www.dailycal.org/news/campus/academics/failing-grades-soar-as-professors-see-greater-ai-usage-dwindling-math-skills-in-uc-berkeley/article_16fad0bf-02cb-4b8c-8d88-888ffd9f8608.html">Failing grades soar with AI usage, dwindling math skills in Berkeley CS</a></li>
+          <li><a href="https://www.anthropic.com/engineering/how-we-contain-claude">The ways we contain Claude across products</a></li>
+          <li><a href="https://maxleiter.com/blog/weights">"They're made out of weights" (89 pts)</a></li>
+          <li><a href="https://jxself.org/stop-killing-games.shtml">Stop Killing Games (200 pts)</a></li>
+          <li><a href="https://elixir-lang.org/blog/2026/06/03/elixir-v1-20-0-released/">Elixir v1.20: Now a gradually typed language (607 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/satya-2026">⚡️Satya Nadella: No Priors x Latent Space at Microsoft Build (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/axiom">🔬 Scaling Past Informal AI — Carina Hong, Axiom Math (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts">AINews: Reve 2 and Ideogram 4 — Layouts in Imagegen (Latent Space)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
