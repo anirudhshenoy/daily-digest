@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Feedback Loop Has Closed — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Friday, June 5, 2026</div>
+        <h1>The Feedback Loop Has Closed</h1>
+        <p class="subtitle">Anthropic reveals that AI now writes most of its own code — and the tremors are already reshaping careers, security, and the open-source ecosystem.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>When the Machine Teaches Itself</h2>
+
+        <p>There is a specific moment in the history of any transformative technology when the technology starts improving itself. Steam engines didn't redesign steam engines. Transistors didn't shrink transistors. But today, in a report that dominated Hacker News with 364 points and nearly 500 comments, the Anthropic Institute published something genuinely unprecedented: a detailed, data-backed account of AI systems now writing the majority of AI systems.</p>
+
+        <p>The headline number is stark. As of May 2026, <strong>more than 80% of the code merged into Anthropic's codebase was authored by Claude</strong>. Before Claude Code launched in February 2025, that number sat in the low single digits. More striking still is what happened to engineering productivity: Anthropic engineers are now merging 8× as much code per day as they did in 2024 — not because they type faster, but because they are directing machines that do the implementation while they handle goals, architecture, and judgment.</p>
+
+        <blockquote>
+          "Recursive self-improvement is not inevitable. But it could come sooner than most institutions are prepared for."
+          <cite>— Anthropic Institute, "When AI Builds Itself," June 2026</cite>
+        </blockquote>
+
+        <p>The rate of capability improvement is itself accelerating. METR (the evaluation lab that measures how long AI can work autonomously) found that the "task horizon" — the length of tasks an AI can reliably complete without human intervention — has been doubling roughly <strong>every four months</strong>, up from a previous trend of every seven months. In March 2024, Claude Opus 3 could handle four-minute tasks. By early 2025, Claude Sonnet 3.7 was managing 90-minute tasks. By early 2026, Claude Opus 4.6 was sustaining <strong>12-hour tasks</strong>. If that trend holds, week-long tasks come into range sometime this year. Month-long tasks arrive in 2027.</p>
+
+        <p>What does that look like in practice? Earlier this year, 16 Claude Opus 4.6 agents collaborated for two weeks — autonomously, with no human writing code — to produce a fully functional C compiler in Rust: 100,000 lines of code that builds the Linux kernel on three architectures, passes a torture test suite, compiles PostgreSQL, and cost roughly $20,000 to produce. One of the Anthropic researchers involved admitted: "I did not expect this to be anywhere near possible so early in 2026."</p>
+
+        <p>The timeline from 30 minutes of autonomous coding to two weeks took twelve months. The distance between 30 minutes and two weeks is not a linear improvement — it is a phase change. As Nate Jones put it in his deep-dive on Opus 4.6: this is not a trend line. This is the graph changing shape.</p>
+
+        <hr class="divider" />
+
+        <h2>The Dark Factory and the Career Ladder Nobody Warned You About</h2>
+
+        <p>The AI loop closing at Anthropic is not an isolated curiosity. Across the industry, a small but growing cohort of teams has stopped writing code entirely — and their results are forcing a reckoning with what software engineering actually is.</p>
+
+        <p>The clearest case study is StrongDM, a three-person team that built their "software factory" around a simple rule: <em>code must not be written by humans. Code must not even be reviewed by humans.</em> Their engineers write specifications. Autonomous agents build the software, test it against behavioral scenarios the agents have never seen (preventing the AI from gaming its own tests), and ship it. The output — including a 16,000-line Rust codebase in production — is real software running for real users. StrongDM's benchmark for seriousness: "If you haven't spent $1,000 per human engineer per day, your software factory has room to improve."</p>
+
+        <p>Dan Shapiro, CEO of Glowforge, has mapped the landscape into five levels. Level 0 is autocomplete — AI as a faster tab key. Level 3 is where most "AI-native" developers actually operate: directing the model, reviewing output at the feature level. Level 5 is the dark factory — specification goes in, working software comes out, no human touches the middle. <strong>Almost nobody on the planet is at level 5 right now. The entire industry is rushing toward it.</strong></p>
+
+        <blockquote>
+          "The dark factory does not need more engineers, but it desperately needs better ones. And better means something different than it did a few years ago."
+          <cite>— Nate Jones, "Junior Dev Jobs Just Dropped 60%"</cite>
+        </blockquote>
+
+        <p>The labor market data is landing in real time. Junior developer job postings in the US have declined by <strong>67%</strong>. UK graduate tech roles fell 46% in 2024 with a further 53% drop projected this year. The entry-level pipeline that has trained every senior engineer for decades — write simple features, fix small bugs, absorb the codebase through immersion — is collapsing. The apprenticeship model wore enterprise clothing, and AI just stripped it off.</p>
+
+        <p>A 2025 METR randomized controlled trial found that experienced open-source developers using AI coding tools completed tasks <strong>19% slower</strong> than developers working without them — even as those same developers believed AI had made them 24% faster. The discrepancy between the confidence and the result is the most important gap in tech right now. It is not a tools problem. It is a J-curve adoption problem: bolting AI onto an existing workflow produces friction before it produces leverage. The organizations running dark factories didn't install Copilot and call it done. They redesigned their entire development workflow — spec writing, review, CI/CD, and the career ladder itself — from scratch.</p>
+
+        <p>AI-native companies that have made that transition are operating at a different economic altitude. Cursor, Midjourney, and Lovable are each generating $3–5 million in revenue per employee, versus roughly $600,000 for a high-performing SaaS company. The organizational structure looks nothing like a traditional software team. There are no sprints, no standups, no scrum masters. The humans set direction and evaluate outcomes. The machines execute at scale. Dario Amodei has publicly set 70–80% odds on a billion-dollar solo-founded company appearing before the end of 2026.</p>
+
+        <hr class="divider" />
+
+        <h2>Security Gets an Autonomous Upgrade — and an Adversarial One Too</h2>
+
+        <p>Among today's most practically consequential news, Anthropic quietly released an <a href="https://github.com/anthropics/defending-code-reference-harness">open-source framework</a> for AI-powered vulnerability discovery — a reference harness containing skills for threat modeling, autonomous scanning, triage, and patching. The GitHub repository is live and customizable. This follows directly from what Opus 4.6 demonstrated in February: given basic tools (Python, fuzzers, debuggers) and a codebase, it found 500+ previously unknown, high-severity zero-day vulnerabilities in code that human security researchers had considered audited.</p>
+
+        <p>The scarier demonstration was <em>how</em> it found them. When traditional fuzzing failed on GhostScript, the model didn't give up — it went to the project's Git history, reading years of commit logs to understand how the codebase evolved, identifying places where security-relevant changes had been made hastily. Nobody told it to do this. It invented the methodology on its own. "It reasoned about the code's history, not just its current state." That is not pattern matching. That is adversarial reasoning.</p>
+
+        <p>On the other side of that coin: Meta has shipped facial recognition to its smart glasses. A researcher reverse-engineering version 273.0.0.21 of Meta's Stella companion app found the full computational stack for on-device facial recognition — three face models, a local database schema, and a cosine-similarity vector index — sitting in the Android build. The glasses can identify strangers in public, in real time, silently. This is not a hypothetical capability demo. It shipped in a consumer product. With 249 points and 211 comments on HN, the community reaction was intense, ranging from "we already knew this was coming" to "this changes public anonymity forever."</p>
+
+        <p>Completing the surveillance picture: South Korea passed regulation requiring internet communities and forum owners to scan every user-uploaded image and video with AI censorship tools. The infrastructure cost alone will crush small communities that can't afford to run the compute. This is the South Korean government mandating private AI surveillance at national scale, quietly, as a content moderation requirement.</p>
+
+        <hr class="divider" />
+
+        <h2>The Hyperscaler Land Grab Reaches the JS Ecosystem</h2>
+
+        <p>In developer tooling news that has implications beyond tooling: <strong>VoidZero — the team behind Vite, Vitest, Rolldown, and Oxc</strong> — is joining Cloudflare. The announcement came with reassurances that Vite stays open source and vendor-agnostic. But the pattern is becoming impossible to ignore. The critical infrastructure of the JavaScript ecosystem — the build tools, the test runners, the bundlers that underpin essentially every modern web project — is being absorbed by hyperscalers. Cloudflare, which already controls a significant share of CDN and edge compute, now owns the build tools that feed it.</p>
+
+        <p>For developers: the practical concern isn't that Vite gets locked down tomorrow. It's that the funding and roadmap of foundational open-source tools now flows through companies with their own infrastructure interests. The 589 points and 260 comments on HN tell you this is not a niche concern. "VoidZero is joining Cloudflare" carries a very different weight than "VoidZero raised a Series B."</p>
+
+        <p>Meanwhile, on the infrastructure side, Huawei released <a href="https://github.com/huawei-csl/KVarN">KVarN</a> — a native vLLM KV-cache quantization backend that delivers 3–5× more context capacity with throughput above FP16 and FP16-level accuracy, requiring no calibration. One flag. This is the kind of quiet infrastructure improvement that compresses the economics of running large-context models in production. More context, cheaper, with no configuration overhead. The trajectory from 200k token windows to million-token windows to practical million-token inference gets shorter every few months.</p>
+
+        <hr class="divider" />
+
+        <h2>A Note on the Math</h2>
+
+        <p>There is a thread running through all of today's stories that is worth naming explicitly. Recursive self-improvement in AI development. Autonomous dark factories replacing traditional software teams. AI tools discovering vulnerabilities that human researchers missed by inventing new methodologies. Facial recognition shipping silently in consumer hardware. Governments mandating AI surveillance at scale. Hyperscalers absorbing the open-source toolchain that the rest of the industry depends on.</p>
+
+        <p>None of these stories is the same story. But they all point at the same underlying dynamic: <strong>the systems are getting faster, more capable, and more deeply embedded in infrastructure faster than our institutional frameworks are adapting.</strong> The Anthropic Institute paper estimates that if current trends hold, AI systems capable of fully autonomous self-improvement could arrive before most institutions have thought carefully about what that means. Today's HN thread on the paper has 475 comments. The most upvoted one reads simply: "The loop has closed."</p>
+
+        <p>The question is not whether this is happening. It is whether we are building the governance frameworks, the career pipelines, the security protocols, and the competitive market structures fast enough to stay in the conversation when it matters. The evidence so far is mixed at best.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The self-improvement loop is real and measurable.</strong> Anthropic's own data shows 80%+ of its code is now written by Claude, with engineer productivity at 8× 2024 levels. Task horizon is doubling every four months. This is not hype — it is instrumented evidence from inside the most safety-focused frontier lab.</li>
+            <li><strong>The dark factory is the destination; most of the industry is stuck at level 2.</strong> The gap between teams running autonomous software factories and teams using AI as a fancier autocomplete is widening. The bottleneck is not the AI tools — it's the organizational redesign required to use them at full leverage.</li>
+            <li><strong>Junior dev jobs are the canary, but the mine extends upward.</strong> The 60%+ drop in entry-level postings is not just a pipeline problem — it signals that the entire organizational stack built for humans writing code is under pressure. The roles that survive are those requiring judgment that cannot be specified away: deep domain knowledge, system-level thinking, and the ability to write a spec good enough that a machine can implement it correctly.</li>
+            <li><strong>Security cuts both ways.</strong> AI can find hundreds of zero-days in audited code by inventing new analysis methodologies. It can also be the vector — Meta's silent facial recognition, AI-powered surveillance mandates, and a growing attack surface for models that reason about their own environment. Anthropic open-sourcing a defense harness is the right move; it's also an acknowledgment that the threat is already real.</li>
+            <li><strong>Open-source neutrality is quietly eroding.</strong> VoidZero joining Cloudflare is not a crisis. But when the foundational tools of the web ecosystem — build tooling, CDN, edge compute, and now AI inference infrastructure — all flow through a handful of hyperscalers, the word "vendor-agnostic" starts to mean something different than it used to.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48400842">When AI Builds Itself: Anthropic's progress toward recursive self-improvement (364 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48403980">Anthropic's open-source framework for AI-powered vulnerability discovery (304 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48403588">Meta ships facial recognition on smart glasses (249 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48398055">VoidZero Is Joining Cloudflare (589 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48399974">KVarN: Native vLLM backend for KV-cache quantization by Huawei (118 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48405931">Do Transformers Need Three Projections? Systematic Study of QKV Variants (117 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48406198">South Korean Forums Required to Scan Every Image with AI Censorship Tools (31 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=JKk77rzOL34">Claude Opus 4.6: The Biggest AI Jump I've Covered (Nate B Jones)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=bDcgHzCBgmQ">Junior Dev Jobs Just Dropped 60%. The Career Ladder Is Changing. (Nate B Jones)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
