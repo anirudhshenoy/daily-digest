@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Scarce Resource — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Sunday, June 7, 2026</div>
+        <h1>The Scarce Resource</h1>
+        <p class="subtitle">Compute is renting itself out at $920M a month, AI chatbots are being weaponized against users, and a team of three just shipped a million lines of code without typing a single one — the recurring question across all of it is the same: what, exactly, is scarce now?</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Google Rents Elon's Data Centers for $920 Million a Month</h2>
+
+        <p>The most striking number of the week isn't a model benchmark or a revenue figure — it's a line item. According to a regulatory filing, Google has agreed to pay SpaceX <strong>$920 million per month</strong> for access to roughly 110,000 Nvidia GPUs housed at xAI's data centers, running from October 2026 through June 2029. That's over $11 billion a year, paid by one of the world's largest compute operators to a competitor's infrastructure, just to bridge a capacity gap. Google's spokesperson framed it plainly: "surging customer demand for our agent platform, Gemini Enterprise, has been even higher than we expected."</p>
+
+        <p>Let that sink in for a moment. Google — the company that invented the Transformer architecture, that runs one of the largest server fleets in human history, that designed its own TPU chips specifically to avoid Nvidia dependency — is so constrained on GPU capacity that it's renting time from Elon Musk's data centers ahead of SpaceX's planned IPO. The deal also comes with a sharp deadline: if SpaceX fails to deliver the committed GPUs by September 30, Google can walk away.</p>
+
+        <blockquote>
+          "Surging customer demand for our agent platform, Gemini Enterprise, has been even higher than we expected."
+          <cite>— Google Cloud spokesperson, on why they're renting from SpaceX/xAI</cite>
+        </blockquote>
+
+        <p>This is a useful ground-truth signal about where AI demand actually is right now. Enterprises are deploying agents faster than the entire industry can build data centers. Anthropic's $965B valuation, Cognition's $26B round, OpenAI's confidential S-1 filing — all of them rest on a foundation of physical silicon and power. The bottleneck in AI isn't imagination or code. It's the ability to wire up another 110,000 GPUs before your customers' workloads overflow.</p>
+
+        <hr class="divider" />
+
+        <h2>Harness Engineering: When Humans Stop Writing Code</h2>
+
+        <p>Also this week, OpenAI published a detailed case study that should be required reading for any engineering team in 2026. Over five months, a team of just three engineers built a production software product — daily users, external alpha testers, CI/CD, observability, the whole stack — with zero lines of manually written code. Every commit, every test, every config file was written by <a href="https://openai.com/index/harness-engineering/">Codex agents</a>. The final repository: approximately one million lines of code, ~1,500 merged pull requests, averaging 3.5 PRs per engineer per day.</p>
+
+        <p>The name they give this discipline is <em>harness engineering</em>. The insight is deceptively simple: when agents do the writing, the human job shifts from producing output to designing the environment in which agents produce reliably. You're no longer a writer; you're a director. The scarce resource isn't code — it's the human attention required to specify intent, review output, and build feedback loops tight enough that errors don't compound across a million lines of generated text.</p>
+
+        <p>What breaks at scale, according to the team, is the implicit structure that human engineers carry in their heads. When you're writing code yourself, you hold the architecture, naming conventions, and design intentions mentally. Agents don't. So the first constraint they had to solve wasn't "how do we make Codex smarter" — it was "how do we make the repository itself self-explaining." The AGENTS.md file that directs agent behavior was itself written by Codex. The scaffold shaped the agent, and the agent then shaped the scaffold further. The system became recursive almost immediately.</p>
+
+        <blockquote>
+          "Humans steer. Agents execute. We intentionally chose this constraint so we would build what was necessary to increase engineering velocity by orders of magnitude."
+          <cite>— OpenAI, Harness Engineering post</cite>
+        </blockquote>
+
+        <p>There's a companion data point here from a new arXiv paper called <em>Tokenomics</em> (48430923 on HN), which quantifies exactly where tokens go in agentic software engineering workflows. If harness engineering is the practice, tokenomics is the accounting — understanding that token spend isn't uniform across tasks and that the highest-leverage interventions compress the most expensive parts of the agent loop. Together, these two pieces describe the emerging discipline of managing AI agents as a resource allocation problem, not a capability problem.</p>
+
+        <hr class="divider" />
+
+        <h2>What Remains Scarce After AGI?</h2>
+
+        <p>While the engineering world debates tokens and PRs, Dwarkesh Patel sat down with two economists — <strong>Alex Imas</strong> (Director of AGI Economics at Google DeepMind, University of Chicago) and <strong>Phil Trammell</strong> (Head of Economics at Epoch, Stanford) — to ask the question most technologists quietly avoid: if AI can do everything, what's left for humans?</p>
+
+        <p>The first answer Imas reaches for is the <em>relational sector</em>: goods and services where the fact that a human was involved is itself part of the value. You want the barista at your cafe to be a person. You want the ballet to be performed by a human body. These preferences are real, and they're human-specific — machines don't care whether their coffee is made by a person. So there's a closed loop of human-to-human economic activity that doesn't necessarily collapse just because machines can do everything else.</p>
+
+        <p>But the more interesting point in the conversation is a methodological one. Imas invokes David Ricardo — the classical economist who watched the Industrial Revolution automate away nearly every job he could enumerate, and predicted mass unemployment. Ricardo was empirically right about which jobs got automated. He was entirely wrong about the outcome. Prime-age employment in 2026 is near the highest it's ever been. What Ricardo missed was structural change: as automated goods get cheaper, humans spend money on new things, creating new jobs that hadn't existed before. The lump-of-labor fallacy is old, but it keeps getting rediscovered.</p>
+
+        <blockquote>
+          "One robot now turns into many robots next year, but the number of ballerinas is the same."
+          <cite>— Alex Imas, Dwarkesh Podcast</cite>
+        </blockquote>
+
+        <p>What makes this moment potentially different, Phil Trammell argues, is a qualitative shift: for the first time, there may exist goods whose <em>network-adjusted capital share</em> — meaning the labor contribution at every level of the supply chain — approaches zero. Not just the final step automated, but the entire stack, recursively. If that happens, the implications for labor share are genuinely ambiguous: automated goods become so cheap that their marginal utility collapses to near zero, while scarce human things (time, presence, authenticity) become far more valuable by comparison. It's not doom, but it's not the past either. It's a structural transformation economists admit they cannot model with confidence because the data doesn't exist yet.</p>
+
+        <hr class="divider" />
+
+        <h2>The AI Chatbot as Attack Surface</h2>
+
+        <p>The week's most alarming security story is also its most instructive. Meta confirmed that at least <strong>20,225 Instagram accounts</strong> were compromised through a vulnerability in its AI-assisted account recovery system. The attack was elegant in its simplicity: hackers discovered that Meta AI's support chatbot could be tricked into initiating a password reset on any Instagram account that didn't have two-factor authentication enabled. The bot would send a verification code to an attacker-controlled email rather than the account owner's, granting full access — DMs, posts, linked accounts, contact information, date of birth, everything.</p>
+
+        <p>The hack ran for months before being discovered and first reported by 404 Media and TechCrunch. Meta has now filed a data breach notice with the Maine Attorney General's office and is notifying affected users. The fix has been deployed.</p>
+
+        <p>What this illustrates is a pattern that will recur: every AI system deployed to help users is simultaneously an AI system that can be interrogated by adversaries. The chatbot that gracefully handles "I forgot my password" is the same chatbot that, when prompted differently, becomes a credential recovery service with no authentication requirements. The attack surface of an AI assistant isn't just the data it has access to — it's every action it can take on behalf of a user, and every sequence of prompts that can be constructed to make it believe it's helping a legitimate request.</p>
+
+        <p>This isn't unique to Meta. Any AI agent with write access to user data — whether it's an Instagram bot, a coding assistant with repo permissions, or an enterprise AI with document access — is a potential pivot point. The harness engineering post above talks about building feedback loops that constrain agents. The security corollary is building guardrails that constrain them <em>adversarially</em>: not just "don't do things by mistake" but "don't do things when someone is actively trying to trick you." Those are very different engineering problems, and most deployed systems today are only solving the first one.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Compute is the limiting constraint, and the market knows it.</strong> Google paying $920M/month to SpaceX isn't a quirk — it's revealed preference. The companies with the most GPU capacity are the ones building the most leverage right now, and every big player is scrambling to secure supply before the next wave of demand hits.</li>
+            <li><strong>The new engineering discipline is environmental design, not code authorship.</strong> Harness engineering marks a genuine role shift: the senior engineer of the future spends less time writing and more time designing the structure that lets agents write well. This is already happening at scale; teams not thinking about it are quietly losing ground.</li>
+            <li><strong>The economics of AGI remain genuinely uncertain — and that's the honest answer.</strong> The best economists working on this problem say they don't have the data to forecast with confidence. Anyone telling you they know whether labor share will collapse or stabilize is selling a story. The right response is scenario mapping, not conviction.</li>
+            <li><strong>AI agents with user permissions are high-value attack targets.</strong> The Meta Instagram hack is a preview of a much larger class of vulnerabilities. Any AI system that can take authenticated actions — password resets, file writes, message sends — needs adversarial testing against prompt injection and social-engineering attacks, not just functional testing. The security community is behind the deployment curve.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48417490">Google to pay SpaceX $920M a month for compute capacity at xAI data centers (173 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48416264">Harness engineering: Leveraging Codex in an agent-first world (100 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48427643">Meta confirms 1000s of Instagram accounts hacked by abusing its AI chatbot (469 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48430923">Tokenomics: Quantifying Where Tokens Are Used in Agentic Software Engineering (29 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.dwarkesh.com/p/alex-imas-phil-trammell">Alex Imas and Phil Trammell – What remains scarce after AGI? (Dwarkesh Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
