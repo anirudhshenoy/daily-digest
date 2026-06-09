@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifesting at 1,000 Tokens Per Second — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, June 9, 2026</div>
+        <h1>Manifesting at 1,000 Tokens Per Second</h1>
+        <p class="subtitle">Apple rebuilt Siri on Google's models, xAI became a datacentre landlord raking in $1.25B/month, and Andrej Karpathy hasn't typed a line of code since December. The AI industry is reorganising itself around speed, scale, and who actually controls the compute.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>WWDC 2026: The Gemini Beneath the Apple</h2>
+
+        <p>Apple's annual developer conference dropped a headline that would have seemed unthinkable two years ago: Apple Intelligence, the company's flagship AI platform, has been rebuilt on a foundation of Google Gemini models. Apple calls them "Apple Foundation Models co-developed with Google," but the lineage is unmistakable. The new architecture brings multimodal reasoning, image understanding and generation, and speech generation to iPhones and Macs — all while routing through Apple's existing Private Cloud Compute infrastructure to preserve its privacy guarantees.</p>
+
+        <p>A new system orchestrator sits at the centre of the redesigned stack, coordinating Apple Intelligence features across platforms and adapting responses based on the active app and user context. The pitch is "truly system-wide intelligence" — Siri that actually knows what you're doing across your entire device, not just answering isolated queries. Apple also announced Core AI Framework, a new developer API for running on-device AI inference on Apple Silicon, and said it would waive cloud API fees for developers with fewer than two million App Store downloads — a direct bid to capture the long tail of indie developers before they commit to OpenAI or Anthropic's ecosystems.</p>
+
+        <blockquote>
+          "Apple used the announcement to frame its approach as a contrast to competitors it characterized as 'racing forward' without regard for users. User data is only used to execute the immediate request and is not accessible to Apple or third parties."
+          <cite>— MacRumors, June 8, 2026</cite>
+        </blockquote>
+
+        <p>The strategic logic here is sharp. Apple doesn't need to win the frontier model race — it needs to be the <em>interface</em> layer through which a billion people interact with AI. By partnering deeply with Google on the model side while maintaining ironclad ownership of the privacy story, Apple sidesteps the compute arms race entirely. Google gets distribution and data insights. Apple gets state-of-the-art intelligence without building another foundation lab. The losers are any company hoping to be the default AI experience on iOS — which, after WWDC 2026, is now Apple itself.</p>
+
+        <p>Hacker News lit up with 470 comments on the WWDC thread and 343 on the architecture deep-dive. The tone was split between impressed and unsettled: many developers noted that Apple's waiving of cloud fees for small devs is a classic platform play — generous until it isn't, at which point you're locked in.</p>
+
+        <hr class="divider" />
+
+        <h2>Expressing Your Will: Karpathy on Agent Psychosis</h2>
+
+        <p>In a wide-ranging No Priors interview, Andrej Karpathy — who recently joined Anthropic after a stint doing his own AI research — described a shift that happened to him personally in December 2025 and hasn't reversed since. He stopped writing code. Not occasionally. Stopped entirely.</p>
+
+        <blockquote>
+          "Code's not even the right verb anymore, right? But I have to express my will to my agents for 16 hours a day. Manifest. Because there was a huge unlock in what you can achieve as a person, as an individual. And I don't think I've typed a line of code, probably since December."
+          <cite>— Andrej Karpathy, No Priors Podcast</cite>
+        </blockquote>
+
+        <p>What replaced coding is something Karpathy calls operating in "macro actions" — not writing functions, but commissioning entire features from multiple parallel agents and orchestrating their work. The bottleneck is no longer typing speed or access to compute. It's <em>you</em>. Your ability to give clear enough instructions in the agent's configuration file, to parallelize tasks across multiple agent sessions, to review their output critically enough to catch errors. He describes the feeling of leaving unused token quota as viscerally uncomfortable — the same anxiety he felt as a PhD student when GPUs sat idle.</p>
+
+        <p>"Token throughput" is his new metric for personal productivity. And it's a remarkable inversion: in 2022, the anxiety was about getting <em>access</em> to frontier models. In 2026, the bottleneck has shifted entirely to the human orchestrating them. The agents are ready. The compute is (more or less) available. The rate-limiting factor is whether you know how to use them.</p>
+
+        <p>Karpathy describes this as "skill issue" culture — when something doesn't work with agents, the reflex is no longer "the model isn't capable" but "I haven't given it good enough instructions." This mental model is simultaneously empowering and anxiety-inducing. It means the ceiling keeps rising, but it also means you're always potentially leaving capability on the table. He calls it psychosis, affectionately. The HN thread on Cognition's new FrontierCode benchmark, which argues current benchmarks measure whether models write <em>correct</em> code rather than <em>good</em> code, dovetails with this: as agents take over code generation, the relevant frontier is shifting from syntax to architecture.</p>
+
+        <hr class="divider" />
+
+        <h2>xAI: The Unlikely Landlord of the AI Age</h2>
+
+        <p>The most quietly significant business story in AI right now isn't a new model release — it's that xAI, Elon Musk's lab, has become a major compute supplier to its direct competitors. In May, xAI opened its Colossus I datacentre in Memphis to Anthropic, under a deal ramping to <strong>$1.25 billion per month</strong> for 300MW of capacity. Google followed with its own arrangement. A sharp analysis on Hacker News today (437 points, 347 comments) argues xAI now looks "more like a datacentre REIT than a frontier lab" — REIT being Real Estate Investment Trust, the financial structure where the business is really about owning assets and renting them out, not operating them directly.</p>
+
+        <p>The background matters: Anthropic had a genuine capacity crisis. Claude users in Europe and the US were hitting throttling during peak hours, with Anthropic forced to introduce time-of-day usage restrictions on subscriptions. When demand grows fast enough, demand smoothing can only do so much. The xAI deal resolved that — and the peak-time crunch has "abated, for now." Meanwhile, xAI gets to paper its financials with enormous recurring revenue ahead of the SpaceX IPO, into which xAI was merged in February. The revenue flows straight to the entity going public.</p>
+
+        <blockquote>
+          "While much has been made of the potential financial engineering given SpaceX's upcoming IPO, I think there's a bit more to this than just pure accounting tricks. There is a real physical constraint here — Anthropic was in a serious bind."
+          <cite>— Martin Alderson, martinalderson.com</cite>
+        </blockquote>
+
+        <p>The deeper pattern is interesting: the AI industry is stratifying into model labs, compute providers, and interface layers. These roles don't have to be played by the same company. Apple has chosen to be the interface layer. xAI has chosen (or stumbled into) being compute infrastructure. Anthropic is, for now, purely a model lab that has to rent its runtime from an ideological rival. This would have seemed bizarre in 2023. Today it's just supply and demand.</p>
+
+        <hr class="divider" />
+
+        <h2>Breaking 1,000 Tokens Per Second</h2>
+
+        <p>Xiaomi's AI division, in collaboration with a company called TileRT, announced that MiMo-v2.5-Pro-UltraSpeed has broken 1,000 tokens per second generation speed on a one-trillion-parameter model — claimed as a first for commodity GPUs. The story was the fifth most upvoted on HN today (508 points, 361 comments).</p>
+
+        <p>To put this in context: a year ago, running a 70B model locally at 30-40 tokens per second felt fast. The frontier has moved dramatically — both in raw throughput and in what's possible at the edge. The UltraSpeed achievement comes from "extreme model-system codesign," which is the opaque phrase for tightly coupling how the model is quantized, partitioned, and scheduled to the specific hardware it runs on. It's less a general improvement and more a highly optimized run for a specific benchmark, but benchmarks have a way of becoming the new baseline.</p>
+
+        <p>The practical implication: as inference gets faster and cheaper at scale, the business case for expensive hosted APIs weakens. The HN discussion around "Outsourcing plus local AI will soon become more economical vs. frontier labs" (from last week, still getting traction) is directly relevant here — the economics of running your own inference cluster vs. paying per token are shifting. Not yet, but the trajectory is clear.</p>
+
+        <hr class="divider" />
+
+        <h2>Is AI Slowing Down?</h2>
+
+        <p>Ed Zitron's newsletter piece "AI is Slowing Down" hit 436 points and 456 comments on HN today — a high comment-to-upvote ratio that signals genuine debate rather than consensus. Zitron's argument, in brief: the progress that felt exponential in 2023 and 2024 is tapering. Benchmark improvements are getting smaller, real-world capability jumps are less dramatic, and the lab announcements are becoming harder to distinguish from each other.</p>
+
+        <p>This landed alongside a follow-up post from a programmer who went viral last week with "LLMs are eroding my software engineering career and I don't know what to do" — today's follow-up, "Replies to comments on my LLMs are eroding my career post," had 137 points and 197 comments. The emotional texture of that thread — genuine career anxiety from working engineers — sits in sharp contrast to the Karpathy interview above, where the same technology feels like an infinite unlock. The gap isn't really about the technology; it's about whether you're the person commissioning the agents or the person whose role is being automated.</p>
+
+        <p>Both framings contain truth. The pace of raw capability improvement may be slowing relative to 2023 hype. But the pace of <em>deployment</em> — of real tools reaching real workflows — is accelerating. Models don't need to get dramatically smarter for agents to cause significant disruption; they just need to be reliable enough at existing capability levels to be trusted with more tasks. Karpathy's psychosis is partly a product of models that were already good enough in December 2025; the question is how many more Decembers there are.</p>
+
+        <hr class="divider" />
+
+        <h2>OpenAI Whispers to the SEC</h2>
+
+        <p>OpenAI filed a confidential S-1 with the Securities and Exchange Commission, taking the first formal step toward a public offering. This was expected — Altman has telegraphed an IPO intent for months — but the timing is notable: it comes as Anthropic's own S-1 (filed weeks ago) is also in the SEC's inbox. The AI industry's most significant private companies are simultaneously racing to go public. Morningstar published a piece today arguing the SpaceX IPO is overvalued, and similar scrutiny will follow OpenAI.</p>
+
+        <p>What makes these filings consequential isn't just the capital raised. It's the disclosure requirements. Once OpenAI and Anthropic are public, we'll have actual financial data: revenue, burn rate, compute costs, gross margins. Right now, almost everything is rumor and inference. Public filings will make the AI industry legible in ways it hasn't been, and some of what gets revealed may be less flattering than the current narrative of unstoppable growth.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Apple has chosen the interface layer.</strong> By licensing Gemini models from Google rather than building its own frontier foundation, Apple plays to its real strengths — hardware integration, privacy guarantees, and an installed base of 2 billion devices. Every other AI lab just lost its shot at being the default iOS AI experience.</li>
+            <li><strong>The compute layer is now a business unto itself.</strong> xAI earning $1.25B/month from Anthropic and Google for datacenter access signals a structural shift: you don't have to win on models to win in AI. Own the physical infrastructure and everyone who does win has to pay you.</li>
+            <li><strong>The human is now the bottleneck.</strong> Karpathy's "token throughput" framing deserves to be taken seriously. The constraint in AI-augmented work is no longer compute access — it's the quality of human orchestration. This is good news for people who can think clearly about what they want. It's terrible news for roles defined by execution rather than judgment.</li>
+            <li><strong>Speed matters more than raw capability at this stage.</strong> Breaking 1,000 tokens/s at the 1T model scale isn't just a benchmark — it's a signal that the economics of inference are still improving fast. The "AI is slowing down" argument applies to frontier capability jumps, not to the deployment and cost curve.</li>
+            <li><strong>Public filings will clarify everything.</strong> OpenAI and Anthropic going public means the next twelve months will produce actual financial data on AI companies. Expect significant repricing of narratives — both optimistic and pessimistic — once we can see the real numbers.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48449084">Siri AI — Apple's next-gen Intelligence platform (452 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48450142">Apple reveals new AI architecture built around Google Gemini models (399 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48448106">Apple WWDC 2026 — full event coverage (241 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48449665">Apple Core AI Framework — run AI models on Apple Silicon (216 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48446428">xAI is looking more like a datacentre REIT than a frontier lab (437 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48446639">MiMo-v2.5-Pro-UltraSpeed: 1T model with 1,000 tokens per second (508 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48446893">AI is slowing down — Ed Zitron (436 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48443258">Replies to "LLMs are eroding my software engineering career" (137 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48452317">OpenAI submits confidential S-1 to SEC (311 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48451723">FrontierCode — can models write good code, not just correct code? (114 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=NA_skill-issue-andrej-karpathy">Skill Issue: Andrej Karpathy on Code Agents, Auto-Research, and Agent Psychosis (No Priors Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
