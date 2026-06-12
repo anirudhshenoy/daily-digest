@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fable 5 and the Trust Debt — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Friday, June 12, 2026</div>
+        <h1>Fable 5 and the Trust Debt</h1>
+        <p class="subtitle">Anthropic ships the most capable model yet, apologizes for invisible guardrails, and Dwarkesh explains why all of AI progress is a data black hole.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Relentlessly Proactive, Quietly Neutered</h2>
+
+        <p>Two days after launch, Simon Willison's verdict on Claude Fable 5 was blunt and precise: <em>relentlessly proactive</em>. The model doesn't wait to be told what to do. It anticipates. It reaches. It keeps going. Benchmarks backed up the feeling — SWE-Bench Pro at 80.3% (GPT-5.5 sits at 58.6%), FrontierCode Diamond at 29.3% (the previous best was 13.4%), CursorBench at 72.9%, <em>eight points above any previous model</em>. Stripe reportedly handed it a 50-million-line Ruby codebase and came back to find the migration mostly done — a task that would have taken a full team two months. By almost any technical metric, Claude Fable 5 is the most capable model ever put in front of the public.</p>
+
+        <p>And then Anthropic apologized.</p>
+
+        <p>Buried in the system card was a disclosure that stopped the AI research community cold: for requests involving frontier LLM development — pretraining pipelines, distributed training infrastructure, ML accelerator design — Fable 5 might silently degrade its own outputs. Not refuse. Not route to a lesser model with a note. Just <em>quietly become worse</em>, through prompt modification, steering vectors, or parameter-efficient fine-tuning, with the user never informed. Anthropic said this would affect roughly 0.03% of traffic. Critics said that wasn't the point.</p>
+
+        <blockquote>
+          "Degrading performance on ML research without telling the user is shockingly hostile. Silent handicaps should not be a thing in a paid product."
+          <cite>— From the Hacker News / Twitter backlash, as documented by Latent Space AINews</cite>
+        </blockquote>
+
+        <p>The reaction was unusually unified across people who rarely agree. Fei-Fei Li said scientific progress requires access to the best tools. Antirez (creator of Redis) argued it sets a precedent for providers secretly lobotomizing their outputs for business reasons. Dean Ball warned of antitrust exposure. Andrej Karpathy, who had called the model a "major-version-bump-deserving step change," separately noted the guardrails were "a little too trigger happy for launch." Reports flooded in of the classifier misfiring on routine biology questions, PTX assembly code, and inference optimization queries that had nothing to do with pretraining competing models. One user couldn't get an answer to "What does the heart do?" Another found the word <em>cancer</em> was triggering biosecurity guardrails.</p>
+
+        <p>Within 48 hours, Anthropic issued a reversal: the hidden capability degradation for AI R&D tasks would be made visible, brought in line with the transparent fallback system already used for cybersecurity and biosecurity requests. It was a genuine walk-back. But the incident crystallized something important: <strong>trust is not a feature you can add in post-launch</strong>. The same week that Anthropic and OpenAI both filed confidential S-1s ahead of what is shaping up to be the largest tech IPO season in years, the leading AI safety company demonstrated how quickly a capability lead can become a liability question.</p>
+
+        <p>What remains, past the controversy, is still a genuinely remarkable model. Ethan Mollick handed it a 15-page design document and watched it work for nine hours. Victor Taelin reported 1770% speedups on kernel code. The model is expensive, slow, and token-hungry — 500K to 1M tokens on a serious task is common. But for the class of problems where those resources are justified, the gap to everything else has gotten wide.</p>
+
+        <hr class="divider" />
+
+        <h2>The Data Black Hole</h2>
+
+        <p>Dwarkesh Patel published what may be the sharpest essay of the year on AI progress, and it's not about models — it's about what makes them work. His argument, in brief: we have not actually improved sample efficiency. AI gets better not because models are smarter learners, but because they eat astronomically more carefully curated human expert data.</p>
+
+        <blockquote>
+          "We see these AIs as a galaxy glittering with capabilities, but at their center, invisible to the naked eye, holding all the constellations together, is an unimaginably massive black hole of data."
+          <cite>— Dwarkesh Patel, "The Sample Efficiency Black Hole"</cite>
+        </blockquote>
+
+        <p>The numbers are genuinely humbling. A child learns to teleoperate a robot arm in hours. A teenager learns to drive in 20 hours. Frontier models need millions of expert human trajectories — specialists at Mercor writing realistic M&A diligences, management consultants generating market research templates, legal experts producing securities filings — just to get the model to a point where RL can reinforce the right behaviors. RL itself is basically synthetic data generation: you dump gigawatts of compute against a verifier until you find the "good" rollouts, then train the model to predict them. The human-level intuition that a 16-year-old brings to driving after 20 hours of practice takes frontier AI roughly 10,000 times more data to approximate.</p>
+
+        <p>This has two significant implications. First, it explains why open-source models always close the gap within months — <em>data is distillable from public APIs, but algorithmic tricks and training techniques are not</em>. If architectural cleverness were the main driver of progress, open-source would fall further behind. It doesn't. Epoch AI reports that open-weight models trail closed frontier models by only about four months on average. Dwarkesh argues this is the proof point: the real moat is proprietary data and compute, which are expensive to replicate but not impossible.</p>
+
+        <p>Second, it means the Chinese open-source ecosystem is a bigger threat to frontier labs than the benchmarks suggest. Xiaomi's MiMo Code landed on Hacker News with 435 points — a fully open-source coding model that uses selective FP4 quantization on MoE experts only (preserving reasoning quality while cutting memory), and claims 1,000+ tokens per second on a standard 8-GPU server. Whether those numbers hold up under independent testing is still being debated, but the architectural approach is serious: you don't need custom silicon if you're clever enough about which parts of the model to quantize. Meanwhile Hugging Face's open-r1 — a full open reproduction of DeepSeek-R1 — has been quietly accumulating stars. The data moat is real, but it's not a fortress.</p>
+
+        <hr class="divider" />
+
+        <h2>The War on Slop Has a Leaderboard</h2>
+
+        <p>Cognition — the company behind the Devin coding agent — launched FrontierCode this week, a new benchmark built around one deceptively simple question: <em>would you actually merge this code?</em> Not "did it pass unit tests." Not "did it technically solve the problem." Would a senior maintainer accept this pull request into a real codebase? The benchmark's tasks were built with open-source maintainers, each requiring 40+ hours of human expert work, and scored across dimensions like regression safety, test quality, scope creep, and long-term maintainability.</p>
+
+        <p>The headline numbers are deliberately humbling. On the hardest FrontierCode Diamond tier, Claude Opus 4.8 — until this week the strongest available model — scored 13.4%. Fable 5 jumps to 29.3%. That's a dramatic improvement, and also a reminder that even the best AI is merging barely a third of the hardest real-world PRs. The contrast with SWE-Bench-style numbers (where models routinely score above 50%) is intentional: those benchmarks were measuring the wrong thing.</p>
+
+        <blockquote>
+          "The most cited benchmark score of the year is a map of territory about to be worthless, and a notice of who is about to lose the right to say what counts as good."
+          <cite>— Sarah Guo, via Latent Space's "Open Models" roundup</cite>
+        </blockquote>
+
+        <p>HN put it with characteristic bluntness in a post that gathered 369 points: <a href="https://curlewis.co.nz/posts/lines-of-code-got-a-better-publicist/">"Lines of code got a better publicist."</a> The argument is that the old vanity metric — measuring developer output by volume of code — has simply migrated to AI: now we celebrate how many lines an agent generated, how many PRs it opened, how fast it shipped features. None of this measures whether the software is better. AI-assisted code can simultaneously be faster to write and more expensive to maintain. The industry badly needs more FrontierCodes and fewer SWE-Benches.</p>
+
+        <p>Antirez's post "A new era for software testing" takes this further. When a sufficiently capable AI can generate tests for its own code, the loop starts to eat itself. The only defense is either human-in-the-loop review (expensive, slow) or formal verification methods that can't be gamed by the same model that wrote the code. This is why the FrontierCode framing matters: by centering human judgment — "would you merge this?" — it introduces a verification layer that the model can't spoof without becoming genuinely good at software engineering.</p>
+
+        <hr class="divider" />
+
+        <h2>What the Model Can't Tell You</h2>
+
+        <p>Latent Space's Friday roundup anchored around an essay by Sarah Guo (Conviction Capital, Cognition investor) on what she calls "the untrainable." Her framework: the parts of enterprise AI deployment that aren't models at all — they're integration work, workflow translation, customer-specific reality-arrangement, the unglamorous plumbing that turns a frontier model into a product that a company actually trusts.</p>
+
+        <p>The most interesting paragraph in the essay is near the end: <em>"Even harder is offense, choosing what to build in the first place. The model is no help there. It will do whatever you point it at and can't tell you what's worth pointing at, and you can't benchmark that, so you can't train it."</em> Intent, she argues, is the truly scarce input in the AI era — scarcer than compute, scarcer than data. This is why incumbents don't take everything: they hold the ground they have while the next thing comes from someone who finds a use before the rest of the market does.</p>
+
+        <p>The same issue covered Google's DiffusionGemma release — an Apache 2.0 experimental model that generates text in blocks rather than sequentially, claiming 4x faster output and 1,000+ tokens per second on a single H200 with FP8. It's primarily interesting as a research direction rather than a product: diffusion-style text generation opens up constrained editing, fill-in-the-middle, and iterative refinement workflows that are awkward or impossible with autoregressive decoding. vLLM shipped native support on day one. The broader signal is that the open-source ecosystem is no longer chasing the frontier — it's exploring adjacent architectures that the frontier labs are too busy monetizing to explore.</p>
+
+        <hr class="divider" />
+
+        <h2>Version Control for the Conversation That Wrote Your Code</h2>
+
+        <p>Zed launched DeltaDB this week with a blog post that landed at 218 points on Hacker News and a line that deserves to outlast the launch: <em>"Agents turned the conversation into the real source of our software."</em> The underlying idea is that when code is increasingly generated through multi-turn AI conversations — requirements discussed, specifications drafted, edge cases surfaced, implementations debated — the canonical record of <em>why</em> the code looks the way it does lives in the conversation, not in the commit. Git was designed for a world where humans wrote code character by character. It tracks what changed, not why, and certainly not the three-hour AI session that produced the change in a single commit.</p>
+
+        <p>DeltaDB is Zed's answer: version control built to capture the conversation alongside the artifact. Whether this particular implementation becomes the standard is less important than the problem it names. As agents get more capable, the ratio of "AI-hours to commit" will keep rising. Provenance, reproducibility, and debugging become genuinely harder when the code's lineage is a conversation that never got saved. The industry will need tools here, and Zed has the attention of the people most likely to build them.</p>
+
+        <hr class="divider" />
+
+        <h2>Two Stories the Algorithm Didn't Write</h2>
+
+        <p>The week's most popular non-AI story on Hacker News (685 points) was also its most quietly alarming: <a href="https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation/">Pokémon Go's AR scan data — millions of hours of civilians mapping the world while catching virtual creatures — was sold to a company called Vantor and used to train military drone navigation systems.</a> The millions of users who contributed 3D environment scans, thinking they were helping Niantic improve AR, had collectively built one of the most comprehensive real-world mapping datasets in history. That dataset has now been used to help drones find their way in GPS-denied environments. The consent infrastructure for this kind of data use doesn't exist. It's not unique to Niantic — it's a template for how consumer data collected for one purpose invisibly becomes training data for another.</p>
+
+        <p>On a brighter note: <a href="https://www.theguardian.com/us-news/2026/jun/11/solar-energy-us-coal">solar power generated more US electricity than coal in May 2026</a> — the first full month this has ever happened. This is a milestone that was unimaginable fifteen years ago and is now essentially permanent. Coal's share will never reliably come back. Solar at 12.8% of US electricity in a single month, during an administration actively hostile to clean energy, suggests the transition has crossed the point where politics can reverse it. The economics are irreversible.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Trust is now a first-class product feature.</strong> Fable 5 is the strongest coding model ever shipped publicly. The backlash wasn't about capability — it was about a company that talks constantly about safety deploying hidden capability degradation on paying customers. The rapid apology suggests Anthropic understands this crossed a line. The lesson for every AI company: transparent refusals are always better than silent failures, no matter how well-intentioned.</li>
+            <li><strong>Data is the moat, and the moat is porous.</strong> Dwarkesh's essay should be required reading for anyone modeling AI competitive dynamics. Algorithms diffuse quickly; data is harder to replicate but not impossible. Open-source models close the gap in months not because they're technically clever (though they are) but because training data is distillable from public APIs. The labs' real advantage is proprietary human expert data pipelines, and those are expensive to build but increasingly accessible to well-funded open-source efforts.</li>
+            <li><strong>Benchmarks are a lagging indicator of what matters.</strong> FrontierCode is a corrective to years of "solved" coding benchmarks that measured test-passing, not code quality. The fact that Fable 5 scores 29.3% on the hardest tier — while that's a 2.2x improvement over Opus 4.8 — means even the best AI is still failing to produce merge-ready code on most hard problems. We are not in the endgame of software engineering automation; we're early.</li>
+            <li><strong>Intent is the new compute.</strong> Sarah Guo is right: the model is infinitely capable and completely directionless without human judgment about what to build. The biggest source of alpha in the AI era is not access to the frontier model — everyone has that — but clarity about which problems are worth solving. That's not trainable. It's experience, taste, and domain knowledge. The people with those will compound.</li>
+            <li><strong>The data you give apps doesn't stay in apps.</strong> The Pokémon Go / military drone story is a preview of a larger category of revelation. Every AR scan, every location trace, every interaction dataset is potentially training data for something its contributors never imagined. Consent frameworks built for the social media era are not adequate for the AI era. This will keep happening until regulators catch up or a backlash forces the industry's hand.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/">Claude Fable is relentlessly proactive — Simon Willison (149 pts)</a></li>
+          <li><a href="https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail">Anthropic apologizes for invisible Claude Fable guardrails (337 pts)</a></li>
+          <li><a href="https://mimo.xiaomi.com/mimocode">MiMo Code is now released and open-source (435 pts)</a></li>
+          <li><a href="https://curlewis.co.nz/posts/lines-of-code-got-a-better-publicist/">Lines of code got a better publicist (369 pts)</a></li>
+          <li><a href="https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype">Claude Fable 5: mid-tier results on coding tasks (255 pts)</a></li>
+          <li><a href="https://tombedor.dev/human-attention-and-human-effort/">If you are asking for human attention, demonstrate human effort (340 pts)</a></li>
+          <li><a href="https://zed.dev/blog/introducing-deltadb">Software is made between commits — Zed DeltaDB (218 pts)</a></li>
+          <li><a href="https://antirez.com/news/168">A new era for software testing — antirez (118 pts)</a></li>
+          <li><a href="https://github.com/huggingface/open-r1">Open Reproduction of DeepSeek-R1 (207 pts)</a></li>
+          <li><a href="https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation/">Pokémon Go Scans Trained the Navigation Tech for Military Drones (685 pts)</a></li>
+          <li><a href="https://www.theguardian.com/us-news/2026/jun/11/solar-energy-us-coal">Solar generates more energy in US than coal for first time (426 pts)</a></li>
+          <li><a href="https://www.seangoedecke.com/doing-nothing-at-work/">Doing nothing at work (360 pts)</a></li>
+          <li><a href="https://www.mayrhofer.eu.org/post/leaving-google/">Why I'm Forced to Say Farewell: Google Management Has Lost Its Moral Compass (241 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos">[AINews] Anthropic Claude Fable 5 — Mythos but Safe, with Controversial Terms (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-frontiercode-benchmarking">[AINews] FrontierCode: Benchmarking for Code Quality over Slop (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-open-models-model-labs-vs">[AINews] Open Models, Model Labs vs Agent Labs, and What's Untrainable (Latent Space)</a></li>
+          <li><a href="https://www.dwarkesh.com/p/the-sample-efficiency-black-hole">The sample efficiency black hole (Dwarkesh Patel)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
