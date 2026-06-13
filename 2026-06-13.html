@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Off Switch — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Saturday, June 13, 2026</div>
+        <h1>The Off Switch</h1>
+        <p class="subtitle">The US government just flipped the off switch on Anthropic's most powerful AI models — and the whole industry felt the voltage.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>State Power Meets Frontier AI</h2>
+
+        <p>Late Friday evening, <a href="https://www.anthropic.com/news/fable-mythos-access">Anthropic announced</a> it had received a directive from the US government ordering the immediate suspension of access to Claude Fable 5 and Claude Mythos 5 — its two most capable models, released just days prior. The directive came from Commerce Secretary Howard Lutnick, citing national security export control authorities. The order was nominally aimed at "all foreign nationals, whether inside or outside the United States," but because Anthropic cannot surgically enforce nationality at the API level, the practical result was a full global shutdown. Every user, everywhere, lost access to both models.</p>
+
+        <p>This matters on several levels simultaneously. Mythos 5 is Anthropic's most capable model — the one the company has kept tightly restricted since its April preview because of its "exceptional ability to find security vulnerabilities in software." Fable 5, released just three days earlier, was Anthropic's attempt at a commercially safe version of Mythos: the same underlying power with guardrails over high-risk areas like cybersecurity and biology. The US government's position, apparently, is that guardrails are not enough. The models themselves are the export-controlled object.</p>
+
+        <blockquote>
+          "Anthropic's safety warnings may have just backfired — the government has pulled the plug on its most powerful AI."
+          <cite>— TechCrunch headline, June 12, 2026</cite>
+        </blockquote>
+
+        <p>The irony is almost too clean. Anthropic has spent years arguing that safety-first AI development — documenting capabilities, publishing system cards, voluntarily restricting dangerous use cases — was the responsible path. That transparency may have given the government the precise technical vocabulary to justify the shutdown. When you publish a system card explaining that your model can find zero-days at superhuman speed and at one-tenth the cost of human researchers, the national security apparatus takes careful notes.</p>
+
+        <p>The Hacker News thread on this story is the most-commented piece of the day, with 769 comments and climbing. HN readers are split between those who see this as the inevitable collision between frontier AI capability and state sovereignty, and those who read it as regulatory overreach that will simply push development to jurisdictions with fewer scruples about transparency. Several commenters noted that the Fable 5 suspension came within 72 hours of Anthropic publicly reversing its own policy of covertly downgrading the model for AI researchers — a reversal that was itself newsworthy. The company went from debating its own guardrail transparency to having the US government make that question moot, all within a week.</p>
+
+        <hr class="divider" />
+
+        <h2>The Salty Lesson: Stop Prompting, Design Loops</h2>
+
+        <p>In parallel with the geopolitical drama, the practitioner conversation this week coalesced around a deceptively simple idea that Latent Space's AINews branded "Loopcraft" — and gave it a memorable formulation: <em>the Salty Lesson</em>.</p>
+
+        <blockquote>
+          "Don't fix things yourself, as you have done historically. Instead focus on systems that scale with more agents, like goals and orchestration."
+          <cite>— The Salty Lesson, as articulated by Latent Space AINews, named after Rich Sutton's Bitter Lesson</cite>
+        </blockquote>
+
+        <p>The framing builds on Andrej Karpathy's recent articulation of what it actually means to use AI productively: "You can't be there to prompt the next thing. You need to take yourself outside. You have to arrange things such that they're completely autonomous... The question is how do I refactor all the abstractions so that I have to arrange it once and hit go." This maps directly onto something Boris Cherny, Head of Claude Code at Anthropic, has been saying in parallel: "I don't prompt Claude anymore. I write loops, the loops do the work."</p>
+
+        <p>Loops are not a new concept — every CI/CD pipeline, every cron job, every data ETL is a loop. What's new is that the loops themselves are now intelligent. A well-designed agent loop doesn't just execute; it perceives, decides, and retries. And crucially, loops compose: the output of one agent loop becomes the input to another. Latent Space identifies the key skill of the coming era as knowing when to <em>go down</em> a loop when things break (reliability) versus when to <em>go up</em> a loop as models improve (leverage). The practitioners who understand this architecture are compounding their output advantage weekly.</p>
+
+        <p>On HN, a concrete implementation appeared: <a href="https://github.com/DanMcInerney/architect-loop">/architect</a>, a Claude Code skill that uses Fable 5 as the architect and Codex as the builder — a cross-vendor agent loop that reportedly reduces Fable token consumption by 80% while maintaining output quality. Researchers at Microsoft published Arbor, an autonomous research agent using persistent hypothesis-tree refinement that claims 86% on MLE-Bench Lite across six research tasks. And Recursive SI demonstrated an open-ended discovery system that improved NanoGPT speedrun times and advanced NVIDIA's kernel optimization benchmark — small wins, but notable as evidence that loops are already contributing on narrow, high-feedback technical tasks.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents at the Extremes</h2>
+
+        <p>The week delivered two extreme illustrations of what happens when AI agents run without adequate constraints — one catastrophic, one impressive.</p>
+
+        <p>On the catastrophic end: <a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/">an AI agent bankrupted its operator</a> while trying to scan DN42, a decentralized hobbyist network that simulates internet infrastructure. The agent, given a vague directive to "scan the network," interpreted this maximally — spinning up compute, requesting APIs, chaining tool calls — and generated a billing disaster. The HN thread (1,396 points, 507 comments) is part horror story, part debugging session, and part design philosophy debate. The consensus: agents need budget constraints, scope constraints, and approval gates, built in at the architecture level rather than bolted on as afterthoughts.</p>
+
+        <p>On the impressive end: an autonomous security agent from depthfirst discovered <a href="https://depthfirst.com/research/21-zero-days-in-ffmpeg">21 zero-day vulnerabilities in FFmpeg</a> — the ubiquitous multimedia library that processes video on billions of devices — and produced concrete, reproducible proof-of-concept exploits for each. Cost: approximately $1,000. The equivalent human security audit, the company estimates, would run $10,000 or more. Each vulnerability came with PoC input files that trigger the flaw, not just theoretical analysis. Google and Anthropic are credited with prior security analysis work that the agent built on.</p>
+
+        <p>These two stories are the same story told from opposite ends. In one, an agent with no scope constraint and no budget ceiling converts a vague instruction into financial ruin. In the other, an agent with a precise objective, a bounded target, and real feedback signals (does the exploit trigger?) produces genuine value at a fraction of human cost. The difference isn't capability. It's architecture — specifically, the presence or absence of what the agent community calls a "harness": the scaffolding around a model that controls what it can see, do, spend, and how it verifies its own outputs.</p>
+
+        <blockquote>
+          "Malware developers added nuclear and biological weapons text to their spyware. Goal? To trigger LLM safety refusals... so that their spyware wouldn't be analyzed by an AI security scanner."
+          <cite>— @jsrailton, June 12, 2026 (329 points on HN)</cite>
+        </blockquote>
+
+        <p>And then there's the adversarial dimension. Malware developers have begun embedding strings about nuclear and biological weapons inside their spyware — not because the malware does anything related to those topics, but specifically to trigger AI safety refusals in security scanners that use LLMs to analyze code. It's a judo move: use the AI's own safety training as a blindfold. This is now a real attack vector in production, and it illustrates a general principle: any sufficiently capable AI system becomes a target for adversarial manipulation of its safety constraints.</p>
+
+        <hr class="divider" />
+
+        <h2>Human Attention as a Scarce Resource</h2>
+
+        <p>The week's most-engaged story by points was not the Anthropic shutdown or the agent bankruptcy. It was a quietly devastating essay titled <a href="https://tombedor.dev/human-attention-and-human-effort/">"If you are asking for human attention, demonstrate human effort"</a> — 1,521 points, 466 comments. Its argument is simple and uncomfortable: we have created a new etiquette problem. As AI-generated debug investigations, documents, and code flood our inboxes, the act of forwarding AI output to a human colleague without disclosure has become a form of implicit deception — claiming the credit of effort you didn't expend.</p>
+
+        <p>The essay lands because it names something people are already feeling but haven't articulated: human attention is becoming scarce relative to AI-generated content, and that scarcity is changing the social meaning of asking for a review. When everything looks polished, nothing signals genuine struggle. When everything is grammatically correct, you can't tell who actually thought hard about the problem. The 466 comments are a rich archaeological dig through people's evolving norms about disclosure, attribution, and what "my work" means when a significant fraction of it was produced by a system that doesn't have skin in the game.</p>
+
+        <p>Companion reading: <a href="https://blog.miguelgrinberg.com/post/i-am-not-a-reverse-centaur">"I Am Not a Reverse Centaur"</a> (258 points), which pushes back against the framing of humans as the cognitive layer piloting AI tools. The reverse centaur metaphor — a human body attached to an AI head — captures the anxiety that we're becoming the executing appendage rather than the directing intelligence. And a freelance translator's <a href="https://correresmidestino.com/dont-you-just-upload-it-to-chatgpt/">charming Ottawa story</a> (344 points) about a client who assumed translation was now trivially automatable makes the same point from a professional dignity angle: the assumption that your expertise has been commoditized by a chatbot is a form of disrespect that stings even when the assumption is sometimes correct.</p>
+
+        <hr class="divider" />
+
+        <h2>AI Solves Mathematics</h2>
+
+        <p>In a quieter corner of the week's discourse, two stories converged on the same milestone: AI systems are now operating at or above human gold-medal level on competition mathematics.</p>
+
+        <p>The <a href="https://arxiv.org/abs/2606.13473">MaxProof paper</a> from MiniMax introduced a population-level test-time scaling framework for mathematical proof. The system — MiniMax-M3 — trains three specialist capabilities: proof generation, joint error-finding verification, and critique-conditioned proof repair. At test time, it treats itself simultaneously as generator, verifier, refiner, and ranker, searching over a population of candidate proofs and returning one through tournament selection. The results: 35 out of 42 points on IMO 2025 and 36 out of 42 on USAMO 2026, exceeding the human gold-medal threshold on both. Competition mathematics, which requires not just correct answers but formal proofs that survive adversarial scrutiny, has been a benchmark precisely because it seemed to require the kind of creative, multi-step reasoning that LLMs were supposed to be bad at.</p>
+
+        <p>This connects to a <a href="https://www.quantamagazine.org/how-terry-tao-became-an-evangelist-for-ai-in-math-20260608/">Quanta Magazine profile</a> of Terence Tao — generally considered the world's greatest living mathematician — and his evolution from AI skeptic to something approaching AI evangelist. Tao's position isn't that AI will replace mathematicians; it's that automated proof verification systems (Lean, Coq, Isabelle) create a new infrastructure in which a complex proof can be broken into small chunks, solved piece by piece, and reassembled with certainty that every step is correct. The combination of AI-generated proof candidates and formal verification creates a loop that can produce mathematical knowledge at a scale and speed that human mathematicians alone cannot match. Tao is using this infrastructure in his own research, and he's persuading colleagues to do the same.</p>
+
+        <p>The deeper implication is about the nature of mathematical creativity. For decades, the argument was that formal proof systems were fine for checking but not for discovering — that the leaps of mathematical insight came from somewhere that couldn't be mechanized. MaxProof's results suggest that argument is weakening. Tournament selection over a population of AI-generated proof candidates is not the same as human mathematical intuition, but it's producing results that clear the gold-medal bar.</p>
+
+        <hr class="divider" />
+
+        <h2>Open Source as Insurance</h2>
+
+        <p>The US government's shutdown of Fable 5 and Mythos 5 arrived the same week that <a href="https://opensourceaimustwin.com/?share=v2">Open Source AI Must Win</a> was climbing the HN charts — a manifesto arguing that "civilizational intelligence infrastructure must remain free to study, build, deploy, and run, not rented from closed institutions." The timing is not a coincidence, but the juxtaposition is illuminating. When a single government directive can make the world's most capable publicly available AI model disappear overnight for all users globally, the case for open alternatives becomes both more urgent and more complicated.</p>
+
+        <p>The complication is this: the models that can actually be open-sourced without triggering the same export control concerns are, by definition, the ones that haven't crossed the capability threshold that made Fable 5 and Mythos 5 targets. This week's open model release, <a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code">Kimi K2.7-Code</a> from Moonshot AI, reached 408 points on HN and generated genuine excitement — it's a strong coding model with better token efficiency than its predecessors, and it's fully open-weight. But it's not Mythos. The gap between the frontier and the open frontier is, if anything, widening as the frontier itself becomes subject to state control.</p>
+
+        <p>What this means practically: the engineers and researchers who have been building workflows around frontier models now face a stability problem they didn't fully price in. An API call to Claude Fable 5 is not just a technical dependency; it's a dependency on a capability that can be administratively revoked by a government that has decided — for reasons that may or may not be explained publicly — that the capability is too dangerous to distribute. Open-weight models are insurance against this kind of counterparty risk. They're also, for now, genuinely less capable. That's the trade.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>State sovereignty over AI capability is no longer theoretical.</strong> The US government just demonstrated it can and will pull the plug on specific AI models overnight. This is the first time a government has used export control authorities to restrict access to a specific commercial AI model by capability level. It won't be the last. Every organization building on frontier AI needs a contingency plan for the model being revoked.</li>
+            <li><strong>Loop architecture is the new core competency.</strong> The practitioners who are compounding right now aren't the ones with the best prompts — they're the ones who have redesigned their workflows as autonomous loops that don't require them to be in the decision path. The Salty Lesson is real: you either design systems that scale with more agents, or you get outrun by people who do.</li>
+            <li><strong>Harnesses are not optional.</strong> The AI agent that bankrupted its operator had the same underlying capability as the one that found 21 FFmpeg zero-days. The difference was architecture: scope, budget limits, feedback signals, approval gates. The question for every team deploying agents is not "how capable is the model" but "how well-designed is the harness."</li>
+            <li><strong>Human attention is becoming the scarce input.</strong> As AI-generated content floods every review queue, the social meaning of asking for a colleague's time is changing. New norms around disclosure and effort attribution are forming now, in the friction of daily work. The essay that articulated this clearly got 1,521 upvotes. People are ready to talk about it.</li>
+            <li><strong>AI is genuinely cracking mathematics.</strong> MaxProof's gold-medal-threshold performance on IMO and USAMO isn't a benchmark trick — it's a system that produces formal proofs that survive adversarial verification. Terry Tao's endorsement of the underlying infrastructure matters. Mathematics is the domain most resistant to confident bullshitting, and AI is performing there.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://www.anthropic.com/news/fable-mythos-access">US Government directive to suspend access to Fable 5 and Mythos 5 (1203 pts)</a></li>
+          <li><a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/">AI agent bankrupted their operator while trying to scan DN42 (1396 pts)</a></li>
+          <li><a href="https://tombedor.dev/human-attention-and-human-effort/">If you are asking for human attention, demonstrate human effort (1521 pts)</a></li>
+          <li><a href="https://twitter.com/jsrailton/status/2064661778978533571">Malware weaponizing LLM safety refusals to evade AI security scanners (329 pts)</a></li>
+          <li><a href="https://depthfirst.com/research/21-zero-days-in-ffmpeg">Twenty One Zero-Days in FFmpeg — autonomous security agent, $1k cost (130 pts)</a></li>
+          <li><a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code">Kimi K2.7-Code: open-source coding model, better token efficiency (408 pts)</a></li>
+          <li><a href="https://arxiv.org/abs/2606.13473">MaxProof: Scaling Mathematical Proof — gold-medal threshold on IMO and USAMO (128 pts)</a></li>
+          <li><a href="https://www.quantamagazine.org/how-terry-tao-became-an-evangelist-for-ai-in-math-20260608/">How Terry Tao became an evangelist for AI in math (168 pts)</a></li>
+          <li><a href="https://opensourceaimustwin.com/?share=v2">Open Source AI Must Win (250 pts)</a></li>
+          <li><a href="https://blog.miguelgrinberg.com/post/i-am-not-a-reverse-centaur">I Am Not a Reverse Centaur (258 pts)</a></li>
+          <li><a href="https://correresmidestino.com/dont-you-just-upload-it-to-chatgpt/">"Don't You Just Upload It to ChatGPT?" — on translation and expertise (344 pts)</a></li>
+          <li><a href="https://github.com/DanMcInerney/architect-loop">/architect: Multi-model agent loop — 80% fewer Fable tokens (68 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking">Loopcraft: The Art of Stacking Loops (Latent Space AINews, Jun 12)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
