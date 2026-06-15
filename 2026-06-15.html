@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sovereignty Gap — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Monday, June 15, 2026</div>
+        <h1>The Sovereignty Gap</h1>
+        <p class="subtitle">The US government shut down Anthropic's best models for non-Americans. China's response arrived within hours — and it was a political statement as much as a product launch.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Day AI Went Geopolitical</h2>
+
+        <p>It happened on a Friday evening as the World Cup kicked off. Anthropic published a notice that the US government had issued an export control directive suspending all access to <strong>Claude Fable 5</strong> and <strong>Mythos 5</strong> for any foreign national — whether inside or outside the United States, including Anthropic's own non-US employees. The justification: a classified capability assessment suggesting the models posed a national cybersecurity risk, specifically through a potential jailbreak that could aid adversaries in discovering or exploiting software vulnerabilities.</p>
+
+        <p>Anthropic pushed back, calling it a "misunderstanding" — the government had provided only verbal evidence of a "narrow, non-universal" jailbreak — but complied anyway. The practical fallout was immediate: downstream products built on Fable and Mythos went dark, including Cognition's Devin and Agent Arena. Benchmark leaderboards had to remove entries. Users who had just paid $200–$250 for upgraded access got nothing. Artificial Analysis described it bluntly as "the first time our Intelligence Frontier chart has moved backward."</p>
+
+        <blockquote>
+          "The practical concern: closed frontier APIs can disappear overnight due to export controls, and frontier labs with many non-US researchers may be directly impaired."
+          <cite>— Latent Space AINews, June 13, 2026</cite>
+        </blockquote>
+
+        <p>The deeper issue isn't the specific jailbreak claim — Anthropic says GPT-5.5 has similar capabilities and remains unrestricted. The issue is what this event revealed: that any organization worldwide building on a closed US frontier API is now exposed to a new class of geopolitical risk. Your infrastructure can evaporate on a Friday afternoon because a government agency had concerns it communicated verbally. Engineers framing this as a "sovereignty risk" aren't being dramatic. They're being precise.</p>
+
+        <p>There's a historical parallel worth naming here. The electricity industry's "War of Currents" in the 1890s was fundamentally about who controlled the infrastructure of the future — Edison's DC monopoly versus the distributed, transmissible grid that AC eventually became. What happened last week is the AI equivalent of a government mandating that non-citizens can't plug into certain power grids. The response will be the same as it was then: people build their own.</p>
+
+        <hr class="divider" />
+
+        <h2>The Open Stack Answers</h2>
+
+        <p>Within hours of Anthropic's announcement, <a href="https://news.ycombinator.com/item?id=48518684">GLM 5.2 launched</a> from Tsinghua University's KEG lab with 729 upvotes on HN and a statement that reads less like a model card and more like a manifesto: <em>"Fully Open, Frontier Intelligence Belongs to Everyone. At a time when access to frontier models is abruptly cut off for non-technical reasons, we are even more convinced of one thing."</em> The timing was not coincidental. The positioning was not subtle. GLM 5.2 is a political statement dressed as a model release.</p>
+
+        <p>But the open-model surge predates Friday's drama and would have been significant regardless. In the past week: <strong>Kimi K2.7-Code</strong> from Moonshot AI dropped as a fully open-weight coding model — 1 trillion total parameters, 32 billion active, 256K context, MLA attention, reporting +21.8% on coding benchmarks and 30% fewer reasoning tokens than K2.6. <strong>MiniMax M3</strong> arrived with 428B total parameters, 23B active, native multimodal text/image/video support, and a 1M-token context window. Day-zero deployment support from SGLang, vLLM, Together, Baseten, Fireworks, and Unsloth. The open-model infrastructure ecosystem is now fast enough that a major release ships with production support in hours, not weeks.</p>
+
+        <p>Then there's <strong>Huawei openPangu 2.0</strong>, set to open-source on June 30: a 505B/18B active Pro variant and a 92B/6B Flash, with Huawei claiming 2x mainstream open-source inference throughput on Ascend hardware. Whether or not those numbers hold up, the signal is clear — every major non-US AI ecosystem is now explicitly competing on openness as a differentiator, precisely because US export controls have made closed models an unreliable dependency.</p>
+
+        <p>Meanwhile, <a href="https://news.ycombinator.com/item?id=48528371">Rio de Janeiro's "homegrown" LLM</a> turned out to be a fraud: the city's 397B model, presented as original work by IplanRIO, is a direct element-wise merge of Nex and Qwen3.5-397B-A17B — roughly 0.6 Nex / 0.4 Qwen — with the weights stolen rather than trained. This sparked nearly 300 upvotes and 158 comments on HN, most of them not angry so much as darkly amused. The impulse — a city government wanting sovereign AI — is correct. The execution was a disaster. Expect more attempts, better ones, from governments everywhere that watched last Friday.</p>
+
+        <hr class="divider" />
+
+        <h2>The Benchmark Industrial Complex Has a Problem</h2>
+
+        <p>Artificial Analysis made a significant infrastructure change this week: they replaced <strong>SWE-Bench Pro</strong> in their Coding Agent Index with <strong>DeepSWE</strong> from Datacurve. The reason: SWE-Bench Pro had become gameable via repository history leakage. DeepSWE writes tasks from scratch, making it substantially harder to overfit to the benchmark. The resulting rankings reshuffled considerably — Claude Code + Fable 5 entered at 77, Codex + GPT-5.5 at 76, Claude Code + Opus 4.8 at 73.</p>
+
+        <p>But the more important insight from the community reaction: the phrase "coding agent leaderboard" no longer means what it used to. It's increasingly a <em>system eval</em>, not a model eval. The harness — the scaffolding, tool-calling loop, context management, and UX decisions around the model — is becoming a first-class variable. Engineers pointed out that Claude Code underperformed other harnesses on identical underlying models, suggesting API providers may be better at training than at product. One tester spent $11,081 evaluating Fable 5 before the suspension, only to find that refusals suppressed its ranking artificially.</p>
+
+        <p>On the architecture front, <strong>DiffusionGemma</strong> (Google DeepMind's block-diffusion model) is generating real data: on a single H100, it runs at 763 tokens/second versus autoregressive Gemma4's 218 — roughly 3.5x faster. But accuracy dropped sharply, with 33 correct / 28 wrong versus 45 correct / 5 wrong on factual generation tasks, and errors worsened on less popular topics. The architecture generates 256-token blocks for fluency rather than checking token-by-token conditional probabilities. Speed is genuinely there. Reliability isn't — yet. <strong>EAGLE3 speculative decoding</strong>, meanwhile, landed in llama.cpp this week, offering 2–3x inference speedups with a draft model conditioned on the target model's intermediate features. Less dramatic but more mature: it works today, on models you already have.</p>
+
+        <hr class="divider" />
+
+        <h2>The Quiet Majority Isn't Vibe-Coding</h2>
+
+        <p><a href="https://news.ycombinator.com/item?id=48527700">Gabriel Weinberg's survey</a> on AI consumption — 438 upvotes, 474 comments, one of today's biggest threads — makes a point that gets lost in the discourse: people consume AI like they eat meat. Some are all-in. Some are selective. Some are avoiding it entirely, for reasons that range from privacy to aesthetics to genuine skepticism. The digest you read about AI every day is not representative of how most people relate to these tools.</p>
+
+        <p>This matters because the pressure to vibe-code everything — to treat AI as a universal productivity multiplier requiring no expertise or judgment — is running into real-world friction. <a href="https://news.ycombinator.com/item?id=48532116">Vibe Coder vs. Software Engineer</a> puts it cleanly: generated code has to be reviewed, owned, operated, and safely changed. Discovery is cheap with AI. Engineering is not. The <a href="https://news.ycombinator.com/item?id=48532178">Register's "AI is code"</a> piece makes the blunter version of the same argument: from Java test injectors to the Shai-Hulud malware that hid in PyTorch Lightning, bots keep proving they'll swallow whatever you feed them. You can't prompt a model into being smarter than it is. You can only structure the environment so that its failures are bounded and detectable.</p>
+
+        <blockquote>
+          "Vibe coding is useful for discovery, but software engineering starts when generated code has to be reviewed, owned, operated, and safely changed."
+          <cite>— Yusuf Aytas</cite>
+        </blockquote>
+
+        <p>This is why <a href="https://news.ycombinator.com/item?id=48526633">Jane Street's long essay on formal methods</a> (214 pts, 77 comments) landed with such resonance today. Jane Street has spent 25 years insisting that software you can't prove correct is software you can't trust. In an era where AI agents are writing production code at scale, the question of whether we can formally verify what's been generated — not just test it, but <em>prove</em> it — has moved from academic niche to urgent engineering concern. The essay doesn't mention AI once. It doesn't have to.</p>
+
+        <hr class="divider" />
+
+        <h2>What Else Happened</h2>
+
+        <p>Paul Graham published <a href="https://paulgraham.com/earn.html">"How to earn a billion dollars"</a> and HN essentially stopped functioning normally for a day — 487 points, 1,463 comments, the biggest thread in weeks. Graham's argument, predictably unsurprising and yet perpetually invigorating to argue about: billion-dollar outcomes come from making something a lot of people want. The thread was half genuine engagement and half ritual. Both have value.</p>
+
+        <p><strong>Linux 7.1</strong> <a href="https://news.ycombinator.com/item?id=48528729">shipped</a> (261 pts, 101 comments), noteworthy primarily for the continued speed of the kernel development cycle and for how Linux 7.0's PostgreSQL performance regression — AWS engineers reported a 50% throughput drop — appears to have been addressed. <strong>Kage</strong>, a tool that <a href="https://github.com/tamnd/kage">shadows any website to a single offline binary</a> with JavaScript stripped out, picked up 434 points as a Show HN — a clean tool for offline archival at a moment when web content keeps disappearing or getting locked behind authentication walls.</p>
+
+        <p>On the US-Iran ceasefire: the deal halts 60 days of fighting, reopens the Strait of Hormuz, and lifts the US naval blockade on Iranian ports. The thorniest nuclear issues are deferred. HN noted it with 8 points and moved on. The world did not stop for AI policy this week, even if AI policy felt like it stopped the world.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Closed frontier APIs are now geopolitical dependencies.</strong> The Fable/Mythos suspension made concrete a risk that has always existed in theory: any organization outside the US that relies on a single closed frontier provider has a single point of failure that no SLA covers. Diversify now, or be diversified by events.</li>
+            <li><strong>Open-weight AI just got its most compelling political argument.</strong> GLM 5.2, Kimi K2.7-Code, MiniMax M3, Huawei openPangu — the timing isn't coincidental. Export controls are the best recruiting poster open-source AI ever had. The open ecosystem is months behind on raw capability; it just picked up years of motivation.</li>
+            <li><strong>Harness quality is the hidden variable in every benchmark.</strong> The DeepSWE swap revealed that we've been measuring systems, not models, without saying so. Know what you're actually evaluating. The model you can't control is the one you blame; the harness you built is the one you can fix.</li>
+            <li><strong>Diffusion models are fast but not yet reliable.</strong> 4x throughput with 6x errors is a research result, not a production choice. EAGLE3's speculative decoding is the boring but ship-ready alternative. Pick the tool that's ready, not the one that's exciting.</li>
+            <li><strong>Most people will never vibe-code.</strong> They don't want to. The AI discourse lives in an echo chamber. The actual adoption curve is slower, messier, and more resistant than the industry assumes. Build for that reality, not the one in your timeline.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48518684">GLM 5.2 Is Out — "Frontier Intelligence Belongs to Everyone" (729 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48533504">Did Anthropic ask for this? — US export control on Fable/Mythos (166 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48528371">Rio de Janeiro's "homegrown" LLM appears to be a merge of an existing model (297 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48527700">Not everyone is using AI for everything — Gabriel Weinberg (438 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48532178">AI is code – and can't be prompted into being smarter (105 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48532116">Vibe Coder vs. Software Engineer (60 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48526633">Formal methods and the future of programming — Jane Street (214 pts)</a></li>
+          <li><a href="https://paulgraham.com/earn.html">How to earn a billion dollars — Paul Graham (487 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48528729">Linux 7.1 (261 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48529990">Show HN: Kage – Shadow any website to a single binary for offline viewing (434 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-fable-and-mythos-officially">AINews: Fable and Mythos officially too dangerous to release (Latent Space)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
