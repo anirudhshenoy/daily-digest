@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Loop You Own — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, June 16, 2026</div>
+        <h1>The Loop You Own</h1>
+        <p class="subtitle">Satya names the era, 743 Hacker News comments revolt against rented intelligence, and OpenRouter starts running a panel of models against your prompt for $0 a million tokens.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Local Model Revolt</h2>
+
+        <p>The most-commented AI thread on Hacker News today has nothing to do with a product launch. It's a question: <a href="https://news.ycombinator.com/item?id=48542100">"Has anyone replaced Claude/GPT with a local model for daily coding?"</a> At 743 points and 355 comments, it's the kind of thread that tells you where the community's anxiety is pooling. And the answer, from dozens of working engineers, is increasingly: yes. Llama 4, Gemma 4, DeepSeek V4 Flash on Metal, Qwen 3.7 — people are running real work on local inference, not just tinkering. The tradeoffs are still real (context limits, reliability on complex reasoning), but the threshold at which local stops being a curiosity and starts being a viable default has dropped sharply in 2026.</p>
+
+        <p>The timing is not accidental. The week before, the US government suspended access to Anthropic's Fable 5 and Mythos models — still unavailable as of this morning. Latent Space's AINews captures the builder community's mood: what looked like a technical edge case (regulatory risk for frontier AI access) has become impossible to ignore. The most-repeated phrase in the Latent Space post is "model neutrality," and it's hardening from philosophy into architecture. Teams that were casually committed to a single vendor are now actively routing.</p>
+
+        <blockquote>
+          "If you can't explain an agent's behavior, you have a demo, not an architecture."
+          <cite>— Harrison Chase (@hwchase17), via Latent Space AINews, June 16</cite>
+        </blockquote>
+
+        <p>Meanwhile a quieter piece of the puzzle landed on HN: <a href="https://fata.dev">Fata</a>, a spaced-repetition tool explicitly built around what its maker calls "skill rot from AI coding." The pitch is blunt — you can't direct what you don't understand, and if you've been letting your agent write everything, you've been losing the full-stack fundamentals needed to review it. The app builds deliberately slow, retrieval-based practice into the workflow. It's the anti-vibe-coding tool, and its 86 points suggest more engineers identify with the problem than will publicly admit it.</p>
+
+        <hr class="divider" />
+
+        <h2>Satya's Theory of the Firm</h2>
+
+        <p>Microsoft CEO Satya Nadella published what Latent Space is already calling his most important piece of strategic writing since the OpenAI breakup eight months ago. He coined a term for it: <strong>Loopcraft</strong>. The essay — which earned over 60 million views on X — is worth understanding not as corporate messaging but as an actual theory of competitive advantage in an AI world.</p>
+
+        <p>The core claim is this: the race to have the best frontier model is largely over as a source of durable advantage. The real game is building <em>learning loops</em> — cognitive feedback cycles between people and digital systems where human capital and what Satya calls "token capital" (the accumulated institutional knowledge encoded in your AI-facing data, workflows, and outputs) compound together. You can outsource a task or even a job, but you cannot outsource your learning. Organizations that own their loop will compound. Those that rent intelligence will plateau.</p>
+
+        <blockquote>
+          "The real opportunity is not in picking the best model but instead in building a learning loop on top of models where human capital and token capital compound."
+          <cite>— Satya Nadella, via Latent Space AINews</cite>
+        </blockquote>
+
+        <p>This is a more rigorous articulation of what the harness-first community has been saying for months — but coming from the CEO of the world's largest software company, it lands differently. Latent Space's framing is helpful: whether you see this as "cope" from a company that lost the model race, or as timeless wisdom, the practical implication is the same. Build the harness. Own the memory. Make your traces into training signal. The loop is the moat.</p>
+
+        <p>The technical corroboration from the same issue of Latent Space is striking. LangChain launched LangSmith Engine for surfacing production trace issues, plus a post-trained judge that identifies behavioral problems at 10–100× lower cost than frontier models. A separate paper on <strong>HarnessX</strong> treats the harness itself as a composable, typed artifact that evolves from production traces rather than being manually rebuilt for each new model. And Nous Research shipped <strong>Hermes Agent</strong> with asynchronous subagents and Stripe integration for agentic purchasing — the first harness I've seen where an agent can autonomously provision SaaS subscriptions with safety limits. The harness layer is becoming the product.</p>
+
+        <hr class="divider" />
+
+        <h2>The Infrastructure Catching Up</h2>
+
+        <p>Three infrastructure announcements from today clarify what the new layer actually looks like in practice.</p>
+
+        <p><strong>OpenRouter Fusion</strong> launched this week and made the HN front page with 200 points. The concept is elegant: you send a prompt to <code>openrouter/fusion</code>, a panel of models answers in parallel (each with web search enabled), and a judge model compares their responses — surfacing consensus, contradictions, coverage gaps, unique insights, and blind spots. It's priced at $0 per million tokens for both input and output, which suggests OpenRouter is subsidizing it as a moat. For research questions, adversarial review, or anything where a single model has a predictable blind spot, this is the first time multi-model deliberation has been a zero-marginal-cost API call.</p>
+
+        <p><strong>Cartesia</strong> shipped both sides of real-time voice agents in a single drop: Sonic-3.5 for streaming TTS and Ink-2 for streaming STT, claiming the #1 model for both speaking and listening. Together AI benchmarks show sub-90ms latency with 42-language support and strong handling of structured utterances like ID numbers and alphanumeric codes — the class of inputs that usually breaks voice agents in production. If you're building agentic voice workflows, the bottleneck just moved.</p>
+
+        <p>On the inference efficiency front, <strong>SGLang's DFlash + Spec V2</strong> hit as the new default speculative decoding engine, claiming over 4.3× baseline throughput for Qwen 3.5 397B-A17B via a block diffusion drafter and KV injection. Separately, Unsloth demonstrated that Kimi K2.7 Code — a 1T parameter model — can now run locally via dynamic 2-bit quantization, shrinking to 325GB and achieving 40+ tokens/second on consumer-accessible memory configurations. A trillion-parameter model that runs on one workstation is a sentence that would have been absurd eighteen months ago.</p>
+
+        <p>One more: Anthropic launched <strong>Claude Corps</strong>, a national fellowship for early-career people passionate about extending AI access to underserved communities across America. Coming the same week Fable 5 and Mythos are under government suspension, it's a pointed reaffirmation of Anthropic's long-term mission posture — and a reminder that the company is playing a longer game than any individual model launch.</p>
+
+        <hr class="divider" />
+
+        <h2>Beyond the Feed</h2>
+
+        <p><strong>Iroh 1.0</strong> landed this week with 993 points — the highest-scoring non-AI story in recent memory. If you haven't heard of it: Iroh is a Rust library that lets you establish peer-to-peer connections by dialing a public key rather than an IP address. "Dial keys, not IPs" is the tagline. The underlying insight is that IP addresses are inherently fragile — they can be private, firewalled, or reallocated without notice — while a cryptographic identity is permanent and globally addressable. Iroh is already running on millions of devices, and 1.0 marks the first stable release with a support schedule. The internet-infrastructure community is treating this as a foundational primitive.</p>
+
+        <p><strong>CrankGPT</strong> (557 points, 220 comments) is the most delightful story of the week: a hand-cranked device that powers a fully local, fully private AI with zero electricity from the grid. The obvious joke is easy to make, but the thread is earnest. In a week dominated by debates about model neutrality, regulatory capture, and energy consumption for AI datacenters, a crank-powered LLM is either a perfect satirical counterpoint or a surprisingly practical proof that local inference can reach almost anything.</p>
+
+        <p>In medical science: a <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1813281/full">study in Frontiers in Neuroscience</a> reports improvement in advanced Alzheimer's disease following high-dose psilocybin — a result that, if it replicates, matters because advanced Alzheimer's has been treated as a stage of irreversible decline. Separately, Monash University published results on a copper-transporting drug that restores memory and clears amyloid proteins in animal models. Two independent approaches to neurodegeneration in the same week, both showing signal.</p>
+
+        <p><strong>Salesforce acquired Fin</strong> (formerly Intercom's AI support product) for $3.6B, consolidating the AI-native customer service market. The deal confirms what Intercom's spinoff of Fin as a standalone product telegraphed: AI-first support is now a distinct category large enough to attract nine-figure acquisitions.</p>
+
+        <p>And <strong>Hetzner raised cloud prices</strong> — with 509 comments on HN, it's the most-discussed price change in recent memory. The timing matters: Hetzner has been the go-to affordable European cloud for years, especially for teams migrating from AWS over privacy and cost concerns. A price adjustment there ripples into a lot of infrastructure decisions.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Model neutrality is the new table stakes.</strong> The Fable/Mythos suspension was the forcing function, but the underlying logic was already building. Any architecture with a single-model dependency is now a liability. Routing, open weights, and harness portability aren't engineering preferences anymore — they're risk management.</li>
+            <li><strong>Satya's "Loopcraft" is the clearest articulation yet of why the harness wins.</strong> You can rent a model's capabilities, but the loop — the institutional memory, the trace data, the compounding feedback — belongs to whoever built it. This is the correct unit of competitive advantage for the next five years.</li>
+            <li><strong>The local inference stack just crossed a threshold.</strong> A trillion-parameter model at 40 tok/s on 330GB RAM, a 4.3× throughput gain from a new speculative decoding engine, and a mainstream HN thread on replacing frontier APIs — these aren't isolated data points. The cost and capability curves for local inference have converged into something that justifies real production consideration.</li>
+            <li><strong>Voice is about to close the last gap in agentic UX.</strong> Cartesia's sub-90ms TTS + STT in a single API drop, with 42-language support, is the kind of infrastructure that enables voice-first agents as a legitimate product category rather than a demo.</li>
+            <li><strong>The skill-rot problem is real and underreported.</strong> Fata's appearance on the front page, alongside the ongoing academic debates about AI usage in education, signals that a significant cohort of working engineers is actively worried about what they're losing. This will become a larger conversation.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48542100">Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding? (743 pts)</a></li>
+          <li><a href="https://openrouter.ai/openrouter/fusion">Openrouter Fusion API — multi-model deliberation (200 pts)</a></li>
+          <li><a href="https://www.iroh.computer/blog/v1">Iroh 1.0 — Dial Keys, not IPs (993 pts)</a></li>
+          <li><a href="https://crankgpt.com">CrankGPT — human-powered, fully local AI (557 pts)</a></li>
+          <li><a href="https://www.anthropic.com/news/claude-corps">Claude Corps — Anthropic's national fellowship (99 pts)</a></li>
+          <li><a href="https://fata.dev">Show HN: Fata – Spaced repetition to fight skill rot from AI coding (86 pts)</a></li>
+          <li><a href="https://github.com/sammysltd/euromesh">Can Europe train a frontier AI model on the compute it owns? (120 pts)</a></li>
+          <li><a href="https://runtimewire.com/article/microsoft-github-aws-ai-capacity-crunch">Microsoft turns to AWS as GitHub faces AI capacity crunch (61 pts)</a></li>
+          <li><a href="https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/">Salesforce to Acquire Fin (formerly Intercom) for $3.6B (288 pts)</a></li>
+          <li><a href="http://ishmeetbindra.com/posts/reviews-have-become-expensive-rewrites-have-become-cheap/">Reviews have become expensive, rewrites have become cheap (28 pts)</a></li>
+          <li><a href="https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/#cloud-servers">Hetzner Price Adjustment (353 pts)</a></li>
+          <li><a href="https://www.monash.edu/news/articles/copper-drug-restores-memory-and-clears-toxic-alzheimers-proteins">Copper transport drug restores memory and clears toxic Alzheimer's proteins (264 pts)</a></li>
+          <li><a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1813281/full">Improvement in advanced Alzheimer's disease following high-dose psilocybin (196 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/ainews-satya-on-loopcraft-building">[AINews] Satya on Loopcraft: Building Frontier Ecosystems (Latent Space, Jun 16)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
