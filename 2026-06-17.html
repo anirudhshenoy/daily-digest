@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Stack Wars Begin — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, June 17, 2026</div>
+        <h1>The Stack Wars Begin</h1>
+        <p class="subtitle">SpaceX's $60B Cursor deal opens a new front in the AI coding war — just as a leaked codebase reveals that winning is mostly plumbing.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>SpaceX Just Bought Your IDE</h2>
+
+        <p>If you needed proof that AI developer tooling is now the most contested real estate in tech, consider what happened yesterday: SpaceX — fresh off an $85 billion IPO that vaulted it to the sixth most valuable company on Earth — announced it is moving forward with its $60 billion acquisition of Cursor. The deal, first structured as an option SpaceX secured in April, gives Elon Musk's company something Anthropic has been quietly accumulating for two years: deep distribution inside the professional developer community. Cursor has millions of engineers who've made it their daily driver. That's not a product metric. That's a beachhead.</p>
+
+        <p>The strategic logic is blunt. SpaceX brings xAI's Colossus supercomputer — roughly one million Nvidia H100-equivalent chips — and a willingness to lose money at scale to win markets. Cursor brings a beloved product and a user base that other AI companies would pay almost anything to reach. The alternative on the table had been a $10 billion joint development arrangement. SpaceX chose the whole company. That tells you everything about how seriously they are taking the coding assistant wars.</p>
+
+        <p>The battle lines now look like this: Anthropic has Claude Code, the $2.5 billion ARR agentic coding platform. OpenAI has Codex. And now SpaceX has Cursor, with xAI's raw compute sitting behind it. What started as a model competition has become a full-stack platform war — one where distribution, not just model quality, may determine who wins.</p>
+
+        <blockquote>
+          "Cursor's wide distribution to expert software engineers is likely part of what made it attractive to Musk's company, giving it access to a new customer base."
+          <cite>— Reuters reporting on the SpaceX acquisition announcement</cite>
+        </blockquote>
+
+        <p>Meanwhile, HN's top story this morning pushed back on the big-money narrative in its own quiet way: <em>Running local models is good now</em>, a post from ML engineer Vicki Boykis, climbed to 1,081 points with 444 comments. The post makes the case that the open-source ecosystem — Qwen, Gemma, local quantized models — has quietly crossed a threshold where it's actually usable for everyday coding tasks. Not as impressive as a frontier model. But free, private, and fast enough. The reaction from HN suggests a meaningful chunk of developers are hedging their bets: subscribing to Claude Code with one hand, spinning up a local Qwen with the other.</p>
+
+        <hr class="divider" />
+
+        <h2>The 12 Things That Actually Make an Agent Work</h2>
+
+        <p>Last week, Anthropic had what might charitably be described as an eventful few days. First, draft blog materials about their forthcoming Claude Mythos model were left on a publicly accessible server. Then, days later, a build configuration error exposed the full source code of Claude Code — the $2.5 billion ARR product that is, at the moment, arguably the most important software artifact in the AI industry. Both incidents were, according to Anthropic, human error. But the pattern raised a question that analyst Nate Jones put directly: is your development velocity outrunning your operational discipline?</p>
+
+        <p>Jones spent time reviewing the Claude Code repository in detail, and what he found — buried beneath the understandable excitement about upcoming feature flags and roadmap items — was something more valuable: a complete picture of the engineering infrastructure that makes a $2.5 billion agentic product actually work. He organized it into twelve primitives across three tiers. The lesson, distilled: <strong>building agents is 80% non-glamorous plumbing and 20% AI.</strong></p>
+
+        <p>The day-one non-negotiables, per the Claude Code architecture:</p>
+
+        <p><strong>Tool registry with metadata-first design.</strong> Claude Code maintains two parallel registries — a command registry with 207 entries and a tool registry with 184 entries. Every entry carries a name, a source hint, and a responsibility description. The registries are the source of truth; implementations load on demand. If you don't have a clean tool registry, you can't filter by context, you can't introspect without triggering side effects, and every new tool requires changes to your orchestration code.</p>
+
+        <p><strong>Tiered permissions.</strong> Not all tools carry the same risk. Claude Code segments capabilities into three trust tiers: built-in (always available, highest trust), plugin (medium trust, disableable), and skills (user-defined, lowest trust by default). The shell execution tool alone — the one that lets an agent actually run code on your machine — has an 18-module security architecture. Eighteen separate modules, from pre-approved command patterns to destructive command warnings to git-specific safety checks. "I don't think Anthropic is being paranoid," Jones observed. "I think it's what separates a system that works safely at $2.5 billion run rate from one that works in a little notebook."</p>
+
+        <p><strong>Session persistence that survives crashes.</strong> An agent's session is not just conversation history. It's conversation, usage metrics, permission decisions, and configuration — everything needed to reconstruct full agentic state after a crash. Claude Code persists all of this so a session can be reinstantiated, not just resumed.</p>
+
+        <p><strong>Workflow state, separate from conversation state.</strong> This is the one almost every agentic framework gets wrong. A chat transcript answers "what did we say?" A workflow state answers "what step are we in, what side effects have occurred, and is this safe to retry?" Without workflow state, a crash mid-execution can mean duplicate writes, double-sent messages, or a re-run of an expensive operation. Claude Code models long-running work as explicit states — planned, awaiting approval, executing, waiting on external party — and checkpoints constantly.</p>
+
+        <p>The operational maturity tier adds four more lessons: dynamic tool pool assembly (an agent with 184 tools doesn't load all 184 for every run — it assembles a context-specific subset), automatic transcript compaction (managing token cost across long-running tasks), a three-handler permission architecture that distinguishes between interactive human users, multi-agent coordinators, and autonomous swarm workers, and a six-type agent system where each agent type — Explore, Plan, Verify, Guide, General Purpose, Status Line Setup — has its own prompts, allowed tools, and behavioral constraints. An explore agent cannot edit files. A plan agent doesn't execute code. The roles are structural, not aspirational.</p>
+
+        <blockquote>
+          "When the AI writes 90% of your code and your engineers are shipping multiple releases per engineer per day, the surface area for configuration drift is really high."
+          <cite>— Nate Jones, on the conditions that led to the Claude Code leak</cite>
+        </blockquote>
+
+        <p>The irony Jones kept returning to: the leak's most plausible explanation, per developer speculation, involves a Claude Code session that fell back to a less capable model and then committed the .map file containing the leak as part of a routine build step. An AI may have accidentally leaked the architecture of the AI. Whether or not that's what happened, it's a useful parable for a moment when velocity is valued above almost everything else.</p>
+
+        <hr class="divider" />
+
+        <h2>What Demis Hassabis Is Actually Worried About</h2>
+
+        <p>In a year-end conversation with mathematician and broadcaster Hannah Fry for the Google DeepMind podcast, Demis Hassabis offered the most measured and revealing account of where he thinks AI actually is — and what keeps him from sleeping. The conversation covered a lot of ground, but a few threads stood out.</p>
+
+        <p>On scaling: he pushed back firmly on the idea that there's a wall. "Maybe there are diminishing returns," he said, "but people think it's zero or one — either exponential or asymptotic. There's a lot of room between those two regimes." Gemini 3, which he discussed as just launched, was performing well across benchmarks, and he attributed it to a 50/50 split between scaling and fundamental research innovation. His argument was simple: when the terrain gets harder, pure engineering advantage isn't enough — you also need research depth, which is where Google DeepMind believes it has a durable edge.</p>
+
+        <p>On world models: Hassabis was most animated here. Genie — Google DeepMind's interactive world generation system — and Sima — their agent that navigates generated worlds — are now running simultaneously, with the Sima agent navigating worlds that Genie is creating on the fly. The two systems are interacting in real-time, which Hassabis described as the beginning of "an interesting training loop" where agents can generate and solve millions of increasingly difficult tasks automatically. The implication: this is how you get to AlphaZero-style self-improvement for general agents, not just games.</p>
+
+        <blockquote>
+          "Nobody's found anything in the universe that's non-computable. So far."
+          <cite>— Demis Hassabis, on whether there are limits to what machines can do</cite>
+        </blockquote>
+
+        <p>On what worries him: agents. Not science fiction superintelligence — agents. The near-term systems. "I'm quite worried about what those sorts of systems will be able to do in two, three years," he said. "We're working on cyber defense in preparation for a world where there might be millions of agents roaming around on the internet." The current generation of AI is what he called "passive" — you put energy in as prompts, you get answers. Agents are different. They're autonomous. They accumulate. They can form chains of action that no single person planned. Hassabis described the transition to agentic AI as the next moment where risks "go up substantially."</p>
+
+        <p>The industrial revolution analogy he returned to was pointed: AI will probably be ten times bigger than that transformation, and unfold ten times faster — in a decade rather than a century. His concern wasn't that society can't adapt. It's that the institutions designed to help societies adapt — international bodies, regulatory frameworks, cross-lab coordination — are fragmented, slow, and not yet designed for what's coming. "I wish there was a lot more international collaboration already," he said. "Even our timelines are five to ten years, which is not long for institutions to be built."</p>
+
+        <hr class="divider" />
+
+        <h2>The 2026 Predictions You Should Actually Pay Attention To</h2>
+
+        <p>The No Priors year-end episode — hosted by Sarah Guo and Elad Gil, two investors who between them have seen more AI company pitches than almost anyone — spent an hour working through what 2026 actually looked like versus what people expected. The consensus, loosely: AI is advancing faster than almost anyone's ability to process it, but the applications layer is still playing catch-up in most domains.</p>
+
+        <p>The most striking data point they cited came from physician AI adoption research. Doctors — traditionally one of the most conservative professional groups when it comes to technology — are adopting AI clinical decision support at massive scale. "Of all the domains that were professional and considered more conservative," Gil said, "the fact that there is this desire to have things that make work better seems like obviously to continue in the other professions." Lawyers, accountants, compliance teams — the professionals everyone assumed would resist AI hardest — are turning out to be among its most enthusiastic users. The implication for anyone building vertical AI: the obstacle you were expecting from professional conservatism may not show up.</p>
+
+        <p>On robotics: both hosts were calibrated. They expect humanoid robots to be deployed at small scale in 2026, in both consumer and industrial settings, and they expect some of those deployments to fail visibly. The hype around humanoids is high enough that any stumble will be amplified into a narrative of failure — even if the underlying trajectory is sound. "It took self-driving a long time to figure out," Guo noted, drawing the comparison to Waymo's long arc from demo to daily use. The question she raised — whether the robotics winners will be incumbents (Tesla's Optimus, Chinese manufacturers) or startups — remains genuinely open, partly because robotics demands manufacturing and supply chain expertise that is hard to bootstrap.</p>
+
+        <p>The consumer AI breakout they've been waiting for: still pending, but closer. Both agreed that the most interesting consumer AI experiences are being prototyped right now, mostly in stealth. The products that will change how ordinary people think about AI assistants — not chatbots, but action-taking agents that work while you sleep — are being built. The question is distribution. The labs have a structural advantage: they can launch features to hundreds of millions of existing users and absorb or copy anything that gets traction. The window for independent consumer AI companies to build escape-velocity network effects before the labs notice is narrow.</p>
+
+        <blockquote>
+          "There's going to be a lot more product people that experiment with this next year. I'm pretty optimistic about that."
+          <cite>— Sarah Guo, on the coming wave of consumer AI applications</cite>
+        </blockquote>
+
+        <p>One prediction from the No Priors guest segments that deserves its own flag: multiple guests independently converged on the idea that 2026 will be the year of the agent harness — the scaffolding around AI models that determines whether they can operate reliably in production. This aligns precisely with what the Claude Code leak revealed: the moat isn't the model, it's the plumbing that wraps it. The guest who put it most plainly called it "the boring stuff that I suspect Anthropic will lean on" — session state, permission layers, typed streaming events, workflow checkpointing. The companies that get this right will be the ones still standing when the model plateau arrives.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The AI wars have moved to infrastructure.</strong> SpaceX buying Cursor isn't about the model — it's about distribution and data flywheel. Whoever owns the surface where developers write code, reviews code, and ships code will own a huge amount of what gets built next. Anthropic understood this early. Now SpaceX has declared its entry.</li>
+            <li><strong>The Claude Code leak is a gift to the industry.</strong> Twelve agentic primitives, described in detail from a production system running at $2.5B ARR. The lesson isn't "look at Anthropic's feature flags." It's "look at how they handle crashes, permissions, session state, and tool registries." If you're building agents and haven't thought through all 12 of these, you have a demo, not a product.</li>
+            <li><strong>Local models are a real hedge, not just a hobbyist thing.</strong> A 1,000+ point HN story on local model quality signals that a meaningful segment of professional developers is building workflows that don't depend on API keys and subscription costs. This matters for competitive dynamics: the frontier labs can't lock in developers who can self-host.</li>
+            <li><strong>Demis's concern about near-term agents is the one to track.</strong> Not AGI in 5-10 years — agents in 2-3 years. Millions of autonomous systems operating on the internet, with no centralized oversight. The cyber defense infrastructure needed for this world is not yet built, and the international coordination mechanisms don't exist. This is the quiet emergency.</li>
+            <li><strong>The professional adoption story is being undercovered.</strong> Doctors, lawyers, compliance teams — these are the AI adopters nobody talks about, and they're going fast. The vertical AI opportunity in professional services is larger and more durable than the consumer AI opportunity. Build for the experts first.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48553224">SpaceX to buy Cursor for $60B (919 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48555993">Running local models is good now (1081 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48563609">Is Meta destroying its engineering organization? (455 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48561654">GrapheneOS has been ported to Android 17 (481 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=NA_i-broke-down-anthropics-leak">I Broke Down Anthropic's $2.5B Leak — Your Agent Is Missing These Primitives (NateBJones)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=NA_the-future-of-intelligence">The Future of Intelligence — Demis Hassabis, Co-founder and CEO (Google DeepMind)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=NA_no-priors-ep-144">No Priors Ep. 144: 2026 Year-End Review with Elad Gil (No Priors Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
