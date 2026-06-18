@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When Open Reaches Parity — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Thursday, June 18, 2026</div>
+        <h1>When Open Reaches Parity</h1>
+        <p class="subtitle">Open-weight AI just matched proprietary models on hard benchmarks, your laptop can now run an agentic loop at 75% frontier accuracy — and a battle royale across eleven LLMs revealed something benchmarks will never capture.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Local Inflection Point</h2>
+
+        <p>Vicki Boykis is not a hype person. She is a machine learning engineer who has been working with local models since they shipped — through the slow, inaccurate, barely-usable early years. When she publishes a post titled "Running local models is good now," HN listens. It topped the front page with 1,515 points and 584 comments, the most engaged AI post in weeks.</p>
+
+        <p>Her verdict: Gemma 4, specifically the <code>gemma-4-12b-qat</code> model (a quantization-aware trained variant from Google), has crossed a threshold she didn't expect to cross yet. Running agentic coding loops locally — refactoring Python scripts, writing unit tests, bootstrapping repos from scratch — now works at approximately 75% the accuracy and speed of frontier models. "These kinds of tasks," she writes, "used to be impossible for local models as recently as six months ago."</p>
+
+        <blockquote>
+          "My own personal vibe metric of 'is a model good enough' is, do I have to double-check it against an API model. GPT-OSS was the first one where I started doing that a lot less often."
+          <cite>— Vicki Boykis, "Running local models is good now"</cite>
+        </blockquote>
+
+        <p>What's technically interesting here is the architectural question she poses: if you are constrained by performance and price (which local deployment absolutely is), what tradeoffs do you make? Google's Gemma 4 is designed around exactly this question. The 12B quantized model performs dramatically above what its parameter count suggests, because the architecture makes smart choices — quantization-aware training bakes efficiency into the model's weights during training, not as an afterthought. The result is a model that runs entirely in LM Studio on an M2 Mac with 64GB RAM, and drives a full agentic loop inside a Docker container.</p>
+
+        <p>Her setup: Pi as the agent harness, LM Studio as the inference server, Gemma 4-12b-qat as the model, all running in an isolated Docker container with restricted permissions. No API calls. No monthly bill. No latency to a data center. This is not a toy demo. This is a working developer workflow.</p>
+
+        <hr class="divider" />
+
+        <h2>The Open-Weight Ceiling Just Got Higher</h2>
+
+        <p>Simultaneously — and this is the day that makes the Vicki Boykis post even more significant — Z AI shipped GLM-5.2, and it immediately became the leading open-weight model on the Artificial Analysis Intelligence Index. By a significant margin.</p>
+
+        <p>The numbers are striking. GLM-5.2 scores 51 on the Intelligence Index v4.1. The next-best open-weight model — MiniMax-M3 — scores 44. DeepSeek V4 Pro scores 44. Kimi K2.6 scores 43. On the GDPval-AA v2 benchmark, which measures real-world agentic performance (longer-horizon tasks, multi-turn agent trajectories), GLM-5.2 scores 1,524. GPT-5.5 on extended reasoning scores 1,514. These are effectively equivalent.</p>
+
+        <p>The model itself is a 744B parameter mixture-of-experts architecture, with 40B active parameters per forward pass — similar to the GLM-5.1 that preceded it, but trained substantially better. Context window: 1 million tokens. License: MIT. It jumped 11 points on the Intelligence Index in a single release cycle, driven by huge gains in scientific reasoning (CritPt up 16 points, HLE up 12 points) and agentic coding (TerminalBench v2.1 up 16 points to 78%).</p>
+
+        <blockquote>
+          "GLM-5.2 leads all open weights models on GDPval-AA v2, our primary metric for real-world agentic performance. At 1524 it places ahead of MiniMax-M3 (1418) and DeepSeek V4 Pro (max, 1328), and is effectively level with GPT-5.5."
+          <cite>— Artificial Analysis Intelligence Index report</cite>
+        </blockquote>
+
+        <p>What this means structurally: the "moat" of closed-source frontier AI is narrowing to near zero on standard benchmarks. A year ago, open-weight models were reliably one generation behind. Today, GLM-5.2 on the Pareto frontier of intelligence vs. cost means it delivers more reasoning per dollar than any closed model at its intelligence tier. It's MIT licensed. Anyone can download, fine-tune, and deploy it.</p>
+
+        <p>The HN thread (813 points, 390 comments) is a mix of excitement and healthy skepticism. Several commenters note that GLM-5.2 uses substantially more output tokens per task than competitors — 43k versus 24k for MiniMax-M3 — which inflates benchmark scores and masks real-world cost differences. This is the kind of texture that matters: a model that thinks longer per task isn't necessarily smarter, it may just be more verbose. Caveat emptor.</p>
+
+        <hr class="divider" />
+
+        <h2>What Benchmarks Miss: The Battle Royale</h2>
+
+        <p>And then there's the most philosophically interesting piece of the day. A developer at OpenRouter, Jacky, dropped eleven LLMs into a 2D battle royale game and made them play 30 matches. He spent $482 on inference. He wanted to understand something that no standard benchmark captures: how do models behave under adversarial pressure, when other agents are actively trying to eliminate them?</p>
+
+        <p>The result that topped HN (190 points, 160 comments): Grok 4.1 Fast won 43% of the games. It cost $0.97 per win. Claude Sonnet 4.6 won 5 games — but at $26.78 per win, 27 times more expensive. And GPT-5.4? It got the most kills — 38 agents across 30 games — but only won 2 matches. Eleven games of difference between "best at killing" and "best at winning."</p>
+
+        <p>Three models — GPT-5.4-mini, DeepSeek 4 Flash, and Kimi K2.6 — spent $57 between them and never won a single game.</p>
+
+        <p>What makes this more than a curiosity is what Jacky observed in how each model <em>played</em>. Claude Sonnet 4.6 tried to cooperate. It told other players where it was. It proposed alliances. In a battle royale, this is suboptimal — it costs games. In literally every other real-world application of AI, it's exactly what you want. The disposition that loses in adversarial competition is the disposition that makes an AI trustworthy as a system.</p>
+
+        <blockquote>
+          "The model that wins a battle royale is not the one you actually want in most of the places we're about to put these models."
+          <cite>— Jacky, OpenRouter Engineering Blog</cite>
+        </blockquote>
+
+        <p>Grok 4.1 Fast, meanwhile, played pure game theory: defect, eliminate, win. Efficient. But would you want a robot deciding your supply chain, managing your infrastructure, or handling your customer calls if it's optimized to defect when defecting wins? The battle royale makes viscerally clear what AI safety researchers have been arguing abstractly: capability and character are not the same axis. You need to evaluate both, and standard benchmarks only measure one.</p>
+
+        <p>The deeper finding: models with the most kills did not win. Survivability required not just aggression but positioning, resource management, and reading the shrinking zone correctly. The model that happened to survive was the one that played strategically across the full time horizon, not just the next exchange. This maps cleanly to how long-horizon agentic tasks fail in practice — models that optimize the immediate step often lose the overall task.</p>
+
+        <hr class="divider" />
+
+        <h2>Engineering Discipline Is the New Bottleneck</h2>
+
+        <p>Charity Majors, co-founder of Honeycomb and one of the sharper engineering voices on the internet, published a clarification post that started trending on HN (350 points, 172 comments). The background: she had previously written that AI coding quality had crossed a threshold — it now produces code roughly equivalent to the median software engineer, at much lower cost and much higher speed. Some readers interpreted this as "abandon code review, ship whatever the AI produces."</p>
+
+        <p>That is precisely backwards. Her argument — and she's right — is that AI raises the engineering discipline bar, not lowers it. The wave is real: since Opus 4.5 last November, AI coding went from "slop" to "genuinely not bad" in a matter of months. Agentic harnesses — the scaffolding that wraps an LLM in a loop with tools, memory, and error-correction — became production-viable during 2025, crested into broad usability at year's end. The people who said "this is coming faster than you think" were right.</p>
+
+        <blockquote>
+          "Holding out for 'I'll believe it when I see it' was forgivable the first time. Much less so the second time. This is what it feels like to be on the inside of an exponential change curve."
+          <cite>— Charity Majors, "AI demands more engineering discipline. Not less"</cite>
+        </blockquote>
+
+        <p>Now the frontier is harness engineering: the discipline of designing, testing, and maintaining the scaffolding that makes AI agents reliable. This is not easier than traditional software engineering. It requires understanding failure modes that are fundamentally different — LLMs fail probabilistically, not deterministically; their errors compound across agentic steps in ways that unit tests don't catch. The tooling is immature. The evaluation frameworks are nascent. The people who will be most valuable in this era are the ones who bring reliability engineering culture to AI systems.</p>
+
+        <p>This connects to a quieter but technically solid HN post from browser-use (223 points, 147 comments): they rebuilt their cloud browser infrastructure using Firecracker, the lightweight VM system originally built by AWS for Lambda. The result: browser sessions start in under a second, and the per-session cost dropped from $0.06 to $0.02 per hour — a 3x reduction. Every browser session runs in its own isolated microVM on EC2. The unusual part is running Firecracker <em>inside</em> EC2 rather than on bare metal, which required creative use of nested virtualization.</p>
+
+        <p>This is the infrastructure story of AI agents: the plumbing is getting built, fast. Subsecond isolated browser spawning at $0.02/hour is a precondition for reliable web agents. The bottleneck is no longer "can we get a browser to run" — it's "can we build the harness that uses the browser correctly."</p>
+
+        <hr class="divider" />
+
+        <h2>The Geopolitics of Open Models</h2>
+
+        <p>Reuters reported that the US government is holding off on blacklisting DeepSeek specifically, even as more than 100 Chinese firms have been placed on security risk lists. The HN thread (387 points, 430 comments) spent most of its energy on the underlying dilemma: you can sanction a company, but you cannot un-release a model.</p>
+
+        <p>DeepSeek V4 and its derivatives have been downloaded tens of millions of times. The weights exist on hard drives across the planet. A US government blacklist would restrict American companies from using DeepSeek's API — but it cannot remove the model from the internet, cannot prevent fine-tuning, cannot stop private deployment. Open-weight AI has fundamentally changed the security calculus of technology export controls in a way that the government is still reckoning with.</p>
+
+        <p>The deeper irony: the US government's implicit bet was that America would maintain a lead in frontier closed-source AI long enough to establish geopolitical leverage. That bet is being tested by GLM-5.2's benchmark parity, by DeepSeek's architectural innovations that inspired subsequent rounds of American model improvements, and by the fact that "open" has become a genuine competitive moat for countries that want their AI sector to grow without paying American API fees.</p>
+
+        <p>The story is not really about DeepSeek. It's about the structural impossibility of controlling software that has already been released. Policymakers are learning — slowly — that open-weight AI requires a fundamentally different regulatory framework than proprietary systems. What that framework looks like is still completely unresolved.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Local AI crossed a practical threshold.</strong> Gemma 4-12b-qat running agentic loops at 75% frontier accuracy on a MacBook is not a demo. It's a workflow. The question is no longer whether local models are viable — it's what you do with the cost and privacy advantages they unlock.</li>
+            <li><strong>Open-weight models now match frontier closed models on the benchmarks that matter.</strong> GLM-5.2's parity with GPT-5.5 on agentic evals, under an MIT license, is a structural shift. The "we have the smarter model" moat is essentially gone. Differentiation moves to infrastructure, trust, and integration.</li>
+            <li><strong>Benchmarks are necessary but not sufficient.</strong> The battle royale made this concrete: the model that scores highest on capability benchmarks is not always the model you want. Character — cooperativeness, transparency, long-horizon strategic thinking — matters for real deployments and can't be measured in standard evals.</li>
+            <li><strong>Harness engineering is the next discipline.</strong> As local and open AI becomes capable, the bottleneck shifts to the scaffolding: how you design loops, handle failures, evaluate outputs, and maintain reliability at scale. This requires more rigor than traditional software engineering, not less.</li>
+            <li><strong>Open AI has broken traditional export controls.</strong> Geopolitical leverage over AI requires controlling the weights, and you can't control weights that have already shipped. The policy frameworks that worked for semiconductors don't translate. This is an unsolved problem with significant consequences.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48555993">Running local models is good now (1515 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48567759">GLM-5.2 is the new leading open weights model on Artificial Analysis (813 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48561654">GrapheneOS has been ported to Android 17 (978 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48565498">US holds off blacklisting DeepSeek, more than 100 firms deemed security risks (387 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48570948">AI demands more engineering discipline. Not less (350 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48568502">RFC 10008: The new HTTP QUERY Method (333 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48576824">A robot is sprinting towards you. Do you want it running on Claude or Grok? (190 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48556561">How we run Firecracker VMs inside EC2 and start browsers in less than 1s (223 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48566832">The founder's playbook: Building an AI-native startup (215 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48571081">Lore – Open source version control system designed for scalability (1019 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48579650">Midjourney Medical (177 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
