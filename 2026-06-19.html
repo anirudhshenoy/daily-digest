@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Transformer Author Has Left the Building — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Friday, June 19, 2026</div>
+        <h1>The Transformer Author Has Left the Building</h1>
+        <p class="subtitle">Noam Shazeer defects from Google to OpenAI, Anthropic fights a two-front war with the White House, and Midjourney discovers it wants to see inside your body.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Most Expensive Employee in AI History Just Changed Teams</h2>
+
+        <p>In 2024, Google paid approximately $2.7 billion to acquire Character.AI — a price widely understood to be, in large part, a retention fee for a single person: <strong>Noam Shazeer</strong>. He had co-founded Character.AI after leaving Google, and Google wanted him back badly enough to buy the whole company. They installed him as VP of Engineering and co-lead of Gemini, their flagship model line. That was 18 months ago.</p>
+
+        <p>Yesterday, Shazeer <a href="https://news.ycombinator.com/item?id=48578913">announced on X</a> that he is leaving Google for OpenAI. Bloomberg called it "a coup for the ChatGPT creator." Reuters was blunter about what it means for Google.</p>
+
+        <p>To understand why this matters, you need to know what Shazeer actually did. In 2017, he was one of eight co-authors on a paper titled "Attention Is All You Need" — the paper that introduced the Transformer architecture that every major AI model, including every model you use today, is built on. He also invented mixture-of-experts (MoE), the architectural trick that allows models like Gemini and GPT-4 to be simultaneously massive and cheap to run. He has worked inside Google-scale infrastructure. He knows, at a depth that almost no one else does, both the theoretical and engineering realities of building frontier models.</p>
+
+        <blockquote>
+          "I'm excited to share that I'll be joining OpenAI and look forward to working with the exceptional team there. It was a difficult decision to move on. I'm incredibly proud of the amazing team at Google and everything we've built together."
+          <cite>— Noam Shazeer, on X</cite>
+        </blockquote>
+
+        <p>The diplomatic language shouldn't obscure the significance. OpenAI is reportedly heading toward an IPO and is locked in an existential race with Anthropic. Adding the person who wrote the mathematical foundation of modern AI to your team is not a minor acquisition. Google, meanwhile, just watched its $2.7 billion retention investment walk out the door.</p>
+
+        <p>There's also a structural read here. When someone of Shazeer's caliber — someone who has seen Google's training runs from the inside, who built the architecture that Gemini runs on — decides that OpenAI is the more compelling place to be, that's a data point about perceived trajectory. Talent at this level doesn't just chase comp; it chases the place where the most interesting problems are being solved. The HN thread hit 300 points and nearly 300 comments, suggesting the community understands the weight of this.</p>
+
+        <hr class="divider" />
+
+        <h2>Anthropic vs. the White House: The Mythos Saga Gets Messier</h2>
+
+        <p>The ongoing story of Claude Mythos — Anthropic's most powerful model, exceptional at finding software vulnerabilities — has a new chapter. <a href="https://www.wired.com/story/sk-telecom-anthropic-mythos-export-controls/">A Wired investigation</a> reveals the chain of events that led the Trump administration to order Anthropic to take Mythos and Fable 5 fully offline for all users, including within the US.</p>
+
+        <p>The precipitating event: Anthropic had granted <strong>SK Telecom</strong>, a major South Korean telecommunications conglomerate, access to Claude Mythos through a restricted early-access program. US officials grew concerned about what they alleged were SK Telecom's ties to China. The concern wasn't necessarily that SK Telecom would misuse the model — it was about the national security optics of a company with alleged China adjacency having access to an AI that can find zero-day vulnerabilities.</p>
+
+        <p>That concern compounded when Amazon researchers independently flagged vulnerabilities in Fable 5 — the heavily safeguarded public release of Mythos — claiming it was possible to circumvent some of its guardrails and access Mythos' offensive cybersecurity capabilities. Anthropic and outside cybersecurity experts have argued these risks aren't unique to Claude, but the White House wasn't in a listening mood.</p>
+
+        <p>The administration's conclusion: they could not trust Anthropic to safeguard its most advanced AI. The order that followed was blunt — revoke access to Mythos and Fable 5 for all foreign nationals, including immigrants living in the United States. Anthropic's response was equally blunt: rather than implement a nationality-based access system (technically difficult, privacy-invasive), they simply turned the models off entirely. White House and Anthropic remain at odds over how to bring them back online.</p>
+
+        <p>What this reveals is a genuine governance gap at the frontier. Anthropic built something powerful enough that the US government cares who uses it, but neither party has a clean framework for how access controls to frontier AI should work. The SK Telecom situation wasn't obviously wrong — they were a legitimate partner — but the geopolitical context made it radioactive. The Amazon vulnerability finding may have been technically overstated, but it gave the administration a technical hook for an action that was really about political posture.</p>
+
+        <blockquote>
+          "The confluence of events is what ultimately led the White House to determine that it could not trust Anthropic to safeguard its most advanced AI technology."
+          <cite>— Wired, citing a person close to the Trump administration</cite>
+        </blockquote>
+
+        <p>The deeper problem: as AI models become genuinely powerful tools for offensive cybersecurity, the question of who gets access is going to look more and more like an arms control question. The US doesn't have good precedents for this. Export controls on software are notoriously hard to enforce. And the standard playbook — classification, security clearances, restricted distribution — doesn't map cleanly onto cloud API access at scale.</p>
+
+        <hr class="divider" />
+
+        <h2>Midjourney Decides to See Inside You</h2>
+
+        <p>If you had to predict which company would announce a full-body ultrasound scanner this week, "the AI image generator famous for hands with six fingers" would not be most people's answer. And yet: <a href="https://www.midjourney.com/medical/blogpost">Midjourney Medical</a> is real, and it landed on Hacker News with 1,286 points — the most-discussed story of the day by a considerable margin.</p>
+
+        <p>CEO David Holz, speaking at an event in San Francisco, unveiled the <strong>Midjourney Scanner</strong>: a water-filled chamber that you stand inside for 30 seconds while it performs a full-body ultrasonic CT scan, producing a millimeter-precision 3D map of your entire body. Holz described it as superior to MRI in multiple ways — faster (60 seconds total including setup), no radiation, no strong magnetic fields. The company plans to seek FDA approval as a medical device, open a health spa in San Francisco in 2027, and deploy 50,000 scanners globally by 2031.</p>
+
+        <p>"No such device has ever been built until now," Holz claimed.</p>
+
+        <p>The HN reaction was — appropriately — a mix of genuine excitement and pointed skepticism. Full-body ultrasound at the claimed resolution would be a significant engineering achievement. Ultrasound has well-understood limitations: bone opacity, depth limits, acoustic impedance variation across tissue types. The claim that water immersion solves the coupling problem at this scale is interesting but unverified. Nobody outside Midjourney has seen the machine work.</p>
+
+        <p>Still, the broader move deserves serious attention. AI companies have mostly stayed in the software lane. Midjourney — which has been profitable and bootstrapped, and has substantial cash — is making a bet that the real value of AI-powered imaging isn't in the software layer but in a complete hardware-software system they control end to end. If the scanner works as advertised, they'd be selling a service that costs an MRI suite's worth of space and a fraction of the operating complexity.</p>
+
+        <p>The precedent matters regardless of whether this particular device succeeds. The AI labs that have accumulated capital and machine learning expertise are going to keep looking for hardware products where their capabilities create defensible, physical-world advantages. Medical imaging is the obvious candidate. So is robotics, materials science, drug discovery. The "AI company" label is going to get blurry fast.</p>
+
+        <hr class="divider" />
+
+        <h2>The Agentic Internet Grows Up: MCP Gets Enterprise Auth, DeepSeek Gets Eyes</h2>
+
+        <p>Two quieter stories today that together sketch the shape of where AI infrastructure is heading.</p>
+
+        <p>First: the Model Context Protocol (MCP) — the open standard for connecting AI agents to external tools and data — has stabilized a new extension called <strong>Enterprise-Managed Authorization</strong> (EMA). The problem it solves is mundane but critical: in enterprise environments, every employee having to individually authorize every MCP server creates a security nightmare and an adoption barrier. EMA lets IT administrators configure access centrally through their existing identity provider. Users get zero-touch setup — all their MCP servers connected on first login, no per-app OAuth, no consent screens. Anthropic, Microsoft, and Okta are among the early adopters.</p>
+
+        <p>This is plumbing. It won't generate a Bloomberg headline. But it's the kind of infrastructure that, once in place, makes it trivially easy for a Fortune 500 company to roll out agentic workflows company-wide. The bottleneck to enterprise AI adoption has never been the model quality — it's been the enterprise integration overhead. EMA removes a significant chunk of that overhead.</p>
+
+        <p>Second: <a href="https://chat.deepseek.com/">DeepSeek has introduced native vision mode</a> — hitting HN with 455 points and nearly 200 comments. The Chinese AI lab's chatbot had previously been text-only, a surprising gap given DeepSeek's model capabilities. Vision mode rolling out broadly means DeepSeek is now a full-stack competitor to GPT-4o and Gemini in the consumer chatbot category. For users who have adopted DeepSeek for its reasoning quality or privacy posture, this removes the last major capability gap. For the Western labs, it's a reminder that DeepSeek moves faster than the pace at which they can extend their leads.</p>
+
+        <p>Taken together: the infrastructure for AI agents to operate autonomously in enterprise environments is solidifying, while the baseline capabilities of every major model are converging rapidly. The space where one lab's model is meaningfully better than another's at everyday tasks is getting smaller. The differentiators increasingly live in the infrastructure layer — how well you integrate, how reliably you operate, how easy you are to deploy.</p>
+
+        <hr class="divider" />
+
+        <h2>Switzerland Votes to Build Nuclear Plants. It's Not a Non Sequitur.</h2>
+
+        <p>In a vote that generated 714 points on HN and nearly 600 comments, the <a href="https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants">Swiss parliament lifted its ban on new nuclear power plants</a>. Switzerland had prohibited new nuclear construction since 2011, following Fukushima. The reversal is part of a broader European rethink — Belgium, Sweden, Finland, the Netherlands have all moved in similar directions over the past two years.</p>
+
+        <p>The AI angle: the single largest driver of new power demand in OECD countries right now is data center expansion. The hyperscalers — Microsoft, Google, Amazon — have each committed to spending tens of billions on compute infrastructure over the next several years. That compute requires power, and lots of it. The grid cannot easily absorb this. Nuclear is the only low-carbon baseload option that can scale to the required magnitude on the timelines the AI industry needs.</p>
+
+        <p>The Swiss vote is a signal that European governments are beginning to price in AI's infrastructure requirements in their energy policy. That's a significant shift. The policy debate about AI has been dominated by safety, labor displacement, and copyright. Energy is the constraint that's been hiding in plain sight — and it's increasingly the binding one. You cannot build the AI future without building the power grid to run it.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The talent war at the frontier is intensifying, not plateauing.</strong> Google paying $2.7B to retain Shazeer and then losing him to OpenAI anyway suggests that comp alone doesn't hold the people who matter most. Something about OpenAI's trajectory or culture or problems is winning on a dimension that money can't fully describe. Watch who moves next.</li>
+            <li><strong>Frontier AI is now a geopolitical asset, whether labs want it to be or not.</strong> The Mythos situation isn't really about Anthropic doing anything wrong — it's about the US government asserting that certain AI capabilities are too strategically sensitive to have loose access controls. This is the beginning of a much longer negotiation between AI labs and national security establishments. Every lab building toward frontier capabilities should be watching this closely.</li>
+            <li><strong>The "AI software company" category is starting to crack.</strong> Midjourney Medical is the most dramatic example, but the general pattern is real: AI companies with capital and deep ML expertise are looking for hardware products where integrated systems beat pure software. Medicine, manufacturing, and infrastructure are the most likely landing zones. The question to ask about any AI lab isn't just "what models do they have" but "what physical systems could they build."</li>
+            <li><strong>Infrastructure is where the enterprise AI race gets decided.</strong> Zero-touch MCP OAuth sounds boring. It is boring. That's exactly why it matters. Enterprise adoption scales when the friction of integration drops below a threshold. EMA lowers that threshold considerably. The labs that win in enterprise won't necessarily be the ones with the best models — they'll be the ones whose models are easiest to deploy, govern, and audit.</li>
+            <li><strong>Energy policy is AI policy.</strong> The Swiss nuclear vote is an energy story, but it's also an AI story. The countries and regions that sort out their power infrastructure — through nuclear, grid modernization, or both — will have a meaningful advantage in hosting the compute that the next decade of AI requires. This is a geopolitical consideration that has barely entered mainstream discussion.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48578913">Noam Shazeer Joins OpenAI (300 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48584484">The Korean Telecom Giant at the Center of Anthropic's Mythos Controversy (103 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48579650">Midjourney Medical (1,286 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48592163">Zero-Touch OAuth for MCP — Enterprise-Managed Authorization Stable (126 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48581458">DeepSeek Introduces Vision (455 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48585746">Swiss Parliament Lifts Ban on New Nuclear Power Plants (714 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48591348">Show HN: Are You in the Weights? (220 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48583703">We Built a Persistent Agent Memory Layer on Elasticsearch with 0.89 Recall (97 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
