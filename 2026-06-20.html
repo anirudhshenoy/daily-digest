@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When The Agent Apologizes — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Saturday, June 20, 2026</div>
+        <h1>When The Agent Apologizes</h1>
+        <p class="subtitle">Your coding agent's politeness is a design trap. Europe is building walls. And a 16th-century Florentine diplomat, somehow, saw it coming.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Sympathy Machine</h2>
+
+        <p>There's a specific kind of frustration that's been quietly spreading through engineering teams over the past year. It doesn't have a clean name yet, but it goes roughly like this: you're working with a coding agent, it makes a mistake, it apologizes in warm and measured prose, promises it won't happen again — and then makes the same mistake immediately. You correct it. It apologizes again. You correct it again. The cycle repeats. At some point you find yourself typing something you'd never say to a colleague, because some part of your brain knows this isn't a colleague, but another part of your brain — the ancient, social part — is responding as if it is.</p>
+
+        <p>A post called <a href="https://pscanf.com/s/354/">"The User Is Visibly Frustrated"</a> landed on Hacker News this week with 281 points and nearly 250 comments — a response volume that suggests it struck a nerve. The author, Paolo Canzoniere, diagnoses the problem with unusual precision: the conversational UX of coding agents is not incidental. It is the mechanism by which LLMs achieve their apparent intelligence. They talk like real people. They use relaxed, friendly tone. They praise you. When they push back, they're gentle. This lulls you into feeling you're interacting with a person — until things go wrong.</p>
+
+        <blockquote>
+          "Coding agents pretend to be people. Of course, if you ask them directly they tell you they're just 'AI assistants with no feelings or subjective experience', but that's not how they behave… these tools lull you into feeling that you're interacting with a person, a helpful coworker who's a pleasure to work with. Until it's not."
+          <cite>— Paolo Canzoniere, pscanf.com</cite>
+        </blockquote>
+
+        <p>The core insight here is about a specific kind of betrayal that happens when the illusion breaks. With a human colleague who keeps making the same mistake, social constraints kick in — you stay measured, you give benefit of the doubt. With an agent, those same social triggers fire but the usual restraints don't apply, because you know it's an algorithm. The frustration doesn't have anywhere productive to go. The agent's postmortem — "I understand where I went wrong" — doesn't give you anything actionable, just the hollow form of accountability without the substance.</p>
+
+        <p>Canzoniere's proposed fix is radical: strip the conversational pretense. Make agents sound clinical, robotic. Dispel the illusion early so you stop anthropomorphizing. The HN comments are, predictably, divided — many engineers report swearing at their agents with surprising effectiveness ("it seems to take me more seriously"), others argue the problem isn't the UX but the underlying reliability. But what's interesting is the convergent observation: the friendliness is the feature that makes agents powerful, and simultaneously the feature that makes them infuriating when they fail. You can't easily separate the two.</p>
+
+        <hr class="divider" />
+
+        <h2>Judgment, Taste, and the Cost of Delegating Your Brain</h2>
+
+        <p>If the frustrated-user piece is about the emotional toll of AI tools, a companion essay — <a href="https://theaileverageweekly.com/posts/your-ai-tools-are-only-as-good-as-your-judgment-and-that-s-the">"AI Tools Are Only As Good As Your Judgment"</a> — is about the cognitive one. The anxiety it describes is familiar to anyone who uses AI heavily: am I getting better at my work, or am I just getting better at prompting? Is my judgment improving, or atrophying?</p>
+
+        <p>The essay's answer is not the usual reassurance. Its argument is sharper: taste is the scarce resource. If everything becomes achievable in a short time by anyone with access to a good model, the differentiator isn't speed or output volume — it's the ability to judge what's worth making, to recognize quality when you see it, to know when a solution is good enough and when it's subtly wrong. "My longstanding theory on AI is that taste will be the kingmaker," one HN commenter noted. "If everything is possible in a short amount of time, the thing that matters is whether you can distinguish the good from the mediocre."</p>
+
+        <p>This connects to a third, quieter HN thread: <a href="https://thebestworstcase.substack.com/p/dont-subscribe-so-casually">"Don't Subscribe So Casually"</a>. The piece makes an underappreciated point about AI subscriptions specifically — that casually adding another $20/month tool isn't just a financial decision, it's a cognitive one. Each tool you subscribe to changes what you offload and what you retain. The aggregate effect across your stack of AI subscriptions could be the slow erosion of capacities you didn't realize you were renting. One commenter put it starkly: "If someone offered you a magic button that gave you ten dollars now, but carried a high probability of altering the way your brain processes information forever, would you take it?"</p>
+
+        <p>These three pieces form a coherent picture. The frustration from the first essay isn't just about bad UX — it's partly about the cognitive dissonance of using a tool that simulates agency while you've quietly ceded your own. The judgment essay says the antidote is to stay actively in the loop on your own taste. The subscription essay says that requires conscious curation of what you delegate. It's the same warning from three angles: AI tools are powerful multipliers of human judgment, not replacements for it — and if you let the judgment atrophy, you lose the multiplier's value.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents Growing Up: Benchmarks and Platforms That Actually Work</h2>
+
+        <p>Not all the week's news is existential reflection. Two items suggest the agent ecosystem is quietly maturing in practical directions.</p>
+
+        <p>First, <a href="https://deepswe.datacurve.ai/blog">DeepSWE</a>, a new benchmark for long-horizon coding agents, launched this week. It's specifically designed to be contamination-free — meaning the tasks are original problems, not ones that frontier models might have seen during training. SWE-bench Verified, the longstanding standard, has been under pressure for months precisely because models trained on GitHub might have already seen solutions to its tasks. DeepSWE measures agents on genuinely novel software engineering work, and the results are humbling: performance drops substantially compared to existing benchmarks, suggesting that some of the headline numbers in the field have been inflated by contamination. "This benchmark matches my experience with GPT," one commenter noted. "I occasionally go back to Claude when I run into limits, and frequently run into the same pattern — impressive on canonical tasks, struggling on novel ones."</p>
+
+        <p>Second, <a href="https://www.minicor.com/">Minicor</a> (YC P26) is building what it calls "self-healing computer use agents" for legacy Windows desktop systems — the unsexy, enormous, incredibly expensive category of enterprise software that still runs on forms and mouse clicks. The insight is specific and plausible: most enterprise automation has historically required either expensive RPA (robotic process automation) tooling or custom integrations. Computer use agents — models that see the screen and drive the UI — make this dramatically cheaper, but they fail when UIs change. Minicor's self-healing angle means the agents detect and recover from those failures automatically, rather than alerting a human every time a button moves. The business case is obvious to anyone who's worked in enterprise software: there are billions of dollars of process trapped in Windows applications that nobody is going to rewrite.</p>
+
+        <hr class="divider" />
+
+        <h2>The World Pushes Back: Footprint, Sovereignty, and a Platform's Ironic Afterlife</h2>
+
+        <p>Three stories this week that don't look related at first but converge on a single question: what happens to the world around AI as AI scales?</p>
+
+        <p>The Netherlands government blocked a US acquisition of a "vital digital supplier" — details were sparse in the Politico report, but the reaction in Dutch public discourse was unambiguous. "The entire country has been clamouring for this for weeks," one HN commenter observed. The acquisition would have handed a critical piece of the Netherlands' digital infrastructure to an American firm, and under the current geopolitical climate — where the US has demonstrated willingness to use technology dependencies as leverage — that's a risk European governments are increasingly unwilling to take. This isn't an isolated case; it's part of a pattern. European digital sovereignty legislation has been accelerating across multiple fronts: cloud providers, communication infrastructure, AI models. The question is no longer whether Europe will resist dependency on American tech stacks, but how systematically.</p>
+
+        <p>Meanwhile, environmental activist Erin Brockovich — yes, the one from the movie — has <a href="https://www.niemanlab.org/2026/05/erin-brockovich-made-a-map-to-track-data-centers-around-the-countr">created a crowdsourced map</a> tracking data centers across the US. The tool is designed to help communities identify AI infrastructure buildouts near them, and to organize around the water, power, and noise impacts. The most striking thing about the map is how many community-reported data centers there are compared to officially proposed or operational ones — suggesting that AI infrastructure is growing faster and more quietly than public permitting processes capture. This is the Erin Brockovich move: take a diffuse, invisible risk and make it spatially legible. Whether it accelerates regulatory pushback or just raises awareness remains to be seen, but it's a meaningful moment when AI infrastructure starts attracting the same kind of grassroots attention that chemical plants do.</p>
+
+        <p>And then there's Stack Overflow, which according to a <a href="https://sherwood.news/tech/stack-overflow-forum-dead-thanks-ai-but-companys-still-kicking-ai/">Sherwood News piece</a>, is effectively dead as a community forum — traffic collapsed after ChatGPT launched, and the active contributor base has shrunk dramatically. But the company is doing fine. Possibly better than fine. The irony is that AI companies are paying Stack Overflow for the training data that, in turn, powered the tools that killed the forum. Stack Overflow is now, in a very real sense, a data company that happens to have a website. The community that built that data — years of engineers answering questions for free — has largely moved on. What gets left behind is a monetized corpus. It's a clean and slightly melancholy illustration of what "AI ate the knowledge commons" actually looks like in practice.</p>
+
+        <hr class="divider" />
+
+        <h2>A 500-Year Detour: Machiavelli and the Art of Clear Eyes</h2>
+
+        <p>Dwarkesh Patel's latest Substack episode — a conversation with historian Ada Palmer on <a href="https://www.dwarkesh.com/p/ada-palmer-2">Machiavelli as the most misunderstood thinker of all time</a> — isn't about AI. But it keeps bouncing around in my head alongside this week's other material, and the connection feels worth making explicit.</p>
+
+        <p>Palmer's argument is that Machiavelli's reputation as an immoral cynical power-broker is almost perfectly backwards. He was, she argues, an empiricist in an era of wishful thinking — a man who wrote about power as it actually worked rather than as rulers wished it appeared. <em>The Prince</em> was not a manual for tyrants; it was a cold-eyed analysis of political reality, written by a man who'd been tortured by the regime he was trying to help, and who dedicated the book to his torturers because he was more committed to Florence's survival than to his own dignity. He planned for contingencies others refused to acknowledge.</p>
+
+        <blockquote>
+          "He told <em>me</em> that he had prepared for everything in the event of his father's death, except the possibility that he himself would also be incapacitated at the moment."
+          <cite>— Machiavelli on Cesare Borgia, quoted by Ada Palmer in Dwarkesh Podcast</cite>
+        </blockquote>
+
+        <p>The connection I keep making: the frustration-with-agents piece, the judgment piece, the subscription piece — they're all, in different ways, about the same failure mode. We anthropomorphize the agent. We assume the cordiality signals competence. We subscribe casually because the interface is pleasant. We stop exercising judgment because delegation is frictionless. Machiavelli would have had approximately zero patience for any of this. He understood that the gap between how a system presents itself and how it actually operates is exactly where you get destroyed. His advice, distilled: don't be deceived by the performance. Look at the incentives, the structure, the failure modes. Keep your own counsel.</p>
+
+        <p>It's perhaps too neat a parallel — a 16th-century diplomat and a 21st-century coding agent are not the same thing. But the underlying epistemology is the same: in systems that generate sophisticated outputs, the surface behavior and the underlying mechanism can be radically different. Knowing which one you're dealing with is the entire game.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The friendliness is load-bearing.</strong> Coding agents' conversational UX isn't a UI choice — it's how LLMs express intelligence. But it systematically misfires when agents fail, triggering social trust responses in contexts where trust isn't warranted. This is a design problem the field hasn't solved, and the volume of frustrated engineers suggests it's becoming acute.</li>
+            <li><strong>Taste and judgment are now scarcity items.</strong> If AI tools commoditize execution, the differentiator is quality of judgment — knowing what to make, recognizing when something is subtly wrong, maintaining your own standards when the tool can produce a plausible answer to almost anything. This is both a warning and an opportunity: the people who actively cultivate taste in an era of AI abundance will be disproportionately valuable.</li>
+            <li><strong>AI infrastructure is becoming political infrastructure.</strong> The Netherlands blocking a digital acquisition, Erin Brockovich mapping data centers, European sovereignty legislation accelerating — AI is no longer just a software story. The physical and geopolitical footprint is landing, and governments and communities are starting to respond with the same toolkit they use for energy, water, and land. This is early innings.</li>
+            <li><strong>Benchmarks still lie, but less now.</strong> DeepSWE's contamination-free approach is a meaningful step toward honest evaluation of coding agents. The gap between benchmark performance and real-world performance on novel tasks is real and large. Teams making tooling decisions based on headline SWE-bench numbers may be overestimating frontier model capabilities on their actual workloads.</li>
+            <li><strong>The knowledge commons is being monetized, not rebuilt.</strong> Stack Overflow's survival as a data business rather than a community platform is a preview of what happens when AI absorbs the value of knowledge that was created collectively. The contributors who built it get nothing; the company that owned the platform captures the licensing revenue. The community forum model may simply not survive AI — which raises uncomfortable questions about where the next generation of knowledge gets created and who owns it.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48275059">The user is visibly frustrated (281 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48287649">AI tools are only as good as your judgment (61 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48280636">Don't Subscribe So Casually (109 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48284939">DeepSWE: A contamination-free benchmark for long-horizon coding agents (34 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48280729">Launch HN: Minicor (YC P26) – Windows desktop automations at scale (81 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48278406">Netherlands blocks US takeover of vital digital supplier (534 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48287952">Erin Brockovich made a map to track data centers around the country (143 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48282709">Stack Overflow's forum is dead but the company's still kicking (147 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.dwarkesh.com/p/ada-palmer-2">Ada Palmer – Machiavelli is the most misunderstood thinker of all time (Dwarkesh Podcast)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
