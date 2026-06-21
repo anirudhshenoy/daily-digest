@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLOPs Like Megawatts — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Sunday, June 21, 2026</div>
+        <h1>FLOPs Like Megawatts</h1>
+        <p class="subtitle">GLM-5.2 beats GPT-5.5 on hallucinations, Anthropic's robots outpace human teams 20-to-one, and Cloudflare just gave AI agents their own cloud accounts.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Open Frontier Has Arrived</h2>
+
+        <p>For the last two years, the open-model story followed a depressing script: a new release would top the benchmarks, generate breathless blog posts, and quietly fade into irrelevance six weeks later once practitioners actually used it. The community had a name for this: <em>benchmaxxing</em>. Models tuned specifically for leaderboard metrics while failing the informal but brutally honest "daily driver" test.</p>
+
+        <p>GLM-5.2, released this week by Zhipu AI (Z.ai), appears to have broken the pattern. The evidence is unusually multi-source and non-promotional. Jeremy Howard — a researcher not known for hype — called it "at least as good as Opus 4.8 and GPT-5.5" for his everyday use. Artificial Analysis placed it between GPT-5.5 and Opus 4.8 on their new AA-Briefcase benchmark for agentic knowledge work. The LocalLlama community, whose vibe-checking instincts have killed many a hyped release, declared it "a win for local AI." Meanwhile, on Hacker News, a story titled <a href="https://arrowtsx.dev/bigger-models/">"GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2"</a> rocketed to 506 points — the kind of engagement that signals genuine practitioner surprise, not just news-cycle churn.</p>
+
+        <p>Under the hood, GLM-5.2 is a 753B-parameter mixture-of-experts model with roughly 40B active parameters per token. It introduces <em>IndexShare</em>, a technique that reuses sparse-attention indices across groups of layers to make 1-million-token context inference meaningfully cheaper. The MIT license — and notably, Z.ai's absence from Anthropic's recent "industrial-scale distillation" accusations against other Chinese labs — means its weights can be freely used to distill capable 8B and 70B derivatives. If the pattern holds, the real downstream effect of GLM-5.2 won't be the model itself but the generation of synthetic data that trains the next wave of local models.</p>
+
+        <blockquote>
+          "GLM-5.2 is at least as good as Opus 4.8 and GPT-5.5 for my use cases. The major gap is lack of vision support."
+          <cite>— Jeremy Howard, fast.ai, on GLM-5.2</cite>
+        </blockquote>
+
+        <p>Latent Space's AINews noted the larger geopolitical frame: Z.ai is now forecasting an open Fable-class model by December 2026. <em>Fable</em> is Anthropic's frontier model tier, currently too dangerous for public release under their own safety review. The implication is stark — a Chinese lab running cleanly, without benchmark gaming and without the distillation controversies, is on a timeline to open-source frontier-tier capabilities before the year is out. This isn't a threat or a crisis, depending on your priors. But it is a fact that anyone planning AI infrastructure should factor in.</p>
+
+        <p>The AA-Briefcase benchmark — Artificial Analysis's new evaluation built around realistic multi-week projects, Slack/email/document corpora, and deliverables like financial models and board decks — added one sobering data point: the best model, Claude Fable 5, satisfied all rubric criteria on only <strong>3% of tasks</strong>. Fable 5 cost $31 per task. GLM-5.2 cost $2.40. Neither is reliably finishing long-horizon knowledge work autonomously. The gap between "impressive in conversation" and "useful in production" remains wide — open frontier or not.</p>
+
+        <hr class="divider" />
+
+        <h2>The Compute Efficiency Crisis Nobody Talks About</h2>
+
+        <p>The AI infrastructure narrative almost always reduces to the same frame: who has the most GPUs, who can buy more, who is constrained by supply. It's the kind of story that's easy to understand and easy to report. It is also, according to Anjney Midha, deeply misleading.</p>
+
+        <p>Midha, who led investment rounds in Anthropic, Mistral, Black Forest Labs, and Periodic Labs before founding AMP, made a damning case in a Latent Space interview published this week: frontier AI labs are systematically wasting the compute they already own. The metric he uses is <em>Model FLOPs Utilization</em> (MFU) — the ratio of actual computational work performed to theoretical peak. A lab running at 10% MFU is wasting 90 cents of every compute dollar before a single token is generated.</p>
+
+        <p>Historical context makes the indictment sharper: GPT-3, trained in 2020, achieved 21% MFU. Gopher hit 32%. PaLM, Google's 2022 flagship, reached 46%. Best-in-class today is 60–70%. But some frontier labs — and Midha specifically cited xAI — are running at sub-10%. This isn't evidence of malice or incompetence. xAI demonstrably employs talented engineers. It reflects a structural reality: when moving fast enough to maintain competitive position is the priority, optimizing utilization gets deprioritized. The GPU arms race creates an incentive to acquire capacity and deploy it imperfectly rather than run lean.</p>
+
+        <blockquote>
+          "Frontier AI is increasingly a systems problem: scheduling, utilization, networking, kernels, frameworks, data pipelines, parallelism, cluster reliability — and the thousand small decisions that determine whether your theoretical FLOPs become real training progress."
+          <cite>— Anjney Midha, AMP, via Latent Space</cite>
+        </blockquote>
+
+        <p>AMP's thesis — a compute grid that makes "FLOPs flow like megawatts" — is that the next competitive advantage isn't buying more hardware but building the equivalent of an independent system operator for AI infrastructure. The electricity analogy is more than rhetorical. Electrical grids have interruptible demand, dynamic pricing, reserve capacity, and neutral operators. AI compute today has none of those. The inference cost napkin math in a complementary <a href="https://injuly.in/blog/napkin-inference-cost/index.html">HN post this week</a> underscores how wildly variable per-token costs become at scale depending on batching, caching, and utilization — costs that compound invisibly until they crater margins.</p>
+
+        <p>The deeper point: the current generation of AI lab competition is primarily a CapEx race. The next generation may be won by the organization that figures out how to run at 65% MFU instead of 10%.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents Cross Into the Physical World</h2>
+
+        <p>Two stories this week independently pointed at the same shift: AI agents are acquiring real-world autonomy at a pace that makes the "agents in sandboxes" framing feel outdated.</p>
+
+        <p>The first was Anthropic's <a href="https://www.anthropic.com/research/project-fetch-phase-two">Project Fetch Phase Two</a>. Anthropic has been running robotics experiments where Claude operates physical hardware — manipulating objects, solving tasks that require fine motor coordination and multi-step planning — without human assistance. The latest results are arresting: Claude Opus 4.7 completed all tested tasks approximately <strong>20 times faster</strong> than the fastest human team, for tasks that human participants had considered challenging a year ago. This is not the pace of incremental improvement. This is a step change, and it happened inside a year.</p>
+
+        <p>The second was Cloudflare's announcement of <a href="https://blog.cloudflare.com/temporary-accounts/">Temporary Accounts for AI agents</a> — ephemeral Cloudflare accounts that an agent can provision on demand, use to deploy a live Worker in seconds, and discard when done. Previously, the moment an agent needed to deploy software to production, it hit a wall designed for humans: email confirmation, billing setup, account management. Cloudflare removed that wall. Agents can now spin up real, live cloud infrastructure autonomously, within a permission model set by an operator.</p>
+
+        <p>Taken together: Anthropic's robots are outperforming humans on physical tasks by an order of magnitude, and cloud infrastructure vendors are redesigning their surfaces specifically for non-human principals. The "agent" framing often conjures something like a very capable chatbot. What's actually being built is closer to a new kind of industrial operator — one that can control physical hardware, deploy and tear down cloud infrastructure, and iterate on both faster than any human team.</p>
+
+        <p>The HN thread on Cloudflare's announcement ran to nearly 100 comments, with the most interesting exchange centering on a question that's becoming harder to ignore: <em>who is liable when an agent with a temporary account does something unexpected?</em> The ephemeral-account design specifically limits blast radius — a temporary account can't access a user's existing infrastructure. But as agents become real infrastructure operators, the legal and accountability frameworks are visibly lagging.</p>
+
+        <hr class="divider" />
+
+        <h2>The Review Tax</h2>
+
+        <p>A quieter but persistent thread in this week's AI discourse was a reckoning with a structural asymmetry that practitioners are increasingly feeling: AI has made it very cheap to generate code and content, while simultaneously making it expensive to evaluate whether the output is any good.</p>
+
+        <p>A post titled <a href="https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/">"When I reject AI code even if it works"</a> articulated it cleanly: the bar for accepting AI-generated code is not "does it pass tests" but "do I understand it well enough to be responsible for it." When code was written by a human, the act of writing it was itself a form of understanding. When an AI generates it in seconds, the work of comprehension shifts entirely to the reviewer. Implementation got cheaper. Judgment got more expensive. For engineering organizations that staffed themselves based on the old ratio, this is a hidden liability.</p>
+
+        <p>The cultural version of the same problem surfaced in a story that drew 333 points on Hacker News: <a href="https://waxy.org/2026/06/the-wholesale-plagiarism-of-obscure-sorrows/">the wholesale plagiarism of John Koenig's <em>Dictionary of Obscure Sorrows</em></a>. A marketing agency scraped the entirety of Koenig's book — a carefully constructed vocabulary of invented emotional words, each with its own etymology and illustration — replaced its art with AI-generated images, added AI-invented words, and published it on a site that now <em>outranks the original</em> in search. Koenig was not contacted. No license was obtained. The agency presumably believed there was no need.</p>
+
+        <p>The story is its own kind of obscure sorrow: a work built on the insight that some feelings are too precise for existing language, obliterated by a system that doesn't feel anything at all, then promoted above the original by an algorithm trained on what "people want to see." The fact that it currently outranks the original on search is not incidental — it's the mechanism. AI slop doesn't just dilute the internet. It actively displaces it.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Open-source has closed the frontier gap.</strong> GLM-5.2 is competitive with Claude Opus 4.8 and GPT-5.5 for everyday use. Z.ai forecasts an open Fable-class model by December. The economics of closed models — and the moat of frontier performance — are eroding faster than the industry expected.</li>
+            <li><strong>GPU quantity is a red herring; utilization is the real race.</strong> Labs running at sub-10% MFU while spending billions on hardware represents a structural inefficiency that will eventually be competed away. The organizations that figure out compute efficiency in the next 24 months will have a durable advantage no GPU purchase can replicate.</li>
+            <li><strong>Agents are crossing into the physical and infrastructure world.</strong> Anthropic's robots are 20× faster than human teams. Cloudflare has redesigned its onboarding for non-human principals. The "agent" framing is catching up to what's actually being built: autonomous industrial operators.</li>
+            <li><strong>The review tax is real and rising.</strong> As AI generates more, human judgment — not generation — becomes the bottleneck. Organizations that mistake cheap AI output for cheap AI <em>outcomes</em> are building invisible debt. And AI-generated content is already outranking original human work in search, a dynamic that will compound.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48600167">GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2 (506 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48614311">Project Fetch: Phase Two — Anthropic (40 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48608394">Temporary Cloudflare accounts for AI agents (180 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48611411">The Wholesale Plagiarism of Obscure Sorrows (333 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48614631">When I reject AI code even if it works (59 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48560227">Inference cost at scale with napkin math (64 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/anj">The Professor of Outputmaxxing — Anjney Midha, AMP (Latent Space)</a></li>
+          <li><a href="https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe">[AINews] GLM > GPT? GLM-5.2 passes vibe check; Z.ai forecasts Open Fable by December (Latent Space)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
