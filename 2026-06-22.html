@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lock-Up — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Monday, June 22, 2026</div>
+        <h1>The Lock-Up</h1>
+        <p class="subtitle">Anthropic starts checking IDs, Steve Yegge predicts nuclear-grade AI restrictions, and Europe's fully-open sovereign model quietly launches as an alternative.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Anthropic Wants to See Your ID</h2>
+
+        <p>Over the weekend, <a href="https://support.claude.com/en/articles/14328960-identity-verification-on-claude">Anthropic quietly published a help article</a> explaining that it is rolling out identity verification for certain Claude capabilities. Users accessing particular features may be prompted to submit a government-issued photo ID — verified through a third-party partner called Persona Identities — before they can proceed. The HN thread, with 612 points and 537 comments, became one of the most active discussions of the year so far. The reaction ranged from resigned ("I expected this eventually") to genuinely alarmed ("this is a precedent that cannot be un-set").</p>
+
+        <p>The official justification is straightforward: prevent abuse, enforce usage policies, comply with legal obligations. Anthropic states it will use the data "only to confirm who you are." But that framing sidesteps the deeper question the community was actually arguing about. The real issue isn't whether Anthropic will misuse your passport scan. It's what it means when the most capable AI assistant on the planet starts requiring you to prove your identity before engaging with it.</p>
+
+        <p>Think about what that shift implies at a structural level. For most of human history, tools have been anonymous. Your hammer doesn't know who you are. Your search engine (for decades) didn't ask. The web browser doesn't require a name. The fundamental design assumption of personal computing has always been: you, alone, at the machine, sovereign. Identity verification on a reasoning tool isn't just a compliance checkbox. It's the moment when AI crosses from "appliance" territory into "credentialed service" territory — the same category as a bank account or a pharmaceutical prescription.</p>
+
+        <blockquote>
+          "Being responsible with powerful technology starts with knowing who is using it."
+          <cite>— Anthropic support documentation, June 2026</cite>
+        </blockquote>
+
+        <p>The practical consequences are worth unpacking. For most casual users, this will feel like nothing — a one-time friction during onboarding for edge cases. But for researchers, journalists, privacy advocates, and anyone in a country with a fragile relationship to government surveillance, submitting a biometric-linked document to an American AI company creates an irreversible record. Once your real identity is attached to your AI query history — even indirectly, even securely — the nature of the relationship is transformed. You are no longer exploring; you are accountable.</p>
+
+        <p>Related to Claude, Anthropic also now links an <a href="https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude">Age Assurance</a> system and <a href="https://support.claude.com/en/articles/14503590-get-started-with-claude-for-government">Claude for Government</a> pages from the same support cluster — suggesting identity verification is not an isolated move but part of a broader access-tier architecture being quietly assembled.</p>
+
+        <hr class="divider" />
+
+        <h2>The Flat Curve Society: Frontier AI as Nuclear Weapons</h2>
+
+        <p>The timing of Anthropic's ID requirement is striking when set next to <a href="https://steve-yegge.medium.com/the-flat-curve-society-36c8b01eb33b">a new essay by Steve Yegge</a> (the Google/Sourcegraph engineer known for long, accurate predictions) arguing that we are perhaps two or three model generations away from AI being regulated like nuclear material. The piece appeared the same weekend as the identity verification rollout, and the juxtaposition is hard to ignore.</p>
+
+        <p>Yegge's argument runs as follows: the Mythos/Fable class of models — which Anthropic briefly released and then retracted under government pressure — represents a genuine inflection point. These are not just more capable models in the same category as what came before. They are models that spooked governments. And once governments are spooked, the playbook is predictable. Chokepoints get clamped. Supply chains get locked. Access gets tiered.</p>
+
+        <blockquote>
+          "I am now in the camp who believe that we are only at most two or three model generations away from AI finally being controlled like nuclear weapons. Only a few will have access to superintelligence above the classes of models we're seeing this year."
+          <cite>— Steve Yegge, "The Flat Curve Society"</cite>
+        </blockquote>
+
+        <p>The central metaphor Yegge uses is the "flat curve": the exponential capability improvements we've been watching will continue, but most of us will be taken off the curve. Frontier models will become vending machines operated by labs on behalf of enterprises. You send them a problem, they send back a solution, all on their hardware, with tight oversight. Meanwhile, the models the rest of the world has direct access to will plateau somewhere around Fable class — capable, but not the dangerous kind.</p>
+
+        <p>His argument about open-source models is particularly worth sitting with. Many technologists have assumed that open-weight models would serve as a permanent escape valve — that even if closed labs locked down their frontier, the open community would race to catch up and distribute the same capabilities freely. Yegge is skeptical. To train past the Fable threshold, you need compute at a scale that requires international supply chain access that governments can actually interdict. The chip embargo tools that already exist could be deployed more aggressively. And the frontier labs themselves, he argues, have strong incentives not to help open-source efforts train the next dangerous model class.</p>
+
+        <p>This may or may not prove correct. But the identity verification rollout suggests at least Anthropic is behaving as if accountability structures are coming — and getting ahead of them. The question for the rest of us is whether that's a model to trust or a model to route around.</p>
+
+        <hr class="divider" />
+
+        <h2>Apertus: The Swiss Alternative, and the Open Model Dilemma</h2>
+
+        <p>The same day Anthropic's ID requirement surfaced on HN, a different kind of story climbed the front page: <a href="https://apertvs.ai/">Apertus</a>, a fully open foundation model developed by the Swiss AI Initiative — a collaboration between EPFL, ETH Zurich, and the Swiss National Supercomputing Centre (CSCS). It has 245 points and growing discussion. The tagline is "Apertus is to AI as Open is to Source."</p>
+
+        <p>What Apertus is doing is notable in a specific way. It isn't just releasing weights. It's releasing training data, training code, methods, and alignment principles — everything needed to fully reproduce the model from scratch. It's also built explicitly to comply with the EU AI Act: it respects opt-outs, removes PII from training data, and prevents memorization of personal information. It comes in 8B and 70B parameter sizes, trained on 1000+ languages. Swisscom is a strategic partner.</p>
+
+        <p>This connects directly to the <a href="https://www.marble.onl/posts/cancel_claude.html">nuanced essay by Andrew Marble</a> arguing that "there is minimal downside to switching to open models" — with a key caveat the title somewhat buries. Marble's actual argument is more layered: yes, the performance gap between open and closed models has shrunk. On many tasks, Qwen and Gemma and Llama are genuinely competitive. The sacrifice is smaller than it used to be. But the trust problem for open model APIs is real. OpenRouter and model-serving third parties don't offer the same compliance story as Anthropic or Google. And self-hosting brings its own costs in hardware, ops, and expertise.</p>
+
+        <p>Apertus is interesting precisely because it targets a different value proposition than raw capability: legitimacy for deployment in environments that require full auditability. A European hospital, a government ministry, a company that needs to demonstrate EU AI Act compliance — none of these can simply call Claude's API and tick the regulatory box. They need something they can inspect, something they can run on their own hardware, something with a clear provenance story. Apertus is being built for those contexts.</p>
+
+        <p>On the more individual end, <a href="https://github.com/raiyanyahya/recall">Recall</a> appeared on HN with 82 points: a fully local, open-source project memory system for Claude Code. The idea is simple — instead of re-explaining your codebase at the start of every session, Recall maintains a persistent knowledge store that lives entirely on your machine. No cloud sync, no API calls for memory retrieval. It's small, but it represents the same instinct: people are beginning to architect around the privacy implications of cloud AI, not just the capability questions.</p>
+
+        <hr class="divider" />
+
+        <h2>The Buy-vs-Build Math, Revisited — and a Classic That Won't Die</h2>
+
+        <p>One of the more interesting things that happened this weekend was a 2016 blog post returning to the front page of HN with 437 points and 300 comments. Sandi Metz's <a href="https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction">"Prefer duplication over the wrong abstraction"</a> has surfaced repeatedly over the years, but its reappearance in the summer of 2026 carries a particular charge. In an era when LLMs generate abstractions at scale — and when the temptation to DRY everything is amplified by a tool that makes refactoring feel free — the old warning lands harder than ever.</p>
+
+        <p>Metz's argument is deceptively simple: the cost of the wrong abstraction is higher than the cost of duplication. A wrong abstraction, once embedded, accretes assumptions. Every new use case has to either fit the abstraction's assumptions or corrupt them. The code becomes a negotiation with its own past decisions. Duplication, by contrast, leaves options open. You can always extract a good abstraction once you understand the pattern. You cannot easily un-extract a bad one.</p>
+
+        <p>This connects directly to a <a href="https://brandur.org/minimum-viable-unit">sharp analysis by Brandur</a> (formerly of Heroku, now building River) examining what LLMs actually changed about the economics of software. The answer: a lot, but not everything. His provocative example is a LinkedIn post about replacing Jira with an LLM-built internal tracker to save $400/month. The math, Brandur shows, doesn't work. Even at an aggressive estimate, the initial build effort plus ongoing maintenance means it would take 37 months to break even — for a tool that will still need someone to babysit it for bugs and feature requests.</p>
+
+        <blockquote>
+          "LLMs made software considerably cheaper to build, they haven't brought it to zero. Good LLM-built systems still involve a feedback loop… taking dozens of loops to get to a satisfactory result."
+          <cite>— Brandur, "The Minimum Viable Unit of Saleable Software"</cite>
+        </blockquote>
+
+        <p>The piece is really about something deeper than the Jira anecdote. It's asking: given that LLMs compressed build costs, what is now the minimum viable scope for a commercial software product? Brandur's answer is that the floor shifted, but didn't disappear. Products with genuine moats — network effects, domain-specific integrations, hard-won reliability, specialized expertise — are still defensible. Products that were only defensible because building alternatives was expensive are not. The software categories most at risk aren't the complex ones; they're the ones that were only complex because of the upfront cost to replicate them.</p>
+
+        <p>Taken together, the Metz revival and the Brandur essay say something consistent: the AI era doesn't invalidate good engineering judgment. It amplifies the consequences of bad engineering judgment. When code is cheap to generate, the bottleneck shifts from writing to thinking — which is exactly the domain where human judgment, careful abstraction, and genuine design discipline matter most.</p>
+
+        <hr class="divider" />
+
+        <h2>Also Worth Your Time</h2>
+
+        <p><strong>Medicine:</strong> A <a href="https://www.theguardian.com/society/2026/jun/17/hpv-jabs-reduce-risk-dying-cervical-cancer-before-30-zero-study-finds">major UK study</a> found that the HPV vaccine has cut the risk of dying from cervical cancer before age 30 to nearly zero among vaccinated women. This is one of the cleaner public health wins of the decade — a vaccine that actually eliminates a cancer class in the populations that received it. The sobering caveat is that vaccination rates have been declining in some countries, which means the protection is not self-sustaining across generations. (188 pts, 112 comments)</p>
+
+        <p><strong>Gaming:</strong> <a href="https://www.beyondallreason.info">Beyond All Reason</a>, a free open-source RTS inspired by Total Annihilation, hit the front page with 446 points and 267 comments. Thousands of units, two factions, land/sea/air combat, fully free. If you remember the golden age of large-scale RTS games in the late 1990s and have been looking for something that captures that scale without the current price tags and battle-pass systems, this appears to be it.</p>
+
+        <p><strong>Video games and accessibility:</strong> A quieter story that deserves more attention — <a href="https://www.openassistivetech.org/how-i-actually-play-video-games-with-sma-the-tools-i-use-every-day/">a personal account of playing video games with spinal muscular atrophy</a>, detailing the specific hardware and software configurations that make it possible. Low points, but high signal for anyone thinking about accessible design. The author's toolchain is genuinely interesting.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The identity layer is arriving.</strong> Anthropic's ID verification isn't a bug or an overreach — it's the leading edge of a compliance architecture that will become industry-standard as AI capabilities grow. Start thinking now about which AI interactions you want to keep anonymous and plan accordingly. Sovereign and local deployments are no longer just a privacy preference; they may soon be a necessity.</li>
+            <li><strong>The "open escape valve" may close sooner than expected.</strong> Steve Yegge's nuclear-weapons analogy is extreme, but the underlying mechanism is real: if governments decide that certain capability thresholds require gatekeeping, the chokepoints they'll use are hardware supply chains — something they already know how to control. The window for fully open, fully capable models may be narrower than the open-source community assumes.</li>
+            <li><strong>Apertus-class projects matter more than their benchmarks suggest.</strong> A sovereign, fully auditable, EU AI Act-compliant open model won't beat Claude on the capability leaderboard. But it serves a legitimate need that capability benchmarks don't capture: institutional deployments that require full accountability. Europe building this infrastructure matters for the long game.</li>
+            <li><strong>LLMs changed the floor, not the ceiling, of software economics.</strong> The minimum viable scope for commercial software shifted down. But the human judgment required to build something worth maintaining did not. The era of LLM-generated code makes good engineering discipline more valuable, not less — because the cost of shipping bad abstractions at scale is now much easier to accidentally incur.</li>
+            <li><strong>The HPV result is a reminder of what works.</strong> Against a week of complicated AI news, a clean vaccine win is worth noting. When interventions work as designed at population scale, it's worth documenting clearly, because the mechanisms that made it work (political will, infrastructure, time) are replicable.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48618455">Identity verification on Claude — Anthropic (612 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48625192">The Flat Curve Society — Steve Yegge (3 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48622778">Apertus — Open Foundation Model for Sovereign AI (245 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48622518">There is minimal downside to switching to open models (88 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48622590">Show HN: Recall — fully-local project memory for Claude Code (82 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48620342">The minimum viable unit of saleable software — Brandur (140 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48620090">Prefer duplication over the wrong abstraction — Sandi Metz (437 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48579013">HPV jabs cut risk of dying from cervical cancer to nearly zero (188 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48617990">Beyond All Reason — Free Total Annihilation-inspired RTS (446 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48589687">How I play video games with spinal muscular atrophy (49 pts)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
