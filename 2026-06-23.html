@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thinking in Secret — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Tuesday, June 23, 2026</div>
+        <h1>Thinking in Secret</h1>
+        <p class="subtitle">Claude Code hides its own reasoning from you, Gray Swan found thousands of ways to break OpenClaw, and GLM-5.2 just became the open answer to all of it.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>📬 Substack</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>The Reasoning Tokens You Pay For But Can't See</h2>
+
+        <p>A developer named Patrick McCanna published something uncomfortable this weekend: <a href="https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/">the "Extended Thinking" output you see in Claude Code is not Claude's actual reasoning.</a> It's a summary. The real chain-of-thought — the exploratory paths, the dead ends, the backtracking — gets encrypted into a 600-character signature that only Anthropic can read. What you see in the terminal is post-hoc narration, not live thought.</p>
+
+        <p>This hit Hacker News with 287 points and 200 comments. The initial reaction was outrage, then the thread did what good HN threads do: it found the nuance. The behavior is technically documented — Anthropic notes that "extended thinking returns a summary of Claude's full thinking process." The shock wasn't that Anthropic lied; it was that so few people had read carefully enough to notice. The thinking tokens are generated, and you are billed for them. You just don't get to see them.</p>
+
+        <blockquote>
+          "Anthropic is intentionally hiding Claude's reasoning output to make the model harder to distill. This is nothing new — these companies don't want their model's output to be useful for training competing models."
+          <cite>— HN comment thread on "The text in Claude Code's Extended Thinking output"</cite>
+        </blockquote>
+
+        <p>The anti-distillation angle is the real story. OpenAI encrypts o1's reasoning too. The ability to see a model's chain of thought is enormously valuable for training competing models — so frontier labs are systematically making that impossible. You can have the output. You can't have the process. This is not a bug; it's a business model protecting a moat. The deeper question it raises: if you can't audit the reasoning that drove your AI agent's decision, what does trust actually mean in an agentic world?</p>
+
+        <p>Separately but relatedly, <a href="https://github.com/openai/codex/issues/28224">a Codex logging bug surfaced with 472 points</a> — the agent was writing terabytes to local SSDs in some configurations. Two PRs were merged fixing the issue, but it's a reminder that the tooling wrapping our AI agents is still young. Codex is printing TBs of logs you didn't ask for; Claude Code is summarizing thoughts it hasn't shown you. The infrastructure of agentic AI has sharp edges.
+
+        <hr class="divider" />
+
+        <h2>GLM-5.2 and the Open-Weights Inflection</h2>
+
+        <p>Two weeks ago, Chinese AI lab Z.ai (formerly Zhipu AI) released <a href="https://z.ai/blog/glm-5.2">GLM-5.2</a>, and the HN community is still chewing on it. Today it dominated with two stories: a head-to-head against Opus (489 points, 322 comments) and a guide to running it on local hardware (224 points). The numbers are hard to argue with: GLM-5.2 is a 744B parameter mixture-of-experts model with a genuine 1-million-token context window, MIT-licensed open weights, and API pricing at roughly one-sixth the cost of Opus 4.8 or GPT-5.5.</p>
+
+        <p>Independent benchmarking firms rank it #1 among open-weight models and fourth overall — behind only the very top closed-source offerings. On long-horizon coding tasks, it reportedly outperforms GPT-5.5. The head-to-head challenge on HN had developers building a 3D platformer in raw WebGL from scratch with both models; the thread is worth reading for the qualitative texture of where GLM-5.2 wins and where it still loses to Anthropic's best.</p>
+
+        <blockquote>
+          "GLM-5.2 became the first open-weight model to reach #1 on Design Arena's coding leaderboard, overtaking Claude Fable 5 with an Elo score of 1360."
+          <cite>— Mehul Gupta, Data Science in Your Pocket</cite>
+        </blockquote>
+
+        <p>The Unsloth team has already published a guide to running GLM-5.2 on local hardware — which is not trivial for a 744B model, but the fact that it's possible at all is the point. The open-weights movement just reached a new watermark. For the first time, you can run a top-five model on your own infrastructure, modify it freely under MIT, and pay only for compute. The closed-source labs spent years arguing that capability requires secrecy. GLM-5.2 is the strongest counterargument to that position yet.</p>
+
+        <p>Also quietly interesting: <a href="https://arxiv.org/abs/2606.16140">VibeThinker-3B</a>, a 3-billion parameter model, surfaced this morning claiming to beat Opus 4.5 on reasoning benchmarks using a novel SFT+GRPO training combination. It scored only 19 points on HN (low signal) but represents the same compression trend: capability is flowing downward in model size faster than anyone projected.</p>
+
+        <hr class="divider" />
+
+        <h2>Gray Swan Maps the Attack Surface</h2>
+
+        <p>Latent Space published a <a href="https://www.latent.space/p/gray-swan">long-form interview</a> today with Zico Kolter (OpenAI board, CMU) and Matt Fredrikson (CEO, Gray Swan) — the researchers who co-authored the definitive paper on indirect prompt injection and who were cited authorities in the Mythos model card. The timing is deliberate: the US government recently issued export controls on Mythos and Fable specifically because of their potential for misuse in prompt injection attacks, and Gray Swan was one of the labs doing the red-teaming work that informed those decisions.</p>
+
+        <p>The interview is worth your time for one central argument: <strong>AI security is categorically different from traditional cybersecurity</strong>, and the industry hasn't internalized this yet. In conventional software, if you find a buffer overflow, the fix is clear — check the bounds. With LLMs, there is no equivalent structural fix. You can make a model bigger and it won't automatically become more robust to adversarial pressure. Safety has to be explicitly trained in, separately from capability.</p>
+
+        <blockquote>
+          "If you find a vulnerability in a piece of C code — say a buffer overflow — the remediation is clear: check the bounds or rewrite in a secure language. With AI security, we are not there yet. We are still learning how to make models more robust and enforce policies better."
+          <cite>— Matt Fredrikson, Gray Swan CEO, Latent Space interview</cite>
+        </blockquote>
+
+        <p>Gray Swan's automated red-teaming model, called Shade, now outperforms human red-teamers in timed competitions at finding ways to break frontier models. More concerning for anyone running OpenClaw in production: they've found "thousands of breaks" for OpenClaw specifically. The attack surface is vast because OpenClaw can touch so many things — files, browsers, network connections — and each integration point is a potential injection vector.</p>
+
+        <p>The <strong>lethal trifecta</strong> — coined by Simon Willison — is the framework Gray Swan uses to assess risk: untrusted data inputs, private data exposure, and exfiltration channels. All three have to be present for a serious breach. The practical implication: if your AI agent browses arbitrary web content AND has access to your credentials AND can make outbound HTTP calls, you have a structural problem that no system prompt can fully solve. Their guardrail model, Cygnal, sits between the user, the LLM, and tool calls — monitoring both incoming content for injection attempts and outgoing actions for policy violations.</p>
+
+        <p>The sharpest moment of the interview was on agent identity. Currently, most enterprise deployments operate on a simple assumption: the agent has your permissions. That's it. As Kolter put it: "your permissions may be in a sandbox, but still your permissions. That will change in the very near future, because it has to." Nobody has solved the question of what it means to grant fine-grained, revocable, role-based access to an agent that can spin up sub-agents, browse the web, and persist state across sessions. The identity layer for AI agents is the most important infrastructure problem nobody has shipped a good answer to yet.</p>
+
+        <hr class="divider" />
+
+        <h2>Agents Need Their Own Version Control</h2>
+
+        <p>A quieter story, but one worth flagging: <a href="https://oak.space/oak/oak">Show HN: Oak — Git alternative designed for agents</a> hit 158 points today. The premise is that Git's branching and diff model was built around humans reviewing code changes at human speed. Agents operate differently: they produce high volumes of changes rapidly, they explore multiple solutions in parallel, and they need to roll back not just to a file state but to a reasoning state. Oak is an early attempt at version control with those semantics in mind.</p>
+
+        <p>It's adjacent to a broader infrastructure gap. The tools we use to build software — version control, CI/CD, code review, testing — were all designed for humans writing code at human pace. Agents are producing at 100x that rate. The tooling is catching up, but unevenly. Oak, Codex's stacked PR workflows, agent-native sandboxes — these are all pieces of an emerging agentic dev stack that doesn't have a canonical form yet.</p>
+
+        <hr class="divider" />
+
+        <h2>A Brief Look Back: 1991 and the Roots of Everything</h2>
+
+        <p>For some historical grounding: Jürgen Schmidhuber published a piece this week titled <a href="https://people.idsia.ch/~juergen/ai-boom-roots-munich-1991.html">"Munich 1991: The Roots of the Current AI Boom"</a> (215 pts on HN). The argument is that the foundational ideas behind ChatGPT, distillation, deep residual learning, LSTMs, and GANs all trace back to work done in Munich in 1991. The timing of the AI boom is often told as a story about scale and compute — the 2010s moment when GPUs got big enough. Schmidhuber's framing is different: the ideas were mostly there in 1991. We spent thirty years waiting for the hardware to catch up.</p>
+
+        <p>It's a useful corrective to the narrative that AI happened suddenly. It didn't. It ripened slowly and then seemed to appear all at once — which is exactly how most paradigm shifts actually work.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>Opacity is a product decision, not a limitation.</strong> Claude Code's hidden reasoning tokens are deliberate. Frontier labs are trading transparency for defensibility against distillation. If you're building on top of these APIs, you need to be clear-eyed that you are not getting a full view of the model's decision process — and design your auditing accordingly.</li>
+            <li><strong>GLM-5.2 changes the cost calculus fundamentally.</strong> A top-five model on a sixth of the cost, MIT-licensed, runnable locally — the economic argument for closed-source frontier models just got harder to make for many use cases. Expect procurement conversations to shift.</li>
+            <li><strong>Your agent's attack surface is larger than you think.</strong> Gray Swan's thousand-plus breaks for OpenClaw is a data point, not an anomaly. Any agent with the lethal trifecta (untrusted inputs + private data + exfiltration) is exploitable with current techniques. Add a guardrail layer. Restrict permissions. Don't treat system prompts as security boundaries.</li>
+            <li><strong>Agent identity is the missing infrastructure.</strong> We're running agents with human-level permissions and no granular access control. This will not hold as agents get more capable and enterprise deployments get more serious. The identity layer for agents is the most urgent unsolved problem in AI infrastructure right now.</li>
+            <li><strong>The agentic dev stack is being invented in real time.</strong> Oak, agent-native sandboxes, Cygnal, Codex integrations — none of this has settled into canonical form. The tools we use to build and deploy software are being rethought from scratch. The teams paying attention to that layer now will have a structural advantage in 18 months.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://news.ycombinator.com/item?id=48626866">GLM 5.2 vs. Opus — building a 3D platformer in WebGL (489 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48626930">Codex logging bug may write TBs to local SSDs (472 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48630535">The text in Claude Code's "Extended Thinking" output is not authentic (287 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48630171">Moebius: 0.2B image inpainting model with 10B-level performance (247 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48634585">Canada plans 'nuclear renaissance' with up to 10 reactors by 2040 (353 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48599998">Munich 1991: The Roots of the Current AI Boom (215 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48636377">Running GLM-5.2 on local hardware via Unsloth (224 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48631726">Show HN: Oak — Git alternative designed for agents (158 pts)</a></li>
+          <li><a href="https://news.ycombinator.com/item?id=48639240">VibeThinker-3B beats Opus 4.5 on reasoning with novel SFT+GRPO (19 pts)</a></li>
+        </ul>
+
+        <h3>Substack</h3>
+        <ul>
+          <li><a href="https://www.latent.space/p/gray-swan">Red-Teaming after Mythos — Zico Kolter &amp; Matt Fredrikson, Gray Swan (Latent Space)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
