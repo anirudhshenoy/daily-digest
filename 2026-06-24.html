@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Harness Problem — Atlas Daily Digest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe2;
+      --paper: #fffaf0;
+      --ink: #2b241d;
+      --muted: #6e6254;
+      --accent: #8b5e34;
+      --accent-soft: #e7d6bf;
+      --border: #dbc7ac;
+      --quote: #f2e4d1;
+      --link: #7a3e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Lora', serif;
+      line-height: 1.72;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(78, 55, 31, 0.08);
+      overflow: hidden;
+    }
+    header {
+      padding: 42px 42px 28px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff8ee 0%, #fbf2e6 100%);
+    }
+    .kicker, .meta, .links h3, .takeaways h3 {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .body {
+      padding: 42px 42px 0;
+    }
+    .body h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 44px 0 12px;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .body h2:first-child { margin-top: 0; }
+    .body p {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+    .body a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .body a:hover { color: var(--accent); }
+    blockquote {
+      margin: 28px 0;
+      padding: 22px 28px;
+      background: var(--quote);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      font-size: 1.09rem;
+      color: #3d3028;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--muted);
+    }
+    .takeaways {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .takeaways h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    .takeaways ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .takeaways ol li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .links {
+      margin: 42px 0 0;
+      padding: 28px 42px 42px;
+      border-top: 1px solid var(--border);
+    }
+    .links h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .links h3:first-child { margin-top: 0; }
+    .links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links ul li {
+      margin-bottom: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+    }
+    .links ul li a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links ul li a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+    @media (max-width: 640px) {
+      header, .body { padding-left: 22px; padding-right: 22px; }
+      .links { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="kicker">Daily Digest · Wednesday, June 24, 2026</div>
+        <h1>The Harness Problem</h1>
+        <p class="subtitle">Building loops instead of prompting, paying $200 for $8,000 of tokens, and why LLMs just dissolved the social contract of security research.</p>
+        <div class="meta">
+          <span>📰 Hacker News</span>
+          <span>🎙️ YouTube</span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <h2>Your New Job Is Writing Loops</h2>
+
+        <p>Armin Ronacher — the person who built Flask, Jinja2, and a good chunk of Python's web infrastructure — published an essay yesterday that quietly reframed what it means to be a software engineer in 2026. He opens with a quote from Boris Cherny, who built Claude Code: <em>"I don't prompt Claude anymore. I have loops running that prompt Claude and figuring out what to do. My job is to write loops."</em></p>
+
+        <p>The distinction Ronacher draws is precise and important. There are two kinds of loops in agentic software. The <strong>inner loop</strong> is the one inside every coding agent: model calls a tool, reads the result, calls another tool, edits a file, runs tests. We've understood this loop for a while. The <strong>outer loop</strong> — the harness — is the one that lives <em>above</em> the model. It decides whether the agent's response was actually final, whether to restart with new context, whether to route the task to a different session, whether to inject another message. It keeps work alive beyond the point where the model would say "I'm done."</p>
+
+        <blockquote>
+          "The task stays alive beyond the point where the model by itself would normally have said: 'I am done.' That type of loop is becoming ever more present in agentic engineering and in recent weeks it has started to dominate the discourse."
+          <cite>— Armin Ronacher, <em>The Coming Loop</em></cite>
+        </blockquote>
+
+        <p>Ronacher is honest about his skepticism. For code he deeply cares about, hands-off harnesses have produced worse results than last autumn — code that's too defensive, adds fallbacks instead of making bad states impossible, papers over unclear design with more machinery. He calls it "software as organism" vs. "software as machine," and he's not sure he's ready for organisms. But he's also clear about where loops <em>do</em> work beautifully: porting code between languages, performance exploration, security scanning, research tasks — anything that either transforms existing code mechanically or produces artifacts without longevity requirements.</p>
+
+        <p>The practical proof of this arrived in the same news cycle, in a 25-minute Y Combinator video about a company called Variance. They build AI agents for fraud detection and compliance — powering GoFundMe's fundraiser review, Fortune 500 KYC verification, complex content moderation. Their team is five engineers. Their agents process petabytes of data and have replaced entire BPO outsourcing teams. When a new fundraiser appears claiming to be from Charlie Kirk's family (after a hypothetical death), Variance's agents have to decide — across 100+ competing claims — which one is the real family. That's a loop problem: gather behavioral signals, query unstructured data, hit external registries, reason across the full entity graph, arrive at a decision, self-correct.</p>
+
+        <p>The CEO described what happened when they first got real LLMs: "You don't need a classifier anymore because AI agents are able to read a set of standard operating procedures and reason over an image or unstructured data and know that this is possibly chargeback fraud." The three-part system of rules + classifiers + humans (with humans as the bottleneck) collapsed into a single self-healing loop. The harness is now the product.</p>
+
+        <hr class="divider" />
+
+        <h2>The Drug Dealer's Bill Comes Due</h2>
+
+        <p>For two years, AI platforms have been running what David Sacks at Sequoia originally called the "AI's $200B Question" — subsidizing their products so heavily that users became dependent before prices reflected reality. A new essay by David Rosenthal at DSHR's Blog catalogues exactly how deep that subsidy has gotten, and why it can't last.</p>
+
+        <p>The headline numbers are staggering. SemiAnalysis ran coding tasks until they maxed out platform rate limits and found: a $200/month Anthropic subscription lets you burn $8,000 worth of tokens. A $200/month OpenAI ChatGPT Pro subscription lets you burn $14,000. Those aren't glitches — they're the intended product. The platforms are subsidizing enterprise customers by 40–70x.</p>
+
+        <blockquote>
+          "Anyone with a $200-a-month Anthropic subscription can burn $8000 in tokens, and with a $200-a-month ChatGPT subscription, you can burn $14,000 in tokens. No wonder they are seeing massive demand!"
+          <cite>— Ed Zitron, cited in <em>AI's Affordability Crisis</em></cite>
+        </blockquote>
+
+        <p>OpenAI's 2025 financials, leaked in June, put the scale into stark relief: $13.07 billion in revenue, $34 billion in costs, $20.92 billion in losses — plus an additional $17 billion in accounting adjustments from the non-profit-to-for-profit conversion, landing at a net loss of $38.5 billion. They also spent $5.73 billion on sales and marketing — 44% of revenue — to keep the hype machine running. Business adoption has been flat despite this.</p>
+
+        <p>The essay's core argument is Keynesian in structure: the platforms needed to postpone price increases until after their IPOs (SpaceX, Anthropic, OpenAI are all in the pipeline), but their burn rates are so catastrophic that they've had to begin raising prices before the money is in the bank. The users who built workflows around $200/month access are about to discover what it actually costs. This isn't a prediction — it's already beginning. The subsidized era is ending while the dependency was being created, not after.</p>
+
+        <hr class="divider" />
+
+        <h2>Documents Get a Brain</h2>
+
+        <p>Two unrelated OCR announcements landed in the same HN cycle this week, and together they sketch a shift in how agents interact with the physical paper world.</p>
+
+        <p>Mistral released <a href="https://mistral.ai/news/ocr-4/">OCR 4</a>, which goes beyond text extraction to return a <em>structured representation</em> of a document: bounding boxes for every element, typed block classification (titles, tables, equations, signatures), and per-word confidence scores. It supports 170 languages, runs in a single container for fully self-hosted deployments, and integrates directly into Mistral's Search Toolkit for RAG pipelines. The win rates over competing systems averaged 72% in independent annotation tests.</p>
+
+        <p>What's significant isn't the accuracy numbers — it's the architectural implication. When OCR returns not just "what does this document say" but "where is each element, what role does it play, and how confident are we," it stops being a preprocessing step and becomes a structural primitive for agents. An agent can now act on a document: fill a form, verify a signature, process an invoice, flag a compliance issue — without a human in the loop translating raw text into structured decisions.</p>
+
+        <p>Separately, Baidu open-sourced <a href="https://github.com/baidu/Unlimited-OCR">Unlimited OCR</a>, taking the top spot on HN with 449 points. Their approach focuses on "one-shot long-horizon parsing" — handling extremely long documents in a single pass rather than chunking and reassembling. Enterprise documents (legal contracts, scientific papers, financial filings) have been notoriously resistant to chunking approaches because meaning often spans pages. One-shot long-horizon parsing attacks the problem at its root.</p>
+
+        <p>The combination — structured output from Mistral, long-horizon parsing from Baidu — is effectively completing the document-to-agent pipeline. Every piece of paper that ever existed is becoming machine-readable, semantically structured, and action-ready.</p>
+
+        <hr class="divider" />
+
+        <h2>Vulnerability Reports Are Not Special Anymore</h2>
+
+        <p>Filippo Valsorda, former lead of Google's Go Security team and one of the most respected names in software security, published a short essay on Monday that caused quiet waves: <em>vulnerability reports aren't special anymore</em>.</p>
+
+        <p>The argument: for decades, the security ecosystem ran on a social contract. Researchers who found vulnerabilities disclosed them privately, giving maintainers time to ship a fix before attackers could exploit it. In return, maintainers responded quickly, kept reporters informed, and gave credit. This worked because the researchers provided something scarce: insight into what was broken, plus the confidentiality needed to fix it safely.</p>
+
+        <p>In 2026, both sides of that equation have changed. LLMs are now as capable as most security researchers at finding potential vulnerabilities. The bottleneck has shifted from <em>finding issues</em> to <em>assessing which ones are real</em> — and external researchers can't meaningfully help with that triage because they don't have internal context. Meanwhile, attackers have the same LLMs. The confidentiality window — the gap between disclosure and exploitation — has compressed dramatically.</p>
+
+        <blockquote>
+          "The insight is not scarce and precious anymore. The bottleneck now is not finding potential issues but assessing which ones are real. Unless there's already a trust relationship, external researchers can't meaningfully contribute to that triage process, and picking through an LLM's output or through a security@ inbox has approximately the same signal-to-noise ratio."
+          <cite>— Filippo Valsorda, <em>Vulnerability Reports Are Not Special Anymore</em></cite>
+        </blockquote>
+
+        <p>The implications ripple outward. Bug bounty programs, responsible disclosure policies, CVE embargo periods, coordinated vulnerability disclosure — all of these are built on the premise that finding issues is hard and rare, and that the finder deserves something in exchange. If LLMs have made finding the cheap part, the whole infrastructure of how security is communicated and credited needs rethinking. Valsorda's conclusion: triage, rapid remediation, and prevention are the job now. "And we should all figure out how to run LLM analysis in CI."</p>
+
+        <hr class="divider" />
+
+        <h2>The Algorithm That Screens You</h2>
+
+        <p>Stanford's Human-Centered AI institute released the first large-scale empirical study of AI hiring tools in the wild this week. The headline finding: algorithmic hiring systems produce racial bias and systemic rejection patterns at a scale that exceeds anything previously documented from human recruiters. The researchers found what they call "algorithmic monocultures" — where multiple companies using the same vendor's model reject the same candidates with the same biases, amplifying the effect across the entire labor market rather than containing it within one employer.</p>
+
+        <p>The mechanism is subtle. When one biased human recruiter rejects a candidate, that's one door. When every company using the same vendor's model rejects that candidate — because the model was trained on historical data encoding historical biases — every door closes simultaneously. Monoculture is always more fragile than diversity; in hiring, it means everyone who doesn't fit the training distribution gets uniformly screened out, everywhere, at the same time.</p>
+
+        <p>This lands at an interesting moment, given that AI agents are beginning to handle not just initial screening but deeper compliance verification (see: Variance). The question isn't whether AI should be in hiring pipelines — it almost certainly will be — but whether the systems making those decisions are auditable, correctable, and structurally prevented from compounding historical biases at industrial scale.</p>
+
+        <p>One aside that's not AI but is enormous: <strong>Steam Machine launched today.</strong> Valve's gaming PC console — years in development — went live with 1,877 HN points and 1,646 comments, making it the single most-discussed story of the day. For gaming hardware and PC gaming, this is a genuine discontinuity.</p>
+
+        <div class="takeaways">
+          <h3>What This All Means</h3>
+          <ol>
+            <li><strong>The job description has changed.</strong> Writing prompts is table stakes. The real leverage is now in the harness — the outer loop that orchestrates agents, decides when they're done, and routes work between sessions. This is infrastructure engineering, not prompt engineering.</li>
+            <li><strong>The subsidy era ends, probably badly.</strong> OpenAI and Anthropic built massive user dependency on prices they lose $40–70 for every $1 of revenue. When prices normalize toward cost — and they must, before or after IPOs — every workflow, every startup, every team that built on subsidized pricing will need to rebuild their economics.</li>
+            <li><strong>Documents are now agent-readable.</strong> OCR + structured output + long-horizon parsing means every piece of paper ever created can now be a structured input to an agentic system. The world of physical documents is crossing over.</li>
+            <li><strong>Security's social contract needs a rewrite.</strong> The premise of coordinated vulnerability disclosure — that finding bugs is rare and precious — is gone. The entire infrastructure of how security research is rewarded, communicated, and credited is built on a foundation that no longer holds.</li>
+            <li><strong>When the loop gets into hiring, the bias compounds.</strong> AI agents are replacing human judgment in compliance, screening, and verification. The Stanford hiring study is a preview of what happens when a biased model becomes infrastructure: it doesn't create one bad decision, it creates a monoculture of bad decisions, uniformly, across the market.</li>
+          </ol>
+        </div>
+
+      </div><!-- /.body -->
+
+      <div class="links">
+        <h3>Hacker News</h3>
+        <ul>
+          <li><a href="https://lucumr.pocoo.org/2026/6/23/the-coming-loop/">The Coming Loop — Armin Ronacher (347 pts)</a></li>
+          <li><a href="https://blog.dshr.org/2026/06/ais-affordability-crisis.html">AI's Affordability Crisis — DSHR's Blog (261 pts)</a></li>
+          <li><a href="https://mistral.ai/news/ocr-4/">Mistral OCR 4 — SOTA Document Intelligence (436 pts)</a></li>
+          <li><a href="https://github.com/baidu/Unlimited-OCR">Unlimited OCR: One-shot Long-horizon Parsing — Baidu (449 pts)</a></li>
+          <li><a href="https://words.filippo.io/vuln-reports/">Vulnerability Reports Are Not Special Anymore — Filippo Valsorda (109 pts)</a></li>
+          <li><a href="https://hai.stanford.edu/news/ai-hiring-tools-can-yield-racial-bias-and-systemic-rejection">Algorithmic Monocultures in Hiring — Stanford HAI (134 pts)</a></li>
+          <li><a href="https://store.steampowered.com/news/group/45479024/view/685257114654870245">Steam Machine Launches Today — Valve (1877 pts)</a></li>
+        </ul>
+
+        <h3>YouTube</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=variance-yc">Variance: AI Agents for Fraud Detection at Scale — Y Combinator</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.card -->
+  </div><!-- /.wrap -->
+<!-- hamburger-menu-injected -->
+<style>
+  #hb-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1000;
+    background: #fffaf0;
+    border: 1px solid #dbc7ac;
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(78,55,31,0.10);
+    transition: box-shadow 0.15s;
+  }
+  #hb-btn:hover { box-shadow: 0 4px 16px rgba(78,55,31,0.18); }
+  #hb-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8b5e34;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #hb-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #hb-btn.open span:nth-child(2) { opacity: 0; }
+  #hb-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #hb-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    max-width: 88vw;
+    background: #fffaf0;
+    border-right: 1px solid #dbc7ac;
+    box-shadow: 4px 0 24px rgba(78,55,31,0.13);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #hb-drawer.open { transform: translateX(0); }
+  #hb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(43,36,29,0.28);
+    z-index: 998;
+    backdrop-filter: blur(1px);
+  }
+  #hb-overlay.open { display: block; }
+  #hb-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e7d6bf;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-header h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #8b5e34;
+    margin: 0 0 2px;
+  }
+  #hb-header p {
+    font-size: 0.78rem;
+    color: #a08c76;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  #hb-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px 0 24px;
+  }
+  #hb-list a {
+    display: block;
+    padding: 11px 22px;
+    text-decoration: none;
+    color: #2b241d;
+    transition: background 0.12s;
+    border-left: 3px solid transparent;
+  }
+  #hb-list a:hover { background: #f5e9d8; }
+  #hb-list a.current {
+    border-left-color: #8b5e34;
+    background: #f2e4d1;
+  }
+  #hb-list .hb-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5e34;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  #hb-list .hb-title {
+    font-family: 'Lora', serif;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    color: #2b241d;
+  }
+</style>
+
+<button id="hb-btn" aria-label="Open archive menu">
+  <span></span><span></span><span></span>
+</button>
+<div id="hb-overlay"></div>
+<div id="hb-drawer">
+  <div id="hb-header">
+    <h2>Archive</h2>
+    <p>All past digests</p>
+  </div>
+  <div id="hb-list">Loading&hellip;</div>
+</div>
+
+<script>
+(function() {
+  var btn = document.getElementById('hb-btn');
+  var drawer = document.getElementById('hb-drawer');
+  var overlay = document.getElementById('hb-overlay');
+  var list = document.getElementById('hb-list');
+  var currentDate = window.location.pathname.match(/(\d{4}-\d{2}-\d{2})/);
+  currentDate = currentDate ? currentDate[1] : null;
+
+  function toggle(open) {
+    btn.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  btn.addEventListener('click', function() { toggle(!drawer.classList.contains('open')); });
+  overlay.addEventListener('click', function() { toggle(false); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') toggle(false); });
+
+  // Fetch manifest and build list
+  var base = window.location.pathname.replace(/\/[^\/]*$/, '');
+  fetch(base + '/manifest.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(entries) {
+      list.innerHTML = entries.map(function(e) {
+        var isCurrent = e.date === currentDate;
+        var d = new Date(e.date + 'T00:00:00');
+        var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        return '<a href="' + e.date + '.html" class="' + (isCurrent ? 'current' : '') + '">'
+          + '<div class="hb-date">' + label + '</div>'
+          + '<div class="hb-title">' + e.title + '</div>'
+          + '</a>';
+      }).join('');
+    })
+    .catch(function() { list.innerHTML = '<div style="padding:16px;color:#a08c76;font-size:0.85rem;">Could not load archive.</div>'; });
+})();
+</script>
+
+</body>
+</html>
